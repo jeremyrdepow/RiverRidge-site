@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RiverRidge – 政策与风险情报</title>
+<meta name="description" content="为在复杂或跨境环境中运营的组织提供独立的政策、监管和政治风险情报。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --slate-950: #0a0f1a;
+    --slate-900: #111827;
+    --slate-800: #1e293b;
+    --slate-700: #334155;
+    --slate-600: #475569;
+    --slate-500: #64748b;
+    --slate-400: #94a3b8;
+    --slate-300: #cbd5e1;
+    --slate-200: #e2e8f0;
+    --slate-100: #f1f5f9;
+    --slate-50: #f8fafc;
+    --accent: #4a7c6f;
+    --accent-light: #5a9a89;
+    --accent-muted: rgba(74, 124, 111, 0.12);
+    --serif: 'Noto Serif SC', 'Libre Baskerville', Georgia, serif;
+    --sans: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body { font-family: var(--sans); color: var(--slate-300); background: var(--slate-950); line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10, 15, 26, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .nav-inner { max-width: 1140px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .nav-brand { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate-100); text-decoration: none; }
+  .nav-brand span { color: var(--accent-light); }
+  .nav-right { display: flex; align-items: center; gap: 2rem; }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.04em; color: var(--slate-400); text-decoration: none; transition: color 0.25s; }
+  .nav-links a:hover { color: var(--slate-100); }
+  .lang-toggles { display: flex; gap: 0.4rem; }
+  .lang-toggle { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-light); text-decoration: none; border: 1px solid var(--accent); padding: 0.3rem 0.6rem; border-radius: 2px; transition: all 0.25s; }
+  .lang-toggle:hover { background: var(--accent); color: #fff; }
+  .lang-toggle.active { background: var(--accent); color: #fff; pointer-events: none; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+  .hamburger span { display: block; width: 22px; height: 2px; background: var(--slate-300); border-radius: 2px; transition: all 0.3s; }
+
+  .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse 60% 50% at 20% 50%, rgba(74, 124, 111, 0.06) 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 80% 30%, rgba(74, 124, 111, 0.04) 0%, transparent 60%); pointer-events: none; }
+  .hero-grid { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px); background-size: 80px 80px; pointer-events: none; }
+  .hero-content { max-width: 1140px; margin: 0 auto; padding: 8rem 1.5rem 4rem; position: relative; z-index: 1; }
+  .hero-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+  .hero-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--accent-light); }
+  .hero h1 { font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 400; line-height: 1.3; color: var(--slate-50); max-width: 700px; margin-bottom: 1.75rem; }
+  .hero-sub { font-size: clamp(1rem, 1.8vw, 1.15rem); line-height: 1.8; color: var(--slate-400); max-width: 600px; font-weight: 300; }
+  .hero-cta { margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.06em; text-decoration: none; padding: 0.85rem 1.75rem; border-radius: 2px; transition: all 0.3s; }
+  .btn-primary { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
+  .btn-primary:hover { background: var(--accent-light); border-color: var(--accent-light); }
+  .btn-outline { background: transparent; color: var(--slate-300); border: 1px solid var(--slate-700); }
+  .btn-outline:hover { border-color: var(--slate-500); color: var(--slate-100); }
+  .btn-arrow { transition: transform 0.25s; }
+  .btn:hover .btn-arrow { transform: translateX(3px); }
+
+  section { padding: 6rem 1.5rem; }
+  .container { max-width: 1140px; margin: 0 auto; }
+  .section-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 1rem; }
+  .section-heading { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 400; color: var(--slate-50); line-height: 1.3; margin-bottom: 1.5rem; max-width: 600px; }
+  .section-intro { font-size: 1.05rem; color: var(--slate-400); max-width: 620px; line-height: 1.8; font-weight: 300; }
+  .divider { width: 100%; height: 1px; background: linear-gradient(90deg, transparent, var(--slate-800), transparent); }
+
+  .about { background: var(--slate-950); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; }
+  .about-text p { margin-bottom: 1.25rem; color: var(--slate-400); line-height: 1.85; }
+  .about-sidebar { border-left: 1px solid var(--slate-800); padding-left: 2.5rem; }
+  .about-sidebar h3 { font-family: var(--serif); font-size: 1.15rem; font-weight: 400; color: var(--slate-100); margin-bottom: 1.25rem; }
+  .approach-list { list-style: none; display: flex; flex-direction: column; gap: 0.85rem; }
+  .approach-list li { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.95rem; color: var(--slate-400); line-height: 1.6; }
+  .approach-list li::before { content: ''; display: block; width: 6px; height: 6px; min-width: 6px; border-radius: 1px; background: var(--accent); margin-top: 0.55rem; }
+  .independence-box { margin-top: 2.5rem; padding: 1.5rem; background: var(--accent-muted); border-left: 2px solid var(--accent); border-radius: 0 4px 4px 0; }
+  .independence-box h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 0.75rem; }
+  .independence-box p { font-size: 0.95rem; color: var(--slate-300); line-height: 1.7; margin: 0; }
+
+  .services { background: var(--slate-900); }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.5rem; }
+  .service-card { background: var(--slate-950); border: 1px solid var(--slate-800); border-radius: 4px; padding: 2.25rem 2rem; transition: border-color 0.3s, transform 0.3s; position: relative; }
+  .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); opacity: 0; transition: opacity 0.3s; }
+  .service-card:hover { border-color: var(--slate-700); transform: translateY(-2px); }
+  .service-card:hover::before { opacity: 1; }
+  .service-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: var(--accent-muted); border-radius: 6px; margin-bottom: 1.5rem; }
+  .service-icon svg { width: 20px; height: 20px; stroke: var(--accent-light); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .service-card h3 { font-family: var(--serif); font-size: 1.15rem; font-weight: 400; color: var(--slate-100); margin-bottom: 1rem; line-height: 1.4; }
+  .service-card p { font-size: 0.92rem; color: var(--slate-400); line-height: 1.75; margin-bottom: 1.5rem; }
+  .service-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .service-tags span { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; color: var(--slate-500); background: rgba(255,255,255,0.04); padding: 0.35rem 0.75rem; border-radius: 2px; border: 1px solid var(--slate-800); }
+
+  .focus { background: var(--slate-950); }
+  .focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 3.5rem; border: 1px solid var(--slate-800); border-radius: 4px; overflow: hidden; }
+  .focus-item { padding: 2.5rem 2rem; border-right: 1px solid var(--slate-800); }
+  .focus-item:last-child { border-right: none; }
+  .focus-number { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; color: var(--slate-600); margin-bottom: 1.25rem; }
+  .focus-item h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--slate-100); margin-bottom: 1rem; line-height: 1.4; }
+  .focus-item p { font-size: 0.9rem; color: var(--slate-400); line-height: 1.8; }
+
+  .contact { background: var(--slate-900); }
+  .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; margin-top: 3rem; }
+  .contact-text p { color: var(--slate-400); line-height: 1.85; margin-bottom: 1rem; }
+  .contact-email { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 1rem; font-weight: 500; color: var(--accent-light); text-decoration: none; margin-top: 0.5rem; transition: color 0.25s; }
+  .contact-email:hover { color: #fff; }
+  .contact-details { padding-top: 0.5rem; }
+  .contact-detail-block { margin-bottom: 2rem; }
+  .contact-detail-block h4 { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--slate-500); margin-bottom: 0.5rem; }
+  .contact-detail-block p { color: var(--slate-300); font-size: 0.95rem; }
+
+  footer { padding: 2.5rem 1.5rem; border-top: 1px solid var(--slate-800); background: var(--slate-950); }
+  .footer-inner { max-width: 1140px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+  .footer-copy { font-size: 0.78rem; color: var(--slate-600); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 0.78rem; color: var(--slate-500); text-decoration: none; transition: color 0.25s; }
+  .footer-links a:hover { color: var(--slate-300); }
+
+  .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 1024px) {
+    .services-grid, .focus-grid { grid-template-columns: 1fr; }
+    .focus-grid { border: none; border-radius: 0; }
+    .focus-item { border-right: none; border-bottom: 1px solid var(--slate-800); padding: 2rem 0; }
+    .focus-item:last-child { border-bottom: none; }
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about-sidebar { border-left: none; padding-left: 0; border-top: 1px solid var(--slate-800); padding-top: 2.5rem; }
+  }
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: rgba(10, 15, 26, 0.97); backdrop-filter: blur(16px); padding: 1.5rem; gap: 1.25rem; border-bottom: 1px solid var(--slate-800); }
+    .hamburger { display: flex; }
+    section { padding: 4rem 1.25rem; }
+    .hero-content { padding: 7rem 1.25rem 3rem; }
+    .service-card { padding: 1.75rem 1.5rem; }
+  }
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 1.85rem; }
+    .hero-sub { font-size: 0.95rem; }
+    .hero-cta { flex-direction: column; }
+    .btn { width: 100%; justify-content: center; }
+    .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">River<span>Ridge</span></a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#guanyu">关于</a>
+        <a href="#fuwu">服务</a>
+        <a href="#fenxi">分析</a>
+        <a href="#lianxi">联系</a>
+      </div>
+      <div class="lang-toggles">
+        <a href="index.html" class="lang-toggle">EN</a>
+        <a href="fr.html" class="lang-toggle">FR</a>
+        <a href="es.html" class="lang-toggle">ES</a>
+        <a href="zh.html" class="lang-toggle active">中文</a>
+        <a href="hi.html" class="lang-toggle">हिं</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-label">政策与风险情报</div>
+    <h1>碎片化世界中的市场</h1>
+    <p class="hero-sub">在复杂市场中对政策、监管和政治动态进行独立分析。</p>
+    <div class="hero-cta">
+      <a href="#lianxi" class="btn btn-primary">联系我们 <span class="btn-arrow">&rarr;</span></a>
+      <a href="#guanyu" class="btn btn-outline">了解更多</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="about" style="padding-bottom: 2rem;">
+  <div class="container fade-up">
+    <p class="section-label">概述</p>
+    <h2 class="section-heading">在复杂环境中提供清晰洞察</h2>
+    <p class="section-intro" style="margin-bottom: 1.5rem;">RiverRidge 为在复杂或跨境环境中运营的组织提供独立的政策、监管和政治风险情报。我们的工作重点是理解政治体系、监管结构和制度条件如何塑造现实世界的风险。</p>
+    <p class="section-intro">我们以循证分析支持决策者，旨在澄清不确定性、预判约束并为长期战略提供依据。</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="guanyu" class="about">
+  <div class="container fade-up">
+    <p class="section-label">关于我们</p>
+    <h2 class="section-heading">面向复杂市场的独立政策与风险情报</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>RiverRidge Policy &amp; Risk Intelligence 是一家独立咨询机构，专注于复杂和碎片化市场中的政策、监管和政治风险分析。我们与需要清晰、循证洞察来指导战略决策的组织合作——不涉及倡导、迎合或预设结论。</p>
+        <p>我们的工作强调分析严谨性、方法透明性和学术独立性。我们整合来自多个司法管辖区、行业和监管环境的数据，帮助客户不仅了解正在发生什么变化，还了解为何重要以及风险如何相互作用。</p>
+        <p>RiverRidge 在国内和跨境环境中开展业务，支持客户应对公共政策、监管和市场结构中的不确定性。我们的工作是量身定制的、审慎的，并基于可验证的信息来源，而非观点或叙事。</p>
+      </div>
+      <div class="about-sidebar">
+        <h3>我们的方法</h3>
+        <p style="font-size: 0.92rem; color: var(--slate-400); margin-bottom: 1.5rem; line-height: 1.75;">我们运用系统化的风险分析框架，将定性判断与定量证据相结合：</p>
+        <ul class="approach-list">
+          <li>政策与监管格局分析</li>
+          <li>政治与制度风险评估</li>
+          <li>跨司法管辖区比较</li>
+          <li>情景与二阶风险评估</li>
+        </ul>
+        <p style="font-size: 0.92rem; color: var(--slate-400); margin-top: 1.5rem; line-height: 1.75;">目标不是预测，而是清晰——帮助决策者在投入资本、资源或声誉之前理解权衡、风险敞口和约束条件。</p>
+        <div class="independence-box">
+          <h4>独立性源于设计</h4>
+          <p>RiverRidge 不从事游说、倡导或代表利益相关方的利益。这种独立性使我们能够提供客观分析，完全服务于客户的决策需求。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="fuwu" class="services">
+  <div class="container fade-up">
+    <p class="section-label">服务</p>
+    <h2 class="section-heading">RiverRidge 的服务内容</h2>
+    <p class="section-intro">定制化的风险评估，引导组织应对多维挑战。</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>政策与监管风险分析</h3>
+        <p>对监管体系、政治动态和制度环境进行循证分析。旨在战略决策受到影响之前，识别风险、约束和机遇。</p>
+        <div class="service-tags">
+          <span>监管风险敞口</span>
+          <span>政策走向</span>
+          <span>制度图谱</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>战略与政治风险分析</h3>
+        <p>为在政治敏感、高度监管或不稳定环境中运营的组织提供咨询支持。专注于情景开发、风险框架构建和决策支持。</p>
+        <div class="service-tags">
+          <span>战略风险框架</span>
+          <span>情景开发</span>
+          <span>决策支持</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h3>市场与运营环境情报</h3>
+        <p>对塑造运营环境的经济、制度和政治条件进行综合分析。旨在为长期定位、合作伙伴关系和运营风险提供依据。</p>
+        <div class="service-tags">
+          <span>国家与区域风险</span>
+          <span>行业环境</span>
+          <span>准入条件</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="fenxi" class="focus">
+  <div class="container fade-up">
+    <p class="section-label">分析重点</p>
+    <h2 class="section-heading">三个维度的深度分析</h2>
+    <div class="focus-grid">
+      <div class="focus-item">
+        <div class="focus-number">01</div>
+        <h3>政治风险</h3>
+        <p>基于直接观察、当地背景和特定司法管辖区动态，评估政治条件、制度行为和政策方向——包括对关键基础设施、技术部署和市场准入的影响。</p>
+      </div>
+      <div class="focus-item">
+        <div class="focus-number">02</div>
+        <h3>监管与政策分析</h3>
+        <p>分析影响跨境活动的监管框架和政策走向，包括技术监管、数据治理、产业政策和合规风险，基于原始资料审查和实地背景。</p>
+      </div>
+      <div class="focus-item">
+        <div class="focus-number">03</div>
+        <h3>市场与贸易情报</h3>
+        <p>解读由贸易政策、监管变化和影响技术、数字服务及战略行业的政治决策所塑造的市场结构与跨境动态。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="lianxi" class="contact">
+  <div class="container fade-up">
+    <p class="section-label">联系我们</p>
+    <h2 class="section-heading">开启对话</h2>
+    <div class="contact-grid">
+      <div class="contact-text">
+        <p>RiverRidge Policy &amp; Risk Intelligence 有选择地接受与政策、监管和政治风险相关的咨询。</p>
+        <p>初步联系用于评估相关性、范围和匹配度。</p>
+        <a href="mailto:contact@riverridgeintelligence.ca" class="contact-email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          contact@riverridgeintelligence.ca
+        </a>
+      </div>
+      <div class="contact-details">
+        <div class="contact-detail-block">
+          <h4>地点</h4>
+          <p>蒙特利尔（魁北克省），加拿大</p>
+        </div>
+        <div class="contact-detail-block">
+          <h4>合作模式</h4>
+          <p style="color: var(--slate-400); font-size: 0.9rem; line-height: 1.7;">量身定制、审慎保密的合作，以循证分析和学术独立为基础。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">&copy; 2025 RiverRidge Policy &amp; Risk Intelligence.</div>
+    <div class="footer-links">
+      <a href="#guanyu">关于</a>
+      <a href="#fuwu">服务</a>
+      <a href="#lianxi">联系</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function(e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); document.querySelector('.nav-links')?.classList.remove('open'); } }); });
+</script>
+
+</body>
+</html>
