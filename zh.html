@@ -85,7 +85,20 @@
   .focus-number { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; color: var(--slate-600); margin-bottom: 1.25rem; }
   .focus-item h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--slate-100); margin-bottom: 1rem; line-height: 1.4; }
   .focus-item p { font-size: 0.9rem; color: var(--slate-400); line-height: 1.8; }
-  .contact { background: var(--slate-900); }
+  .pubs { background: var(--slate-900); }
+  .pub-list { margin-top: 3rem; display: flex; flex-direction: column; gap: 1.25rem; }
+  .pub-card { display: block; text-decoration: none; background: var(--slate-950); border: 1px solid var(--slate-800); border-radius: 4px; padding: 2rem 2.25rem; transition: border-color 0.3s, transform 0.3s; position: relative; }
+  .pub-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); opacity: 0; transition: opacity 0.3s; }
+  .pub-card:hover { border-color: var(--slate-700); transform: translateY(-2px); }
+  .pub-card:hover::before { opacity: 1; }
+  .pub-meta { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.9rem; }
+  .pub-kind { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-light); border: 1px solid var(--accent); border-radius: 2px; padding: 0.25rem 0.55rem; }
+  .pub-date { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.06em; color: var(--slate-500); }
+  .pub-card h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; color: var(--slate-100); line-height: 1.45; margin-bottom: 0.85rem; }
+  .pub-card p { font-size: 0.92rem; color: var(--slate-400); line-height: 1.75; margin-bottom: 1.1rem; }
+  .pub-read { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-light); }
+  .pub-card:hover .pub-read .btn-arrow { transform: translateX(3px); }
+  .contact { background: var(--slate-950); }
   .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; margin-top: 3rem; }
   .contact-text p { color: var(--slate-400); line-height: 1.85; margin-bottom: 1rem; }
   .contact-email { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 1rem; font-weight: 500; color: var(--accent-light); text-decoration: none; margin-top: 0.5rem; transition: color 0.25s; word-break: break-all; }
@@ -140,6 +153,7 @@
         <a href="#about">关于</a>
         <a href="#services">服务</a>
         <a href="#focus">分析</a>
+        <a href="#publications">出版物</a>
         <a href="#contact">联系</a>
       </div>
       <div class="lang-toggles"><a href="index.html" class="lang-toggle">EN</a><a href="fr.html" class="lang-toggle">FR</a><a href="es.html" class="lang-toggle">ES</a><a href="zh.html" class="lang-toggle active">中文</a><a href="hi.html" class="lang-toggle">हिं</a></div>
@@ -243,6 +257,28 @@
       <div class="focus-item"><div class="focus-number">01</div><h3>政治风险</h3><p>对政治条件、制度行为与政策方向的评估，依据直接观察和当前来源，而非事后评论。</p></div>
       <div class="focus-item"><div class="focus-number">02</div><h3>监管与政策分析</h3><p>对影响机构运营的监管框架与政策走向的分析，立足于第一手来源审查，而非二手摘要。</p></div>
       <div class="focus-item"><div class="focus-number">03</div><h3>市场与运营环境</h3><p>对塑造某一市场或运营环境的经济、制度与政治条件，以及它们可能如何演变的解读。</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="publications" class="pubs">
+  <div class="container fade-up">
+    <p class="section-label">出版物</p>
+    <h2 class="section-heading">简报</h2>
+    <p class="section-intro">不定期发布的分析，针对那些值得完整陈述证据的议题。</p>
+    <div class="pub-list">
+      <a href="https://riverridgeintelligence.ca/canada-4ir-productivity-brief.html" class="pub-card">
+        <div class="pub-meta">
+          <span class="pub-kind">简报</span>
+          <span class="pub-date">创新与数字政策 &middot; 2026年7月</span>
+          <span class="pub-date">&middot; 英文</span>
+        </div>
+        <h3>加拿大在第四次工业革命中正在失去优势。专利数据表明，回报是真实的。</h3>
+        <p>经合组织最新的企业层面证据显示，开发核心数字技术的加拿大企业生产率明显提升；与此同时，加拿大在这类创新中的份额却在下降，而其贸易多元化所面向的正是这些伙伴。</p>
+        <span class="pub-read">阅读简报 <span class="btn-arrow">&rarr;</span></span>
+      </a>
     </div>
   </div>
 </section>

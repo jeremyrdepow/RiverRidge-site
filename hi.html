@@ -85,7 +85,20 @@
   .focus-number { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; color: var(--slate-600); margin-bottom: 1.25rem; }
   .focus-item h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--slate-100); margin-bottom: 1rem; line-height: 1.4; }
   .focus-item p { font-size: 0.9rem; color: var(--slate-400); line-height: 1.8; }
-  .contact { background: var(--slate-900); }
+  .pubs { background: var(--slate-900); }
+  .pub-list { margin-top: 3rem; display: flex; flex-direction: column; gap: 1.25rem; }
+  .pub-card { display: block; text-decoration: none; background: var(--slate-950); border: 1px solid var(--slate-800); border-radius: 4px; padding: 2rem 2.25rem; transition: border-color 0.3s, transform 0.3s; position: relative; }
+  .pub-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); opacity: 0; transition: opacity 0.3s; }
+  .pub-card:hover { border-color: var(--slate-700); transform: translateY(-2px); }
+  .pub-card:hover::before { opacity: 1; }
+  .pub-meta { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.9rem; }
+  .pub-kind { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-light); border: 1px solid var(--accent); border-radius: 2px; padding: 0.25rem 0.55rem; }
+  .pub-date { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.06em; color: var(--slate-500); }
+  .pub-card h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; color: var(--slate-100); line-height: 1.45; margin-bottom: 0.85rem; }
+  .pub-card p { font-size: 0.92rem; color: var(--slate-400); line-height: 1.75; margin-bottom: 1.1rem; }
+  .pub-read { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-light); }
+  .pub-card:hover .pub-read .btn-arrow { transform: translateX(3px); }
+  .contact { background: var(--slate-950); }
   .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; margin-top: 3rem; }
   .contact-text p { color: var(--slate-400); line-height: 1.85; margin-bottom: 1rem; }
   .contact-email { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 1rem; font-weight: 500; color: var(--accent-light); text-decoration: none; margin-top: 0.5rem; transition: color 0.25s; word-break: break-all; }
@@ -140,6 +153,7 @@
         <a href="#about">परिचय</a>
         <a href="#services">सेवाएँ</a>
         <a href="#focus">विश्लेषण</a>
+        <a href="#publications">प्रकाशन</a>
         <a href="#contact">संपर्क</a>
       </div>
       <div class="lang-toggles"><a href="index.html" class="lang-toggle">EN</a><a href="fr.html" class="lang-toggle">FR</a><a href="es.html" class="lang-toggle">ES</a><a href="zh.html" class="lang-toggle">中文</a><a href="hi.html" class="lang-toggle active">हिं</a></div>
@@ -243,6 +257,28 @@
       <div class="focus-item"><div class="focus-number">01</div><h3>राजनीतिक जोखिम</h3><p>राजनीतिक परिस्थितियों, संस्थागत व्यवहार और नीति दिशा का मूल्यांकन, जो प्रत्यक्ष अवलोकन और वर्तमान स्रोतों पर आधारित है, न कि घटना के बाद की टिप्पणी पर।</p></div>
       <div class="focus-item"><div class="focus-number">02</div><h3>विनियामक एवं नीति विश्लेषण</h3><p>उन विनियामक ढाँचों और नीति दिशाओं का विश्लेषण जो संगठनों के कामकाज को प्रभावित करते हैं, जो द्वितीयक सारांश के बजाय प्राथमिक स्रोत समीक्षा पर आधारित है।</p></div>
       <div class="focus-item"><div class="focus-number">03</div><h3>बाज़ार एवं परिचालन परिवेश</h3><p>उन आर्थिक, संस्थागत और राजनीतिक परिस्थितियों की व्याख्या जो किसी बाज़ार या परिचालन परिवेश को आकार देती हैं, और वे किस दिशा में बढ़ने की संभावना रखती हैं।</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="publications" class="pubs">
+  <div class="container fade-up">
+    <p class="section-label">प्रकाशन</p>
+    <h2 class="section-heading">ब्रीफ़</h2>
+    <p class="section-intro">समय-समय पर प्रकाशित विश्लेषण, उन मुद्दों पर जहाँ प्रमाण को पूरी तरह रखना सार्थक हो।</p>
+    <div class="pub-list">
+      <a href="https://riverridgeintelligence.ca/canada-4ir-productivity-brief.html" class="pub-card">
+        <div class="pub-meta">
+          <span class="pub-kind">ब्रीफ़</span>
+          <span class="pub-date">नवाचार एवं डिजिटल नीति &middot; जुलाई 2026</span>
+          <span class="pub-date">&middot; अंग्रेज़ी में</span>
+        </div>
+        <h3>चौथी औद्योगिक क्रांति में कनाडा पिछड़ रहा है। पेटेंट बताते हैं कि लाभ वास्तविक है।</h3>
+        <p>OECD के नए फर्म-स्तरीय प्रमाण दर्शाते हैं कि जो कनाडाई फर्म मूल डिजिटल प्रौद्योगिकियाँ बनाती हैं, वे मापने योग्य रूप से अधिक उत्पादक होती हैं, जबकि उसी नवाचार में कनाडा की हिस्सेदारी उन्हीं साझेदारों के सामने घट रही है जिनकी ओर वह व्यापार विविधीकरण कर रहा है।</p>
+        <span class="pub-read">ब्रीफ़ पढ़ें <span class="btn-arrow">&rarr;</span></span>
+      </a>
     </div>
   </div>
 </section>

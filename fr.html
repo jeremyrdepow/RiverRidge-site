@@ -85,7 +85,20 @@
   .focus-number { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; color: var(--slate-600); margin-bottom: 1.25rem; }
   .focus-item h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--slate-100); margin-bottom: 1rem; line-height: 1.4; }
   .focus-item p { font-size: 0.9rem; color: var(--slate-400); line-height: 1.8; }
-  .contact { background: var(--slate-900); }
+  .pubs { background: var(--slate-900); }
+  .pub-list { margin-top: 3rem; display: flex; flex-direction: column; gap: 1.25rem; }
+  .pub-card { display: block; text-decoration: none; background: var(--slate-950); border: 1px solid var(--slate-800); border-radius: 4px; padding: 2rem 2.25rem; transition: border-color 0.3s, transform 0.3s; position: relative; }
+  .pub-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); opacity: 0; transition: opacity 0.3s; }
+  .pub-card:hover { border-color: var(--slate-700); transform: translateY(-2px); }
+  .pub-card:hover::before { opacity: 1; }
+  .pub-meta { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.9rem; }
+  .pub-kind { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-light); border: 1px solid var(--accent); border-radius: 2px; padding: 0.25rem 0.55rem; }
+  .pub-date { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.06em; color: var(--slate-500); }
+  .pub-card h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; color: var(--slate-100); line-height: 1.45; margin-bottom: 0.85rem; }
+  .pub-card p { font-size: 0.92rem; color: var(--slate-400); line-height: 1.75; margin-bottom: 1.1rem; }
+  .pub-read { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-light); }
+  .pub-card:hover .pub-read .btn-arrow { transform: translateX(3px); }
+  .contact { background: var(--slate-950); }
   .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; margin-top: 3rem; }
   .contact-text p { color: var(--slate-400); line-height: 1.85; margin-bottom: 1rem; }
   .contact-email { display: inline-flex; align-items: center; gap: 0.6rem; font-size: 1rem; font-weight: 500; color: var(--accent-light); text-decoration: none; margin-top: 0.5rem; transition: color 0.25s; word-break: break-all; }
@@ -140,6 +153,7 @@
         <a href="#about">À propos</a>
         <a href="#services">Services</a>
         <a href="#focus">Analyse</a>
+        <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="lang-toggles"><a href="index.html" class="lang-toggle">EN</a><a href="fr.html" class="lang-toggle active">FR</a><a href="es.html" class="lang-toggle">ES</a><a href="zh.html" class="lang-toggle">中文</a><a href="hi.html" class="lang-toggle">हिं</a></div>
@@ -243,6 +257,28 @@
       <div class="focus-item"><div class="focus-number">01</div><h3>Risque politique</h3><p>Évaluation des conditions politiques, du comportement institutionnel et de l'orientation des politiques, éclairée par l'observation directe et des sources actuelles plutôt que par des commentaires a posteriori.</p></div>
       <div class="focus-item"><div class="focus-number">02</div><h3>Analyse réglementaire et politique</h3><p>Analyse des cadres réglementaires et des trajectoires politiques qui influent sur le fonctionnement des organisations, fondée sur l'examen de sources primaires plutôt que sur des résumés de seconde main.</p></div>
       <div class="focus-item"><div class="focus-number">03</div><h3>Marché et environnement opérationnel</h3><p>Interprétation des conditions économiques, institutionnelles et politiques qui façonnent un marché ou un environnement opérationnel, et de la façon dont elles sont susceptibles d'évoluer.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="publications" class="pubs">
+  <div class="container fade-up">
+    <p class="section-label">Publications</p>
+    <h2 class="section-heading">Notes d’analyse</h2>
+    <p class="section-intro">Analyses publiées à l’occasion, sur des dossiers où il vaut la peine d’exposer les données en entier.</p>
+    <div class="pub-list">
+      <a href="https://riverridgeintelligence.ca/canada-4ir-productivity-brief.html" class="pub-card">
+        <div class="pub-meta">
+          <span class="pub-kind">Note</span>
+          <span class="pub-date">Innovation et politique numérique &middot; juillet 2026</span>
+          <span class="pub-date">&middot; En anglais</span>
+        </div>
+        <h3>Le Canada perd du terrain dans la quatrième révolution industrielle. Les brevets montrent que l’enjeu est réel.</h3>
+        <p>De nouvelles données de l’OCDE au niveau des entreprises montrent que les entreprises canadiennes qui développent les technologies numériques de base gagnent en productivité, alors que la part du Canada dans cette même innovation recule face aux partenaires vers lesquels il diversifie ses échanges.</p>
+        <span class="pub-read">Lire la note <span class="btn-arrow">&rarr;</span></span>
+      </a>
     </div>
   </div>
 </section>
