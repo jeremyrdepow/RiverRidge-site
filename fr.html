@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RiverRidge – Veille politique et analyse des risques</title>
-<meta name="description" content="Veille indépendante en matière de politiques, de réglementation et de risques politiques.">
+<title>Jeremy R. Depow | RiverRidge Policy & Risk Intelligence</title>
+<meta name="description" content="Jeremy R. Depow. J'évalue le risque réglementaire et les trajectoires politiques pour les décideurs en cybersécurité, en infrastructure numérique et en gouvernance des données.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -49,6 +49,12 @@
   .btn-outline:hover { border-color: var(--slate-500); color: var(--slate-100); }
   .btn-arrow { transition: transform 0.25s; }
   .btn:hover .btn-arrow { transform: translateX(3px); }
+  .about-lead { display: flex; gap: 2rem; align-items: flex-start; margin: 2rem 0 2.5rem; }
+  .about-photo { flex: 0 0 120px; width: 120px; height: 150px; object-fit: cover; border-radius: 4px; border: 1px solid var(--slate-800); }
+  .photo-ph { flex: 0 0 120px; width: 120px; height: 150px; border: 1px dashed var(--slate-700); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate-600); }
+  .about-name { font-family: var(--serif); font-size: 1.25rem; color: var(--slate-50); margin-bottom: 0.3rem; }
+  .about-role { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate-500); margin-bottom: 1rem; }
+  .about-cred { font-size: 0.95rem; color: var(--slate-400); line-height: 1.8; }
   section { padding: 6rem 1.5rem; }
   .container { max-width: 1140px; margin: 0 auto; }
   .section-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 1rem; }
@@ -78,14 +84,14 @@
   .service-card p { font-size: 0.92rem; color: var(--slate-400); line-height: 1.75; margin-bottom: 1.5rem; }
   .service-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .service-tags span { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; color: var(--slate-500); background: rgba(255,255,255,0.04); padding: 0.35rem 0.75rem; border-radius: 2px; border: 1px solid var(--slate-800); }
-  .focus { background: var(--slate-950); }
+  .focus { background: var(--slate-900); }
   .focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 3.5rem; border: 1px solid var(--slate-800); border-radius: 4px; overflow: hidden; }
   .focus-item { padding: 2.5rem 2rem; border-right: 1px solid var(--slate-800); }
   .focus-item:last-child { border-right: none; }
   .focus-number { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; color: var(--slate-600); margin-bottom: 1.25rem; }
   .focus-item h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--slate-100); margin-bottom: 1rem; line-height: 1.4; }
   .focus-item p { font-size: 0.9rem; color: var(--slate-400); line-height: 1.8; }
-  .pubs { background: var(--slate-900); }
+  .pubs { background: var(--slate-950); }
   .pub-list { margin-top: 3rem; display: flex; flex-direction: column; gap: 1.25rem; }
   .pub-card { display: block; text-decoration: none; background: var(--slate-950); border: 1px solid var(--slate-800); border-radius: 4px; padding: 2rem 2.25rem; transition: border-color 0.3s, transform 0.3s; position: relative; }
   .pub-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); opacity: 0; transition: opacity 0.3s; }
@@ -129,6 +135,7 @@
     .hamburger { display: flex; }
     section { padding: 4rem 1.25rem; }
     .hero-content { padding: 7rem 1.25rem 3rem; }
+    .about-lead { flex-direction: column; }
     .service-card { padding: 1.75rem 1.5rem; }
     .nav-right { gap: 1rem; }
     .lang-toggle { padding: 0.25rem 0.45rem; font-size: 0.7rem; }
@@ -141,25 +148,18 @@
     .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
   }
 </style>
-  <link rel="canonical" href="https://riverridgeintelligence.ca/fr.html">
-  <link rel="alternate" hreflang="en" href="https://riverridgeintelligence.ca/">
-  <link rel="alternate" hreflang="fr" href="https://riverridgeintelligence.ca/fr.html">
-  <link rel="alternate" hreflang="es" href="https://riverridgeintelligence.ca/es.html">
-  <link rel="alternate" hreflang="zh" href="https://riverridgeintelligence.ca/zh.html">
-  <link rel="alternate" hreflang="hi" href="https://riverridgeintelligence.ca/hi.html">
-  <link rel="alternate" hreflang="x-default" href="https://riverridgeintelligence.ca/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RiverRidge Policy & Risk Intelligence">
   <meta property="og:locale" content="fr_CA">
   <meta property="og:url" content="https://riverridgeintelligence.ca/fr.html">
-  <meta property="og:title" content="RiverRidge – Veille politique et analyse des risques">
-  <meta property="og:description" content="Analyse indépendante des forces politiques, réglementaires et institutionnelles qui façonnent les décisions importantes.">
+  <meta property="og:title" content="Jeremy R. Depow | RiverRidge Policy & Risk Intelligence">
+  <meta property="og:description" content="Jeremy R. Depow. J'évalue le risque réglementaire et les trajectoires politiques pour les décideurs en cybersécurité, en infrastructure numérique et en gouvernance des données.">
   <meta property="og:image" content="https://riverridgeintelligence.ca/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="RiverRidge – Veille politique et analyse des risques">
-  <meta name="twitter:description" content="Analyse indépendante des forces politiques, réglementaires et institutionnelles qui façonnent les décisions importantes.">
+  <meta name="twitter:title" content="Jeremy R. Depow | RiverRidge Policy & Risk Intelligence">
+  <meta name="twitter:description" content="Jeremy R. Depow. J'évalue le risque réglementaire et les trajectoires politiques pour les décideurs en cybersécurité, en infrastructure numérique et en gouvernance des données.">
   <meta name="twitter:image" content="https://riverridgeintelligence.ca/og-image.png">
   <script type="application/ld+json">
   {
@@ -178,7 +178,8 @@
       {
         "@type": "Person",
         "@id": "https://riverridgeintelligence.ca/#jeremydepow",
-        "name": "Jeremy Depow",
+        "name": "Jeremy R. Depow",
+        "alternateName": "Jeremy Depow",
         "jobTitle": "Principal",
         "worksFor": { "@id": "https://riverridgeintelligence.ca/#organization" },
         "url": "https://riverridgeintelligence.ca/",
@@ -187,6 +188,11 @@
     ]
   }
   </script>
+  <link rel="canonical" href="https://riverridgeintelligence.ca/fr.html">
+  <link rel="alternate" hreflang="en" href="https://riverridgeintelligence.ca/">
+  <link rel="alternate" hreflang="fr" href="https://riverridgeintelligence.ca/fr.html">
+  <link rel="alternate" hreflang="es" href="https://riverridgeintelligence.ca/es.html">
+  <link rel="alternate" hreflang="x-default" href="https://riverridgeintelligence.ca/">
 </head>
 <body>
 
@@ -202,7 +208,7 @@
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
       </div>
-      <div class="lang-toggles"><a href="index.html" class="lang-toggle">EN</a><a href="fr.html" class="lang-toggle active">FR</a><a href="es.html" class="lang-toggle">ES</a><a href="zh.html" class="lang-toggle">中文</a><a href="hi.html" class="lang-toggle">हिं</a></div>
+      <div class="lang-toggles"><a href="index.html" class="lang-toggle">EN</a><a href="fr.html" class="lang-toggle active">FR</a><a href="es.html" class="lang-toggle">ES</a></div>
     </div>
   </div>
 </nav>
@@ -210,11 +216,11 @@
 <section class="hero">
   <div class="hero-grid"></div>
   <div class="hero-content">
-    <div class="hero-label">Veille politique &amp; analyse des risques</div>
+    <div class="hero-label">Veille politique et analyse des risques</div>
     <h1>Veille politique et analyse des risques indépendantes</h1>
-    <p class="hero-sub">Une analyse rigoureuse et indépendante des forces politiques, réglementaires et institutionnelles qui façonnent les décisions importantes.</p>
+    <p class="hero-sub">J'évalue le risque réglementaire et les trajectoires politiques pour les décideurs en cybersécurité, en infrastructure numérique et en gouvernance des données.</p>
     <div class="hero-cta">
-      <a href="#contact" class="btn btn-primary">Nous joindre <span class="btn-arrow">&rarr;</span></a>
+      <a href="#contact" class="btn btn-primary">Me joindre <span class="btn-arrow">&rarr;</span></a>
       <a href="#about" class="btn btn-outline">En savoir plus</a>
     </div>
   </div>
@@ -226,8 +232,8 @@
   <div class="container fade-up">
     <p class="section-label">Aperçu</p>
     <h2 class="section-heading">Une lecture indépendante d'un environnement en mutation</h2>
-    <p class="section-intro" style="margin-bottom: 1.5rem;">Les décisions gouvernementales et institutionnelles façonnent les risques et les occasions bien avant d'être rendues publiques et mises en œuvre. RiverRidge offre une analyse claire et indépendante de ce qui se passe en matière de politiques, de réglementation et de vie politique, fondée sur des sources directes plutôt que sur le seul dossier public, et axée sur ce que cela signifie pour la décision qui vous attend.</p>
-    <p class="section-intro">Notre approche est analytique, et non transactionnelle. Aucun parti pris, aucune position maison, aucune vente incitative. Une lecture sobre de l'environnement, fondée sur les faits et sur des conversations avec les personnes qui façonnent réellement les politiques.</p>
+    <p class="section-intro" style="margin-bottom: 1.5rem;">Les décisions gouvernementales et institutionnelles façonnent les risques et les occasions bien avant d'être rendues publiques et mises en œuvre. Mon travail consiste à offrir une lecture claire de ce qui se passe en matière de politiques, de réglementation et de vie politique, fondée sur un engagement actuel et sur des années passées dans le milieu des politiques publiques. Je me concentre sur ce que cela signifie pour les décisions et la stratégie d'affaires devant vous.</p>
+    <p class="section-intro">Mon travail est analytique, sans parti pris ni position maison. Une lecture réfléchie de l'environnement, fondée sur les faits et sur le dialogue avec les personnes qui façonnent réellement le résultat.</p>
   </div>
 </section>
 
@@ -237,26 +243,34 @@
   <div class="container fade-up">
     <p class="section-label">À propos</p>
     <h2 class="section-heading">Expérience de haut niveau, indépendance véritable</h2>
+    <div class="about-lead">
+      <img class="about-photo" src="jeremy-depow.jpg" alt="Jeremy R. Depow" width="120" height="150">
+      <div>
+        <p class="about-name">Jeremy R. Depow</p>
+        <p class="about-role">Associé principal &middot; RiverRidge Veille politique et analyse des risques</p>
+        <p class="about-cred">Vingt-cinq ans de travail à l'intersection de l'innovation technologique et des politiques publiques, depuis la Colline du Parlement jusqu'à des postes de direction en politique numérique, en passant par l'installation de stations météorologiques connectées. En chemin : relations gouvernementales chez Intuit, travail de politiques principal chez Pfizer, fondation du Forum des politiques numériques du Canada, rôles de direction et d'administration auprès de groupes de réflexion et d'organismes sans but lucratif dans les secteurs biopharmaceutique et des technologies de l'information, et politiques d'entreprise au sein d'une société mondiale de services informatiques. Sélectionné en 2018 pour le programme International Visitor Leadership du département d'État américain sur la cybersécurité.</p>
+      </div>
+    </div>
     <div class="about-grid">
       <div class="about-text">
-        <p>RiverRidge a été fondée par Jeremy Depow, qui cumule plus de 25 ans d'expérience à l'intersection des politiques publiques, de la technologie et du gouvernement. Il a occupé des postes de direction au Parlement, dans des entreprises du Fortune 500 et dans le secteur sans but lucratif. Ses travaux les plus récents portent sur la cybersécurité et la politique numérique.</p>
-        <p>Cette diversité de points de vue est le fondement de la pratique. Ayant vu comment les politiques se font de l'intérieur du gouvernement, des grandes entreprises et de la société civile, RiverRidge analyse un dossier pour comprendre ce qui le motive réellement, et non seulement ce qui est annoncé et couvert par les médias.</p>
-        <p>Jeremy est également pompier volontaire et chef d'équipe de recherche et sauvetage au sol, formé au Système de commandement des interventions. Cette expérience ancre la pratique dans la façon dont les décisions se déroulent dans des conditions réelles, et non seulement sur papier.</p>
-        <p>La pratique est délibérément indépendante. Elle ne fait pas de lobbying, n'adopte aucune position maison et n'a aucun intérêt dans le résultat, ce qui signifie que l'analyse est alignée uniquement sur le processus décisionnel du client.</p>
+        <p>RiverRidge est la pratique par laquelle j'accepte ces mandats.</p>
+        <p>Cette diversité de points de vue est le fondement de ma pratique. Ayant eu l'occasion de voir comment les politiques se font de l'intérieur du gouvernement, des grandes entreprises et de la société civile, j'examine les dossiers pour comprendre ce qui les motive réellement, et pour le détail qui se situe bien au-delà du communiqué de presse.</p>
+        <p>Je suis également pompier volontaire et chef d'équipe de recherche et sauvetage au sol, formé au Système de commandement des interventions. Le privilège de faire ce travail a ancré mon approche dans la façon dont les décisions se déroulent dans la vraie vie, sous pression et sous risque, et non seulement sur papier.</p>
+        <p>La pratique est délibérément indépendante. Mon but n'est pas de faire du lobbying ni d'adopter une position maison, mais de fournir la meilleure information et la meilleure analyse possibles, alignées uniquement sur le besoin du client.</p>
       </div>
       <div class="about-sidebar">
-        <h3>Notre méthode</h3>
-        <p style="font-size: 0.92rem; color: var(--slate-400); margin-bottom: 1.5rem; line-height: 1.75;">Chaque mandat allie un jugement rigoureux à des données vérifiables et à des sources directes :</p>
+        <h3>Ma méthode</h3>
+        <p style="font-size: 0.92rem; color: var(--slate-400); margin-bottom: 1.5rem; line-height: 1.75;">Chaque mandat allie le métier d'analyste à des données vérifiables et à des sources directes :</p>
         <ul class="approach-list">
           <li>Analyse du paysage politique et réglementaire</li>
           <li>Évaluation des risques politiques et institutionnels</li>
           <li>Renseignements de première main auprès de personnes proches du dossier</li>
           <li>Évaluation de scénarios et des risques de second ordre</li>
         </ul>
-        <p style="font-size: 0.92rem; color: var(--slate-400); margin-top: 1.5rem; line-height: 1.75;">L'objectif n'est pas la prédiction, mais la clarté. Nous aidons les décideurs à comprendre les compromis, l'exposition et les contraintes avant d'engager du capital, des ressources ou leur réputation.</p>
+        <p style="font-size: 0.92rem; color: var(--slate-400); margin-top: 1.5rem; line-height: 1.75;">J'aide les gens à comprendre les compromis, l'exposition et les contraintes, et ce faisant à protéger le capital, les ressources et la réputation. L'objectif est une clarté fondée sur les faits.</p>
         <div class="independence-box">
           <h4>L'indépendance par conception</h4>
-          <p>RiverRidge ne fait pas de lobbying et n'adopte aucune position maison. Cette indépendance nous permet d'offrir une analyse objective alignée uniquement sur les besoins décisionnels de nos clients.</p>
+          <p>La pratique peut appuyer la position d'un client, mais elle ne fait pas de lobbying et n'adopte aucune position maison. Cette indépendance préserve la crédibilité auprès des parties prenantes et garde l'analyse alignée sur la décision du client.</p>
         </div>
       </div>
     </div>
@@ -268,27 +282,57 @@
 <section id="services" class="services">
   <div class="container fade-up">
     <p class="section-label">Services</p>
-    <h2 class="section-heading">Comment RiverRidge travaille avec ses clients</h2>
-    <p class="section-intro">Chaque mandat est défini en fonction d'une décision précise.</p>
+    <h2 class="section-heading">Comment je travaille avec mes clients</h2>
+    <p class="section-intro">Je travaille avec des entreprises, des groupes de réflexion, des associations, le secteur public, des cabinets d'avocats et des firmes d'affaires publiques. Les mandats sont définis selon le besoin précis.</p>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3>Rapports de situation politique</h3>
-        <p>Une évaluation d'un dossier ou d'un enjeu précis. Ce qui se passe, qui décide, ce qui est probable et ce que cela signifie. Construite à partir de sources primaires et de conversations directes, et livrée sous forme de note avec une discussion de suivi.</p>
+        <p>Une évaluation d'un dossier ou d'un enjeu précis, définie selon ce dont un client a réellement besoin. Ce qui se passe, qui décide, ce qui est probable et ce que cela signifie. Construite à partir de sources primaires et de conversations directes, et livrée sous forme de note avec le suivi qu'elle mérite.</p>
         <div class="service-tags"><span>Sources primaires</span><span>Note écrite</span><span>Discussion de suivi</span></div>
       </div>
       <div class="service-card">
         <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
         <h3>Mandat de veille continue</h3>
-        <p>Une couverture continue de l'environnement politique et stratégique qui vous concerne, avec une note régulière, un appel permanent et des réponses à vos questions à mesure que les enjeux émergent. Pour les organisations qui doivent garder une longueur d'avance sans fonction de politique interne.</p>
-        <div class="service-tags"><span>Couverture continue</span><span>Note régulière</span><span>Accès direct</span></div>
+        <p>Une couverture continue et une surveillance des enjeux dans l'environnement politique et stratégique qui vous concerne, avec une note régulière, un appel permanent et des réponses à mesure que les enjeux émergent. Pour les organisations qui doivent garder une longueur d'avance sans fonction de politiques à l'interne.</p>
+        <div class="service-tags"><span>Surveillance des enjeux</span><span>Note régulière</span><span>Accès direct</span></div>
       </div>
       <div class="service-card">
         <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
         <h3>Soutien à la réponse stratégique</h3>
-        <p>Lorsqu'un client doit répondre à un dossier, RiverRidge fournit l'analyse et la rédaction qui sous-tendent son mémoire : réponses à des consultations, prises de position et notes d'information, fondées sur des données probantes. La position appartient au client. RiverRidge veille à ce qu'elle soit bien fondée et clairement formulée.</p>
-        <div class="service-tags"><span>Mémoires</span><span>Prises de position</span><span>Notes d'information</span></div>
+        <p>Lorsqu'un client doit répondre à un dossier, je fournis l'analyse et la rédaction qui sous-tendent son mémoire : réponses à des consultations, prises de position, stratégie d'engagement, matériel de discours, notes d'information et soutien aux propositions, le tout fondé sur des données probantes. La position appartient au client. Je veille à ce qu'elle soit bien fondée et clairement formulée.</p>
+        <div class="service-tags"><span>Mémoires</span><span>Prises de position</span><span>Discours</span><span>Soutien aux propositions</span></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="publications" class="pubs">
+  <div class="container fade-up">
+    <p class="section-label">Publications</p>
+    <h2 class="section-heading">Notes d'analyse</h2>
+    <p class="section-intro">Analyses publiées à l'occasion, sur des dossiers où il vaut la peine d'exposer les données en entier.</p>
+    <div class="pub-list">
+      <a href="canada-ecuador-digital-brief-fr.html" class="pub-card">
+        <div class="pub-meta">
+          <span class="pub-kind">Note</span>
+          <span class="pub-date">Commerce et politique numérique &middot; juin 2026</span>
+        </div>
+        <h3>Le Canada est l'un des plus grands investisseurs en Équateur. L'accord de libre-échange ouvre le marché numérique.</h3>
+        <p>L'Accord de libre-échange Canada-Équateur conclu supprime les droits sur les produits numériques, garantit les flux de données transfrontaliers et interdit la localisation forcée et la divulgation du code source. Il n'est pas encore en vigueur, et c'est pourquoi le travail préparatoire qui permet de gagner ce marché vaut peut-être la peine d'être entrepris dès maintenant.</p>
+        <span class="pub-read">Lire la note <span class="btn-arrow">&rarr;</span></span>
+      </a>
+      <a href="https://riverridgeintelligence.ca/canada-4ir-productivity-brief.html" class="pub-card">
+        <div class="pub-meta">
+          <span class="pub-kind">Note</span>
+          <span class="pub-date">Innovation et politique numérique &middot; juillet 2026</span>
+        </div>
+        <h3>Le Canada perd du terrain dans la quatrième révolution industrielle. Les brevets montrent que l'enjeu est réel.</h3>
+        <p>De nouvelles données de l'OCDE au niveau des entreprises montrent que les entreprises canadiennes qui développent les technologies numériques de base gagnent en productivité, alors que la part du Canada dans cette même innovation recule face aux partenaires vers lesquels il diversifie ses échanges.</p>
+        <span class="pub-read">Lire la note <span class="btn-arrow">&rarr;</span></span>
+      </a>
     </div>
   </div>
 </section>
@@ -300,40 +344,9 @@
     <p class="section-label">Axes d'analyse</p>
     <h2 class="section-heading">Trois perspectives sur chaque dossier</h2>
     <div class="focus-grid">
-      <div class="focus-item"><div class="focus-number">01</div><h3>Risque politique</h3><p>Évaluation des conditions politiques, du comportement institutionnel et de l'orientation des politiques, éclairée par l'observation directe et des sources actuelles plutôt que par des commentaires a posteriori.</p></div>
-      <div class="focus-item"><div class="focus-number">02</div><h3>Analyse réglementaire et politique</h3><p>Analyse des cadres réglementaires et des trajectoires politiques qui influent sur le fonctionnement des organisations, fondée sur l'examen de sources primaires plutôt que sur des résumés de seconde main.</p></div>
+      <div class="focus-item"><div class="focus-number">01</div><h3>Risque politique</h3><p>Évaluation des conditions politiques, du comportement institutionnel et de l'orientation des politiques, éclairée par l'observation directe, le métier d'analyste et des sources actuelles plutôt que par des commentaires a posteriori.</p></div>
+      <div class="focus-item"><div class="focus-number">02</div><h3>Analyse réglementaire et politique</h3><p>Analyse des cadres réglementaires et des trajectoires politiques qui influent sur le fonctionnement des organisations, fondée sur l'examen et l'analyse de sources primaires.</p></div>
       <div class="focus-item"><div class="focus-number">03</div><h3>Marché et environnement opérationnel</h3><p>Interprétation des conditions économiques, institutionnelles et politiques qui façonnent un marché ou un environnement opérationnel, et de la façon dont elles sont susceptibles d'évoluer.</p></div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section id="publications" class="pubs">
-  <div class="container fade-up">
-    <p class="section-label">Publications</p>
-    <h2 class="section-heading">Notes d’analyse</h2>
-    <p class="section-intro">Analyses publiées à l’occasion, sur des dossiers où il vaut la peine d’exposer les données en entier.</p>
-    <div class="pub-list">
-      <a href="canada-ecuador-digital-brief-fr.html" class="pub-card">
-        <div class="pub-meta">
-          <span class="pub-kind">Note</span>
-          <span class="pub-date">Commerce et politique numérique &middot; juin 2026</span>
-        </div>
-        <h3>Le Canada est l'un des plus grands investisseurs en Équateur. L'accord de libre-échange ouvre le marché numérique.</h3>
-        <p>L'Accord de libre-échange Canada-Équateur conclu supprime les droits sur les produits numériques, garantit les flux de données transfrontaliers et interdit la localisation forcée et la divulgation du code source. Il n'est pas encore en vigueur, d'où l'intérêt de préparer le terrain dès maintenant.</p>
-        <span class="pub-read">Lire la note <span class="btn-arrow">&rarr;</span></span>
-      </a>
-      <a href="https://riverridgeintelligence.ca/canada-4ir-productivity-brief.html" class="pub-card">
-        <div class="pub-meta">
-          <span class="pub-kind">Note</span>
-          <span class="pub-date">Innovation et politique numérique &middot; juillet 2026</span>
-          <span class="pub-date">&middot; En anglais</span>
-        </div>
-        <h3>Le Canada perd du terrain dans la quatrième révolution industrielle. Les brevets montrent que l’enjeu est réel.</h3>
-        <p>De nouvelles données de l’OCDE au niveau des entreprises montrent que les entreprises canadiennes qui développent les technologies numériques de base gagnent en productivité, alors que la part du Canada dans cette même innovation recule face aux partenaires vers lesquels il diversifie ses échanges.</p>
-        <span class="pub-read">Lire la note <span class="btn-arrow">&rarr;</span></span>
-      </a>
     </div>
   </div>
 </section>
@@ -346,13 +359,14 @@
     <h2 class="section-heading">Entamer une conversation</h2>
     <div class="contact-grid">
       <div class="contact-text">
-        <p>RiverRidge accepte de manière sélective les mandats portant sur les risques politiques, réglementaires et stratégiques.</p>
+        <p>J'accepte de manière sélective les mandats portant sur les risques politiques, réglementaires et stratégiques.</p>
         <p>Une première conversation sert à évaluer la pertinence, la portée et l'adéquation.</p>
         <a href="mailto:contact@riverridgeintelligence.ca" class="contact-email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> contact@riverridgeintelligence.ca</a>
+        <a href="https://www.linkedin.com/in/jeremydepow" class="contact-email" style="margin-top:0.9rem;" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg> linkedin.com/in/jeremydepow</a>
       </div>
       <div class="contact-details">
         <div class="contact-detail-block"><h4>Portée</h4><p>Au service de clients au Canada et à l'étranger.</p></div>
-        <div class="contact-detail-block"><h4>Modèle d'engagement</h4><p style="color: var(--slate-400); font-size: 0.9rem; line-height: 1.7;">Des mandats sur mesure et discrets, fondés sur une analyse rigoureuse et une indépendance intellectuelle.</p></div>
+        <div class="contact-detail-block"><h4>Modèle d'engagement</h4><p style="color: var(--slate-400); font-size: 0.9rem; line-height: 1.7;">Des mandats sur mesure, fondés sur une analyse rigoureuse et une indépendance intellectuelle.</p></div>
       </div>
     </div>
   </div>
@@ -360,8 +374,8 @@
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-copy">&copy; 2025 RiverRidge Policy &amp; Risk Intelligence.</div>
-    <div class="footer-links"><a href="#about">À propos</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+    <div class="footer-copy">&copy; 2025 RiverRidge Veille politique et analyse des risques.</div>
+    <div class="footer-links"><a href="#about">À propos</a><a href="#services">Services</a><a href="#contact">Contact</a><a href="https://www.linkedin.com/in/jeremydepow" target="_blank" rel="noopener">LinkedIn</a></div>
   </div>
 </footer>
 

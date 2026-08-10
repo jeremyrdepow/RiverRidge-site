@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RiverRidge Policy & Risk Intelligence</title>
-<meta name="description" content="Independent policy, regulatory, and political risk intelligence.">
+<title>Jeremy R. Depow | RiverRidge Policy & Risk Intelligence</title>
+<meta name="description" content="Jeremy R. Depow. I assess regulatory risk and policy trajectory for decision-makers in cyber, digital infrastructure, and data governance.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -49,6 +49,12 @@
   .btn-outline:hover { border-color: var(--slate-500); color: var(--slate-100); }
   .btn-arrow { transition: transform 0.25s; }
   .btn:hover .btn-arrow { transform: translateX(3px); }
+  .about-lead { display: flex; gap: 2rem; align-items: flex-start; margin: 2rem 0 2.5rem; }
+  .about-photo { flex: 0 0 120px; width: 120px; height: 150px; object-fit: cover; border-radius: 4px; border: 1px solid var(--slate-800); }
+  .photo-ph { flex: 0 0 120px; width: 120px; height: 150px; border: 1px dashed var(--slate-700); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate-600); }
+  .about-name { font-family: var(--serif); font-size: 1.25rem; color: var(--slate-50); margin-bottom: 0.3rem; }
+  .about-role { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate-500); margin-bottom: 1rem; }
+  .about-cred { font-size: 0.95rem; color: var(--slate-400); line-height: 1.8; }
   section { padding: 6rem 1.5rem; }
   .container { max-width: 1140px; margin: 0 auto; }
   .section-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 1rem; }
@@ -78,14 +84,14 @@
   .service-card p { font-size: 0.92rem; color: var(--slate-400); line-height: 1.75; margin-bottom: 1.5rem; }
   .service-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .service-tags span { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; color: var(--slate-500); background: rgba(255,255,255,0.04); padding: 0.35rem 0.75rem; border-radius: 2px; border: 1px solid var(--slate-800); }
-  .focus { background: var(--slate-950); }
+  .focus { background: var(--slate-900); }
   .focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 3.5rem; border: 1px solid var(--slate-800); border-radius: 4px; overflow: hidden; }
   .focus-item { padding: 2.5rem 2rem; border-right: 1px solid var(--slate-800); }
   .focus-item:last-child { border-right: none; }
   .focus-number { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; color: var(--slate-600); margin-bottom: 1.25rem; }
   .focus-item h3 { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--slate-100); margin-bottom: 1rem; line-height: 1.4; }
   .focus-item p { font-size: 0.9rem; color: var(--slate-400); line-height: 1.8; }
-  .pubs { background: var(--slate-900); }
+  .pubs { background: var(--slate-950); }
   .pub-list { margin-top: 3rem; display: flex; flex-direction: column; gap: 1.25rem; }
   .pub-card { display: block; text-decoration: none; background: var(--slate-950); border: 1px solid var(--slate-800); border-radius: 4px; padding: 2rem 2.25rem; transition: border-color 0.3s, transform 0.3s; position: relative; }
   .pub-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); opacity: 0; transition: opacity 0.3s; }
@@ -129,6 +135,7 @@
     .hamburger { display: flex; }
     section { padding: 4rem 1.25rem; }
     .hero-content { padding: 7rem 1.25rem 3rem; }
+    .about-lead { flex-direction: column; }
     .service-card { padding: 1.75rem 1.5rem; }
     .nav-right { gap: 1rem; }
     .lang-toggle { padding: 0.25rem 0.45rem; font-size: 0.7rem; }
@@ -141,25 +148,18 @@
     .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
   }
 </style>
-  <link rel="canonical" href="https://riverridgeintelligence.ca/">
-  <link rel="alternate" hreflang="en" href="https://riverridgeintelligence.ca/">
-  <link rel="alternate" hreflang="fr" href="https://riverridgeintelligence.ca/fr.html">
-  <link rel="alternate" hreflang="es" href="https://riverridgeintelligence.ca/es.html">
-  <link rel="alternate" hreflang="zh" href="https://riverridgeintelligence.ca/zh.html">
-  <link rel="alternate" hreflang="hi" href="https://riverridgeintelligence.ca/hi.html">
-  <link rel="alternate" hreflang="x-default" href="https://riverridgeintelligence.ca/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="RiverRidge Policy & Risk Intelligence">
   <meta property="og:locale" content="en_CA">
   <meta property="og:url" content="https://riverridgeintelligence.ca/">
-  <meta property="og:title" content="RiverRidge Policy & Risk Intelligence">
-  <meta property="og:description" content="Independent analysis of the policy, regulatory, and political forces that shape consequential decisions.">
+  <meta property="og:title" content="Jeremy R. Depow | RiverRidge Policy & Risk Intelligence">
+  <meta property="og:description" content="I assess regulatory risk and policy trajectory for decision-makers in cyber, digital infrastructure, and data governance.">
   <meta property="og:image" content="https://riverridgeintelligence.ca/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="RiverRidge Policy & Risk Intelligence">
-  <meta name="twitter:description" content="Independent analysis of the policy, regulatory, and political forces that shape consequential decisions.">
+  <meta name="twitter:title" content="Jeremy R. Depow | RiverRidge Policy & Risk Intelligence">
+  <meta name="twitter:description" content="I assess regulatory risk and policy trajectory for decision-makers in cyber, digital infrastructure, and data governance.">
   <meta name="twitter:image" content="https://riverridgeintelligence.ca/og-image.png">
   <script type="application/ld+json">
   {
@@ -178,7 +178,8 @@
       {
         "@type": "Person",
         "@id": "https://riverridgeintelligence.ca/#jeremydepow",
-        "name": "Jeremy Depow",
+        "name": "Jeremy R. Depow",
+        "alternateName": "Jeremy Depow",
         "jobTitle": "Principal",
         "worksFor": { "@id": "https://riverridgeintelligence.ca/#organization" },
         "url": "https://riverridgeintelligence.ca/",
@@ -187,6 +188,11 @@
     ]
   }
   </script>
+  <link rel="canonical" href="https://riverridgeintelligence.ca/">
+  <link rel="alternate" hreflang="en" href="https://riverridgeintelligence.ca/">
+  <link rel="alternate" hreflang="fr" href="https://riverridgeintelligence.ca/fr.html">
+  <link rel="alternate" hreflang="es" href="https://riverridgeintelligence.ca/es.html">
+  <link rel="alternate" hreflang="x-default" href="https://riverridgeintelligence.ca/">
 </head>
 <body>
 
@@ -202,7 +208,7 @@
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
       </div>
-      <div class="lang-toggles"><a href="index.html" class="lang-toggle active">EN</a><a href="fr.html" class="lang-toggle">FR</a><a href="es.html" class="lang-toggle">ES</a><a href="zh.html" class="lang-toggle">中文</a><a href="hi.html" class="lang-toggle">हिं</a></div>
+      <div class="lang-toggles"><a href="index.html" class="lang-toggle active">EN</a><a href="fr.html" class="lang-toggle">FR</a><a href="es.html" class="lang-toggle">ES</a></div>
     </div>
   </div>
 </nav>
@@ -212,7 +218,7 @@
   <div class="hero-content">
     <div class="hero-label">Policy &amp; Risk Intelligence</div>
     <h1>Independent Policy and Risk Intelligence</h1>
-    <p class="hero-sub">Rigorous, independent analysis of the policy, regulatory, and political forces that shape consequential decisions.</p>
+    <p class="hero-sub">I assess regulatory risk and policy trajectory for decision-makers in cyber, digital infrastructure, and data governance.</p>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary">Get in Touch <span class="btn-arrow">&rarr;</span></a>
       <a href="#about" class="btn btn-outline">Learn More</a>
@@ -226,8 +232,8 @@
   <div class="container fade-up">
     <p class="section-label">Overview</p>
     <h2 class="section-heading">Independent Reading of a Changing Environment</h2>
-    <p class="section-intro" style="margin-bottom: 1.5rem;">Government and institutional decisions shape risk and opportunity long before they become public and implemented. RiverRidge provides clear, independent analysis of what is happening across policy, regulation, and politics, drawn from direct sources rather than the public record alone, and focused on what it means for the decision in front of you.</p>
-    <p class="section-intro">Our approach is analytic, not transactional. No agenda, no house view, no upsell. A sober read of the environment, grounded in fact and in conversations with the people who actually shape policy.</p>
+    <p class="section-intro" style="margin-bottom: 1.5rem;">Government and institutional decisions shape risk and opportunity long before they become public and implemented. My work is to provide a clear read of what is happening across policy, regulation, and politics, drawn from current engagement and years in the policy environment. I focus on what that means for the decisions and the business strategy in front of you.</p>
+    <p class="section-intro">My work is analytic, without agenda or house view. A thoughtful read of the environment, grounded in fact and in dialogue with the people who actually shape the outcome.</p>
   </div>
 </section>
 
@@ -237,26 +243,34 @@
   <div class="container fade-up">
     <p class="section-label">About</p>
     <h2 class="section-heading">Senior Experience, Genuine Independence</h2>
+    <div class="about-lead">
+      <img class="about-photo" src="jeremy-depow.jpg" alt="Jeremy R. Depow" width="120" height="150">
+      <div>
+        <p class="about-name">Jeremy R. Depow</p>
+        <p class="about-role">Principal &middot; RiverRidge Policy &amp; Risk Intelligence</p>
+        <p class="about-cred">Twenty-five years of work at the intersection of technological innovation and public policy, beginning on Parliament Hill and running from installing internet-connected environmental weather stations to executive roles in digital policy. Along the way: government relations at Intuit, senior policy work at Pfizer, founding Canada's Digital Policy Forum, executive and board-level roles with think tanks and not-for-profits across the biopharmaceutical and information technology sectors, and corporate policy at a global IT services company. Selected to the U.S. State Department's International Visitor Leadership Program on cybersecurity in 2018.</p>
+      </div>
+    </div>
     <div class="about-grid">
       <div class="about-text">
-        <p>RiverRidge was founded by Jeremy Depow, who has spent more than 25 years working at the intersection of public policy, technology, and government. He has held senior roles across Parliament, Fortune 500 companies, and the not-for-profit sector. His more recent work has centered on cybersecurity and digital policy.</p>
-        <p>That range of vantage points is the practice's foundation. Having seen how policy is made from inside government, inside major companies, and inside civil society, RiverRidge reads a file for what is actually driving it, not only what is announced and covered by media.</p>
-        <p>Jeremy is also a volunteer firefighter and a ground search and rescue team leader, trained in the Incident Command System. That experience grounds the practice in how decisions play out under real conditions, not only how they read on paper.</p>
-        <p>The practice is deliberately independent. It does not lobby, carry a house view, or hold a stake in the outcome, which means the analysis is aligned only with the client's decision process.</p>
+        <p>RiverRidge is the practice through which I take on that work.</p>
+        <p>That range of vantage points is the foundation of my practice. Having had the opportunity to see how policy is made from inside government, inside major companies, and inside civil society, I look at files for what is actually driving them, and for the detail that sits well beyond the press release.</p>
+        <p>I am also a volunteer firefighter and a ground search and rescue team leader, trained in the Incident Command System. The privilege of doing that work has grounded my approach in how decisions play out in real life, under stress and under risk, and not only how they read on paper.</p>
+        <p>The practice is deliberately independent. My aim is not to lobby or carry a house view, but to provide the best information and analysis available, aligned only with a client's need.</p>
       </div>
       <div class="about-sidebar">
-        <h3>How We Work</h3>
-        <p style="font-size: 0.92rem; color: var(--slate-400); margin-bottom: 1.5rem; line-height: 1.75;">Every engagement combines disciplined judgment with verifiable evidence and direct sources:</p>
+        <h3>How I Work</h3>
+        <p style="font-size: 0.92rem; color: var(--slate-400); margin-bottom: 1.5rem; line-height: 1.75;">Every engagement combines analytic tradecraft with verifiable evidence and direct sources:</p>
         <ul class="approach-list">
           <li>Policy and regulatory landscape analysis</li>
           <li>Political and institutional risk assessment</li>
           <li>Primary-source insight from people close to the file</li>
           <li>Scenario and second-order risk evaluation</li>
         </ul>
-        <p style="font-size: 0.92rem; color: var(--slate-400); margin-top: 1.5rem; line-height: 1.75;">The goal is not prediction, but clarity. We help decision-makers understand trade-offs, exposure, and constraints before they commit capital, resources, or reputation.</p>
+        <p style="font-size: 0.92rem; color: var(--slate-400); margin-top: 1.5rem; line-height: 1.75;">I help people understand trade-offs, exposure, and constraints, and in doing so protect capital, resources, and reputation. The goal is evidence-based clarity.</p>
         <div class="independence-box">
           <h4>Independence by Design</h4>
-          <p>RiverRidge does not lobby or carry a house view. This independence allows us to provide objective analysis aligned solely with our clients' decision-making needs.</p>
+          <p>The practice may support a client's position, but it does not lobby or carry a house view. That independence maintains credibility with stakeholders and keeps the analysis aligned with the client's decision.</p>
         </div>
       </div>
     </div>
@@ -268,41 +282,27 @@
 <section id="services" class="services">
   <div class="container fade-up">
     <p class="section-label">Services</p>
-    <h2 class="section-heading">How RiverRidge Works With Clients</h2>
-    <p class="section-intro">Each engagement is scoped to a specific decision.</p>
+    <h2 class="section-heading">How I Work With Clients</h2>
+    <p class="section-intro">I work with companies, think tanks, associations, the public sector, law firms, and public affairs firms. Projects are scoped to the specific need.</p>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3>Policy Situation Reports</h3>
-        <p>An assessment of a specific file or issue. What is happening, who is deciding, what is likely, and what it means. Built from primary sources and direct conversations, and delivered as a brief with a follow-up discussion.</p>
+        <p>An assessment of a specific file or issue, scoped to what a particular client actually needs. What is happening, who is deciding, what is likely, and what it means. Built from primary sources and direct conversations, and delivered as a brief with the follow-up it warrants.</p>
         <div class="service-tags"><span>Primary sources</span><span>Written brief</span><span>Follow-up discussion</span></div>
       </div>
       <div class="service-card">
         <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
         <h3>Standing Intelligence Retainer</h3>
-        <p>Continuous coverage of the policy and political environment that affects you, with a regular brief, a standing call, and questions answered as issues emerge. For organizations that need to stay ahead of a shifting landscape without an in-house policy function.</p>
-        <div class="service-tags"><span>Ongoing coverage</span><span>Regular brief</span><span>Direct access</span></div>
+        <p>Continuous coverage and issue monitoring across the policy and political environment that affects you, with a regular brief, a standing call, and questions answered as issues emerge. For organizations that need to stay ahead of a shifting landscape without an in-house policy function.</p>
+        <div class="service-tags"><span>Issue monitoring</span><span>Regular brief</span><span>Direct access</span></div>
       </div>
       <div class="service-card">
         <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
         <h3>Strategic Response Support</h3>
-        <p>When a client must respond to a file, RiverRidge provides the analysis and drafting behind their submission: consultation responses, position papers, and briefings, built on evidence. The position is the client's. RiverRidge makes sure it is well-founded and clearly made.</p>
-        <div class="service-tags"><span>Submissions</span><span>Position papers</span><span>Briefings</span></div>
+        <p>When a client must respond to a file, I provide the analysis and drafting behind their submission: consultation responses, position papers, engagement strategy, speaking material, briefings, and proposal bid support, all built on evidence. The position is the client's. I make sure it is well-founded and clearly made.</p>
+        <div class="service-tags"><span>Submissions</span><span>Position papers</span><span>Speeches</span><span>Bid support</span></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section id="focus" class="focus">
-  <div class="container fade-up">
-    <p class="section-label">Analytical Focus</p>
-    <h2 class="section-heading">Three Lenses on Every File</h2>
-    <div class="focus-grid">
-      <div class="focus-item"><div class="focus-number">01</div><h3>Political Risk</h3><p>Assessment of political conditions, institutional behaviour, and policy direction, informed by direct observation and current sources rather than commentary after the fact.</p></div>
-      <div class="focus-item"><div class="focus-number">02</div><h3>Regulatory &amp; Policy Analysis</h3><p>Analysis of regulatory frameworks and policy trajectories that affect how organizations operate, grounded in primary source review rather than second hand summary.</p></div>
-      <div class="focus-item"><div class="focus-number">03</div><h3>Market &amp; Operating Environment</h3><p>Interpretation of the economic, institutional, and political conditions that shape a market or an operating environment, and how they are likely to move.</p></div>
     </div>
   </div>
 </section>
@@ -321,7 +321,7 @@
           <span class="pub-date">Trade &amp; Digital Policy &middot; June 2026</span>
         </div>
         <h3>Canada is one of Ecuador's largest investors. The free trade agreement opens the digital market.</h3>
-        <p>The concluded Canada-Ecuador FTA removes duties on digital products, guarantees cross-border data flows, and bars forced localization and source-code disclosure. It is not yet in force, which is why the groundwork that wins the market should start now.</p>
+        <p>The concluded Canada-Ecuador FTA removes duties on digital products, guarantees cross-border data flows, and bars forced localization and source-code disclosure. It is not yet in force, which is why the groundwork that wins the market may be worth starting now.</p>
         <span class="pub-read">Read the brief <span class="btn-arrow">&rarr;</span></span>
       </a>
       <a href="https://riverridgeintelligence.ca/canada-4ir-productivity-brief.html" class="pub-card">
@@ -339,19 +339,34 @@
 
 <div class="divider"></div>
 
+<section id="focus" class="focus">
+  <div class="container fade-up">
+    <p class="section-label">Analytical Focus</p>
+    <h2 class="section-heading">Three Lenses on Every File</h2>
+    <div class="focus-grid">
+      <div class="focus-item"><div class="focus-number">01</div><h3>Political Risk</h3><p>Assessment of political conditions, institutional behaviour, and policy direction, informed by direct observation, analytic tradecraft, and current sources rather than commentary after the fact.</p></div>
+      <div class="focus-item"><div class="focus-number">02</div><h3>Regulatory &amp; Policy Analysis</h3><p>Analysis of regulatory frameworks and policy trajectories that affect how organizations operate, grounded in primary source review and analysis.</p></div>
+      <div class="focus-item"><div class="focus-number">03</div><h3>Market &amp; Operating Environment</h3><p>Interpretation of the economic, institutional, and political conditions that shape a market or an operating environment, and how they are likely to move.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <section id="contact" class="contact">
   <div class="container fade-up">
     <p class="section-label">Contact</p>
     <h2 class="section-heading">Begin a Conversation</h2>
     <div class="contact-grid">
       <div class="contact-text">
-        <p>RiverRidge engages selectively on questions of policy, regulatory, and political risk.</p>
+        <p>I engage selectively on questions of policy, regulatory, and political risk.</p>
         <p>An initial conversation is used to assess relevance, scope, and fit.</p>
         <a href="mailto:contact@riverridgeintelligence.ca" class="contact-email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> contact@riverridgeintelligence.ca</a>
+        <a href="https://www.linkedin.com/in/jeremydepow" class="contact-email" style="margin-top:0.9rem;" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg> linkedin.com/in/jeremydepow</a>
       </div>
       <div class="contact-details">
         <div class="contact-detail-block"><h4>Reach</h4><p>Serving clients in Canada and internationally.</p></div>
-        <div class="contact-detail-block"><h4>Engagement Model</h4><p style="color: var(--slate-400); font-size: 0.9rem; line-height: 1.7;">Tailored, discreet engagements grounded in evidence-based analysis and intellectual independence.</p></div>
+        <div class="contact-detail-block"><h4>Engagement Model</h4><p style="color: var(--slate-400); font-size: 0.9rem; line-height: 1.7;">Tailored engagements grounded in evidence-based analysis and intellectual independence.</p></div>
       </div>
     </div>
   </div>
@@ -360,7 +375,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-copy">&copy; 2025 RiverRidge Policy &amp; Risk Intelligence.</div>
-    <div class="footer-links"><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+    <div class="footer-links"><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a><a href="https://www.linkedin.com/in/jeremydepow" target="_blank" rel="noopener">LinkedIn</a></div>
   </div>
 </footer>
 
