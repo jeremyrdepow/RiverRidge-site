@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage: English -->
+  <url>
+    <loc>https://riverridgeintelligence.ca/</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://riverridgeintelligence.ca/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://riverridgeintelligence.ca/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://riverridgeintelligence.ca/es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://riverridgeintelligence.ca/"/>
+  </url>
+
+  <!-- Homepage: French -->
+  <url>
+    <loc>https://riverridgeintelligence.ca/fr.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://riverridgeintelligence.ca/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://riverridgeintelligence.ca/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://riverridgeintelligence.ca/es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://riverridgeintelligence.ca/"/>
+  </url>
+
+  <!-- Homepage: Spanish -->
+  <url>
+    <loc>https://riverridgeintelligence.ca/es.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://riverridgeintelligence.ca/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://riverridgeintelligence.ca/fr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://riverridgeintelligence.ca/es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://riverridgeintelligence.ca/"/>
+  </url>
+
+  <!-- Canada-Ecuador digital trade brief: English -->
+  <url>
+    <loc>https://riverridgeintelligence.ca/canada-ecuador-digital-brief.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://riverridgeintelligence.ca/canada-ecuador-digital-brief.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://riverridgeintelligence.ca/canada-ecuador-digital-brief-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://riverridgeintelligence.ca/canada-ecuador-digital-brief-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://riverridgeintelligence.ca/canada-ecuador-digital-brief.html"/>
+  </url>
+
+  <!-- Canada-Ecuador digital trade brief: French -->
+  <url>
+    <loc>https://riverridgeintelligence.ca/canada-ecuador-digital-brief-fr.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://riverridgeintelligence.ca/canada-ecuador-digital-brief.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://riverridgeintelligence.ca/canada-ecuador-digital-brief-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://riverridgeintelligence.ca/canada-ecuador-digital-brief-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://riverridgeintelligence.ca/canada-ecuador-digital-brief.html"/>
+  </url>
+
+  <!-- Canada-Ecuador digital trade brief: Spanish -->
+  <url>
+    <loc>https://riverridgeintelligence.ca/canada-ecuador-digital-brief-es.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://riverridgeintelligence.ca/canada-ecuador-digital-brief.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://riverridgeintelligence.ca/canada-ecuador-digital-brief-fr.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://riverridgeintelligence.ca/canada-ecuador-digital-brief-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://riverridgeintelligence.ca/canada-ecuador-digital-brief.html"/>
+  </url>
+
+  <!-- Canada 4IR patenting and productivity brief: English -->
+  <url>
+    <loc>https://riverridgeintelligence.ca/canada-4ir-productivity-brief.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!--
+    ADD LATER, once the files are in the repository.
+    Uncomment the block and add matching hreflang lines to the English 4IR
+    entry above when the French version goes up.
+
+  <url>
+    <loc>https://riverridgeintelligence.ca/canada-4ir-productivity-brief-fr.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://riverridgeintelligence.ca/canada-c36-ppcda-brief.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  -->
+
+</urlset>
