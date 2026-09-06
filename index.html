@@ -3,12 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#0a0f1a">
 <title>Jeremy R. Depow | RiverRidge Policy & Risk Intelligence</title>
 <meta name="description" content="Jeremy R. Depow. I assess regulatory risk and policy trajectory for decision-makers in cyber, digital infrastructure, and data governance.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,6 +73,11 @@
   .independence-box h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 0.75rem; }
   .independence-box p { font-size: 0.95rem; color: var(--slate-300); line-height: 1.7; margin: 0; }
   .services { background: var(--slate-900); }
+  .retained { margin-top: 2.5rem; padding: 1.75rem 2rem; background: var(--slate-950); border: 1px solid var(--slate-800); border-left: 2px solid var(--accent); border-radius: 0 4px 4px 0; max-width: 760px; }
+  .retained h3 { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 1rem; }
+  .retained p { font-size: 0.95rem; color: var(--slate-400); line-height: 1.8; margin-bottom: 0.9rem; }
+  .retained p:last-child { margin-bottom: 0; }
+  .retained .scope { color: var(--slate-300); }
   .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.5rem; }
   .service-card { background: var(--slate-950); border: 1px solid var(--slate-800); border-radius: 4px; padding: 2.25rem 2rem; transition: border-color 0.3s, transform 0.3s; position: relative; }
   .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient(90deg, var(--accent), transparent); opacity: 0; transition: opacity 0.3s; }
@@ -204,7 +203,7 @@
 
 <nav>
   <div class="nav-inner">
-    <a href="/" class="nav-brand">River<span>Ridge</span></a>
+    <a href="#" class="nav-brand">River<span>Ridge</span></a>
     <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="nav-right">
       <div class="nav-links">
@@ -214,7 +213,7 @@
         <a href="#publications">Publications</a>
         <a href="#contact">Contact</a>
       </div>
-      <div class="lang-toggles"><a href="/" class="lang-toggle active">EN</a><a href="fr.html" class="lang-toggle">FR</a><a href="es.html" class="lang-toggle">ES</a></div>
+      <div class="lang-toggles"><a href="index.html" class="lang-toggle active">EN</a><a href="fr.html" class="lang-toggle">FR</a><a href="es.html" class="lang-toggle">ES</a></div>
     </div>
   </div>
 </nav>
@@ -290,6 +289,12 @@
     <p class="section-label">Services</p>
     <h2 class="section-heading">How I Work With Clients</h2>
     <p class="section-intro">I work with companies, think tanks, associations, the public sector, law firms, and public affairs firms. Projects are scoped to the specific need.</p>
+    <div class="retained">
+      <h3>For counsel and advisers</h3>
+      <p>Firms retain me for defined analytic work inside engagements they already hold.</p>
+      <p class="scope">The scope is usually one of three things: regulatory trajectory analysis, consultation and submission support against a filed deadline, or the background analysis a matter requires but the firm is not staffed to carry.</p>
+      <p>The retaining firm holds the client relationship and remains counsel or adviser of record. Each engagement is scoped and priced on its own terms.</p>
+    </div>
     <div class="services-grid">
       <div class="service-card">
         <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
@@ -318,9 +323,18 @@
 <section id="publications" class="pubs">
   <div class="container fade-up">
     <p class="section-label">Publications</p>
-    <h2 class="section-heading">Briefs</h2>
-    <p class="section-intro">Occasional published analysis on files where the evidence is worth setting out in full.</p>
+    <h2 class="section-heading">Papers and Briefs</h2>
+    <p class="section-intro">Published analysis on files where the evidence is worth setting out in full.</p>
     <div class="pub-list">
+      <a href="digital-harm-reduction.html" class="pub-card">
+        <div class="pub-meta">
+          <span class="pub-kind">Policy paper</span>
+          <span class="pub-date">Digital Policy &middot; September 2026</span>
+        </div>
+        <h3>Digital Harm Reduction for Children</h3>
+        <p>Bill C-34 and Bill C-36 are interlocked, and neither works without the other. Three central obligations are law on the page and bind nobody today: a minimum age that applies to no service, an age check that must be effective with effective left undefined, and a design duty with no design features. What committee can still fix.</p>
+        <span class="pub-read">Read the paper <span class="btn-arrow">&rarr;</span></span>
+      </a>
       <a href="canada-ecuador-digital-brief.html" class="pub-card">
         <div class="pub-meta">
           <span class="pub-kind">Brief</span>
