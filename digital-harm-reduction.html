@@ -26,23 +26,25 @@
 <meta name="twitter:image" content="https://riverridgeintelligence.ca/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#16211F;
-  --paper:#FBFAF7;
-  --river:#0F5E5C;
-  --slate:#5C6B68;
-  --oxide:#A03A1F;
-  --rule:#DDD9D0;
-  --wash:#F2F0EA;
+  --ink:#cbd5e1;
+  --head:#f8fafc;
+  --paper:#0a0f1a;
+  --river:#5a9a89;
+  --river-deep:#4a7c6f;
+  --slate:#94a3b8;
+  --oxide:#c98b6b;
+  --rule:#1e293b;
+  --wash:#111827;
   --measure:34rem;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0;background:var(--paper);color:var(--ink);
-  font-family:Spectral,Georgia,serif;font-weight:300;
+  font-family:'Libre Baskerville',Georgia,serif;font-weight:400;
   font-size:1.0625rem;line-height:1.65;
 }
 .wrap{max-width:72rem;margin:0 auto;padding:0 1.5rem}
@@ -51,28 +53,29 @@ body{
 /* ---------- site nav ---------- */
 nav.site{border-bottom:1px solid var(--rule);background:var(--paper)}
 nav.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:56px;flex-wrap:wrap}
-nav.site .brand{font-family:'IBM Plex Sans',system-ui,sans-serif;font-weight:600;font-size:.8125rem;
+nav.site .brand{font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:.8125rem;
   letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none}
 nav.site .brand span{color:var(--river)}
-nav.site .links{display:flex;gap:1.25rem;align-items:center;font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:.78125rem}
+nav.site .links{display:flex;gap:1.25rem;align-items:center;font-family:Inter,system-ui,sans-serif;font-size:.78125rem}
 nav.site .links a{color:var(--slate);text-decoration:none}
 nav.site .links a:hover{color:var(--ink)}
 nav.site .langs{display:flex;gap:.35rem}
-nav.site .langs a{font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:.7rem;font-weight:600;
+nav.site .langs a{font-family:Inter,system-ui,sans-serif;font-size:.7rem;font-weight:600;
   letter-spacing:.06em;text-transform:uppercase;color:var(--river);text-decoration:none;
   border:1px solid var(--river);padding:.2rem .45rem;border-radius:2px}
-nav.site .langs a:hover{background:var(--river);color:var(--paper)}
-nav.site .langs a.active{background:var(--river);color:var(--paper);pointer-events:none}
+nav.site .langs a:hover{background:var(--river);color:#0a0f1a}
+nav.site .langs a.active{background:var(--river);color:#0a0f1a;pointer-events:none}
 @media(max-width:640px){nav.site .links{display:none}}
 
 /* ---------- masthead ---------- */
 header.masthead{padding:4.5rem 0 0}
 .kicker{
-  font-family:'IBM Plex Sans',sans-serif;font-size:.8125rem;color:var(--river);
+  font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--river);
   font-weight:500;letter-spacing:.01em;margin:0 0 1.25rem;
 }
 h1{
-  font-family:Spectral,serif;font-weight:600;font-size:clamp(2.4rem,6vw,4rem);
+  color:var(--head);
+  font-family:'Libre Baskerville',Georgia,serif;font-weight:400;font-size:clamp(2.4rem,6vw,4rem);
   line-height:1.02;letter-spacing:-.02em;margin:0 0 1rem;max-width:22ch;
 }
 .standfirst{
@@ -80,27 +83,27 @@ h1{
   max-width:44ch;margin:0 0 2rem;line-height:1.45;
 }
 .byline{
-  font-family:'IBM Plex Sans',sans-serif;font-size:.8125rem;color:var(--slate);
+  font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--slate);
   border-top:1px solid var(--rule);padding-top:.9rem;max-width:var(--measure);
 }
 
 /* ---------- the ledger: the memorable element ---------- */
 .ledger{margin:3.5rem 0 4rem;border-top:2px solid var(--ink);}
 .ledger-head{
-  font-family:'IBM Plex Sans',sans-serif;padding:.9rem 0 1.3rem;
+  font-family:Inter,system-ui,sans-serif;padding:.9rem 0 1.3rem;
 }
-.ledger-head h2{font-size:1.35rem;font-weight:600;margin:0 0 .3rem;font-family:Spectral,serif}
+.ledger-head h2{font-size:1.35rem;font-weight:600;margin:0 0 .3rem;font-family:'Libre Baskerville',Georgia,serif}
 .ledger-head p{margin:0;font-size:.875rem;color:var(--slate);max-width:52ch;line-height:1.5}
 .ledger-row{
   display:grid;grid-template-columns:minmax(9rem,1fr) minmax(0,1.7fr) minmax(0,1.4fr);
   gap:1.25rem;padding:1.15rem 0;border-top:1px solid var(--rule);align-items:start;
 }
 .ledger-row:last-child{border-bottom:1px solid var(--rule)}
-.ledger-row .prov{font-family:'IBM Plex Sans',sans-serif;font-size:.875rem;font-weight:600;line-height:1.35}
+.ledger-row .prov{font-family:Inter,system-ui,sans-serif;font-size:.875rem;font-weight:600;line-height:1.35}
 .ledger-row .prov span{display:block;font-weight:400;color:var(--slate);font-size:.8125rem;margin-top:.15rem}
 .ledger-row .says{font-size:.9375rem;line-height:1.5}
 .ledger-row .gap{
-  font-family:'IBM Plex Sans',sans-serif;font-size:.875rem;color:var(--oxide);line-height:1.45;
+  font-family:Inter,system-ui,sans-serif;font-size:.875rem;color:var(--oxide);line-height:1.45;
   display:flex;gap:.55rem;align-items:flex-start;
 }
 .ledger-row .gap::before{
@@ -109,7 +112,7 @@ h1{
 }
 .ledger-labels{
   display:grid;grid-template-columns:minmax(9rem,1fr) minmax(0,1.7fr) minmax(0,1.4fr);
-  gap:1.25rem;font-family:'IBM Plex Sans',sans-serif;font-size:.75rem;color:var(--slate);
+  gap:1.25rem;font-family:Inter,system-ui,sans-serif;font-size:.75rem;color:var(--slate);
   padding-bottom:.5rem;
 }
 @media(max-width:46rem){
@@ -121,15 +124,15 @@ h1{
 main{padding-bottom:6rem}
 section{margin:0 0 3.25rem}
 h2.sec{
-  font-family:Spectral,serif;font-size:1.75rem;font-weight:600;letter-spacing:-.01em;
+  font-family:'Libre Baskerville',Georgia,serif;color:var(--head);font-size:1.75rem;font-weight:600;letter-spacing:-.01em;
   margin:3.5rem 0 1.1rem;padding-top:1.1rem;border-top:2px solid var(--ink);max-width:var(--measure);
 }
 h3{
-  font-family:'IBM Plex Sans',sans-serif;font-size:1.0625rem;font-weight:600;
+  font-family:Inter,system-ui,sans-serif;color:var(--head);font-size:1.0625rem;font-weight:600;
   margin:2.2rem 0 .6rem;max-width:var(--measure);
 }
 h4{
-  font-family:'IBM Plex Sans',sans-serif;font-size:.9375rem;font-weight:600;color:var(--river);
+  font-family:Inter,system-ui,sans-serif;font-size:.9375rem;font-weight:600;color:var(--river);
   margin:1.6rem 0 .4rem;max-width:var(--measure);
 }
 p{max-width:var(--measure);margin:0 0 1.1rem}
@@ -145,22 +148,22 @@ ol.asks{max-width:var(--measure);list-style:none;counter-reset:a;padding:0;margi
 ol.asks li{counter-increment:a;padding-left:2.2rem;position:relative;margin-bottom:.85rem}
 ol.asks li::before{
   content:counter(a);position:absolute;left:0;top:.1rem;
-  font-family:'IBM Plex Sans',sans-serif;font-size:.8125rem;font-weight:600;color:var(--river);
+  font-family:Inter,system-ui,sans-serif;font-size:.8125rem;font-weight:600;color:var(--river);
   border:1px solid var(--rule);width:1.5rem;height:1.5rem;display:grid;place-items:center;border-radius:2px;
 }
 
 /* ---------- timeline ---------- */
 .timeline{margin:2rem 0 2.5rem;max-width:58rem}
 .tl-track{display:grid;grid-template-columns:repeat(7,1fr);gap:.25rem;margin-bottom:.6rem}
-.tl-step{border-top:3px solid var(--rule);padding-top:.55rem;font-family:'IBM Plex Sans',sans-serif;font-size:.75rem;color:var(--slate);line-height:1.3}
+.tl-step{border-top:3px solid var(--rule);padding-top:.55rem;font-family:Inter,system-ui,sans-serif;font-size:.75rem;color:var(--slate);line-height:1.3}
 .tl-step.done{border-color:var(--river);color:var(--ink)}
 .tl-step.now{border-color:var(--oxide)}
-.tl-marks{display:grid;grid-template-columns:repeat(7,1fr);gap:.25rem;font-family:'IBM Plex Sans',sans-serif;font-size:.75rem}
+.tl-marks{display:grid;grid-template-columns:repeat(7,1fr);gap:.25rem;font-family:Inter,system-ui,sans-serif;font-size:.75rem}
 .tl-marks span{display:block;min-height:1.4rem}
 .mark{display:inline-block;padding:.1rem .45rem;border-radius:2px;font-weight:600;font-size:.7rem}
 .mark.c34{background:var(--river);color:#fff}
 .mark.c36{background:var(--oxide);color:#fff}
-.tl-note{font-family:'IBM Plex Sans',sans-serif;font-size:.8125rem;color:var(--slate);margin-top:.9rem;max-width:52ch}
+.tl-note{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--slate);margin-top:.9rem;max-width:52ch}
 @media(max-width:46rem){
   .tl-track,.tl-marks{grid-template-columns:repeat(2,1fr);gap:.5rem 1rem}
   .tl-marks{margin-bottom:1rem}
@@ -169,8 +172,8 @@ ol.asks li::before{
 /* ---------- harms grid ---------- */
 .harms{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:0;max-width:58rem;margin:1.5rem 0 1rem;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
 .harm{border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:1rem 1.1rem;font-size:.9375rem;line-height:1.45}
-.harm b{font-family:'IBM Plex Sans',sans-serif;font-size:.75rem;color:var(--river);font-weight:600;display:block;margin-bottom:.3rem}
-.exhaustive{font-family:'IBM Plex Sans',sans-serif;font-size:.8125rem;color:var(--ink);max-width:52ch;margin-top:.9rem}
+.harm b{font-family:Inter,system-ui,sans-serif;font-size:.75rem;color:var(--river);font-weight:600;display:block;margin-bottom:.3rem}
+.exhaustive{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--ink);max-width:52ch;margin-top:.9rem}
 
 /* ---------- sidebar box ---------- */
 aside.box{
@@ -184,19 +187,19 @@ aside.box p:last-child{margin-bottom:0}
 /* ---------- recommendations table ---------- */
 .rec-table{margin:1.75rem 0 2.5rem;max-width:62rem;border-top:2px solid var(--ink)}
 .rec-labels,.rec-row{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1.5fr) minmax(0,.9fr);gap:1.25rem}
-.rec-labels{font-family:'IBM Plex Sans',sans-serif;font-size:.75rem;color:var(--slate);padding:.7rem 0 .5rem}
+.rec-labels{font-family:Inter,system-ui,sans-serif;font-size:.75rem;color:var(--slate);padding:.7rem 0 .5rem}
 .rec-row{padding:1rem 0;border-top:1px solid var(--rule);align-items:start}
 .rec-row:last-child{border-bottom:1px solid var(--rule)}
-.rec-row .what{font-family:'IBM Plex Sans',sans-serif;font-size:.9375rem;font-weight:600;line-height:1.4}
+.rec-row .what{font-family:Inter,system-ui,sans-serif;font-size:.9375rem;font-weight:600;line-height:1.4}
 .rec-row .inst,.rec-row .stage{font-size:.875rem;color:var(--slate);line-height:1.45}
-.rec-row .stage{font-family:'IBM Plex Sans',sans-serif;font-size:.8125rem}
+.rec-row .stage{font-family:Inter,system-ui,sans-serif;font-size:.8125rem}
 @media(max-width:46rem){.rec-labels{display:none}.rec-row{grid-template-columns:1fr;gap:.35rem}}
 
 /* recommendation detail */
 .rec{border-top:1px solid var(--rule);padding:1.6rem 0 .4rem;max-width:var(--measure)}
 .rec h3{margin-top:0;display:flex;gap:.7rem;align-items:baseline}
 .rec h3 .n{color:var(--river);font-size:.8125rem;flex:0 0 auto}
-.rec .instrument{font-family:'IBM Plex Sans',sans-serif;font-size:.8125rem;color:var(--slate);margin:-.3rem 0 .8rem}
+.rec .instrument{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--slate);margin:-.3rem 0 .8rem}
 
 /* landings */
 .landing{border-left:2px solid var(--rule);padding-left:1.2rem;margin:1.6rem 0;max-width:38rem}
@@ -205,7 +208,25 @@ aside.box p:last-child{margin-bottom:0}
 
 footer{border-top:2px solid var(--ink);padding:2.5rem 0 4rem;margin-top:4rem}
 footer p{font-size:.9375rem;color:var(--slate)}
-footer .sig{font-family:'IBM Plex Sans',sans-serif;color:var(--ink);font-weight:600;font-size:.9375rem}
+footer .sig{font-family:Inter,system-ui,sans-serif;color:var(--ink);font-weight:600;font-size:.9375rem}
+
+/* dark-system adjustments */
+body{-webkit-font-smoothing:antialiased}
+strong,b{color:var(--head);font-weight:700}
+h2,h3,h4{color:var(--head)}
+h4{color:var(--river)}
+a{color:var(--river)}
+a:hover{color:var(--oxide)}
+.ledger-row,.rec-row{border-color:var(--rule)}
+aside.box{background:var(--wash);border-color:var(--rule)}
+::selection{background:rgba(90,154,137,.28)}
+
+.dl{display:inline-flex;align-items:center;gap:.5rem;margin:1.6rem 0 .4rem;
+  font-family:Inter,system-ui,sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--river);text-decoration:none;
+  border:1px solid var(--river-deep);padding:.6rem 1.1rem;border-radius:2px;transition:all .25s}
+.dl:hover{background:var(--river-deep);color:#0a0f1a}
+.dl svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 </style>
 <script type="application/ld+json">
 {
@@ -286,10 +307,15 @@ footer .sig{font-family:'IBM Plex Sans',sans-serif;color:var(--ink);font-weight:
   <p class="kicker" style="margin-bottom:.5rem">Children, social media and AI · September 2026</p>
   <h1>Digital Harm Reduction for Children</h1>
   <p class="standfirst">How the federal government is tackling the harms of social media and AI chatbots, and what can be strengthened.</p>
-  <p class="byline">Jeremy Depow · 5 September 2026 · On Bill C-34, the Safe Social Media Act, and Bill C-36, the Protecting Privacy and Consumer Data Act</p>
+  <p class="byline">Jeremy R. Depow · 5 September 2026 · On Bill C-34, the Safe Social Media Act, and Bill C-36, the Protecting Privacy and Consumer Data Act</p>
 </header>
 
 <p style="max-width:var(--measure);font-style:italic;color:var(--slate);font-size:.9375rem;margin-top:1.4rem">This paper is written to support and continue public policy making. Public policy development is a complex and multidimensional process. Constructive criticism and feedback on the following words are always welcome, as they continue the discussion on such important issues. I have focused on this subject due to its alignment with my work in tech policy, but also from the perspective of having been in the classroom with children, as a volunteer first responder often interacting with vulnerable children, and most important, as a father.</p>
+
+<p><a class="dl" href="digital-harm-reduction.pdf" download>
+  <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+  Download PDF
+</a></p>
 
 <!-- ============ THE LEDGER ============ -->
 <div class="ledger">
@@ -729,7 +755,6 @@ footer .sig{font-family:'IBM Plex Sans',sans-serif;color:var(--ink);font-weight:
 </section>
 <footer>
 <p>RiverRidge papers and briefs are intended to inform and support dialogue on public policy issues of importance. They are meant to be scrutinized, challenged, and strengthened, because that is how policy gets better.</p>
-<p>I use AI tools, including Claude, to help locate and organize sources and build out bibliographies, and as a second set of eyes on grammar and clarity. Every source and legal claim is verified against the primary document. The analysis, the judgment, and the recommendations are my own. Any AI-assisted output undergoes genuine, substantive human editorial review, and I hold clear editorial responsibility for everything published under the RiverRidge name.</p>
 <p class="sig">RiverRidge Policy &amp; Risk Intelligence provides policy and regulatory analysis to firms that hold client engagements and need an expert layer they do not staff internally. Jeremy R. Depow is the Principal. <a href="https://riverridgeintelligence.ca">riverridgeintelligence.ca</a> · <a href="https://www.linkedin.com/in/jeremydepow">LinkedIn</a></p>
 </footer>
 
