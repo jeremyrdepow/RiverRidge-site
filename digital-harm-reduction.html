@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Digital Harm Reduction · RiverRidge Policy &amp; Risk Intelligence</title>
-<meta name="description" content="Bill C-34, the Safe Social Media Act, and Bill C-36, the Protecting Privacy and Consumer Data Act, are interlocked. Three of C-34's central obligations would have no content on the day the Act came into force. Legislative analysis of what the bills do, what is left undecided, and what committee could settle now.">
+<title>Digital Harm Reduction for Children · RiverRidge Policy &amp; Risk Intelligence</title>
+<meta name="description" content="Canada's Bill C-34, the Safe Social Media Act, and Bill C-36, the Protecting Privacy and Consumer Data Act, are interlocked. Three central obligations are written but not yet operative. A policy paper on what the bills do, where they stop short, and what committee can still fix.">
 <meta name="author" content="Jeremy R. Depow, RiverRidge Policy &amp; Risk Intelligence">
 <link rel="canonical" href="https://riverridgeintelligence.ca/digital-harm-reduction.html">
 <link rel="alternate" hreflang="en" href="https://riverridgeintelligence.ca/digital-harm-reduction.html">
@@ -16,21 +16,29 @@
 <meta property="og:locale" content="en_CA">
 <meta property="og:url" content="https://riverridgeintelligence.ca/digital-harm-reduction.html">
 <meta property="og:title" content="Digital Harm Reduction for Children">
-<meta property="og:description" content="Bill C-34, the Safe Social Media Act, and Bill C-36, the Protecting Privacy and Consumer Data Act, are interlocked. Three of C-34's central obligations would have no content on the day the Act came into force. Legislative analysis of what the bills do, what is left undecided, and what committee could settle now.">
+<meta property="og:description" content="Canada's Bill C-34, the Safe Social Media Act, and Bill C-36, the Protecting Privacy and Consumer Data Act, are interlocked. Three central obligations are written but not yet operative. A policy paper on what the bills do, where they stop short, and what committee can still fix.">
 <meta property="og:image" content="https://riverridgeintelligence.ca/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Digital Harm Reduction for Children">
-<meta name="twitter:description" content="Bill C-34, the Safe Social Media Act, and Bill C-36, the Protecting Privacy and Consumer Data Act, are interlocked. Three of C-34's central obligations would have no content on the day the Act came into force. Legislative analysis of what the bills do, what is left undecided, and what committee could settle now.">
+<meta name="twitter:description" content="Canada's Bill C-34, the Safe Social Media Act, and Bill C-36, the Protecting Privacy and Consumer Data Act, are interlocked. Three central obligations are written but not yet operative. A policy paper on what the bills do, where they stop short, and what committee can still fix.">
 <meta name="twitter:image" content="https://riverridgeintelligence.ca/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#cbd5e1; --head:#f8fafc; --paper:#0a0f1a; --river:#5a9a89; --river-deep:#4a7c6f;
-  --slate:#94a3b8; --oxide:#c98b6b; --rule:#1e293b; --wash:#111827; --measure:34rem;
+  --ink:#cbd5e1;
+  --head:#f8fafc;
+  --paper:#0a0f1a;
+  --river:#5a9a89;
+  --river-deep:#4a7c6f;
+  --slate:#94a3b8;
+  --oxide:#c98b6b;
+  --rule:#1e293b;
+  --wash:#111827;
+  --measure:34rem;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -41,6 +49,24 @@ body{
 }
 .wrap{max-width:72rem;margin:0 auto;padding:0 1.5rem}
 
+
+/* ---------- site nav ---------- */
+nav.site{border-bottom:1px solid var(--rule);background:var(--paper)}
+nav.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:56px;flex-wrap:wrap}
+nav.site .brand{font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:.8125rem;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+nav.site .brand span{color:var(--river)}
+nav.site .links{display:flex;gap:1.25rem;align-items:center;font-family:Inter,system-ui,sans-serif;font-size:.78125rem}
+nav.site .links a{color:var(--slate);text-decoration:none}
+nav.site .links a:hover{color:var(--ink)}
+nav.site .langs{display:flex;gap:.35rem}
+nav.site .langs a{font-family:Inter,system-ui,sans-serif;font-size:.7rem;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--river);text-decoration:none;
+  border:1px solid var(--river);padding:.2rem .45rem;border-radius:2px}
+nav.site .langs a:hover{background:var(--river);color:#0a0f1a}
+nav.site .langs a.active{background:var(--river);color:#0a0f1a;pointer-events:none}
+@media(max-width:640px){nav.site .links{display:none}}
+
 /* ---------- masthead ---------- */
 header.masthead{padding:4.5rem 0 0}
 .kicker{
@@ -48,7 +74,8 @@ header.masthead{padding:4.5rem 0 0}
   font-weight:500;letter-spacing:.01em;margin:0 0 1.25rem;
 }
 h1{
-  font-family:'Libre Baskerville',Georgia,serif;font-weight:600;font-size:clamp(2.4rem,6vw,4rem);
+  color:var(--head);
+  font-family:'Libre Baskerville',Georgia,serif;font-weight:400;font-size:clamp(2.4rem,6vw,4rem);
   line-height:1.02;letter-spacing:-.02em;margin:0 0 1rem;max-width:22ch;
 }
 .standfirst{
@@ -97,11 +124,11 @@ h1{
 main{padding-bottom:6rem}
 section{margin:0 0 3.25rem}
 h2.sec{
-  font-family:'Libre Baskerville',Georgia,serif;font-size:1.75rem;font-weight:600;letter-spacing:-.01em;
+  font-family:'Libre Baskerville',Georgia,serif;color:var(--head);font-size:1.75rem;font-weight:600;letter-spacing:-.01em;
   margin:3.5rem 0 1.1rem;padding-top:1.1rem;border-top:2px solid var(--ink);max-width:var(--measure);
 }
 h3{
-  font-family:Inter,system-ui,sans-serif;font-size:1.0625rem;font-weight:600;
+  font-family:Inter,system-ui,sans-serif;color:var(--head);font-size:1.0625rem;font-weight:600;
   margin:2.2rem 0 .6rem;max-width:var(--measure);
 }
 h4{
@@ -123,30 +150,48 @@ ol.asks li::before{
   content:counter(a);position:absolute;left:0;top:.1rem;
   font-family:Inter,system-ui,sans-serif;font-size:.8125rem;font-weight:600;color:var(--river);
   border:1px solid var(--rule);width:1.5rem;height:1.5rem;display:grid;place-items:center;border-radius:2px;
-}
-
-/* ---------- timeline ---------- */
-.timeline{margin:2rem 0 2.5rem;max-width:58rem}
-.tl-track{display:grid;grid-template-columns:repeat(7,1fr);gap:.25rem;margin-bottom:.6rem}
-.tl-step{border-top:3px solid var(--rule);padding-top:.55rem;font-family:Inter,system-ui,sans-serif;font-size:.75rem;color:var(--slate);line-height:1.3}
-.tl-step.done{border-color:var(--river);color:var(--ink)}
-.tl-step.now{border-color:var(--oxide)}
-.tl-marks{display:grid;grid-template-columns:repeat(7,1fr);gap:.25rem;font-family:Inter,system-ui,sans-serif;font-size:.75rem}
-.tl-marks span{display:block;min-height:1.4rem}
-.mark{display:inline-block;padding:.1rem .45rem;border-radius:2px;font-weight:600;font-size:.7rem}
+}.mark{display:inline-block;padding:.1rem .45rem;border-radius:2px;font-weight:600;font-size:.7rem}
 .mark.c34{background:var(--river);color:#fff}
-.mark.c36{background:var(--oxide);color:#fff}
-.tl-note{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--slate);margin-top:.9rem;max-width:52ch}
-@media(max-width:46rem){
-  .tl-track,.tl-marks{grid-template-columns:repeat(2,1fr);gap:.5rem 1rem}
-  .tl-marks{margin-bottom:1rem}
+.mark.c36{background:var(--oxide);color:#fff}@media(max-width:46rem){}
+
+
+/* ---------- parliamentary timeline ---------- */
+.timeline{list-style:none;margin:1.6rem 0 .9rem;padding:0;
+  display:grid;grid-template-columns:repeat(7,1fr);gap:.55rem;max-width:58rem}
+.tl-step{position:relative;padding:2.15rem 0 0;font-family:Inter,system-ui,sans-serif;
+  font-size:.75rem;line-height:1.35;color:var(--slate)}
+.tl-step::before{content:"";position:absolute;left:0;right:0;top:1.55rem;
+  height:3px;border-radius:2px;background:var(--rule)}
+.tl-step.done::before{background:var(--river)}
+.tl-step.now::before{background:var(--oxide)}
+.tl-step b{display:block;font-weight:600;color:var(--head);font-size:.78125rem;margin-top:.55rem}
+.tl-step span{display:block;color:var(--slate);margin-top:.1rem}
+.tl-step .mark{position:absolute;top:0;left:0}
+.mark{display:inline-block;font-family:Inter,system-ui,sans-serif;font-style:normal;
+  font-size:.6875rem;font-weight:600;letter-spacing:.04em;color:#0a0f1a;
+  padding:.16rem .42rem;border-radius:2px;white-space:nowrap}
+.mark.c34{background:var(--river)}
+.mark.c36{background:var(--oxide)}
+.tl-note{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--slate);
+  max-width:44rem;line-height:1.5;margin:.4rem 0 0}
+
+/* narrow: become a true vertical timeline, sequence preserved */
+@media(max-width:52rem){
+  .timeline{grid-template-columns:1fr;gap:0;max-width:32rem;
+    border-left:2px solid var(--rule);padding-left:1.1rem;margin-left:.2rem}
+  .tl-step{padding:.62rem 0 .62rem 0}
+  .tl-step::before{left:-1.16rem;right:auto;top:1.05rem;width:.5rem;height:.5rem;
+    border-radius:50%;background:var(--rule)}
+  .tl-step b{display:inline;margin:0}
+  .tl-step span{display:inline;margin-left:.4rem}
+  .tl-step .mark{position:static;margin-right:.5rem;vertical-align:.06rem}
 }
 
 /* ---------- harms grid ---------- */
-.harms{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:0;max-width:58rem;margin:1.5rem 0 1rem;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
-.harm{border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:1rem 1.1rem;font-size:.9375rem;line-height:1.45}
+.harms{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:58rem;margin:1.5rem 0 1rem;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.harm{border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:.95rem 1rem;font-size:.875rem;line-height:1.45;background:var(--wash)}
 .harm b{font-family:Inter,system-ui,sans-serif;font-size:.75rem;color:var(--river);font-weight:600;display:block;margin-bottom:.3rem}
-.exhaustive-note{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--ink);max-width:52ch;margin-top:.9rem}
+.exhaustive{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--ink);max-width:52ch;margin-top:.9rem}
 
 /* ---------- sidebar box ---------- */
 aside.box{
@@ -183,24 +228,62 @@ footer{border-top:2px solid var(--ink);padding:2.5rem 0 4rem;margin-top:4rem}
 footer p{font-size:.9375rem;color:var(--slate)}
 footer .sig{font-family:Inter,system-ui,sans-serif;color:var(--ink);font-weight:600;font-size:.9375rem}
 
-nav.site{border-bottom:1px solid var(--rule);background:var(--paper)}
-nav.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:56px;flex-wrap:wrap}
-nav.site .brand{font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:.8125rem;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--head);text-decoration:none}
-nav.site .brand span{color:var(--river)}
-nav.site .links{display:flex;gap:1.25rem;align-items:center;font-family:Inter,system-ui,sans-serif;font-size:.78125rem}
-nav.site .links a{color:var(--slate);text-decoration:none}
-nav.site .links a:hover{color:var(--head)}
-@media(max-width:640px){nav.site .links{display:none}}
 /* dark-system adjustments */
 body{-webkit-font-smoothing:antialiased}
-h1,h2,h3{color:var(--head)}
+strong,b{color:var(--head);font-weight:700}
+h2,h3,h4{color:var(--head)}
 h4{color:var(--river)}
-strong,b{color:var(--head)}
 a{color:var(--river)}
 a:hover{color:var(--oxide)}
+.ledger-row,.rec-row{border-color:var(--rule)}
 aside.box{background:var(--wash);border-color:var(--rule)}
 ::selection{background:rgba(90,154,137,.28)}
+
+.dl{display:inline-flex;align-items:center;gap:.5rem;margin:1.6rem 0 .4rem;
+  font-family:Inter,system-ui,sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--river);text-decoration:none;
+  border:1px solid var(--river-deep);padding:.6rem 1.1rem;border-radius:2px;transition:all .25s}
+.dl:hover{background:var(--river-deep);color:#0a0f1a}
+.dl svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+@media(max-width:60rem){.harms{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:44rem){.harms{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:26rem){.harms{grid-template-columns:1fr}}
+
+/* --- legislative status track --- */
+.track{margin:1.5rem 0 .9rem;max-width:52rem}
+.track-head,.track-row{display:grid;grid-template-columns:6.2rem repeat(7,1fr);gap:.3rem;align-items:center}
+.track-head{margin-bottom:.45rem}
+.track-head span{font-family:Inter,system-ui,sans-serif;font-size:.68rem;line-height:1.25;letter-spacing:.04em;color:var(--slate);text-align:center}
+.track-row{margin-bottom:.4rem}
+.track-row .bill{font-family:Inter,system-ui,sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.04em;color:#0a0f1a;border-radius:2px;padding:.28rem .1rem;text-align:center}
+.bill.c34{background:#5a9a89}
+.bill.c36{background:#c98b6b}
+.track-row .cell{height:1.55rem;border-radius:2px;background:rgba(148,163,184,.09);border:1px solid var(--rule);
+  display:flex;align-items:center;justify-content:center;font-family:Inter,system-ui,sans-serif;font-size:.62rem;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--slate)}
+.track-row:nth-of-type(2) .cell.done{background:#5a9a89;border-color:#5a9a89}
+.track-row:nth-of-type(3) .cell.done{background:#c98b6b;border-color:#c98b6b}
+.track-row .cell.next{border-color:var(--river);color:var(--river);border-style:dashed}
+.track-key{display:flex;gap:1.1rem;margin-top:.7rem;font-family:Inter,system-ui,sans-serif;font-size:.7rem;color:var(--slate)}
+.track-key span{display:inline-flex;align-items:center;gap:.35rem}
+.track-key i.k{width:.75rem;height:.75rem;border-radius:2px;background:rgba(148,163,184,.09);border:1px solid var(--rule);display:inline-block}
+.track-key i.k.done{background:#5a9a89;border-color:#5a9a89}
+.track-key i.k.next{border-color:var(--river);border-style:dashed;background:transparent}
+@media(max-width:680px){.track-head{display:none}.track-row{grid-template-columns:5rem repeat(7,1fr)}.track-row .cell{height:1.15rem;font-size:0}}
+/* --- hierarchy: subheads must not be smaller than body --- */
+h3{font-size:1.25rem!important;line-height:1.35;letter-spacing:-.01em;margin-top:2rem}
+h4{font-size:1.02rem!important}
+.rec{list-style:none;margin:1.4rem 0 1rem;padding:0;max-width:44rem}
+.rec li{position:relative;padding:.42rem 0 .42rem 2.4rem;font-size:.97rem;line-height:1.6}
+.rec .n{position:absolute;left:0;top:.5rem;font-family:Inter,system-ui,sans-serif;font-size:.68rem;font-weight:600;
+  color:var(--river);border:1px solid var(--rule);border-radius:2px;padding:.1rem .38rem}
+p.inst{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--slate);margin:-.3rem 0 .8rem}
+p.exhaustive{font-family:Inter,system-ui,sans-serif;font-size:.875rem;color:var(--head);border-left:2px solid var(--river);
+  padding-left:.9rem;margin:.9rem 0 1.4rem;max-width:40rem}
+footer{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1.4rem}
+footer p{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--slate);line-height:1.65;max-width:46rem}
+#sources li{margin-bottom:.4rem;font-size:.9rem;line-height:1.55}
 </style>
 <script type="application/ld+json">
 {
@@ -235,7 +318,7 @@ aside.box{background:var(--wash);border-color:var(--rule)}
     {
       "@type": "Article",
       "headline": "Digital Harm Reduction for Children",
-      "description": "Bill C-34, the Safe Social Media Act, and Bill C-36, the Protecting Privacy and Consumer Data Act, are interlocked. Three of C-34's central obligations would have no content on the day the Act came into force. Legislative analysis of what the bills do, what is left undecided, and what committee could settle now.",
+      "description": "Canada's Bill C-34, the Safe Social Media Act, and Bill C-36, the Protecting Privacy and Consumer Data Act, are interlocked. Three central obligations are written but not yet operative. A policy paper on what the bills do, where they stop short, and what committee can still fix.",
       "inLanguage": "en",
       "datePublished": "2026-09-05",
       "articleSection": "Digital Policy",
@@ -265,27 +348,19 @@ aside.box{background:var(--wash);border-color:var(--rule)}
   </div>
 </nav>
 
-
-
-
-
 <div class="wrap">
-
 <header class="masthead">
-  <p class="kicker">RiverRidge Policy &amp; Risk Intelligence · Legislative analysis</p>
+  <p class="kicker">RiverRidge Policy &amp; Risk Intelligence &middot; Legislative analysis</p>
   <p class="kicker" style="margin-bottom:.5rem">Children, social media and AI &middot; September 2026</p>
   <h1>Digital Harm Reduction for Children</h1>
-  <p class="standfirst">How the federal government is tackling the harms of social media and AI chatbots, and what can be strengthened.</p>
-  <p class="byline">Jeremy R. Depow · 5 September 2026 · On Bill C-34, the Safe Social Media Act, and Bill C-36, the Protecting Privacy and Consumer Data Act</p>
+  <p class="standfirst">How the federal government is tackling the harms of social media and AI chatbots.</p>
+  <p class="byline">Jeremy R. Depow &middot; September 2026 &middot; On Bill C-34, the Safe Social Media Act, and Bill C-36, the Protecting Privacy and Consumer Data Act</p>
 </header>
 
-<p style="max-width:var(--measure);font-style:italic;color:var(--slate);font-size:.9375rem;margin-top:1.4rem">This analysis is written to support and continue public policy making. Public policy development is a complex and multidimensional process. Constructive criticism and feedback on the following words are always welcome, as they continue the discussion on such important issues. I have focused on this subject due to its alignment with my work in tech policy, but also from the perspective of having been in the classroom with children, as a volunteer first responder often interacting with vulnerable children, and most important, as a father.</p>
-
-<!-- ============ THE LEDGER ============ -->
 <div class="ledger">
   <div class="ledger-head">
     <h2>The central finding</h2>
-    <p>Neither bill has passed, so nothing in either binds anyone yet. That is ordinary. What is not ordinary is that three of Bill C-34’s central obligations would still have no content on the day the Act came into force, because in each case what the duty requires was left to a regulator that has not been created.</p>
+    <p>Neither bill has passed, so nothing in either binds anyone yet. That is ordinary. What is not ordinary is that three of Bill C-34's central obligations would still have no content on the day the Act came into force, because in each case what the duty requires was left to a regulator that has not been created.</p>
   </div>
   <div class="ledger-labels"><span>Provision</span><span>What the bill says</span><span>What is still undecided</span></div>
   <div class="ledger-row">
@@ -305,105 +380,70 @@ aside.box{background:var(--wash);border-color:var(--rule)}
   </div>
 </div>
 
-<main>
-
-<!-- ============ SHORT OF IT ============ -->
 <section>
 <h2 class="sec">Summary</h2>
-
-<p class="lede">Canada has two bills before Parliament that together decide how social media and AI chatbot services will be regulated in this country. <a href="https://www.parl.ca/legisinfo/en/bill/45-1/c-34">Bill C-34</a>, the Safe Social Media Act, is at second reading. <a href="https://www.parl.ca/legisinfo/en/bill/45-1/c-36">Bill C-36</a>, the Protecting Privacy and Consumer Data Act, is at first reading. They are not two separate files. C-36 cannot come into force unless C-34 passes, and C-36 rewrites parts of C-34 before either one takes effect.</p>
-
+<p>Canada has two bills before Parliament that together decide how social media and AI chatbot services will be regulated in this country. <a href="https://www.parl.ca/DocumentViewer/en/45-1/bill/C-34/first-reading"><u>Bill C-34</u></a>, the Safe Social Media Act, is at second reading. <a href="https://www.parl.ca/DocumentViewer/en/45-1/bill/C-36/first-reading"><u>Bill C-36</u></a>, the Protecting Privacy and Consumer Data Act, is at first reading. They are not two separate files. C-36 cannot come into force unless C-34 passes, and C-36 rewrites parts of C-34 before either one takes effect.</p>
 <p>Both bills understand the harm to children. Where they can be improved is in more clearly addressing that harm at the point of application, and in reassuring both providers and individuals, through explicit guidelines, that the new Commission's powers are not limitless. Much of the meat of the legislation is left to a lengthy process of regulatory development alongside the establishment of a new commission. Other jurisdictions have already created many of these requirements, and operator compliance there will sometimes spill over to Canadians. That is not always the case, and the uncertainty of a process that includes a new Commission and the development of a significant set of regulations creates a long period of uncertainty for the many Canadian businesses that use these platforms to advertise their products.</p>
-
 <p>None of this is an argument against the bills, but to complete them. Six considerations would go a long way.</p>
-<ol class="asks">
-<li>Extend the duty to act responsibly to engagement design, not only exposure to content.</li>
-<li>Set a performance standard for age checks.</li>
-<li>Keep the Privacy Commissioner consultation.</li>
-<li>Decide now how we will know the legislation is doing as intended.</li>
-<li>Provide clarity over the Safety Commission's powers and how it will be governed.</li>
-<li>Review how Canada has designed and governed arm’s length bodies before creating another one.</li>
+<ol class="rec">
+  <li><span class="n">1</span>Extend the duty to act responsibly to engagement design, not only exposure to content.</li>
+  <li><span class="n">2</span>Set a performance standard for age checks.</li>
+  <li><span class="n">3</span>Keep the Privacy Commissioner consultation.</li>
+  <li><span class="n">4</span>Decide now how we will know the legislation is doing as intended.</li>
+  <li><span class="n">5</span>Provide clarity over the Safety Commission's powers and how it will be governed.</li>
+  <li><span class="n">6</span>Review how Canada has designed and governed arm’s length bodies before creating another one.</li>
 </ol>
-<p style="font-size:.9375rem;color:var(--slate)">Each is set out in full, with its instrument and its stage, under <a href="#change">what Parliament could settle now</a>.</p>
-
+<p>Each is set out in full, with its instrument and its stage, under <a href="#change"><u>what Parliament could settle now</u></a>.</p>
 </section>
-
-<!-- ============ WHY NOW ============ -->
 <section>
 <h2 class="sec">Current legislative status</h2>
-
-<div class="timeline">
-  <div class="tl-marks">
-    <span><i class="mark c34">C-34</i></span>
-    <span><i class="mark c36">C-36</i></span>
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
-  <div class="tl-track">
-    <div class="tl-step done">Second reading<br>C-34 complete</div>
-    <div class="tl-step now">First reading<br>C-36 here</div>
-    <div class="tl-step">Committee</div>
-    <div class="tl-step">Report stage</div>
-    <div class="tl-step">Third reading</div>
-    <div class="tl-step">Senate, same sequence</div>
-    <div class="tl-step">Royal assent</div>
-  </div>
-  <p class="tl-note">The two bills are one step apart. C-34 goes to committee next; C-36 has second reading ahead of it first.</p>
+<div class="track">
+  <div class="track-head"><span></span><span>First<br>reading</span><span>Second<br>reading</span><span>Committee</span><span>Report<br>stage</span><span>Third<br>reading</span><span>Senate</span><span>Royal<br>assent</span></div>
+  <div class="track-row"><span class="bill c34">Bill C-34</span><span class="cell done"></span><span class="cell done"></span><span class="cell next">Next</span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span></div>
+  <div class="track-row"><span class="bill c36">Bill C-36</span><span class="cell done"></span><span class="cell next">Next</span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span></div>
+  <div class="track-key"><span><i class="k done"></i>Completed</span><span><i class="k next"></i>Next step</span><span><i class="k"></i>Remaining</span></div>
 </div>
-
+<p><em>The two bills are one step apart. C-34 goes to committee next; C-36 has second reading ahead of it first.</em></p>
 <p>Second reading is the vote on the principle of a bill, which is why amendments afterwards cannot change its scope. Committee is where witnesses appear and amendments are actually made. Third reading is the final vote. When the House returns in later September, both will ultimately go to committee, where witnesses will be heard and amendments considered. Then it goes to the report stage, which includes issuing a report to Parliament, and then third reading.</p>
-
 <p>The same sequence then occurs in the Senate. Amendments are likely, but with a majority government and no significant public opposition so far, both bills can be expected to pass in some form. This fall will be a key time to engage with elected officials and provide input through the committee process.</p>
-
 <p>While still not assigned, the Digital Safety Act will likely go to the Canadian Heritage Committee, with C-36 to the Standing Committee on Access to Information, Privacy and Ethics or Industry and Technology.</p>
-
 </section>
-
-<!-- ============ HOW WE GOT HERE ============ -->
 <section>
 <h2 class="sec">How we got here</h2>
 <p>Neither bill is a first attempt. C-34 follows the 2021 online harms consultation and Bill C-63, the Online Harms Act, which died on the order paper at prorogation before the 2025 election. C-34 drops the Criminal Code and Human Rights Act provisions that dominated that debate and keeps the platform regulation. C-36 is the third try at private sector privacy reform, after Bill C-11 died in 2021 and Bill C-27 at prorogation in January 2025. The two are intertwined, and C-36 makes significant changes to the Personal Information Protection and Electronic Documents Act (PIPEDA).</p>
 <p>Australia moved first on a minimum age and others have followed. Canada has now followed suit. As is usual for bills of this kind, the legislation sets out broad terms and defers much of the detail to a regulator, here a new Digital Safety Commission of Canada. Taken together the two bills also move private sector privacy to that new body, leaving the Privacy Commissioner of Canada with the public sector Privacy Act.</p>
 <p>The difficulty is one of pace. As the House begins its deliberation, artificial intelligence and other advances are arriving at speed and at scale, and much of the world is legislating around them at once. Keeping governance level with the technology is the underlying problem these bills are trying to solve, and it is why the design of the regulator matters as much as the drafting of the duties.</p>
-
-<h3>Why the legislation has been introduced</h3>
+</section>
+<section>
+<h2 class="sec">Why the legislation has been introduced</h2>
 <p>The documented harms have been captured in four broad areas.</p>
-
-<h4>Mental health</h4>
-<p>Samantha Teague, Klaire Somoray, Adrian Shatte and colleagues published a <a href="https://jamanetwork.com/journals/jamapediatrics/article-abstract/2845518">systematic review and meta analysis</a> in JAMA Pediatrics in March 2026, pooling 153 longitudinal studies across 115 cohorts and 1,072 effect sizes, drawn from 18,933 screened articles. Participants ranged in age from two to nineteen, with a mean of just under thirteen. What that examination found is that social media use is consistently associated with higher depression, behavioural problems, self injury, and substance use. In addition, there is lower self perception and academic achievement. The authors describe the links as modest but consistent. Kids who use social media also report greater body dissatisfaction, concentration problems, and loneliness.</p>
-
-<h4>Population level decline</h4>
-<p>In the 2026 <a href="https://www.worldhappiness.report/ed/2026/social-media-is-harming-adolescents-at-a-scale-large-enough-to-cause-changes-at-the-population-level/">World Happiness Report</a>, Jonathan Haidt and Zachary Rausch argue across seven lines of evidence that the harms of social media are now large enough to cause changes at the population level, contributing to the rise in adolescent mental illness that began in the mid-2010s. They are explicit that they are making the case for the prosecution, and they ask readers to apply a civil standard, the preponderance of the evidence, rather than a criminal one. They also urge readers to read their critics, naming Candice Odgers and Amy Orben. The argument is theirs rather than the Report’s, and it is contested.</p>
+<h3>Mental health</h3>
+<p>Samantha Teague, Klaire Somoray, Adrian Shatte and colleagues published a <a href="https://jamanetwork.com/journals/jamapediatrics/article-abstract/2845518"><u>systematic review and meta analysis</u></a> in JAMA Pediatrics in March 2026, pooling 153 longitudinal studies across 115 cohorts and 1,072 effect sizes, drawn from 18,933 screened articles. Participants ranged in age from two to nineteen, with a mean of just under thirteen. What that examination found is that social media use is consistently associated with higher depression, behavioural problems, self injury, and substance use. In addition, there is lower self perception and academic achievement. The authors describe the links as modest but consistent. Kids who use social media also report greater body dissatisfaction, concentration problems, and loneliness.</p>
+<h3>Population level decline</h3>
+<p>In the 2026 <a href="https://www.worldhappiness.report/ed/2026/social-media-is-harming-adolescents-at-a-scale-large-enough-to-cause-changes-at-the-population-level/"><u>World Happiness Report</u></a>, Jonathan Haidt and Zachary Rausch argue across seven lines of evidence that the harms of social media are now large enough to cause changes at the population level, contributing to the rise in adolescent mental illness that began in the mid-2010s. They are explicit that they are making the case for the prosecution, and they ask readers to apply a civil standard, the preponderance of the evidence, rather than a criminal one. They also urge readers to read their critics, naming Candice Odgers and Amy Orben. The argument is theirs rather than the Report’s, and it is contested.</p>
 <p>One finding in that chapter bears directly on the number Parliament has chosen. Research on sensitive periods suggests the association between social media use and poor mental health is strongest at ages 11 to 13 for girls and 14 to 15 for boys, which the authors give as a reason to set minimum ages no lower than sixteen. Whatever else is unsettled, the age in Bill C-34 is not arbitrary.</p>
-
-<h4>Addictive design and compulsive use</h4>
-<p>Many of these platforms the children are interacting with are now using casino like interfaces that disproportionately affect children's developing brains compared to adults. And daily use is high. <a href="https://news.gallup.com/poll/512576/teens-spend-average-hours-social-media-per-day.aspx">Gallup</a> found that teenagers in the United States spend almost five hours a day on social media alone, and that goes up to almost six hours a day by age seventeen.</p>
-
-<h4>What educators see</h4>
-<p>Educators are among the most consistent witnesses in the research. A 2024 <a href="https://www.nbcnewyork.com/news/local/generation-text-see-the-full-nbc-survey-results-as-principals-reveal-concern-about-phones-in-schools/5645963/">NBC survey</a> of 559 American elementary and secondary principals found that 42 percent firmly believed smartphones and social media were major causes of deteriorating student mental health, while only 1.3 percent thought the concern was overblown. A <a href="https://www.nea.org/resource-library/impact-social-media-and-personal-devices-mental-health">National Education Association survey</a> of 2,889 American educators the same year found that 84 percent said social media use contributes to student mental health problems. <a href="https://www.pewresearch.org/short-reads/2024/06/12/72-percent-of-us-high-school-teachers-say-cellphone-distraction-is-a-major-problem-in-the-classroom/">Pew</a> found that 72 percent of American high school teachers consider cellphone distraction a major problem in their classrooms. Similar findings appear among teachers in England, Spain, France and across the European Union.</p>
+<h3>Addictive design and compulsive use</h3>
+<p>Many of these platforms the children are interacting with are now using casino like interfaces that disproportionately affect children's developing brains compared to adults. And daily use is high. <a href="https://news.gallup.com/poll/512576/teens-spend-average-hours-social-media-per-day.aspx"><u>Gallup</u></a> found that teenagers in the United States spend almost five hours a day on social media alone, and that goes up to almost six hours a day by age seventeen.</p>
+<h3>What educators see</h3>
+<p>Educators are among the most consistent witnesses in the research. A 2024 <a href="https://www.nbcnewyork.com/news/local/generation-text-see-the-full-nbc-survey-results-as-principals-reveal-concern-about-phones-in-schools/5645963/"><u>NBC survey</u></a> of 559 American elementary and secondary principals found that 42 percent firmly believed smartphones and social media were major causes of deteriorating student mental health, while only 1.3 percent thought the concern was overblown. A <a href="https://www.nea.org/resource-library/impact-social-media-and-personal-devices-mental-health"><u>National Education Association survey</u></a> of 2,889 American educators the same year found that 84 percent said social media use contributes to student mental health problems. <a href="https://www.pewresearch.org/short-reads/2024/06/12/72-percent-of-us-high-school-teachers-say-cellphone-distraction-is-a-major-problem-in-the-classroom/"><u>Pew</u></a> found that 72 percent of American high school teachers consider cellphone distraction a major problem in their classrooms. Similar findings appear among teachers in England, Spain, France and across the European Union.</p>
 <p>The same National Education Association survey put something else at the top of the list, ahead of social media. Ninety-two percent named lack of parental involvement and communication. That is worth carrying to the section on what legislation cannot reach.</p>
-<h4>Direct harms</h4>
+<h3>Direct harms</h3>
 <p>Sextortion, cyberbullying and grooming are all rising. Surveys of parents, teachers and clinicians confirm growing concern about exploitation and scams. Notably, fraud is absent from these two bills.</p>
 </section>
-
-<!-- ============ WHAT THE BILLS DO ============ -->
 <section>
 <h2 class="sec">Part one: what the legislation does</h2>
-
-<p><a href="https://www.parl.ca/legisinfo/en/bill/45-1/c-34">Bill C-34</a>, the Safe Social Media Act, enacts the Digital Safety Act and creates a new regulator, the Digital Safety Commission of Canada. <a href="https://www.parl.ca/legisinfo/en/bill/45-1/c-36">Bill C-36</a>, the Protecting Privacy and Consumer Data Act, replaces the private sector half of Canada's privacy law and hands the new commission a privacy mandate on top of its safety mandate.</p>
-
+<p><a href="https://www.parl.ca/DocumentViewer/en/45-1/bill/C-34/first-reading"><u>Bill C-34</u></a>, the Safe Social Media Act, enacts the Digital Safety Act and creates a new regulator, the Digital Safety Commission of Canada. <a href="https://www.parl.ca/DocumentViewer/en/45-1/bill/C-36/first-reading"><u>Bill C-36</u></a>, the Protecting Privacy and Consumer Data Act, replaces the private sector half of Canada's privacy law and hands the new commission a privacy mandate on top of its safety mandate.</p>
 <p>Neither bill is a first draft. C-34 follows the failed 2021 online harms consultation and Bill C-63, the Online Harms Act, which died on the order paper when Parliament was prorogued ahead of the 2025 election. C-34 drops the Criminal Code and Human Rights Act provisions that dominated that debate and keeps the platform regulation. C-36 is the third attempt at private sector privacy reform, after Bill C-11 died in 2021 and Bill C-27 on prorogation in January 2025.</p>
-
 <h3>What Bill C-34 covers</h3>
-<ul class="plain">
-<li>Bill C-34 introduces penalty powers to social media platforms and AI chatbots in Canada. Administrative penalties reach the greater of $10 million and 3 percent of gross global revenue for a violation. Offences reach the greater of $20 million and 5 percent on indictment, and $15 million and 4 percent on summary conviction. The Commission can also issue compliance orders and name operators publicly.</li>
-<li>Mandatory harm reduction duties making platforms identify, reduce, and mitigate risks from seven categories of harmful content.</li>
-<li>Age appropriate design requirements. Platforms must build safety features into their products.</li>
-<li>Account restrictions for children under sixteen. Operators are not permitted to provide under sixteen year olds accounts unless the service earns an exemption from the Commission.</li>
-<li>Digital safety plans and transparency. Platforms must publish plans explaining how they assess and mitigate risks, and disclose safety measures publicly.</li>
-<li>Creation of a Digital Safety Commission, a new regulator with powers to enforce rules, audit platforms, require data, and support victims.</li>
-<li>Rules for AI chatbots. Chatbots must avoid reinforcing harmful behaviours, label synthetic content, and meet safety by design obligations.</li>
+<ul>
+  <li>Bill C-34 introduces penalty powers to social media platforms and AI chatbots in Canada. Administrative penalties reach the greater of $10 million and 3 percent of gross global revenue for a violation. Offences reach the greater of $20 million and 5 percent on indictment, and $15 million and 4 percent on summary conviction. The Commission can also issue compliance orders and name operators publicly.</li>
+  <li>Mandatory harm reduction duties making platforms identify, reduce, and mitigate risks from seven categories of harmful content.</li>
+  <li>Age appropriate design requirements. Platforms must build safety features into their products.</li>
+  <li>Account restrictions for children under sixteen. Operators are not permitted to provide under sixteen year olds accounts unless the service earns an exemption from the Commission.</li>
+  <li>Digital safety plans and transparency. Platforms must publish plans explaining how they assess and mitigate risks, and disclose safety measures publicly.</li>
+  <li>Creation of a Digital Safety Commission, a new regulator with powers to enforce rules, audit platforms, require data, and support victims.</li>
+  <li>Rules for AI chatbots. Chatbots must avoid reinforcing harmful behaviours, label synthetic content, and meet safety by design obligations.</li>
 </ul>
-
 <h3>Seven recognized harms</h3>
 <div class="harms">
   <div class="harm"><b>One</b>Intimate content communicated without consent</div>
@@ -414,308 +454,219 @@ aside.box{background:var(--wash);border-color:var(--rule)}
   <div class="harm"><b>Six</b>Content that incites violence</div>
   <div class="harm"><b>Seven</b>Terrorism or violent extremism content</div>
 </div>
-<p class="exhaustive-note">That list is exhaustive. It is the whole of what the Act means by harmful content.</p>
-
-<h3>What Bill C-36 covers</h3>
-<ul class="plain">
-<li>A new Protecting Privacy and Consumer Data Act, replacing Part 1 of PIPEDA.</li>
-<li>Enforcement through the renamed Digital Safety and Data Protection Commission of Canada rather than a separate tribunal.</li>
-<li>Stronger consent rules, making clearer and more explicit consent requirements for how companies collect and use data.</li>
-<li>New rights for individuals, including data mobility, deletion rights, algorithmic transparency, and access rights.</li>
-<li>Administrative penalties up to the greater of $10 million and 3 percent of gross global revenue. Separate offence provisions reach the greater of $25 million and 5 percent on indictment.</li>
-<li>Rules for automated decision systems. Companies must explain how algorithms make decisions about people.</li>
+<ul>
+  <li>Intimate content communicated without consent</li>
+  <li>Content that sexually victimizes a child or revictimizes a survivor</li>
+  <li>Content that induces a child to harm themselves, which expressly names disordered eating and suicide</li>
+  <li>Content used to bully a child</li>
+  <li>Content that foments hatred</li>
+  <li>Content that incites violence</li>
+  <li>Terrorism or violent extremism content</li>
 </ul>
-
+<p class="exhaustive">That list is exhaustive. It is the whole of what the Act means by harmful content.</p>
+<h3>What Bill C-36 covers</h3>
+<ul>
+  <li>A new Protecting Privacy and Consumer Data Act, replacing Part 1 of PIPEDA.</li>
+  <li>Enforcement through the renamed Digital Safety and Data Protection Commission of Canada rather than a separate tribunal.</li>
+  <li>Stronger consent rules, making clearer and more explicit consent requirements for how companies collect and use data.</li>
+  <li>New rights for individuals, including data mobility, deletion rights, algorithmic transparency, and access rights.</li>
+  <li>Administrative penalties up to the greater of $10 million and 3 percent of gross global revenue. Separate offence provisions reach the greater of $25 million and 5 percent on indictment.</li>
+  <li>Rules for automated decision systems. Companies must explain how algorithms make decisions about people.</li>
+</ul>
 <h3>Digital safety plans</h3>
-<p>C-34 requires every operator of a regulated social media service to submit a digital safety plan to the Commission for each service it runs, under <a href="https://www.parl.ca/legisinfo/en/bill/45-1/c-34">section 42</a>. Chatbot operators file the same thing under section 58. The digital safety plan is not a form. It has to set out the operator's own assessment of the risk that users will be exposed to harmful content, the measures taken to mitigate it, the operator's assessment of how well those measures work individually and together, and a description of the indicators used to judge that.</p>
+<p>C-34 requires every operator of a regulated social media service to submit a digital safety plan to the Commission for each service it runs, under section 42. Chatbot operators file the same thing under section 58. The digital safety plan is not a form. It has to set out the operator's own assessment of the risk that users will be exposed to harmful content, the measures taken to mitigate it, the operator's assessment of how well those measures work individually and together, and a description of the indicators used to judge that.</p>
 <p>It also has to describe the design features integrated under section 21, assess their effectiveness, and name the indicators used there too. The operator must make the plan available to the public, with a carve-out for information that would itself create risk. Every operator chooses its own indicators, so fifty companies will publish fifty different measures of effectiveness and nothing makes them comparable.</p>
-
 <h3>How the two bills interlock</h3>
-<p>The two bills aren't simply related. <a href="https://www.parl.ca/legisinfo/en/bill/45-1/c-36">Section 52(2)</a> of C-36 provides that its Part 3 comes into force only if C-34 receives royal assent and becomes law, and not before the section establishing the new commission itself is in force. So what that means is one bill doesn't work without the other. C-36 does something unusual as well, and renames the commission the Digital Safety and Data Protection Commission of Canada.</p>
-
+<p>The two bills aren't simply related. Section 52(2) of C-36 provides that its Part 3 comes into force only if C-34 receives royal assent and becomes law, and not before the section establishing the new commission itself is in force. So what that means is one bill doesn't work without the other. C-36 does something unusual as well, and renames the commission the Digital Safety and Data Protection Commission of Canada.</p>
 </section>
-
-<!-- ============ WHERE THEY STOP SHORT ============ -->
 <section>
-<h2 class="sec" id="short">Part two: what is left undecided</h2>
-
-<p class="lede">The same pattern appears three times. In each case Parliament creates the obligation and leaves its content to a regulator that does not exist yet, without requiring the content to be written before the obligation applies.</p>
-
+<h2 class="sec">Part two: what is left undecided</h2>
+<p>The same pattern appears three times. In each case Parliament creates the obligation and leaves its content to a regulator that does not exist yet, without requiring the content to be written before the obligation applies.</p>
 <p>Deferring detail to regulation is normal and often sensible. Deferring the standard by which the central obligation will be judged, and not requiring that standard before the obligation binds, is a different thing. The three instances are set out in the table at the top of this brief.</p>
-
 <h3>The missing piece: how well the age check has to work</h3>
 <p>Bill C-34 sets a minimum age of sixteen for social media accounts. But it names no service the age applies to. Cabinet will name the services later by regulation, and even then the Commission can grant exemptions. So the minimum age exists, but for now it applies to nothing.</p>
-
-<p>Michael Geist of the University of Ottawa <a href="https://www.michaelgeist.ca/2026/06/the-law-to-be-named-later-bill-c-34-punts-50-key-decisions-to-cabinet-and-a-digital-safety-commission-that-does-not-yet-exist/">made this point</a>, noting that the statute fixes the age of sixteen but leaves which services are covered, when the ban applies and to whom, and what counts as adequate age verification to a later round of regulation.</p>
-
+<p>Michael Geist of the University of Ottawa <a href="https://www.michaelgeist.ca/2026/06/the-law-to-be-named-later-bill-c-34-punts-50-key-decisions-to-cabinet-and-a-digital-safety-commission-that-does-not-yet-exist/"><u>made this point</u></a>, noting that the statute fixes the age of sixteen but leaves which services are covered, when the ban applies and to whom, and what counts as adequate age verification to a later round of regulation.</p>
 <p>The bill uses the terms adequate age verification or age estimation measures in the effort to confirm a user's age. Age assurance is an umbrella term that was used in the Australian trial and subsequent international standards work. It is a useful term, and this brief uses it that way. But it should be noted that Parliament did not use that specific term.</p>
-
 <p>There is a second-order effect worth naming. Enforcing a restriction on under-sixteens means a service has to establish who is over sixteen, which in practice means checking the age of every user, not only the children. Academics have made this point and it is the reason the accuracy question below is not a technical footnote. It applies to the whole population.</p>
-
-<h4>The five conditions</h4>
-<p>The bill is not silent on what proper measures look like. <a href="https://www.parl.ca/legisinfo/en/bill/45-1/c-34">Section 27(2)</a> sets out five conditions the commission must be satisfied of. The measures must:</p>
-<ul class="plain">
-<li>be effective;</li>
-<li>collect or use no personal information beyond what is needed to check age;</li>
-<li>destroy that information once the check is complete;</li>
-<li>protect it until they do; and</li>
-<li>meet any further requirements set out in regulations.</li>
+<h3>The five conditions</h3>
+<p>The bill is not silent on what proper measures look like. Section 27(2) sets out five conditions the commission must be satisfied of. The measures must:</p>
+<ul>
+  <li>be effective;</li>
+  <li>collect or use no personal information beyond what is needed to check age;</li>
+  <li>destroy that information once the check is complete;</li>
+  <li>protect it until they do; and</li>
+  <li>meet any further requirements set out in regulations.</li>
 </ul>
 <p>Four of those five conditions are privacy related, which is where both these bills, C-34 and C-36, have implications on what was previously PIPEDA. The last condition carries the entire weight of the scheme, and it reads, in full, that the measures must be effective. What counts as effective is left to be determined. It has to mean more than what many websites do today, where you click to say you are eighteen or older. That would not be effective. That is the gap.</p>
-<p>The European Commission has said as much in its own words. In the <a href="https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-protection-minors">guidelines it published in July 2025</a> under Article 28(1) of the Digital Services Act, it sorts age assurance into three categories, self-declaration, age estimation and age verification, and states plainly that self-declaration is not considered to be an appropriate age assurance measure. Canada’s bill leaves that conclusion to be reached later, by a body that does not exist yet.</p>
-
-<p>Canada’s own Privacy Commissioner has already been told this is the hard part. In the office’s <a href="https://www.priv.gc.ca/en/about-the-opc/what-we-do/consultations/completed-consultations/consultation-age/report_age_2025/">age assurance consultation</a>, which drew forty responses from industry, civil society, academia and overseas regulators, one respondent noted that effectiveness is a precondition for processing data legally, and another drew the distinction that matters here: a technology can be effective at determining a user’s age while the mandate it serves is ineffective at reducing harm, if it cannot be broadly enforced. Respondents also argued that the acceptable forms of age assurance should be assessed and approved by a regulator rather than left to organizations to choose. That is recommendation two, made to the Privacy Commissioner two years before this bill was tabled.</p>
-<h4>It can be done</h4>
-<p>There are ways to check while protecting privacy. <a href="https://www.esafety.gov.au/about-us/consultation-cooperation/age-assurance-technology-trial">The Australian Age Assurance Technology Trial</a> looked at 48 different companies and more than 60 different technologies across social media, gaming, adult content, and online retail, using lab testing, school trials, and mystery shopper evaluation. Its first major finding is that age assurance can actually be done in Australia privately, efficiently, and effectively. The second is that there is no substantial technological limitation preventing implementation. So in other words, it can be done. It just seems Canada is not going there.</p>
-
+<p>The European Commission has said as much in its own words. In the <a href="https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-protection-minors"><u>guidelines it published in July 2025</u></a> under Article 28(1) of the Digital Services Act, it sorts age assurance into three categories, self-declaration, age estimation and age verification, and states plainly that self-declaration is not considered to be an appropriate age assurance measure. Canada’s bill leaves that conclusion to be reached later, by a body that does not exist yet.</p>
+<p>Canada’s own Privacy Commissioner has already been told this is the hard part. In the office’s <a href="https://www.priv.gc.ca/en/about-the-opc/what-we-do/consultations/completed-consultations/consultation-age/report_age_2025/"><u>age assurance consultation</u></a>, which drew forty responses from industry, civil society, academia and overseas regulators, one respondent noted that effectiveness is a precondition for processing data legally, and another drew the distinction that matters here: a technology can be effective at determining a user’s age while the mandate it serves is ineffective at reducing harm, if it cannot be broadly enforced. Respondents also argued that the acceptable forms of age assurance should be assessed and approved by a regulator rather than left to organizations to choose. That is recommendation two, made to the Privacy Commissioner two years before this bill was tabled.</p>
+<h3>It can be done</h3>
+<p>There are ways to check while protecting privacy. <a href="https://ageassurance.com.au/"><u>The Australian Age Assurance Technology Trial</u></a> looked at 48 different companies and more than 60 different technologies across social media, gaming, adult content, and online retail, using lab testing, school trials, and mystery shopper evaluation. Its first major finding is that age assurance can actually be done in Australia privately, efficiently, and effectively. The second is that there is no substantial technological limitation preventing implementation. So in other words, it can be done. The trial is careful to add that no single solution fits every context, and that the technologies meeting those thresholds do so when carefully selected and implemented. It also built its testing on practice statements based on ISO/IEC 27566-1, the same standard discussed below. It just seems Canada is not going there.</p>
 <p>Australia has since moved from trial to enforcement. Its social media minimum age took effect on 10 December 2025. By mid-January eSafety reported that about 4.7 million age-restricted accounts had been removed or restricted, with a further 300,000 blocked by the start of March. The regulator is careful about that number: it counts accounts rather than individuals, many children hold several, and it includes inactive accounts.</p>
-<p>The <a href="https://www.esafety.gov.au/newsroom/blogs/social-media-minimum-age-compliance-report">March 2026 compliance report</a> is where the caution lies, and it is not the caution I expected. eSafety found movement but not enough, set out significant concerns about the compliance of Facebook, Instagram, Snapchat, TikTok and YouTube, and moved from monitoring to an enforcement stance, with civil penalties available up to $49.5 million. The difficulty in Australia has been getting the platforms to take reasonable steps, more than getting teenagers to stop trying to get around it.</p>
+<p>The <a href="https://www.esafety.gov.au/newsroom/blogs/social-media-minimum-age-compliance-report"><u>March 2026 compliance report</u></a> is where the caution lies, and it is not the caution I expected. eSafety found movement but not enough, set out significant concerns about the compliance of Facebook, Instagram, Snapchat, TikTok and YouTube, and moved from monitoring to an enforcement stance, with civil penalties available up to $49.5 million. The difficulty in Australia has been getting the platforms to take reasonable steps, more than getting teenagers to stop trying to get around it.</p>
 <p>The measure is doing something. eSafety surveyed about 900 Australian parents and carers of children aged 8 to 15 in January and February 2026. Half said their child had an account on at least one platform before the restrictions. Afterwards it was 31 percent. Canada is setting the same age. The difference is that Australia named the services and Canada has not.</p>
-
-<p>Australia has also answered the question C-34 leaves open. eSafety’s <a href="https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions">regulatory guidance</a>, issued in September 2025, takes a principles-based approach rather than prescribing a technology, but it states that measures will not count as reasonable steps if they rely entirely on self-declaration, or if they allow a deactivated user to immediately create a new account, or if they sweep in substantial numbers of users who are not covered. That is a workable middle ground between naming a technology and saying nothing at all. Notably, the Australian Information Commissioner has an independent role monitoring the privacy provisions of the same scheme, and eSafety consulted that office on the privacy aspects of its guidance.</p>
-<p>Canada has done its own work on this. The Office of the Privacy Commissioner did a <a href="https://www.priv.gc.ca/en/about-the-opc/what-we-do/consultations/completed-consultations/consultation-age/report_age_2025/">consultation on age assurance</a>, and that was published in 2025. It is on Parliament's own reading list for Bill C-34. That makes what C-36 does next difficult to explain.</p>
-
+<p>Australia has also answered the question C-34 leaves open. eSafety’s <a href="https://www.esafety.gov.au/industry/regulatory-guidance#social-media-minimum-age"><u>regulatory guidance</u></a>, issued in September 2025, takes a principles-based approach rather than prescribing a technology, but it states that measures will not count as reasonable steps if they rely entirely on self-declaration, or if they allow a deactivated user to immediately create a new account, or if they sweep in substantial numbers of users who are not covered. That is a workable middle ground between naming a technology and saying nothing at all. Notably, the Australian Information Commissioner has an independent role monitoring the privacy provisions of the same scheme, and eSafety consulted that office on the privacy aspects of its guidance.</p>
+<p>Canada has done its own work on this. The Office of the Privacy Commissioner did a <a href="https://www.priv.gc.ca/en/about-the-opc/what-we-do/consultations/completed-consultations/consultation-age/report_age_2025/"><u>consultation on age assurance</u></a>, and that was published in 2025. It is on Parliament's own reading list for Bill C-34. That makes what C-36 does next difficult to explain.</p>
 <h3>A design duty with nothing in it</h3>
-<p><a href="https://www.parl.ca/legisinfo/en/bill/45-1/c-34">Section 21</a> states that an operator must integrate into every regulated service the design features respecting the protection of children set out in the regulations. Yet, while Parliament creates the obligation, the details of required design features are up to the new regulator. Nor does the Act require those regulations to exist before the duty applies.</p>
+<p>Section 21 states that an operator must integrate into every regulated service the design features respecting the protection of children set out in the regulations. Yet, while Parliament creates the obligation, the details of required design features are up to the new regulator. Nor does the Act require those regulations to exist before the duty applies.</p>
 <p>This is the third time the same pattern appears. The minimum age applies to no service, the age check has no standard, and the design duty has no design features.</p>
-
 <h3>Who is a child, and who is old enough</h3>
 <p>Bill C-34 defines a child as a person under eighteen years of age. Every protective duty in the Act runs to that definition: the seven categories of harmful content, the duty to protect children, the design features. Bill C-36 uses the same threshold. On the definition of childhood, the two bills agree.</p>
 <p>The minimum age for a social media account is sixteen. So the Act creates a group it treats two ways at once. A sixteen or seventeen year old is a child for every protective purpose in the statute, and old enough to hold an account. Nothing in the bill explains the gap, and nothing reconciles the two numbers.</p>
 <p>It matters because it decides what a platform has to build. An operator needs to know both whether a user may hold an account, which turns on sixteen, and whether the heightened duties owed to children apply to that account, which turns on eighteen. Those are two determinations, not one, and they have to be held at the same time. The age check that satisfies the account restriction does not by itself answer the second question, because the two provisions are asking different things.</p>
 <p>There may well be a reason. Different obligations reasonably attach at different ages, and sixteen is a recognised threshold in several contexts, including in the Act’s own definition of content that sexually victimizes a child. So Parliament may have chosen deliberately. Neither bill says so, and neither backgrounder explains it. Stating the reason would be valuable to stakeholders. An unexplained choice is easier to defend than an unexplained inconsistency, and operators building to both thresholds need to know which one governs when they conflict.</p>
-
 <h3>C-36 removes the privacy check in C-34</h3>
 <p>The strange thing about these two bills is that the second one repeals a section of the first. Section 122 of the Digital Safety Commission of Canada Act, one of the two statutes Bill C-34 creates, requires the new Commission to consult the Privacy Commissioner before issuing age verification guidance or making regulations on design features, and to give reasons if it declines that advice. This is not approval. It is a duty to ask and explain.</p>
-<p><a href="https://www.parl.ca/legisinfo/en/bill/45-1/c-36">Section 18</a> of Bill C-36 repeals it. Section 17 then replaces the external check with the Commission considering privacy itself, and only to the extent it considers appropriate. So C-34 says one thing about consulting the Privacy Commissioner, and C-36 removes it completely. The new Commission becomes the body that considers privacy, not the Privacy Commissioner, and it decides for itself how far to take that.</p>
-<p>This has not gone unnoticed. Michael Geist has <a href="https://www.michaelgeist.ca/2026/06/everything-all-at-once-bill-c-34-combines-platform-duties-a-kids-social-media-ban-ai-chatbot-regulation-and-a-powerful-digital-safety-commission-into-a-risky-trust-us-bet/">written on the repeal</a>, reading it as a consequence of privacy responsibility shifting to the new commission.</p>
-
+<p>Section 18 of Bill C-36 repeals it. Section 17 then replaces the external check with the Commission considering privacy itself, and only to the extent it considers appropriate. So C-34 says one thing about consulting the Privacy Commissioner, and C-36 removes it completely. The new Commission becomes the body that considers privacy, not the Privacy Commissioner, and it decides for itself how far to take that.</p>
+<p>This has not gone unnoticed. Michael Geist has <a href="https://www.michaelgeist.ca/2026/06/everything-all-at-once-bill-c-34-combines-platform-duties-a-kids-social-media-ban-ai-chatbot-regulation-and-a-powerful-digital-safety-commission-into-a-risky-trust-us-bet/"><u>written on the repeal</u></a>, reading it as a consequence of privacy responsibility shifting to the new commission.</p>
 <h3>What the Act does not cover</h3>
 <p>What the Act leaves out matters as much as what it covers. Several well-identified harms to children, ones regulators have worked on for years, fall outside it.</p>
-<p>Private messaging is not included, so direct messages are out entirely, which is where sextortion and bullying happens. The Canadian Centre for Child Protection <a href="https://protectchildren.ca/en/resources-research/statistics/">publishes the numbers</a>. In 2025 it recorded 2,827 sextortion reports, up from 963 in 2021. Of the under-18 reports where gender was recorded, about 84 percent involved boys. Across 2020 to 2025 the total is 14,153.</p>
+<p>Private messaging is not included, so direct messages are out entirely, which is where sextortion and bullying happens. The Canadian Centre for Child Protection <a href="https://protectchildren.ca/en/resources-research/statistics/"><u>publishes the numbers</u></a>. In 2025 it recorded 2,827 sextortion reports, up from 963 in 2021. Of the under-18 reports where gender was recorded, about 84 percent involved boys. Across 2020 to 2025 the total is 14,153.</p>
 <p>That same private messaging sits inside Roblox and other games, and it is not addressed either. Neither are services that do not enable public communication, marketplaces and advertising, or maps and navigation.</p>
-<p>Fraud is not covered at all. With data from the Canadian Anti-Fraud Centre, the <a href="https://www.canada.ca/en/competition-bureau/news/2026/03/fraud-prevention-month-to-bring-hidden-crime-into-the-spotlight.html">Competition Bureau</a> reported in March 2026 that Canadians lost more than $704 million to fraud in 2025, with reported losses since 2022 now above $2.4 billion, and that only 5 to 10 percent of frauds are reported.</p>
-
-<h3>The feed itself is not covered</h3>
-<p>One of the largest omissions in this entire package is not the category of content. It is the architecture that decides what content a child sees. The government has demonstrated it understands that. Canadian Heritage's own <a href="https://www.canada.ca/en/canadian-heritage/services/safe-social-media-act.html">explanation of the bill</a> online states that online harms are not only the result of individual behaviour, but are also shaped by how digital services are designed and how they are operated, and it names what these features are. They are algorithmic recommendation systems, engagement based feeds, autoplay, and endless scrolling. These are some of the more concerning practices that lead to the harms that have been discussed in this brief.</p>
-
-<aside class="box">
-  <h3>What is a recommender?</h3>
-  <p>A recommender, or recommender system, is the software that decides the order in which posts appear when a person opens an app. Nobody asked for any of it and it is not a search result.</p>
-  <p>The system ranks everything available and puts at the top whatever it predicts will hold attention longest. The feed is what that ranking produces. It is what people mean when they say the algorithm.</p>
-</aside>
-
+<p>Fraud is not covered at all. With data from the Canadian Anti-Fraud Centre, the <a href="https://www.canada.ca/en/competition-bureau/news/2026/03/fraud-prevention-month-to-bring-hidden-crime-into-the-spotlight.html"><u>Competition Bureau</u></a> reported in March 2026 that Canadians lost more than $704 million to fraud in 2025, with reported losses since 2022 now above $2.4 billion, and that only 5 to 10 percent of frauds are reported.</p>
+</section>
+<section>
+<h2 class="sec">The feed itself is not covered</h2>
+<p>One of the largest omissions in this entire package is not the category of content. It is the architecture that decides what content a child sees. The government has demonstrated it understands that. Canadian Heritage's own <a href="https://www.canada.ca/en/canadian-heritage/services/safe-social-media-act.html"><u>explanation of the bill</u></a> online states that online harms are not only the result of individual behaviour, but are also shaped by how digital services are designed and how they are operated, and it names what these features are. They are algorithmic recommendation systems, engagement based feeds, autoplay, and endless scrolling. These are some of the more concerning practices that lead to the harms that have been discussed in this brief.</p>
+<h3>What is a recommender?</h3>
+<p>A recommender, or recommender system, is the software that decides the order in which posts appear when a person opens an app. Nobody asked for any of it and it is not a search result.</p>
+<p>The system ranks everything available and puts at the top whatever it predicts will hold attention longest. The feed is what that ranking produces. It is what people mean when they say the algorithm.</p>
 <p>Those features are a proper diagnosis, but they do not appear in the legislation. Neither the word recommender nor the term feed appears anywhere in Bill C-34.</p>
 <p>The duty to act responsibly for social media services is a duty to mitigate the risk that the user will be exposed to harmful content. The content that reaches a user, not the design. Sections 31 through 41 are built entirely on that exposure model, as opposed to design. The one place the Act does reach design, section 21, is the empty duty described above.</p>
 <p>What that looks like in drafted form already exists. The European Commission’s Article 28 guidelines devote a section to recommender systems, and the requirements are specific: platforms should regularly test and adapt their recommender systems, consulting minors, guardians and independent experts; they should prioritise accuracy, diversity, inclusivity and fairness when setting the objectives, parameters and evaluation strategies of those systems; they should not collect behavioural data capturing a minor’s activity off the platform; and where they do process behavioural data, it should not be so extensive as to capture all or most of what a minor does on the service. Separately, the guidelines say minors should not be exposed to persuasive design features aimed predominantly at engagement, and they name them: indefinite scrolling, autoplay, and notifications artificially timed to regain a minor’s attention.</p>
 <p>Those are the same features Canadian Heritage named. The difference is that one of them is written down as an expectation a regulator will assess, and the other is a paragraph on a departmental web page.</p>
 <p>It is worth being precise about the comparison. Article 28(1) is broadly drafted too, and the detail came from guidelines rather than from the statute. So the EU deferred as well. The difference is not deferral, it is that the European regulator has published, and Canada’s has not been created.</p>
-
-<p>This is not an isolated reading. The Canadian Civil Liberties Association has argued that the bill should specify age-appropriate design requirements rather than leave them to regulation, naming privacy by default, limits on profiling and limits on endless scrolling as the sorts of requirements that would provide real protection. In Policy Options, Natasha Tusikov and Blayne Haggart went further, arguing that the duty to act responsibly is a form of corporate social responsibility that asks platforms to police themselves, and that <a href="https://policyoptions.irpp.org/2026/07/bill-c34-big-tech/">rules need to address design and business models</a> rather than relying on operators to implement adequate measures. Their prescription and mine differ, but the diagnosis is the same, and what the word counts above add is the textual evidence for it.</p>
+<p>This is not an isolated reading. The Canadian Civil Liberties Association has <a href="https://ccla.org/press-release/ccla-warns-against-risks-to-freedom-of-expression-and-privacy-posed-by-bill-c-34-the-safe-social-media-act/"><u>argued</u></a> that the bill should specify age-appropriate design requirements rather than leave them to regulation, naming privacy by default, limits on profiling and limits on endless scrolling as the sorts of requirements that would provide real protection. In Policy Options, Natasha Tusikov and Blayne Haggart went further, arguing that the duty to act responsibly is a form of corporate social responsibility that asks platforms to police themselves, and that <a href="https://policyoptions.irpp.org/2026/07/bill-c34-big-tech/"><u>rules need to address design and business models</u></a> rather than relying on operators to implement adequate measures. Their prescription and mine differ, but the diagnosis is the same, and what the word counts above add is the textual evidence for it.</p>
 <p>The Act also shows that its drafters knew how to leave room for what has not been invented yet. Section 53(e) lets the Governor in Council add any other harmful chatbot behaviour by regulation, so the chatbot duties can grow as the techniques do. The social media duties have no equivalent open category. The future-proofing was written on one side of the Act and not the other.</p>
-
-<h3>Chatbots and the AI question</h3>
+</section>
+<section>
+<h2 class="sec">Chatbots and the AI question</h2>
 <p>The Digital Safety Act applies the age restriction only to social media. It does not apply it at all to chatbots run by artificial intelligence. What that means is that a child can be barred from Facebook or Instagram, but nothing stops him or her from opening a companion app such as Character AI, or a general assistant such as ChatGPT, and forming a relationship that is not healthy, or using the tool for unhealthy purposes.</p>
-<p><a href="https://www.parl.ca/legisinfo/en/bill/45-1/c-34">Section 53</a> of the Act prohibits four things for AI driven chatbots. A chatbot must not pose as a human. It must not pose as a licensed professional, such as a therapist. It must not use manipulative engagement techniques that encourage emotional attachment causing social withdrawal or disconnection from reality. And it must not encourage self-harm or suicide.</p>
+<p>Section 53 of the Act prohibits four things for AI driven chatbots. A chatbot must not pose as a human. It must not pose as a licensed professional, such as a therapist. It must not use manipulative engagement techniques that encourage emotional attachment causing social withdrawal or disconnection from reality. And it must not encourage self-harm or suicide.</p>
 <p>The third of those deserves particular attention. Manipulative engagement techniques is the language that links directly to the attention economy, doing whatever holds the attention of a user. It is worth noting that the bill puts this language into statute. The same idea has been argued in the United States: the state attorneys general accused Meta of using psychologically manipulative features, though the case settled with no admission of liability. In New Mexico, a court went further and found the feed design itself to be a public nuisance, ordering design changes and comparing the company to a polluting factory.</p>
-<p>Meta <a href="https://oag.ca.gov/news/press-releases/attorney-general-bonta-secures-transformative-17-billion-settlement-meta">settled with 51 attorneys general for up to $17.1 billion</a>, which they described as the largest state consumer protection settlement outside the tobacco settlements of the 1990s. That was their comparison, not mine.</p>
+<p>Meta <a href="https://oag.ca.gov/news/press-releases/attorney-general-bonta-secures-transformative-17-billion-settlement-meta"><u>settled with 51 attorneys general for up to $17.1 billion</u></a>, which they described as the largest state consumer protection settlement outside the tobacco settlements of the 1990s. That was their comparison, not mine.</p>
 <p>The phrase appears once in the entire bill, and only here. A statute called the Safe Social Media Act makes its clearest statement about manipulative design in the provisions that do not govern social media.</p>
 </section>
-
-<!-- ============ WHAT THEY GET RIGHT ============ -->
 <section>
 <h2 class="sec">What the bills get right</h2>
 <p>While we are covering a great many harms, Bill C-34 builds in the importance of preserving the benefits of these technologies. Its purposes expressly include maintaining the advantages children gain online, and its measures must not unreasonably limit expression.</p>
 <p>For children in rural areas, for disabled young people, and for abused youth, online communities have proven to be an important and often the only place they can find something to relate to. The same is true of education: assistive technology, video instruction and tutoring reach children that a classroom alone does not, and they reach them furthest where distance and cost are the barrier. It is the yin and yang of social media: the positive effects and the negative ones come from the same platforms.</p>
 </section>
-
-<!-- ============ HOUSEHOLD ============ -->
 <section>
 <h2 class="sec">What legislation cannot reach</h2>
 <p>These bills are aimed purely at the operators. What they miss, in terms of online safety, is parental and guardian responsibility.</p>
-<p>MediaSmarts, an organization that looks closely at how children and technology interact, surveyed just over a thousand Canadian children aged nine to seventeen. <a href="https://mediasmarts.ca/research-policy/young-canadians-wireless-world-phase-iv-life-online">It found</a> that 77 percent own a smartphone, that most were given their first between the ages of 11 and 13 by a parent or guardian, and that 80 percent keep the phone in their bedroom overnight. So it is parents who are providing children with these handheld computers.</p>
+<p>MediaSmarts, an organization that looks closely at how children and technology interact, surveyed just over a thousand Canadian children aged nine to seventeen. <a href="https://mediasmarts.ca/research-policy/young-canadians-wireless-world-phase-iv-life-online"><u>It found</u></a> that 77 percent own a smartphone, that most were given their first between the ages of 11 and 13 by a parent or guardian, and that 80 percent keep the phone in their bedroom overnight. So it is parents who are providing children with these handheld computers.</p>
 <p>That overnight figure is the one to sit with. It is not that the household is where sole responsibility sits. It is that a good deal of the exposure happens there, and that no federal statute reaches it. A bill aimed at operators can require an age check and a safety plan. It cannot decide what time a phone leaves a bedroom.</p>
 <p>The educators surveyed above put this first. Asked what contributes to student mental health problems in their schools, 92 percent named lack of parental involvement and communication, ranking it above social media use at 84 percent. The people closest to the children put the household at the top of the list.</p>
 <p>There is a serious argument against this framing and it deserves stating. Respondents to the Privacy Commissioner’s consultation put it directly: there has been a constant downloading of responsibility onto parents and children to act within their limited resources in the face of predictable harms, and society does not hold parents responsible for preventing access to other legal but restricted products such as cigarettes and alcohol. Others noted the bind parents are in between enforcing a restriction and letting a child fit in socially. I take the point. My argument is not that the household is where responsibility sits, but that it is where a good deal of the exposure happens, and that no federal statute reaches it.</p>
-<p>This is not a counsel of despair. The same Gallup survey that measured the hours also <a href="https://news.gallup.com/poll/513248/parenting-mitigates-social-media-linked-mental-health-issues.aspx">found</a> that active parenting practices measurably reduce the mental health harms associated with heavy social media use. The household is not powerless. It is simply not addressed by either bill.</p>
-
+<p>This is not a counsel of despair. The same Gallup survey that measured the hours also <a href="https://news.gallup.com/poll/513248/parenting-mitigates-social-media-linked-mental-health-issues.aspx"><u>found</u></a> that active parenting practices measurably reduce the mental health harms associated with heavy social media use. The household is not powerless. It is simply not addressed by either bill.</p>
 <p>This isn’t a problem this legislation can fix alone, nor is it one parenting can fix alone. Both are the solution.</p>
 </section>
-
-<!-- ============ RECOMMENDATIONS ============ -->
-<section>
-<h2 class="sec" id="change">Part three: what Parliament could settle now</h2>
-<p class="lede">What follows are not positions. They are the places where, on reading the two bills against the standards, the guidance and the practice of comparable jurisdictions, questions remain open that committee is well placed to examine.</p>
+<section id="change">
+<h2 class="sec">Part three: what Parliament could settle now</h2>
+<p>What follows are not positions. They are the places where, on reading the two bills against the standards, the guidance and the practice of comparable jurisdictions, questions remain open that committee is well placed to examine.</p>
 <p>I have no client in this file and no side to argue. Where I think the evidence points one way I have said so and shown the source. Where the government has a reasonable answer I have set that out too. Members will weigh these differently, and should.</p>
-
 <h3>Not a blame game</h3>
 <p>This cannot be a blame game. The courts are one way public policy is being influenced, in the United States and elsewhere, but everyone has a role here, including parents, educators and the platforms themselves. It cannot be a blame game aimed at social media companies, given the benefits these models provide.</p>
-
 <div class="rec-table">
   <div class="rec-labels"><span>Changes to consider</span><span>Instrument</span><span>Stage</span></div>
-  <div class="rec-row">
-    <div class="what">Regulate both the feed and the content</div>
-    <div class="inst">Amendment to section 32, Digital Safety Act</div>
-    <div class="stage">Committee</div>
-  </div>
-  <div class="rec-row">
-    <div class="what">Say how accurate an age check has to be</div>
-    <div class="inst">Regulation under section 126(1)(c)</div>
-    <div class="stage">Commission</div>
-  </div>
-  <div class="rec-row">
-    <div class="what">Keep an independent privacy check on age verification</div>
-    <div class="inst">Section 18, Bill C-36</div>
-    <div class="stage">House</div>
-  </div>
-  <div class="rec-row">
-    <div class="what">Decide now how we will know whether any of this worked</div>
-    <div class="inst">Sections 126(1)(b), 128 and 129</div>
-    <div class="stage">Commission and Minister</div>
-  </div>
-  <div class="rec-row">
-    <div class="what">Provide clarity over the Commission's powers and governance</div>
-    <div class="inst">Digital Safety Commission of Canada Act</div>
-    <div class="stage">Committee</div>
-  </div>
-  <div class="rec-row">
-    <div class="what">Learn from how Canada has built arm's length bodies before building another</div>
-    <div class="inst">Design of the Commission, before establishment</div>
-    <div class="stage">Government</div>
-  </div>
+  <div class="rec-row"><div class="what"><strong>Regulate both the feed and the content</strong></div><div class="inst">Amendment to section 32, Digital Safety Act</div><div class="stage">Committee</div></div>
+  <div class="rec-row"><div class="what"><strong>Say how accurate an age check has to be</strong></div><div class="inst">Regulation under section 126(1)(c)</div><div class="stage">Commission</div></div>
+  <div class="rec-row"><div class="what"><strong>Keep an independent privacy check on age verification</strong></div><div class="inst">Section 18, Bill C-36</div><div class="stage">House</div></div>
+  <div class="rec-row"><div class="what"><strong>Decide now how we will know whether any of this worked</strong></div><div class="inst">Sections 126(1)(b), 128 and 129</div><div class="stage">Commission and Minister</div></div>
+  <div class="rec-row"><div class="what"><strong>Provide clarity over the Commission's powers and governance</strong></div><div class="inst">Digital Safety Commission of Canada Act</div><div class="stage">Committee</div></div>
+  <div class="rec-row"><div class="what"><strong>Learn from how Canada has built arm's length bodies before building another</strong></div><div class="inst">Design of the Commission, before establishment</div><div class="stage">Government</div></div>
 </div>
-
-<div class="rec">
-<h3><span class="n">1</span> Regulate both the feed and the content</h3>
-<p class="instrument">For committee, by amendment to section 32 of the Digital Safety Act</p>
+<h3>1 Regulate both the feed and the content</h3>
+<p><em>For committee, by amendment to section 32 of the Digital Safety Act</em></p>
 <p>The question for committee is whether the duty to act responsibly should reach engagement design as well as exposure to content. If it should, the drafting is not difficult, because the risk mitigation duty with its listed factors is already in section 32. A further paragraph addressed to engagement design would put the feed inside a structure that already exists, and there is drafted language in the European guidelines to work from. Two subsidiary questions follow: whether the harm being mitigated is named in the amendment itself, and whether the Commission is asked to explain publicly what these techniques are and how they work on adults and children alike.</p>
-</div>
-
-<div class="rec">
-<h3><span class="n">2</span> Say how accurate an age check has to be</h3>
-<p class="instrument">For the Commission, by regulation under section 126(1)(c)</p>
-<p>The work has already been done. ISO/IEC 27566-1:2025, the international standard on age assurance systems, contains exactly what section 27(2) leaves out.</p>
+<h3>2 Say how accurate an age check has to be</h3>
+<p><em>For the Commission, by regulation under section 126(1)(c)</em></p>
+<p>The work has already been done. <a href="https://www.iso.org/standard/88143.html"><u>ISO/IEC 27566-1:2025</u></a>, the international standard on age assurance systems, contains exactly what section 27(2) leaves out.</p>
 <p>Its clause 6 is headed Performance characteristics, and clause 6.2 is headed Indicators of effectiveness. The standard requires that classification accuracy be determined, recorded and regularly reviewed for each configuration of a system, and stated in a practice statement. It says systems should measure and report a false positive rate and a false negative rate. It sets out outcome error parity, meaning that error rates should be consistent across demographic groups regardless of gender or ethnicity, and makes low error spread across demographics a requirement of an effective system. And it states that a system relying solely on self-asserted age, which includes ticking a box to say you are over a certain age, shall be considered ineffective for making an age-related eligibility decision.</p>
 <p>That last sentence is the click-through example above, settled in an international standard, in normative language. Parliament wrote that its measures must be effective and left effective undefined. The definition already exists.</p>
 <p>Whether to adopt it is a decision for the Commission under section 126(1)(c), and the questions worth putting are these. Should conformity with the standard be required, or something less? Should independent testing against the metrics it names be a condition? Should the error rates be required to hold across demographic groups? Should there be an accessible fallback for people the technology fails? And should the obligation commence before conformity assessment is available in Canada, given that a duty to be effective is difficult to enforce without a way to test it?</p>
-</div>
-
-<div class="rec">
-<h3><span class="n">3</span> Keep an independent privacy check on age verification</h3>
-<p class="instrument">For the House, on section 18 of Bill C-36</p>
-<p><a href="https://www.parl.ca/legisinfo/en/bill/45-1/c-34">Section 122</a> of the Digital Safety Commission of Canada Act requires the Commission to consult the Privacy Commissioner before it issues age verification guidance or makes regulations on design features, and to give reasons if it declines the advice. Section 18 of Bill C-36 repeals it. The duty is inexpensive to comply with, and as drafted it is the only external privacy check on a decision that will determine how much personal information Canadians hand over to prove their age. Whether that check should survive is a live question for the House.</p>
+<h3>3 Keep an independent privacy check on age verification</h3>
+<p><em>For the House, on section 18 of Bill C-36</em></p>
+<p>Section 122 of the Digital Safety Commission of Canada Act requires the Commission to consult the Privacy Commissioner before it issues age verification guidance or makes regulations on design features, and to give reasons if it declines the advice. Section 18 of Bill C-36 repeals it. The duty is inexpensive to comply with, and as drafted it is the only external privacy check on a decision that will determine how much personal information Canadians hand over to prove their age. Whether that check should survive is a live question for the House.</p>
 <p>The government has a reason, and it deserves to be put fairly. If private sector privacy moves to the Commission, then consulting the Privacy Commissioner can look like consulting a body that no longer holds the file. The counter-argument is that the section was protecting independence rather than jurisdiction. The Privacy Commissioner is an Agent of Parliament. The members of the new Commission are appointed by the Governor in Council. On that reading, removing the duty removes not a redundancy but the last voice in the process that does not report to the same place as the decision maker. Committee is better placed than I am to decide which reading is right.</p>
-<p>Comparable countries do not merge these functions, they connect them. The United Kingdom keeps data protection with the Information Commissioner’s Office and online safety with Ofcom. Australia keeps privacy with the Office of the Australian Information Commissioner and online safety with the eSafety Commissioner, and in April 2026 those two regulators <a href="https://www.oaic.gov.au/news/media-centre/esafety-and-oaic-working-together-to-protect-privacy-and-safety-for-all-australians">signed a memorandum of understanding</a> covering exactly this intersection: age assurance requirements under Australia’s industry codes, and compliance with its social media minimum age obligations. The eSafety Commissioner’s stated reason is worth reading beside Canada’s repeal. She said her office knew from the outset that implementing the minimum age would have to recognise important rights, including the right to privacy.</p>
+<p>Comparable countries do not merge these functions, they connect them. The United Kingdom keeps data protection with the Information Commissioner’s Office and online safety with Ofcom. Australia keeps privacy with the Office of the Australian Information Commissioner and online safety with the eSafety Commissioner, and in April 2026 those two regulators <a href="https://www.oaic.gov.au/news/media-centre/esafety-and-oaic-working-together-to-protect-privacy-and-safety-for-all-australians"><u>signed a memorandum of understanding</u></a> covering exactly this intersection: age assurance requirements under Australia’s industry codes, and compliance with its social media minimum age obligations. The eSafety Commissioner’s stated reason is worth reading beside Canada’s repeal. She said her office knew from the outset that implementing the minimum age would have to recognise important rights, including the right to privacy.</p>
 <p>That arrangement is already producing work. The Australian privacy regulator published guidance on the privacy dimensions of the minimum age scheme in October 2025, and further age assurance guidance in March 2026, alongside the safety regulator’s own regulatory guidance. Two bodies, two mandates, coordinated by agreement. Canada is proposing to solve the same problem by putting both mandates in one body and deleting the duty to consult.</p>
 <p>If Parliament does decide the privacy mandate should move, there is an intermediate option on the table: replacing section 122 with a statutory duty to coordinate with the Privacy Commissioner on age assurance, on the Australian model, rather than removing the connection altogether.</p>
-</div>
-
-<div class="rec">
-<h3><span class="n">4</span> Decide now how we will know whether any of this worked</h3>
-<p class="instrument">For the Commission and the Minister, under sections 126(1)(b), 128 and 129</p>
+<h3>4 Decide now how we will know whether any of this worked</h3>
+<p><em>For the Commission and the Minister, under sections 126(1)(b), 128 and 129</em></p>
 <p>There is a requirement to review the minimum age within three years, in section 129, but nothing says what that review would measure. It just says it will be a review. Three years from now, someone will stand up and say the rule is working or that it is not, and we do not have anything that would tell us which of them is right. Naming the indicators before the clock starts is one way to avoid a Commission defining its own success after the fact.</p>
 <p>There is a cheaper version of this that the Act has already half built. Section 42 requires every operator to describe, in a public safety plan, the indicators it uses to judge whether its own measures work, and every operator chooses its own. If the Commission specified a common set, the plans would become comparable across companies and across years, and the review would have something to read. That would be a regulation rather than an amendment, which makes it a cheaper option than most on this list.</p>
-</div>
-
-<div class="rec">
-<h3><span class="n">5</span> Provide clarity over the Commission's powers and governance</h3>
-<p class="instrument">For committee, on the Digital Safety Commission of Canada Act</p>
+<h3>5 Provide clarity over the Commission's powers and governance</h3>
+<p><em>For committee, on the Digital Safety Commission of Canada Act</em></p>
 <p>This sits alongside the first consideration rather than against it. Both concern the same question: how much of the substance is settled by Parliament and how much is left to a regulator to fill in later. Reasonable people answer that differently, and where the line falls is exactly the sort of question committee exists to work out.</p>
 <p>The Commission will decide what counts as harmful, what design features are required, what an adequate age check is, and what a compliant safety plan looks like. Almost none of that is settled in the statute. The reassurance that its powers are bounded therefore has to come from somewhere, and at present it comes from very little: members appointed by the Governor in Council, discretion to consider privacy only to the extent it considers appropriate, and regulation-making powers whose scope is set by the Commission's own view of the risk. Two options are worth weighing: naming the limits of those powers in the Act, and requiring reasons when the Commission departs from advice it has sought. Neither is expensive, and both speak to the objection, already being raised from several directions, that the Act hands a great deal to a body that does not yet exist.</p>
-</div>
-</section>
-
-<!-- ============ LANDINGS ============ -->
-<section>
-</section>
-<section>
-<div class="rec">
-<h3><span class="n">6</span> Learn from how Canada has built arm’s length bodies before building another</h3>
-<p class="instrument">For government, in designing the Commission before it is established</p>
+<h3>6 Learn from how Canada has built arm’s length bodies before building another</h3>
+<p><em>For government, in designing the Commission before it is established</em></p>
 <p>Canada has a long history of creating arm’s length agencies and commissions, from the Canada Revenue Agency to the Privacy Commissioner. It is much better at creating them than at deciding how they should be designed, governed and evaluated. As we have seen with the CRA, weak oversight has contributed to service standard shortfalls and to internal misuse of powers. Other arm’s length bodies have a history of scope creep, taking on broader powers without checks from elected offices. Whether that record is reviewed before another such body is built, and whether what is learned is made public, is a question worth putting to the government.</p>
-<p>The gap is not a matter of opinion. Carey Doberstein of the University of British Columbia argued in Canadian Public Administration in 2026 that Canadian scholarship on arm’s length agencies remains largely absent from the international literature on agencification, and that the field has tended to examine these bodies after a scandal rather than study how they should be designed in the first place. He identifies three unresolved problems: how to tell whether such a body is performing, who is accountable when something goes wrong in an organization deliberately separated from ministers, and how to keep a body independent when government controls the appointments.</p>
+<p>The gap is not a matter of opinion. Carey Doberstein of the University of British Columbia <a href="https://onlinelibrary.wiley.com/doi/10.1111/capa.70052"><u>argued in Canadian Public Administration</u></a> in 2026 that Canadian scholarship on arm’s length agencies remains largely absent from the international literature on agencification, and that the field has tended to examine these bodies after a scandal rather than study how they should be designed in the first place. He identifies three unresolved problems: how to tell whether such a body is performing, who is accountable when something goes wrong in an organization deliberately separated from ministers, and how to keep a body independent when government controls the appointments.</p>
 <p>All three land on the Digital Safety Commission. It will decide what counts as harmful, what design features are required and what an adequate age check is. Its members are appointed by the Governor in Council. Nothing in the Act says how its performance will be judged.</p>
 <p>There is a precedent worth putting in front of committee. The Federal Accountability Act of 2006 amended the Salaries Act to provide that the Governor in Council may establish a Public Appointments Commission, to set guidelines for appointments to agencies, boards, commissions and Crown corporations, approve and review the selection processes ministers propose, and report annually to the Prime Minister for tabling in both Houses. A chairperson was nominated in April 2006. The nomination did not survive committee, and the Commission was shelved.</p>
 <p>The secretariat, however, was created as a federal department by order in council, reporting directly to the Prime Minister. It continued for years. Treasury Board reporting for 2009-10 records that because the Commission was not established or operational, the secretariat’s work was completed in draft, subject to approval by a Commission that did not exist, with no permanent staffing. By 2012 the CBC reported that millions had been spent supporting a commission that had never come into being. The Commission was never established.</p>
 <p>That is the same pattern described earlier in this brief, twenty years before these bills. A power written as may rather than must, an institution left to a later decision that never came, and machinery funded to support a body that did not arrive. It is also a case where the design question and the appointments question were the same question: the Commission failed because its first appointment was contested, which is precisely the vulnerability Doberstein identifies.</p>
-</div>
-
 </section>
-
 <section>
 <h2 class="sec">What this means as next steps</h2>
-
-<div class="landing">
-<h4>Amendments</h4>
+<h3>Amendments</h3>
 <p>The drafting fix in recommendation one is small and sits inside a structure the bill already has. Section 32 sets a risk-mitigation duty with adequacy factors; a further paragraph addressed to engagement design would not require a new regime. The harder question at committee will be whether that can be done without reopening the expression arguments that sank the previous online harms bill.</p>
-</div>
-
-<div class="landing">
-<h4>Operators and stakeholders must engage now and contribute to the new Commission’s development</h4>
+<h3>Operators and stakeholders must engage now and contribute to the new Commission’s development</h3>
 <p>Almost nothing in these bills binds anyone yet. The minimum age applies only to services Cabinet specifies, the standard for an adequate age check is undefined, and the design features do not exist. The planning question is therefore not compliance but sequencing: which obligations commence before their standards are written, and what a client is expected to have built by then. The two bills also commence together, so a privacy transition and a safety transition arrive as one event rather than two.</p>
-</div>
-
-<div class="landing">
-<h4>Educators</h4>
+<h3>Educators</h3>
 <p>Educators play a critical role in identifying outcomes, as they are often first on the ground to see them. Whether the sleepy eyed child still comes in and falls asleep at their desk is the kind of reality check policy makers depend on. Neither bill reaches the classroom, the household, or private messaging, which is where much of what teachers actually see takes place. What the Act does reach is the seven categories of content and, eventually, the design of the services. The gap between those two things is the space provincial policy and school practice will continue to occupy, and the federal instrument was never built to close it.</p>
-</div>
 </section>
-
-</main>
-
-
 <section id="sources">
 <h2 class="sec">Sources</h2>
-<p style="font-size:.9375rem;color:var(--slate)">Legislation and government</p>
-<ul class="plain" style="font-size:.9375rem">
-<li>Bill C-34, <i>An Act to enact the Digital Safety Act and the Digital Safety Commission of Canada Act</i>, 45th Parl, 1st Sess, first reading 10 June 2026. <a href="https://www.parl.ca/legisinfo/en/bill/45-1/c-34">parl.ca</a></li>
-<li>Bill C-36, <i>An Act to enact the Protecting Privacy and Consumer Data Act</i>, 45th Parl, 1st Sess, first reading 15 June 2026. <a href="https://www.parl.ca/legisinfo/en/bill/45-1/c-36">parl.ca</a></li>
-<li>Canadian Heritage, <i>Bill C-34, the Safe Social Media Act</i>. <a href="https://www.canada.ca/en/canadian-heritage/services/safe-social-media-act.html">canada.ca</a></li>
-<li>Office of the Privacy Commissioner of Canada, <i>Consultation on age assurance: What We Heard</i>, 2025. <a href="https://www.priv.gc.ca/en/about-the-opc/what-we-do/consultations/completed-consultations/consultation-age/report_age_2025/">priv.gc.ca</a></li>
-<li>Competition Bureau Canada, <i>Fraud Prevention Month</i>, March 2026, with data from the Canadian Anti-Fraud Centre. <a href="https://www.canada.ca/en/competition-bureau/news/2026/03/fraud-prevention-month-to-bring-hidden-crime-into-the-spotlight.html">canada.ca</a></li>
+<p>Legislation and government</p>
+<ul>
+  <li>Bill C-34, <em>An Act to enact the Digital Safety Act and the Digital Safety Commission of Canada Act</em>, 45th Parl, 1st Sess, first reading 10 June 2026. <a href="https://www.parl.ca/DocumentViewer/en/45-1/bill/C-34/first-reading"><u>parl.ca</u></a></li>
+  <li>Bill C-36, <em>An Act to enact the Protecting Privacy and Consumer Data Act</em>, 45th Parl, 1st Sess, first reading 15 June 2026. <a href="https://www.parl.ca/DocumentViewer/en/45-1/bill/C-36/first-reading"><u>parl.ca</u></a></li>
+  <li>Canadian Heritage, <em>Bill C-34, the Safe Social Media Act</em>. <a href="https://www.canada.ca/en/canadian-heritage/services/safe-social-media-act.html"><u>canada.ca</u></a></li>
+  <li>Office of the Privacy Commissioner of Canada, <em>Consultation on age assurance: What We Heard</em>, 2025. <a href="https://www.priv.gc.ca/en/about-the-opc/what-we-do/consultations/completed-consultations/consultation-age/report_age_2025/"><u>priv.gc.ca</u></a></li>
+  <li>Competition Bureau Canada, <em>Fraud Prevention Month</em>, March 2026, with data from the Canadian Anti-Fraud Centre. <a href="https://www.canada.ca/en/competition-bureau/news/2026/03/fraud-prevention-month-to-bring-hidden-crime-into-the-spotlight.html"><u>canada.ca</u></a></li>
 </ul>
-<p style="font-size:.9375rem;color:var(--slate)">International</p>
-<ul class="plain" style="font-size:.9375rem">
-<li>European Commission, <i>Guidelines on measures to ensure a high level of privacy, safety and security for minors online</i>, Article 28(1) of the Digital Services Act, 14 July 2025. <a href="https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-protection-minors">digital-strategy.ec.europa.eu</a></li>
-<li>ISO/IEC 27566-1:2025, <i>Information technology, Age assurance systems, Part 1: Framework</i>.</li>
-<li>Australian Government, <i>Age Assurance Technology Trial</i>. <a href="https://www.esafety.gov.au/about-us/consultation-cooperation/age-assurance-technology-trial">esafety.gov.au</a></li>
-<li>Office of the Australian Information Commissioner and eSafety Commissioner, memorandum of understanding, 22 April 2026. <a href="https://www.oaic.gov.au/news/media-centre/esafety-and-oaic-working-together-to-protect-privacy-and-safety-for-all-australians">oaic.gov.au</a></li>
-<li>California Attorney General, Meta multistate settlement. <a href="https://oag.ca.gov/news/press-releases/attorney-general-bonta-secures-transformative-17-billion-settlement-meta">oag.ca.gov</a></li>
+<p>International</p>
+<ul>
+  <li>European Commission, <em>Guidelines on measures to ensure a high level of privacy, safety and security for minors online</em>, Article 28(1) of the Digital Services Act, 14 July 2025. <a href="https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-protection-minors"><u>digital-strategy.ec.europa.eu</u></a></li>
+  <li>ISO/IEC 27566-1:2025, <em>Information security, cybersecurity and privacy protection, Age assurance systems, Part 1: Framework</em>. <a href="https://www.iso.org/standard/88143.html"><u>iso.org</u></a></li>
+  <li>Australian Government, <em>Age Assurance Technology Trial</em>. <a href="https://ageassurance.com.au/"><u>ageassurance.com.au</u></a></li>
+  <li>Office of the Australian Information Commissioner and eSafety Commissioner, memorandum of understanding, 22 April 2026. <a href="https://www.oaic.gov.au/news/media-centre/esafety-and-oaic-working-together-to-protect-privacy-and-safety-for-all-australians"><u>oaic.gov.au</u></a></li>
+  <li>California Attorney General, Meta multistate settlement. <a href="https://oag.ca.gov/news/press-releases/attorney-general-bonta-secures-transformative-17-billion-settlement-meta"><u>oag.ca.gov</u></a></li>
 </ul>
-<p style="font-size:.9375rem;color:var(--slate)">Research</p>
-<ul class="plain" style="font-size:.9375rem">
-<li>Teague S, Somoray K, Shatte A, et al. Digital media use and child health and development: a systematic review and meta-analysis. <i>JAMA Pediatrics</i> 2026;180(5):510-517. <a href="https://jamanetwork.com/journals/jamapediatrics/article-abstract/2845518">jamanetwork.com</a></li>
-<li>Haidt J, Rausch Z. Social media and adolescent mental health, in <i>World Happiness Report 2026</i>, ch 3. <a href="https://www.worldhappiness.report/ed/2026/social-media-is-harming-adolescents-at-a-scale-large-enough-to-cause-changes-at-the-population-level/">worldhappiness.report</a></li>
-<li>Rothwell J. Teens spend average of 4.8 hours on social media per day. Gallup, 2023. <a href="https://news.gallup.com/poll/512576/teens-spend-average-hours-social-media-per-day.aspx">gallup.com</a></li>
-<li>Gallup, Parenting mitigates social media linked mental health issues. <a href="https://news.gallup.com/poll/513248/parenting-mitigates-social-media-linked-mental-health-issues.aspx">gallup.com</a></li>
-<li>eSafety Commissioner, <i>Social Media Minimum Age: March 2026 compliance report</i>. <a href="https://www.esafety.gov.au/newsroom/blogs/social-media-minimum-age-compliance-report">esafety.gov.au</a></li>
-<li>eSafety Commissioner, <i>Social media age restrictions</i>, regulatory guidance. <a href="https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions">esafety.gov.au</a></li>
-<li>NBC New York, <i>Generation Text</i>, principals survey, 29 July 2024. <a href="https://www.nbcnewyork.com/news/local/generation-text-see-the-full-nbc-survey-results-as-principals-reveal-concern-about-phones-in-schools/5645963/">nbcnewyork.com</a></li>
-<li>National Education Association, <i>Impact of social media and personal devices on mental health</i>, 12 August 2024. <a href="https://www.nea.org/resource-library/impact-social-media-and-personal-devices-mental-health">nea.org</a></li>
-<li>Hatfield J, Pew Research Center, cellphone distraction in classrooms, 12 June 2024. <a href="https://www.pewresearch.org/short-reads/2024/06/12/72-percent-of-us-high-school-teachers-say-cellphone-distraction-is-a-major-problem-in-the-classroom/">pewresearch.org</a></li>
-<li>MediaSmarts, <i>Young Canadians in a Wireless World, Phase IV</i>. <a href="https://mediasmarts.ca/research-policy/young-canadians-wireless-world-phase-iv-life-online">mediasmarts.ca</a></li>
-<li>Canadian Centre for Child Protection, statistics. <a href="https://protectchildren.ca/en/resources-research/statistics/">protectchildren.ca</a></li>
-<li>CPP Investments, fiscal 2026 results. <a href="https://www.cppinvestments.com/newsroom/cpp-investments-net-assets-total-793-3-billion-at-2026-fiscal-year-end/">cppinvestments.com</a></li>
-<li>Doberstein C. Arm's-length agencies and authorities in Canada: charting the next frontier of research. <i>Canadian Public Administration</i> 2026;69(1):127.</li>
-<li>Prime Minister of Canada, nomination of first chairperson of the Public Appointments Commission, 21 April 2006. <a href="https://www.canada.ca/en/news/archive/2006/04/prime-minister-nominates-first-chairperson-public-appointments-commission.html">canada.ca</a></li>
-<li>Public Appointments Commission Secretariat, departmental performance report 2009-10. <a href="https://publications.gc.ca/collections/collection_2010/sct-tbs/BT31-4-65-2010-2-eng.pdf">publications.gc.ca</a></li>
-<li>Weston G, Costly federal appointments office has nothing much to do. CBC News, 27 January 2012. <a href="https://www.cbc.ca/news/politics/costly-federal-appointments-office-has-nothing-much-to-do-1.1245490">cbc.ca</a></li>
+<p>Research</p>
+<ul>
+  <li>Teague S, Somoray K, Shatte A, et al. Digital media use and child health and development: a systematic review and meta-analysis. <em>JAMA Pediatrics</em> 2026;180(5):510-517. <a href="https://jamanetwork.com/journals/jamapediatrics/article-abstract/2845518"><u>jamanetwork.com</u></a></li>
+  <li>Haidt J, Rausch Z. Social media and adolescent mental health, in <em>World Happiness Report 2026</em>, ch 3. <a href="https://www.worldhappiness.report/ed/2026/social-media-is-harming-adolescents-at-a-scale-large-enough-to-cause-changes-at-the-population-level/"><u>worldhappiness.report</u></a></li>
+  <li>Rothwell J. Teens spend average of 4.8 hours on social media per day. Gallup, 2023. <a href="https://news.gallup.com/poll/512576/teens-spend-average-hours-social-media-per-day.aspx"><u>gallup.com</u></a></li>
+  <li>Gallup, Parenting mitigates social media linked mental health issues. <a href="https://news.gallup.com/poll/513248/parenting-mitigates-social-media-linked-mental-health-issues.aspx"><u>gallup.com</u></a></li>
+  <li>eSafety Commissioner, <em>Social Media Minimum Age: March 2026 compliance report</em>. <a href="https://www.esafety.gov.au/newsroom/blogs/social-media-minimum-age-compliance-report"><u>esafety.gov.au</u></a></li>
+  <li>eSafety Commissioner, <em>Social media age restrictions</em>, regulatory guidance. <a href="https://www.esafety.gov.au/industry/regulatory-guidance#social-media-minimum-age"><u>esafety.gov.au</u></a></li>
+  <li>NBC New York, <em>Generation Text</em>, principals survey, 29 July 2024. <a href="https://www.nbcnewyork.com/news/local/generation-text-see-the-full-nbc-survey-results-as-principals-reveal-concern-about-phones-in-schools/5645963/"><u>nbcnewyork.com</u></a></li>
+  <li>National Education Association, <em>Impact of social media and personal devices on mental health</em>, 12 August 2024. <a href="https://www.nea.org/resource-library/impact-social-media-and-personal-devices-mental-health"><u>nea.org</u></a></li>
+  <li>Hatfield J, Pew Research Center, cellphone distraction in classrooms, 12 June 2024. <a href="https://www.pewresearch.org/short-reads/2024/06/12/72-percent-of-us-high-school-teachers-say-cellphone-distraction-is-a-major-problem-in-the-classroom/"><u>pewresearch.org</u></a></li>
+  <li>MediaSmarts, <em>Young Canadians in a Wireless World, Phase IV</em>. <a href="https://mediasmarts.ca/research-policy/young-canadians-wireless-world-phase-iv-life-online"><u>mediasmarts.ca</u></a></li>
+  <li>Canadian Centre for Child Protection, statistics. <a href="https://protectchildren.ca/en/resources-research/statistics/"><u>protectchildren.ca</u></a></li>
+  <li>CPP Investments, fiscal 2026 results. <a href="https://www.cppinvestments.com/newsroom/cpp-investments-net-assets-total-793-3-billion-at-2026-fiscal-year-end/"><u>cppinvestments.com</u></a></li>
+  <li>Doberstein C. Arm's-length agencies and authorities in Canada: charting the next frontier of research. <em>Canadian Public Administration</em>, published online 2 March 2026, doi:10.1111/capa.70052. <a href="https://onlinelibrary.wiley.com/doi/10.1111/capa.70052"><u>onlinelibrary.wiley.com</u></a></li>
+  <li>Prime Minister of Canada, nomination of first chairperson of the Public Appointments Commission, 21 April 2006. <a href="https://www.canada.ca/en/news/archive/2006/04/prime-minister-nominates-first-chairperson-public-appointments-commission.html"><u>canada.ca</u></a></li>
+  <li>Public Appointments Commission Secretariat, departmental performance report 2009-10. <a href="https://publications.gc.ca/collections/collection_2010/sct-tbs/BT31-4-65-2010-2-eng.pdf"><u>publications.gc.ca</u></a></li>
+  <li>Weston G, Costly federal appointments office has nothing much to do. CBC News, 27 January 2012. <a href="https://www.cbc.ca/news/politics/costly-federal-appointments-office-has-nothing-much-to-do-1.1245490"><u>cbc.ca</u></a></li>
 </ul>
-<p style="font-size:.9375rem;color:var(--slate)">Commentary</p>
-<ul class="plain" style="font-size:.9375rem">
-<li>Geist M, various posts on Bills C-34 and C-36, June 2026. <a href="https://www.michaelgeist.ca/2026/06/the-law-to-be-named-later-bill-c-34-punts-50-key-decisions-to-cabinet-and-a-digital-safety-commission-that-does-not-yet-exist/">michaelgeist.ca</a></li>
-<li>Tusikov N, Haggart B. Canada can't regulate Big Tech by trusting Big Tech. <i>Policy Options</i>, 30 July 2026. <a href="https://policyoptions.irpp.org/2026/07/bill-c34-big-tech/">policyoptions.irpp.org</a></li>
-<li>Canadian Civil Liberties Association, submissions on Bill C-34.</li>
+<p>Commentary</p>
+<ul>
+  <li>Geist M, various posts on Bills C-34 and C-36, June 2026. <a href="https://www.michaelgeist.ca/2026/06/the-law-to-be-named-later-bill-c-34-punts-50-key-decisions-to-cabinet-and-a-digital-safety-commission-that-does-not-yet-exist/"><u>michaelgeist.ca</u></a></li>
+  <li>Tusikov N, Haggart B. Canada can't regulate Big Tech by trusting Big Tech. <em>Policy Options</em>, 30 July 2026. <a href="https://policyoptions.irpp.org/2026/07/bill-c34-big-tech/"><u>policyoptions.irpp.org</u></a></li>
+  <li>Canadian Civil Liberties Association, <em>CCLA warns against risks to freedom of expression and privacy posed by Bill C-34</em>. <a href="https://ccla.org/press-release/ccla-warns-against-risks-to-freedom-of-expression-and-privacy-posed-by-bill-c-34-the-safe-social-media-act/"><u>ccla.org</u></a></li>
 </ul>
 </section>
 <footer>
-<p>RiverRidge analysis is intended to inform and support dialogue on public policy issues of importance. They are meant to be scrutinized, challenged, and strengthened, because that is how policy gets better.</p>
-
-<p class="sig">RiverRidge Policy &amp; Risk Intelligence provides policy and regulatory analysis to firms that hold client engagements and need an expert layer they do not staff internally. Jeremy R. Depow is the Principal. <a href="https://riverridgeintelligence.ca">riverridgeintelligence.ca</a></p>
+  <p>RiverRidge briefs are intended to inform and support dialogue on public policy issues of importance. They are meant to be scrutinized, challenged, and strengthened, because that is how policy gets better.</p>
+  <p>RiverRidge Policy &amp; Risk Intelligence provides policy and regulatory analysis. Jeremy Depow is the Principal. <a href="https://riverridgeintelligence.ca"><u>riverridgeintelligence.ca</u></a></p>
 </footer>
-
 </div>
-
-
 </body>
 </html>
