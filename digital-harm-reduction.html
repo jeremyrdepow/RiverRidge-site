@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Digital Harm Reduction for Children · RiverRidge Policy &amp; Risk Intelligence</title>
 <meta name="description" content="Canada's Bill C-34, the Safe Social Media Act, and Bill C-36, the Protecting Privacy and Consumer Data Act, are interlocked. Three central obligations are written but not yet operative. A policy paper on what the bills do, where they stop short, and what committee can still fix.">
-<meta name="author" content="Jeremy R. Depow, RiverRidge Policy &amp; Risk Intelligence">
+<meta name="author" content="Jeremy Depow, RiverRidge Policy &amp; Risk Intelligence">
 <link rel="canonical" href="https://riverridgeintelligence.ca/digital-harm-reduction.html">
 <link rel="alternate" hreflang="en" href="https://riverridgeintelligence.ca/digital-harm-reduction.html">
 <link rel="alternate" hreflang="fr" href="https://riverridgeintelligence.ca/digital-harm-reduction-fr.html">
@@ -284,6 +284,25 @@ p.exhaustive{font-family:Inter,system-ui,sans-serif;font-size:.875rem;color:var(
 footer{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1.4rem}
 footer p{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--slate);line-height:1.65;max-width:46rem}
 #sources li{margin-bottom:.4rem;font-size:.9rem;line-height:1.55}
+
+/* ---------- reading measure: centred column, graphics break out ---------- */
+.wrap{max-width:43rem!important;margin:0 auto!important;padding:0 1.5rem!important}
+p,ul,ol,.rec,.exhaustive,.inst,blockquote{max-width:none!important}
+h1{max-width:none}
+.standfirst{max-width:none!important}
+.ledger,.rec-table,.track,.harms,aside.box{
+  width:min(64rem,92vw);position:relative;left:50%;transform:translateX(-50%)}
+@media(max-width:1100px){
+  .ledger,.rec-table,.track,.harms,aside.box{width:100%;left:auto;transform:none}
+}
+@media(max-width:700px){.wrap{padding:0 1.15rem!important}}
+
+.dl{display:inline-flex;align-items:center;gap:.5rem;margin:1.4rem 0 .2rem;
+  font-family:Inter,system-ui,sans-serif;font-size:.76rem;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--river);text-decoration:none;
+  border:1px solid var(--river-deep);padding:.58rem 1.05rem;border-radius:2px;transition:all .25s}
+.dl:hover{background:var(--river-deep);color:#0a0f1a}
+.dl svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 </style>
 <script type="application/ld+json">
 {
@@ -305,7 +324,7 @@ footer p{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--s
     {
       "@type": "Person",
       "@id": "https://riverridgeintelligence.ca/#jeremydepow",
-      "name": "Jeremy R. Depow",
+      "name": "Jeremy Depow",
       "alternateName": "Jeremy Depow",
       "jobTitle": "Principal",
       "worksFor": {
@@ -354,8 +373,13 @@ footer p{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--s
   <p class="kicker" style="margin-bottom:.5rem">Children, social media and AI &middot; September 2026</p>
   <h1>Digital Harm Reduction for Children</h1>
   <p class="standfirst">How the federal government is tackling the harms of social media and AI chatbots.</p>
-  <p class="byline">Jeremy R. Depow &middot; September 2026 &middot; On Bill C-34, the Safe Social Media Act, and Bill C-36, the Protecting Privacy and Consumer Data Act</p>
+  <p class="byline">Jeremy Depow &middot; September 2026 &middot; On Bill C-34, the Safe Social Media Act, and Bill C-36, the Protecting Privacy and Consumer Data Act</p>
 </header>
+
+<p><a class="dl" href="digital-harm-reduction.pdf" download>
+  <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+  Download PDF
+</a></p>
 
 <div class="ledger">
   <div class="ledger-head">
@@ -511,7 +535,7 @@ footer p{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--s
 <p>Section 21 states that an operator must integrate into every regulated service the design features respecting the protection of children set out in the regulations. Yet, while Parliament creates the obligation, the details of required design features are up to the new regulator. Nor does the Act require those regulations to exist before the duty applies.</p>
 <p>This is the third time the same pattern appears. The minimum age applies to no service, the age check has no standard, and the design duty has no design features.</p>
 <h3>Who is a child, and who is old enough</h3>
-<p>Bill C-34 defines a child as a person under eighteen years of age. Every protective duty in the Act runs to that definition: the seven categories of harmful content, the duty to protect children, the design features. Bill C-36 uses the same threshold. On the definition of childhood, the two bills agree.</p>
+<p>Bill C-34 defines a child as a person under eighteen years of age. Every protective duty in the Act runs to that definition: the seven categories of harmful content, the duty to protect children, and the design duty in section 21. Bill C-36 uses the same threshold. On the definition of childhood, the two bills agree.</p>
 <p>The minimum age for a social media account is sixteen. So the Act creates a group it treats two ways at once. A sixteen or seventeen year old is a child for every protective purpose in the statute, and old enough to hold an account. Nothing in the bill explains the gap, and nothing reconciles the two numbers.</p>
 <p>It matters because it decides what a platform has to build. An operator needs to know both whether a user may hold an account, which turns on sixteen, and whether the heightened duties owed to children apply to that account, which turns on eighteen. Those are two determinations, not one, and they have to be held at the same time. The age check that satisfies the account restriction does not by itself answer the second question, because the two provisions are asking different things.</p>
 <p>There may well be a reason. Different obligations reasonably attach at different ages, and sixteen is a recognised threshold in several contexts, including in the Act’s own definition of content that sexually victimizes a child. So Parliament may have chosen deliberately. Neither bill says so, and neither backgrounder explains it. Stating the reason would be valuable to stakeholders. An unexplained choice is easier to defend than an unexplained inconsistency, and operators building to both thresholds need to know which one governs when they conflict.</p>
@@ -536,7 +560,7 @@ footer p{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--s
 <p>What that looks like in drafted form already exists. The European Commission’s Article 28 guidelines devote a section to recommender systems, and the requirements are specific: platforms should regularly test and adapt their recommender systems, consulting minors, guardians and independent experts; they should prioritise accuracy, diversity, inclusivity and fairness when setting the objectives, parameters and evaluation strategies of those systems; they should not collect behavioural data capturing a minor’s activity off the platform; and where they do process behavioural data, it should not be so extensive as to capture all or most of what a minor does on the service. Separately, the guidelines say minors should not be exposed to persuasive design features aimed predominantly at engagement, and they name them: indefinite scrolling, autoplay, and notifications artificially timed to regain a minor’s attention.</p>
 <p>Those are the same features Canadian Heritage named. The difference is that one of them is written down as an expectation a regulator will assess, and the other is a paragraph on a departmental web page.</p>
 <p>It is worth being precise about the comparison. Article 28(1) is broadly drafted too, and the detail came from guidelines rather than from the statute. So the EU deferred as well. The difference is not deferral, it is that the European regulator has published, and Canada’s has not been created.</p>
-<p>This is not an isolated reading. The Canadian Civil Liberties Association has <a href="https://ccla.org/press-release/ccla-warns-against-risks-to-freedom-of-expression-and-privacy-posed-by-bill-c-34-the-safe-social-media-act/"><u>argued</u></a> that the bill should specify age-appropriate design requirements rather than leave them to regulation, naming privacy by default, limits on profiling and limits on endless scrolling as the sorts of requirements that would provide real protection. In Policy Options, Natasha Tusikov and Blayne Haggart went further, arguing that the duty to act responsibly is a form of corporate social responsibility that asks platforms to police themselves, and that <a href="https://policyoptions.irpp.org/2026/07/bill-c34-big-tech/"><u>rules need to address design and business models</u></a> rather than relying on operators to implement adequate measures. Their prescription and mine differ, but the diagnosis is the same, and what the word counts above add is the textual evidence for it.</p>
+<p>This is not an isolated reading. The Canadian Civil Liberties Association has <a href="https://ccla.org/press-release/ccla-warns-against-risks-to-freedom-of-expression-and-privacy-posed-by-bill-c-34-the-safe-social-media-act/"><u>argued</u></a> that the bill should specify age-appropriate design requirements rather than leave them to regulation, naming privacy by default, limits on profiling and limits on endless scrolling as the sorts of requirements that would provide real protection. In Policy Options, Natasha Tusikov and Blayne Haggart went further, arguing that the duty to act responsibly is a form of corporate social responsibility that asks platforms to police themselves, and that <a href="https://policyoptions.irpp.org/2026/07/bill-c34-big-tech/"><u>rules need to address design and business models</u></a> rather than relying on operators to implement adequate measures. Their prescription and mine differ, but the diagnosis is the same. What this analysis adds is the textual evidence: neither term appears anywhere in the bill.</p>
 <p>The Act also shows that its drafters knew how to leave room for what has not been invented yet. Section 53(e) lets the Governor in Council add any other harmful chatbot behaviour by regulation, so the chatbot duties can grow as the techniques do. The social media duties have no equivalent open category. The future-proofing was written on one side of the Act and not the other.</p>
 </section>
 <section>
@@ -583,7 +607,7 @@ footer p{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--s
 <h3>2 Say how accurate an age check has to be</h3>
 <p><em>For the Commission, by regulation under section 126(1)(c)</em></p>
 <p>The work has already been done. <a href="https://www.iso.org/standard/88143.html"><u>ISO/IEC 27566-1:2025</u></a>, the international standard on age assurance systems, contains exactly what section 27(2) leaves out.</p>
-<p>Its clause 6 is headed Performance characteristics, and clause 6.2 is headed Indicators of effectiveness. The standard requires that classification accuracy be determined, recorded and regularly reviewed for each configuration of a system, and stated in a practice statement. It says systems should measure and report a false positive rate and a false negative rate. It sets out outcome error parity, meaning that error rates should be consistent across demographic groups regardless of gender or ethnicity, and makes low error spread across demographics a requirement of an effective system. And it states that a system relying solely on self-asserted age, which includes ticking a box to say you are over a certain age, shall be considered ineffective for making an age-related eligibility decision.</p>
+<p>The standard requires that classification accuracy be determined, recorded and regularly reviewed for each configuration of a system, and stated in a practice statement. It says systems should measure and report a false positive rate and a false negative rate. It sets out outcome error parity, meaning that error rates should be consistent across demographic groups regardless of gender or ethnicity, and makes low error spread across demographics a requirement of an effective system. And it states that a system relying solely on self-asserted age, which includes ticking a box to say you are over a certain age, shall be considered ineffective for making an age-related eligibility decision.</p>
 <p>That last sentence is the click-through example above, settled in an international standard, in normative language. Parliament wrote that its measures must be effective and left effective undefined. The definition already exists.</p>
 <p>Whether to adopt it is a decision for the Commission under section 126(1)(c), and the questions worth putting are these. Should conformity with the standard be required, or something less? Should independent testing against the metrics it names be a condition? Should the error rates be required to hold across demographic groups? Should there be an accessible fallback for people the technology fails? And should the obligation commence before conformity assessment is available in Canada, given that a duty to be effective is difficult to enforce without a way to test it?</p>
 <h3>3 Keep an independent privacy check on age verification</h3>
@@ -596,7 +620,7 @@ footer p{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--s
 <h3>4 Decide now how we will know whether any of this worked</h3>
 <p><em>For the Commission and the Minister, under sections 126(1)(b), 128 and 129</em></p>
 <p>There is a requirement to review the minimum age within three years, in section 129, but nothing says what that review would measure. It just says it will be a review. Three years from now, someone will stand up and say the rule is working or that it is not, and we do not have anything that would tell us which of them is right. Naming the indicators before the clock starts is one way to avoid a Commission defining its own success after the fact.</p>
-<p>There is a cheaper version of this that the Act has already half built. Section 42 requires every operator to describe, in a public safety plan, the indicators it uses to judge whether its own measures work, and every operator chooses its own. If the Commission specified a common set, the plans would become comparable across companies and across years, and the review would have something to read. That would be a regulation rather than an amendment, which makes it a cheaper option than most on this list.</p>
+<p>There is a simpler version of this that the Act has already half built. Section 42 requires every operator to describe, in a public safety plan, the indicators it uses to judge whether its own measures work, and every operator chooses its own. If the Commission specified a common set, the plans would become comparable across companies and across years, and the review would have something to read. That would be a regulation rather than an amendment, which places it within the Commission's own authority rather than requiring Parliament to act.</p>
 <h3>5 Provide clarity over the Commission's powers and governance</h3>
 <p><em>For committee, on the Digital Safety Commission of Canada Act</em></p>
 <p>This sits alongside the first consideration rather than against it. Both concern the same question: how much of the substance is settled by Parliament and how much is left to a regulator to fill in later. Reasonable people answer that differently, and where the line falls is exactly the sort of question committee exists to work out.</p>
@@ -607,7 +631,7 @@ footer p{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--s
 <p>The gap is not a matter of opinion. Carey Doberstein of the University of British Columbia <a href="https://onlinelibrary.wiley.com/doi/10.1111/capa.70052"><u>argued in Canadian Public Administration</u></a> in 2026 that Canadian scholarship on arm’s length agencies remains largely absent from the international literature on agencification, and that the field has tended to examine these bodies after a scandal rather than study how they should be designed in the first place. He identifies three unresolved problems: how to tell whether such a body is performing, who is accountable when something goes wrong in an organization deliberately separated from ministers, and how to keep a body independent when government controls the appointments.</p>
 <p>All three land on the Digital Safety Commission. It will decide what counts as harmful, what design features are required and what an adequate age check is. Its members are appointed by the Governor in Council. Nothing in the Act says how its performance will be judged.</p>
 <p>There is a precedent worth putting in front of committee. The Federal Accountability Act of 2006 amended the Salaries Act to provide that the Governor in Council may establish a Public Appointments Commission, to set guidelines for appointments to agencies, boards, commissions and Crown corporations, approve and review the selection processes ministers propose, and report annually to the Prime Minister for tabling in both Houses. A chairperson was nominated in April 2006. The nomination did not survive committee, and the Commission was shelved.</p>
-<p>The secretariat, however, was created as a federal department by order in council, reporting directly to the Prime Minister. It continued for years. Treasury Board reporting for 2009-10 records that because the Commission was not established or operational, the secretariat’s work was completed in draft, subject to approval by a Commission that did not exist, with no permanent staffing. By 2012 the CBC reported that millions had been spent supporting a commission that had never come into being. The Commission was never established.</p>
+<p>The secretariat, however, was created as a federal department by order in council, reporting directly to the Prime Minister. It continued for years. Treasury Board reporting for 2009-10 records that because the Commission was not established or operational, the secretariat’s work was completed in draft, subject to approval by a Commission that did not exist, with no permanent staffing. By 2012 the CBC <a href="https://www.cbc.ca/news/politics/costly-federal-appointments-office-has-nothing-much-to-do-1.1137759">reported</a> that millions had been spent supporting a commission that had never come into being. The Commission was never established.</p>
 <p>That is the same pattern described earlier in this brief, twenty years before these bills. A power written as may rather than must, an institution left to a later decision that never came, and machinery funded to support a body that did not arrive. It is also a case where the design question and the appointments question were the same question: the Commission failed because its first appointment was contested, which is precisely the vulnerability Doberstein identifies.</p>
 </section>
 <section>
@@ -617,7 +641,7 @@ footer p{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--s
 <h3>Operators and stakeholders must engage now and contribute to the new Commission’s development</h3>
 <p>Almost nothing in these bills binds anyone yet. The minimum age applies only to services Cabinet specifies, the standard for an adequate age check is undefined, and the design features do not exist. The planning question is therefore not compliance but sequencing: which obligations commence before their standards are written, and what a client is expected to have built by then. The two bills also commence together, so a privacy transition and a safety transition arrive as one event rather than two.</p>
 <h3>Educators</h3>
-<p>Educators play a critical role in identifying outcomes, as they are often first on the ground to see them. Whether the sleepy eyed child still comes in and falls asleep at their desk is the kind of reality check policy makers depend on. Neither bill reaches the classroom, the household, or private messaging, which is where much of what teachers actually see takes place. What the Act does reach is the seven categories of content and, eventually, the design of the services. The gap between those two things is the space provincial policy and school practice will continue to occupy, and the federal instrument was never built to close it.</p>
+<p>Educators play a critical role in identifying outcomes, as they are often first on the ground to see them. Whether a child still comes in and falls asleep at their desk is the kind of reality check policy makers depend on. Neither bill reaches the classroom, the household, or private messaging, which is where much of what teachers actually see takes place. What the Act does reach is the seven categories of content and, eventually, the design of the services. The gap between those two things is the space provincial policy and school practice will continue to occupy, and the federal instrument was never built to close it.</p>
 </section>
 <section id="sources">
 <h2 class="sec">Sources</h2>
