@@ -285,24 +285,14 @@ footer{border-top:1px solid var(--rule);margin-top:3.5rem;padding-top:1.4rem}
 footer p{font-family:Inter,system-ui,sans-serif;font-size:.8125rem;color:var(--slate);line-height:1.65;max-width:46rem}
 #sources li{margin-bottom:.4rem;font-size:.9rem;line-height:1.55}
 
-/* ---------- reading measure: centred column, graphics break out ---------- */
-.wrap{max-width:43rem!important;margin:0 auto!important;padding:0 1.5rem!important}
-p,ul,ol,.rec,.exhaustive,.inst,blockquote{max-width:none!important}
-h1{max-width:none}
-.standfirst{max-width:none!important}
+/* ---------- single centred column: text and graphics same width ---------- */
+.wrap{max-width:50rem!important;margin:0 auto!important;padding:0 1.5rem!important}
+p,ul,ol,.rec,.exhaustive,.inst,blockquote,h1,.standfirst{max-width:none!important}
 .ledger,.rec-table,.track,.harms,aside.box{
-  width:min(64rem,92vw);position:relative;left:50%;transform:translateX(-50%)}
-@media(max-width:1100px){
-  .ledger,.rec-table,.track,.harms,aside.box{width:100%;left:auto;transform:none}
-}
+  width:100%!important;left:auto!important;transform:none!important;position:static!important}
 @media(max-width:700px){.wrap{padding:0 1.15rem!important}}
 
-.dl{display:inline-flex;align-items:center;gap:.5rem;margin:1.4rem 0 .2rem;
-  font-family:Inter,system-ui,sans-serif;font-size:.76rem;font-weight:600;letter-spacing:.06em;
-  text-transform:uppercase;color:var(--river);text-decoration:none;
-  border:1px solid var(--river-deep);padding:.58rem 1.05rem;border-radius:2px;transition:all .25s}
-.dl:hover{background:var(--river-deep);color:#0a0f1a}
-.dl svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+h2.sec,h3,h4,.ledger-head h2,.ledger-head p,footer p{max-width:none!important}
 </style>
 <script type="application/ld+json">
 {
