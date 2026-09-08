@@ -293,6 +293,26 @@ p,ul,ol,.rec,.exhaustive,.inst,blockquote,h1,.standfirst{max-width:none!importan
 @media(max-width:700px){.wrap{padding:0 1.15rem!important}}
 
 h2.sec,h3,h4,.ledger-head h2,.ledger-head p,footer p{max-width:none!important}
+
+/* --- legislative track: labels always available --- */
+.track-row .cell i,.track-row .cell em{font-style:normal}
+.track-row .cell i{display:none}
+.track-row .cell em{display:none}
+.track-row .cell.next em{display:inline}
+@media(max-width:820px){
+  .track-head{display:none!important}
+  .track-row{display:block!important;margin-bottom:1.1rem}
+  .track-row .bill{display:inline-block;margin-bottom:.45rem;padding:.28rem .6rem}
+  .track-row .cell{height:auto!important;display:flex!important;justify-content:space-between;
+    align-items:baseline;gap:.75rem;padding:.4rem .6rem;margin-bottom:.22rem;
+    font-size:.78rem!important;text-transform:none;letter-spacing:0;color:var(--ink)}
+  .track-row .cell i{display:inline;font-size:.78rem}
+  .track-row .cell em{display:inline!important;font-size:.68rem;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--slate);white-space:nowrap}
+  .track-row:nth-of-type(2) .cell.done,.track-row:nth-of-type(3) .cell.done{color:#0a0f1a}
+  .track-row:nth-of-type(2) .cell.done em,.track-row:nth-of-type(3) .cell.done em{color:rgba(10,15,26,.7)}
+  .track-row .cell.next em{color:var(--river)}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -413,8 +433,8 @@ h2.sec,h3,h4,.ledger-head h2,.ledger-head p,footer p{max-width:none!important}
 <h2 class="sec">Current legislative status</h2>
 <div class="track">
   <div class="track-head"><span></span><span>First<br>reading</span><span>Second<br>reading</span><span>Committee</span><span>Report<br>stage</span><span>Third<br>reading</span><span>Senate</span><span>Royal<br>assent</span></div>
-  <div class="track-row"><span class="bill c34">Bill C-34</span><span class="cell done"></span><span class="cell done"></span><span class="cell next">Next</span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span></div>
-  <div class="track-row"><span class="bill c36">Bill C-36</span><span class="cell done"></span><span class="cell next">Next</span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span><span class="cell"></span></div>
+  <div class="track-row"><span class="bill c34">Bill C-34</span><span class="cell done"><i>First reading</i><em>Complete</em></span><span class="cell done"><i>Second reading</i><em>Complete</em></span><span class="cell next"><i>Committee</i><em>Next</em></span><span class="cell"><i>Report stage</i><em>To come</em></span><span class="cell"><i>Third reading</i><em>To come</em></span><span class="cell"><i>Senate</i><em>To come</em></span><span class="cell"><i>Royal assent</i><em>To come</em></span></div>
+  <div class="track-row"><span class="bill c36">Bill C-36</span><span class="cell done"><i>First reading</i><em>Complete</em></span><span class="cell next"><i>Second reading</i><em>Next</em></span><span class="cell"><i>Committee</i><em>To come</em></span><span class="cell"><i>Report stage</i><em>To come</em></span><span class="cell"><i>Third reading</i><em>To come</em></span><span class="cell"><i>Senate</i><em>To come</em></span><span class="cell"><i>Royal assent</i><em>To come</em></span></div>
   <div class="track-key"><span><i class="k done"></i>Completed</span><span><i class="k next"></i>Next step</span><span><i class="k"></i>Remaining</span></div>
 </div>
 <p><em>The two bills are one step apart. C-34 goes to committee next; C-36 has second reading ahead of it first.</em></p>
