@@ -1,0 +1,801 @@
+{
+  "checkedAt": "2026-10-18T17:00:00Z",
+  "source": "LEGISinfo, Parliament of Canada",
+  "session": "45-1",
+  "seed": true,
+  "themes": [
+    {
+      "id": "online-safety",
+      "label": "Online safety and children"
+    },
+    {
+      "id": "privacy-ai",
+      "label": "Privacy, data and AI"
+    },
+    {
+      "id": "cyber",
+      "label": "Cyber security and lawful access"
+    },
+    {
+      "id": "fraud-finance",
+      "label": "Fraud and digital finance"
+    },
+    {
+      "id": "elections",
+      "label": "Elections and democracy"
+    },
+    {
+      "id": "connectivity",
+      "label": "Telecom, health data and regulation"
+    }
+  ],
+  "bills": [
+    {
+      "number": "C-34",
+      "theme": "online-safety",
+      "summary": "Digital Safety Act: under-16 social media ban, duties on AI chatbots and a new Digital Safety Commission.",
+      "shortTitle": "Safe Social Media Act",
+      "longTitle": "An Act to enact the Digital Safety Act and the Digital Safety Commission of Canada Act and to make consequential amendments to other Acts",
+      "type": "House Government Bill",
+      "isGovernmentBill": true,
+      "originatingChamber": "House of Commons",
+      "sponsor": "Hon. Marc Miller",
+      "sponsorTitle": "Minister of Canadian Identity and Culture and Minister responsible for Official Languages",
+      "status": "At second reading in the House of Commons",
+      "latestEvent": {
+        "type": "Introduction and first reading",
+        "date": "2026-06-10",
+        "chamber": "House of Commons"
+      },
+      "progress": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "royalAssent": null,
+      "statute": null,
+      "committees": [],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-34",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-34/first-reading",
+      "stale": false
+    },
+    {
+      "number": "S-209",
+      "theme": "online-safety",
+      "summary": "Age verification or estimation for commercial pornography sites.",
+      "shortTitle": "Protecting Young Persons from Exposure to Pornography Act",
+      "longTitle": "An Act to restrict young persons’ online access to pornographic material",
+      "type": "Senate Public Bill",
+      "isGovernmentBill": false,
+      "originatingChamber": "Senate",
+      "sponsor": "Hon. Julie Miville-Dechêne",
+      "sponsorTitle": "Senator",
+      "status": "At second reading in the House of Commons",
+      "latestEvent": {
+        "type": "Debate at second reading",
+        "date": "2026-09-24",
+        "chamber": "House of Commons"
+      },
+      "progress": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "royalAssent": null,
+      "statute": null,
+      "committees": [],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-209",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-209/third-reading",
+      "stale": false
+    },
+    {
+      "number": "C-216",
+      "theme": "online-safety",
+      "summary": "Duty of care for platforms toward minors (Conservative private member's bill).",
+      "shortTitle": "Promotion of Safety in the Digital Age Act",
+      "longTitle": "An Act to enact the Protection of Minors in the Digital Age Act and to amend two Acts",
+      "type": "Private Member’s Bill",
+      "isGovernmentBill": false,
+      "originatingChamber": "House of Commons",
+      "sponsor": "Hon. Michelle Rempel Garner",
+      "sponsorTitle": "Calgary Nose Hill",
+      "status": "Outside the Order of Precedence",
+      "latestEvent": {
+        "type": "Introduction and first reading",
+        "date": "2025-06-19",
+        "chamber": "House of Commons"
+      },
+      "progress": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "royalAssent": null,
+      "statute": null,
+      "committees": [],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-216",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-216/first-reading",
+      "stale": false
+    },
+    {
+      "number": "C-277",
+      "theme": "online-safety",
+      "summary": "Rules and transparency measures for online deepfakes (Liberal private member's bill).",
+      "shortTitle": "Regulating the Online Use of Deepfakes Act",
+      "longTitle": "An Act to provide for the regulation of the online use of deepfakes and for related transparency measures",
+      "type": "Private Member’s Bill",
+      "isGovernmentBill": false,
+      "originatingChamber": "House of Commons",
+      "sponsor": "Michael Coteau",
+      "sponsorTitle": "Scarborough—Woburn",
+      "status": "Outside the Order of Precedence",
+      "latestEvent": {
+        "type": "Introduction and first reading",
+        "date": "2026-05-06",
+        "chamber": "House of Commons"
+      },
+      "progress": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "royalAssent": null,
+      "statute": null,
+      "committees": [],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-277",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-277/first-reading",
+      "stale": false
+    },
+    {
+      "number": "S-240",
+      "theme": "online-safety",
+      "summary": "Mandatory minimum sentences for child sexual abuse material offences, using the notwithstanding clause.",
+      "shortTitle": "",
+      "longTitle": "An Act to amend the Criminal Code (declaration of exception pursuant to subsection 33(1) of the Charter for mandatory minimum sentences for child sexual abuse and exploitation material offences)",
+      "type": "Senate Public Bill",
+      "isGovernmentBill": false,
+      "originatingChamber": "Senate",
+      "sponsor": "Hon. Leo Housakos",
+      "sponsorTitle": "Senator",
+      "status": "At second reading in the Senate",
+      "latestEvent": {
+        "type": "Introduction and first reading",
+        "date": "2025-11-05",
+        "chamber": "Senate"
+      },
+      "progress": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "royalAssent": null,
+      "statute": null,
+      "committees": [],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-240",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-240/first-reading",
+      "stale": false
+    },
+    {
+      "number": "C-16",
+      "theme": "online-safety",
+      "summary": "Protecting Victims Act: criminal law package including sexual deepfakes.",
+      "shortTitle": "Protecting Victims Act",
+      "longTitle": "",
+      "type": "House Government Bill",
+      "isGovernmentBill": true,
+      "originatingChamber": "House of Commons",
+      "sponsor": "",
+      "sponsorTitle": "",
+      "status": "Royal assent received",
+      "latestEvent": {
+        "type": "Royal assent",
+        "date": "2026-06-18",
+        "chamber": "Senate"
+      },
+      "progress": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "royalAssent": "2026-06-18",
+      "statute": "S.C. 2026, c. 19",
+      "committees": [],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-16",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-16/royal-assent",
+      "stale": false
+    },
+    {
+      "number": "C-9",
+      "theme": "online-safety",
+      "summary": "Combatting Hate Act: hate crime offence and hate symbol offence.",
+      "shortTitle": "Combatting Hate Act",
+      "longTitle": "An Act to amend the Criminal Code (hate propaganda, hate crime and access to religious or cultural places)",
+      "type": "House Government Bill",
+      "isGovernmentBill": true,
+      "originatingChamber": "House of Commons",
+      "sponsor": "Hon. Sean Fraser",
+      "sponsorTitle": "Minister of Justice and Attorney General of Canada",
+      "status": "Royal assent received",
+      "latestEvent": {
+        "type": "Royal assent",
+        "date": "2026-06-18",
+        "chamber": "Senate"
+      },
+      "progress": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "royalAssent": "2026-06-18",
+      "statute": null,
+      "committees": [],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-9",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-9/royal-assent",
+      "stale": false
+    },
+    {
+      "number": "C-36",
+      "theme": "privacy-ai",
+      "summary": "Replaces PIPEDA Part 1 with the Protecting Privacy and Consumer Data Act, enforced by the same commission as C-34.",
+      "shortTitle": "",
+      "longTitle": "An Act to enact the Protecting Privacy and Consumer Data Act, to amend the Personal Information Protection and Electronic Documents Act and to make amendments to other Acts",
+      "type": "House Government Bill",
+      "isGovernmentBill": true,
+      "originatingChamber": "House of Commons",
+      "sponsor": "Hon. Evan Solomon",
+      "sponsorTitle": "Minister of Artificial Intelligence and Digital Innovation",
+      "status": "At second reading in the House of Commons",
+      "latestEvent": {
+        "type": "Introduction and first reading",
+        "date": "2026-06-15",
+        "chamber": "House of Commons"
+      },
+      "progress": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "royalAssent": null,
+      "statute": null,
+      "committees": [],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-36",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-36/first-reading",
+      "stale": false
+    },
+    {
+      "number": "S-5",
+      "theme": "connectivity",
+      "summary": "Health IT interoperability and a ban on data blocking by health IT vendors.",
+      "shortTitle": "Connected Care for Canadians Act",
+      "longTitle": "An Act respecting the interoperability of health information technology and to prohibit data blocking by health information technology vendors",
+      "type": "Senate Government Bill",
+      "isGovernmentBill": true,
+      "originatingChamber": "Senate",
+      "sponsor": "Hon. Pierre Moreau",
+      "sponsorTitle": "Senator",
+      "status": "At second reading in the House of Commons",
+      "latestEvent": {
+        "type": "First reading",
+        "date": "2026-05-28",
+        "chamber": "House of Commons"
+      },
+      "progress": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "royalAssent": null,
+      "statute": null,
+      "committees": [
+        {
+          "name": "Standing Senate Committee on Social Affairs, Science and Technology",
+          "acronym": "SOCI",
+          "chamber": "Senate",
+          "role": "study",
+          "url": "https://sencanada.ca/en/committees/SOCI/45-1",
+          "current": false
+        }
+      ],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-5",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-5/third-reading",
+      "stale": false
+    },
+    {
+      "number": "C-8",
+      "theme": "cyber",
+      "summary": "Telecom security powers and the Critical Cyber Systems Protection Act for federally regulated critical infrastructure.",
+      "shortTitle": "",
+      "longTitle": "An Act respecting cyber security, amending the Telecommunications Act and making consequential amendments to other Acts",
+      "type": "House Government Bill",
+      "isGovernmentBill": true,
+      "originatingChamber": "House of Commons",
+      "sponsor": "Hon. Gary Anandasangaree",
+      "sponsorTitle": "Minister of Public Safety",
+      "status": "Royal assent received",
+      "latestEvent": {
+        "type": "Royal assent",
+        "date": "2026-06-15",
+        "chamber": "Senate"
+      },
+      "progress": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "royalAssent": "2026-06-15",
+      "statute": "S.C. 2026, c. 9",
+      "committees": [],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-8",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-8/royal-assent",
+      "stale": false
+    },
+    {
+      "number": "C-22",
+      "theme": "cyber",
+      "summary": "Lawful Access Act, 2026: new police and CSIS access powers and duties on electronic service providers.",
+      "shortTitle": "Lawful Access Act, 2026",
+      "longTitle": "An Act respecting lawful access",
+      "type": "House Government Bill",
+      "isGovernmentBill": true,
+      "originatingChamber": "House of Commons",
+      "sponsor": "Hon. Gary Anandasangaree",
+      "sponsorTitle": "Minister of Public Safety",
+      "status": "At second reading in the Senate",
+      "latestEvent": {
+        "type": "Debate at second reading",
+        "date": "2026-10-08",
+        "chamber": "Senate"
+      },
+      "progress": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "royalAssent": null,
+      "statute": null,
+      "committees": [
+        {
+          "name": "Standing Committee on Public Safety and National Security",
+          "acronym": "SECU",
+          "chamber": "House of Commons",
+          "role": "study",
+          "url": "https://www.ourcommons.ca/Committees/en/SECU?parl=45&session=1",
+          "current": false
+        }
+      ],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-22",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-22/third-reading",
+      "stale": false
+    },
+    {
+      "number": "C-2",
+      "theme": "cyber",
+      "summary": "Strong Borders Act: border, policing and information-sharing measures.",
+      "shortTitle": "Strong Borders Act",
+      "longTitle": "An Act respecting certain measures relating to the security of the border between Canada and the United States and respecting other related security measures",
+      "type": "House Government Bill",
+      "isGovernmentBill": true,
+      "originatingChamber": "House of Commons",
+      "sponsor": "Hon. Gary Anandasangaree",
+      "sponsorTitle": "Minister of Public Safety",
+      "status": "At second reading in the House of Commons",
+      "latestEvent": null,
+      "progress": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "royalAssent": null,
+      "statute": null,
+      "committees": [],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-2",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-2/first-reading",
+      "stale": false
+    },
+    {
+      "number": "C-288",
+      "theme": "fraud-finance",
+      "summary": "Protection Against Online Fraud Act: duties on platforms to remove fraudulent content (Conservative private member's bill).",
+      "shortTitle": "Protection Against Online Fraud Act",
+      "longTitle": "An Act to enact the Protection Against Online Fraud Act and to amend the Criminal Code",
+      "type": "Private Member’s Bill",
+      "isGovernmentBill": false,
+      "originatingChamber": "House of Commons",
+      "sponsor": "Melissa Lantsman",
+      "sponsorTitle": "Thornhill",
+      "status": "Outside the Order of Precedence",
+      "latestEvent": {
+        "type": "Introduction and first reading",
+        "date": "2026-06-17",
+        "chamber": "House of Commons"
+      },
+      "progress": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "royalAssent": null,
+      "statute": null,
+      "committees": [],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-288",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-288/first-reading",
+      "stale": false
+    },
+    {
+      "number": "C-29",
+      "theme": "fraud-finance",
+      "summary": "Creates a federal Financial Crimes Agency.",
+      "shortTitle": "Financial Crimes Agency Act",
+      "longTitle": "An Act to establish the Financial Crimes Agency and to make consequential amendments to certain Acts and regulations",
+      "type": "House Government Bill",
+      "isGovernmentBill": true,
+      "originatingChamber": "House of Commons",
+      "sponsor": "Hon. François-Philippe Champagne",
+      "sponsorTitle": "Minister of Finance and National Revenue",
+      "status": "At consideration in committee in the House of Commons",
+      "latestEvent": {
+        "type": "Second reading and referral to committee",
+        "date": "2026-06-18",
+        "chamber": "House of Commons"
+      },
+      "progress": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "royalAssent": null,
+      "statute": null,
+      "committees": [
+        {
+          "name": "Standing Committee on Justice and Human Rights",
+          "acronym": "JUST",
+          "chamber": "House of Commons",
+          "role": "study",
+          "url": "https://www.ourcommons.ca/Committees/en/JUST?parl=45&session=1",
+          "current": true
+        }
+      ],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-29",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-29/first-reading",
+      "stale": false
+    },
+    {
+      "number": "C-15",
+      "theme": "fraud-finance",
+      "summary": "Budget implementation: Stablecoin Act, Consumer-Driven Banking Act, bank fraud duties and repeal of the digital services tax.",
+      "shortTitle": "Budget 2025 Implementation Act, No. 1",
+      "longTitle": "",
+      "type": "House Government Bill",
+      "isGovernmentBill": true,
+      "originatingChamber": "House of Commons",
+      "sponsor": "",
+      "sponsorTitle": "",
+      "status": "Royal assent received",
+      "latestEvent": {
+        "type": "Royal assent",
+        "date": "2026-03-26",
+        "chamber": "Senate"
+      },
+      "progress": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "royalAssent": "2026-03-26",
+      "statute": "S.C. 2026, c. 3",
+      "committees": [],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-15",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-15/royal-assent",
+      "stale": false
+    },
+    {
+      "number": "C-31",
+      "theme": "fraud-finance",
+      "summary": "Budget implementation: includes crypto-asset reporting rules from 2027.",
+      "shortTitle": "Budget 2025 Implementation Act, No. 2",
+      "longTitle": "A second Act to implement certain provisions of the budget tabled in Parliament on November 4, 2025",
+      "type": "House Government Bill",
+      "isGovernmentBill": true,
+      "originatingChamber": "House of Commons",
+      "sponsor": "Hon. François-Philippe Champagne",
+      "sponsorTitle": "Minister of Finance and National Revenue",
+      "status": "At consideration in committee in the House of Commons",
+      "latestEvent": {
+        "type": "Pre-study of House bill",
+        "date": "2026-06-10",
+        "chamber": "Senate"
+      },
+      "progress": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "royalAssent": null,
+      "statute": null,
+      "committees": [
+        {
+          "name": "Standing Committee on Finance",
+          "acronym": "FINA",
+          "chamber": "House of Commons",
+          "role": "study",
+          "url": "https://www.ourcommons.ca/Committees/en/FINA?parl=45&session=1",
+          "current": true
+        },
+        {
+          "name": "Standing Senate Committee on National Finance",
+          "acronym": "NFFN",
+          "chamber": "Senate",
+          "role": "pre-study",
+          "url": "https://sencanada.ca/en/committees/NFFN/45-1",
+          "current": true
+        }
+      ],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-31",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-31/first-reading",
+      "stale": false
+    },
+    {
+      "number": "S-211",
+      "theme": "fraud-finance",
+      "summary": "National framework on sports betting advertising.",
+      "shortTitle": "National Framework on Sports Betting Advertising Act",
+      "longTitle": "An Act respecting a national framework on sports betting advertising",
+      "type": "Senate Public Bill",
+      "isGovernmentBill": false,
+      "originatingChamber": "Senate",
+      "sponsor": "Hon. Marty Deacon",
+      "sponsorTitle": "Senator",
+      "status": "At consideration in committee in the House of Commons",
+      "latestEvent": {
+        "type": "Second reading and referral to committee",
+        "date": "2026-04-22",
+        "chamber": "House of Commons"
+      },
+      "progress": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "royalAssent": null,
+      "statute": null,
+      "committees": [],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-211",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-211/third-reading",
+      "stale": false
+    },
+    {
+      "number": "C-25",
+      "theme": "elections",
+      "summary": "Strong and Free Elections Act: election deepfakes, ban on crypto and anonymous donations, party privacy policies.",
+      "shortTitle": "Strong and Free Elections Act",
+      "longTitle": "An Act to amend the Canada Elections Act and to enact An Act to change the names of certain electoral districts, 2026",
+      "type": "House Government Bill",
+      "isGovernmentBill": true,
+      "originatingChamber": "House of Commons",
+      "sponsor": "Hon. Steven MacKinnon",
+      "sponsorTitle": "Leader of the Government in the House of Commons",
+      "status": "Royal assent received",
+      "latestEvent": {
+        "type": "Royal assent",
+        "date": "2026-06-18",
+        "chamber": "Senate"
+      },
+      "progress": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "royalAssent": "2026-06-18",
+      "statute": null,
+      "committees": [],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-25",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-25/royal-assent",
+      "stale": false
+    },
+    {
+      "number": "C-4",
+      "theme": "elections",
+      "summary": "Affordability bill whose Part 4 sets the privacy regime for federal political parties.",
+      "shortTitle": "Making Life More Affordable for Canadians Act",
+      "longTitle": "An Act respecting certain affordability measures for Canadians and another measure",
+      "type": "House Government Bill",
+      "isGovernmentBill": true,
+      "originatingChamber": "House of Commons",
+      "sponsor": "Hon. François-Philippe Champagne",
+      "sponsorTitle": "Minister of Finance and National Revenue",
+      "status": "Royal assent received",
+      "latestEvent": {
+        "type": "Royal assent",
+        "date": "2026-03-12",
+        "chamber": "Senate"
+      },
+      "progress": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "royalAssent": "2026-03-12",
+      "statute": "S.C. 2026, c. 2",
+      "committees": [
+        {
+          "name": "Standing Committee on Finance",
+          "acronym": "FINA",
+          "chamber": "House of Commons",
+          "role": "study",
+          "url": "https://www.ourcommons.ca/Committees/en/FINA?parl=45&session=1",
+          "current": false
+        },
+        {
+          "name": "Standing Senate Committee on National Finance",
+          "acronym": "NFFN",
+          "chamber": "Senate",
+          "role": "study",
+          "url": "https://sencanada.ca/en/committees/NFFN/45-1",
+          "current": false
+        },
+        {
+          "name": "Standing Senate Committee on Legal and Constitutional Affairs",
+          "acronym": "LCJC",
+          "chamber": "Senate",
+          "role": "study",
+          "url": "https://sencanada.ca/en/committees/LCJC/45-1",
+          "current": false
+        }
+      ],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-4",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-4/royal-assent",
+      "stale": false
+    },
+    {
+      "number": "C-268",
+      "theme": "connectivity",
+      "summary": "Requires verified mobile coverage data and an updated national spectrum framework that prioritizes rural areas.",
+      "shortTitle": "Spectrum Policy Framework for Canada Act",
+      "longTitle": "An Act respecting the Spectrum Policy Framework for Canada",
+      "type": "Private Member’s Bill",
+      "isGovernmentBill": false,
+      "originatingChamber": "House of Commons",
+      "sponsor": "Marianne Dandurand",
+      "sponsorTitle": "Compton—Stanstead",
+      "status": "At report stage in the House of Commons",
+      "latestEvent": {
+        "type": "Committee report presented",
+        "date": "2026-10-07",
+        "chamber": "House of Commons"
+      },
+      "progress": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "royalAssent": null,
+      "statute": null,
+      "committees": [
+        {
+          "name": "Standing Committee on Industry and Technology",
+          "acronym": "INDU",
+          "chamber": "House of Commons",
+          "role": "study",
+          "url": "https://www.ourcommons.ca/Committees/en/INDU?parl=45&session=1",
+          "current": false
+        }
+      ],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-268",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-268/first-reading",
+      "stale": false
+    },
+    {
+      "number": "S-7",
+      "theme": "connectivity",
+      "summary": "Red tape bill amending 31 statutes, including digital publication of regulations and spectrum access.",
+      "shortTitle": "Cutting Red Tape for All Canadians Act",
+      "longTitle": "An Act to modernize certain regulatory and administrative processes",
+      "type": "Senate Government Bill",
+      "isGovernmentBill": true,
+      "originatingChamber": "Senate",
+      "sponsor": "Hon. Pierre Moreau",
+      "sponsorTitle": "Senator",
+      "status": "At second reading in the Senate",
+      "latestEvent": {
+        "type": "Introduction and first reading",
+        "date": "2026-10-07",
+        "chamber": "Senate"
+      },
+      "progress": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "royalAssent": null,
+      "statute": null,
+      "committees": [],
+      "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-7",
+      "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-7/first-reading",
+      "stale": false
+    }
+  ]
+}
