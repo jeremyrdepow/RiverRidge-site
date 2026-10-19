@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Digital Policy Bill Tracker</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Federal bills on online safety, privacy, cyber security, AI and digital finance, with their stage in Parliament. Updated daily from LEGISinfo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single reading column; summary strip, filters, then bills grouped by policy area, each row carrying its own stage track. */
+:root {
+  --bg: #f6f7f5;
+  --surface: #ffffff;
+  --ink: #1b2a2e;
+  --muted: #5c6b6e;
+  --line: #dde3e0;
+  --accent: #1e6a64;        /* river teal: links, focus */
+  --house: #2f6b46;         /* Commons green */
+  --senate: #9e3434;        /* Senate red */
+  --law: #8a6a1f;           /* royal assent gold */
+  --idle: #c9d1ce;
+  --chip: #eef2f0;
+  --font-display: "Spectral", Georgia, "Times New Roman", serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --step--1: 0.8125rem;
+  --step-0: 0.9375rem;
+  --step-1: 1.125rem;
+  --step-2: 1.5rem;
+  --step-3: 2.125rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121a1c; --surface: #182225; --ink: #e4ebe8; --muted: #9aaaa7; --line: #2b383b;
+    --accent: #6cc3b9; --house: #6fb88a; --senate: #e07a7a; --law: #d6b25e; --idle: #3a4a4d; --chip: #1f2b2e;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121a1c; --surface: #182225; --ink: #e4ebe8; --muted: #9aaaa7; --line: #2b383b;
+  --accent: #6cc3b9; --house: #6fb88a; --senate: #e07a7a; --law: #d6b25e; --idle: #3a4a4d; --chip: #1f2b2e;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 60rem; margin: 0 auto; padding-block: 2.5rem 4rem; display: grid; gap: 2rem; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+
+header { display: grid; gap: 0.75rem; }
+.eyebrow { font-family: var(--font-data); font-size: var(--step--1); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--font-display); font-weight: 600; font-size: var(--step-3); line-height: 1.15; margin: 0; text-wrap: balance; }
+.lede { margin: 0; max-width: 62ch; color: var(--muted); }
+.checked { font-family: var(--font-data); font-size: var(--step--1); color: var(--muted); }
+.titlerow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; }
+.beta { font-family: var(--font-data); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--law); border: 1px solid var(--law); border-radius: 4px; padding: 0.1rem 0.45rem; }
+.betanote { margin: 0; max-width: 62ch; font-size: var(--step--1); color: var(--ink); background: var(--chip); border-left: 3px solid var(--law); padding: 0.5rem 0.75rem; }
+
+.summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+.summary button { all: unset; cursor: pointer; padding: 0.9rem 1rem; display: grid; gap: 0.15rem; border-left: 1px solid var(--line); }
+.summary button:first-child { border-left: 0; }
+.summary button[aria-pressed="true"] { background: var(--chip); box-shadow: inset 0 -3px 0 var(--accent); }
+.summary .n { font-family: var(--font-display); font-size: var(--step-2); font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.summary .l { font-size: var(--step--1); color: var(--muted); }
+@media (max-width: 560px) {
+  .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .summary button:nth-child(3) { border-left: 0; }
+  .summary button:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+
+.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.filters .label { font-size: var(--step--1); color: var(--muted); margin-right: 0.25rem; }
+.chipbtn { font: inherit; font-size: var(--step--1); border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 0.3rem 0.75rem; cursor: pointer; }
+.chipbtn[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+.key { display: flex; flex-wrap: wrap; gap: 1rem; font-size: var(--step--1); color: var(--muted); }
+.key span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.key i { width: 0.7rem; height: 0.7rem; border-radius: 50%; display: inline-block; }
+
+section.theme { display: grid; gap: 0.25rem; }
+section.theme h2 { font-family: var(--font-display); font-weight: 600; font-size: var(--step-1); margin: 0 0 0.25rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--ink); }
+.bill { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 15rem); gap: 0.5rem 1.5rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
+.bill > div { min-width: 0; }
+@media (max-width: 680px) { .bill { grid-template-columns: minmax(0, 1fr); } }
+.bill h3 { margin: 0; font-size: var(--step-1); font-weight: 600; line-height: 1.3; }
+.num { font-family: var(--font-data); font-weight: 500; margin-right: 0.5rem; }
+.meta { font-size: var(--step--1); color: var(--muted); margin: 0.15rem 0 0.4rem; }
+.desc { margin: 0 0 0.5rem; max-width: 62ch; }
+.links { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; font-size: var(--step--1); }
+.cmtes { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.1rem 0 0.5rem; }
+.cmte { font-size: var(--step--1); background: var(--chip); border: 1px solid var(--line); border-radius: 4px; padding: 0.1rem 0.5rem; text-decoration: none; color: var(--ink); }
+.cmte b { font-family: var(--font-data); font-weight: 500; }
+.cmte.now { border-color: currentColor; }
+.cmte.now.house { color: var(--house); }
+.cmte.now.senate { color: var(--senate); }
+.cmte .tag { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; margin-left: 0.3rem; }
+
+.status { display: grid; gap: 0.4rem; align-content: start; }
+.pill { justify-self: start; font-size: var(--step--1); font-weight: 500; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid currentColor; }
+.pill.house { color: var(--house); }
+.pill.senate { color: var(--senate); }
+.pill.law { color: var(--law); }
+.pill.waiting { color: var(--muted); }
+.track { display: grid; grid-template-columns: repeat(3, 1fr) 0.4rem repeat(3, 1fr) 0.4rem 1fr; gap: 3px; align-items: end; }
+.track .seg { height: 6px; border-radius: 2px; background: var(--idle); }
+.track .seg.on.house { background: var(--house); }
+.track .seg.on.senate { background: var(--senate); }
+.track .seg.on.law { background: var(--law); }
+.track .gap { height: 6px; }
+.tracklabels { display: grid; grid-template-columns: 3fr 0.4rem 3fr 0.4rem 1fr; gap: 3px; font-family: var(--font-data); font-size: 0.68rem; color: var(--muted); letter-spacing: 0.03em; }
+.tracklabels span:nth-child(5) { text-align: right; }
+.latest { font-size: var(--step--1); color: var(--muted); font-variant-numeric: tabular-nums; }
+.latest b { color: var(--ink); font-weight: 500; }
+.stale { font-size: var(--step--1); color: var(--senate); }
+
+.empty { color: var(--muted); padding: 1rem 0; }
+footer { display: grid; gap: 0.75rem; border-top: 1px solid var(--line); padding-top: 1.25rem; font-size: var(--step--1); color: var(--muted); }
+footer p { margin: 0; max-width: 70ch; }
+footer .contact { color: var(--ink); font-size: var(--step-0); }
+.addr { font-family: var(--font-data); user-select: all; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">RiverRidge Policy &amp; Risk Intelligence · 45th Parliament, 1st session</div>
+    <div class="titlerow"><h1>Digital policy bills before Parliament</h1><span class="beta">Beta</span></div>
+    <p class="lede">Federal bills on online safety, privacy, cyber security, AI and digital finance, and where each one stands. Status, committees and dates refresh every morning from LEGISinfo, the Parliament of Canada's bill tracker.</p>
+    <p class="betanote">This tracker is in beta. Check any status that matters to you against LEGISinfo, and send corrections or bills you want added to <span class="addr">contact@riverridgeintelligence.ca</span>.</p>
+    <div class="checked" id="checked">Loading status…</div>
+  </header>
+
+  <div class="summary" id="summary" role="group" aria-label="Filter by stage"></div>
+
+  <div class="filters" id="filters" role="group" aria-label="Filter by policy area"></div>
+
+  <div class="key" aria-hidden="true">
+    <span><i style="background:var(--house)"></i>House of Commons stage</span>
+    <span><i style="background:var(--senate)"></i>Senate stage</span>
+    <span><i style="background:var(--law)"></i>Royal assent</span>
+    <span>1R 2R 3R = first, second, third reading</span>
+  </div>
+
+  <main id="list" aria-live="polite"></main>
+
+  <footer>
+    <p class="contact">Need to know what a bill means for your organization, or when it is likely to move? Contact RiverRidge at <span class="addr">contact@riverridgeintelligence.ca</span>.</p>
+    <p>Source: <a href="https://www.parl.ca/legisinfo/en/overview" rel="noopener">LEGISinfo</a>, Parliament of Canada. Bill status is retrieved automatically each day; LEGISinfo is the official record. Royal assent does not mean a law is in force; many provisions take effect later by order or regulation. Bill descriptions are RiverRidge summaries.</p>
+  </footer>
+</div>
+
+<script>
+(() => {
+  const DATA_URL = "data/bills.json";
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const fmtDate = (d) => d ? new Date(d.length === 10 ? d + "T12:00:00" : d).toLocaleDateString("en-CA", { month: "short", day: "numeric", year: "numeric" }) : "";
+  const daysAgo = (d) => {
+    if (!d) return null;
+    const ms = Date.now() - new Date(d + "T12:00:00").getTime();
+    return Math.max(0, Math.round(ms / 86400000));
+  };
+
+  const STAGES = [
+    { id: "all", label: "All bills" },
+    { id: "house", label: "In the House of Commons" },
+    { id: "senate", label: "In the Senate" },
+    { id: "law", label: "Became law" },
+  ];
+  const stageOf = (b) => {
+    if (b.progress && b.progress[6]) return "law";
+    if (/Senate/.test(b.status)) return "senate";
+    return "house";
+  };
+  const pillClass = (b) => {
+    const s = stageOf(b);
+    if (s === "law") return "law";
+    if (/Outside the Order of Precedence/i.test(b.status)) return "waiting";
+    return s;
+  };
+  const statusText = (b) => {
+    if (stageOf(b) === "law") return "Law" + (b.royalAssent ? ": royal assent " + fmtDate(b.royalAssent) : "");
+    if (/Outside the Order of Precedence/i.test(b.status)) return "Awaiting a debate slot (private member's bill)";
+    return b.status;
+  };
+
+  let state = { stage: "all", theme: "all" };
+  try {
+    const saved = JSON.parse(localStorage.getItem("rr-tracker-filters") || "null");
+    if (saved) state = { ...state, ...saved };
+  } catch {}
+  const save = () => { try { localStorage.setItem("rr-tracker-filters", JSON.stringify(state)); } catch {} };
+
+  function trackHtml(b) {
+    const first = /Senate/.test(b.originatingChamber) ? "senate" : "house";
+    const second = first === "house" ? "senate" : "house";
+    const p = b.progress || [];
+    const seg = (on, cls) => `<div class="seg ${on ? "on " + cls : ""}"></div>`;
+    return `<div class="track" role="img" aria-label="Stages passed: ${p.filter(Boolean).length} of 7">
+      ${seg(p[0], first)}${seg(p[1], first)}${seg(p[2], first)}<div class="gap"></div>
+      ${seg(p[3], second)}${seg(p[4], second)}${seg(p[5], second)}<div class="gap"></div>
+      ${seg(p[6], "law")}
+    </div>
+    <div class="tracklabels" aria-hidden="true">
+      <span>${first === "house" ? "House" : "Senate"} 1R 2R 3R</span><span></span>
+      <span>${second === "house" ? "House" : "Senate"} 1R 2R 3R</span><span></span><span>RA</span>
+    </div>`;
+  }
+
+  function committeesHtml(b) {
+    if (!b.committees || !b.committees.length) return "";
+    const items = b.committees.map((c) => {
+      const cls = c.chamber === "Senate" ? "senate" : "house";
+      const tag = c.current ? (c.role === "pre-study" ? "pre-study now" : "studying now") : (c.role === "pre-study" ? "pre-study" : "");
+      const inner = `<b>${esc(c.acronym)}</b> ${esc(c.name)}${tag ? `<span class="tag">${tag}</span>` : ""}`;
+      return c.url
+        ? `<a class="cmte ${c.current ? "now " + cls : ""}" href="${esc(c.url)}" rel="noopener">${inner}</a>`
+        : `<span class="cmte ${c.current ? "now " + cls : ""}">${inner}</span>`;
+    }).join("");
+    return `<div class="cmtes">${items}</div>`;
+  }
+
+  function billHtml(b) {
+    const title = b.shortTitle || b.longTitle || b.number;
+    const sponsor = [b.sponsor, (b.sponsorTitle || "").replace(/\u2014/g, "\u2013")].filter(Boolean).join(", ");
+    const type = b.type ? b.type.replace("House Government Bill", "Government bill").replace("Senate Government Bill", "Government bill (Senate)").replace("Senate Public Bill", "Senate public bill").replace("Private Member’s Bill", "Private member's bill") : "";
+    const ev = b.latestEvent;
+    const ago = ev && stageOf(b) !== "law" ? daysAgo(ev.date) : null;
+    return `<article class="bill">
+      <div>
+        <h3><span class="num">${esc(b.number)}</span>${esc(title)}</h3>
+        <div class="meta">${esc(type)}${sponsor ? " · " + esc(sponsor) : ""}</div>
+        ${b.summary ? `<p class="desc">${esc(b.summary)}</p>` : ""}
+        ${committeesHtml(b)}
+        <div class="links">
+          <a href="${esc(b.legisinfoUrl)}" rel="noopener">Status on LEGISinfo</a>
+          <a href="${esc(b.textUrl)}" rel="noopener">Bill text</a>
+          ${b.statute ? `<span>${esc(b.statute)}</span>` : ""}
+        </div>
+      </div>
+      <div class="status">
+        <span class="pill ${pillClass(b)}">${esc(statusText(b))}</span>
+        ${trackHtml(b)}
+        ${ev ? `<div class="latest">Last activity: <b>${esc(ev.type)}</b>${ev.chamber ? " (" + esc(ev.chamber) + ")" : ""}, ${esc(fmtDate(ev.date))}${ago !== null && ago > 0 ? `<br>${ago} days ago` : ""}</div>` : ""}
+        ${b.stale ? `<div class="stale">LEGISinfo did not respond at the last check; showing the previous status.</div>` : ""}
+      </div>
+    </article>`;
+  }
+
+  function render(data) {
+    const bills = data.bills || [];
+    const themes = data.themes || [];
+    const counts = { all: bills.length, house: 0, senate: 0, law: 0 };
+    bills.forEach((b) => counts[stageOf(b)]++);
+
+    $("summary").innerHTML = STAGES.map((s) =>
+      `<button type="button" id="stage-${s.id}" data-stage="${s.id}" aria-pressed="${state.stage === s.id}"><span class="n">${counts[s.id]}</span><span class="l">${s.label}</span></button>`
+    ).join("");
+    $("filters").innerHTML = `<span class="label">Policy area</span>` +
+      [{ id: "all", label: "All" }, ...themes].map((t) =>
+        `<button type="button" class="chipbtn" id="theme-${t.id}" data-theme-id="${t.id}" aria-pressed="${state.theme === t.id}">${esc(t.label)}</button>`
+      ).join("");
+
+    const order = { house: 0, senate: 0, law: 1 };
+    const filtered = bills.filter((b) =>
+      (state.stage === "all" || stageOf(b) === state.stage) && (state.theme === "all" || b.theme === state.theme));
+    const sections = themes.map((t) => {
+      const rows = filtered.filter((b) => b.theme === t.id).sort((a, b) =>
+        (order[stageOf(a)] - order[stageOf(b)]) ||
+        ((b.latestEvent?.date || "").localeCompare(a.latestEvent?.date || "")));
+      return rows.length ? `<section class="theme"><h2>${esc(t.label)}</h2>${rows.map(billHtml).join("")}</section>` : "";
+    }).join("");
+    $("list").innerHTML = sections || `<p class="empty">No bills match these filters.</p>`;
+
+    const checked = new Date(data.checkedAt);
+    $("checked").textContent = `Status checked against LEGISinfo on ${checked.toLocaleDateString("en-CA", { month: "long", day: "numeric", year: "numeric" })}. ${bills.length} bills tracked.`;
+  }
+
+  let DATA = null;
+  document.addEventListener("click", (e) => {
+    const s = e.target.closest("[data-stage]");
+    const t = e.target.closest("[data-theme-id]");
+    if (!DATA || (!s && !t)) return;
+    if (s) state.stage = s.dataset.stage;
+    if (t) state.theme = t.dataset.themeId;
+    save();
+    render(DATA);
+  });
+
+  fetch(DATA_URL, { cache: "no-cache" })
+    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((d) => { DATA = d; render(d); })
+    .catch(() => {
+      $("checked").textContent = "";
+      $("list").innerHTML = `<p class="empty">The bill list could not load. Try refreshing, or see current status on <a href="https://www.parl.ca/legisinfo/en/bills?parlsession=45-1">LEGISinfo</a>.</p>`;
+    });
+})();
+</script>
+</body>
+</html>
