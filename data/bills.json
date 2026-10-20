@@ -1,8 +1,7 @@
 {
-  "checkedAt": "2026-10-18T17:00:00Z",
+  "checkedAt": "2026-10-20T15:06:34.501Z",
   "source": "LEGISinfo, Parliament of Canada",
   "session": "45-1",
-  "seed": true,
   "themes": [
     {
       "id": "online-safety",
@@ -91,7 +90,16 @@
       ],
       "royalAssent": null,
       "statute": null,
-      "committees": [],
+      "committees": [
+        {
+          "name": "Standing Senate Committee on Legal and Constitutional Affairs",
+          "acronym": "LCJC",
+          "chamber": "Senate",
+          "role": "study",
+          "url": "https://sencanada.ca/en/committees/LCJC/45-1",
+          "current": false
+        }
+      ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-209",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-209/third-reading",
       "stale": false
@@ -106,7 +114,7 @@
       "isGovernmentBill": false,
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Michelle Rempel Garner",
-      "sponsorTitle": "Calgary Nose Hill",
+      "sponsorTitle": "Member of Parliament",
       "status": "Outside the Order of Precedence",
       "latestEvent": {
         "type": "Introduction and first reading",
@@ -139,7 +147,7 @@
       "isGovernmentBill": false,
       "originatingChamber": "House of Commons",
       "sponsor": "Michael Coteau",
-      "sponsorTitle": "Scarborough—Woburn",
+      "sponsorTitle": "Member of Parliament",
       "status": "Outside the Order of Precedence",
       "latestEvent": {
         "type": "Introduction and first reading",
@@ -200,12 +208,12 @@
       "theme": "online-safety",
       "summary": "Protecting Victims Act: criminal law package including sexual deepfakes.",
       "shortTitle": "Protecting Victims Act",
-      "longTitle": "",
+      "longTitle": "An Act to amend certain Acts in relation to criminal and correctional matters (child protection, gender-based violence, delays and other measures)",
       "type": "House Government Bill",
       "isGovernmentBill": true,
       "originatingChamber": "House of Commons",
-      "sponsor": "",
-      "sponsorTitle": "",
+      "sponsor": "Hon. Sean Fraser",
+      "sponsorTitle": "Minister of Justice",
       "status": "Royal assent received",
       "latestEvent": {
         "type": "Royal assent",
@@ -223,7 +231,32 @@
       ],
       "royalAssent": "2026-06-18",
       "statute": "S.C. 2026, c. 19",
-      "committees": [],
+      "committees": [
+        {
+          "name": "Standing Committee on Justice and Human Rights",
+          "acronym": "JUST",
+          "chamber": "House of Commons",
+          "role": "study",
+          "url": "https://www.ourcommons.ca/Committees/en/JUST?parl=45&session=1",
+          "current": false
+        },
+        {
+          "name": "Standing Senate Committee on Legal and Constitutional Affairs",
+          "acronym": "LCJC",
+          "chamber": "Senate",
+          "role": "study",
+          "url": "https://sencanada.ca/en/committees/LCJC/45-1",
+          "current": false
+        },
+        {
+          "name": "Standing Senate Committee on Legal and Constitutional Affairs",
+          "acronym": "LCJC",
+          "chamber": "Senate",
+          "role": "pre-study",
+          "url": "https://sencanada.ca/en/committees/LCJC/45-1",
+          "current": false
+        }
+      ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-16",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-16/royal-assent",
       "stale": false
@@ -238,7 +271,7 @@
       "isGovernmentBill": true,
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Sean Fraser",
-      "sponsorTitle": "Minister of Justice and Attorney General of Canada",
+      "sponsorTitle": "Minister of Justice",
       "status": "Royal assent received",
       "latestEvent": {
         "type": "Royal assent",
@@ -255,8 +288,25 @@
         true
       ],
       "royalAssent": "2026-06-18",
-      "statute": null,
-      "committees": [],
+      "statute": "S.C. 2026, c. 15",
+      "committees": [
+        {
+          "name": "Standing Committee on Justice and Human Rights",
+          "acronym": "JUST",
+          "chamber": "House of Commons",
+          "role": "study",
+          "url": "https://www.ourcommons.ca/Committees/en/JUST?parl=45&session=1",
+          "current": false
+        },
+        {
+          "name": "Standing Senate Committee on Human Rights",
+          "acronym": "RIDR",
+          "chamber": "Senate",
+          "role": "study",
+          "url": "https://sencanada.ca/en/committees/RIDR/45-1",
+          "current": false
+        }
+      ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-9",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-9/royal-assent",
       "stale": false
@@ -364,7 +414,24 @@
       ],
       "royalAssent": "2026-06-15",
       "statute": "S.C. 2026, c. 9",
-      "committees": [],
+      "committees": [
+        {
+          "name": "Standing Committee on Public Safety and National Security",
+          "acronym": "SECU",
+          "chamber": "House of Commons",
+          "role": "study",
+          "url": "https://www.ourcommons.ca/Committees/en/SECU?parl=45&session=1",
+          "current": false
+        },
+        {
+          "name": "Standing Senate Committee on National Security, Defence and Veterans Affairs",
+          "acronym": "SECD",
+          "chamber": "Senate",
+          "role": "study",
+          "url": "https://sencanada.ca/en/committees/SECD/45-1",
+          "current": false
+        }
+      ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-8",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-8/royal-assent",
       "stale": false
@@ -423,7 +490,11 @@
       "sponsor": "Hon. Gary Anandasangaree",
       "sponsorTitle": "Minister of Public Safety",
       "status": "At second reading in the House of Commons",
-      "latestEvent": null,
+      "latestEvent": {
+        "type": "Debate at second reading",
+        "date": "2025-09-17",
+        "chamber": "House of Commons"
+      },
       "progress": [
         true,
         false,
@@ -450,7 +521,7 @@
       "isGovernmentBill": false,
       "originatingChamber": "House of Commons",
       "sponsor": "Melissa Lantsman",
-      "sponsorTitle": "Thornhill",
+      "sponsorTitle": "Member of Parliament",
       "status": "Outside the Order of Precedence",
       "latestEvent": {
         "type": "Introduction and first reading",
@@ -520,12 +591,12 @@
       "theme": "fraud-finance",
       "summary": "Budget implementation: Stablecoin Act, Consumer-Driven Banking Act, bank fraud duties and repeal of the digital services tax.",
       "shortTitle": "Budget 2025 Implementation Act, No. 1",
-      "longTitle": "",
+      "longTitle": "An Act to implement certain provisions of the budget tabled in Parliament on November 4, 2025",
       "type": "House Government Bill",
       "isGovernmentBill": true,
       "originatingChamber": "House of Commons",
-      "sponsor": "",
-      "sponsorTitle": "",
+      "sponsor": "Hon. François-Philippe Champagne",
+      "sponsorTitle": "Minister of Finance and National Revenue",
       "status": "Royal assent received",
       "latestEvent": {
         "type": "Royal assent",
@@ -543,7 +614,32 @@
       ],
       "royalAssent": "2026-03-26",
       "statute": "S.C. 2026, c. 3",
-      "committees": [],
+      "committees": [
+        {
+          "name": "Standing Committee on Finance",
+          "acronym": "FINA",
+          "chamber": "House of Commons",
+          "role": "study",
+          "url": "https://www.ourcommons.ca/Committees/en/FINA?parl=45&session=1",
+          "current": false
+        },
+        {
+          "name": "Standing Senate Committee on National Finance",
+          "acronym": "NFFN",
+          "chamber": "Senate",
+          "role": "study",
+          "url": "https://sencanada.ca/en/committees/NFFN/45-1",
+          "current": false
+        },
+        {
+          "name": "Standing Senate Committee on National Finance",
+          "acronym": "NFFN",
+          "chamber": "Senate",
+          "role": "pre-study",
+          "url": "https://sencanada.ca/en/committees/NFFN/45-1",
+          "current": false
+        }
+      ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-15",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-15/royal-assent",
       "stale": false
@@ -589,6 +685,14 @@
           "name": "Standing Senate Committee on National Finance",
           "acronym": "NFFN",
           "chamber": "Senate",
+          "role": "study",
+          "url": "https://sencanada.ca/en/committees/NFFN/45-1",
+          "current": false
+        },
+        {
+          "name": "Standing Senate Committee on National Finance",
+          "acronym": "NFFN",
+          "chamber": "Senate",
           "role": "pre-study",
           "url": "https://sencanada.ca/en/committees/NFFN/45-1",
           "current": true
@@ -626,7 +730,24 @@
       ],
       "royalAssent": null,
       "statute": null,
-      "committees": [],
+      "committees": [
+        {
+          "name": "Standing Committee on Canadian Heritage",
+          "acronym": "CHPC",
+          "chamber": "House of Commons",
+          "role": "study",
+          "url": "https://www.ourcommons.ca/Committees/en/CHPC?parl=45&session=1",
+          "current": true
+        },
+        {
+          "name": "Standing Senate Committee on Transport and Communications",
+          "acronym": "TRCM",
+          "chamber": "Senate",
+          "role": "study",
+          "url": "https://sencanada.ca/en/committees/TRCM/45-1",
+          "current": false
+        }
+      ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-211",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-211/third-reading",
       "stale": false
@@ -641,7 +762,7 @@
       "isGovernmentBill": true,
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Steven MacKinnon",
-      "sponsorTitle": "Leader of the Government in the House of Commons",
+      "sponsorTitle": "Minister of Transport and Leader of the Government in the House of Commons",
       "status": "Royal assent received",
       "latestEvent": {
         "type": "Royal assent",
@@ -658,8 +779,33 @@
         true
       ],
       "royalAssent": "2026-06-18",
-      "statute": null,
-      "committees": [],
+      "statute": "S.C. 2026, c. 20",
+      "committees": [
+        {
+          "name": "Standing Committee on Procedure and House Affairs",
+          "acronym": "PROC",
+          "chamber": "House of Commons",
+          "role": "study",
+          "url": "https://www.ourcommons.ca/Committees/en/PROC?parl=45&session=1",
+          "current": false
+        },
+        {
+          "name": "Standing Senate Committee on Legal and Constitutional Affairs",
+          "acronym": "LCJC",
+          "chamber": "Senate",
+          "role": "study",
+          "url": "https://sencanada.ca/en/committees/LCJC/45-1",
+          "current": false
+        },
+        {
+          "name": "Standing Senate Committee on Legal and Constitutional Affairs",
+          "acronym": "LCJC",
+          "chamber": "Senate",
+          "role": "pre-study",
+          "url": "https://sencanada.ca/en/committees/LCJC/45-1",
+          "current": false
+        }
+      ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-25",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-25/royal-assent",
       "stale": false
@@ -708,14 +854,6 @@
           "role": "study",
           "url": "https://sencanada.ca/en/committees/NFFN/45-1",
           "current": false
-        },
-        {
-          "name": "Standing Senate Committee on Legal and Constitutional Affairs",
-          "acronym": "LCJC",
-          "chamber": "Senate",
-          "role": "study",
-          "url": "https://sencanada.ca/en/committees/LCJC/45-1",
-          "current": false
         }
       ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-4",
@@ -732,7 +870,7 @@
       "isGovernmentBill": false,
       "originatingChamber": "House of Commons",
       "sponsor": "Marianne Dandurand",
-      "sponsorTitle": "Compton—Stanstead",
+      "sponsorTitle": "Member of Parliament",
       "status": "At report stage in the House of Commons",
       "latestEvent": {
         "type": "Committee report presented",
