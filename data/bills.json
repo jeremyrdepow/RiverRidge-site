@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-20T15:06:34.501Z",
+  "checkedAt": "2026-10-22T15:17:18.712Z",
   "source": "LEGISinfo, Parliament of Canada",
   "session": "45-1",
   "themes": [
@@ -42,8 +42,8 @@
       "sponsorTitle": "Minister of Canadian Identity and Culture and Minister responsible for Official Languages",
       "status": "At second reading in the House of Commons",
       "latestEvent": {
-        "type": "Introduction and first reading",
-        "date": "2026-06-10",
+        "type": "Debate at second reading",
+        "date": "2026-10-21",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -450,7 +450,7 @@
       "status": "At second reading in the Senate",
       "latestEvent": {
         "type": "Debate at second reading",
-        "date": "2026-10-08",
+        "date": "2026-10-21",
         "chamber": "Senate"
       },
       "progress": [
