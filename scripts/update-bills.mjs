@@ -11,13 +11,21 @@ const OUT_PATH = new URL("../data/bills.json", import.meta.url);
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// Send the headers a real browser would. LEGISinfo sits behind bot protection
+// that rejects requests with a non-browser User-Agent or missing Accept headers.
+const BROWSER_HEADERS = {
+  "User-Agent":
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
+  Accept: "application/json, text/javascript, */*; q=0.01",
+  "Accept-Language": "en-CA,en;q=0.9,fr;q=0.8",
+  Referer: "https://www.parl.ca/legisinfo/en/bills?parlsession=45-1",
+};
+
 async function fetchBill(number) {
   const url = `https://www.parl.ca/legisinfo/en/bill/${SESSION}/${number.toLowerCase()}/json`;
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
-      const res = await fetch(url, {
-        headers: { "User-Agent": "RiverRidge legislation tracker (riverridgeintelligence.ca)" },
-      });
+      const res = await fetch(url, { headers: BROWSER_HEADERS });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const data = await res.json();
       const bill = Array.isArray(data) ? data[0] : data;
