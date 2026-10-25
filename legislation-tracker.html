@@ -123,6 +123,14 @@ section.theme h2 { font-family: var(--font-display); font-weight: 600; font-size
 .latest { font-size: var(--step--1); color: var(--muted); font-variant-numeric: tabular-nums; }
 .latest b { color: var(--ink); font-weight: 500; }
 .stale { font-size: var(--step--1); color: var(--senate); }
+.bill { scroll-margin-top: 1rem; }
+.bill:target { background: var(--chip); box-shadow: -0.75rem 0 0 var(--chip), 0.75rem 0 0 var(--chip); }
+.copylink { font: inherit; font-size: var(--step--1); color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
+.changes { border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 6px; background: var(--surface); padding: 0.75rem 1rem; }
+.changes h2 { font-family: var(--font-display); font-weight: 600; font-size: var(--step-0); margin: 0 0 0.4rem; }
+.changes ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.25rem; font-size: var(--step--1); }
+.changes .when { font-family: var(--font-data); color: var(--muted); font-variant-numeric: tabular-nums; }
+.changes p { margin: 0; font-size: var(--step--1); color: var(--muted); }
 
 .empty { color: var(--muted); padding: 1rem 0; }
 footer { display: grid; gap: 0.75rem; border-top: 1px solid var(--line); padding-top: 1.25rem; font-size: var(--step--1); color: var(--muted); }
@@ -142,6 +150,8 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     <p class="betanote">This tracker is in beta. Check any status that matters to you against LEGISinfo, and send corrections or bills you want added to <span class="addr">contact@riverridgeintelligence.ca</span>.</p>
     <div class="checked" id="checked">Loading status…</div>
   </header>
+
+  <section class="changes" id="changes" aria-label="What changed in the past 7 days" hidden></section>
 
   <div class="summary" id="summary" role="group" aria-label="Filter by stage"></div>
 
@@ -239,7 +249,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     const type = b.type ? b.type.replace("House Government Bill", "Government bill").replace("Senate Government Bill", "Government bill (Senate)").replace("Senate Public Bill", "Senate public bill").replace("Private Member’s Bill", "Private member's bill") : "";
     const ev = b.latestEvent;
     const ago = ev && stageOf(b) !== "law" ? daysAgo(ev.date) : null;
-    return `<article class="bill">
+    return `<article class="bill" id="${esc(b.number.toLowerCase())}">
       <div>
         <h3><span class="num">${esc(b.number)}</span>${esc(title)}</h3>
         <div class="meta">${esc(type)}${sponsor ? " · " + esc(sponsor) : ""}</div>
@@ -248,6 +258,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
         <div class="links">
           <a href="${esc(b.legisinfoUrl)}" rel="noopener">Status on LEGISinfo</a>
           <a href="${esc(b.textUrl)}" rel="noopener">Bill text</a>
+          <button type="button" class="copylink" data-copy="${esc(b.number.toLowerCase())}">Copy link</button>
           ${b.statute ? `<span>${esc(b.statute)}</span>` : ""}
         </div>
       </div>
@@ -255,9 +266,19 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
         <span class="pill ${pillClass(b)}">${esc(statusText(b))}</span>
         ${trackHtml(b)}
         ${ev ? `<div class="latest">Last activity: <b>${esc(ev.type)}</b>${ev.chamber ? " (" + esc(ev.chamber) + ")" : ""}, ${esc(fmtDate(ev.date))}${ago !== null && ago > 0 ? `<br>${ago} days ago` : ""}</div>` : ""}
-        ${b.stale ? `<div class="stale">LEGISinfo did not respond at the last check; showing the previous status.</div>` : ""}
+        ${b.stale ? `<div class="stale">openparliament.ca did not respond at the last check; showing the previous status.</div>` : ""}
       </div>
     </article>`;
+  }
+
+  function changesHtml(data) {
+    const box = $("changes");
+    const titles = new Map((data.bills || []).map((b) => [b.number, b.shortTitle || b.longTitle || ""]));
+    const recent = (data.changelog || []).filter((c) => { const n = daysAgo(c.date); return n !== null && n <= 7; });
+    box.hidden = false;
+    box.innerHTML = `<h2>What changed in the past 7 days</h2>` + (recent.length
+      ? `<ul>${recent.map((c) => `<li><span class="when">${esc(fmtDate(c.date))}</span> · <a href="#${esc(c.number.toLowerCase())}">${esc(c.number)}</a> ${esc(titles.get(c.number) || "")}: ${esc(c.text)}</li>`).join("")}</ul>`
+      : `<p>No tracked bill changed stage or status in the past 7 days.</p>`);
   }
 
   function render(data) {
@@ -285,12 +306,21 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     }).join("");
     $("list").innerHTML = sections || `<p class="empty">No bills match these filters.</p>`;
 
+    changesHtml(data);
     const checked = new Date(data.checkedAt);
     $("checked").textContent = `Status last refreshed ${checked.toLocaleDateString("en-CA", { month: "long", day: "numeric", year: "numeric" })}. ${bills.length} bills tracked.`;
   }
 
   let DATA = null;
   document.addEventListener("click", (e) => {
+    const c = e.target.closest("[data-copy]");
+    if (c) {
+      const url = location.origin + location.pathname + "#" + c.dataset.copy;
+      const done = () => { c.textContent = "Link copied"; setTimeout(() => { c.textContent = "Copy link"; }, 2000); };
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, () => { location.hash = c.dataset.copy; });
+      else location.hash = c.dataset.copy;
+      return;
+    }
     const s = e.target.closest("[data-stage]");
     const t = e.target.closest("[data-theme-id]");
     if (!DATA || (!s && !t)) return;
@@ -302,7 +332,18 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
 
   fetch(DATA_URL, { cache: "no-cache" })
     .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then((d) => { DATA = d; render(d); })
+    .then((d) => {
+      DATA = d;
+      render(d);
+      // A shared link like #c-34 should land on that bill even if saved filters would hide it.
+      const id = decodeURIComponent(location.hash.slice(1));
+      if (id && !document.getElementById(id) && d.bills.some((b) => b.number.toLowerCase() === id)) {
+        state = { stage: "all", theme: "all" };
+        render(d);
+      }
+      const el = id && document.getElementById(id);
+      if (el) el.scrollIntoView();
+    })
     .catch(() => {
       $("checked").textContent = "";
       $("list").innerHTML = `<p class="empty">The bill list could not load. Try refreshing, or see current status on <a href="https://www.parl.ca/legisinfo/en/bills?parlsession=45-1">LEGISinfo</a>.</p>`;

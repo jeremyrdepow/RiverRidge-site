@@ -42,8 +42,8 @@
       "sponsorTitle": "Minister of Canadian Identity and Culture and Minister responsible for Official Languages",
       "status": "Second reading (House)",
       "latestEvent": {
-        "type": "Second reading (House)",
-        "date": "2026-06-10",
+        "type": "Debate at second reading",
+        "date": "2026-10-21",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -60,7 +60,8 @@
       "committees": [],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-34",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-34/first-reading",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "S-209",
@@ -75,8 +76,8 @@
       "sponsorTitle": "Senator",
       "status": "Second reading (House)",
       "latestEvent": {
-        "type": "Second reading (House)",
-        "date": "2025-05-28",
+        "type": "Debate at second reading",
+        "date": "2026-09-24",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -102,7 +103,8 @@
       ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-209",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-209/third-reading",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "C-216",
@@ -117,7 +119,7 @@
       "sponsorTitle": "Member of Parliament",
       "status": "Outside the Order of Precedence (a private member's bill that hasn't yet won the draw that determines which private member's bills can be debated)",
       "latestEvent": {
-        "type": "Outside the Order of Precedence (a private member's bill that hasn't yet won the draw that determines which private member's bills can be debated)",
+        "type": "Introduction and first reading",
         "date": "2025-06-19",
         "chamber": "House of Commons"
       },
@@ -135,7 +137,8 @@
       "committees": [],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-216",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-216/first-reading",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "C-277",
@@ -150,7 +153,7 @@
       "sponsorTitle": "Member of Parliament",
       "status": "Outside the Order of Precedence (a private member's bill that hasn't yet won the draw that determines which private member's bills can be debated)",
       "latestEvent": {
-        "type": "Outside the Order of Precedence (a private member's bill that hasn't yet won the draw that determines which private member's bills can be debated)",
+        "type": "Introduction and first reading",
         "date": "2026-05-06",
         "chamber": "House of Commons"
       },
@@ -168,7 +171,8 @@
       "committees": [],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-277",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-277/first-reading",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "S-240",
@@ -183,7 +187,7 @@
       "sponsorTitle": "Senator",
       "status": "Second reading (Senate)",
       "latestEvent": {
-        "type": "Second reading (Senate)",
+        "type": "Introduction and first reading",
         "date": "2025-11-05",
         "chamber": "Senate"
       },
@@ -201,7 +205,8 @@
       "committees": [],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-240",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-240/first-reading",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "C-16",
@@ -216,8 +221,8 @@
       "sponsorTitle": "Minister of Justice",
       "status": "Law (royal assent given)",
       "latestEvent": {
-        "type": "Law (royal assent given)",
-        "date": "2025-12-09",
+        "type": "Royal assent",
+        "date": "2026-06-18",
         "chamber": "Senate"
       },
       "progress": [
@@ -259,7 +264,8 @@
       ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-16",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-16/royal-assent",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "C-9",
@@ -274,8 +280,8 @@
       "sponsorTitle": "Minister of Justice",
       "status": "Law (royal assent given)",
       "latestEvent": {
-        "type": "Law (royal assent given)",
-        "date": "2025-09-19",
+        "type": "Royal assent",
+        "date": "2026-06-18",
         "chamber": "Senate"
       },
       "progress": [
@@ -309,7 +315,8 @@
       ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-9",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-9/royal-assent",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "C-36",
@@ -324,7 +331,7 @@
       "sponsorTitle": "Minister of Artificial Intelligence and Digital Innovation",
       "status": "Second reading (House)",
       "latestEvent": {
-        "type": "Second reading (House)",
+        "type": "Introduction and first reading",
         "date": "2026-06-15",
         "chamber": "House of Commons"
       },
@@ -342,7 +349,8 @@
       "committees": [],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-36",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-36/first-reading",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "S-5",
@@ -357,8 +365,8 @@
       "sponsorTitle": "Senator",
       "status": "Second reading (House)",
       "latestEvent": {
-        "type": "Second reading (House)",
-        "date": "2026-02-04",
+        "type": "First reading",
+        "date": "2026-05-28",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -384,7 +392,8 @@
       ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-5",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-5/third-reading",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "C-8",
@@ -399,8 +408,8 @@
       "sponsorTitle": "Minister of Public Safety",
       "status": "Law (royal assent given)",
       "latestEvent": {
-        "type": "Law (royal assent given)",
-        "date": "2025-06-18",
+        "type": "Royal assent",
+        "date": "2026-06-15",
         "chamber": "Senate"
       },
       "progress": [
@@ -434,7 +443,8 @@
       ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-8",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-8/royal-assent",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "C-22",
@@ -449,8 +459,8 @@
       "sponsorTitle": "Minister of Public Safety",
       "status": "In committee (Senate)",
       "latestEvent": {
-        "type": "In committee (Senate)",
-        "date": "2026-03-12",
+        "type": "Debate at second reading",
+        "date": "2026-10-21",
         "chamber": "Senate"
       },
       "progress": [
@@ -476,7 +486,8 @@
       ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-22",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-22/third-reading",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "C-2",
@@ -491,8 +502,8 @@
       "sponsorTitle": "Minister of Public Safety",
       "status": "Second reading (House)",
       "latestEvent": {
-        "type": "Second reading (House)",
-        "date": "2025-06-03",
+        "type": "Debate at second reading",
+        "date": "2025-09-17",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -509,7 +520,8 @@
       "committees": [],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-2",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-2/first-reading",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "C-288",
@@ -524,7 +536,7 @@
       "sponsorTitle": "Member of Parliament",
       "status": "Outside the Order of Precedence (a private member's bill that hasn't yet won the draw that determines which private member's bills can be debated)",
       "latestEvent": {
-        "type": "Outside the Order of Precedence (a private member's bill that hasn't yet won the draw that determines which private member's bills can be debated)",
+        "type": "Introduction and first reading",
         "date": "2026-06-17",
         "chamber": "House of Commons"
       },
@@ -542,7 +554,8 @@
       "committees": [],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-288",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-288/first-reading",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "C-29",
@@ -557,8 +570,8 @@
       "sponsorTitle": "Minister of Finance and National Revenue",
       "status": "In committee (House)",
       "latestEvent": {
-        "type": "In committee (House)",
-        "date": "2026-04-27",
+        "type": "Second reading and referral to committee",
+        "date": "2026-06-18",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -584,7 +597,8 @@
       ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-29",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-29/first-reading",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "C-15",
@@ -599,8 +613,8 @@
       "sponsorTitle": "Minister of Finance and National Revenue",
       "status": "Law (royal assent given)",
       "latestEvent": {
-        "type": "Law (royal assent given)",
-        "date": "2025-11-18",
+        "type": "Royal assent",
+        "date": "2026-03-26",
         "chamber": "Senate"
       },
       "progress": [
@@ -642,7 +656,8 @@
       ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-15",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-15/royal-assent",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "C-31",
@@ -657,9 +672,9 @@
       "sponsorTitle": "Minister of Finance and National Revenue",
       "status": "In committee (House)",
       "latestEvent": {
-        "type": "In committee (House)",
-        "date": "2026-05-06",
-        "chamber": "House of Commons"
+        "type": "Pre-study of House bill",
+        "date": "2026-06-10",
+        "chamber": "Senate"
       },
       "progress": [
         true,
@@ -700,7 +715,8 @@
       ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-31",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-31/first-reading",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "S-211",
@@ -715,8 +731,8 @@
       "sponsorTitle": "Senator",
       "status": "In committee (House)",
       "latestEvent": {
-        "type": "In committee (House)",
-        "date": "2025-05-28",
+        "type": "Second reading and referral to committee",
+        "date": "2026-04-22",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -750,7 +766,8 @@
       ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-211",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-211/third-reading",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "C-25",
@@ -765,8 +782,8 @@
       "sponsorTitle": "Minister of Transport and Leader of the Government in the House of Commons",
       "status": "Law (royal assent given)",
       "latestEvent": {
-        "type": "Law (royal assent given)",
-        "date": "2026-03-26",
+        "type": "Royal assent",
+        "date": "2026-06-18",
         "chamber": "Senate"
       },
       "progress": [
@@ -808,7 +825,8 @@
       ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-25",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-25/royal-assent",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "C-4",
@@ -823,8 +841,8 @@
       "sponsorTitle": "Minister of Finance and National Revenue",
       "status": "Law (royal assent given)",
       "latestEvent": {
-        "type": "Law (royal assent given)",
-        "date": "2025-06-05",
+        "type": "Royal assent",
+        "date": "2026-03-12",
         "chamber": "Senate"
       },
       "progress": [
@@ -858,7 +876,8 @@
       ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-4",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-4/royal-assent",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "C-268",
@@ -873,8 +892,8 @@
       "sponsorTitle": "Member of Parliament",
       "status": "Report stage (House)",
       "latestEvent": {
-        "type": "Report stage (House)",
-        "date": "2026-03-12",
+        "type": "Committee report presented",
+        "date": "2026-10-07",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -900,7 +919,8 @@
       ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-268",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-268/first-reading",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
     },
     {
       "number": "S-7",
@@ -915,7 +935,7 @@
       "sponsorTitle": "Senator",
       "status": "Second reading (Senate)",
       "latestEvent": {
-        "type": "Second reading (Senate)",
+        "type": "Introduction and first reading",
         "date": "2026-10-07",
         "chamber": "Senate"
       },
@@ -933,7 +953,16 @@
       "committees": [],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-7",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-7/first-reading",
-      "stale": false
+      "stale": false,
+      "statusSource": "openparliament"
+    }
+  ],
+  "changelog": [
+    {
+      "date": "2026-10-25",
+      "number": "C-22",
+      "kind": "stage",
+      "text": "Advanced to: In committee (Senate)"
     }
   ]
 }

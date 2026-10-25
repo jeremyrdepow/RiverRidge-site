@@ -103,23 +103,33 @@ function derivedStages(s, originating) {
   return Math.min(3, within);
 }
 
+// Today's date in Ottawa, YYYY-MM-DD.
+const today = () => new Date().toLocaleDateString("en-CA", { timeZone: "America/Toronto" });
+
 function overlay(base, op) {
   const s = statusText(op);
-  if (!s) return { ...base, stale: true };
+  if (!s) return null;
   const law = isLaw(op, s);
   const chamber = chamberFromStatus(s);
-  const date = dateFromStatus(s) || op.introduced || base.latestEvent?.date || null;
   const reached = Math.max(countProgress(base.progress), law ? 7 : derivedStages(s, base.originatingChamber));
+  // openparliament gives no event date, so a new status is dated the day this
+  // script first sees it. An unchanged status keeps the baseline event, which
+  // also preserves the more detailed LEGISinfo event seeded in the baseline.
+  const changed = base.statusSource === "openparliament" && base.status !== s;
+  const date = dateFromStatus(s) || today();
 
   const next = {
     ...base,
     status: s,
+    statusSource: "openparliament",
     progress: toProgress(reached),
-    latestEvent: {
-      type: s.replace(/,?\s*as of.*$/i, "").trim() || "Status update",
-      date,
-      chamber: chamber || base.latestEvent?.chamber || "",
-    },
+    latestEvent: changed || !base.latestEvent
+      ? {
+          type: s.replace(/,?\s*as of.*$/i, "").trim() || "Status update",
+          date,
+          chamber: chamber || base.latestEvent?.chamber || "",
+        }
+      : base.latestEvent,
     stale: false,
   };
   if (law) {
@@ -128,6 +138,22 @@ function overlay(base, op) {
     if (base.textUrl) next.textUrl = base.textUrl.replace(/\/(first-reading|third-reading)$/, "/royal-assent");
   }
   return next;
+}
+
+// What moved since the previous run, as changelog entries.
+function changesFor(prev, next) {
+  if (!prev) return [];
+  const entry = (kind, text) => ({ date: today(), number: next.number, kind, text });
+  const wasLaw = countProgress(prev.progress) >= 7;
+  const isNowLaw = countProgress(next.progress) >= 7;
+  if (isNowLaw && !wasLaw) return [entry("law", "Became law (royal assent)")];
+  if (countProgress(next.progress) > countProgress(prev.progress)) return [entry("stage", `Advanced to: ${next.status}`)];
+  // Wording changes count only when both readings came from openparliament,
+  // so the one-time switch from LEGISinfo wording does not flag every bill.
+  if (prev.statusSource === "openparliament" && next.statusSource === "openparliament" && prev.status !== next.status) {
+    return [entry("status", `Status now: ${next.status}`)];
+  }
+  return [];
 }
 
 const config = JSON.parse(await readFile(CONFIG_PATH, "utf8"));
@@ -143,6 +169,7 @@ const baseByNumber = new Map(previous.bills.map((b) => [b.number, b]));
 const bills = [];
 let updated = 0;
 let stale = 0;
+const changes = [];
 for (const cfg of config.bills) {
   const base = baseByNumber.get(cfg.number) || {
     number: cfg.number,
@@ -156,8 +183,14 @@ for (const cfg of config.bills) {
   try {
     const op = await fetchBill(cfg.number);
     rec = overlay(base, op);
-    console.log(`ok   ${cfg.number}: ${rec.status}`);
-    updated++;
+    if (rec) {
+      console.log(`ok   ${cfg.number}: ${rec.status}`);
+      updated++;
+    } else {
+      rec = { ...base, stale: true };
+      stale++;
+      console.error(`nostatus ${cfg.number}: no status field in response (kept baseline). Keys: ${Object.keys(op || {}).join(", ")}`);
+    }
   } catch (err) {
     rec = { ...base, stale: true };
     stale++;
@@ -166,9 +199,16 @@ for (const cfg of config.bills) {
   // Config is the source of truth for grouping and the written summary.
   rec.theme = cfg.theme;
   rec.summary = cfg.summary || rec.summary || "";
+  changes.push(...changesFor(baseByNumber.get(cfg.number), rec));
   bills.push(rec);
   await sleep(1200); // be gentle on openparliament
 }
+
+// Rolling changelog: newest first, 60 days, at most 200 entries.
+const cutoff = new Date(Date.now() - 60 * 86400000).toISOString().slice(0, 10);
+const changelog = [...changes, ...(previous.changelog || [])]
+  .filter((c) => c.date >= cutoff)
+  .slice(0, 200);
 
 const out = {
   checkedAt: new Date().toISOString(),
@@ -176,6 +216,8 @@ const out = {
   session: SESSION,
   themes: config.themes,
   bills,
+  changelog,
 };
 await writeFile(OUT_PATH, JSON.stringify(out, null, 2) + "\n");
-console.log(`Wrote ${bills.length} bills: ${updated} refreshed, ${stale} kept from baseline.`);
+for (const c of changes) console.log(`change ${c.number}: ${c.text}`);
+console.log(`Wrote ${bills.length} bills: ${updated} refreshed, ${stale} kept from baseline, ${changes.length} changes logged.`);
