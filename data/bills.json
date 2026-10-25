@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-22T15:17:18.712Z",
-  "source": "LEGISinfo, Parliament of Canada",
+  "checkedAt": "2026-10-25T14:06:24.076Z",
+  "source": "openparliament.ca (bill status) and LEGISinfo, Parliament of Canada (committees and links)",
   "session": "45-1",
   "themes": [
     {
@@ -40,10 +40,10 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Marc Miller",
       "sponsorTitle": "Minister of Canadian Identity and Culture and Minister responsible for Official Languages",
-      "status": "At second reading in the House of Commons",
+      "status": "Second reading (House)",
       "latestEvent": {
-        "type": "Debate at second reading",
-        "date": "2026-10-21",
+        "type": "Second reading (House)",
+        "date": "2026-06-10",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -73,10 +73,10 @@
       "originatingChamber": "Senate",
       "sponsor": "Hon. Julie Miville-Dechêne",
       "sponsorTitle": "Senator",
-      "status": "At second reading in the House of Commons",
+      "status": "Second reading (House)",
       "latestEvent": {
-        "type": "Debate at second reading",
-        "date": "2026-09-24",
+        "type": "Second reading (House)",
+        "date": "2025-05-28",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -115,9 +115,9 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Michelle Rempel Garner",
       "sponsorTitle": "Member of Parliament",
-      "status": "Outside the Order of Precedence",
+      "status": "Outside the Order of Precedence (a private member's bill that hasn't yet won the draw that determines which private member's bills can be debated)",
       "latestEvent": {
-        "type": "Introduction and first reading",
+        "type": "Outside the Order of Precedence (a private member's bill that hasn't yet won the draw that determines which private member's bills can be debated)",
         "date": "2025-06-19",
         "chamber": "House of Commons"
       },
@@ -148,9 +148,9 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Michael Coteau",
       "sponsorTitle": "Member of Parliament",
-      "status": "Outside the Order of Precedence",
+      "status": "Outside the Order of Precedence (a private member's bill that hasn't yet won the draw that determines which private member's bills can be debated)",
       "latestEvent": {
-        "type": "Introduction and first reading",
+        "type": "Outside the Order of Precedence (a private member's bill that hasn't yet won the draw that determines which private member's bills can be debated)",
         "date": "2026-05-06",
         "chamber": "House of Commons"
       },
@@ -181,9 +181,9 @@
       "originatingChamber": "Senate",
       "sponsor": "Hon. Leo Housakos",
       "sponsorTitle": "Senator",
-      "status": "At second reading in the Senate",
+      "status": "Second reading (Senate)",
       "latestEvent": {
-        "type": "Introduction and first reading",
+        "type": "Second reading (Senate)",
         "date": "2025-11-05",
         "chamber": "Senate"
       },
@@ -214,10 +214,10 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Sean Fraser",
       "sponsorTitle": "Minister of Justice",
-      "status": "Royal assent received",
+      "status": "Law (royal assent given)",
       "latestEvent": {
-        "type": "Royal assent",
-        "date": "2026-06-18",
+        "type": "Law (royal assent given)",
+        "date": "2025-12-09",
         "chamber": "Senate"
       },
       "progress": [
@@ -272,10 +272,10 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Sean Fraser",
       "sponsorTitle": "Minister of Justice",
-      "status": "Royal assent received",
+      "status": "Law (royal assent given)",
       "latestEvent": {
-        "type": "Royal assent",
-        "date": "2026-06-18",
+        "type": "Law (royal assent given)",
+        "date": "2025-09-19",
         "chamber": "Senate"
       },
       "progress": [
@@ -322,9 +322,9 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Evan Solomon",
       "sponsorTitle": "Minister of Artificial Intelligence and Digital Innovation",
-      "status": "At second reading in the House of Commons",
+      "status": "Second reading (House)",
       "latestEvent": {
-        "type": "Introduction and first reading",
+        "type": "Second reading (House)",
         "date": "2026-06-15",
         "chamber": "House of Commons"
       },
@@ -355,10 +355,10 @@
       "originatingChamber": "Senate",
       "sponsor": "Hon. Pierre Moreau",
       "sponsorTitle": "Senator",
-      "status": "At second reading in the House of Commons",
+      "status": "Second reading (House)",
       "latestEvent": {
-        "type": "First reading",
-        "date": "2026-05-28",
+        "type": "Second reading (House)",
+        "date": "2026-02-04",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -397,10 +397,10 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Gary Anandasangaree",
       "sponsorTitle": "Minister of Public Safety",
-      "status": "Royal assent received",
+      "status": "Law (royal assent given)",
       "latestEvent": {
-        "type": "Royal assent",
-        "date": "2026-06-15",
+        "type": "Law (royal assent given)",
+        "date": "2025-06-18",
         "chamber": "Senate"
       },
       "progress": [
@@ -447,10 +447,10 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Gary Anandasangaree",
       "sponsorTitle": "Minister of Public Safety",
-      "status": "At second reading in the Senate",
+      "status": "In committee (Senate)",
       "latestEvent": {
-        "type": "Debate at second reading",
-        "date": "2026-10-21",
+        "type": "In committee (Senate)",
+        "date": "2026-03-12",
         "chamber": "Senate"
       },
       "progress": [
@@ -458,7 +458,7 @@
         true,
         true,
         true,
-        false,
+        true,
         false,
         false
       ],
@@ -489,10 +489,10 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Gary Anandasangaree",
       "sponsorTitle": "Minister of Public Safety",
-      "status": "At second reading in the House of Commons",
+      "status": "Second reading (House)",
       "latestEvent": {
-        "type": "Debate at second reading",
-        "date": "2025-09-17",
+        "type": "Second reading (House)",
+        "date": "2025-06-03",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -522,9 +522,9 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Melissa Lantsman",
       "sponsorTitle": "Member of Parliament",
-      "status": "Outside the Order of Precedence",
+      "status": "Outside the Order of Precedence (a private member's bill that hasn't yet won the draw that determines which private member's bills can be debated)",
       "latestEvent": {
-        "type": "Introduction and first reading",
+        "type": "Outside the Order of Precedence (a private member's bill that hasn't yet won the draw that determines which private member's bills can be debated)",
         "date": "2026-06-17",
         "chamber": "House of Commons"
       },
@@ -555,10 +555,10 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. François-Philippe Champagne",
       "sponsorTitle": "Minister of Finance and National Revenue",
-      "status": "At consideration in committee in the House of Commons",
+      "status": "In committee (House)",
       "latestEvent": {
-        "type": "Second reading and referral to committee",
-        "date": "2026-06-18",
+        "type": "In committee (House)",
+        "date": "2026-04-27",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -597,10 +597,10 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. François-Philippe Champagne",
       "sponsorTitle": "Minister of Finance and National Revenue",
-      "status": "Royal assent received",
+      "status": "Law (royal assent given)",
       "latestEvent": {
-        "type": "Royal assent",
-        "date": "2026-03-26",
+        "type": "Law (royal assent given)",
+        "date": "2025-11-18",
         "chamber": "Senate"
       },
       "progress": [
@@ -655,11 +655,11 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. François-Philippe Champagne",
       "sponsorTitle": "Minister of Finance and National Revenue",
-      "status": "At consideration in committee in the House of Commons",
+      "status": "In committee (House)",
       "latestEvent": {
-        "type": "Pre-study of House bill",
-        "date": "2026-06-10",
-        "chamber": "Senate"
+        "type": "In committee (House)",
+        "date": "2026-05-06",
+        "chamber": "House of Commons"
       },
       "progress": [
         true,
@@ -713,10 +713,10 @@
       "originatingChamber": "Senate",
       "sponsor": "Hon. Marty Deacon",
       "sponsorTitle": "Senator",
-      "status": "At consideration in committee in the House of Commons",
+      "status": "In committee (House)",
       "latestEvent": {
-        "type": "Second reading and referral to committee",
-        "date": "2026-04-22",
+        "type": "In committee (House)",
+        "date": "2025-05-28",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -763,10 +763,10 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Steven MacKinnon",
       "sponsorTitle": "Minister of Transport and Leader of the Government in the House of Commons",
-      "status": "Royal assent received",
+      "status": "Law (royal assent given)",
       "latestEvent": {
-        "type": "Royal assent",
-        "date": "2026-06-18",
+        "type": "Law (royal assent given)",
+        "date": "2026-03-26",
         "chamber": "Senate"
       },
       "progress": [
@@ -821,10 +821,10 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. François-Philippe Champagne",
       "sponsorTitle": "Minister of Finance and National Revenue",
-      "status": "Royal assent received",
+      "status": "Law (royal assent given)",
       "latestEvent": {
-        "type": "Royal assent",
-        "date": "2026-03-12",
+        "type": "Law (royal assent given)",
+        "date": "2025-06-05",
         "chamber": "Senate"
       },
       "progress": [
@@ -871,10 +871,10 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Marianne Dandurand",
       "sponsorTitle": "Member of Parliament",
-      "status": "At report stage in the House of Commons",
+      "status": "Report stage (House)",
       "latestEvent": {
-        "type": "Committee report presented",
-        "date": "2026-10-07",
+        "type": "Report stage (House)",
+        "date": "2026-03-12",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -913,9 +913,9 @@
       "originatingChamber": "Senate",
       "sponsor": "Hon. Pierre Moreau",
       "sponsorTitle": "Senator",
-      "status": "At second reading in the Senate",
+      "status": "Second reading (Senate)",
       "latestEvent": {
-        "type": "Introduction and first reading",
+        "type": "Second reading (Senate)",
         "date": "2026-10-07",
         "chamber": "Senate"
       },
