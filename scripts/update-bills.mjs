@@ -199,6 +199,9 @@ for (const cfg of config.bills) {
   // Config is the source of truth for grouping and the written summary.
   rec.theme = cfg.theme;
   rec.summary = cfg.summary || rec.summary || "";
+  // Optional RiverRidge outlook, written by hand in the config: { "text": "...", "date": "YYYY-MM-DD" }.
+  if (cfg.outlook && cfg.outlook.text) rec.outlook = cfg.outlook;
+  else delete rec.outlook;
   changes.push(...changesFor(baseByNumber.get(cfg.number), rec));
   bills.push(rec);
   await sleep(1200); // be gentle on openparliament

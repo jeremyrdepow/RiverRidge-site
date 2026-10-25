@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Digital Policy Bill Tracker</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Federal bills on online safety, privacy, cyber security, AI and digital finance, with their stage in Parliament. Updated daily from LEGISinfo.">
+<meta name="description" content="Federal bills on online safety, privacy, cyber security, AI and digital finance, with their stage in Parliament. Updated daily from openparliament.ca and LEGISinfo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -133,6 +133,45 @@ section.theme h2 { font-family: var(--font-display); font-weight: 600; font-size
 .changes p { margin: 0; font-size: var(--step--1); color: var(--muted); }
 
 .empty { color: var(--muted); padding: 1rem 0; }
+
+/* Pipeline: every bill as a chip in the stage it has reached. */
+.pipeline { border: 1px solid var(--line); border-radius: 6px; background: var(--surface); padding: 1rem; display: grid; gap: 0.75rem; }
+.pipeline h2 { font-family: var(--font-display); font-weight: 600; font-size: var(--step-1); margin: 0; }
+.pipeline .sub { margin: 0; font-size: var(--step--1); color: var(--muted); }
+.pcols { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; }
+.pcol { display: grid; align-content: start; gap: 0.5rem; padding: 0 0.6rem; border-left: 1px dashed var(--line); min-width: 0; }
+.pcol:first-child { border-left: 0; padding-left: 0; }
+.pcol h3 { margin: 0; font-size: var(--step--1); font-weight: 600; line-height: 1.3; }
+.pcol h3 small { display: block; font-weight: 400; color: var(--muted); font-family: var(--font-data); font-size: 0.72rem; }
+.pchips { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.pchip { font-family: var(--font-data); font-size: 0.78rem; font-weight: 500; text-decoration: none; padding: 0.15rem 0.45rem; border-radius: 4px; border: 1px solid currentColor; background: var(--surface); }
+.pchip.house { color: var(--house); }
+.pchip.senate { color: var(--senate); }
+.pchip.law { color: var(--law); }
+.pchip.waiting { color: var(--muted); }
+.pchip.stalled { border-style: dashed; }
+.pchip:hover { background: var(--chip); }
+.pempty { font-size: var(--step--1); color: var(--muted); }
+.pkey { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; font-size: var(--step--1); color: var(--muted); }
+@media (max-width: 680px) {
+  .pcols { grid-template-columns: minmax(0, 1fr); gap: 0.6rem; }
+  .pcol { border-left: 0; padding: 0.6rem 0 0; border-top: 1px dashed var(--line); grid-template-columns: 8.5rem minmax(0, 1fr); align-items: start; }
+  .pcol:first-child { border-top: 0; padding-top: 0; }
+}
+
+.search { font: inherit; font-size: var(--step--1); border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 0.35rem 0.85rem; width: min(100%, 18rem); }
+.search:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.flag { display: inline-block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border: 1px dashed var(--muted); border-radius: 4px; padding: 0 0.35rem; margin-left: 0.35rem; vertical-align: 0.1em; }
+.outlook { margin: 0 0 0.5rem; max-width: 62ch; font-size: var(--step--1); border-left: 3px solid var(--accent); padding: 0.35rem 0.65rem; background: var(--chip); }
+.outlook b { font-weight: 600; }
+
+details.explain { font-size: var(--step--1); color: var(--muted); }
+details.explain summary { cursor: pointer; color: var(--accent); }
+details.explain dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.3rem 1rem; margin: 0.6rem 0 0; max-width: 70ch; }
+details.explain dt { font-weight: 600; color: var(--ink); }
+details.explain dd { margin: 0; }
+@media (max-width: 560px) { details.explain dl { grid-template-columns: minmax(0, 1fr); } details.explain dd { margin-bottom: 0.4rem; } }
 footer { display: grid; gap: 0.75rem; border-top: 1px solid var(--line); padding-top: 1.25rem; font-size: var(--step--1); color: var(--muted); }
 footer p { margin: 0; max-width: 70ch; }
 footer .contact { color: var(--ink); font-size: var(--step-0); }
@@ -153,9 +192,23 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
 
   <section class="changes" id="changes" aria-label="What changed in the past 7 days" hidden></section>
 
+  <section class="pipeline" aria-labelledby="pipeline-h">
+    <h2 id="pipeline-h">Where every bill stands</h2>
+    <p class="sub">Each chip is a bill, placed at the stage it has reached. Select one to jump to it.</p>
+    <div class="pcols" id="pipeline"></div>
+    <div class="pkey" aria-hidden="true">
+      <span style="color:var(--house)">Green: House of Commons</span>
+      <span style="color:var(--senate)">Red: Senate</span>
+      <span style="color:var(--law)">Gold: law</span>
+      <span>Dashed: no recorded activity in 6+ months</span>
+    </div>
+  </section>
+
   <div class="summary" id="summary" role="group" aria-label="Filter by stage"></div>
 
   <div class="filters" id="filters" role="group" aria-label="Filter by policy area"></div>
+
+  <input class="search" id="search" type="search" placeholder="Search bills, e.g. privacy or C-36" aria-label="Search bills">
 
   <div class="key" aria-hidden="true">
     <span><i style="background:var(--house)"></i>House of Commons stage</span>
@@ -163,6 +216,19 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     <span><i style="background:var(--law)"></i>Royal assent</span>
     <span>1R 2R 3R = first, second, third reading</span>
   </div>
+
+  <details class="explain">
+    <summary>How a bill becomes law</summary>
+    <dl>
+      <dt>First reading</dt><dd>The bill is tabled and published. No debate.</dd>
+      <dt>Second reading</dt><dd>Debate on the bill's main idea, then a vote to send it to committee.</dd>
+      <dt>Committee</dt><dd>MPs or senators hear witnesses and go through the bill clause by clause. Most amendments happen here.</dd>
+      <dt>Report stage</dt><dd>The whole chamber considers the committee's changes and can amend further.</dd>
+      <dt>Third reading</dt><dd>Final debate and vote in that chamber. The bill then goes to the other chamber, which repeats these steps.</dd>
+      <dt>Royal assent</dt><dd>Once both chambers pass the same text, the Governor General's assent makes it law. Some or all of it may come into force later, by order or on a set date.</dd>
+      <dt>Awaiting a debate slot</dt><dd>Private members' bills are debated only once their sponsor's name is drawn for the Order of Precedence. Many never reach debate.</dd>
+    </dl>
+  </details>
 
   <main id="list" aria-live="polite"></main>
 
@@ -198,7 +264,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
   const pillClass = (b) => {
     const s = stageOf(b);
     if (s === "law") return "law";
-    if (/Outside the Order of Precedence/i.test(b.status)) return "waiting";
+    if (isWaiting(b)) return "waiting";
     return s;
   };
   const statusText = (b) => {
@@ -207,7 +273,39 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     return b.status;
   };
 
+  const STALL_DAYS = 180;
+  const isWaiting = (b) => /Outside the Order of Precedence/i.test(b.status);
+  const isStalled = (b) => {
+    if (stageOf(b) === "law") return false;
+    const n = daysAgo(b.latestEvent?.date);
+    return n !== null && n >= STALL_DAYS;
+  };
+  const anchor = (b) => b.number.toLowerCase();
+
+  // Pipeline columns, in order. Each bill lands in exactly one.
+  const COLUMNS = [
+    { id: "waiting", label: "Awaiting a debate slot", note: "Private members' bills" },
+    { id: "early", label: "First chamber", note: "First and second reading" },
+    { id: "committee", label: "First chamber", note: "Committee to third reading" },
+    { id: "second", label: "Second chamber", note: "Passed one chamber" },
+    { id: "law", label: "Law", note: "Royal assent" },
+  ];
+  const columnOf = (b) => {
+    if (stageOf(b) === "law") return "law";
+    if (isWaiting(b)) return "waiting";
+    const p = (b.progress || []).filter(Boolean).length;
+    const origin = /Senate/.test(b.originatingChamber) ? "senate" : "house";
+    if (stageOf(b) !== origin) return "second";
+    return p >= 2 ? "committee" : "early";
+  };
+  const matchesSearch = (b, q) => {
+    if (!q) return true;
+    const hay = [b.number, b.number.replace("-", ""), b.shortTitle, b.longTitle, b.summary, b.sponsor, b.status].join(" ").toLowerCase();
+    return q.toLowerCase().split(/\s+/).every((w) => hay.includes(w));
+  };
+
   let state = { stage: "all", theme: "all" };
+  let query = "";
   try {
     const saved = JSON.parse(localStorage.getItem("rr-tracker-filters") || "null");
     if (saved) state = { ...state, ...saved };
@@ -249,11 +347,12 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     const type = b.type ? b.type.replace("House Government Bill", "Government bill").replace("Senate Government Bill", "Government bill (Senate)").replace("Senate Public Bill", "Senate public bill").replace("Private Member’s Bill", "Private member's bill") : "";
     const ev = b.latestEvent;
     const ago = ev && stageOf(b) !== "law" ? daysAgo(ev.date) : null;
-    return `<article class="bill" id="${esc(b.number.toLowerCase())}">
+    return `<article class="bill" id="${esc(anchor(b))}">
       <div>
-        <h3><span class="num">${esc(b.number)}</span>${esc(title)}</h3>
+        <h3><span class="num">${esc(b.number)}</span>${esc(title)}${isStalled(b) ? `<span class="flag" title="No recorded activity in 6 months or more">Stalled</span>` : ""}</h3>
         <div class="meta">${esc(type)}${sponsor ? " · " + esc(sponsor) : ""}</div>
         ${b.summary ? `<p class="desc">${esc(b.summary)}</p>` : ""}
+        ${b.outlook && b.outlook.text ? `<p class="outlook"><b>RiverRidge outlook${b.outlook.date ? " (" + esc(fmtDate(b.outlook.date)) + ")" : ""}:</b> ${esc(b.outlook.text)}</p>` : ""}
         ${committeesHtml(b)}
         <div class="links">
           <a href="${esc(b.legisinfoUrl)}" rel="noopener">Status on LEGISinfo</a>
@@ -281,6 +380,18 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
       : `<p>No tracked bill changed stage or status in the past 7 days.</p>`);
   }
 
+  function pipelineHtml(bills) {
+    $("pipeline").innerHTML = COLUMNS.map((c) => {
+      const rows = bills.filter((b) => columnOf(b) === c.id).sort((a, b) => a.number.localeCompare(b.number, "en", { numeric: true }));
+      const chips = rows.map((b) => {
+        const title = b.shortTitle || b.longTitle || "";
+        const tip = `${b.number} ${title}: ${statusText(b)}${isStalled(b) ? " (stalled)" : ""}`;
+        return `<a class="pchip ${pillClass(b)}${isStalled(b) ? " stalled" : ""}" href="#${esc(anchor(b))}" title="${esc(tip)}" aria-label="${esc(tip)}">${esc(b.number)}</a>`;
+      }).join("");
+      return `<div class="pcol"><h3>${esc(c.label)} <small>${esc(c.note)} · ${rows.length}</small></h3><div class="pchips">${chips || `<span class="pempty">None</span>`}</div></div>`;
+    }).join("");
+  }
+
   function render(data) {
     const bills = data.bills || [];
     const themes = data.themes || [];
@@ -296,8 +407,9 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
       ).join("");
 
     const order = { house: 0, senate: 0, law: 1 };
-    const filtered = bills.filter((b) =>
-      (state.stage === "all" || stageOf(b) === state.stage) && (state.theme === "all" || b.theme === state.theme));
+    const inScope = bills.filter((b) => (state.theme === "all" || b.theme === state.theme) && matchesSearch(b, query));
+    pipelineHtml(inScope);
+    const filtered = inScope.filter((b) => state.stage === "all" || stageOf(b) === state.stage);
     const sections = themes.map((t) => {
       const rows = filtered.filter((b) => b.theme === t.id).sort((a, b) =>
         (order[stageOf(a)] - order[stageOf(b)]) ||
@@ -312,6 +424,26 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
   }
 
   let DATA = null;
+
+  // A link like #c-34 should land on that bill even if filters would hide it.
+  function goToHash() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (!DATA || !id || !DATA.bills.some((b) => anchor(b) === id)) return;
+    if (!document.getElementById(id)) {
+      state = { stage: "all", theme: "all" };
+      query = "";
+      $("search").value = "";
+      render(DATA);
+    }
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ block: "start" });
+  }
+  window.addEventListener("hashchange", goToHash);
+  $("search").addEventListener("input", (e) => {
+    query = e.target.value.trim();
+    if (DATA) render(DATA);
+  });
+
   document.addEventListener("click", (e) => {
     const c = e.target.closest("[data-copy]");
     if (c) {
@@ -335,14 +467,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     .then((d) => {
       DATA = d;
       render(d);
-      // A shared link like #c-34 should land on that bill even if saved filters would hide it.
-      const id = decodeURIComponent(location.hash.slice(1));
-      if (id && !document.getElementById(id) && d.bills.some((b) => b.number.toLowerCase() === id)) {
-        state = { stage: "all", theme: "all" };
-        render(d);
-      }
-      const el = id && document.getElementById(id);
-      if (el) el.scrollIntoView();
+      goToHash();
     })
     .catch(() => {
       $("checked").textContent = "";
