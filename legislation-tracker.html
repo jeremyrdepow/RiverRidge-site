@@ -138,7 +138,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
   <header>
     <div class="eyebrow">RiverRidge Policy &amp; Risk Intelligence · 45th Parliament, 1st session</div>
     <div class="titlerow"><h1>Digital policy bills before Parliament</h1><span class="beta">Beta</span></div>
-    <p class="lede">Federal bills on online safety, privacy, cyber security, AI and digital finance, and where each one stands. Status, committees and dates refresh every morning from LEGISinfo, the Parliament of Canada's bill tracker.</p>
+    <p class="lede">Federal bills on online safety, privacy, cyber security, AI and digital finance, and where each one stands. Bill status refreshes every morning from openparliament.ca; committees and bill-text links come from LEGISinfo, the Parliament of Canada's official record.</p>
     <p class="betanote">This tracker is in beta. Check any status that matters to you against LEGISinfo, and send corrections or bills you want added to <span class="addr">contact@riverridgeintelligence.ca</span>.</p>
     <div class="checked" id="checked">Loading status…</div>
   </header>
@@ -158,7 +158,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
 
   <footer>
     <p class="contact">Need to know what a bill means for your organization, or when it is likely to move? Contact RiverRidge at <span class="addr">contact@riverridgeintelligence.ca</span>.</p>
-    <p>Source: <a href="https://www.parl.ca/legisinfo/en/overview" rel="noopener">LEGISinfo</a>, Parliament of Canada. Bill status is retrieved automatically each day; LEGISinfo is the official record. Royal assent does not mean a law is in force; many provisions take effect later by order or regulation. Bill descriptions are RiverRidge summaries.</p>
+    <p>Sources: bill status from <a href="https://openparliament.ca/" rel="noopener">openparliament.ca</a>, retrieved automatically each day; committees and bill-text links from <a href="https://www.parl.ca/legisinfo/en/overview" rel="noopener">LEGISinfo</a>, Parliament of Canada, which is the official record. Royal assent does not mean a law is in force; many provisions take effect later by order or regulation. Bill descriptions are RiverRidge summaries.</p>
   </footer>
 </div>
 
@@ -286,7 +286,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     $("list").innerHTML = sections || `<p class="empty">No bills match these filters.</p>`;
 
     const checked = new Date(data.checkedAt);
-    $("checked").textContent = `Status checked against LEGISinfo on ${checked.toLocaleDateString("en-CA", { month: "long", day: "numeric", year: "numeric" })}. ${bills.length} bills tracked.`;
+    $("checked").textContent = `Status last refreshed ${checked.toLocaleDateString("en-CA", { month: "long", day: "numeric", year: "numeric" })}. ${bills.length} bills tracked.`;
   }
 
   let DATA = null;
