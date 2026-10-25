@@ -1,7 +1,20 @@
-// Refreshes data/bills.json from LEGISinfo (Parliament of Canada).
+// Refreshes the volatile fields in data/bills.json (status, stage, date, law)
+// from the openparliament.ca API, which is built for programmatic access and
+// is reachable from GitHub. LEGISinfo blocks GitHub's servers by IP, so it
+// cannot be fetched here.
+//
+// Design: data/bills.json is the baseline. It holds the rich detail seeded
+// from LEGISinfo (titles, sponsors, committees, bill-text links). This script
+// only OVERLAYS the fast-changing fields from openparliament onto that
+// baseline. If a bill cannot be fetched, its baseline record is kept as-is and
+// flagged stale. The run never fails just because a fetch did, so the live
+// page never breaks.
+//
+// Committees are not carried by openparliament. They stay in data/bills.json
+// and are maintained by hand from LEGISinfo when they change.
+//
 // Run by .github/workflows/update-legislation-tracker.yml once a day.
-// Usage: node scripts/update-bills.mjs
-// Node 20+ (uses built-in fetch). No dependencies.
+// Node 20+ (built-in fetch). No dependencies.
 
 import { readFile, writeFile } from "node:fs/promises";
 
@@ -11,166 +24,158 @@ const OUT_PATH = new URL("../data/bills.json", import.meta.url);
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-// Send the headers a real browser would. LEGISinfo sits behind bot protection
-// that rejects requests with a non-browser User-Agent or missing Accept headers.
-const BROWSER_HEADERS = {
-  "User-Agent":
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36",
-  Accept: "application/json, text/javascript, */*; q=0.01",
-  "Accept-Language": "en-CA,en;q=0.9,fr;q=0.8",
-  Referer: "https://www.parl.ca/legisinfo/en/bills?parlsession=45-1",
+const HEADERS = {
+  // openparliament asks (not requires) for a contact email here. Kept to a
+  // plain identifier and the site URL at Jeremy's instruction.
+  "User-Agent": "RiverRidge-legislation-tracker/1.0 (+https://riverridgeintelligence.ca)",
+  Accept: "application/json",
 };
 
 async function fetchBill(number) {
-  const url = `https://www.parl.ca/legisinfo/en/bill/${SESSION}/${number.toLowerCase()}/json`;
+  const url = `https://api.openparliament.ca/bills/${SESSION}/${number.toUpperCase()}/?format=json`;
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
-      const res = await fetch(url, { headers: BROWSER_HEADERS });
+      const res = await fetch(url, { headers: HEADERS });
+      if (res.status === 429) throw new Error("HTTP 429 (rate limited)");
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
-      const bill = Array.isArray(data) ? data[0] : data;
-      if (!bill || !bill.NumberCode) throw new Error("unexpected payload");
-      return bill;
+      return await res.json();
     } catch (err) {
       if (attempt === 3) throw err;
-      await sleep(2000 * attempt);
+      await sleep(3000 * attempt);
     }
   }
 }
 
-function committeeUrl(acronym, chamber) {
-  if (!acronym) return null;
-  return chamber === "Senate"
-    ? `https://sencanada.ca/en/committees/${acronym}/${SESSION}`
-    : `https://www.ourcommons.ca/Committees/en/${acronym}?parl=45&session=1`;
+// openparliament may give status as a string or as {en, fr}. Be tolerant.
+function statusText(op) {
+  const s = op.status ?? op.status_name ?? op.status_code ?? "";
+  if (typeof s === "string") return s.trim();
+  if (s && typeof s === "object") return (s.en || s.fr || "").trim();
+  return "";
 }
 
-function committeesFrom(bill) {
-  const list = [];
-  const seen = new Set();
-  const add = (c, chamber, role) => {
-    if (!c || !c.CommitteeNameEn) return;
-    const key = `${chamber}|${c.CommitteeAcronym || c.CommitteeNameEn}|${role}`;
-    if (seen.has(key)) return;
-    seen.add(key);
-    list.push({
-      name: c.CommitteeNameEn,
-      acronym: c.CommitteeAcronym || "",
-      chamber,
-      role,
-      url: committeeUrl(c.CommitteeAcronym, chamber),
-      current: false,
-    });
-  };
-  const stages = bill.BillStages || {};
-  for (const [arr, chamber] of [
-    [stages.HouseBillStages, "House of Commons"],
-    [stages.SenateBillStages, "Senate"],
-  ]) {
-    for (const st of arr || []) {
-      add(st.Committee, chamber, "study");
-      for (const m of st.CommitteeMeetings || []) add(m, chamber, "study");
-    }
-  }
-  const pre = bill.SenatePreStudyCommitteeDetails;
-  for (const c of Array.isArray(pre) ? pre : pre ? [pre] : []) add(c, "Senate", "pre-study");
+const MONTHS = {
+  jan: "01", feb: "02", mar: "03", apr: "04", may: "05", jun: "06",
+  jul: "07", aug: "08", sep: "09", oct: "10", nov: "11", dec: "12",
+};
 
-  // Flag the committee(s) holding the bill right now.
-  const status = bill.StatusNameEn || "";
-  if (/committee/i.test(status)) {
-    const chamber = /Senate/.test(status) ? "Senate" : "House of Commons";
-    const inChamber = list.filter((c) => c.chamber === chamber && c.role === "study");
-    if (inChamber.length) inChamber[inChamber.length - 1].current = true;
-  }
-  if (bill.IsInSenatePreStudy) list.filter((c) => c.role === "pre-study").forEach((c) => (c.current = true));
-  return list;
+// Pull "as of Oct. 22, 2026" out of the status string, if present.
+function dateFromStatus(s) {
+  const m = s.match(/as of\s+([A-Za-z]+)\.?\s+(\d{1,2}),?\s+(\d{4})/i);
+  if (!m) return null;
+  const mo = MONTHS[m[1].slice(0, 3).toLowerCase()];
+  if (!mo) return null;
+  return `${m[3]}-${mo}-${String(m[2]).padStart(2, "0")}`;
 }
 
-function textUrl(bill) {
-  const code = bill.NumberCode.toUpperCase();
-  let version = "first-reading";
-  if (bill.ReceivedRoyalAssent) version = "royal-assent";
-  else if (bill.PassedFirstChamberThirdReading) version = "third-reading";
-  return `https://www.parl.ca/DocumentViewer/en/${SESSION}/bill/${code}/${version}`;
+function isLaw(op, s) {
+  if (op.law === true) return true;
+  return /\b(law|royal assent)\b/i.test(s);
 }
 
-function toRecord(bill, cfg) {
-  const statute =
-    bill.StatuteYear && bill.StatuteChapter ? `S.C. ${bill.StatuteYear}, c. ${bill.StatuteChapter}` : null;
-  return {
-    number: bill.NumberCode,
-    theme: cfg.theme,
-    summary: cfg.summary || "",
-    shortTitle: bill.ShortTitleEn || "",
-    longTitle: bill.LongTitleEn || "",
-    type: bill.BillDocumentTypeNameEn || "",
-    isGovernmentBill: !!bill.IsGovernmentBill,
-    originatingChamber: bill.OriginatingChamberNameEn || "",
-    sponsor: [bill.SponsorPersonShortHonorificEn, (bill.SponsorPersonName || "").trim()]
-      .filter(Boolean)
-      .join(" ")
-      .trim(),
-    sponsorTitle: bill.SponsorAffiliationTitleEn || bill.SponsorConstituencyNameEn || "",
-    status: bill.StatusNameEn || "",
-    latestEvent: bill.LatestBillEventTypeNameEn
-      ? {
-          type: bill.LatestBillEventTypeNameEn,
-          date: (bill.LatestBillEventDateTime || "").slice(0, 10),
-          chamber: bill.LatestBillEventChamberNameEn || "",
-        }
-      : null,
-    progress: [
-      !!bill.PassedFirstChamberFirstReading,
-      !!bill.PassedFirstChamberSecondReading,
-      !!bill.PassedFirstChamberThirdReading,
-      !!bill.PassedSecondChamberFirstReading,
-      !!bill.PassedSecondChamberSecondReading,
-      !!bill.PassedSecondChamberThirdReading,
-      !!bill.ReceivedRoyalAssent,
-    ],
-    royalAssent: bill.ReceivedRoyalAssentDateTime ? bill.ReceivedRoyalAssentDateTime.slice(0, 10) : null,
-    statute,
-    committees: committeesFrom(bill),
-    legisinfoUrl: `https://www.parl.ca/legisinfo/en/bill/${SESSION}/${bill.NumberCode.toLowerCase()}`,
-    textUrl: textUrl(bill),
+// Which chamber the bill is in now, from the status text.
+function chamberFromStatus(s) {
+  if (/senate/i.test(s)) return "Senate";
+  if (/house|commons/i.test(s)) return "House of Commons";
+  return "";
+}
+
+// Furthest of the 7 stages reached, derived from the status text plus the
+// bill's originating chamber. Approximate but only ever used to advance the
+// bar: the result is max()'d against the baseline so parsing noise can never
+// move a bill backwards.
+// Count of true entries at the front of a progress array.
+const countProgress = (p) => (Array.isArray(p) ? p.filter(Boolean).length : 0);
+const toProgress = (n) => Array.from({ length: 7 }, (_, i) => i < n);
+
+function derivedStages(s, originating) {
+  if (isLaw({}, s)) return 7;
+  const cur = chamberFromStatus(s) || originating;
+  const second = cur && originating && cur !== originating;
+  // Stage within the current chamber.
+  let within = 0;
+  if (/third reading/i.test(s)) within = 3;
+  else if (/report stage/i.test(s)) within = 2;
+  else if (/committee/i.test(s)) within = 2;
+  else if (/second reading/i.test(s)) within = 1;
+  else if (/first reading|introduc/i.test(s)) within = 1;
+  if (second) return Math.min(7, 3 + within);
+  return Math.min(3, within);
+}
+
+function overlay(base, op) {
+  const s = statusText(op);
+  if (!s) return { ...base, stale: true };
+  const law = isLaw(op, s);
+  const chamber = chamberFromStatus(s);
+  const date = dateFromStatus(s) || op.introduced || base.latestEvent?.date || null;
+  const reached = Math.max(countProgress(base.progress), law ? 7 : derivedStages(s, base.originatingChamber));
+
+  const next = {
+    ...base,
+    status: s,
+    progress: toProgress(reached),
+    latestEvent: {
+      type: s.replace(/,?\s*as of.*$/i, "").trim() || "Status update",
+      date,
+      chamber: chamber || base.latestEvent?.chamber || "",
+    },
     stale: false,
   };
+  if (law) {
+    next.royalAssent = base.royalAssent || date;
+    // Point the bill-text link at the royal-assent version once it is law.
+    if (base.textUrl) next.textUrl = base.textUrl.replace(/\/(first-reading|third-reading)$/, "/royal-assent");
+  }
+  return next;
 }
 
 const config = JSON.parse(await readFile(CONFIG_PATH, "utf8"));
 let previous = { bills: [] };
 try {
   previous = JSON.parse(await readFile(OUT_PATH, "utf8"));
-} catch {}
-const prevByNumber = new Map(previous.bills.map((b) => [b.number, b]));
+} catch {
+  console.error("No baseline data/bills.json found; cannot overlay. Exiting without writing.");
+  process.exit(1);
+}
+const baseByNumber = new Map(previous.bills.map((b) => [b.number, b]));
 
 const bills = [];
-let failures = 0;
+let updated = 0;
+let stale = 0;
 for (const cfg of config.bills) {
+  const base = baseByNumber.get(cfg.number) || {
+    number: cfg.number,
+    originatingChamber: cfg.number.startsWith("S") ? "Senate" : "House of Commons",
+    progress: [false, false, false, false, false, false, false],
+    committees: [],
+    legisinfoUrl: `https://www.parl.ca/legisinfo/en/bill/${SESSION}/${cfg.number.toLowerCase()}`,
+    textUrl: `https://www.parl.ca/DocumentViewer/en/${SESSION}/bill/${cfg.number}/first-reading`,
+  };
+  let rec;
   try {
-    const bill = await fetchBill(cfg.number);
-    bills.push(toRecord(bill, cfg));
-    console.log(`ok   ${cfg.number}: ${bill.StatusNameEn}`);
+    const op = await fetchBill(cfg.number);
+    rec = overlay(base, op);
+    console.log(`ok   ${cfg.number}: ${rec.status}`);
+    updated++;
   } catch (err) {
-    failures++;
-    const prev = prevByNumber.get(cfg.number);
-    if (prev) bills.push({ ...prev, theme: cfg.theme, summary: cfg.summary || prev.summary, stale: true });
-    console.error(`FAIL ${cfg.number}: ${err.message}${prev ? " (kept previous record)" : ""}`);
+    rec = { ...base, stale: true };
+    stale++;
+    console.error(`stale ${cfg.number}: ${err.message} (kept baseline)`);
   }
-  await sleep(500);
-}
-
-if (failures > config.bills.length / 2) {
-  console.error(`Too many failures (${failures}/${config.bills.length}); leaving bills.json unchanged.`);
-  process.exit(1);
+  // Config is the source of truth for grouping and the written summary.
+  rec.theme = cfg.theme;
+  rec.summary = cfg.summary || rec.summary || "";
+  bills.push(rec);
+  await sleep(1200); // be gentle on openparliament
 }
 
 const out = {
   checkedAt: new Date().toISOString(),
-  source: "LEGISinfo, Parliament of Canada",
+  source: "openparliament.ca (bill status) and LEGISinfo, Parliament of Canada (committees and links)",
   session: SESSION,
   themes: config.themes,
   bills,
 };
 await writeFile(OUT_PATH, JSON.stringify(out, null, 2) + "\n");
-console.log(`Wrote ${bills.length} bills (${failures} failed).`);
+console.log(`Wrote ${bills.length} bills: ${updated} refreshed, ${stale} kept from baseline.`);
