@@ -9,43 +9,33 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - name: Test access to House and Senate pages
+      - name: Fetch samples
         run: |
           UA="RiverRidge-legislation-tracker/1.0 (+https://riverridgeintelligence.ca)"
-          out=probe/committees; mkdir -p $out
-          echo "runner: $(date -u +%FT%TZ)" > $out/results.tsv
+          out=probe/samples; mkdir -p $out
           while read -r label url; do
             [ -z "$label" ] && continue
-            for try in 1 2; do
-              res=$(curl -sS -L -A "$UA" -m 30 -o $out/body.tmp -w "%{http_code}\t%{size_download}\t%{content_type}" "$url" 2>&1) || true
-              title=$(grep -o -i -m1 '<title>[^<]*' $out/body.tmp 2>/dev/null | sed 's/<title>//I' | tr -s ' \t' ' ' | head -c 90)
-              block=$(grep -l -i -E 'access denied|request blocked|captcha|are you a robot|forbidden' $out/body.tmp >/dev/null 2>&1 && echo BLOCKPAGE || echo -)
-              printf "%s\t%s\t%s\t%s\t%s\t%s\n" "$label" "$try" "$res" "$block" "$title" "$url" >> $out/results.tsv
-              cp $out/body.tmp "$out/$label.html" 2>/dev/null || true
-              sleep 2
-            done
+            res=$(curl -sS -L -A "$UA" -m 60 -o "$out/$label" -w "%{http_code}\t%{size_download}\t%{content_type}" "$url" 2>&1) || true
+            printf "%s\t%s\t%s\n" "$label" "$res" "$url" >> $out/results.tsv
+            sleep 1.5
           done <<'URLS'
-          house-committees-home https://www.ourcommons.ca/Committees/en/Home
-          house-SECU https://www.ourcommons.ca/Committees/en/SECU
-          house-JUST-meetings https://www.ourcommons.ca/Committees/en/JUST/Meetings
-          house-INDU-meetings https://www.ourcommons.ca/Committees/en/INDU/Meetings
-          house-hansard-latest https://www.ourcommons.ca/DocumentViewer/en/house/latest/hansard
-          house-journals-latest https://www.ourcommons.ca/DocumentViewer/en/house/latest/journals
-          house-notice-paper https://www.ourcommons.ca/DocumentViewer/en/house/latest/order-notice
-          house-votes https://www.ourcommons.ca/members/en/votes
-          senate-committees https://sencanada.ca/en/committees/
-          senate-SECD https://sencanada.ca/en/committees/SECD/45-1
-          senate-LCJC https://sencanada.ca/en/committees/LCJC/45-1
-          senate-debates https://sencanada.ca/en/in-the-chamber/debates/
-          senate-journals https://sencanada.ca/en/in-the-chamber/journals/
-          legisinfo-c22 https://www.parl.ca/legisinfo/en/bill/45-1/c-22/json
-          op-committees-api https://api.openparliament.ca/committees/?format=json
-          op-committees-page https://openparliament.ca/committees/
+          notice-paper-p11.html https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-156/order-notice/page-11
+          secu-36-notice.html https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-36/notice
+          secu-36-minutes.html https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-36/minutes
+          han155.xml https://www.ourcommons.ca/Content/House/451/Debates/155/HAN155-E.XML
+          senate-debates-095.html https://sencanada.ca/en/content/sen/chamber/451/debates/095db_2026-10-22-e
+          senate-debates-list.html https://sencanada.ca/en/in-the-chamber/debates/45-1
+          senate-SECD-witnesses.html https://sencanada.ca/en/committees/SECD/witnesses/45-1
+          senate-SECD-schedule.html https://sencanada.ca/en/committees/SECD/meetingschedule/45-1
           URLS
-          rm -f $out/body.tmp
+          for n in $(node -e 'console.log(require("./data/bills.config.json").bills.map(b=>b.number.toLowerCase()).join(" "))'); do
+            res=$(curl -sS -A "$UA" -m 60 -o "$out/legisinfo-$n.json" -w "%{http_code}\t%{size_download}" "https://www.parl.ca/legisinfo/en/bill/45-1/$n/json" 2>&1) || true
+            printf "legisinfo-%s\t%s\n" "$n" "$res" >> $out/results.tsv
+            sleep 1.5
+          done
       - name: Commit results
         run: |
           git config user.name "riverridge-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add probe/committees
-          git commit -m "Probe results: House and Senate committee pages" && git push
+          git add probe/samples
+          git commit -m "Probe results: samples for committee, debate and notice parsing" && git push
