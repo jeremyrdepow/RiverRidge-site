@@ -9,20 +9,65 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - name: Fetch samples
+      - name: Bill text, committee pages, lobbying open data
         run: |
           UA="RiverRidge-legislation-tracker/1.0 (+https://riverridgeintelligence.ca)"
-          out=probe/notices; mkdir -p $out
-          for n in 130 131 132 134 135; do
-            curl -sS -L -A "$UA" -m 60 -o "$out/toc-$n.html" "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-$n/order-notice" || true
-            page=$(grep -o "/documentviewer/en/45-1/house/sitting-$n/order-notice/page-[0-9]*\">Notice Paper" "$out/toc-$n.html" | head -1 | sed 's/">Notice Paper//')
-            echo "sitting $n notice page: $page" >> $out/results.txt
-            if [ -n "$page" ]; then curl -sS -L -A "$UA" -m 60 -o "$out/notice-$n.html" "https://www.ourcommons.ca$page" || true; fi
-            sleep 1.5
+          out=probe/sources; mkdir -p $out; log=$out/results.tsv
+          get() { curl -sS -L -A "$UA" -m 120 -o "$out/$1" -w "$1\t%{http_code}\t%{size_download}\t%{content_type}\t$2\n" "$2" >> $log 2>&1 || echo "$1	ERR	$2" >> $log; sleep 1.5; }
+          # 1. Bill text: C-22's three versions (LEGISinfo publication ids), then candidate XML/PDF paths.
+          get c22-v1.html https://www.parl.ca/DocumentViewer/en/13966446
+          get c22-v2.html https://www.parl.ca/DocumentViewer/en/14201018
+          get c22-v3.html https://www.parl.ca/DocumentViewer/en/14202841
+          get c22-firstreading.html https://www.parl.ca/DocumentViewer/en/45-1/bill/C-22/first-reading
+          grep -ohiE 'href="[^"]*\.(xml|pdf)"' $out/c22-v*.html $out/c22-firstreading.html | sort -u > $out/c22-doclinks.txt || true
+          for v in 1 2 3; do
+            for ext in XML xml PDF; do get "c22_$v.$ext" "https://www.parl.ca/Content/Bills/451/Government/C-22/C-22_$v/C-22_$v.$ext"; done
+            get "c22_${v}_E.xml" "https://www.parl.ca/Content/Bills/451/Government/C-22/C-22_$v/C-22_E.xml"
           done
+          # 2. Committee: C-22 study page at SECU, last meeting's minutes and evidence.
+          get secu-c22-study.html "https://www.ourcommons.ca/Committees/en/SECU/StudyActivity?studyActivityId=13454852"
+          get secu-45-minutes.html https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-45/minutes
+          get secu-45-evidence.html https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-45/evidence
+          get secu-36-evidence.html https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-36/evidence
+          grep -ohiE 'href="[^"]*(brief|Brief|WebDoc|\.pdf)[^"]*"' $out/secu-c22-study.html | sort -u | head -80 > $out/secu-c22-brieflinks.txt || true
+          # 3. Lobbying registry open data, found through the open government portal's API.
+          get ckan-lobby.json "https://open.canada.ca/data/api/action/package_search?q=lobbyists%20registry&rows=10"
+          get ocl-opendata.html https://lobbycanada.gc.ca/en/open-data/
+          grep -ohiE 'href="[^"]*\.(zip|csv)"' $out/ocl-opendata.html | sort -u > $out/ocl-links.txt || true
+          python3 - "$out" <<'PY'
+          import json,sys
+          out=sys.argv[1]
+          try:
+              d=json.load(open(f"{out}/ckan-lobby.json"))
+          except Exception as e:
+              open(f"{out}/ckan-resources.tsv","w").write(f"error {e}\n"); sys.exit(0)
+          with open(f"{out}/ckan-resources.tsv","w") as f:
+              for p in d["result"]["results"]:
+                  for r in p.get("resources",[]):
+                      f.write("\t".join([p.get("name",""),p.get("title",""),r.get("name",""),r.get("format",""),str(r.get("size") or ""),r.get("url","")])+"\n")
+          PY
+          cat $out/ckan-resources.tsv | cut -c1-300
+      - name: Download and search the lobbying communications data
+        run: |
+          out=probe/sources; mkdir -p /tmp/lob
+          url=$(grep -iE 'communication' $out/ckan-resources.tsv | grep -iE '\.zip|zip' | grep -iE 'en|eng|english' | head -1 | awk -F'\t' '{print $6}')
+          [ -z "$url" ] && url=$(grep -iE '\.zip' $out/ckan-resources.tsv | head -1 | awk -F'\t' '{print $6}')
+          [ -z "$url" ] && url=$(grep -iE 'communication.*\.zip' $out/ocl-links.txt | head -1 | sed 's/href="//; s/"$//')
+          echo "chosen: $url" | tee $out/lobby-chosen.txt
+          [ -z "$url" ] && exit 0
+          case "$url" in http*) ;; *) url="https://lobbycanada.gc.ca$url";; esac
+          curl -sS -L -m 600 -o /tmp/lob/data.zip -w "%{http_code} %{size_download}\n" "$url" | tee -a $out/lobby-chosen.txt || true
+          cd /tmp/lob && unzip -o -q data.zip && cd - >/dev/null || true
+          ls -la /tmp/lob | tee $out/lobby-files.txt
+          for f in /tmp/lob/*.csv; do echo "== $f"; head -c 1500 "$f"; echo; done > $out/lobby-heads.txt 2>&1 || true
+          for pat in "C-22" "C-34" "C-36" "C-8" "C-2" "S-209" "Lawful Access" "Online Harms" "Safe Social Media" "Digital Safety" "Protecting Privacy and Consumer Data" "Critical Cyber"; do
+            printf "%s\t" "$pat"; cat /tmp/lob/*.csv 2>/dev/null | grep -c -i -- "$pat"
+          done > $out/lobby-counts.tsv
+          grep -h -i -m 40 -E "C-22|Lawful Access" /tmp/lob/*.csv | cut -c1-400 > $out/lobby-c22-sample.txt || true
       - name: Commit results
         run: |
           git config user.name "riverridge-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add probe/notices
-          git commit -m "Probe results: Notice Paper samples" && git push
+          find probe/sources -size +3M -delete
+          git add probe/sources
+          git commit -m "Probe results: bill text, committee pages, lobbying data" && git push
