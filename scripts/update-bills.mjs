@@ -616,13 +616,15 @@ for (const b of bills) {
 // appears. At most TEXT_FETCHES pages and files per run (the first runs
 // backfill).
 const TEXT_FETCHES = 60;
+// Bump when the analysis changes, so texts analysed before are redone.
+const TEXT_ANALYSIS = 2;
 let textFetches = 0;
 let textsAnalysed = 0;
 for (const b of bills) {
   const pubs = b.publications || [];
   const prev = b.text || {};
   const basis = pubs.map((p) => p.id).join(",");
-  if (!pubs.length || prev.basis === basis) continue;
+  if (!pubs.length || (prev.basis === basis && prev.analysis === TEXT_ANALYSIS)) continue;
   const known = new Map((prev.versions || []).map((v) => [v.id, v]));
   const versions = [];
   try {
@@ -644,7 +646,7 @@ for (const b of bills) {
       docs.push({ type: v.type, xml: await fetchText(v.xml) });
       await sleep(1200);
     }
-    b.text = { basis, versions, ...analyse(docs) };
+    b.text = { basis, analysis: TEXT_ANALYSIS, versions, ...analyse(docs) };
     textsAnalysed++;
   } catch (err) {
     console.error(`bill text ${b.number}: ${err.message}`);

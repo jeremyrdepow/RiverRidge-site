@@ -168,10 +168,11 @@ export function comingIntoForce(list) {
 export function penalties(list) {
   const out = [];
   for (const p of list) {
-    if (!/\$\s?\d/.test(p.text) || !/penalt|fine|liable/i.test(p.text)) continue;
-    const amounts = [...new Set(p.text.match(/\$\s?[\d,]+(?:\.\d+)?(?: (?:million|billion))?/g) || [])];
+    if (!/\$\s?\d/.test(p.text) || !/penalt|fine|liable/i.test(`${p.text} ${p.note}`)) continue;
+    const amounts = [...new Set(p.text.match(/\$\s?\d(?:[\d,]*\d)?(?:\.\d+)?(?: (?:million|billion))?/g) || [])];
     const at = p.text.search(/\$\s?\d/);
-    const start = Math.max(0, p.text.lastIndexOf(". ", at) + 2);
+    const stop = p.text.lastIndexOf(". ", at);
+    const start = stop < 0 ? 0 : stop + 2;
     const end = p.text.indexOf(". ", at);
     const sentence = p.text.slice(start, end > 0 ? end + 1 : undefined);
     out.push({ ref: p.ref, note: p.note, amounts, text: sentence.length > 280 ? sentence.slice(0, 277) + "..." : sentence });
