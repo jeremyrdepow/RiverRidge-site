@@ -123,6 +123,19 @@ section.theme h2 { font-family: var(--font-display); font-weight: 600; font-size
 .stale { font-size: var(--step--1); color: var(--senate); }
 .bill { scroll-margin-top: 1rem; }
 .bill:target { background: var(--chip); box-shadow: -0.75rem 0 0 var(--chip), 0.75rem 0 0 var(--chip); }
+.record { margin: 0.1rem 0 0.6rem; max-width: 66ch; font-size: var(--step--1); }
+.record .tally { color: var(--muted); }
+.record .tally b { color: var(--ink); font-weight: 600; }
+.record summary { cursor: pointer; color: var(--accent); margin-top: 0.2rem; }
+.record h4 { margin: 0.6rem 0 0.2rem; font-size: var(--step--1); font-weight: 600; }
+.record ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.25rem; }
+.record .when { font-family: var(--font-data); color: var(--muted); font-variant-numeric: tabular-nums; }
+.record .who { color: var(--muted); }
+.record .note { margin: 0.4rem 0 0; color: var(--muted); }
+.onnotice { font-size: var(--step--1); color: var(--muted); border-top: 1px dashed var(--line); padding-top: 0.6rem; }
+.onnotice h3 { margin: 0 0 0.25rem; font-size: var(--step--1); font-weight: 600; color: var(--ink); }
+.onnotice ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.25rem; color: var(--ink); }
+.checked a { color: var(--accent); }
 .copylink { font: inherit; font-size: var(--step--1); color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
 .changes { border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 6px; background: var(--surface); padding: 0.75rem 1rem; }
 .changes h2 { font-family: var(--font-display); font-weight: 600; font-size: var(--step-0); margin: 0 0 0.4rem; }
@@ -205,6 +218,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     <h2 id="pipeline-h">Where every bill stands</h2>
     <p class="sub">Each chip is a bill, placed at the stage it has reached. Select one to jump to it.</p>
     <div class="pcols" id="pipeline"></div>
+    <div class="onnotice" id="onnotice"></div>
     <div class="pkey" aria-hidden="true">
       <span style="color:var(--house)">Green: House of Commons</span>
       <span style="color:var(--senate)">Red: Senate</span>
@@ -371,6 +385,76 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     </div>`;
   }
 
+  const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+  const shortRole = (t) => t.split(", ").pop(); // "Hon. X, P.C., M.P., Minister of Justice" to "Minister of Justice"
+  const todayIso = () => new Date().toLocaleDateString("en-CA", { timeZone: "America/Toronto" });
+  const SHOW = 6;
+
+  // The bill's parliamentary record: committee meetings and witnesses, days
+  // something happened in the chamber, recorded decisions, and speeches that
+  // named the bill. A one-line tally shows; the detail opens on request.
+  function recordHtml(b) {
+    const a = b.activity || {};
+    const meetings = a.meetings || [];
+    const sittings = a.sittings || [];
+    const decisions = a.decisions || [];
+    const mentions = b.mentions || [];
+    if (!meetings.length && !sittings.length && !decisions.length && !mentions.length) return "";
+    const today = todayIso();
+    const held = meetings.filter((m) => m.date <= today);
+    const next = meetings.filter((m) => m.date > today).sort((x, y) => x.date.localeCompare(y.date))[0];
+    const days = new Set(sittings.map((x) => x.chamber + x.sitting)).size;
+    const speeches30 = mentions.filter((m) => daysAgo(m.date) <= 30).reduce((n, m) => n + m.speeches, 0);
+    const tally = [
+      held.length ? `<b>${plural(held.length, "committee meeting", "committee meetings")}</b>, latest ${esc(fmtDate(held[0].date))} (${esc(held[0].committee)})` : "",
+      next ? `next meeting <b>${esc(fmtDate(next.date))}</b> (${esc(next.committee)})` : "",
+      days ? `<b>${plural(days, "sitting day", "sitting days")}</b> in the chamber` : "",
+      speeches30 ? `named in <b>${plural(speeches30, "speech", "speeches")}</b> in the last 30 days` : "",
+    ].filter(Boolean).join(" · ");
+
+    const more = (list, what) => list.length > SHOW ? `<li><a href="${esc(b.legisinfoUrl)}" rel="noopener">${plural(list.length - SHOW, `earlier ${what}`, `earlier ${what}s`)} on LEGISinfo</a></li>` : "";
+    const witnessText = (w) => {
+      if (!w) return "";
+      const parts = [];
+      if (w.appearing.length) parts.push(`Appearing: ${w.appearing.map(shortRole).join("; ")}`);
+      if (w.orgs.length) parts.push(`Witnesses: ${w.orgs.slice(0, 4).join("; ")}${w.orgs.length > 4 ? `; and ${w.orgs.length - 4} more` : ""}`);
+      if (w.people.length) parts.push(plural(w.people.length, "individual", "individuals"));
+      return parts.length ? `<br><span class="who">${esc(parts.join(" · "))}</span>` : "";
+    };
+    const sections = [];
+    if (meetings.length) {
+      sections.push(`<h4>Committee meetings</h4><ul>${meetings.slice(0, SHOW).map((m) =>
+        `<li><span class="when">${esc(fmtDate(m.date))}</span> · <a href="${esc(m.url)}" rel="noopener">${esc(m.committee)} meeting ${esc(m.number)}</a>${m.date > today ? " (scheduled)" : ""}${m.chamber === "Senate" ? " (Senate)" : ""}${witnessText(m.witnesses)}</li>`
+      ).join("")}${more(meetings, "meeting")}</ul>`);
+    }
+    if (sittings.length) {
+      sections.push(`<h4>In the chamber</h4><ul>${sittings.slice(0, SHOW).map((x) =>
+        `<li><span class="when">${esc(fmtDate(x.date))}</span> · ${esc(x.chamber)} · <a href="${esc(x.url)}" rel="noopener">${esc(x.event)}</a></li>`
+      ).join("")}${more(sittings, "sitting event")}</ul>`);
+    }
+    if (decisions.length) {
+      sections.push(`<h4>Recorded decisions</h4><ul>${decisions.slice(0, SHOW).map((d) => {
+        const how = d.yeas != null && d.nays != null ? ` (${d.yeas} to ${d.nays})` : d.method ? ` (${d.method.toLowerCase()})` : "";
+        return `<li><span class="when">${esc(fmtDate(d.date))}</span> · ${esc(d.chamber)} · ${esc(d.motion)}: ${esc(d.result.toLowerCase())}${esc(how)}</li>`;
+      }).join("")}</ul>`);
+    }
+    if (mentions.length) {
+      sections.push(`<h4>Speeches naming the bill (last 90 days)</h4><ul>${mentions.slice(0, SHOW).map((m) =>
+        `<li><span class="when">${esc(fmtDate(m.date))}</span> · ${esc(m.chamber)} · <a href="${esc(m.url)}" rel="noopener">${plural(m.speeches, "speech", "speeches")}</a>` +
+        `<br><span class="who">${esc(m.speakers.slice(0, 3).join(", "))}${m.speakers.length > 3 ? ` and ${m.speakers.length - 3} more` : ""}${m.contexts.length ? ` · ${esc(m.contexts.slice(0, 2).join("; "))}` : ""}</span></li>`
+      ).join("")}</ul><p class="note">Speeches are found by matching the bill number in Hansard, so a passing mention counts.</p>`);
+    }
+    return `<div class="record"><div class="tally">${tally}</div><details><summary>Parliamentary record</summary>${sections.join("")}</details></div>`;
+  }
+
+  function onNoticeHtml(data) {
+    const list = data.upcoming || [];
+    $("onnotice").innerHTML = list.length
+      ? `<h3>On notice in the House, not yet introduced</h3><ul>${list.map((u) =>
+          `<li><span class="when">${esc(fmtDate(u.date))}</span> · ${esc(u.kind)} · ${esc(u.sponsor)}: ${esc(u.title)}</li>`).join("")}</ul>`
+      : `No digital-policy bills on the House Notice Paper today. Bills must appear there before they are introduced.`;
+  }
+
   function billHtml(b) {
     const title = b.shortTitle || b.longTitle || b.number;
     const sponsor = [b.sponsor, (b.sponsorTitle || "").replace(/\u2014/g, "\u2013")].filter(Boolean).join(", ");
@@ -385,10 +469,12 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
         ${officialHtml(b)}
         <div class="meta">${esc(type)}${sponsor ? " · " + esc(sponsor) : ""}</div>
         ${committeesHtml(b)}
+        ${recordHtml(b)}
         <div class="links">
           <a href="${esc(b.legisinfoUrl)}" rel="noopener">Status on LEGISinfo</a>
           <a href="${esc(b.textUrl)}" rel="noopener">Bill text</a>
           <button type="button" class="copylink" data-copy="${esc(b.number.toLowerCase())}">Copy link</button>
+          <button type="button" class="copylink" data-embed="${esc(b.number.toLowerCase())}">Embed</button>
           ${b.statute ? `<span>${esc(b.statute)}</span>` : ""}
         </div>
       </div>
@@ -450,8 +536,9 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     $("list").innerHTML = sections || `<p class="empty">No bills match these filters.</p>`;
 
     changesHtml(data);
+    onNoticeHtml(data);
     const checked = new Date(data.checkedAt);
-    $("checked").textContent = `Status last refreshed ${checked.toLocaleDateString("en-CA", { month: "long", day: "numeric", year: "numeric" })}. ${bills.length} bills tracked.`;
+    $("checked").innerHTML = `Status last refreshed ${esc(checked.toLocaleDateString("en-CA", { month: "long", day: "numeric", year: "numeric" }))}. ${bills.length} bills tracked. <a href="data/bills.csv" download>Download the data (CSV)</a>`;
   }
 
   let DATA = null;
@@ -485,6 +572,15 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
       m.setAttribute("aria-expanded", open);
       const n = words(DATA.bills.find((b) => b.number === m.dataset.more).officialSummary);
       m.textContent = open ? "Show less" : `Show full summary (${n.toLocaleString("en-CA")} words)`;
+      return;
+    }
+    const em = e.target.closest("[data-embed]");
+    if (em) {
+      const src = new URL(`legislation-widget.html?bill=${em.dataset.embed}`, location.href).href;
+      const code = `<iframe src="${src}" title="${em.dataset.embed.toUpperCase()} status, RiverRidge bill tracker" width="100%" height="230" style="border:0;max-width:520px" loading="lazy"></iframe>`;
+      const done = () => { em.textContent = "Embed code copied"; setTimeout(() => { em.textContent = "Embed"; }, 2000); };
+      if (navigator.clipboard) navigator.clipboard.writeText(code).then(done, () => window.prompt("Copy this embed code:", code));
+      else window.prompt("Copy this embed code:", code);
       return;
     }
     const c = e.target.closest("[data-copy]");

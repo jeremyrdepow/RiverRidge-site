@@ -1,0 +1,31 @@
+name: Weekly legislation digest
+
+on:
+  schedule:
+    # 11:43 UTC Mondays = 7:43 a.m. Ottawa (EDT), after the daily refresh.
+    - cron: "43 11 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Write the digest draft
+        run: node scripts/weekly-digest.mjs > digest.md
+
+      # The issue is the delivery: GitHub emails new issues to the repository's
+      # watchers, which includes its owner by default.
+      - name: Open the draft as an issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue create --title "Weekly digest draft: $(head -1 digest.md | sed 's/^# //')" --body-file digest.md

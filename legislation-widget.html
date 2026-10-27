@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noindex">
+<title>Bill Status Widget</title>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<style>
+/* One bill's live status, sized for an iframe on another site. Same tokens as legislation-tracker.html. */
+:root {
+  --bg: #ffffff;
+  --ink: #1b2a2e;
+  --muted: #5c6b6e;
+  --line: #dde3e0;
+  --accent: #1e6a64;
+  --house: #2f6b46;
+  --senate: #9e3434;
+  --law: #8a6a1f;
+  --idle: #c9d1ce;
+  --font-display: "Spectral", Georgia, "Times New Roman", serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #182225; --ink: #e4ebe8; --muted: #9aaaa7; --line: #2b383b;
+    --accent: #6cc3b9; --house: #6fb88a; --senate: #e07a7a; --law: #d6b25e; --idle: #3a4a4d;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #182225; --ink: #e4ebe8; --muted: #9aaaa7; --line: #2b383b;
+  --accent: #6cc3b9; --house: #6fb88a; --senate: #e07a7a; --law: #d6b25e; --idle: #3a4a4d;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 14px; line-height: 1.45; }
+.card { border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; display: grid; gap: 8px; }
+h1 { margin: 0; font-family: var(--font-display); font-size: 17px; font-weight: 600; line-height: 1.25; }
+.num { font-family: var(--font-data); font-weight: 500; margin-right: 6px; }
+.pill { justify-self: start; font-size: 13px; font-weight: 500; padding: 2px 8px; border-radius: 4px; border: 1px solid currentColor; }
+.pill.house { color: var(--house); }
+.pill.senate { color: var(--senate); }
+.pill.law { color: var(--law); }
+.pill.waiting { color: var(--muted); }
+.track { display: grid; grid-template-columns: repeat(3, 1fr) 5px repeat(3, 1fr) 5px 1fr; gap: 3px; }
+.seg { height: 6px; border-radius: 2px; background: var(--idle); }
+.seg.on.house { background: var(--house); }
+.seg.on.senate { background: var(--senate); }
+.seg.on.law { background: var(--law); }
+.labels { display: grid; grid-template-columns: 3fr 5px 3fr 5px 1fr; gap: 3px; font-family: var(--font-data); font-size: 11px; color: var(--muted); }
+.labels span:last-child { text-align: right; }
+.latest { font-size: 13px; color: var(--muted); }
+.latest b { color: var(--ink); font-weight: 500; }
+.foot { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: 12px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; }
+a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="card" id="card"><div class="latest">Loading bill status…</div></div>
+<script>
+(() => {
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const fmtDate = (d) => d ? new Date(d + "T12:00:00").toLocaleDateString("en-CA", { month: "short", day: "numeric", year: "numeric" }) : "";
+  const id = (new URLSearchParams(location.search).get("bill") || "").toLowerCase();
+  const tracker = new URL("legislation-tracker.html", location.href).href;
+  const card = document.getElementById("card");
+  const fail = (msg) => { card.innerHTML = `<div class="latest">${esc(msg)} <a href="${esc(tracker)}" target="_blank" rel="noopener">Open the tracker</a></div>`; };
+
+  fetch("data/bills.json", { cache: "no-cache" })
+    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then((data) => {
+      const b = (data.bills || []).find((x) => x.number.toLowerCase() === id);
+      if (!b) return fail(id ? `Bill ${id.toUpperCase()} is not on the tracker.` : "No bill chosen.");
+      const p = b.progress || [];
+      const law = !!p[6];
+      const waiting = /Outside the Order of Precedence/i.test(b.status);
+      const now = law ? "law" : /Senate/.test(b.status) ? "senate" : "house";
+      const pill = law ? "law" : waiting ? "waiting" : now;
+      const status = law ? "Law" + (b.royalAssent ? ": royal assent " + fmtDate(b.royalAssent) : "")
+        : waiting ? "Awaiting a debate slot (private member's bill)" : b.status;
+      const first = /Senate/.test(b.originatingChamber) ? "senate" : "house";
+      const second = first === "house" ? "senate" : "house";
+      const seg = (on, cls) => `<div class="seg ${on ? "on " + cls : ""}"></div>`;
+      const ev = b.latestEvent;
+      card.innerHTML = `
+        <h1><span class="num">${esc(b.number)}</span>${esc(b.shortTitle || b.longTitle || "")}</h1>
+        <span class="pill ${pill}">${esc(status)}</span>
+        <div class="track" role="img" aria-label="Stages passed: ${p.filter(Boolean).length} of 7">
+          ${seg(p[0], first)}${seg(p[1], first)}${seg(p[2], first)}<div></div>
+          ${seg(p[3], second)}${seg(p[4], second)}${seg(p[5], second)}<div></div>${seg(p[6], "law")}
+        </div>
+        <div class="labels" aria-hidden="true"><span>${first === "house" ? "House" : "Senate"} 1R 2R 3R</span><span></span><span>${second === "house" ? "House" : "Senate"} 1R 2R 3R</span><span></span><span>RA</span></div>
+        ${ev ? `<div class="latest">Last activity: <b>${esc(ev.type)}</b>${ev.chamber ? " (" + esc(ev.chamber) + ")" : ""}, ${esc(fmtDate(ev.date))}</div>` : ""}
+        <div class="foot"><span>Updated ${esc(new Date(data.checkedAt).toLocaleDateString("en-CA", { month: "short", day: "numeric", year: "numeric" }))} from LEGISinfo</span>
+          <a href="${esc(tracker)}#${esc(id)}" target="_blank" rel="noopener">RiverRidge bill tracker</a></div>`;
+    })
+    .catch(() => fail("Bill status could not load."));
+})();
+</script>
+</body>
+</html>

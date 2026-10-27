@@ -9,17 +9,35 @@
 // 3. The previous record, flagged stale, when neither answers.
 //
 // The official summary printed in each bill comes from the bill's
-// openparliament page either way. The run never fails because a fetch did,
-// so the live page never breaks.
+// openparliament page either way. scripts/parliament.mjs adds witnesses from
+// House committee notices, speeches naming each bill from House and Senate
+// debates, and digital bills on the House Notice Paper. The run never fails
+// because a fetch did, so the live page never breaks. It also writes
+// data/bills.csv, a spreadsheet copy of the tracker.
 //
 // Run by .github/workflows/update-legislation-tracker.yml once a day.
 // Node 20+ (built-in fetch). No dependencies.
 
 import { readFile, writeFile } from "node:fs/promises";
+import {
+  billsOnNotice,
+  fetchText,
+  houseHansardUrl,
+  houseHansardXmlUrl,
+  houseMeetingUrl,
+  houseMentions,
+  latestHouseSitting,
+  latestSenateSitting,
+  senateCommitteeUrl,
+  senateDebatesUrl,
+  senateMentions,
+  witnessesFrom,
+} from "./parliament.mjs";
 
 const SESSION = "45-1";
 const CONFIG_PATH = new URL("../data/bills.config.json", import.meta.url);
 const OUT_PATH = new URL("../data/bills.json", import.meta.url);
+const CSV_PATH = new URL("../data/bills.csv", import.meta.url);
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -115,8 +133,66 @@ function textUrl(bill) {
   return `https://www.parl.ca/DocumentViewer/en/${SESSION}/bill/${code}/${version}`;
 }
 
+// The bill's parliamentary record from LEGISinfo's stage data: committee
+// meetings, sitting days on which something happened in the chamber, and
+// recorded decisions. Witness lists read on earlier runs are carried over.
+function activityFrom(bill, base) {
+  const day = (t) => (t || "").slice(0, 10);
+  const key = (m) => `${m.chamber}|${m.committee}|${m.number}`;
+  const known = new Map((base.activity?.meetings || []).map((m) => [key(m), m]));
+  const meetings = new Map();
+  const sittings = [];
+  const decisions = [];
+  const stages = bill.BillStages || {};
+  for (const [list, chamber] of [
+    [stages.HouseBillStages, "House"],
+    [stages.SenateBillStages, "Senate"],
+  ]) {
+    for (const st of list || []) {
+      for (const m of st.CommitteeMeetings || []) {
+        const meeting = {
+          date: day(m.Date),
+          chamber,
+          committee: m.CommitteeAcronym || "",
+          number: String(m.Number ?? ""),
+          url: chamber === "House" ? houseMeetingUrl(m.CommitteeAcronym, m.Number) : senateCommitteeUrl(m.CommitteeAcronym),
+        };
+        const seen = known.get(key(meeting));
+        if (seen?.witnesses) meeting.witnesses = seen.witnesses;
+        meetings.set(key(meeting), meeting); // a meeting can be listed under two stages
+      }
+      for (const s of st.Sittings || []) {
+        sittings.push({
+          date: day(s.Date),
+          chamber,
+          sitting: String(s.Number ?? ""),
+          event: s.NameEn || "",
+          url: chamber === "House" ? houseHansardUrl(s.Number) : senateDebatesUrl(s.Number, day(s.Date)),
+        });
+      }
+      for (const d of st.Decisions || []) {
+        decisions.push({
+          date: day(d.DecisionSittingDate),
+          chamber,
+          motion: d.DecisionMotionTitleEn || "",
+          result: d.DecisionResultNameEn || "",
+          method: d.DecisionMethodNameEn || "",
+          yeas: d.DivisionVotesYeas ?? null,
+          nays: d.DivisionVotesNays ?? null,
+        });
+      }
+    }
+  }
+  const newestFirst = (a, b) => b.date.localeCompare(a.date);
+  return {
+    meetings: [...meetings.values()].sort(newestFirst),
+    sittings: sittings.sort(newestFirst),
+    decisions: decisions.sort(newestFirst),
+  };
+}
+
 // A full record from LEGISinfo. Fields LEGISinfo does not carry (official
-// summary, RiverRidge fields) come through from the previous record.
+// summary, mentions, RiverRidge fields) come through from the previous record.
 function fromLegisinfo(bill, base) {
   const statute =
     bill.StatuteYear && bill.StatuteChapter ? `S.C. ${bill.StatuteYear}, c. ${bill.StatuteChapter}` : null;
@@ -154,6 +230,7 @@ function fromLegisinfo(bill, base) {
     royalAssent: bill.ReceivedRoyalAssentDateTime ? bill.ReceivedRoyalAssentDateTime.slice(0, 10) : null,
     statute,
     committees: committeesFrom(bill),
+    activity: activityFrom(bill, base),
     legisinfoUrl: `https://www.parl.ca/legisinfo/en/bill/${SESSION}/${bill.NumberCode.toLowerCase()}`,
     textUrl: textUrl(bill),
     stale: false,
@@ -315,6 +392,34 @@ function changesFor(prev, next) {
   return [];
 }
 
+// A flat copy for spreadsheets, one row per bill. The byte-order mark makes
+// Excel read the accents correctly.
+function toCsv(bills, themes) {
+  const themeLabel = new Map(themes.map((t) => [t.id, t.label]));
+  const since30 = new Date(Date.now() - 30 * 86400000).toISOString().slice(0, 10);
+  const cell = (v) => {
+    const t = v == null ? "" : String(v);
+    return /[",\n]/.test(t) ? `"${t.replace(/"/g, '""')}"` : t;
+  };
+  const rows = [
+    [
+      "Bill", "Short title", "Long title", "Policy area", "Type", "Sponsor", "Status", "Stages passed (of 7)",
+      "Last activity", "Last activity date", "Last activity chamber", "Committees", "Royal assent", "Statute",
+      "Committee meetings", "Last committee meeting", "Speeches naming the bill (last 30 days)",
+      "RiverRidge summary", "LEGISinfo", "Bill text",
+    ],
+    ...bills.map((b) => [
+      b.number, b.shortTitle, b.longTitle, themeLabel.get(b.theme) || b.theme, b.type, b.sponsor, b.status,
+      countProgress(b.progress), b.latestEvent?.type, b.latestEvent?.date, b.latestEvent?.chamber,
+      (b.committees || []).map((c) => `${c.acronym}${c.current ? " (now)" : ""}${c.role === "pre-study" ? " (pre-study)" : ""}`).join("; "),
+      b.royalAssent, b.statute, b.activity?.meetings?.length ?? "", b.activity?.meetings?.[0]?.date,
+      (b.mentions || []).filter((m) => m.date >= since30).reduce((n, m) => n + m.speeches, 0),
+      b.summary, b.legisinfoUrl, b.textUrl,
+    ]),
+  ];
+  return "\uFEFF" + rows.map((r) => r.map(cell).join(",")).join("\r\n") + "\r\n";
+}
+
 const config = JSON.parse(await readFile(CONFIG_PATH, "utf8"));
 let previous = { bills: [] };
 try {
@@ -399,6 +504,85 @@ for (const cfg of config.bills) {
   await sleep(1200); // be gentle on both sites
 }
 
+// Witnesses at House committee meetings on each bill, read from the meeting
+// notice. Lists are final once a meeting has happened, so each is read once,
+// newest first, at most WITNESS_READS per run (the first run backfills).
+const WITNESS_READS = 40;
+const witnessQueue = bills
+  .flatMap((b) => (b.activity?.meetings || []).map((m) => ({ number: b.number, m })))
+  .filter(({ m }) => m.chamber === "House" && !m.witnesses && m.date && m.date < today())
+  .sort((a, b) => b.m.date.localeCompare(a.m.date))
+  .slice(0, WITNESS_READS);
+let witnessesRead = 0;
+for (const { number, m } of witnessQueue) {
+  try {
+    m.witnesses = witnessesFrom(await fetchText(m.url), number);
+    witnessesRead++;
+  } catch (err) {
+    if (err.status === 404) m.witnesses = { orgs: [], people: [], appearing: [] };
+    console.error(`witnesses ${number} ${m.committee} ${m.number}: ${err.message}`);
+  }
+  await sleep(1200);
+}
+
+// Mentions in debate: speeches naming a tracked bill, from each House sitting
+// since the last run (the first run reads the last 20) and the latest Senate
+// sitting. Kept for MENTION_DAYS.
+const MENTION_DAYS = 90;
+const numbers = config.bills.map((b) => b.number);
+const scan = { ...(previous.scan || {}) };
+const found = [];
+try {
+  const latest = await latestHouseSitting();
+  for (let n = scan.houseSitting ? scan.houseSitting + 1 : latest - 19; n <= latest; n++) {
+    try {
+      const { date, byBill } = houseMentions(await fetchText(houseHansardXmlUrl(n)), numbers);
+      for (const [number, r] of byBill) found.push({ number, chamber: "House", sitting: String(n), date, url: houseHansardUrl(n), ...r });
+      scan.houseSitting = n;
+    } catch (err) {
+      console.error(`hansard House ${n}: ${err.message}`);
+      if (n === latest) break; // not published yet; try again tomorrow
+      scan.houseSitting = n;
+    }
+    await sleep(1200);
+  }
+} catch (err) {
+  console.error(`hansard House: ${err.message}`);
+}
+try {
+  const latest = await latestSenateSitting();
+  if (!scan.senateSitting || latest.sitting > scan.senateSitting) {
+    const url = senateDebatesUrl(latest.sitting, latest.date);
+    for (const [number, r] of senateMentions(await fetchText(url), numbers)) {
+      found.push({ number, chamber: "Senate", sitting: String(latest.sitting), date: latest.date, url, ...r });
+    }
+    scan.senateSitting = latest.sitting;
+  }
+} catch (err) {
+  console.error(`debates Senate: ${err.message}`);
+}
+const mentionCutoff = new Date(Date.now() - MENTION_DAYS * 86400000).toISOString().slice(0, 10);
+for (const b of bills) {
+  const fresh = found.filter((f) => f.number === b.number).map(({ number, ...m }) => m);
+  const kept = (b.mentions || []).filter((m) => !fresh.some((f) => f.chamber === m.chamber && f.sitting === m.sitting));
+  b.mentions = [...fresh, ...kept].filter((m) => m.date >= mentionCutoff).sort((x, y) => y.date.localeCompare(x.date));
+}
+
+// Digital-policy bills on notice in the House, before first reading. The
+// match is on the bill's title; a failed read keeps yesterday's list.
+const DIGITAL =
+  /\b(online|internet|digital|cyber\w*|data|privacy|personal information|artificial intelligence|AI|algorithm\w*|deepfakes?|platforms?|social media|telecommunications?|broadband|spectrum|wireless|radiocommunication|broadcasting|streaming|electronic|software|computers?|crypto\w*|stablecoins?|surveillance|lawful access|encryption|chatbots?|technolog\w*)\b/i;
+let upcoming = previous.upcoming || [];
+try {
+  const { sitting, notices } = await billsOnNotice();
+  const firstSeen = new Map(upcoming.map((u) => [u.title, u.firstSeen]));
+  upcoming = notices
+    .filter((n) => DIGITAL.test(n.title))
+    .map((n) => ({ chamber: "House", ...n, sitting, firstSeen: firstSeen.get(n.title) || today() }));
+} catch (err) {
+  console.error(`notice paper: ${err.message} (kept previous list)`);
+}
+
 // Rolling changelog: newest first, 60 days, at most 200 entries.
 const cutoff = new Date(Date.now() - 60 * 86400000).toISOString().slice(0, 10);
 const changelog = [...changes, ...(previous.changelog || [])]
@@ -413,10 +597,16 @@ const out = {
   themes: config.themes,
   bills,
   changelog,
+  upcoming,
+  scan,
 };
-await writeFile(OUT_PATH, JSON.stringify(out, null, 2) + "\n");
+// House style: no em dashes anywhere, including riding names in source text.
+const noEm = (t) => t.replace(/\u2014/g, "\u2013");
+await writeFile(OUT_PATH, noEm(JSON.stringify(out, null, 2)) + "\n");
+await writeFile(CSV_PATH, noEm(toCsv(bills, config.themes)));
 for (const c of changes) console.log(`change ${c.number}: ${c.text}`);
 console.log(
   `Wrote ${bills.length} bills: ${count.legisinfo} from LEGISinfo, ${count.openparliament} from openparliament.ca, ` +
-    `${count.stale} kept stale, ${changes.length} changes logged.`
+    `${count.stale} kept stale, ${changes.length} changes logged. ${witnessesRead} witness lists read, ` +
+    `${found.length} new mentions, ${upcoming.length} digital bills on notice.`
 );
