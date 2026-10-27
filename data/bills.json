@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-27T19:20:58.352Z",
-  "source": "openparliament.ca (bill status) and LEGISinfo, Parliament of Canada (committees and links)",
+  "checkedAt": "2026-10-27T19:35:14.188Z",
+  "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
     {
@@ -40,7 +40,7 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Marc Miller",
       "sponsorTitle": "Minister of Canadian Identity and Culture and Minister responsible for Official Languages",
-      "status": "Second reading (House)",
+      "status": "At second reading in the House of Commons",
       "latestEvent": {
         "type": "Debate at second reading",
         "date": "2026-10-21",
@@ -61,7 +61,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-34",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-34/first-reading",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "Part 1 enacts the Digital Safety Act, whose purpose is, among other things, to promote the safety of persons in Canada, particularly children, reduce harms caused to them as a result of harmful content online and ensure that the operators of regulated social media services, regulated chatbot services and other regulated online services are transparent and accountable with respect to their duties under that Act.",
         "That Act, among other things,",
@@ -89,7 +89,7 @@
       "originatingChamber": "Senate",
       "sponsor": "Hon. Julie Miville-Dechêne",
       "sponsorTitle": "Senator",
-      "status": "Second reading (House)",
+      "status": "At second reading in the House of Commons",
       "latestEvent": {
         "type": "Debate at second reading",
         "date": "2026-09-24",
@@ -119,7 +119,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-209",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-209/third-reading",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "This enactment makes it an offence for organizations to make pornographic material available to young persons on the Internet. Furthermore, it enables, among other things, a designated enforcement authority to take steps to prevent pornographic material from being made available to young persons on the Internet in Canada."
       ],
@@ -136,7 +136,7 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Michelle Rempel Garner",
       "sponsorTitle": "Member of Parliament",
-      "status": "Outside the Order of Precedence (a private member's bill that hasn't yet won the draw that determines which private member's bills can be debated)",
+      "status": "Outside the Order of Precedence",
       "latestEvent": {
         "type": "Introduction and first reading",
         "date": "2025-06-19",
@@ -157,7 +157,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-216",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-216/first-reading",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "Part 1 of this enactment enacts the Protection of Minors in the Digital Age Act, the purpose of which is to provide for a safe online environment for minors by requiring owners and operators of platforms such as online services or applications to ensure that minors’ personal data is not used in a manner that could compromise their privacy, health or well-being.",
         "Part 2 amends An Act respecting the mandatory reporting of Internet child pornography by persons who provide an Internet service to, among other things,",
@@ -184,7 +184,7 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Michael Coteau",
       "sponsorTitle": "Member of Parliament",
-      "status": "Outside the Order of Precedence (a private member's bill that hasn't yet won the draw that determines which private member's bills can be debated)",
+      "status": "Outside the Order of Precedence",
       "latestEvent": {
         "type": "Introduction and first reading",
         "date": "2026-05-06",
@@ -205,7 +205,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-277",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-277/first-reading",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "This enactment enacts the Regulating the Online Use of Deepfakes Act to regulate the online use and dissemination of deepfakes, to increase transparency and to protect individuals and their interests from significant harm. It also establishes an administrative monetary penalties scheme to promote compliance with the Act."
       ]
@@ -221,7 +221,7 @@
       "originatingChamber": "Senate",
       "sponsor": "Hon. Leo Housakos",
       "sponsorTitle": "Senator",
-      "status": "Second reading (Senate)",
+      "status": "At second reading in the Senate",
       "latestEvent": {
         "type": "Introduction and first reading",
         "date": "2025-11-05",
@@ -242,7 +242,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-240",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-240/first-reading",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "This enactment amends section 163.1 of the Criminal Code to declare that paragraphs 163.1(4)(a) and 163.1(4.1)(a) – which include mandatory minimum sentences for the offences of possession of child sexual abuse and exploitation material and accessing child sexual abuse and exploitation material, respectively – operate notwithstanding section 12 of the Canadian Charter of Rights and Freedoms."
       ]
@@ -258,7 +258,7 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Sean Fraser",
       "sponsorTitle": "Minister of Justice",
-      "status": "Law (royal assent given)",
+      "status": "Royal assent received",
       "latestEvent": {
         "type": "Royal assent",
         "date": "2026-06-18",
@@ -304,7 +304,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-16",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-16/royal-assent",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "This enactment amends various Acts in relation to criminal and correctional matters.",
         "It amends the Criminal Code to, among other things,",
@@ -367,7 +367,7 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Sean Fraser",
       "sponsorTitle": "Minister of Justice",
-      "status": "Law (royal assent given)",
+      "status": "Royal assent received",
       "latestEvent": {
         "type": "Royal assent",
         "date": "2026-06-18",
@@ -405,7 +405,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-9",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-9/royal-assent",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "This enactment amends the Criminal Code to, among other things,",
         "(a) create an offence of wilfully promoting hatred against any identifiable group by displaying certain symbols in a public place;",
@@ -427,7 +427,7 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Evan Solomon",
       "sponsorTitle": "Minister of Artificial Intelligence and Digital Innovation",
-      "status": "Second reading (House)",
+      "status": "At second reading in the House of Commons",
       "latestEvent": {
         "type": "Introduction and first reading",
         "date": "2026-06-15",
@@ -448,7 +448,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-36",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-36/first-reading",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "This enactment enacts the Protecting Privacy and Consumer Data Act to govern the protection of personal information of individuals while taking into account the need of organizations to collect, use or disclose personal information in the course of commercial activities. Consequently, it repeals Part 1 of the Personal Information Protection and Electronic Documents Act and changes the short title of that Act to the Electronic Documents Act. Finally, it also makes amendments to other Acts."
       ],
@@ -465,7 +465,7 @@
       "originatingChamber": "Senate",
       "sponsor": "Hon. Pierre Moreau",
       "sponsorTitle": "Senator",
-      "status": "Second reading (House)",
+      "status": "At second reading in the House of Commons",
       "latestEvent": {
         "type": "First reading",
         "date": "2026-05-28",
@@ -495,7 +495,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-5",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-5/third-reading",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "This enactment aims, among other things, to ensure that health information technology that is licensed, sold or supplied as a service by a vendor is interoperable and to prohibit data blocking by the vendor in order to promote a connected, secure and person-centered health system."
       ],
@@ -512,7 +512,7 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Gary Anandasangaree",
       "sponsorTitle": "Minister of Public Safety",
-      "status": "Law (royal assent given)",
+      "status": "Royal assent received",
       "latestEvent": {
         "type": "Royal assent",
         "date": "2026-06-15",
@@ -550,7 +550,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-8",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-8/royal-assent",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "Part 1 amends the Telecommunications Act to add the promotion of the security of the Canadian telecommunications system as an objective of the Canadian telecommunications policy and to authorize the Governor in Council and the Minister of Industry to direct telecommunications service providers to do anything, or refrain from doing anything, that is necessary to secure the Canadian telecommunications system. It also establishes an administrative monetary penalty scheme to promote compliance with orders and regulations made by the Governor in Council and the Minister of Industry to secure the Canadian telecommunications system as well as rules for judicial review of those orders and regulations.",
         "Part 2 enacts the Critical Cyber Systems Protection Act to provide a framework for the protection of the critical cyber systems of services and systems that are vital to national security or public safety and that are delivered or operated as part of a work, undertaking or business that is within the legislative authority of Parliament. It also, among other things,",
@@ -575,10 +575,10 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Gary Anandasangaree",
       "sponsorTitle": "Minister of Public Safety",
-      "status": "In committee (Senate)",
+      "status": "At consideration in committee in the Senate",
       "latestEvent": {
-        "type": "Debate at second reading",
-        "date": "2026-10-21",
+        "type": "Referral to committee",
+        "date": "2026-10-22",
         "chamber": "Senate"
       },
       "progress": [
@@ -600,12 +600,20 @@
           "role": "study",
           "url": "https://www.ourcommons.ca/Committees/en/SECU?parl=45&session=1",
           "current": false
+        },
+        {
+          "name": "Standing Senate Committee on National Security, Defence and Veterans Affairs",
+          "acronym": "SECD",
+          "chamber": "Senate",
+          "role": "study",
+          "url": "https://sencanada.ca/en/committees/SECD/45-1",
+          "current": true
         }
       ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-22",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-22/third-reading",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "Part 1 amends various Acts to modernize certain provisions respecting the timely gathering and production of data and information during an investigation. It, among other things,",
         "(a) amends the Criminal Code to, among other things,",
@@ -637,7 +645,7 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Gary Anandasangaree",
       "sponsorTitle": "Minister of Public Safety",
-      "status": "Second reading (House)",
+      "status": "At second reading in the House of Commons",
       "latestEvent": {
         "type": "Debate at second reading",
         "date": "2025-09-17",
@@ -658,7 +666,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-2",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-2/first-reading",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "Part 1 amends the Customs Act to provide the Canada Border Services Agency with facilities free of charge for carrying out any purpose related to the administration or enforcement of that Act and other Acts of Parliament and to provide officers of that Agency with access at certain locations to goods destined for export. It also includes transitional provisions.",
         "Part 2 amends the Controlled Drugs and Substances Act to create a new temporary accelerated scheduling pathway that allows the Minister of Health to add precursor chemicals to Schedule V to that Act. It also makes related amendments to the Controlled Drugs and Substances Act (Police Enforcement) Regulations and the Precursor Control Regulations.",
@@ -734,7 +742,7 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Melissa Lantsman",
       "sponsorTitle": "Member of Parliament",
-      "status": "Outside the Order of Precedence (a private member's bill that hasn't yet won the draw that determines which private member's bills can be debated)",
+      "status": "Outside the Order of Precedence",
       "latestEvent": {
         "type": "Introduction and first reading",
         "date": "2026-06-17",
@@ -755,7 +763,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-288",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-288/first-reading",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "This enactment enacts the Protection Against Online Fraud Act, the purpose of which is to require that owners and operators of platforms, such as online services or applications, implement measures to prevent the dissemination of fraudulent content through their products and services and to provide notice to users who engaged with such content.",
         "It also amends the Criminal Code to add as an aggravating circumstance for sentencing purposes the fact that an identify theft or identity fraud offence was committed against a person vulnerable given their personal circumstances, including their age, health and financial situation."
@@ -772,7 +780,7 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. François-Philippe Champagne",
       "sponsorTitle": "Minister of Finance and National Revenue",
-      "status": "In committee (House)",
+      "status": "At consideration in committee in the House of Commons",
       "latestEvent": {
         "type": "Second reading and referral to committee",
         "date": "2026-06-18",
@@ -802,7 +810,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-29",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-29/first-reading",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "This enactment establishes the Financial Crimes Agency as a specialized federal law enforcement agency whose mandate is to investigate financial crimes and to contribute to the recovery of proceeds of crime. It also makes consequential amendments to certain Acts and regulations."
       ],
@@ -819,7 +827,7 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. François-Philippe Champagne",
       "sponsorTitle": "Minister of Finance and National Revenue",
-      "status": "Law (royal assent given)",
+      "status": "Royal assent received",
       "latestEvent": {
         "type": "Royal assent",
         "date": "2026-03-26",
@@ -865,7 +873,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-15",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-15/royal-assent",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "Part 1 implements certain measures in respect of the Income Tax Act and the Income Tax Regulations by",
         "(a) expanding the rollover for small business corporation shares;",
@@ -1012,7 +1020,7 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. François-Philippe Champagne",
       "sponsorTitle": "Minister of Finance and National Revenue",
-      "status": "In committee (House)",
+      "status": "At consideration in committee in the House of Commons",
       "latestEvent": {
         "type": "Pre-study of House bill",
         "date": "2026-06-10",
@@ -1058,7 +1066,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-31",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-31/first-reading",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "Part 1 implements certain measures in respect of the Income Tax Act and the Income Tax Regulations by",
         "(a) providing temporary immediate expensing for eligible manufacturing or processing buildings;",
@@ -1148,7 +1156,7 @@
       "originatingChamber": "Senate",
       "sponsor": "Hon. Marty Deacon",
       "sponsorTitle": "Senator",
-      "status": "In committee (House)",
+      "status": "At consideration in committee in the House of Commons",
       "latestEvent": {
         "type": "Second reading and referral to committee",
         "date": "2026-04-22",
@@ -1186,7 +1194,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-211",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-211/third-reading",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "This enactment provides for the development of a national framework to regulate sports betting advertising in Canada and to set national standards for the prevention of risk for persons negatively impacted. It also provides for the Canadian Radio-television and Telecommunications Commission to review its regulations and policies to assess their adequacy and effectiveness in reducing the incidence of harms resulting from the proliferation of sports betting advertising."
       ]
@@ -1202,7 +1210,7 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Steven MacKinnon",
       "sponsorTitle": "Minister of Transport and Leader of the Government in the House of Commons",
-      "status": "Law (royal assent given)",
+      "status": "Royal assent received",
       "latestEvent": {
         "type": "Royal assent",
         "date": "2026-06-18",
@@ -1248,7 +1256,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-25",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-25/royal-assent",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "This enactment amends the Canada Elections Act to, among other things,",
         "(a) establish new prohibitions and modify existing prohibitions, including in relation to foreign influence in the electoral process, accepting or offering a bribe, unauthorized use of a computer, making or publishing false or misleading information respecting elections and the candidate nomination process;",
@@ -1271,7 +1279,7 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. François-Philippe Champagne",
       "sponsorTitle": "Minister of Finance and National Revenue",
-      "status": "Law (royal assent given)",
+      "status": "Royal assent received",
       "latestEvent": {
         "type": "Royal assent",
         "date": "2026-03-12",
@@ -1309,7 +1317,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-4",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-4/royal-assent",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "Part 1 amends the Income Tax Act to reduce the marginal personal income tax rate on the lowest tax bracket to 14.5% for the 2025 taxation year and to 14% for the 2026 and subsequent taxation years.",
         "Part 2 amends the Excise Tax Act and other related Regulations to implement a temporary GST new housing rebate for first-time home buyers.",
@@ -1329,7 +1337,7 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Marianne Dandurand",
       "sponsorTitle": "Member of Parliament",
-      "status": "Report stage (House)",
+      "status": "At report stage in the House of Commons",
       "latestEvent": {
         "type": "Committee report presented",
         "date": "2026-10-07",
@@ -1359,7 +1367,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-268",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-268/first-reading",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "This enactment requires the Canadian Radio-television and Telecommunications Commission to establish a process for ensuring the accuracy of the mobile network coverage data provided by Canadian carriers. It also requires the Minister of Industry to maintain and update the Spectrum Policy Framework for Canada. Lastly, the enactment sets out review and reporting requirements respecting the Framework."
       ]
@@ -1375,7 +1383,7 @@
       "originatingChamber": "Senate",
       "sponsor": "Hon. Pierre Moreau",
       "sponsorTitle": "Senator",
-      "status": "Second reading (Senate)",
+      "status": "At second reading in the Senate",
       "latestEvent": {
         "type": "Introduction and first reading",
         "date": "2026-10-07",
@@ -1396,7 +1404,7 @@
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-7",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-7/first-reading",
       "stale": false,
-      "statusSource": "openparliament",
+      "statusSource": "legisinfo",
       "officialSummary": [
         "Division 1 of Part 1 amends the Agricultural Products Marketing Act to, among other things,",
         "(a) provide that powers are delegated to a marketing board in relation to the marketing of an agricultural product in interprovincial or export trade by virtue of being named in the schedule to that Act, rather than by Order in Council;",
