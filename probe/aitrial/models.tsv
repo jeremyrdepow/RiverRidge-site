@@ -1,0 +1,204 @@
+provider	created	id	name	context	usd_per_M_in	usd_per_M_out
+anthropic	2026-10-07	anthropic/claude-haiku-5.5	Anthropic: Claude Haiku 5.5	1000000	0.1	0.5
+anthropic	2026-10-07	anthropic/claude-haiku-5.5:batch	Anthropic: Claude Haiku 5.5 (batch)	1000000	0.05	0.25
+anthropic	2026-09-28	anthropic/claude-sonnet-5.5	Anthropic: Claude Sonnet 5.5	1000000	2.0	10.0
+anthropic	2026-09-28	anthropic/claude-sonnet-5.5:batch	Anthropic: Claude Sonnet 5.5 (batch)	1000000	1.0	5.0
+anthropic	2026-09-22	anthropic/claude-opus-5.5	Anthropic: Claude Opus 5.5	1000000	4.0	20.0
+anthropic	2026-09-22	anthropic/claude-opus-5.5:batch	Anthropic: Claude Opus 5.5 (batch)	1000000	2.0	10.0
+anthropic	2026-09-01	anthropic/claude-fable-5.1	Anthropic: Claude Fable 5.1	1000000	10.0	50.0
+anthropic	2026-09-01	anthropic/claude-fable-5.1:batch	Anthropic: Claude Fable 5.1 (batch)	1000000	5.0	25.0
+anthropic	2026-07-24	anthropic/claude-opus-5	Anthropic: Claude Opus 5	1000000	5.0	25.0
+anthropic	2026-07-24	anthropic/claude-opus-5:batch	Anthropic: Claude Opus 5 (batch)	1000000	2.5	12.5
+anthropic	2026-06-30	anthropic/claude-sonnet-5	Anthropic: Claude Sonnet 5	1000000	2.0	10.0
+anthropic	2026-06-30	anthropic/claude-sonnet-5:batch	Anthropic: Claude Sonnet 5 (batch)	1000000	1.0	5.0
+anthropic	2026-06-09	anthropic/claude-fable-5	Anthropic: Claude Fable 5	1000000	10.0	50.0
+anthropic	2026-06-09	anthropic/claude-fable-5:batch	Anthropic: Claude Fable 5 (batch)	1000000	5.0	25.0
+anthropic	2026-05-27	anthropic/claude-opus-4.8	Anthropic: Claude Opus 4.8	1000000	5.0	25.0
+anthropic	2026-05-27	anthropic/claude-opus-4.8:batch	Anthropic: Claude Opus 4.8 (batch)	1000000	2.5	12.5
+anthropic	2026-04-16	anthropic/claude-opus-4.7	Anthropic: Claude Opus 4.7	1000000	5.0	25.0
+anthropic	2026-04-16	anthropic/claude-opus-4.7:batch	Anthropic: Claude Opus 4.7 (batch)	1000000	2.5	12.5
+anthropic	2026-02-17	anthropic/claude-sonnet-4.6	Anthropic: Claude Sonnet 4.6	1000000	3.0	15.0
+anthropic	2026-02-17	anthropic/claude-sonnet-4.6:batch	Anthropic: Claude Sonnet 4.6 (batch)	1000000	1.5	7.5
+anthropic	2026-02-04	anthropic/claude-opus-4.6	Anthropic: Claude Opus 4.6	1000000	5.0	25.0
+anthropic	2026-02-04	anthropic/claude-opus-4.6:batch	Anthropic: Claude Opus 4.6 (batch)	1000000	2.5	12.5
+anthropic	2025-11-24	anthropic/claude-opus-4.5	Anthropic: Claude Opus 4.5	200000	5.0	25.0
+anthropic	2025-11-24	anthropic/claude-opus-4.5:batch	Anthropic: Claude Opus 4.5 (batch)	200000	2.5	12.5
+anthropic	2025-10-15	anthropic/claude-haiku-4.5	Anthropic: Claude Haiku 4.5	200000	1.0	5.0
+anthropic	2025-10-15	anthropic/claude-haiku-4.5:batch	Anthropic: Claude Haiku 4.5 (batch)	200000	0.5	2.5
+anthropic	2025-09-29	anthropic/claude-sonnet-4.5	Anthropic: Claude Sonnet 4.5	1000000	3.0	15.0
+anthropic	2025-09-29	anthropic/claude-sonnet-4.5:batch	Anthropic: Claude Sonnet 4.5 (batch)	1000000	1.5	7.5
+anthropic	2025-08-05	anthropic/claude-opus-4.1	Anthropic: Claude Opus 4.1	200000	15.0	75.0
+anthropic	2025-08-05	anthropic/claude-opus-4.1:batch	Anthropic: Claude Opus 4.1 (batch)	200000	7.5	37.5
+cohere	2026-09-22	cohere/command-a-plus	Cohere: Command A+	192000	0.3	1.5
+cohere	2026-06-17	cohere/north-mini-code:free	Cohere: North Mini Code (free)	256000	0.0	0.0
+cohere	2025-03-13	cohere/command-a	Cohere: Command A	256000	2.5	10.0
+cohere	2024-12-14	cohere/command-r7b-12-2024	Cohere: Command R7B (12-2024)	128000	0.037	0.15
+cohere	2024-08-30	cohere/command-r-08-2024	Cohere: Command R (08-2024)	128000	0.15	0.6
+cohere	2024-08-30	cohere/command-r-plus-08-2024	Cohere: Command R+ (08-2024)	128000	2.5	10.0
+google	2026-10-13	google/gemini-4-argon	Google: Gemini 4 Argon	1048576	2.0	10.0
+google	2026-10-13	google/gemini-4-argon:batch	Google: Gemini 4 Argon (batch)	1048576	1.0	5.0
+google	2026-10-06	google/gemini-nano-banana-2.1	Google: Nano Banana 2.1	65536	1.5	7.5
+google	2026-09-02	google/gemini-3.8-flash	Google: Gemini 3.8 Flash	1048576	0.825	4.125
+google	2026-09-02	google/gemini-3.8-flash:batch	Google: Gemini 3.8 Flash (batch)	1048576	0.375	1.875
+google	2026-08-13	google/gemini-3.7-flash	Google: Gemini 3.7 Flash	1048576	0.75	3.75
+google	2026-08-13	google/gemini-3.7-flash:batch	Google: Gemini 3.7 Flash (batch)	1048576	0.375	1.875
+google	2026-07-21	google/gemini-3.6-flash	Google: Gemini 3.6 Flash	1048576	0.75	3.75
+google	2026-07-21	google/gemini-3.6-flash:batch	Google: Gemini 3.6 Flash (batch)	1048576	0.375	1.875
+google	2026-07-21	google/gemini-3.5-flash-lite	Google: Gemini 3.5 Flash Lite	1048576	0.3	2.5
+google	2026-07-21	google/gemini-3.5-flash-lite:batch	Google: Gemini 3.5 Flash Lite (batch)	1048576	0.15	1.25
+google	2026-06-30	google/gemini-3.1-flash-lite-image	Google: Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)	65536	0.25	1.5
+google	2026-06-18	google/gemini-3.1-flash-image	Google: Nano Banana 2 (Gemini 3.1 Flash Image)	131072	0.5	3.0
+google	2026-06-18	google/gemini-3-pro-image	Google: Nano Banana Pro (Gemini 3 Pro Image)	131072	2.0	12.0
+google	2026-05-19	google/gemini-3.5-flash	Google: Gemini 3.5 Flash	1048576	1.5	9.0
+google	2026-05-19	google/gemini-3.5-flash:batch	Google: Gemini 3.5 Flash (batch)	1048576	0.75	4.5
+google	2026-05-07	google/gemini-3.1-flash-lite	Google: Gemini 3.1 Flash Lite	1048576	0.25	1.5
+google	2026-05-07	google/gemini-3.1-flash-lite:batch	Google: Gemini 3.1 Flash Lite (batch)	1048576	0.125	0.75
+google	2026-04-03	google/gemma-4-26b-a4b-it	Google: Gemma 4 26B A4B 	262144	0.076	0.255
+google	2026-04-03	google/gemma-4-26b-a4b-it:free	Google: Gemma 4 26B A4B  (free)	262144	0.0	0.0
+google	2026-04-02	google/gemma-4-31b-it	Google: Gemma 4 31B	262144	0.2	0.4
+google	2026-04-02	google/gemma-4-31b-it:free	Google: Gemma 4 31B (free)	262144	0.0	0.0
+google	2026-03-30	google/lyria-3-pro-preview	Google: Lyria 3 Pro Preview	1048576	0.0	0.0
+google	2026-03-30	google/lyria-3-clip-preview	Google: Lyria 3 Clip Preview	1048576	0.0	0.0
+google	2026-03-03	google/gemini-3.1-flash-lite-preview	Google: Gemini 3.1 Flash Lite Preview	1048576	0.25	1.5
+google	2026-02-26	google/gemini-3.1-flash-image-preview	Google: Nano Banana 2 (Gemini 3.1 Flash Image Preview)	65536	0.5	3.0
+google	2026-02-25	google/gemini-3.1-pro-preview-customtools	Google: Gemini 3.1 Pro Preview Custom Tools	1048576	2.0	12.0
+google	2026-02-19	google/gemini-3.1-pro-preview	Google: Gemini 3.1 Pro Preview	1048576	2.0	12.0
+google	2026-02-19	google/gemini-3.1-pro-preview:batch	Google: Gemini 3.1 Pro Preview (batch)	1048576	1.0	6.0
+google	2025-12-17	google/gemini-3-flash-preview	Google: Gemini 3 Flash Preview	1048576	0.5	3.0
+google	2025-12-17	google/gemini-3-flash-preview:batch	Google: Gemini 3 Flash Preview (batch)	1048576	0.25	1.5
+google	2025-11-20	google/gemini-3-pro-image-preview	Google: Nano Banana Pro (Gemini 3 Pro Image Preview)	65536	2.0	12.0
+google	2025-10-07	google/gemini-2.5-flash-image	Google: Nano Banana (Gemini 2.5 Flash Image)	32768	0.3	2.5
+google	2025-07-22	google/gemini-2.5-flash-lite	Google: Gemini 2.5 Flash Lite	1048576	0.1	0.4
+google	2025-06-17	google/gemini-2.5-flash	Google: Gemini 2.5 Flash	1048576	0.3	2.5
+google	2025-06-17	google/gemini-2.5-pro	Google: Gemini 2.5 Pro	1048576	1.25	10.0
+google	2025-06-05	google/gemini-2.5-pro-preview	Google: Gemini 2.5 Pro Preview 06-05	1048576	1.25	10.0
+google	2025-03-13	google/gemma-3-4b-it	Google: Gemma 3 4B	131072	0.05	0.1
+google	2025-03-13	google/gemma-3-12b-it	Google: Gemma 3 12B	131072	0.05	0.15
+google	2025-03-12	google/gemma-3-27b-it	Google: Gemma 3 27B	131072	0.08	0.35
+google	2024-07-13	google/gemma-2-27b-it	Google: Gemma 2 27B	8192	0.65	0.65
+mistralai	2026-10-06	mistralai/mistral-large-4-0	Mistral: Mistral Large 4	1048576	1.36	4.18
+mistralai	2026-04-30	mistralai/mistral-medium-3-5	Mistral: Mistral Medium 3.5	262144	1.5	7.5
+mistralai	2026-04-30	mistralai/mistral-medium-3-5:batch	Mistral: Mistral Medium 3.5 (batch)	262144	0.75	3.75
+mistralai	2026-03-16	mistralai/mistral-small-2603	Mistral: Mistral Small 4	262144	0.15	0.6
+mistralai	2025-12-09	mistralai/devstral-2512	Mistral: Devstral 2 2512	262144	0.4	2.0
+mistralai	2025-12-02	mistralai/ministral-14b-2512	Mistral: Ministral 3 14B 2512	262144	0.2	0.2
+mistralai	2025-12-02	mistralai/ministral-8b-2512	Mistral: Ministral 3 8B 2512	262144	0.15	0.15
+mistralai	2025-12-02	mistralai/ministral-3b-2512	Mistral: Ministral 3 3B 2512	131072	0.1	0.1
+mistralai	2025-12-01	mistralai/mistral-large-2512	Mistral: Mistral Large 3 2512	262144	0.5	1.5
+mistralai	2025-10-30	mistralai/voxtral-small-24b-2507	Mistral: Voxtral Small 24B 2507	32768	0.1	0.3
+mistralai	2025-08-13	mistralai/mistral-medium-3.1	Mistral: Mistral Medium 3.1	131072	0.4	2.0
+mistralai	2025-08-01	mistralai/codestral-2508	Mistral: Codestral 2508	256000	0.3	0.9
+mistralai	2025-06-20	mistralai/mistral-small-3.2-24b-instruct	Mistral: Mistral Small 3.2 24B	256000	0.075	0.2
+mistralai	2025-05-07	mistralai/mistral-medium-3	Mistral: Mistral Medium 3	131072	0.4	2.0
+mistralai	2025-03-17	mistralai/mistral-small-3.1-24b-instruct	Mistral: Mistral Small 3.1 24B	128000	0.351	0.555
+mistralai	2025-02-17	mistralai/mistral-saba	Mistral: Saba	32768	0.2	0.6
+mistralai	2025-01-30	mistralai/mistral-small-24b-instruct-2501	Mistral: Mistral Small 3	32768	0.05	0.08
+mistralai	2024-11-19	mistralai/mistral-large-2407	Mistral Large 2407	131072	2.0	6.0
+mistralai	2024-07-19	mistralai/mistral-nemo	Mistral: Mistral Nemo	131072	0.029	0.03
+mistralai	2024-04-17	mistralai/mixtral-8x22b-instruct	Mistral: Mixtral 8x22B Instruct	65536	2.0	6.0
+mistralai	2024-02-26	mistralai/mistral-large	Mistral Large	128000	2.0	6.0
+openai	2026-10-26	openai/gpt-6.1-terra-pro	OpenAI: GPT-6.1 Terra Pro	1050000	1.0	5.0
+openai	2026-10-26	openai/gpt-6.1-terra-pro:batch	OpenAI: GPT-6.1 Terra Pro (batch)	1050000	0.5	2.5
+openai	2026-10-26	openai/gpt-6.1-terra	OpenAI: GPT-6.1 Terra	1050000	1.0	5.0
+openai	2026-10-26	openai/gpt-6.1-terra:batch	OpenAI: GPT-6.1 Terra (batch)	1050000	0.5	2.5
+openai	2026-09-29	openai/gpt-6.1-sol-pro	OpenAI: GPT-6.1 Sol Pro	1050000	2.0	10.0
+openai	2026-09-29	openai/gpt-6.1-sol-pro:batch	OpenAI: GPT-6.1 Sol Pro (batch)	1050000	1.0	5.0
+openai	2026-09-29	openai/gpt-6.1-sol	OpenAI: GPT-6.1 Sol	1050000	2.0	10.0
+openai	2026-09-29	openai/gpt-6.1-sol:batch	OpenAI: GPT-6.1 Sol (batch)	1050000	1.0	5.0
+openai	2026-09-22	openai/gpt-6-luna-pro	OpenAI: GPT-6 Luna Pro	1050000	0.1	0.5
+openai	2026-09-22	openai/gpt-6-luna-pro:batch	OpenAI: GPT-6 Luna Pro (batch)	1050000	0.05	0.25
+openai	2026-09-22	openai/gpt-6-luna	OpenAI: GPT-6 Luna	1050000	0.1	0.5
+openai	2026-09-22	openai/gpt-6-luna:batch	OpenAI: GPT-6 Luna (batch)	1050000	0.05	0.25
+openai	2026-09-22	openai/gpt-6-sol-pro	OpenAI: GPT-6 Sol Pro	1050000	2.0	10.0
+openai	2026-09-22	openai/gpt-6-sol-pro:batch	OpenAI: GPT-6 Sol Pro (batch)	1050000	1.0	5.0
+openai	2026-09-22	openai/gpt-6-sol	OpenAI: GPT-6 Sol	1050000	2.0	10.0
+openai	2026-09-22	openai/gpt-6-sol:batch	OpenAI: GPT-6 Sol (batch)	1050000	1.0	5.0
+openai	2026-09-04	openai/gpt-6-astra	OpenAI: GPT-6 Astra	1050000	10.0	50.0
+openai	2026-09-04	openai/gpt-6-astra:batch	OpenAI: GPT-6 Astra (batch)	1050000	5.0	25.0
+openai	2026-09-04	openai/gpt-6-astra-pro	OpenAI: GPT-6 Astra Pro	1050000	10.0	50.0
+openai	2026-09-04	openai/gpt-6-astra-pro:batch	OpenAI: GPT-6 Astra Pro (batch)	1050000	5.0	25.0
+openai	2026-07-09	openai/gpt-5.6-luna-pro	OpenAI: GPT-5.6 Luna Pro	1050000	0.2	1.2
+openai	2026-07-09	openai/gpt-5.6-luna-pro:batch	OpenAI: GPT-5.6 Luna Pro (batch)	1050000	0.1	0.6
+openai	2026-07-09	openai/gpt-5.6-luna	OpenAI: GPT-5.6 Luna	1050000	0.2	1.2
+openai	2026-07-09	openai/gpt-5.6-luna:batch	OpenAI: GPT-5.6 Luna (batch)	1050000	0.1	0.6
+openai	2026-07-09	openai/gpt-5.6-terra-pro	OpenAI: GPT-5.6 Terra Pro	1050000	2.0	12.0
+openai	2026-07-09	openai/gpt-5.6-terra-pro:batch	OpenAI: GPT-5.6 Terra Pro (batch)	1050000	1.0	6.0
+openai	2026-07-09	openai/gpt-5.6-terra	OpenAI: GPT-5.6 Terra	1050000	2.0	12.0
+openai	2026-07-09	openai/gpt-5.6-terra:batch	OpenAI: GPT-5.6 Terra (batch)	1050000	1.0	6.0
+openai	2026-07-09	openai/gpt-5.6-sol-pro	OpenAI: GPT-5.6 Sol Pro	1050000	4.0	20.0
+openai	2026-07-09	openai/gpt-5.6-sol-pro:batch	OpenAI: GPT-5.6 Sol Pro (batch)	1050000	2.0	10.0
+openai	2026-07-09	openai/gpt-5.6-sol	OpenAI: GPT-5.6 Sol	1050000	4.0	20.0
+openai	2026-07-09	openai/gpt-5.6-sol:batch	OpenAI: GPT-5.6 Sol (batch)	1050000	2.0	10.0
+openai	2026-05-05	openai/gpt-chat-latest	OpenAI: GPT Chat Latest	400000	5.0	30.0
+openai	2026-04-24	openai/gpt-5.5-pro	OpenAI: GPT-5.5 Pro	1050000	30.0	180.0
+openai	2026-04-24	openai/gpt-5.5-pro:batch	OpenAI: GPT-5.5 Pro (batch)	1050000	15.0	90.0
+openai	2026-04-24	openai/gpt-5.5	OpenAI: GPT-5.5	1050000	5.0	30.0
+openai	2026-04-24	openai/gpt-5.5:batch	OpenAI: GPT-5.5 (batch)	1050000	2.5	15.0
+openai	2026-04-21	openai/gpt-5.4-image-2	OpenAI: GPT-5.4 Image 2	272000	8.0	15.0
+openai	2026-03-17	openai/gpt-5.4-nano	OpenAI: GPT-5.4 Nano	400000	0.2	1.25
+openai	2026-03-17	openai/gpt-5.4-nano:batch	OpenAI: GPT-5.4 Nano (batch)	400000	0.1	0.625
+openai	2026-03-17	openai/gpt-5.4-mini	OpenAI: GPT-5.4 Mini	400000	0.75	4.5
+openai	2026-03-17	openai/gpt-5.4-mini:batch	OpenAI: GPT-5.4 Mini (batch)	400000	0.375	2.25
+openai	2026-03-05	openai/gpt-5.4-pro	OpenAI: GPT-5.4 Pro	1050000	30.0	180.0
+openai	2026-03-05	openai/gpt-5.4-pro:batch	OpenAI: GPT-5.4 Pro (batch)	1050000	15.0	90.0
+openai	2026-03-05	openai/gpt-5.4	OpenAI: GPT-5.4	1050000	2.5	15.0
+openai	2026-03-05	openai/gpt-5.4:batch	OpenAI: GPT-5.4 (batch)	1050000	1.25	7.5
+openai	2026-02-24	openai/gpt-5.3-codex	OpenAI: GPT-5.3-Codex	400000	1.75	14.0
+openai	2026-01-19	openai/gpt-audio	OpenAI: GPT Audio	128000	2.5	10.0
+openai	2026-01-19	openai/gpt-audio-mini	OpenAI: GPT Audio Mini	128000	0.6	2.4
+openai	2026-01-14	openai/gpt-5.2-codex	OpenAI: GPT-5.2-Codex	400000	1.75	14.0
+openai	2025-12-10	openai/gpt-5.2-chat	OpenAI: GPT-5.2 Chat	128000	1.75	14.0
+openai	2025-12-10	openai/gpt-5.2-pro	OpenAI: GPT-5.2 Pro	400000	21.0	168.0
+openai	2025-12-10	openai/gpt-5.2-pro:batch	OpenAI: GPT-5.2 Pro (batch)	400000	10.5	84.0
+openai	2025-12-10	openai/gpt-5.2	OpenAI: GPT-5.2	400000	1.75	14.0
+openai	2025-12-10	openai/gpt-5.2:batch	OpenAI: GPT-5.2 (batch)	400000	0.875	7.0
+openai	2025-12-04	openai/gpt-5.1-codex-max	OpenAI: GPT-5.1-Codex-Max	400000	1.25	10.0
+openai	2025-11-13	openai/gpt-5.1	OpenAI: GPT-5.1	400000	1.25	10.0
+openai	2025-11-13	openai/gpt-5.1:batch	OpenAI: GPT-5.1 (batch)	400000	0.625	5.0
+openai	2025-11-13	openai/gpt-5.1-codex	OpenAI: GPT-5.1-Codex	400000	1.25	10.0
+openai	2025-11-13	openai/gpt-5.1-codex-mini	OpenAI: GPT-5.1-Codex-Mini	400000	0.25	2.0
+openai	2025-10-29	openai/gpt-oss-safeguard-20b	OpenAI: gpt-oss-safeguard-20b	131072	0.075	0.3
+openai	2025-10-16	openai/gpt-5-image-mini	OpenAI: GPT-5 Image Mini	400000	2.5	2.0
+openai	2025-10-14	openai/gpt-5-image	OpenAI: GPT-5 Image	400000	10.0	10.0
+openai	2025-10-06	openai/gpt-5-pro	OpenAI: GPT-5 Pro	400000	15.0	120.0
+openai	2025-10-06	openai/gpt-5-pro:batch	OpenAI: GPT-5 Pro (batch)	400000	7.5	60.0
+openai	2025-08-07	openai/gpt-5	OpenAI: GPT-5	400000	1.25	10.0
+openai	2025-08-07	openai/gpt-5:batch	OpenAI: GPT-5 (batch)	400000	0.625	5.0
+openai	2025-08-07	openai/gpt-5-mini	OpenAI: GPT-5 Mini	400000	0.25	2.0
+openai	2025-08-07	openai/gpt-5-mini:batch	OpenAI: GPT-5 Mini (batch)	400000	0.125	1.0
+openai	2025-08-07	openai/gpt-5-nano	OpenAI: GPT-5 Nano	400000	0.05	0.4
+openai	2025-08-07	openai/gpt-5-nano:batch	OpenAI: GPT-5 Nano (batch)	400000	0.025	0.2
+openai	2025-08-05	openai/gpt-oss-120b	OpenAI: gpt-oss-120b	131072	0.15	0.6
+openai	2025-08-05	openai/gpt-oss-120b:batch	OpenAI: gpt-oss-120b (batch)	131072	0.03	0.136
+openai	2025-08-05	openai/gpt-oss-20b	OpenAI: gpt-oss-20b	131072	0.018	0.09
+openai	2025-08-05	openai/gpt-oss-20b:batch	OpenAI: gpt-oss-20b (batch)	131072	0.024	0.112
+openai	2025-06-10	openai/o3-pro	OpenAI: o3 Pro	200000	20.0	80.0
+openai	2025-04-16	openai/o4-mini-high	OpenAI: o4 Mini High	200000	1.1	4.4
+openai	2025-04-16	openai/o3	OpenAI: o3	200000	2.0	8.0
+openai	2025-04-16	openai/o3:batch	OpenAI: o3 (batch)	200000	1.0	4.0
+openai	2025-04-16	openai/o4-mini	OpenAI: o4 Mini	200000	1.1	4.4
+openai	2025-04-16	openai/o4-mini:batch	OpenAI: o4 Mini (batch)	200000	0.55	2.2
+openai	2025-04-14	openai/gpt-4.1	OpenAI: GPT-4.1	1047576	2.0	8.0
+openai	2025-04-14	openai/gpt-4.1:batch	OpenAI: GPT-4.1 (batch)	1047576	1.0	4.0
+openai	2025-04-14	openai/gpt-4.1-mini	OpenAI: GPT-4.1 Mini	1047576	0.4	1.6
+openai	2025-04-14	openai/gpt-4.1-mini:batch	OpenAI: GPT-4.1 Mini (batch)	1047576	0.2	0.8
+openai	2025-04-14	openai/gpt-4.1-nano	OpenAI: GPT-4.1 Nano	1047576	0.1	0.4
+openai	2025-04-14	openai/gpt-4.1-nano:batch	OpenAI: GPT-4.1 Nano (batch)	1047576	0.05	0.2
+openai	2025-03-19	openai/o1-pro	OpenAI: o1-pro	200000	150.0	600.0
+openai	2025-02-12	openai/o3-mini-high	OpenAI: o3 Mini High	200000	1.1	4.4
+openai	2025-01-31	openai/o3-mini	OpenAI: o3 Mini	200000	1.1	4.4
+openai	2025-01-31	openai/o3-mini:batch	OpenAI: o3 Mini (batch)	200000	0.55	2.2
+openai	2024-12-17	openai/o1	OpenAI: o1	200000	15.0	60.0
+openai	2024-11-20	openai/gpt-4o-2024-11-20	OpenAI: GPT-4o (2024-11-20)	128000	2.5	10.0
+openai	2024-08-06	openai/gpt-4o-2024-08-06	OpenAI: GPT-4o (2024-08-06)	128000	2.5	10.0
+openai	2024-07-18	openai/gpt-4o-mini	OpenAI: GPT-4o-mini	128000	0.15	0.6
+openai	2024-07-18	openai/gpt-4o-mini-2024-07-18	OpenAI: GPT-4o-mini (2024-07-18)	128000	0.15	0.6
+openai	2024-07-18	openai/gpt-4o-mini:batch	OpenAI: GPT-4o-mini (batch)	128000	0.075	0.3
+openai	2024-05-13	openai/gpt-4o	OpenAI: GPT-4o	128000	2.5	10.0
+openai	2024-05-13	openai/gpt-4o-2024-05-13	OpenAI: GPT-4o (2024-05-13)	128000	5.0	15.0
+openai	2024-05-13	openai/gpt-4o:batch	OpenAI: GPT-4o (batch)	128000	1.25	5.0
+openai	2024-04-09	openai/gpt-4-turbo	OpenAI: GPT-4 Turbo	128000	10.0	30.0
+openai	2024-04-09	openai/gpt-4-turbo:batch	OpenAI: GPT-4 Turbo (batch)	128000	5.0	15.0
+openai	2024-01-25	openai/gpt-3.5-turbo-0613	OpenAI: GPT-3.5 Turbo (older v0613)	4095	1.0	2.0
+openai	2023-08-28	openai/gpt-3.5-turbo-16k	OpenAI: GPT-3.5 Turbo 16k	16385	3.0	4.0
+openai	2023-05-28	openai/gpt-4	OpenAI: GPT-4	8191	30.0	60.0
