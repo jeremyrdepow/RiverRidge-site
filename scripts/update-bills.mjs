@@ -10,8 +10,11 @@
 //
 // The official summary printed in each bill comes from the bill's
 // openparliament page either way. scripts/parliament.mjs adds witnesses from
-// House committee notices, speeches naming each bill from House and Senate
-// debates, and digital bills on the House Notice Paper. The run never fails
+// House committee notices, briefs and witness lists from House committee
+// studies, amendments from committee minutes, speeches naming each bill from
+// House and Senate debates, and digital bills on the House Notice Paper.
+// scripts/billtext.mjs reads each published version of a bill: what changed,
+// when it comes into force and the penalties it names. The run never fails
 // because a fetch did, so the live page never breaks. It also writes
 // data/bills.csv, a spreadsheet copy of the tracker.
 //
@@ -19,9 +22,19 @@
 // Node 20+ (built-in fetch). No dependencies.
 
 import { readFile, writeFile } from "node:fs/promises";
+import { analyse, versionFiles } from "./billtext.mjs";
 import {
+  MEMBERS_XML_URL,
+  amendmentsFrom,
   billsOnNotice,
+  briefsFrom,
   fetchText,
+  houseBriefsUrl,
+  houseMinutesUrl,
+  houseStudyUrl,
+  houseStudyWitnessesUrl,
+  partiesFrom,
+  studyWitnessesFrom,
   houseHansardUrl,
   houseHansardXmlUrl,
   houseMeetingUrl,
@@ -159,6 +172,8 @@ function activityFrom(bill, base) {
         };
         const seen = known.get(key(meeting));
         if (seen?.witnesses) meeting.witnesses = seen.witnesses;
+        if (seen?.study !== undefined) meeting.study = seen.study;
+        if (seen?.amendments) meeting.amendments = seen.amendments;
         meetings.set(key(meeting), meeting); // a meeting can be listed under two stages
       }
       for (const s of st.Sittings || []) {
@@ -231,6 +246,7 @@ function fromLegisinfo(bill, base) {
     statute,
     committees: committeesFrom(bill),
     activity: activityFrom(bill, base),
+    publications: (bill.Publications || []).map((p) => ({ id: String(p.PublicationId), type: p.PublicationTypeNameEn || "" })),
     legisinfoUrl: `https://www.parl.ca/legisinfo/en/bill/${SESSION}/${bill.NumberCode.toLowerCase()}`,
     textUrl: textUrl(bill),
     stale: false,
@@ -392,6 +408,14 @@ function changesFor(prev, next) {
   return [];
 }
 
+// Committee amendments decided on a bill (or only those adopted), from the
+// minutes read so far; null when no minutes have been read yet.
+function amendmentCount(b, result) {
+  const read = (b.activity?.meetings || []).filter((m) => m.amendments);
+  if (!read.length) return null;
+  return read.reduce((n, m) => n + m.amendments.filter((a) => !result || a.result === result).length, 0);
+}
+
 // A flat copy for spreadsheets, one row per bill. The byte-order mark makes
 // Excel read the accents correctly.
 function toCsv(bills, themes) {
@@ -406,6 +430,8 @@ function toCsv(bills, themes) {
       "Bill", "Short title", "Long title", "Policy area", "Type", "Sponsor", "Status", "Stages passed (of 7)",
       "Last activity", "Last activity date", "Last activity chamber", "Committees", "Royal assent", "Statute",
       "Committee meetings", "Last committee meeting", "Speeches naming the bill (last 30 days)",
+      "Provisions changed in committee", "Coming into force", "Briefs to House committee",
+      "Organizations heard at House committee", "Committee amendments adopted", "Committee amendments decided",
       "RiverRidge summary", "LEGISinfo", "Bill text",
     ],
     ...bills.map((b) => [
@@ -414,6 +440,11 @@ function toCsv(bills, themes) {
       (b.committees || []).map((c) => `${c.acronym}${c.current ? " (now)" : ""}${c.role === "pre-study" ? " (pre-study)" : ""}`).join("; "),
       b.royalAssent, b.statute, b.activity?.meetings?.length ?? "", b.activity?.meetings?.[0]?.date,
       (b.mentions || []).filter((m) => m.date >= since30).reduce((n, m) => n + m.speeches, 0),
+      (b.text?.changes || []).filter((c) => /committee/i.test(c.to)).reduce((n, c) => n + c.provisions.filter((p) => p.kind !== "renumbered").length, 0) || "",
+      (b.text?.inForce || []).map((f) => `${f.ref}: ${f.text}`).join(" | "),
+      (b.studies || []).reduce((n, x) => n + x.briefs.length, 0) || "",
+      (b.studies || []).reduce((n, x) => n + x.witnesses.filter((w) => w.name !== "As an individual").length, 0) || "",
+      amendmentCount(b, "adopted") ?? "", amendmentCount(b) ?? "",
       b.summary, b.legisinfoUrl, b.textUrl,
     ]),
   ];
@@ -504,25 +535,122 @@ for (const cfg of config.bills) {
   await sleep(1200); // be gentle on both sites
 }
 
-// Witnesses at House committee meetings on each bill, read from the meeting
-// notice. Lists are final once a meeting has happened, so each is read once,
-// newest first, at most WITNESS_READS per run (the first run backfills).
-const WITNESS_READS = 40;
-const witnessQueue = bills
-  .flatMap((b) => (b.activity?.meetings || []).map((m) => ({ number: b.number, m })))
-  .filter(({ m }) => m.chamber === "House" && !m.witnesses && m.date && m.date < today())
-  .sort((a, b) => b.m.date.localeCompare(a.m.date))
-  .slice(0, WITNESS_READS);
-let witnessesRead = 0;
-for (const { number, m } of witnessQueue) {
-  try {
-    m.witnesses = witnessesFrom(await fetchText(m.url), number);
-    witnessesRead++;
-  } catch (err) {
-    if (err.status === 404) m.witnesses = { orgs: [], people: [], appearing: [] };
-    console.error(`witnesses ${number} ${m.committee} ${m.number}: ${err.message}`);
+// House committee meetings on each bill: the notice (witnesses, and the
+// study the meeting belongs to) and the minutes (amendments decided and how
+// they fared). Both are final once a meeting has happened, so each is read
+// once, newest meetings first, at most MEETING_READS meetings per run (the
+// first runs backfill). The notice is skipped when witnesses are already
+// known and the bill's study at that committee is known from another meeting.
+const MEETING_READS = 30;
+let partyOf = null;
+const studyKnown = (b, committee) => (b.activity?.meetings || []).some((m) => m.committee === committee && m.study);
+const meetingQueue = bills
+  .flatMap((b) => (b.activity?.meetings || []).map((m) => ({ b, m })))
+  .filter(({ b, m }) => m.chamber === "House" && m.date && m.date < today() &&
+    (!m.witnesses || m.amendments === undefined || (m.study === undefined && !studyKnown(b, m.committee))))
+  .sort((x, y) => y.m.date.localeCompare(x.m.date))
+  .slice(0, MEETING_READS);
+let meetingsRead = 0;
+for (const { b, m } of meetingQueue) {
+  if (!m.witnesses || (m.study === undefined && !studyKnown(b, m.committee))) {
+    try {
+      const { study, ...w } = witnessesFrom(await fetchText(m.url), b.number);
+      m.witnesses = w;
+      m.study = study;
+    } catch (err) {
+      if (err.status === 404) { m.witnesses = m.witnesses || { orgs: [], people: [], appearing: [] }; m.study = m.study ?? null; }
+      console.error(`notice ${b.number} ${m.committee} ${m.number}: ${err.message}`);
+    }
+    await sleep(1200);
   }
-  await sleep(1200);
+  if (m.amendments === undefined) {
+    try {
+      if (!partyOf) {
+        partyOf = partiesFrom(await fetchText(MEMBERS_XML_URL));
+        await sleep(1200);
+      }
+      m.amendments = amendmentsFrom(await fetchText(houseMinutesUrl(m.committee, m.number)), b.number, partyOf);
+    } catch (err) {
+      if (err.status === 404) m.amendments = [];
+      console.error(`minutes ${b.number} ${m.committee} ${m.number}: ${err.message}`);
+    }
+    await sleep(1200);
+  }
+  meetingsRead++;
+}
+
+// Each House committee study of a bill: the briefs submitted and the
+// witnesses heard, from the study's own lists. Refreshed weekly, or daily
+// while the committee has met on the bill in the last 30 days.
+const STUDY_DAYS = 30;
+let studiesRead = 0;
+for (const b of bills) {
+  const ids = new Map();
+  for (const m of b.activity?.meetings || []) if (m.chamber === "House" && m.study) ids.set(`${m.committee}|${m.study}`, m);
+  const previousStudies = new Map((b.studies || []).map((x) => [`${x.committee}|${x.id}`, x]));
+  const studies = [];
+  for (const [k, m] of ids) {
+    const prev = previousStudies.get(k);
+    const lastMeeting = (b.activity.meetings.filter((x) => x.committee === m.committee && x.date <= today())[0] || {}).date || "";
+    const recent = lastMeeting >= new Date(Date.now() - STUDY_DAYS * 86400000).toISOString().slice(0, 10);
+    const stale = !prev || !prev.checked || prev.checked < new Date(Date.now() - 7 * 86400000).toISOString().slice(0, 10);
+    if (prev && !recent && !stale) { studies.push(prev); continue; }
+    try {
+      const briefs = briefsFrom(await fetchText(houseBriefsUrl(m.committee, m.study)));
+      await sleep(1200);
+      const witnesses = studyWitnessesFrom(await fetchText(houseStudyWitnessesUrl(m.committee, m.study)));
+      await sleep(1200);
+      studies.push({ chamber: "House", committee: m.committee, id: m.study, url: houseStudyUrl(m.committee, m.study), briefs, witnesses, checked: today() });
+      studiesRead++;
+    } catch (err) {
+      console.error(`study ${b.number} ${m.committee} ${m.study}: ${err.message}`);
+      if (prev) studies.push(prev);
+    }
+  }
+  if (studies.length) b.studies = studies;
+}
+
+// Bill text: what each published version changed from the one before, when
+// the bill comes into force and the penalties it names. A version's page is
+// read once for its XML address; the analysis reruns only when a new version
+// appears. At most TEXT_FETCHES pages and files per run (the first runs
+// backfill).
+const TEXT_FETCHES = 60;
+let textFetches = 0;
+let textsAnalysed = 0;
+for (const b of bills) {
+  const pubs = b.publications || [];
+  const prev = b.text || {};
+  const basis = pubs.map((p) => p.id).join(",");
+  if (!pubs.length || prev.basis === basis) continue;
+  const known = new Map((prev.versions || []).map((v) => [v.id, v]));
+  const versions = [];
+  try {
+    for (const p of pubs) {
+      let v = known.get(p.id);
+      if (!v?.xml) {
+        if (textFetches >= TEXT_FETCHES) throw new Error("run limit reached; continuing tomorrow");
+        textFetches++;
+        v = { id: p.id, type: p.type, ...versionFiles(await fetchText(`https://www.parl.ca/DocumentViewer/en/${p.id}`)) };
+        await sleep(1200);
+      }
+      versions.push(v);
+    }
+    const docs = [];
+    for (const v of versions) {
+      if (!v.xml) throw new Error(`no XML for version ${v.id} (${v.type})`);
+      if (textFetches >= TEXT_FETCHES) throw new Error("run limit reached; continuing tomorrow");
+      textFetches++;
+      docs.push({ type: v.type, xml: await fetchText(v.xml) });
+      await sleep(1200);
+    }
+    b.text = { basis, versions, ...analyse(docs) };
+    textsAnalysed++;
+  } catch (err) {
+    console.error(`bill text ${b.number}: ${err.message}`);
+    // Keep the version addresses found so far for the next run.
+    b.text = { ...prev, versions: [...versions, ...(prev.versions || []).filter((v) => !versions.some((x) => x.id === v.id))] };
+  }
 }
 
 // Mentions in debate: speeches naming a tracked bill, from each House sitting
@@ -607,6 +735,7 @@ await writeFile(CSV_PATH, noEm(toCsv(bills, config.themes)));
 for (const c of changes) console.log(`change ${c.number}: ${c.text}`);
 console.log(
   `Wrote ${bills.length} bills: ${count.legisinfo} from LEGISinfo, ${count.openparliament} from openparliament.ca, ` +
-    `${count.stale} kept stale, ${changes.length} changes logged. ${witnessesRead} witness lists read, ` +
+    `${count.stale} kept stale, ${changes.length} changes logged. ${meetingsRead} committee meetings read, ` +
+    `${studiesRead} committee studies refreshed, ${textsAnalysed} bill texts analysed, ` +
     `${found.length} new mentions, ${upcoming.length} digital bills on notice.`
 );

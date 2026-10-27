@@ -1,7 +1,8 @@
 // Parliament of Canada sources beyond LEGISinfo, used by update-bills.mjs:
-// committee meeting notices (witnesses), House and Senate debates (where a
-// bill is mentioned) and the House Notice Paper (bills on notice before
-// first reading). Everything here is plain string work on the published
+// committee meeting notices (witnesses), House committee study pages (briefs
+// and witness lists), committee minutes (amendments and how they fared), the
+// House list of MPs (party), House and Senate debates (where a bill is
+// mentioned) and the House Notice Paper (bills on notice before first reading). Everything here is plain string work on the published
 // pages, so there are no dependencies. Each parser was written against real
 // pages fetched by GitHub Actions on Oct 27, 2026.
 
@@ -74,9 +75,11 @@ export function witnessesFrom(html, number) {
   const re = billPattern(number);
   const items = html.split(/<div class=['"]StudyActivity['"]>/i).slice(1);
   const out = { orgs: [], people: [], appearing: [] };
+  let study = null;
   for (const item of items) {
     const title = plain(item.slice(0, item.indexOf("</a>") + 4));
     if (!re.test(title)) continue;
+    study = study || (item.match(/studyActivityId=(\d+)/) || [])[1] || null;
     // Stop at the next agenda item's markup, which split() already did, and
     // read organizations, people and section headings in document order.
     let section = "Witnesses";
@@ -97,6 +100,74 @@ export function witnessesFrom(html, number) {
     }
   }
   for (const k of Object.keys(out)) out[k] = [...new Set(out[k])];
+  return { ...out, study };
+}
+
+// ---------- House committee studies: briefs, witnesses, amendments ----------
+
+export const houseStudyUrl = (committee, id) => `https://www.ourcommons.ca/Committees/en/${committee}/StudyActivity?studyActivityId=${id}`;
+const studyPart = (committee, id, part) => `https://www.ourcommons.ca/committees/en/${committee}/StudyActivity/${part}?studyActivityId=${id}`;
+export const houseBriefsUrl = (committee, id) => studyPart(committee, id, "GetBriefs");
+export const houseStudyWitnessesUrl = (committee, id) => studyPart(committee, id, "Witnesses");
+export const houseMinutesUrl = (committee, number) => `https://www.ourcommons.ca/DocumentViewer/en/${SESSION}/${committee}/meeting-${number}/minutes`;
+export const MEMBERS_XML_URL = "https://www.ourcommons.ca/Members/en/search/XML";
+
+// Briefs submitted to a House committee study: who sent each, when it was
+// published and the PDF. Names written "Last, First" are individuals.
+export function briefsFrom(html) {
+  return html.split(/class="brief-item/).slice(1).map((item) => {
+    const name = plain((item.match(/<div class="name">([\s\S]*?)(?:<a|<\/div>)/) || [])[1] || "");
+    const pdf = (item.match(/href="([^"]+\.pdf)"/i) || [])[1] || null;
+    const published = isoDate(plain((item.match(/class="published">([\s\S]*?)<\/div>/) || [])[1] || ""));
+    return { name, individual: /^[^,]+, [^,]+$/.test(name) && !/\b(inc|ltd|association|council|society|canada)\b/i.test(name), date: published, url: pdf ? (pdf.startsWith("//") ? "https:" + pdf : pdf) : null };
+  }).filter((b) => b.name);
+}
+
+// Witnesses heard in a House committee study, from the study's witness list:
+// each organization with the people who appeared for it and the meetings.
+export function studyWitnessesFrom(html) {
+  const orgs = new Map();
+  let meeting = null;
+  let org = null;
+  const re = /class="witness-meeting[^"]*">[\s\S]*?\(Meeting (\d+)\)|class="witness-organization[^"]*">([\s\S]*?)<\/div>|class="witness-person">\s*<span>([\s\S]*?)<\/span>/gi;
+  for (const m of html.matchAll(re)) {
+    if (m[1] !== undefined) { meeting = m[1]; org = null; continue; }
+    if (m[2] !== undefined) { org = plain(m[2]); continue; }
+    const person = plain(m[3]).replace(/,$/, "");
+    const key = org || "As an individual";
+    const rec = orgs.get(key) || { name: key, people: [], meetings: [] };
+    if (!rec.people.includes(person)) rec.people.push(person);
+    if (meeting && !rec.meetings.includes(meeting)) rec.meetings.push(meeting);
+    orgs.set(key, rec);
+  }
+  return [...orgs.values()];
+}
+
+// Party of each MP, keyed by "First Last" as committee minutes write names.
+export function partiesFrom(xml) {
+  const map = new Map();
+  for (const m of xml.matchAll(/<MemberOfParliament>([\s\S]*?)<\/MemberOfParliament>/g)) {
+    const get = (t) => plain((m[1].match(new RegExp(`<${t}>([^<]*)</${t}>`)) || [])[1] || "");
+    map.set(`${get("PersonOfficialFirstName")} ${get("PersonOfficialLastName")}`, get("CaucusShortName"));
+  }
+  return map;
+}
+
+// Amendments decided at one committee meeting, from its minutes: who moved
+// each and whether it was agreed to. A meeting can take up more than one bill,
+// so each decision is credited to the bill named most recently before it.
+export function amendmentsFrom(html, number, partyOf = new Map()) {
+  const text = plain(html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, " "));
+  const name = "((?:[A-Z][\\w'\u2019\\-]+ ){1,3}[A-Z][\\w'\u2019\\-]+)";
+  const re = new RegExp(`That Bill ([CS])[-\u2010\u2011\u2012\u2013](\\d+)|question was put on the amendment of ${name} and it was (negatived|agreed to)`, "g");
+  const target = number.toUpperCase();
+  let current = null;
+  const out = [];
+  for (const m of text.matchAll(re)) {
+    if (m[1]) { current = `${m[1]}-${m[2]}`; continue; }
+    if (current !== target) continue;
+    out.push({ mover: m[3], party: partyOf.get(m[3]) || "", result: m[4] === "agreed to" ? "adopted" : "defeated" });
+  }
   return out;
 }
 

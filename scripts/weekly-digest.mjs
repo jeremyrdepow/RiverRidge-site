@@ -48,9 +48,22 @@ section(
       .filter((m) => inWeek(m.date))
       .map((m) => {
         const w = m.witnesses?.orgs?.length ? ` Heard from ${m.witnesses.orgs.slice(0, 5).join(", ")}${m.witnesses.orgs.length > 5 ? " and others" : ""}.` : "";
-        return `${link(b)}: ${m.committee} meeting ${m.number} (${m.chamber}), ${fmt(m.date)}.${w}`;
+        const a = m.amendments?.length ? ` ${plural(m.amendments.length, "amendment", "amendments")} decided, ${m.amendments.filter((x) => x.result === "adopted").length} adopted.` : "";
+        return `${link(b)}: ${m.committee} meeting ${m.number} (${m.chamber}), ${fmt(m.date)}.${w}${a}`;
       })
   )
+);
+
+// Briefs published to House committees this week.
+section(
+  "New briefs to committee",
+  bills.flatMap((b) => {
+    const fresh = (b.studies || []).flatMap((x) => x.briefs.filter((r) => inWeek(r.date)));
+    if (!fresh.length) return [];
+    const orgs = fresh.filter((r) => !r.individual).map((r) => r.name);
+    const people = fresh.length - orgs.length;
+    return [`${link(b)}: ${plural(fresh.length, "brief", "briefs")}${orgs.length ? `, including from ${orgs.slice(0, 5).join(", ")}${orgs.length > 5 ? " and others" : ""}` : ""}${people && orgs.length ? `, and ${plural(people, "individual", "individuals")}` : ""}.`];
+  })
 );
 
 // Things that happened in the House or Senate chamber.

@@ -132,6 +132,10 @@ section.theme h2 { font-family: var(--font-display); font-weight: 600; font-size
 .record .when { font-family: var(--font-data); color: var(--muted); font-variant-numeric: tabular-nums; }
 .record .who { color: var(--muted); }
 .record .note { margin: 0.4rem 0 0; color: var(--muted); }
+.record details + details { margin-top: 0.1rem; }
+table.amend { border-collapse: collapse; font-size: var(--step--1); margin-top: 0.2rem; }
+table.amend th, table.amend td { text-align: left; padding: 0.15rem 1.2rem 0.15rem 0; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+table.amend th { font-weight: 600; }
 .onnotice { font-size: var(--step--1); color: var(--muted); border-top: 1px dashed var(--line); padding-top: 0.6rem; }
 .onnotice h3 { margin: 0 0 0.25rem; font-size: var(--step--1); font-weight: 600; color: var(--ink); }
 .onnotice ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.25rem; color: var(--ink); }
@@ -323,7 +327,9 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
   };
   const matchesSearch = (b, q) => {
     if (!q) return true;
-    const hay = [b.number, b.number.replace("-", ""), b.shortTitle, b.longTitle, b.summary, b.sponsor, b.status, ...(b.officialSummary || [])].join(" ").toLowerCase();
+    const hay = [b.number, b.number.replace("-", ""), b.shortTitle, b.longTitle, b.summary, b.sponsor, b.status, ...(b.officialSummary || []),
+      ...(b.studies || []).flatMap((x) => [...x.witnesses.map((w) => w.name), ...x.briefs.map((r) => r.name)]),
+      ...(b.text?.changes || []).flatMap((c) => c.provisions.map((p) => p.note))].join(" ").toLowerCase();
     return q.toLowerCase().split(/\s+/).every((w) => hay.includes(w));
   };
 
@@ -399,7 +405,9 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     const sittings = a.sittings || [];
     const decisions = a.decisions || [];
     const mentions = b.mentions || [];
-    if (!meetings.length && !sittings.length && !decisions.length && !mentions.length) return "";
+    const textBlock = textHtml(b);
+    const evidenceBlock = evidenceHtml(b);
+    if (!meetings.length && !sittings.length && !decisions.length && !mentions.length && !textBlock && !evidenceBlock) return "";
     const today = todayIso();
     const held = meetings.filter((m) => m.date <= today);
     const next = meetings.filter((m) => m.date > today).sort((x, y) => x.date.localeCompare(y.date))[0];
@@ -410,6 +418,8 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
       next ? `next meeting <b>${esc(fmtDate(next.date))}</b> (${esc(next.committee)})` : "",
       days ? `<b>${plural(days, "sitting day", "sitting days")}</b> in the chamber` : "",
       speeches30 ? `named in <b>${plural(speeches30, "speech", "speeches")}</b> in the last 30 days` : "",
+      committeeChanges(b) ? `<b>${plural(committeeChanges(b), "provision", "provisions")}</b> changed in committee` : "",
+      briefCount(b) ? `<b>${plural(briefCount(b), "brief", "briefs")}</b> to committee` : "",
     ].filter(Boolean).join(" · ");
 
     const more = (list, what) => list.length > SHOW ? `<li><a href="${esc(b.legisinfoUrl)}" rel="noopener">${plural(list.length - SHOW, `earlier ${what}`, `earlier ${what}s`)} on LEGISinfo</a></li>` : "";
@@ -444,7 +454,78 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
         `<br><span class="who">${esc(m.speakers.slice(0, 3).join(", "))}${m.speakers.length > 3 ? ` and ${m.speakers.length - 3} more` : ""}${m.contexts.length ? ` · ${esc(m.contexts.slice(0, 2).join("; "))}` : ""}</span></li>`
       ).join("")}</ul><p class="note">Speeches are found by matching the bill number in Hansard, so a passing mention counts.</p>`);
     }
-    return `<div class="record"><div class="tally">${tally}</div><details><summary>Parliamentary record</summary>${sections.join("")}</details></div>`;
+    return `<div class="record"><div class="tally">${tally}</div>${sections.length ? `<details><summary>Parliamentary record</summary>${sections.join("")}</details>` : ""}${textBlock}${evidenceBlock}</div>`;
+  }
+
+  // ---- Bill text: changes between versions, coming into force, penalties ----
+  const CHANGE_LABELS = {
+    "As amended by committee": "Changed in committee",
+    "As passed by the House of Commons": "Changed at report stage or third reading in the House",
+    "As passed by the Senate": "Changed in the Senate",
+    "Royal Assent": "Changed before royal assent",
+  };
+  // "41 / 9" to "clause 41, section 9"; "34" to "clause 34".
+  const refText = (ref) => { const [c, ...rest] = ref.split(" / "); return `Clause ${c}${rest.length ? `, section ${rest.join(".")}` : ""}`; };
+  const realChanges = (c) => c.provisions.filter((p) => p.kind !== "renumbered");
+  const committeeChanges = (b) => (b.text?.changes || []).filter((c) => /committee/i.test(c.to)).reduce((n, c) => n + realChanges(c).length, 0);
+  const briefCount = (b) => (b.studies || []).reduce((n, x) => n + x.briefs.length, 0);
+  const plusDays = (iso, days) => { const d = new Date(iso + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + days); return d.toISOString().slice(0, 10); };
+
+  function textHtml(b) {
+    const t = b.text;
+    if (!t || (!t.changes?.length && !t.inForce?.length && !t.penalties?.length)) return "";
+    const pdfOf = (type) => (t.versions || []).find((v) => v.type === type)?.pdf;
+    const parts = [];
+    for (const c of t.changes || []) {
+      const real = realChanges(c);
+      const renum = c.provisions.length - real.length;
+      if (!real.length && !renum) continue;
+      const pdf = pdfOf(c.to);
+      parts.push(`<h4>${esc(CHANGE_LABELS[c.to] || `Changed from ${c.from} to ${c.to}`)}</h4>
+        <p class="note" style="margin:0 0 .3rem">${plural(real.length, "provision", "provisions")} amended, added or removed${renum ? `, plus ${renum} renumbered` : ""}. Compared with the previous version (${esc(c.from)}).${pdf ? ` <a href="${esc(pdf)}" rel="noopener">Read this version (PDF)</a>` : ""}</p>
+        <ul>${real.slice(0, 10).map((p) => `<li>${esc(refText(p.ref))}${p.note ? `: ${esc(p.note)}` : ""} <span class="who">(${esc(p.kind)}${p.was && p.kind !== "amended" ? `, was ${esc(refText(p.was).toLowerCase())}` : ""})</span></li>`).join("")}${real.length > 10 ? `<li class="who">and ${real.length - 10} more</li>` : ""}</ul>`);
+    }
+    if (t.inForce?.length) {
+      parts.push(`<h4>Coming into force</h4><ul>${t.inForce.slice(0, 8).map((f) => {
+        const days = (f.text.match(/on the (\d+)(?:st|nd|rd|th) day after the day on which this Act receives royal assent/) || [])[1];
+        const when = days && b.royalAssent ? ` That is ${fmtDate(plusDays(b.royalAssent, Number(days)))}.` : "";
+        return `<li>${esc(refText(f.ref))}: ${esc(f.text)}${esc(when)}</li>`;
+      }).join("")}${t.inForce.length > 8 ? `<li class="who">and ${t.inForce.length - 8} more</li>` : ""}</ul>
+      ${t.inForce.some((f) => /order (?:of|in) (?:the )?(?:Governor in )?Council/i.test(f.text)) ? `<p class="note">Parts set by order in council are not in force until the government makes that order. The tracker does not yet check whether it has.</p>` : ""}`);
+    }
+    if (t.penalties?.length) {
+      parts.push(`<h4>Penalty amounts in the bill</h4><ul>${t.penalties.slice(0, 6).map((p) =>
+        `<li>${esc(refText(p.ref))}${p.note ? ` (${esc(p.note)})` : ""}: ${esc(p.text)}</li>`).join("")}${t.penalties.length > 6 ? `<li class="who">and ${t.penalties.length - 6} more provisions naming amounts</li>` : ""}</ul>`);
+    }
+    if (!parts.length) return "";
+    return `<details><summary>Bill text: changes, coming into force, penalties</summary>${parts.join("")}<p class="note">Read automatically from each version of the bill published by Parliament.</p></details>`;
+  }
+
+  // ---- Committee evidence: who was heard, who sent briefs, how amendments fared ----
+  function evidenceHtml(b) {
+    const studies = b.studies || [];
+    const amends = (b.activity?.meetings || []).flatMap((m) => m.amendments || []);
+    if (!studies.length && !amends.length) return "";
+    const parts = [];
+    for (const st of studies) {
+      const orgs = st.witnesses.filter((w) => w.name !== "As an individual").sort((x, y) => y.meetings.length - x.meetings.length || x.name.localeCompare(y.name));
+      const indiv = (st.witnesses.find((w) => w.name === "As an individual") || { people: [] }).people.length;
+      const orgBriefs = st.briefs.filter((x) => !x.individual).sort((x, y) => (y.date || "").localeCompare(x.date || ""));
+      const peopleBriefs = st.briefs.length - orgBriefs.length;
+      parts.push(`<h4>${esc(st.committee)} (House committee)</h4>
+        <p class="note" style="margin:0 0 .3rem">${plural(orgs.length, "organization", "organizations")} and ${plural(indiv, "individual", "individuals")} heard; ${plural(st.briefs.length, "brief", "briefs")} submitted. <a href="${esc(st.url)}" rel="noopener">Committee's page for this study</a></p>
+        ${orgs.length ? `<p style="margin:.2rem 0"><b>Heard from:</b> ${orgs.slice(0, 14).map((o) => esc(o.name)).join("; ")}${orgs.length > 14 ? `; and ${orgs.length - 14} more` : ""}</p>` : ""}
+        ${orgBriefs.length ? `<p style="margin:.4rem 0 .2rem"><b>Briefs from organizations:</b></p><ul>${orgBriefs.slice(0, 10).map((x) => `<li>${x.url ? `<a href="${esc(x.url)}" rel="noopener">${esc(x.name)}</a>` : esc(x.name)}${x.date ? ` <span class="who">${esc(fmtDate(x.date))}</span>` : ""}</li>`).join("")}${orgBriefs.length > 10 || peopleBriefs ? `<li class="who">${[orgBriefs.length > 10 ? `${orgBriefs.length - 10} more from organizations` : "", peopleBriefs ? `${peopleBriefs} from individuals` : ""].filter(Boolean).join(" and ")} on the committee's page</li>` : ""}</ul>` : ""}`);
+    }
+    if (amends.length) {
+      const by = new Map();
+      for (const a of amends) { const k = a.party || "Not matched to a party"; const r = by.get(k) || { decided: 0, adopted: 0 }; r.decided++; if (a.result === "adopted") r.adopted++; by.set(k, r); }
+      const rows = [...by.entries()].sort((x, y) => y[1].decided - x[1].decided);
+      parts.push(`<h4>Amendments decided at committee</h4>
+        <table class="amend"><thead><tr><th>Moved by</th><th>Decided</th><th>Adopted</th></tr></thead><tbody>${rows.map(([p, r]) => `<tr><td>${esc(p)}</td><td>${r.decided}</td><td>${r.adopted}</td></tr>`).join("")}</tbody></table>
+        <p class="note">From the minutes of the House committee meetings on this bill read so far.</p>`);
+    }
+    return `<details><summary>Committee evidence: witnesses, briefs, amendments</summary>${parts.join("")}</details>`;
   }
 
   function onNoticeHtml(data) {
