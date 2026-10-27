@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27T19:35:14.188Z",
+  "checkedAt": "2026-10-27T20:26:46.958Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -76,7 +76,98 @@
         "(d) provides that persons in Canada may make submissions to the Digital Safety Commission of Canada respecting the measures taken by the operator of a regulated service to comply with its duties under that Act.",
         "Part 2 enacts the Digital Safety Commission of Canada Act, which establishes the Digital Safety Commission of Canada, which has powers, duties and functions under the Digital Safety Act. The Part also makes consequential amendments to other Acts."
       ],
-      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-34&lang=en_CA&parlSession=451"
+      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-34&lang=en_CA&parlSession=451",
+      "activity": {
+        "meetings": [],
+        "sittings": [
+          {
+            "date": "2026-10-21",
+            "chamber": "House",
+            "sitting": "152",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-152/hansard"
+          },
+          {
+            "date": "2026-06-10",
+            "chamber": "House",
+            "sitting": "133",
+            "event": "Introduction and first reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-133/hansard"
+          }
+        ],
+        "decisions": []
+      },
+      "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "153",
+          "date": "2026-10-22",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-153/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Arielle Kayabaga (Lib.)"
+          ],
+          "contexts": [
+            "Oral Questions: Business of the House"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "152",
+          "date": "2026-10-21",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-152/hansard",
+          "speeches": 14,
+          "speakers": [
+            "Louis Villeneuve (Lib.)",
+            "Hon. Marc Miller (Lib.)",
+            "Hon. Marc Miller",
+            "Rachael Thomas (CPC)",
+            "Hon. Kevin Lamoureux (Lib.)",
+            "Rachael Thomas",
+            "Martin Champoux (BQ)",
+            "Martin Champoux",
+            "Sameer Zuberi (Lib.)",
+            "Elizabeth May (GP)"
+          ],
+          "contexts": [
+            "Statements by Members: Young People and Pornography",
+            "Government Orders: Safe Social Media Act"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "148",
+          "date": "2026-10-08",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-148/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Steven MacKinnon (Lib.)"
+          ],
+          "contexts": [
+            "Government Orders: Business of the House"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "143",
+          "date": "2026-09-24",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-143/hansard",
+          "speeches": 8,
+          "speakers": [
+            "Jacques Ramsay (Lib.)",
+            "Rosemarie Falk",
+            "Taleeb Noormohamed (Lib.)",
+            "Taleeb Noormohamed",
+            "Andréanne Larouche (BQ)",
+            "Andréanne Larouche",
+            "Robert Morrissey (Lib.)"
+          ],
+          "contexts": [
+            "Routine Proceedings: Petitions",
+            "Private Members' Business: Protecting Young Persons from Exposure to Pornography Act"
+          ]
+        }
+      ]
     },
     {
       "number": "S-209",
@@ -123,7 +214,178 @@
       "officialSummary": [
         "This enactment makes it an offence for organizations to make pornographic material available to young persons on the Internet. Furthermore, it enables, among other things, a designated enforcement authority to take steps to prevent pornographic material from being made available to young persons on the Internet in Canada."
       ],
-      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=S-209&lang=en_CA&parlSession=451"
+      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=S-209&lang=en_CA&parlSession=451",
+      "activity": {
+        "meetings": [
+          {
+            "date": "2026-03-12",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "29",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-02-05",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "23",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-02-04",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "22",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2025-10-29",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "10",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2025-10-23",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "9",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2025-10-22",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "8",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2025-10-09",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "7",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2025-10-08",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "6",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2025-10-02",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "5",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2025-10-01",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "4",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          }
+        ],
+        "sittings": [
+          {
+            "date": "2026-09-24",
+            "chamber": "House",
+            "sitting": "143",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-143/hansard"
+          },
+          {
+            "date": "2026-04-30",
+            "chamber": "House",
+            "sitting": "114",
+            "event": "First reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-114/hansard"
+          },
+          {
+            "date": "2026-04-15",
+            "chamber": "Senate",
+            "sitting": "63",
+            "event": "Debate at third reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/063db_2026-04-15-e"
+          },
+          {
+            "date": "2026-04-14",
+            "chamber": "Senate",
+            "sitting": "62",
+            "event": "Debate at third reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/062db_2026-04-14-e"
+          },
+          {
+            "date": "2026-03-26",
+            "chamber": "Senate",
+            "sitting": "61",
+            "event": "Debate at consideration of committee report",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/061db_2026-03-26-e"
+          },
+          {
+            "date": "2026-03-24",
+            "chamber": "Senate",
+            "sitting": "59",
+            "event": "Committee report presented with amendments",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/059db_2026-03-24-e"
+          },
+          {
+            "date": "2025-06-12",
+            "chamber": "Senate",
+            "sitting": "10",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/010db_2025-06-12-e"
+          },
+          {
+            "date": "2025-06-10",
+            "chamber": "Senate",
+            "sitting": "8",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/008db_2025-06-10-e"
+          },
+          {
+            "date": "2025-06-03",
+            "chamber": "Senate",
+            "sitting": "5",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/005db_2025-06-03-e"
+          },
+          {
+            "date": "2025-05-28",
+            "chamber": "Senate",
+            "sitting": "3",
+            "event": "Introduction and first reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/003db_2025-05-28-e"
+          }
+        ],
+        "decisions": []
+      },
+      "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "143",
+          "date": "2026-09-24",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-143/hansard",
+          "speeches": 11,
+          "speakers": [
+            "Arnold Viersen (CPC)",
+            "Rosemarie Falk (CPC)",
+            "Rosemarie Falk",
+            "Taleeb Noormohamed (Lib.)",
+            "The Deputy Speaker",
+            "Taleeb Noormohamed",
+            "Andréanne Larouche (BQ)",
+            "Sandra Cobena (CPC)",
+            "Robert Morrissey (Lib.)"
+          ],
+          "contexts": [
+            "Statements by Members: Exposure to Pornography",
+            "Private Members' Business: Protecting Young Persons from Exposure to Pornography Act"
+          ]
+        }
+      ]
     },
     {
       "number": "C-216",
@@ -171,7 +433,21 @@
         "(a) prohibit the publication of the image of a person created or edited through the use of computer software that falsely represents the person, in a manner that is intended to make the image appear authentic, as being nude, as exposing their genital organs, anal region or breasts or as being engaged in explicit sexual activity;",
         "(b) create a separate offence of criminal harassment that is conducted by means of the Internet, a social media service or other digital network and require the court imposing a sentence for the offence to consider as an aggravating factor the fact that the offender, in committing the offence, communicated with the victim anonymously or using a false identity; and",
         "(c) provide for the circumstances in which a person who presents a risk of committing an offence of online harassment may be required to enter into a recognizance and, if the person has communicated anonymously or using a false identity, provide for the circumstances in which a court may make a production order for the purpose of identifying the person."
-      ]
+      ],
+      "activity": {
+        "meetings": [],
+        "sittings": [
+          {
+            "date": "2025-06-19",
+            "chamber": "House",
+            "sitting": "19",
+            "event": "Introduction and first reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-19/hansard"
+          }
+        ],
+        "decisions": []
+      },
+      "mentions": []
     },
     {
       "number": "C-277",
@@ -208,7 +484,21 @@
       "statusSource": "legisinfo",
       "officialSummary": [
         "This enactment enacts the Regulating the Online Use of Deepfakes Act to regulate the online use and dissemination of deepfakes, to increase transparency and to protect individuals and their interests from significant harm. It also establishes an administrative monetary penalties scheme to promote compliance with the Act."
-      ]
+      ],
+      "activity": {
+        "meetings": [],
+        "sittings": [
+          {
+            "date": "2026-05-06",
+            "chamber": "House",
+            "sitting": "118",
+            "event": "Introduction and first reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-118/hansard"
+          }
+        ],
+        "decisions": []
+      },
+      "mentions": []
     },
     {
       "number": "S-240",
@@ -245,7 +535,21 @@
       "statusSource": "legisinfo",
       "officialSummary": [
         "This enactment amends section 163.1 of the Criminal Code to declare that paragraphs 163.1(4)(a) and 163.1(4.1)(a) – which include mandatory minimum sentences for the offences of possession of child sexual abuse and exploitation material and accessing child sexual abuse and exploitation material, respectively – operate notwithstanding section 12 of the Canadian Charter of Rights and Freedoms."
-      ]
+      ],
+      "activity": {
+        "meetings": [],
+        "sittings": [
+          {
+            "date": "2025-11-05",
+            "chamber": "Senate",
+            "sitting": "32",
+            "event": "Introduction and first reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/032db_2025-11-05-e"
+          }
+        ],
+        "decisions": []
+      },
+      "mentions": []
     },
     {
       "number": "C-16",
@@ -354,7 +658,484 @@
         "The enactment also amends the Corrections and Conditional Release Act to, among other things, enhance the disclosure of information to victims and other components of the criminal justice system and provide for the submission of victim statements in certain instances.",
         "Finally, the enactment also amends the Mutual Legal Assistance in Criminal Matters Act to facilitate legal assistance between Canada and supranational bodies with responsibility for criminal investigations or prosecutions."
       ],
-      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-16&lang=en_CA&parlSession=451"
+      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-16&lang=en_CA&parlSession=451",
+      "activity": {
+        "meetings": [
+          {
+            "date": "2026-06-16",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "50",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-06-16",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "51",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-06-15",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "48",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-06-15",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "49",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-06-12",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "46",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-06-12",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "47",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-06-11",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "45",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-06-10",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "44",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-05-06",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "29",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-29/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Justice"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-05-04",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "28",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-28/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Justice",
+                "Department of National Defence",
+                "Department of Public Safety and Emergency Preparedness"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-04-29",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "27",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-27/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Justice",
+                "Department of National Defence",
+                "Department of Public Safety and Emergency Preparedness"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-04-22",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "26",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-26/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Association of Chiefs of Police",
+                "London Police Service",
+                "The Canadian Bar Association",
+                "Child and Youth Advocacy Centres of Canada",
+                "Boost Child & Youth Advocacy Centre",
+                "Elder Abuse Prevention Ontario",
+                "Kindex Research and Knowledge Centre"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-04-20",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "25",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-25/notice",
+            "witnesses": {
+              "orgs": [
+                "Alberta Elder Abuse Awareness Council",
+                "Office of the Federal Ombudsperson for Victims of Crime",
+                "National Institute on Ageing",
+                "Valora Place"
+              ],
+              "people": [
+                "Colton Fehr, Assistant Professor, University of Saskatchewan ( by videoconference )",
+                "Nancy Boucher, Registered Practical Nurse"
+              ],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-04-15",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "24",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-24/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Centre for Child Protection",
+                "Daughter Project Canada",
+                "London Abused Women's Centre",
+                "Ontario Child Sexual Exploitation Investigators Association",
+                "Raoul Wallenberg Centre for Human Rights"
+              ],
+              "people": [
+                "Kendra Cooke"
+              ],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-04-13",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "23",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-23/notice",
+            "witnesses": {
+              "orgs": [
+                "National Association of Women and the Law",
+                "Regroupement des maisons pour femmes victimes de violence conjugale",
+                "Barreau du Québec",
+                "Macdonald-Laurier Institute",
+                "Provincial Association of Transition Houses of Saskatchewan"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-03-25",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "22",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-22/notice",
+            "witnesses": {
+              "orgs": [
+                "Sagesse Domestic Violence Prevention Society",
+                "Women's Legal Education and Action Fund",
+                "Canadian Police Association",
+                "Humane Canada",
+                "Rise Women's Legal Centre"
+              ],
+              "people": [
+                "Alison Irons ( by videoconference )"
+              ],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-03-23",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "21",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-21/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Justice"
+              ],
+              "people": [],
+              "appearing": [
+                "Hon. Sean Fraser, P.C., M.P., Minister of Justice and Attorney General of Canada"
+              ]
+            }
+          }
+        ],
+        "sittings": [
+          {
+            "date": "2026-06-18",
+            "chamber": "Senate",
+            "sitting": "86",
+            "event": "Debate at third reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/086db_2026-06-18-e"
+          },
+          {
+            "date": "2026-06-17",
+            "chamber": "Senate",
+            "sitting": "85",
+            "event": "Committee report presented without amendment",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/085db_2026-06-17-e"
+          },
+          {
+            "date": "2026-06-15",
+            "chamber": "Senate",
+            "sitting": "83",
+            "event": "Pre-Study of Commons Bill Completed",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/083db_2026-06-15-e"
+          },
+          {
+            "date": "2026-06-15",
+            "chamber": "Senate",
+            "sitting": "83",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/083db_2026-06-15-e"
+          },
+          {
+            "date": "2026-06-11",
+            "chamber": "House",
+            "sitting": "134",
+            "event": "Third reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-134/hansard"
+          },
+          {
+            "date": "2026-06-11",
+            "chamber": "Senate",
+            "sitting": "82",
+            "event": "First reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/082db_2026-06-11-e"
+          },
+          {
+            "date": "2026-06-10",
+            "chamber": "House",
+            "sitting": "133",
+            "event": "Debate at third reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-133/hansard"
+          },
+          {
+            "date": "2026-06-09",
+            "chamber": "House",
+            "sitting": "132",
+            "event": "Debate at third reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-132/hansard"
+          },
+          {
+            "date": "2026-06-09",
+            "chamber": "Senate",
+            "sitting": "80",
+            "event": "Pre-study of House bill",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/080db_2026-06-09-e"
+          },
+          {
+            "date": "2026-06-08",
+            "chamber": "House",
+            "sitting": "131",
+            "event": "Debate at report stage",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-131/hansard"
+          },
+          {
+            "date": "2026-06-04",
+            "chamber": "House",
+            "sitting": "129",
+            "event": "Debate at report stage",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-129/hansard"
+          },
+          {
+            "date": "2026-06-03",
+            "chamber": "House",
+            "sitting": "128",
+            "event": "Debate at report stage",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-128/hansard"
+          },
+          {
+            "date": "2026-05-25",
+            "chamber": "House",
+            "sitting": "121",
+            "event": "Committee report presented with amendments",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-121/hansard"
+          },
+          {
+            "date": "2026-02-02",
+            "chamber": "House",
+            "sitting": "77",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-77/hansard"
+          },
+          {
+            "date": "2026-01-29",
+            "chamber": "House",
+            "sitting": "76",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-76/hansard"
+          },
+          {
+            "date": "2026-01-26",
+            "chamber": "House",
+            "sitting": "73",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-73/hansard"
+          },
+          {
+            "date": "2025-12-09",
+            "chamber": "House",
+            "sitting": "70",
+            "event": "Introduction and first reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-70/hansard"
+          }
+        ],
+        "decisions": [
+          {
+            "date": "2026-06-11",
+            "chamber": "House",
+            "motion": "3rd reading",
+            "result": "Agreed To",
+            "method": "On recorded division",
+            "yeas": 192,
+            "nays": 133
+          },
+          {
+            "date": "2026-02-02",
+            "chamber": "House",
+            "motion": "2nd reading and referral to committee - JUST",
+            "result": "Agreed To",
+            "method": "On division",
+            "yeas": null,
+            "nays": null
+          }
+        ]
+      },
+      "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "154",
+          "date": "2026-10-23",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-154/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Dominique O'Rourke"
+          ],
+          "contexts": [
+            "Government Orders: Canadian Space Launch Act"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "152",
+          "date": "2026-10-21",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-152/hansard",
+          "speeches": 5,
+          "speakers": [
+            "Louis Villeneuve (Lib.)",
+            "Hon. Gary Anandasangaree (Lib.)",
+            "Andréanne Larouche (BQ)",
+            "Hon. Kevin Lamoureux (Lib.)"
+          ],
+          "contexts": [
+            "Statements by Members: Young People and Pornography",
+            "Oral Questions: Public Safety",
+            "Private Members' Business: Georgina's Law"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "147",
+          "date": "2026-10-07",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-147/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Gary Anandasangaree (Lib.)"
+          ],
+          "contexts": [
+            "Oral Questions: Justice"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "145",
+          "date": "2026-10-05",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-145/hansard",
+          "speeches": 2,
+          "speakers": [
+            "Kelly Block (CPC)",
+            "Tamara Kronis (CPC)"
+          ],
+          "contexts": [
+            "PRIVATE MEMBERS' BUSINESS: Criminal Code"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "144",
+          "date": "2026-09-25",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-144/hansard",
+          "speeches": 2,
+          "speakers": [
+            "Hon. Gary Anandasangaree (Lib.)",
+            "Vincent Ho (CPC)"
+          ],
+          "contexts": [
+            "Oral Questions: Public Safety"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "143",
+          "date": "2026-09-24",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-143/hansard",
+          "speeches": 2,
+          "speakers": [
+            "Hon. Gary Anandasangaree (Lib.)",
+            "Taleeb Noormohamed (Lib.)"
+          ],
+          "contexts": [
+            "Oral Questions: Public Safety",
+            "Private Members' Business: Protecting Young Persons from Exposure to Pornography Act"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "142",
+          "date": "2026-09-23",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-142/hansard",
+          "speeches": 3,
+          "speakers": [
+            "Hon. Gary Anandasangaree (Lib.)",
+            "Hon. Ruby Sahota (Lib.)"
+          ],
+          "contexts": [
+            "Oral Questions: Justice"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "141",
+          "date": "2026-09-22",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-141/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Gary Anandasangaree (Lib.)"
+          ],
+          "contexts": [
+            "Oral Questions: Public Safety"
+          ]
+        }
+      ]
     },
     {
       "number": "C-9",
@@ -414,7 +1195,329 @@
         "(d) create an offence of intimidating a person in order to impede them from accessing certain places that are primarily used for religious worship or by an identifiable group for certain purposes; and",
         "(e) create an offence of intentionally obstructing or interfering with a person’s lawful access to such places."
       ],
-      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-9&lang=en_CA&parlSession=451"
+      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-9&lang=en_CA&parlSession=451",
+      "activity": {
+        "meetings": [
+          {
+            "date": "2026-06-01",
+            "chamber": "Senate",
+            "committee": "RIDR",
+            "number": "22",
+            "url": "https://sencanada.ca/en/committees/RIDR/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-05-28",
+            "chamber": "Senate",
+            "committee": "RIDR",
+            "number": "21",
+            "url": "https://sencanada.ca/en/committees/RIDR/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-05-25",
+            "chamber": "Senate",
+            "committee": "RIDR",
+            "number": "20",
+            "url": "https://sencanada.ca/en/committees/RIDR/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-05-21",
+            "chamber": "Senate",
+            "committee": "RIDR",
+            "number": "19",
+            "url": "https://sencanada.ca/en/committees/RIDR/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-05-20",
+            "chamber": "Senate",
+            "committee": "RIDR",
+            "number": "18",
+            "url": "https://sencanada.ca/en/committees/RIDR/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-03-11",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "20",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-20/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Justice"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-02-25",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "19",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-19/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Justice"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-02-23",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "18",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-18/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Justice"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2025-12-09",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "14",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-14/notice"
+          },
+          {
+            "date": "2025-11-27",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "13",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-13/notice"
+          },
+          {
+            "date": "2025-11-06",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "12",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-12/notice"
+          },
+          {
+            "date": "2025-10-30",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "11",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-11/notice"
+          },
+          {
+            "date": "2025-10-23",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "9",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-9/notice"
+          },
+          {
+            "date": "2025-10-09",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "7",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-7/notice"
+          }
+        ],
+        "sittings": [
+          {
+            "date": "2026-06-04",
+            "chamber": "Senate",
+            "sitting": "79",
+            "event": "Debate at third reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/079db_2026-06-04-e"
+          },
+          {
+            "date": "2026-06-03",
+            "chamber": "Senate",
+            "sitting": "78",
+            "event": "Debate at consideration of committee report",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/078db_2026-06-03-e"
+          },
+          {
+            "date": "2026-06-02",
+            "chamber": "Senate",
+            "sitting": "77",
+            "event": "Committee report presented with amendments",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/077db_2026-06-02-e"
+          },
+          {
+            "date": "2026-04-30",
+            "chamber": "Senate",
+            "sitting": "70",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/070db_2026-04-30-e"
+          },
+          {
+            "date": "2026-04-28",
+            "chamber": "Senate",
+            "sitting": "68",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/068db_2026-04-28-e"
+          },
+          {
+            "date": "2026-04-22",
+            "chamber": "Senate",
+            "sitting": "66",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/066db_2026-04-22-e"
+          },
+          {
+            "date": "2026-04-16",
+            "chamber": "Senate",
+            "sitting": "64",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/064db_2026-04-16-e"
+          },
+          {
+            "date": "2026-04-14",
+            "chamber": "Senate",
+            "sitting": "62",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/062db_2026-04-14-e"
+          },
+          {
+            "date": "2026-03-26",
+            "chamber": "Senate",
+            "sitting": "61",
+            "event": "First reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/061db_2026-03-26-e"
+          },
+          {
+            "date": "2026-03-25",
+            "chamber": "House",
+            "sitting": "99",
+            "event": "Debate at third reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-99/hansard"
+          },
+          {
+            "date": "2026-03-23",
+            "chamber": "House",
+            "sitting": "97",
+            "event": "Debate at report stage",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-97/hansard"
+          },
+          {
+            "date": "2026-03-13",
+            "chamber": "House",
+            "sitting": "96",
+            "event": "Committee report presented with amendments",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-96/hansard"
+          },
+          {
+            "date": "2025-10-01",
+            "chamber": "House",
+            "sitting": "31",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-31/hansard"
+          },
+          {
+            "date": "2025-09-24",
+            "chamber": "House",
+            "sitting": "28",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-28/hansard"
+          },
+          {
+            "date": "2025-09-19",
+            "chamber": "House",
+            "sitting": "25",
+            "event": "Introduction and first reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-25/hansard"
+          }
+        ],
+        "decisions": [
+          {
+            "date": "2026-03-25",
+            "chamber": "House",
+            "motion": "3rd reading",
+            "result": "Agreed To",
+            "method": "On recorded division",
+            "yeas": 186,
+            "nays": 137
+          },
+          {
+            "date": "2025-10-01",
+            "chamber": "House",
+            "motion": "2nd reading and referral to committee - JUST",
+            "result": "Agreed To",
+            "method": "On division",
+            "yeas": null,
+            "nays": null
+          }
+        ]
+      },
+      "mentions": [
+        {
+          "chamber": "Senate",
+          "sitting": "95",
+          "date": "2026-10-22",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/095db_2026-10-22-e",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Denise Batters"
+          ],
+          "contexts": [
+            "Lawful Access Bill, 2026"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "152",
+          "date": "2026-10-21",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-152/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Kevin Lamoureux (Lib.)"
+          ],
+          "contexts": [
+            "Routine Proceedings: Privilege"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "145",
+          "date": "2026-10-05",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-145/hansard",
+          "speeches": 8,
+          "speakers": [
+            "Kelly Block (CPC)",
+            "Hon. Kevin Lamoureux (Lib.)",
+            "Kelly Block",
+            "Rhéal Éloi Fortin (BQ)",
+            "Tamara Kronis (CPC)",
+            "Chris Bittle (Lib.)"
+          ],
+          "contexts": [
+            "PRIVATE MEMBERS' BUSINESS: Criminal Code"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "142",
+          "date": "2026-09-23",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-142/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Gary Anandasangaree (Lib.)"
+          ],
+          "contexts": [
+            "Oral Questions: Justice"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "141",
+          "date": "2026-09-22",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-141/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Gary Anandasangaree (Lib.)"
+          ],
+          "contexts": [
+            "Oral Questions: Public Safety"
+          ]
+        }
+      ]
     },
     {
       "number": "C-36",
@@ -452,7 +1555,53 @@
       "officialSummary": [
         "This enactment enacts the Protecting Privacy and Consumer Data Act to govern the protection of personal information of individuals while taking into account the need of organizations to collect, use or disclose personal information in the course of commercial activities. Consequently, it repeals Part 1 of the Personal Information Protection and Electronic Documents Act and changes the short title of that Act to the Electronic Documents Act. Finally, it also makes amendments to other Acts."
       ],
-      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-36&lang=en_CA&parlSession=451"
+      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-36&lang=en_CA&parlSession=451",
+      "activity": {
+        "meetings": [],
+        "sittings": [
+          {
+            "date": "2026-06-15",
+            "chamber": "House",
+            "sitting": "136",
+            "event": "Introduction and first reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-136/hansard"
+          }
+        ],
+        "decisions": []
+      },
+      "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "152",
+          "date": "2026-10-21",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-152/hansard",
+          "speeches": 2,
+          "speakers": [
+            "Hon. Marc Miller",
+            "Hon. Andrew Scheer (CPC)"
+          ],
+          "contexts": [
+            "Government Orders: Safe Social Media Act",
+            "Private Members' Business: Privilege"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "143",
+          "date": "2026-09-24",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-143/hansard",
+          "speeches": 4,
+          "speakers": [
+            "Taleeb Noormohamed (Lib.)",
+            "Rosemarie Falk",
+            "Taleeb Noormohamed",
+            "Robert Morrissey (Lib.)"
+          ],
+          "contexts": [
+            "Private Members' Business: Protecting Young Persons from Exposure to Pornography Act"
+          ]
+        }
+      ]
     },
     {
       "number": "S-5",
@@ -499,7 +1648,127 @@
       "officialSummary": [
         "This enactment aims, among other things, to ensure that health information technology that is licensed, sold or supplied as a service by a vendor is interoperable and to prohibit data blocking by the vendor in order to promote a connected, secure and person-centered health system."
       ],
-      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=S-5&lang=en_CA&parlSession=451"
+      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=S-5&lang=en_CA&parlSession=451",
+      "activity": {
+        "meetings": [
+          {
+            "date": "2026-04-30",
+            "chamber": "Senate",
+            "committee": "SOCI",
+            "number": "37",
+            "url": "https://sencanada.ca/en/committees/SOCI/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-04-29",
+            "chamber": "Senate",
+            "committee": "SOCI",
+            "number": "36",
+            "url": "https://sencanada.ca/en/committees/SOCI/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-04-23",
+            "chamber": "Senate",
+            "committee": "SOCI",
+            "number": "35",
+            "url": "https://sencanada.ca/en/committees/SOCI/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-04-22",
+            "chamber": "Senate",
+            "committee": "SOCI",
+            "number": "34",
+            "url": "https://sencanada.ca/en/committees/SOCI/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-04-16",
+            "chamber": "Senate",
+            "committee": "SOCI",
+            "number": "33",
+            "url": "https://sencanada.ca/en/committees/SOCI/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-04-15",
+            "chamber": "Senate",
+            "committee": "SOCI",
+            "number": "32",
+            "url": "https://sencanada.ca/en/committees/SOCI/transcriptsminutes/45-1"
+          }
+        ],
+        "sittings": [
+          {
+            "date": "2026-05-28",
+            "chamber": "House",
+            "sitting": "124",
+            "event": "First reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-124/hansard"
+          },
+          {
+            "date": "2026-05-26",
+            "chamber": "Senate",
+            "sitting": "74",
+            "event": "Debate at third reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/074db_2026-05-26-e"
+          },
+          {
+            "date": "2026-05-07",
+            "chamber": "Senate",
+            "sitting": "73",
+            "event": "Debate at third reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/073db_2026-05-07-e"
+          },
+          {
+            "date": "2026-05-06",
+            "chamber": "Senate",
+            "sitting": "72",
+            "event": "Debate at third reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/072db_2026-05-06-e"
+          },
+          {
+            "date": "2026-05-05",
+            "chamber": "Senate",
+            "sitting": "71",
+            "event": "Debate at consideration of committee report",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/071db_2026-05-05-e"
+          },
+          {
+            "date": "2026-04-30",
+            "chamber": "Senate",
+            "sitting": "70",
+            "event": "Committee report presented with an amendment",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/070db_2026-04-30-e"
+          },
+          {
+            "date": "2026-03-26",
+            "chamber": "Senate",
+            "sitting": "61",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/061db_2026-03-26-e"
+          },
+          {
+            "date": "2026-03-24",
+            "chamber": "Senate",
+            "sitting": "59",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/059db_2026-03-24-e"
+          },
+          {
+            "date": "2026-02-24",
+            "chamber": "Senate",
+            "sitting": "52",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/052db_2026-02-24-e"
+          },
+          {
+            "date": "2026-02-04",
+            "chamber": "Senate",
+            "sitting": "47",
+            "event": "Introduction and first reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/047db_2026-02-04-e"
+          }
+        ],
+        "decisions": []
+      },
+      "mentions": []
     },
     {
       "number": "C-8",
@@ -562,7 +1831,263 @@
         "This Part also makes consequential amendments to certain Acts.",
         "Part 3 provides for a five-year review of the provisions enacted or amended by this Act."
       ],
-      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-8&lang=en_CA&parlSession=451"
+      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-8&lang=en_CA&parlSession=451",
+      "activity": {
+        "meetings": [
+          {
+            "date": "2026-06-01",
+            "chamber": "Senate",
+            "committee": "SECD",
+            "number": "21",
+            "url": "https://sencanada.ca/en/committees/SECD/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-05-25",
+            "chamber": "Senate",
+            "committee": "SECD",
+            "number": "20",
+            "url": "https://sencanada.ca/en/committees/SECD/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-05-04",
+            "chamber": "Senate",
+            "committee": "SECD",
+            "number": "19",
+            "url": "https://sencanada.ca/en/committees/SECD/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-02-26",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "26",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-26/notice",
+            "witnesses": {
+              "orgs": [
+                "Communications Security Establishment",
+                "Department of Industry",
+                "Department of Public Safety and Emergency Preparedness"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-02-24",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "25",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-25/notice",
+            "witnesses": {
+              "orgs": [
+                "Communications Security Establishment",
+                "Department of Industry",
+                "Department of Public Safety and Emergency Preparedness"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-02-10",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "23",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-23/notice",
+            "witnesses": {
+              "orgs": [
+                "Communications Security Establishment",
+                "Department of Industry",
+                "Department of Public Safety and Emergency Preparedness"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-02-05",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "22",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-22/notice"
+          },
+          {
+            "date": "2026-02-03",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "21",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-21/notice"
+          },
+          {
+            "date": "2026-01-27",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "20",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-20/notice"
+          },
+          {
+            "date": "2025-12-04",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "18",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-18/notice"
+          },
+          {
+            "date": "2025-11-06",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "12",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-12/notice"
+          },
+          {
+            "date": "2025-10-30",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "10",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-10/notice"
+          },
+          {
+            "date": "2025-10-28",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "9",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-9/notice"
+          }
+        ],
+        "sittings": [
+          {
+            "date": "2026-06-04",
+            "chamber": "Senate",
+            "sitting": "79",
+            "event": "Debate at third reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/079db_2026-06-04-e"
+          },
+          {
+            "date": "2026-06-03",
+            "chamber": "Senate",
+            "sitting": "78",
+            "event": "Debate at third reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/078db_2026-06-03-e"
+          },
+          {
+            "date": "2026-06-02",
+            "chamber": "Senate",
+            "sitting": "77",
+            "event": "Committee report presented without amendment",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/077db_2026-06-02-e"
+          },
+          {
+            "date": "2026-04-23",
+            "chamber": "Senate",
+            "sitting": "67",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/067db_2026-04-23-e"
+          },
+          {
+            "date": "2026-04-21",
+            "chamber": "Senate",
+            "sitting": "65",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/065db_2026-04-21-e"
+          },
+          {
+            "date": "2026-03-26",
+            "chamber": "House",
+            "sitting": "100",
+            "event": "Debate at report stage",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-100/hansard"
+          },
+          {
+            "date": "2026-03-26",
+            "chamber": "House",
+            "sitting": "100",
+            "event": "Debate at third reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-100/hansard"
+          },
+          {
+            "date": "2026-03-26",
+            "chamber": "Senate",
+            "sitting": "61",
+            "event": "First reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/061db_2026-03-26-e"
+          },
+          {
+            "date": "2026-03-11",
+            "chamber": "House",
+            "sitting": "94",
+            "event": "Committee report presented with amendments",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-94/hansard"
+          },
+          {
+            "date": "2025-10-03",
+            "chamber": "House",
+            "sitting": "33",
+            "event": "Second reading and referral to committee",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-33/hansard"
+          },
+          {
+            "date": "2025-09-26",
+            "chamber": "House",
+            "sitting": "30",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-30/hansard"
+          },
+          {
+            "date": "2025-06-18",
+            "chamber": "House",
+            "sitting": "18",
+            "event": "Introduction and first reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-18/hansard"
+          }
+        ],
+        "decisions": [
+          {
+            "date": "2026-03-26",
+            "chamber": "House",
+            "motion": "3rd reading",
+            "result": "Agreed To",
+            "method": "On division",
+            "yeas": null,
+            "nays": null
+          },
+          {
+            "date": "2025-10-03",
+            "chamber": "House",
+            "motion": "2nd reading and referral to committee - SECU",
+            "result": "Agreed To",
+            "method": "On division",
+            "yeas": null,
+            "nays": null
+          }
+        ]
+      },
+      "mentions": [
+        {
+          "chamber": "Senate",
+          "sitting": "95",
+          "date": "2026-10-22",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/095db_2026-10-22-e",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Denise Batters"
+          ],
+          "contexts": [
+            "Lawful Access Bill, 2026"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "142",
+          "date": "2026-09-23",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-142/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Gary Anandasangaree (Lib.)"
+          ],
+          "contexts": [
+            "Oral Questions: Justice"
+          ]
+        }
+      ]
     },
     {
       "number": "C-22",
@@ -632,7 +2157,360 @@
         "Part 2 enacts the Supporting Authorized Access to Information Act. That Act establishes a framework for ensuring that electronic service providers can facilitate the exercise, by authorized persons, of authorities to access information conferred under the Criminal Code or the Canadian Security Intelligence Service Act. It also makes related and consequential amendments to the Intelligence Commissioner Act.",
         "Part 3 provides for the parliamentary review of Parts 1 and 2."
       ],
-      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-22&lang=en_CA&parlSession=451"
+      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-22&lang=en_CA&parlSession=451",
+      "activity": {
+        "meetings": [
+          {
+            "date": "2026-06-17",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "45",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-45/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Security Intelligence Service",
+                "Department of Justice",
+                "Department of Public Safety and Emergency Preparedness",
+                "Royal Canadian Mounted Police"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-06-16",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "44",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-44/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Security Intelligence Service",
+                "Department of Justice",
+                "Department of Public Safety and Emergency Preparedness",
+                "Royal Canadian Mounted Police"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-06-11",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "43",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-43/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Security Intelligence Service",
+                "Department of Justice",
+                "Department of Public Safety and Emergency Preparedness",
+                "Royal Canadian Mounted Police"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-06-09",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "42",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-42/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Security Intelligence Service",
+                "Department of Justice",
+                "Department of Public Safety and Emergency Preparedness",
+                "Royal Canadian Mounted Police"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-06-04",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "41",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-41/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Security Intelligence Service",
+                "Department of Justice",
+                "Department of Public Safety and Emergency Preparedness",
+                "Royal Canadian Mounted Police"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-06-02",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "40",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-40/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Bar Associaton",
+                "Canadian Constitution Foundation",
+                "OpenMedia",
+                "Canadian Muslim Public Affairs Council",
+                "Centre for Free Expression",
+                "Signal"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-05-28",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "39",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-39/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Security Intelligence Service",
+                "Department of Justice",
+                "Department of Public Safety and Emergency Preparedness",
+                "Royal Canadian Mounted Police"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-05-26",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "38",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-38/notice",
+            "witnesses": {
+              "orgs": [
+                "Barreau du Québec",
+                "Crypto Québec",
+                "Offices of the Information and Privacy Commissioners of Canada",
+                "Apple Inc.",
+                "Canadian Civil Liberties Association",
+                "Google",
+                "Canadian Association of Chiefs of Police",
+                "City of Brampton",
+                "Royal Canadian Mounted Police",
+                "Canadian Telecommunications Association",
+                "Ontario Child Sexual Exploitation Investigators Association",
+                "Peel Regional Police"
+              ],
+              "people": [
+                "Murray Rankin, Barristor and Solicitor"
+              ],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-05-07",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "37",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-37/notice",
+            "witnesses": {
+              "orgs": [
+                "Thunder Bay Police Service",
+                "Toronto Police Service",
+                "Canadian Centre for Child Protection",
+                "Canadian Chamber of Commerce",
+                "Peel Children's Aid Society",
+                "Meta Platforms Inc.",
+                "National Security and Intelligence Review Agency",
+                "Office of the Intelligence Commissioner"
+              ],
+              "people": [
+                "Dr. Leah West, Associate Professor",
+                "Prof. Robert Diab, Professor, Faculty of Law, Thompson Rivers University",
+                "David Fraser, Partner, McInnes Cooper ( by videoconference )",
+                "Dr. Michael Geist, Canada Research Chair in Internet and E-Commerce Law, Professor of Law"
+              ],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-05-05",
+            "chamber": "House",
+            "committee": "SECU",
+            "number": "36",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-36/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Security Intelligence Service",
+                "Department of Justice",
+                "Department of Public Safety and Emergency Preparedness",
+                "Royal Canadian Mounted Police"
+              ],
+              "people": [],
+              "appearing": [
+                "Hon. Gary Anandasangaree, P.C., M.P., Minister of Public Safety",
+                "Hon. Sean Fraser, P.C., M.P., Minister of Justice"
+              ]
+            }
+          }
+        ],
+        "sittings": [
+          {
+            "date": "2026-10-22",
+            "chamber": "Senate",
+            "sitting": "95",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/095db_2026-10-22-e"
+          },
+          {
+            "date": "2026-10-21",
+            "chamber": "Senate",
+            "sitting": "94",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/094db_2026-10-21-e"
+          },
+          {
+            "date": "2026-10-20",
+            "chamber": "Senate",
+            "sitting": "93",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/093db_2026-10-20-e"
+          },
+          {
+            "date": "2026-10-08",
+            "chamber": "Senate",
+            "sitting": "92",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/092db_2026-10-08-e"
+          },
+          {
+            "date": "2026-06-18",
+            "chamber": "House",
+            "sitting": "139",
+            "event": "Committee report presented with amendments",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-139/hansard"
+          },
+          {
+            "date": "2026-06-18",
+            "chamber": "House",
+            "sitting": "139",
+            "event": "Concurrence at report stage",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-139/hansard"
+          },
+          {
+            "date": "2026-06-18",
+            "chamber": "House",
+            "sitting": "139",
+            "event": "Debate at third reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-139/hansard"
+          },
+          {
+            "date": "2026-06-18",
+            "chamber": "Senate",
+            "sitting": "86",
+            "event": "First reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/086db_2026-06-18-e"
+          },
+          {
+            "date": "2026-04-20",
+            "chamber": "House",
+            "sitting": "106",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-106/hansard"
+          },
+          {
+            "date": "2026-04-17",
+            "chamber": "House",
+            "sitting": "105",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-105/hansard"
+          },
+          {
+            "date": "2026-04-15",
+            "chamber": "House",
+            "sitting": "103",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-103/hansard"
+          },
+          {
+            "date": "2026-04-13",
+            "chamber": "House",
+            "sitting": "101",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-101/hansard"
+          },
+          {
+            "date": "2026-03-12",
+            "chamber": "House",
+            "sitting": "95",
+            "event": "Introduction and first reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-95/hansard"
+          }
+        ],
+        "decisions": [
+          {
+            "date": "2026-06-18",
+            "chamber": "House",
+            "motion": "3rd reading",
+            "result": "Agreed To",
+            "method": "",
+            "yeas": null,
+            "nays": null
+          },
+          {
+            "date": "2026-04-20",
+            "chamber": "House",
+            "motion": "2nd reading and referral to committee - SECU",
+            "result": "Agreed To",
+            "method": "On division",
+            "yeas": null,
+            "nays": null
+          }
+        ]
+      },
+      "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "154",
+          "date": "2026-10-23",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-154/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Jenny Kwan (NDP)"
+          ],
+          "contexts": [
+            "Routine Proceedings: Petitions"
+          ]
+        },
+        {
+          "chamber": "Senate",
+          "sitting": "95",
+          "date": "2026-10-22",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/095db_2026-10-22-e",
+          "speeches": 2,
+          "speakers": [
+            "Hon. Denise Batters",
+            "Senator Simons"
+          ],
+          "contexts": [
+            "Lawful Access Bill, 2026"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "152",
+          "date": "2026-10-21",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-152/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Gary Anandasangaree (Lib.)"
+          ],
+          "contexts": [
+            "Oral Questions: Public Safety"
+          ]
+        }
+      ]
     },
     {
       "number": "C-2",
@@ -729,7 +2607,63 @@
         "(b) the collection and use are for the purposes of detecting or deterring money laundering, terrorist activity financing or sanctions evasion or for a consistent purpose.",
         "It also makes related amendments to the Personal Information Protection and Electronic Documents Act."
       ],
-      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-2&lang=en_CA&parlSession=451"
+      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-2&lang=en_CA&parlSession=451",
+      "activity": {
+        "meetings": [],
+        "sittings": [
+          {
+            "date": "2025-09-17",
+            "chamber": "House",
+            "sitting": "23",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-23/hansard"
+          },
+          {
+            "date": "2025-09-16",
+            "chamber": "House",
+            "sitting": "22",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-22/hansard"
+          },
+          {
+            "date": "2025-06-18",
+            "chamber": "House",
+            "sitting": "18",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-18/hansard"
+          },
+          {
+            "date": "2025-06-05",
+            "chamber": "House",
+            "sitting": "9",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-9/hansard"
+          },
+          {
+            "date": "2025-06-03",
+            "chamber": "House",
+            "sitting": "7",
+            "event": "Introduction and first reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-7/hansard"
+          }
+        ],
+        "decisions": []
+      },
+      "mentions": [
+        {
+          "chamber": "Senate",
+          "sitting": "95",
+          "date": "2026-10-22",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/095db_2026-10-22-e",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Denise Batters"
+          ],
+          "contexts": [
+            "Lawful Access Bill, 2026"
+          ]
+        }
+      ]
     },
     {
       "number": "C-288",
@@ -767,7 +2701,21 @@
       "officialSummary": [
         "This enactment enacts the Protection Against Online Fraud Act, the purpose of which is to require that owners and operators of platforms, such as online services or applications, implement measures to prevent the dissemination of fraudulent content through their products and services and to provide notice to users who engaged with such content.",
         "It also amends the Criminal Code to add as an aggravating circumstance for sentencing purposes the fact that an identify theft or identity fraud offence was committed against a person vulnerable given their personal circumstances, including their age, health and financial situation."
-      ]
+      ],
+      "activity": {
+        "meetings": [],
+        "sittings": [
+          {
+            "date": "2026-06-17",
+            "chamber": "House",
+            "sitting": "138",
+            "event": "Introduction and first reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-138/hansard"
+          }
+        ],
+        "decisions": []
+      },
+      "mentions": []
     },
     {
       "number": "C-29",
@@ -814,7 +2762,81 @@
       "officialSummary": [
         "This enactment establishes the Financial Crimes Agency as a specialized federal law enforcement agency whose mandate is to investigate financial crimes and to contribute to the recovery of proceeds of crime. It also makes consequential amendments to certain Acts and regulations."
       ],
-      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-29&lang=en_CA&parlSession=451"
+      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-29&lang=en_CA&parlSession=451",
+      "activity": {
+        "meetings": [
+          {
+            "date": "2026-10-08",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "39",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-39/notice",
+            "witnesses": {
+              "orgs": [
+                "Desjardins Group",
+                "National Police Federation"
+              ],
+              "people": [
+                "Amissi Melchiade Manirabona, Full Professor, Faculty of Law, University of Montreal ( by videoconference )",
+                "Andrew Matheson, Partner, McCarthy Tétrault ( by videoconference )",
+                "Paul M. Bourassa, Barrister and Solicitor",
+                "Barry Nordin, Former Justice, Alberta Court of Justice"
+              ],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-10-05",
+            "chamber": "House",
+            "committee": "JUST",
+            "number": "38",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-38/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Justice",
+                "Department of Public Safety and Emergency Preparedness",
+                "Royal Canadian Mounted Police",
+                "Department of Finance",
+                "Financial Crimes Agency Creation",
+                "Financial Crimes Agency Transition Team"
+              ],
+              "people": [],
+              "appearing": [
+                "Hon. Gary Anandasangaree, P.C., M.P., Minister of Public Safety",
+                "Hon. Sean Fraser, P.C., M.P., Minister of Justice and Attorney General of Canada"
+              ]
+            }
+          }
+        ],
+        "sittings": [
+          {
+            "date": "2026-06-18",
+            "chamber": "House",
+            "sitting": "139",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-139/hansard"
+          },
+          {
+            "date": "2026-04-27",
+            "chamber": "House",
+            "sitting": "111",
+            "event": "Introduction and first reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-111/hansard"
+          }
+        ],
+        "decisions": [
+          {
+            "date": "2026-06-18",
+            "chamber": "House",
+            "motion": "2nd reading and referral to committee - JUST",
+            "result": "Agreed To",
+            "method": "",
+            "yeas": null,
+            "nays": null
+          }
+        ]
+      },
+      "mentions": []
     },
     {
       "number": "C-15",
@@ -1007,7 +3029,458 @@
         "Division 44 of Part 5 enacts the National School Food Program Act, which sets out the Government of Canada’s vision for the National School Food Program. That Act also sets out the Government of Canada’s commitment to maintaining long-term funding to be provided to the provinces, the territories and Indigenous peoples for the ongoing implementation and maintenance of the Program.",
         "Division 45 of Part 5 enacts the Stablecoin Act, which imposes duties on persons that create stablecoins and make them available for purchase, directly or indirectly, by persons in Canada. That Act sets out the objects of the Bank of Canada in respect of stablecoin and requires the Bank to maintain a public registry of stablecoin issuers. That Act also addresses, among other things, the redemption of stablecoins by issuers, the reserve of assets that issuers must maintain to fulfill their redemption obligations and the policies that they must establish. The Division also makes consequential and related amendments to the Access to Information Act, the Proceeds of Crime (Money Laundering) and Terrorist Financing Act and the Retail Payment Activities Act."
       ],
-      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-15&lang=en_CA&parlSession=451"
+      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-15&lang=en_CA&parlSession=451",
+      "activity": {
+        "meetings": [
+          {
+            "date": "2026-03-24",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "35",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-03-11",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "34",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-03-10",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "33",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-02-24",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "31",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-02-23",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "27",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-27/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Agriculture and Agri-Food",
+                "Department of Canadian Heritage",
+                "Department of Crown-Indigenous Relations and Northern Affairs",
+                "Department of Employment and Social Development",
+                "Department of Finance",
+                "Department of Fisheries and Oceans",
+                "Department of Foreign Affairs, Trade and Development",
+                "Department of Housing, Infrastructure and Communities",
+                "Department of Industry",
+                "Department of Justice",
+                "Department of Natural Resources",
+                "Department of Public Works and Government Services",
+                "Department of the Environment",
+                "Department of Transport",
+                "Department of Veterans Affairs",
+                "Major Projects Office",
+                "Public Health Agency of Canada",
+                "Royal Canadian Mounted Police",
+                "Treasury Board Secretariat"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-02-12",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "26",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-26/notice",
+            "witnesses": {
+              "orgs": [
+                "Chartered Professional Accountants of Ontario",
+                "Fédération des chambres de commerce du Québec",
+                "Fintechs Canada",
+                "Wealthsimple Investment Inc.",
+                "Canada Infrastructure Bank",
+                "Assembly of First Nations",
+                "Manitoba Métis Federation"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-02-10",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "30",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-02-09",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "24",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-24/notice"
+          },
+          {
+            "date": "2026-02-09",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "25",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-25/notice"
+          },
+          {
+            "date": "2026-02-05",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "22",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-22/notice"
+          },
+          {
+            "date": "2026-02-05",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "23",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-23/notice"
+          },
+          {
+            "date": "2026-02-04",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "29",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-02-03",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "28",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-02-02",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "20",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-20/notice"
+          },
+          {
+            "date": "2026-01-26",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "19",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-19/notice"
+          },
+          {
+            "date": "2025-12-10",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "27",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2025-12-09",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "25",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2025-12-09",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "26",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2025-12-03",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "24",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2025-12-02",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "22",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2025-12-02",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "23",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          }
+        ],
+        "sittings": [
+          {
+            "date": "2026-03-26",
+            "chamber": "Senate",
+            "sitting": "61",
+            "event": "Debate at third reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/061db_2026-03-26-e"
+          },
+          {
+            "date": "2026-03-24",
+            "chamber": "Senate",
+            "sitting": "59",
+            "event": "Committee report presented without amendment",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/059db_2026-03-24-e"
+          },
+          {
+            "date": "2026-03-10",
+            "chamber": "Senate",
+            "sitting": "56",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/056db_2026-03-10-e"
+          },
+          {
+            "date": "2026-03-09",
+            "chamber": "Senate",
+            "sitting": "55",
+            "event": "Pre-Study of Commons Bill Completed",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/055db_2026-03-09-e"
+          },
+          {
+            "date": "2026-03-09",
+            "chamber": "Senate",
+            "sitting": "55",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/055db_2026-03-09-e"
+          },
+          {
+            "date": "2026-02-26",
+            "chamber": "House",
+            "sitting": "90",
+            "event": "Debate at third reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-90/hansard"
+          },
+          {
+            "date": "2026-02-26",
+            "chamber": "Senate",
+            "sitting": "54",
+            "event": "First reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/054db_2026-02-26-e"
+          },
+          {
+            "date": "2026-02-25",
+            "chamber": "House",
+            "sitting": "89",
+            "event": "Debate at report stage",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-89/hansard"
+          },
+          {
+            "date": "2026-02-24",
+            "chamber": "House",
+            "sitting": "88",
+            "event": "Committee report presented with amendments",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-88/hansard"
+          },
+          {
+            "date": "2025-12-10",
+            "chamber": "House",
+            "sitting": "71",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-71/hansard"
+          },
+          {
+            "date": "2025-12-08",
+            "chamber": "House",
+            "sitting": "69",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-69/hansard"
+          },
+          {
+            "date": "2025-12-05",
+            "chamber": "House",
+            "sitting": "68",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-68/hansard"
+          },
+          {
+            "date": "2025-12-04",
+            "chamber": "House",
+            "sitting": "67",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-67/hansard"
+          },
+          {
+            "date": "2025-12-02",
+            "chamber": "House",
+            "sitting": "65",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-65/hansard"
+          },
+          {
+            "date": "2025-11-27",
+            "chamber": "House",
+            "sitting": "62",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-62/hansard"
+          },
+          {
+            "date": "2025-11-26",
+            "chamber": "House",
+            "sitting": "61",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-61/hansard"
+          },
+          {
+            "date": "2025-11-26",
+            "chamber": "Senate",
+            "sitting": "38",
+            "event": "Pre-study of House bill",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/038db_2025-11-26-e"
+          },
+          {
+            "date": "2025-11-25",
+            "chamber": "House",
+            "sitting": "60",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-60/hansard"
+          },
+          {
+            "date": "2025-11-24",
+            "chamber": "House",
+            "sitting": "59",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-59/hansard"
+          },
+          {
+            "date": "2025-11-21",
+            "chamber": "House",
+            "sitting": "58",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-58/hansard"
+          },
+          {
+            "date": "2025-11-20",
+            "chamber": "House",
+            "sitting": "57",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-57/hansard"
+          },
+          {
+            "date": "2025-11-18",
+            "chamber": "House",
+            "sitting": "55",
+            "event": "Introduction and first reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-55/hansard"
+          }
+        ],
+        "decisions": [
+          {
+            "date": "2026-02-26",
+            "chamber": "House",
+            "motion": "3rd reading",
+            "result": "Agreed To",
+            "method": "On division",
+            "yeas": null,
+            "nays": null
+          },
+          {
+            "date": "2025-12-10",
+            "chamber": "House",
+            "motion": "2nd reading and referral to committee - FINA",
+            "result": "Agreed To",
+            "method": "On division",
+            "yeas": null,
+            "nays": null
+          }
+        ]
+      },
+      "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "154",
+          "date": "2026-10-23",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-154/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Elizabeth May (GP)"
+          ],
+          "contexts": [
+            "Oral Questions: Democratic Institutions"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "149",
+          "date": "2026-10-09",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-149/hansard",
+          "speeches": 2,
+          "speakers": [
+            "Billy Morin",
+            "Sébastien Lemire (BQ)"
+          ],
+          "contexts": [
+            "Government Orders: First Nations Clean Water Act"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "147",
+          "date": "2026-10-07",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-147/hansard",
+          "speeches": 2,
+          "speakers": [
+            "Gabriel Ste-Marie (BQ)",
+            "Dan Albas (CPC)"
+          ],
+          "contexts": [
+            "Oral Questions: Housing",
+            "Government Orders: Building Canada Strong Act"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "146",
+          "date": "2026-10-06",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-146/hansard",
+          "speeches": 4,
+          "speakers": [
+            "Jean-Denis Garon (BQ)",
+            "Sébastien Lemire"
+          ],
+          "contexts": [
+            "Government Orders: Business of Supply",
+            "Government Orders: Building Canada Strong Act"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "145",
+          "date": "2026-10-05",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-145/hansard",
+          "speeches": 2,
+          "speakers": [
+            "Leah Gazan",
+            "Sébastien Lemire (BQ)"
+          ],
+          "contexts": [
+            "Government Orders: Building Canada Strong Act"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "140",
+          "date": "2026-09-21",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-140/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Leah Gazan (NDP)"
+          ],
+          "contexts": [
+            "Government Orders: Commissioner for Modern Treaty Implementation Act"
+          ]
+        }
+      ]
     },
     {
       "number": "C-31",
@@ -1143,7 +3616,265 @@
         "(e) remove mandatory confidentiality requirements regarding air travel complaints; and",
         "(f) increase the maximum administrative penalty payable by corporations for certain violations of the Canada Transportation Act or its regulations."
       ],
-      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-31&lang=en_CA&parlSession=451"
+      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-31&lang=en_CA&parlSession=451",
+      "activity": {
+        "meetings": [
+          {
+            "date": "2026-10-27",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "61",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-10-20",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "54",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-54/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Crown-Indigenous Relations and Northern Affairs",
+                "Department of Justice",
+                "Department of Natural Resources",
+                "Department of Employment and Social Development",
+                "Defence Investment Agency"
+              ],
+              "people": [],
+              "appearing": [
+                "Hon. Rebecca Chartrand, P.C, M.P., Minister of Northern and Arctic Affairs",
+                "Hon. Patty Hajdu, P.C., M.P., Minister of Jobs and Families",
+                "Hon. Stephen Fuhr, P.C., M.P., Secretary of State (Defence Procurement)"
+              ]
+            }
+          },
+          {
+            "date": "2026-10-20",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "59",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-10-08",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "53",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-53/notice",
+            "witnesses": {
+              "orgs": [
+                "Ecojustice Canada",
+                "March of Dimes Canada",
+                "United Way Centraide Canada",
+                "Mortgage Professionals Canada",
+                "National Apartment Council",
+                "Association pour la santé publique du Québec",
+                "FP Canada",
+                "Mining Association of Canada",
+                "Prosper Canada"
+              ],
+              "people": [
+                "John Stapleton, Principal, Open Policy ( by videoconference )"
+              ],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-10-07",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "58",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-10-06",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "52",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-52/notice",
+            "witnesses": {
+              "orgs": [
+                "Alliance for Visitor's Tax Refund",
+                "Frontier Duty Free Association",
+                "The Canadian Tax Observatory",
+                "Aerospace Industries Association of Canada",
+                "Canadian Manufacturers & Exporters",
+                "CropLife Canada"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-10-06",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "57",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-10-05",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "51",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-51/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Finance"
+              ],
+              "people": [],
+              "appearing": [
+                "Hon. François-Philippe Champagne, P.C., M.P., Minister of Finance and National Revenue"
+              ]
+            }
+          }
+        ],
+        "sittings": [
+          {
+            "date": "2026-06-10",
+            "chamber": "Senate",
+            "sitting": "81",
+            "event": "Pre-study of House bill",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/081db_2026-06-10-e"
+          },
+          {
+            "date": "2026-06-03",
+            "chamber": "House",
+            "sitting": "128",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-128/hansard"
+          },
+          {
+            "date": "2026-06-01",
+            "chamber": "House",
+            "sitting": "126",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-126/hansard"
+          },
+          {
+            "date": "2026-05-29",
+            "chamber": "House",
+            "sitting": "125",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-125/hansard"
+          },
+          {
+            "date": "2026-05-27",
+            "chamber": "House",
+            "sitting": "123",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-123/hansard"
+          },
+          {
+            "date": "2026-05-06",
+            "chamber": "House",
+            "sitting": "118",
+            "event": "Introduction and first reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-118/hansard"
+          }
+        ],
+        "decisions": [
+          {
+            "date": "2026-06-03",
+            "chamber": "House",
+            "motion": "2nd reading and referral to committee - Part 4, Division 17 (that is Clauses 339 to 364)",
+            "result": "Agreed To",
+            "method": "On recorded division",
+            "yeas": 177,
+            "nays": 158
+          },
+          {
+            "date": "2026-06-03",
+            "chamber": "House",
+            "motion": "2nd reading and referral to committee - all remaining provisions of the bill",
+            "result": "Agreed To",
+            "method": "On recorded division",
+            "yeas": 170,
+            "nays": 165
+          }
+        ]
+      },
+      "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "155",
+          "date": "2026-10-26",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-155/hansard",
+          "speeches": 5,
+          "speakers": [
+            "Luc Berthold (CPC)",
+            "Kelly Block (CPC)",
+            "Pierre Paul-Hus (CPC)",
+            "Tamara Kronis (CPC)",
+            "Blake Richards (CPC)"
+          ],
+          "contexts": [
+            "Government Orders: Strengthening Canada's Defence Sector Act"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "154",
+          "date": "2026-10-23",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-154/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Elizabeth May (GP)"
+          ],
+          "contexts": [
+            "Oral Questions: Democratic Institutions"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "152",
+          "date": "2026-10-21",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-152/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Andrew Scheer (CPC)"
+          ],
+          "contexts": [
+            "Private Members' Business: Privilege"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "151",
+          "date": "2026-10-20",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-151/hansard",
+          "speeches": 14,
+          "speakers": [
+            "James Bezan (CPC)",
+            "Hon. Stephen Fuhr",
+            "Xavier Barsalou-Duval",
+            "Marilène Gill (BQ)",
+            "Stephanie Kusie",
+            "Elizabeth May (GP)",
+            "Hon. Kevin Lamoureux (Lib.)",
+            "Jean-Denis Garon (BQ)"
+          ],
+          "contexts": [
+            "Government Orders: Strengthening Canada's Defence Sector Act",
+            "Oral Questions: Health",
+            "Government Orders: Privilege",
+            "Adjournment Proceedings"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "146",
+          "date": "2026-10-06",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-146/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Andrew Scheer (CPC)"
+          ],
+          "contexts": [
+            "Government Orders: Privilege"
+          ]
+        }
+      ]
     },
     {
       "number": "S-211",
@@ -1197,6 +3928,129 @@
       "statusSource": "legisinfo",
       "officialSummary": [
         "This enactment provides for the development of a national framework to regulate sports betting advertising in Canada and to set national standards for the prevention of risk for persons negatively impacted. It also provides for the Canadian Radio-television and Telecommunications Commission to review its regulations and policies to assess their adequacy and effectiveness in reducing the incidence of harms resulting from the proliferation of sports betting advertising."
+      ],
+      "activity": {
+        "meetings": [
+          {
+            "date": "2025-10-07",
+            "chamber": "Senate",
+            "committee": "TRCM",
+            "number": "3",
+            "url": "https://sencanada.ca/en/committees/TRCM/transcriptsminutes/45-1"
+          }
+        ],
+        "sittings": [
+          {
+            "date": "2026-04-22",
+            "chamber": "House",
+            "sitting": "108",
+            "event": "Second reading and referral to committee",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-108/hansard"
+          },
+          {
+            "date": "2026-04-15",
+            "chamber": "House",
+            "sitting": "103",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-103/hansard"
+          },
+          {
+            "date": "2026-02-12",
+            "chamber": "House",
+            "sitting": "85",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-85/hansard"
+          },
+          {
+            "date": "2025-11-05",
+            "chamber": "House",
+            "sitting": "51",
+            "event": "First reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-51/hansard"
+          },
+          {
+            "date": "2025-10-21",
+            "chamber": "Senate",
+            "sitting": "25",
+            "event": "Debate at third reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/025db_2025-10-21-e"
+          },
+          {
+            "date": "2025-10-08",
+            "chamber": "Senate",
+            "sitting": "23",
+            "event": "Committee report presented without amendment",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/023db_2025-10-08-e"
+          },
+          {
+            "date": "2025-06-12",
+            "chamber": "Senate",
+            "sitting": "10",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/010db_2025-06-12-e"
+          },
+          {
+            "date": "2025-06-10",
+            "chamber": "Senate",
+            "sitting": "8",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/008db_2025-06-10-e"
+          },
+          {
+            "date": "2025-06-03",
+            "chamber": "Senate",
+            "sitting": "5",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/005db_2025-06-03-e"
+          },
+          {
+            "date": "2025-05-28",
+            "chamber": "Senate",
+            "sitting": "3",
+            "event": "Introduction and first reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/003db_2025-05-28-e"
+          }
+        ],
+        "decisions": [
+          {
+            "date": "2026-04-22",
+            "chamber": "House",
+            "motion": "2nd reading and referral to committee - CHPC",
+            "result": "Agreed To",
+            "method": "On recorded division",
+            "yeas": 291,
+            "nays": 28
+          }
+        ]
+      },
+      "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "147",
+          "date": "2026-10-07",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-147/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Bardish Chagger (Lib.)"
+          ],
+          "contexts": [
+            "Routine Proceedings: Petitions"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "142",
+          "date": "2026-09-23",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-142/hansard",
+          "speeches": 2,
+          "speakers": [
+            "Arnold Viersen (CPC)",
+            "Arnold Viersen"
+          ],
+          "contexts": [
+            "Adjournment Proceedings"
+          ]
+        }
       ]
     },
     {
@@ -1266,7 +4120,240 @@
         "(e) expand the scope of certain provisions relating to the administration and enforcement of that Act, including by increasing the maximum administrative monetary penalties that may be imposed for certain violations and by granting the Commissioner of Canada Elections certain powers in respect of any conspiracy or attempt to commit, or being an accessory after the fact or counselling in relation to, a contravention of that Act.",
         "The enactment also enacts a statute to change the name of certain electoral districts as a result of proposals by the members of the House of Commons who represent those electoral districts."
       ],
-      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-25&lang=en_CA&parlSession=451"
+      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-25&lang=en_CA&parlSession=451",
+      "activity": {
+        "meetings": [
+          {
+            "date": "2026-06-17",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "52",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-06-03",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "42",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-06-02",
+            "chamber": "House",
+            "committee": "PROC",
+            "number": "36",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/PROC/meeting-36/notice",
+            "witnesses": {
+              "orgs": [
+                "Office of the Chief Electoral Officer",
+                "Office of the Commissioner of Canada Elections",
+                "Privy Council Office"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-05-28",
+            "chamber": "House",
+            "committee": "PROC",
+            "number": "35",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/PROC/meeting-35/notice",
+            "witnesses": {
+              "orgs": [
+                "Office of the Chief Electoral Officer",
+                "Office of the Commissioner of Canada Elections",
+                "Privy Council Office"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-05-28",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "41",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-05-27",
+            "chamber": "Senate",
+            "committee": "LCJC",
+            "number": "40",
+            "url": "https://sencanada.ca/en/committees/LCJC/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-05-26",
+            "chamber": "House",
+            "committee": "PROC",
+            "number": "34",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/PROC/meeting-34/notice",
+            "witnesses": {
+              "orgs": [
+                "Democracy Watch"
+              ],
+              "people": [
+                "Gerald Chipeur, Lawyer",
+                "Eve Gaumond, Lawyer and PhD Student",
+                "Peter Loewen, Harold Tanner Dean of the College of Arts and Sciences, Cornell University",
+                "Holly Ann Garnett, Class of 1965 Professor in Leadership, Royal Military College of Canada ( by videoconference )",
+                "Chris Tenove, Assistant Director, Centre for the Study of Democratic Institutions, University of British Columbia ( by videoconference )"
+              ],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-05-07",
+            "chamber": "House",
+            "committee": "PROC",
+            "number": "33",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/PROC/meeting-33/notice",
+            "witnesses": {
+              "orgs": [
+                "Office of the Chief Electoral Officer",
+                "Office of the Commissioner of Canada Elections"
+              ],
+              "people": [
+                "Charles Burton, Senior Fellow, Sinopsis",
+                "Andrea Lawlor, Associate Professor, Department of Political Science, McMaster University ( by videoconference )",
+                "Lori Turnbull, Professor, Faculty of Management, Dalhousie University"
+              ],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-05-05",
+            "chamber": "House",
+            "committee": "PROC",
+            "number": "32",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/PROC/meeting-32/notice",
+            "witnesses": {
+              "orgs": [
+                "Privy Council Office"
+              ],
+              "people": [],
+              "appearing": [
+                "Hon. Steven MacKinnon, P.C., M.P., Minister of Transport and Leader of the Government in the House of Commons"
+              ]
+            }
+          }
+        ],
+        "sittings": [
+          {
+            "date": "2026-06-18",
+            "chamber": "Senate",
+            "sitting": "86",
+            "event": "Committee report presented without amendment",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/086db_2026-06-18-e"
+          },
+          {
+            "date": "2026-06-18",
+            "chamber": "Senate",
+            "sitting": "86",
+            "event": "Debate at third reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/086db_2026-06-18-e"
+          },
+          {
+            "date": "2026-06-16",
+            "chamber": "Senate",
+            "sitting": "84",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/084db_2026-06-16-e"
+          },
+          {
+            "date": "2026-06-15",
+            "chamber": "Senate",
+            "sitting": "83",
+            "event": "First reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/083db_2026-06-15-e"
+          },
+          {
+            "date": "2026-06-11",
+            "chamber": "House",
+            "sitting": "134",
+            "event": "Debate at third reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-134/hansard"
+          },
+          {
+            "date": "2026-06-10",
+            "chamber": "House",
+            "sitting": "133",
+            "event": "Debate at report stage",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-133/hansard"
+          },
+          {
+            "date": "2026-06-10",
+            "chamber": "House",
+            "sitting": "133",
+            "event": "Debate at third reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-133/hansard"
+          },
+          {
+            "date": "2026-06-04",
+            "chamber": "Senate",
+            "sitting": "79",
+            "event": "Pre-Study of Commons Bill Completed",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/079db_2026-06-04-e"
+          },
+          {
+            "date": "2026-06-03",
+            "chamber": "House",
+            "sitting": "128",
+            "event": "Committee report presented with amendments",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-128/hansard"
+          },
+          {
+            "date": "2026-05-07",
+            "chamber": "Senate",
+            "sitting": "73",
+            "event": "Pre-study of House bill",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/073db_2026-05-07-e"
+          },
+          {
+            "date": "2026-04-24",
+            "chamber": "House",
+            "sitting": "110",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-110/hansard"
+          },
+          {
+            "date": "2026-04-16",
+            "chamber": "House",
+            "sitting": "104",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-104/hansard"
+          },
+          {
+            "date": "2026-03-26",
+            "chamber": "House",
+            "sitting": "100",
+            "event": "Introduction and first reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-100/hansard"
+          }
+        ],
+        "decisions": [
+          {
+            "date": "2026-06-11",
+            "chamber": "House",
+            "motion": "3rd reading",
+            "result": "Agreed To",
+            "method": "",
+            "yeas": null,
+            "nays": null
+          },
+          {
+            "date": "2026-04-24",
+            "chamber": "House",
+            "motion": "2nd reading and referral to committee - PROC",
+            "result": "Agreed To",
+            "method": "On division",
+            "yeas": null,
+            "nays": null
+          }
+        ]
+      },
+      "mentions": []
     },
     {
       "number": "C-4",
@@ -1324,7 +4411,209 @@
         "Part 3 repeals Part 1 of the Greenhouse Gas Pollution Pricing Act and the Fuel Charge Regulations.",
         "Part 4 amends the Canada Elections Act to make changes to the requirements relating to political parties’ policies for the protection of personal information."
       ],
-      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-4&lang=en_CA&parlSession=451"
+      "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-4&lang=en_CA&parlSession=451",
+      "activity": {
+        "meetings": [
+          {
+            "date": "2026-02-24",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "31",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2026-02-10",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "30",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
+            "date": "2025-10-27",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "9",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-9/notice"
+          },
+          {
+            "date": "2025-10-22",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "8",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-8/notice"
+          },
+          {
+            "date": "2025-10-20",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "7",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-7/notice"
+          },
+          {
+            "date": "2025-10-08",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "6",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-6/notice"
+          },
+          {
+            "date": "2025-10-06",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "5",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-5/notice"
+          },
+          {
+            "date": "2025-10-01",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "4",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-4/notice"
+          }
+        ],
+        "sittings": [
+          {
+            "date": "2026-02-26",
+            "chamber": "Senate",
+            "sitting": "54",
+            "event": "Debate at third reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/054db_2026-02-26-e"
+          },
+          {
+            "date": "2026-02-25",
+            "chamber": "Senate",
+            "sitting": "53",
+            "event": "Debate at third reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/053db_2026-02-25-e"
+          },
+          {
+            "date": "2026-02-24",
+            "chamber": "Senate",
+            "sitting": "52",
+            "event": "Committee report presented without amendment",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/052db_2026-02-24-e"
+          },
+          {
+            "date": "2026-02-05",
+            "chamber": "Senate",
+            "sitting": "48",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/048db_2026-02-05-e"
+          },
+          {
+            "date": "2026-02-04",
+            "chamber": "Senate",
+            "sitting": "47",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/047db_2026-02-04-e"
+          },
+          {
+            "date": "2025-12-11",
+            "chamber": "House",
+            "sitting": "72",
+            "event": "Third reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-72/hansard"
+          },
+          {
+            "date": "2025-12-11",
+            "chamber": "Senate",
+            "sitting": "45",
+            "event": "First reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/045db_2025-12-11-e"
+          },
+          {
+            "date": "2025-12-01",
+            "chamber": "House",
+            "sitting": "64",
+            "event": "Debate at third reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-64/hansard"
+          },
+          {
+            "date": "2025-11-19",
+            "chamber": "House",
+            "sitting": "56",
+            "event": "Debate at report stage",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-56/hansard"
+          },
+          {
+            "date": "2025-11-19",
+            "chamber": "House",
+            "sitting": "56",
+            "event": "Debate at third reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-56/hansard"
+          },
+          {
+            "date": "2025-10-29",
+            "chamber": "House",
+            "sitting": "46",
+            "event": "Committee report presented with amendments",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-46/hansard"
+          },
+          {
+            "date": "2025-06-12",
+            "chamber": "House",
+            "sitting": "14",
+            "event": "Second reading and referral to committee",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-14/hansard"
+          },
+          {
+            "date": "2025-06-11",
+            "chamber": "House",
+            "sitting": "13",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-13/hansard"
+          },
+          {
+            "date": "2025-06-06",
+            "chamber": "House",
+            "sitting": "10",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-10/hansard"
+          },
+          {
+            "date": "2025-06-05",
+            "chamber": "House",
+            "sitting": "9",
+            "event": "Introduction and first reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-9/hansard"
+          }
+        ],
+        "decisions": [
+          {
+            "date": "2025-12-11",
+            "chamber": "House",
+            "motion": "3rd reading",
+            "result": "Agreed To",
+            "method": "On division",
+            "yeas": null,
+            "nays": null
+          },
+          {
+            "date": "2025-06-12",
+            "chamber": "House",
+            "motion": "2nd reading and referral to committee - FINA",
+            "result": "Agreed To",
+            "method": "On recorded division",
+            "yeas": 335,
+            "nays": 0
+          }
+        ]
+      },
+      "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "141",
+          "date": "2026-09-22",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-141/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Caroline Desrochers (Lib.)"
+          ],
+          "contexts": [
+            "Government Orders: Canadian Fuel Affordability Act"
+          ]
+        }
+      ]
     },
     {
       "number": "C-268",
@@ -1370,6 +4659,98 @@
       "statusSource": "legisinfo",
       "officialSummary": [
         "This enactment requires the Canadian Radio-television and Telecommunications Commission to establish a process for ensuring the accuracy of the mobile network coverage data provided by Canadian carriers. It also requires the Minister of Industry to maintain and update the Spectrum Policy Framework for Canada. Lastly, the enactment sets out review and reporting requirements respecting the Framework."
+      ],
+      "activity": {
+        "meetings": [
+          {
+            "date": "2026-10-06",
+            "chamber": "House",
+            "committee": "INDU",
+            "number": "50",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/INDU/meeting-50/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Radio-television and Telecommunications Commission",
+                "Department of Industry"
+              ],
+              "people": [],
+              "appearing": []
+            }
+          },
+          {
+            "date": "2026-09-24",
+            "chamber": "House",
+            "committee": "INDU",
+            "number": "49",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/INDU/meeting-49/notice",
+            "witnesses": {
+              "orgs": [
+                "Municipality of Martinville",
+                "Department of Industry"
+              ],
+              "people": [
+                "Marianne Dandurand, M.P., Compton–Stanstead"
+              ],
+              "appearing": []
+            }
+          }
+        ],
+        "sittings": [
+          {
+            "date": "2026-10-07",
+            "chamber": "House",
+            "sitting": "147",
+            "event": "Committee report presented without an amendment",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-147/hansard"
+          },
+          {
+            "date": "2026-06-17",
+            "chamber": "House",
+            "sitting": "138",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-138/hansard"
+          },
+          {
+            "date": "2026-05-05",
+            "chamber": "House",
+            "sitting": "117",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-117/hansard"
+          },
+          {
+            "date": "2026-03-12",
+            "chamber": "House",
+            "sitting": "95",
+            "event": "Introduction and first reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-95/hansard"
+          }
+        ],
+        "decisions": [
+          {
+            "date": "2026-06-17",
+            "chamber": "House",
+            "motion": "2nd reading and referral to committee - INDU",
+            "result": "Agreed To",
+            "method": "",
+            "yeas": null,
+            "nays": null
+          }
+        ]
+      },
+      "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "147",
+          "date": "2026-10-07",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-147/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Ben Carr (Lib.)"
+          ],
+          "contexts": [
+            "Routine Proceedings: Committees of the House"
+          ]
+        }
       ]
     },
     {
@@ -1477,6 +4858,51 @@
         "(c) replace the requirement to publish a notice of bankruptcy in a local newspaper with a requirement to do so in the manner specified in directives of the Superintendent of Bankruptcy; and",
         "(d) provide that, if every opposition based solely on grounds referred to in paragraph 173(1)‍(m) or (n) of that Act is withdrawn, a bankrupt who was eligible for an automatic discharge before the opposition was filed will be issued a certificate of discharge.",
         "Division 5 of Part 6 amends the Canadian Agricultural Loans Act to, among other things, grant the Minister of Agriculture and Agri-Food the power to reconsider claims for loss and recover overpayments. It also makes related amendments to the Canadian Agricultural Loans Regulations to, among other things, clarify the maximum annual rate of interest payable by a borrower to a designated lender."
+      ],
+      "activity": {
+        "meetings": [],
+        "sittings": [
+          {
+            "date": "2026-10-07",
+            "chamber": "Senate",
+            "sitting": "91",
+            "event": "Introduction and first reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/091db_2026-10-07-e"
+          }
+        ],
+        "decisions": []
+      },
+      "mentions": [
+        {
+          "chamber": "Senate",
+          "sitting": "95",
+          "date": "2026-10-22",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/095db_2026-10-22-e",
+          "speeches": 1,
+          "speakers": [
+            "Senator Moreau"
+          ],
+          "contexts": [
+            "Innovation, Science and Economic Development"
+          ]
+        },
+        {
+          "chamber": "House",
+          "sitting": "148",
+          "date": "2026-10-08",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-148/hansard",
+          "speeches": 3,
+          "speakers": [
+            "Jessica Fancy (Lib.)",
+            "Hon. Marjorie Michel (Lib.)",
+            "Hon. Kody Blois (Lib.)"
+          ],
+          "contexts": [
+            "Oral Questions: Agriculture and Agri-Food",
+            "Oral Questions: Health",
+            "Government Orders: Business of Supply"
+          ]
+        }
       ]
     }
   ],
@@ -1487,5 +4913,10 @@
       "kind": "stage",
       "text": "Advanced to: At consideration in committee in the Senate"
     }
-  ]
+  ],
+  "upcoming": [],
+  "scan": {
+    "houseSitting": 155,
+    "senateSitting": 95
+  }
 }
