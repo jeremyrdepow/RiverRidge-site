@@ -9,20 +9,56 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - name: Committee briefs and witness lists
+      - name: AI trial setup, live model list and brief sizes
         run: |
           set +e +o pipefail
+          out=probe/aitrial; mkdir -p $out
+          curl -sS -m 60 -o /tmp/models.json -w "models %{http_code} %{size_download}\n" https://openrouter.ai/api/v1/models | tee $out/log.txt
+          which pdftotext >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils) >/dev/null 2>&1
+          which pdftotext | tee -a $out/log.txt
           UA="RiverRidge-legislation-tracker/1.0 (+https://riverridgeintelligence.ca)"
-          out=probe/briefs; mkdir -p $out; log=$out/results.tsv
-          get() { curl -sS -L -A "$UA" -m 120 -o "$out/$1" -w "$1\t%{http_code}\t%{size_download}\t%{content_type}\t$2\n" "$2" >> $log 2>&1 || echo "$1	ERR	$2" >> $log; sleep 1.5; }
-          get secu-c22-briefs.html "https://www.ourcommons.ca/committees/en/SECU/StudyActivity/GetBriefs?studyActivityId=13454852"
-          get secu-c22-witnesses.html "https://www.ourcommons.ca/committees/en/SECU/StudyActivity/Witnesses?studyActivityId=13454852"
-          get members.xml "https://www.ourcommons.ca/Members/en/search/XML"
+          curl -sS -A "$UA" -m 60 -o /tmp/briefs.html "https://www.ourcommons.ca/committees/en/SECU/StudyActivity/GetBriefs?studyActivityId=13454852"
+          python3 - "$out" <<'PY'
+          import json,sys,re,html,subprocess,urllib.request,time
+          out=sys.argv[1]
+          d=json.load(open("/tmp/models.json"))["data"]
+          keep=("openai/","google/","mistralai/","cohere/","anthropic/")
+          rows=[]
+          for m in d:
+              if not m["id"].startswith(keep): continue
+              p=m.get("pricing",{})
+              try: pin=float(p.get("prompt",0))*1e6; pout=float(p.get("completion",0))*1e6
+              except: pin=pout=-1
+              rows.append((m["id"].split("/")[0], m.get("created",0), m["id"], m.get("name",""), m.get("context_length",""), round(pin,3), round(pout,3)))
+          rows.sort(key=lambda r:(r[0],-r[1]))
+          with open(f"{out}/models.tsv","w") as f:
+              f.write("provider\tcreated\tid\tname\tcontext\tusd_per_M_in\tusd_per_M_out\n")
+              for r in rows: f.write("\t".join([r[0],time.strftime("%Y-%m-%d",time.gmtime(r[1])),*map(str,r[2:])])+"\n")
+          b=open("/tmp/briefs.html",encoding="utf8").read()
+          items=b.split('class="brief-item')[1:]
+          with open(f"{out}/briefs.tsv","w") as f:
+              f.write("name\tindividual\tpages\tchars\tstatus\n")
+              for it in items:
+                  name=html.unescape(re.sub(r"<[^>]+>","",(re.search(r'<div class="name">([\s\S]*?)(?:<a|</div>)',it) or [None,""])[1])).strip()
+                  url=(re.search(r'href="([^"]+\.pdf)"',it,re.I) or [None,""])[1]
+                  indiv=bool(re.match(r"^[^,]+, [^,]+$",name)) and not re.search(r"\b(inc|ltd|association|council|society|canada)\b",name,re.I)
+                  if indiv or not url: f.write(f"{name}\t{indiv}\t\t\tskipped\n"); continue
+                  if url.startswith("//"): url="https:"+url
+                  try:
+                      req=urllib.request.Request(url,headers={"User-Agent":"RiverRidge-legislation-tracker/1.0 (+https://riverridgeintelligence.ca)"})
+                      open("/tmp/b.pdf","wb").write(urllib.request.urlopen(req,timeout=60).read())
+                      txt=subprocess.run(["pdftotext","-layout","/tmp/b.pdf","-"],capture_output=True,text=True).stdout
+                      pages=subprocess.run(["pdfinfo","/tmp/b.pdf"],capture_output=True,text=True).stdout
+                      pg=(re.search(r"Pages:\s+(\d+)",pages) or [None,"?"])[1]
+                      f.write(f"{name}\t{indiv}\t{pg}\t{len(txt.strip())}\tok\n")
+                  except Exception as e:
+                      f.write(f"{name}\t{indiv}\t\t\terror {e}\n")
+                  time.sleep(1.5)
+          PY
       - name: Commit results
         if: always()
         run: |
           git config user.name "riverridge-bot"
           git config user.email "actions@users.noreply.github.com"
-          find probe/briefs -size +3M -delete
-          git add probe/briefs
-          git commit -m "Probe results: committee briefs and witnesses" && git push
+          git add probe/aitrial
+          git commit -m "Probe results: AI trial setup" && git push
