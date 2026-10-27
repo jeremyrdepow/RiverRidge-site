@@ -95,7 +95,6 @@ section.theme h2 { font-family: var(--font-display); font-weight: 600; font-size
 .bill h3 { margin: 0; font-size: var(--step-1); font-weight: 600; line-height: 1.3; }
 .num { font-family: var(--font-data); font-weight: 500; margin-right: 0.5rem; }
 .meta { font-size: var(--step--1); color: var(--muted); margin: 0.15rem 0 0.4rem; }
-.desc { margin: 0 0 0.5rem; max-width: 62ch; }
 .links { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; font-size: var(--step--1); }
 .cmtes { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.1rem 0 0.5rem; }
 .cmte { font-size: var(--step--1); background: var(--chip); border: 1px solid var(--line); border-radius: 4px; padding: 0.1rem 0.5rem; text-decoration: none; color: var(--ink); }
@@ -162,6 +161,17 @@ section.theme h2 { font-family: var(--font-display); font-weight: 600; font-size
 .search:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 .flag { display: inline-block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border: 1px dashed var(--muted); border-radius: 4px; padding: 0 0.35rem; margin-left: 0.35rem; vertical-align: 0.1em; }
+.lead { margin: 0.35rem 0 0.5rem; max-width: 62ch; font-size: var(--step-0); font-weight: 500; }
+.offsum { margin: 0 0 0.6rem; max-width: 66ch; font-size: var(--step--1); }
+.offsum .lbl { font-family: var(--font-data); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.15rem; }
+.offsum .body { position: relative; max-height: 6.4em; overflow: hidden; }
+.offsum .body::after { content: ""; position: absolute; inset: auto 0 0 0; height: 1.8em; background: linear-gradient(to bottom, transparent, var(--bg)); }
+.offsum.open .body, .offsum.short .body { max-height: none; }
+.offsum.open .body::after, .offsum.short .body::after { display: none; }
+.offsum .body p { margin: 0 0 0.3rem; }
+.offsum .body p.sub { padding-left: 1.25rem; }
+.offsum .more { font: inherit; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; margin-top: 0.15rem; }
+.offsum .src { color: var(--muted); }
 .outlook { margin: 0 0 0.5rem; max-width: 62ch; font-size: var(--step--1); border-left: 3px solid var(--accent); padding: 0.35rem 0.65rem; background: var(--chip); }
 .outlook b { font-weight: 600; }
 
@@ -233,7 +243,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
 
   <footer>
     <p class="contact">Need to know what a bill means for your organization, or when it is likely to move? Contact RiverRidge at <span class="addr">contact@riverridgeintelligence.ca</span>.</p>
-    <p>Sources: bill status from <a href="https://openparliament.ca/" rel="noopener">openparliament.ca</a>, retrieved automatically each day; committees and bill-text links from <a href="https://www.parl.ca/legisinfo/en/overview" rel="noopener">LEGISinfo</a>, Parliament of Canada, which is the official record. Royal assent does not mean a law is in force; many provisions take effect later by order or regulation. Bill descriptions are RiverRidge summaries.</p>
+    <p>Sources: bill status from <a href="https://openparliament.ca/" rel="noopener">openparliament.ca</a>, retrieved automatically each day; committees and bill-text links from <a href="https://www.parl.ca/legisinfo/en/overview" rel="noopener">LEGISinfo</a>, Parliament of Canada, which is the official record. Official summaries are the summary printed in each bill, as published by Parliament and retrieved via openparliament.ca. Royal assent does not mean a law is in force; many provisions take effect later by order or regulation. Bill descriptions are RiverRidge summaries.</p>
   </footer>
 </div>
 
@@ -299,7 +309,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
   };
   const matchesSearch = (b, q) => {
     if (!q) return true;
-    const hay = [b.number, b.number.replace("-", ""), b.shortTitle, b.longTitle, b.summary, b.sponsor, b.status].join(" ").toLowerCase();
+    const hay = [b.number, b.number.replace("-", ""), b.shortTitle, b.longTitle, b.summary, b.sponsor, b.status, ...(b.officialSummary || [])].join(" ").toLowerCase();
     return q.toLowerCase().split(/\s+/).every((w) => hay.includes(w));
   };
 
@@ -340,6 +350,27 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     return `<div class="cmtes">${items}</div>`;
   }
 
+  const words = (lines) => lines.join(" ").split(/\s+/).length;
+  const opened = new Set();
+  function officialHtml(b) {
+    const lines = b.officialSummary || [];
+    if (!lines.length) return "";
+    const n = words(lines);
+    const short = n <= 110;
+    // A search that only matches inside the summary opens it, so the hit is visible.
+    const q = query.toLowerCase().split(/\s+/).filter(Boolean);
+    const hit = q.length && q.every((w) => lines.join(" ").toLowerCase().includes(w));
+    const open = !short && (opened.has(b.number) || hit);
+    const body = lines.map((l) => `<p${/^\([a-zA-Z0-9.]+\)/.test(l) ? ' class="sub"' : ""}>${esc(l)}</p>`).join("");
+    const lop = b.lopSummaryUrl ? ` · <a href="${esc(b.lopSummaryUrl)}" rel="noopener">Library of Parliament legislative summary</a>` : "";
+    return `<div class="offsum${short ? " short" : ""}${open ? " open" : ""}">
+      <div class="lbl">Official summary</div>
+      <div class="body">${body}</div>
+      ${short ? "" : `<button type="button" class="more" data-more="${esc(b.number)}" aria-expanded="${open}">${open ? "Show less" : `Show full summary (${n.toLocaleString("en-CA")} words)`}</button>`}
+      <div class="src">From the bill as published${lop}</div>
+    </div>`;
+  }
+
   function billHtml(b) {
     const title = b.shortTitle || b.longTitle || b.number;
     const sponsor = [b.sponsor, (b.sponsorTitle || "").replace(/\u2014/g, "\u2013")].filter(Boolean).join(", ");
@@ -349,9 +380,10 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     return `<article class="bill" id="${esc(anchor(b))}">
       <div>
         <h3><span class="num">${esc(b.number)}</span>${esc(title)}${isStalled(b) ? `<span class="flag" title="No recorded activity in 6 months or more">Stalled</span>` : ""}</h3>
-        <div class="meta">${esc(type)}${sponsor ? " · " + esc(sponsor) : ""}</div>
-        ${b.summary ? `<p class="desc">${esc(b.summary)}</p>` : ""}
+        ${b.summary ? `<p class="lead">${esc(b.summary)}</p>` : ""}
         ${b.outlook && b.outlook.text ? `<p class="outlook"><b>RiverRidge outlook${b.outlook.date ? " (" + esc(fmtDate(b.outlook.date)) + ")" : ""}:</b> ${esc(b.outlook.text)}</p>` : ""}
+        ${officialHtml(b)}
+        <div class="meta">${esc(type)}${sponsor ? " · " + esc(sponsor) : ""}</div>
         ${committeesHtml(b)}
         <div class="links">
           <a href="${esc(b.legisinfoUrl)}" rel="noopener">Status on LEGISinfo</a>
@@ -444,6 +476,17 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
   });
 
   document.addEventListener("click", (e) => {
+    const m = e.target.closest("[data-more]");
+    if (m) {
+      const box = m.closest(".offsum");
+      const open = !box.classList.contains("open");
+      box.classList.toggle("open", open);
+      open ? opened.add(m.dataset.more) : opened.delete(m.dataset.more);
+      m.setAttribute("aria-expanded", open);
+      const n = words(DATA.bills.find((b) => b.number === m.dataset.more).officialSummary);
+      m.textContent = open ? "Show less" : `Show full summary (${n.toLocaleString("en-CA")} words)`;
+      return;
+    }
     const c = e.target.closest("[data-copy]");
     if (c) {
       const url = location.origin + location.pathname + "#" + c.dataset.copy;

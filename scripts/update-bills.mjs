@@ -46,6 +46,43 @@ async function fetchBill(number) {
   }
 }
 
+// The official summary printed in the bill, as shown on the bill's
+// openparliament page (the API does not carry it). Returns
+// { paragraphs, lopUrl } or null. Any failure keeps the previous summary.
+async function fetchSummary(number) {
+  const url = `https://openparliament.ca/bills/${SESSION}/${number.toUpperCase()}/`;
+  const res = await fetch(url, { headers: { ...HEADERS, Accept: "text/html" } });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const html = await res.text();
+  const m = html.match(/<div class="bill_summary">([\s\S]*?)<\/div>/);
+  if (!m) return null;
+  const paragraphs = [...m[1].matchAll(/<p>([\s\S]*?)<\/p>/g)]
+    .flatMap((p) => cleanText(p[1]).split("\n"))
+    .filter(Boolean);
+  if (!paragraphs.length) return null;
+  const lop = html.match(/href="(https:\/\/loppublicservices\.parl\.ca\/[^"]+)"[^>]*>legislative summary/);
+  return { paragraphs, lopUrl: lop ? decodeEntities(lop[1]) : null };
+}
+
+const ENTITIES = { amp: "&", lt: "<", gt: ">", quot: '"', "#39": "'", nbsp: " " };
+const decodeEntities = (t) =>
+  t.replace(/&(#x?[0-9a-f]+|[a-z]+);/gi, (all, e) => {
+    if (e[0] === "#") return String.fromCodePoint(e[1] === "x" || e[1] === "X" ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10));
+    return ENTITIES[e.toLowerCase()] ?? all;
+  });
+
+// Bill text to plain text: <br> becomes a line break, tags go, and the double
+// spaces left where italics were removed are tidied. Em dashes in the official
+// text are shown as spaced en dashes to match the site's house style.
+function cleanText(fragment) {
+  return decodeEntities(fragment.replace(/<br\s*\/?>/gi, "\n").replace(/<[^>]+>/g, ""))
+    .split("\n")
+    .map((line) => line.replace(/\s+/g, " ").replace(/\s+([,.;:)])/g, "$1").replace(/\(\s+/g, "(").trim())
+    .filter(Boolean)
+    .join("\n")
+    .replace(/\s*\u2014\s*/g, " \u2013 ");
+}
+
 // openparliament may give status as a string or as {en, fr}. Be tolerant.
 function statusText(op) {
   const s = op.status ?? op.status_name ?? op.status_code ?? "";
@@ -196,6 +233,20 @@ for (const cfg of config.bills) {
     stale++;
     console.error(`stale ${cfg.number}: ${err.message} (kept baseline)`);
   }
+  // Official summary: refreshed when the page can be read, otherwise kept.
+  await sleep(1200);
+  try {
+    const sum = await fetchSummary(cfg.number);
+    if (sum) {
+      rec.officialSummary = sum.paragraphs;
+      if (sum.lopUrl) rec.lopSummaryUrl = sum.lopUrl;
+    } else if (!rec.officialSummary) {
+      console.error(`nosummary ${cfg.number}: no summary block on the openparliament page`);
+    }
+  } catch (err) {
+    console.error(`nosummary ${cfg.number}: ${err.message} (kept previous)`);
+  }
+
   // Config is the source of truth for grouping and the written summary.
   rec.theme = cfg.theme;
   rec.summary = cfg.summary || rec.summary || "";
