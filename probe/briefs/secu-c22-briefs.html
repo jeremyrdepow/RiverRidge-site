@@ -1,0 +1,743 @@
+
+
+
+
+
+
+<div class="briefs-list-filter-container">
+
+    <form class="form-inline">
+        <div class="form-group search-form-group">
+            <div class="input-group">
+                <input type="text" id="FilterSearchTextBox" class="form-control" placeholder="Search Briefs by Name">
+                <div id="ClearFilter" class="clear-filter hoc-icon icon-times-circle"></div>
+                <div class="input-group-addon" style="padding:0"><button type="button" id="FilterSearchButton" class="btn btn-sm" title="Filter Results"><i class="hoc-icon icon-search"></i></button></div>
+            </div>
+        </div>
+        <div class="form-group view-form-group">
+            <div id="ViewOptionDropDown" class="dropdown view-options">
+                <div class="dropdown-toggle" id="view-dropdown" data-toggle="dropdown" >
+                    <a href="#"><span id="ViewTitle">Sort Chronologically</span> &nbsp;<i class="ion-android-arrow-dropdown" style="font-size: 16px;"></i></a>
+                </div>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="view-dropdown">
+                    <li role="presentation" id="ViewOptionChronologicalItem" class=" active">
+                        <a role="menuitem" id="ViewOptionChronological" tabindex="-1">Sort Chronologically</a>
+                    </li>
+                    <li role="presentation" id="ViewOptionAlphabeticalItem" class="">
+                        <a role="menuitem" id="ViewOptionAlphabetical" tabindex="-1">Sort Alphabetically</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <img id="BriefsListContainerSpinner" class="hidden" src="/committees/Styles/images/spin_small.gif" alt="Loading" />
+    </form>
+
+</div>
+
+
+    <script language="javascript" type="text/javascript">
+
+        $(document).on("keypress", "input", function (e) {
+            var code = e.keyCode || e.which;
+            if (code == 13) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        $(document).ready(function () {
+
+            $("#FilterSearchTextBox").keyup(function () {
+                $(this).next().toggle(Boolean($(this).val()));
+            });
+
+            $("#ClearFilter").toggle(
+                Boolean($("#FilterSearchTextBox").val())
+            );
+
+            $("#ClearFilter").click(function () {
+                
+                $("#FilterSearchTextBox").val('');
+                FilterBriefs($('#FilterSearchTextBox').val())
+
+                //$(this).prev().val('').focus();
+                $(this).hide();
+            });
+
+        });
+
+        $("#FilterSearchButton").on("click", function () {
+                        
+            FilterBriefs($('#FilterSearchTextBox').val())
+        });
+        
+        $("#FilterSearchTextBox").keyup(function (e) {
+
+            setTimeout(function () {
+
+                if ($("#FilterSearchTextBox").val().length > 0) {
+                    FilterBriefs($('#FilterSearchTextBox').val())
+                } else {
+                    ClearFilter()
+                }
+            }, 1);
+        });
+
+        function FilterBriefs(filterText) {
+            
+            filterText = removeAccents(filterText.toLocaleLowerCase());
+            
+            var items = $('.brief-item');
+
+            $('#BriefsListContainerResultsMessage').html('');
+            items.hide();
+
+            var filteredItems = items.filter(function () {
+                return (removeAccents($(this).find('.name').text().toLowerCase()).indexOf(filterText, 0) != -1 ||
+                        removeAccents($(this).find('.joint-name').text().toLowerCase()).indexOf(filterText, 0) != -1 ||
+                        removeAccents($(this).find('.joint').text().toLowerCase()).indexOf(filterText, 0) != -1);
+            });
+
+            filteredItems.show();
+
+            if (filteredItems.length == 0){
+                $('#BriefsListContainerResultsMessage').html('No results found')
+            }
+
+            var filteredJointSubmitters = filteredItems.find('.joint-name');
+
+            filteredJointSubmitters
+                .hide()
+                .filter(function () {
+                    return ($(this).text().toLowerCase().indexOf(filterText, 0) != -1);
+                })
+                .show();
+        }
+
+        function ClearFilter(filterText) {
+            var items = $('.brief-item');
+            items.show()
+        }
+      
+        function removeAccents(name) {
+
+            name = name.replace(/À|Á|Â|Ã|Ä|Å/g, "A");
+            name = name.replace(/à|á|â|ã|ä|å/g, "a");
+            name = name.replace(/Ò|Ó|Ô|Õ|Õ|Ö|Ø/g, "O");
+            name = name.replace(/ò|ó|ô|õ|ö|ø/g, "o");
+            name = name.replace(/È|É|Ê|Ë/g, "E");
+            name = name.replace(/è|é|ê|ë/g, "e");
+            name = name.replace(/Ç|ç/g, "c");
+            name = name.replace(/Ì|Í|Î|Ï/g, "I");
+            name = name.replace(/ì|í|î|ï/g, "i");
+            name = name.replace(/Ù|Ú|Û|Ü/g, "U");
+            name = name.replace(/ù|ú|û|ü/g, "u");
+            return name;
+        }
+
+        $("#ViewOptionChronological").on("click", function () {
+            
+            document.getElementById('ViewTitle').innerHTML = 'Sort Chronologically';
+
+            $('#BriefsListContainerSpinner').removeClass("hidden");
+            //$('#BriefsListContainer').html('');
+            
+            $('#ViewOptionChronologicalItem').addClass("active");
+            $('#ViewOptionAlphabeticalItem').removeClass("active");
+
+            var a = "/committees/en/SECU/StudyActivity/GetBriefs?studyActivityId=13454852&includeFilters=False&view=Chronologically";
+
+            $.ajax({
+                url: a,
+                type: 'GET',
+                dataType: 'html',
+                // we set cache: false because GET requests are often cached by browsers
+                // IE is particularly aggressive in that respect
+                cache: false,
+                data: {},
+                success: function displayResults(results) {
+
+                    $('#BriefsListContainerSpinner').addClass("hidden");
+                    $('#BriefsListContainer').html(results);
+
+                    if ($('#FilterSearchTextBox').val() != '')
+                        FilterBriefs($('#FilterSearchTextBox').val())
+                }
+            });
+        });
+
+        $("#ViewOptionAlphabetical").on("click", function () {
+
+            document.getElementById('ViewTitle').innerHTML = 'Sort Alphabetically';
+
+            $('#BriefsListContainerSpinner').removeClass("hidden");
+            //$('#BriefsListContainer').html('');
+
+            $('#ViewOptionChronologicalItem').removeClass("active");
+            $('#ViewOptionAlphabeticalItem').addClass("active");
+
+            var a = "/committees/en/SECU/StudyActivity/GetBriefs?studyActivityId=13454852&includeFilters=False&view=Alphabetically";
+            
+            $.ajax({
+                url: a,
+                type: 'GET',
+                dataType: 'html',
+                // we set cache: false because GET requests are often cached by browsers
+                // IE is particularly aggressive in that respect
+                cache: false,
+                data: {},
+                success: function displayResults(results) {
+
+                    $('#BriefsListContainerSpinner').addClass("hidden");
+                    $('#BriefsListContainer').html(results);
+
+                    if ($('#FilterSearchTextBox').val() != '')
+                        FilterBriefs($('#FilterSearchTextBox').val())
+                }
+            });
+        });
+
+</script>
+
+
+
+
+<div id="BriefsListContainerResultsMessage"></div>
+<div id="BriefsListContainer">
+    
+    
+
+
+
+
+
+<div class="brief-item">
+    <div class="name">Jahan, Ethan<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142809" title="Committee meetings attended by Jahan, Ethan as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14244477/br-external/JahanEthan-067261001040-e.pdf" title="Study brief submitted by Jahan, Ethan"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Tuesday, October 6, 2026 at 9:46 a.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">No&#235;l, Louis-Philippe<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=141047" title="Committee meetings attended by No&#235;l, Louis-Philippe as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14090013/br-external/NoelLouisPhilippe-067260323014-e.pdf" title="Study brief submitted by No&#235;l, Louis-Philippe"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Friday, August 7, 2026 at 12:20 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Pilon, Elizabeth<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142746" title="Committee meetings attended by Pilon, Elizabeth as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14221252/br-external/PilonElizabeth-e.pdf" title="Study brief submitted by Pilon, Elizabeth"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Tuesday, July 28, 2026 at 4:06 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Canadian Life and Health Insurance Association<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=3331" title="Committee meetings attended by Canadian Life and Health Insurance Association as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14210568/br-external/CanadianLifeAndHealthInsuranceAssociation-e.pdf" title="Study brief submitted by Canadian Life and Health Insurance Association"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Wednesday, July 22, 2026 at 10:57 a.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Edmonton Police Commission<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=15488" title="Committee meetings attended by Edmonton Police Commission as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14220817/br-external/EdmontonPoliceCommission-e.pdf" title="Study brief submitted by Edmonton Police Commission"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Wednesday, July 22, 2026 at 10:48 a.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Pecchia, Nancy Marie<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142707" title="Committee meetings attended by Pecchia, Nancy Marie as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14210388/br-external/PecchiaNancyMarie-e.pdf" title="Study brief submitted by Pecchia, Nancy Marie"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, June 25, 2026 at 2:08 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Simon-Aaron, Charles<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142703" title="Committee meetings attended by Simon-Aaron, Charles as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14206473/br-external/SimonAaronCharles-e.pdf" title="Study brief submitted by Simon-Aaron, Charles"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Tuesday, June 23, 2026 at 12:15 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Sharesaw, Remy<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142196" title="Committee meetings attended by Sharesaw, Remy as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14196903/br-external/SharesawRemy-e.pdf" title="Study brief submitted by Sharesaw, Remy"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Wednesday, June 17, 2026 at 1:59 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="joint">Briefs submitted jointly by:</div>
+    <ul>
+    <li class="joint-name">Canadian Civil Liberties Association<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=1552" title="Committee meetings attended by Canadian Civil Liberties Association as an individual"><i class="hoc-icon icon-calendar"></i></a>
+      <div class="appeared">Appeared:
+               <span>Tuesday, May 26, 2026<a class="witness-testimony-link" href="/committees/en/Redirects/EvidenceForWitness?ParliamentNumber=45&amp;SessionNumber=1&amp;CommitteeAcronym=SECU&amp;IsJointCommittee=False&amp;MeetingNumber=38&amp;evidencePublicationId=14129354&amp;organizationId=1552" title="Transcript of testimony for Canadian Civil Liberties Association"><i class="hoc-icon icon-microphone"></i></a> </span>
+      </div>
+    </li>
+    <li class="joint-name">Citizen Lab<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=23846" title="Committee meetings attended by Citizen Lab as an individual"><i class="hoc-icon icon-calendar"></i></a>
+    </li>
+    </ul>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148882/br-external/Jointly01-e.pdf" title="Jointly submitted study brief pdf document"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Monday, June 15, 2026 at 2:37 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Samuelson-Glushko Canadian Internet Policy and Public Interest Clinic<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=16669" title="Committee meetings attended by Samuelson-Glushko Canadian Internet Policy and Public Interest Clinic as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148910/br-external/SamuelsonGlushkoCanadianInternetPolicyAndPublicInterestClinic-e.pdf" title="Study brief submitted by Samuelson-Glushko Canadian Internet Policy and Public Interest Clinic"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Monday, June 15, 2026 at 1:02 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Chayn<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=44751" title="Committee meetings attended by Chayn as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14185668/br-external/Chayn-e.pdf" title="Study brief submitted by Chayn"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Monday, June 15, 2026 at 1:02 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Peitsch, Bobbi<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142570" title="Committee meetings attended by Peitsch, Bobbi as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14151711/br-external/PeitschBobbi-e.pdf" title="Study brief submitted by Peitsch, Bobbi"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Monday, June 15, 2026 at 1:02 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Technation Canada<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=25423" title="Committee meetings attended by Technation Canada as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14147724/br-external/TechnicationCanada-e.pdf" title="Study brief submitted by Technation Canada"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Friday, June 12, 2026 at 4:17 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">International Civil Liberties Monitoring Group<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=3583" title="Committee meetings attended by International Civil Liberties Monitoring Group as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121999/br-external/InternationalCivilLibertiesMonitoringGroup-e.pdf" title="Study brief submitted by International Civil Liberties Monitoring Group"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Friday, June 12, 2026 at 4:17 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Canadian Association of Journalists<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=14371" title="Committee meetings attended by Canadian Association of Journalists as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148860/br-external/CanadianAssociationOfJournalists-e.pdf" title="Study brief submitted by Canadian Association of Journalists"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Friday, June 12, 2026 at 12:30 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">British Columbia Civil Liberties Association<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=555" title="Committee meetings attended by British Columbia Civil Liberties Association as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14147711/br-external/BritishColumbiaCivilLibertiesAssociation-e.pdf" title="Study brief submitted by British Columbia Civil Liberties Association"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Friday, June 12, 2026 at 12:30 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">BC Coalition of Experiential Communities<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=22928" title="Committee meetings attended by BC Coalition of Experiential Communities as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148872/br-external/BCCoalitionOfExperientialCommunities-e.pdf" title="Study brief submitted by BC Coalition of Experiential Communities"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Friday, June 12, 2026 at 12:30 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">de Miranda, Armando L. I.<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=141015" title="Committee meetings attended by de Miranda, Armando L. I. as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148902/br-external/DeMirandaArmandoLI-e.pdf" title="Study brief submitted by de Miranda, Armando L. I."><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Friday, June 12, 2026 at 12:30 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Canadian Muslim Public Affairs Council<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=28824" title="Committee meetings attended by Canadian Muslim Public Affairs Council as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+      <div class="appeared">Appeared:
+            <span>Tuesday, June 2, 2026</span>                        <a class="witness-testimony-link" href="/committees/en/Redirects/EvidenceForWitness?ParliamentNumber=45&amp;SessionNumber=1&amp;CommitteeAcronym=SECU&amp;IsJointCommittee=False&amp;MeetingNumber=40&amp;evidencePublicationId=14153434&amp;organizationId=28824" title="Transcript of testimony for Canadian Muslim Public Affairs Council"><i class="hoc-icon icon-microphone"></i></a>
+      </div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14133318/br-external/CanadianMuslimPublicAffairsCouncil-e.pdf" title="Study brief submitted by Canadian Muslim Public Affairs Council"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, June 11, 2026 at 3:59 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Fowler, Gordon<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142559" title="Committee meetings attended by Fowler, Gordon as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148868/br-external/FowlerGordon-e.pdf" title="Study brief submitted by Fowler, Gordon"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, June 11, 2026 at 3:59 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">&#201;thier, Marie-&#200;ve<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142621" title="Committee meetings attended by &#201;thier, Marie-&#200;ve as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14166565/br-external/EhtierMarieEve-067260609020-e.pdf" title="Study brief submitted by &#201;thier, Marie-&#200;ve"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, June 11, 2026 at 1:12 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Association for Competitive Technology<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=44705" title="Committee meetings attended by Association for Competitive Technology as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14153345/br-external/AssociationForCompetitiveTechnology-e.pdf" title="Study brief submitted by Association for Competitive Technology"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, June 11, 2026 at 12:14 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">National Security and Intelligence Review Agency<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=44193" title="Committee meetings attended by National Security and Intelligence Review Agency as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+      <div class="appeared">Appeared:
+            <span>Thursday, May 7, 2026</span>                        <a class="witness-testimony-link" href="/committees/en/Redirects/EvidenceForWitness?ParliamentNumber=45&amp;SessionNumber=1&amp;CommitteeAcronym=SECU&amp;IsJointCommittee=False&amp;MeetingNumber=37&amp;evidencePublicationId=14097834&amp;organizationId=44193" title="Transcript of testimony for National Security and Intelligence Review Agency"><i class="hoc-icon icon-microphone"></i></a>
+      </div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14092168/br-external/NationalSecurityAndIntelligenceReviewAgency-e.pdf" title="Study brief submitted by National Security and Intelligence Review Agency"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, June 11, 2026 at 10:35 a.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Offices of the Information and Privacy Commissioners of Canada<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=21569" title="Committee meetings attended by Offices of the Information and Privacy Commissioners of Canada as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+      <div class="appeared">Appeared:
+            <span>Tuesday, May 26, 2026</span>                        <a class="witness-testimony-link" href="/committees/en/Redirects/EvidenceForWitness?ParliamentNumber=45&amp;SessionNumber=1&amp;CommitteeAcronym=SECU&amp;IsJointCommittee=False&amp;MeetingNumber=38&amp;evidencePublicationId=14129354&amp;organizationId=21569" title="Transcript of testimony for Offices of the Information and Privacy Commissioners of Canada"><i class="hoc-icon icon-microphone"></i></a>
+      </div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14119458/br-external/OfficesOfTheInformationAndPrivacyCommissionerOfCanada-e.pdf" title="Study brief submitted by Offices of the Information and Privacy Commissioners of Canada"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, June 11, 2026 at 10:13 a.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Institute of Internal Auditors<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=2371" title="Committee meetings attended by Institute of Internal Auditors as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14151654/br-external/InstituteOfInternalAuditors-e.pdf" title="Study brief submitted by Institute of Internal Auditors"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Tuesday, June 9, 2026 at 4:25 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">The Canadian Bar Association<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=329" title="Committee meetings attended by The Canadian Bar Association as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14136914/br-external/CanadianBarAssociation-e.pdf" title="Study brief submitted by The Canadian Bar Association"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Tuesday, June 9, 2026 at 3:17 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Shane, Rowen<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142479" title="Committee meetings attended by Shane, Rowen as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134094/br-external/ShaneRowen-e.pdf" title="Study brief submitted by Shane, Rowen"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Tuesday, June 9, 2026 at 12:58 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Salesforce<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=25973" title="Committee meetings attended by Salesforce as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134942/br-external/Salesforce-e.pdf" title="Study brief submitted by Salesforce"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Tuesday, June 9, 2026 at 12:58 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Davies, Ryan<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=118118" title="Committee meetings attended by Davies, Ryan as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134945/br-external/DaviesRyan-e.pdf" title="Study brief submitted by Davies, Ryan"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Tuesday, June 9, 2026 at 12:58 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Canadian Civil Liberties Association<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=1552" title="Committee meetings attended by Canadian Civil Liberties Association as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+      <div class="appeared">Appeared:
+            <span>Tuesday, May 26, 2026</span>                        <a class="witness-testimony-link" href="/committees/en/Redirects/EvidenceForWitness?ParliamentNumber=45&amp;SessionNumber=1&amp;CommitteeAcronym=SECU&amp;IsJointCommittee=False&amp;MeetingNumber=38&amp;evidencePublicationId=14129354&amp;organizationId=1552" title="Transcript of testimony for Canadian Civil Liberties Association"><i class="hoc-icon icon-microphone"></i></a>
+      </div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14157173/br-external/CanadianCivilLibertiesAssociation-e.pdf" title="Study brief submitted by Canadian Civil Liberties Association"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Friday, June 5, 2026 at 3:23 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Ontario Child Sexual Exploitation Investigators Association<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=43997" title="Committee meetings attended by Ontario Child Sexual Exploitation Investigators Association as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+      <div class="appeared">Appeared:
+            <span>Tuesday, May 26, 2026</span>                        <a class="witness-testimony-link" href="/committees/en/Redirects/EvidenceForWitness?ParliamentNumber=45&amp;SessionNumber=1&amp;CommitteeAcronym=SECU&amp;IsJointCommittee=False&amp;MeetingNumber=38&amp;evidencePublicationId=14129354&amp;organizationId=43997" title="Transcript of testimony for Ontario Child Sexual Exploitation Investigators Association"><i class="hoc-icon icon-microphone"></i></a>
+      </div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121930/br-external/OntarioChildSexualExploitationInvestigatorsAssociation-e.pdf" title="Study brief submitted by Ontario Child Sexual Exploitation Investigators Association"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Friday, June 5, 2026 at 3:22 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Jackson, Graham<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142485" title="Committee meetings attended by Jackson, Graham as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134944/br-external/JacksonGraham-e.pdf" title="Study brief submitted by Jackson, Graham"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Friday, June 5, 2026 at 10:26 a.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Apple Inc.<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=25209" title="Committee meetings attended by Apple Inc. as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+      <div class="appeared">Appeared:
+            <span>Tuesday, May 26, 2026</span>                        <a class="witness-testimony-link" href="/committees/en/Redirects/EvidenceForWitness?ParliamentNumber=45&amp;SessionNumber=1&amp;CommitteeAcronym=SECU&amp;IsJointCommittee=False&amp;MeetingNumber=38&amp;evidencePublicationId=14129354&amp;organizationId=25209" title="Transcript of testimony for Apple Inc."><i class="hoc-icon icon-microphone"></i></a>
+      </div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14122002/br-external/AppleInc-e.pdf" title="Study brief submitted by Apple Inc."><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Friday, June 5, 2026 at 10:26 a.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Canadian American Business Council<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=14377" title="Committee meetings attended by Canadian American Business Council as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134941/br-external/CanadianAmericanBusinessCouncil-e.pdf" title="Study brief submitted by Canadian American Business Council"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Friday, June 5, 2026 at 10:26 a.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">OpenMedia<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=21650" title="Committee meetings attended by OpenMedia as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+      <div class="appeared">Appeared:
+            <span>Tuesday, June 2, 2026</span>                        <a class="witness-testimony-link" href="/committees/en/Redirects/EvidenceForWitness?ParliamentNumber=45&amp;SessionNumber=1&amp;CommitteeAcronym=SECU&amp;IsJointCommittee=False&amp;MeetingNumber=40&amp;evidencePublicationId=14153434&amp;organizationId=21650" title="Transcript of testimony for OpenMedia"><i class="hoc-icon icon-microphone"></i></a>
+      </div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14120373/br-external/OpenMedia-e.pdf" title="Study brief submitted by OpenMedia"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, June 4, 2026 at 12:51 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Berscht, Doug<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142401" title="Committee meetings attended by Berscht, Doug as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121740/br-external/BerschtDoug-e.pdf" title="Study brief submitted by Berscht, Doug"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, June 4, 2026 at 12:51 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Sanghera, Paul<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142568" title="Committee meetings attended by Sanghera, Paul as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14151303/br-external/SangheraPaul-e.pdf" title="Study brief submitted by Sanghera, Paul"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, June 4, 2026 at 12:51 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Ligue des droits et libert&#233;s<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=1568" title="Committee meetings attended by Ligue des droits et libert&#233;s as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121904/br-external/LigueDesDroitsEtLiberte-e.pdf" title="Study brief submitted by Ligue des droits et libert&#233;s"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, June 4, 2026 at 12:51 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Hakim, David<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142484" title="Committee meetings attended by Hakim, David as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134940/br-external/HakimDavid-e.pdf" title="Study brief submitted by Hakim, David"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, June 4, 2026 at 12:50 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Ferreira, Oscar<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142527" title="Committee meetings attended by Ferreira, Oscar as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14140218/br-external/FerreiraOscar-e.pdf" title="Study brief submitted by Ferreira, Oscar"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, June 4, 2026 at 12:50 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Chamber of Progress<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=44634" title="Committee meetings attended by Chamber of Progress as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134948/br-external/ChamberOfProgress-e.pdf" title="Study brief submitted by Chamber of Progress"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, June 4, 2026 at 12:50 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Bouz, Nora<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142528" title="Committee meetings attended by Bouz, Nora as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14140219/br-external/BouzNora-e.pdf" title="Study brief submitted by Bouz, Nora"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, June 4, 2026 at 12:50 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Rubin, Ken<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=52149" title="Committee meetings attended by Rubin, Ken as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14111063/br-external/RubinKen-e.pdf" title="Study brief submitted by Rubin, Ken"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Tuesday, June 2, 2026 at 10:50 a.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Santagato, Dawson<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142526" title="Committee meetings attended by Santagato, Dawson as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14139840/br-external/SantagatoDawson-e.pdf" title="Study brief submitted by Santagato, Dawson"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Tuesday, June 2, 2026 at 10:50 a.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Drury, Jason<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142395" title="Committee meetings attended by Drury, Jason as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14120428/br-external/DruryJason-e.pdf" title="Study brief submitted by Drury, Jason"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Tuesday, June 2, 2026 at 10:50 a.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Burns, Bryan Reuben<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142400" title="Committee meetings attended by Burns, Bryan Reuben as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121632/br-external/BurnsRyanReuben-e.pdf" title="Study brief submitted by Burns, Bryan Reuben"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Tuesday, June 2, 2026 at 10:50 a.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Barnartt, Jordan<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142394" title="Committee meetings attended by Barnartt, Jordan as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14120410/br-external/BarnarttJordan-e.pdf" title="Study brief submitted by Barnartt, Jordan"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Tuesday, June 2, 2026 at 10:50 a.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Communications Security Establishment<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=3256" title="Committee meetings attended by Communications Security Establishment as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14116106/br-external/CommunicationsSecurityEstablishmentCanada-e.pdf" title="Study brief submitted by Communications Security Establishment"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Tuesday, May 26, 2026 at 11:39 a.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Google Canada<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=20596" title="Committee meetings attended by Google Canada as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14110858/br-external/Google-e.pdf" title="Study brief submitted by Google Canada"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Monday, May 25, 2026 at 9:07 a.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Barreau du Qu&#233;bec<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=328" title="Committee meetings attended by Barreau du Qu&#233;bec as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+      <div class="appeared">Appeared:
+            <span>Tuesday, May 26, 2026</span>                        <a class="witness-testimony-link" href="/committees/en/Redirects/EvidenceForWitness?ParliamentNumber=45&amp;SessionNumber=1&amp;CommitteeAcronym=SECU&amp;IsJointCommittee=False&amp;MeetingNumber=38&amp;evidencePublicationId=14129354&amp;organizationId=328" title="Transcript of testimony for Barreau du Qu&#233;bec"><i class="hoc-icon icon-microphone"></i></a>
+      </div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074861/br-external/BarreauduQuebec-067260513026-e.pdf" title="Study brief submitted by Barreau du Qu&#233;bec"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Monday, May 25, 2026 at 9:07 a.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Justice Centre for Constitutional Freedoms<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=21476" title="Committee meetings attended by Justice Centre for Constitutional Freedoms as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14096311/br-external/JusticeCentreForConstitutionalFreedoms-e.pdf" title="Study brief submitted by Justice Centre for Constitutional Freedoms"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, May 21, 2026 at 2:57 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">National Police Federation<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=21623" title="Committee meetings attended by National Police Federation as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14101085/br-external/NationalPoliceFederation-e.pdf" title="Study brief submitted by National Police Federation"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, May 21, 2026 at 2:57 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Information Technology Industry Council<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=24789" title="Committee meetings attended by Information Technology Industry Council as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14088339/br-external/InformationTechnologyIndustryCouncil-e.pdf" title="Study brief submitted by Information Technology Industry Council"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, May 21, 2026 at 2:57 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Canadian Chamber of Commerce<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=352" title="Committee meetings attended by Canadian Chamber of Commerce as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+      <div class="appeared">Appeared:
+            <span>Thursday, May 7, 2026</span>                        <a class="witness-testimony-link" href="/committees/en/Redirects/EvidenceForWitness?ParliamentNumber=45&amp;SessionNumber=1&amp;CommitteeAcronym=SECU&amp;IsJointCommittee=False&amp;MeetingNumber=37&amp;evidencePublicationId=14097834&amp;organizationId=352" title="Transcript of testimony for Canadian Chamber of Commerce"><i class="hoc-icon icon-microphone"></i></a>
+      </div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14102637/br-external/CanadianChamberOfCommerce-e.pdf" title="Study brief submitted by Canadian Chamber of Commerce"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, May 21, 2026 at 2:57 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Business Software Alliance<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=44290" title="Committee meetings attended by Business Software Alliance as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14105199/br-external/BusinessSoftwareAlliance-e.pdf" title="Study brief submitted by Business Software Alliance"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Thursday, May 21, 2026 at 2:57 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Meta Platforms Inc.<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=16524" title="Committee meetings attended by Meta Platforms Inc. as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+      <div class="appeared">Appeared:
+            <span>Thursday, May 7, 2026</span>                        <a class="witness-testimony-link" href="/committees/en/Redirects/EvidenceForWitness?ParliamentNumber=45&amp;SessionNumber=1&amp;CommitteeAcronym=SECU&amp;IsJointCommittee=False&amp;MeetingNumber=37&amp;evidencePublicationId=14097834&amp;organizationId=16524" title="Transcript of testimony for Meta Platforms Inc."><i class="hoc-icon icon-microphone"></i></a>
+      </div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14099048/br-external/MetaPlatformsInc-e.pdf" title="Study brief submitted by Meta Platforms Inc."><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Wednesday, May 13, 2026 at 4:34 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Internet Society<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=25546" title="Committee meetings attended by Internet Society as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14095567/br-external/InternetSociety-067260507035-b.pdf" title="Study brief submitted by Internet Society"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Wednesday, May 13, 2026 at 4:34 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Canadian Telecommunications Association<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?organizationId=29316" title="Committee meetings attended by Canadian Telecommunications Association as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+      <div class="appeared">Appeared:
+            <span>Tuesday, May 26, 2026</span>                        <a class="witness-testimony-link" href="/committees/en/Redirects/EvidenceForWitness?ParliamentNumber=45&amp;SessionNumber=1&amp;CommitteeAcronym=SECU&amp;IsJointCommittee=False&amp;MeetingNumber=38&amp;evidencePublicationId=14129354&amp;organizationId=29316" title="Transcript of testimony for Canadian Telecommunications Association"><i class="hoc-icon icon-microphone"></i></a>
+      </div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074834/br-external/CanadianTelecommunicationsAssociation-e.pdf" title="Study brief submitted by Canadian Telecommunications Association"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Wednesday, May 13, 2026 at 4:34 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Fei, Huajie<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142189" title="Committee meetings attended by Fei, Huajie as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14091499/br-external/FeiHuajie-e.pdf" title="Study brief submitted by Fei, Huajie"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Wednesday, May 13, 2026 at 4:34 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">Greson, Darnley<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142198" title="Committee meetings attended by Greson, Darnley as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14095838/br-external/GresonDarnley-e.pdf" title="Study brief submitted by Greson, Darnley"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Wednesday, May 13, 2026 at 4:33 p.m. (EDT)</div>
+</div>
+
+
+<div class="brief-item">
+    <div class="name">D&#39;Souza, Rhea<a class="witness-meetings-link" href="/committees/en/WitnessMeetings?personId=142192" title="Committee meetings attended by D&#39;Souza, Rhea as an individual"><i class="hoc-icon icon-calendar"></i></a></div>
+    <a class="btn btn-brief" href="//www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14092163/br-external/DSouzaRhea-e.pdf" title="Study brief submitted by D&#39;Souza, Rhea"><i class="hoc-icon icon-notepad"></i>Brief (PDF)</a>
+    
+  <div class="published">Published on: Monday, May 11, 2026 at 11:00 a.m. (EDT)</div>
+</div>
+
+</div>
