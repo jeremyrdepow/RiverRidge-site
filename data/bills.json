@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27T21:47:33.477Z",
+  "checkedAt": "2026-10-27T21:56:52.616Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -176,6 +176,7 @@
       ],
       "text": {
         "basis": "14173163",
+        "analysis": 2,
         "versions": [
           {
             "id": "14173163",
@@ -210,7 +211,7 @@
               "$5,000",
               "$10,000"
             ],
-            "text": "1) Every individual who contravenes subsection 66 (2) is guilty of an offence and is liable on summary conviction (a) for a first offence, to a fine of not more than $5,000; and (b) for a second or subsequent offence, to a fine of not more than $10,000."
+            "text": "(1) Every individual who contravenes subsection 66 (2) is guilty of an offence and is liable on summary conviction (a) for a first offence, to a fine of not more than $5,000; and (b) for a second or subsequent offence, to a fine of not more than $10,000."
           },
           {
             "ref": "2 / 88",
@@ -218,7 +219,7 @@
             "amounts": [
               "$10 million"
             ],
-            "text": "he maximum penalty for a violation is (a) the greater of $10 million and 3% of the gross global revenue, in the financial year before the one in which the penalty is imposed, of the person that is believed to have committed the violation, in the case of a person that is not an..."
+            "text": "The maximum penalty for a violation is (a) the greater of $10 million and 3% of the gross global revenue, in the financial year before the one in which the penalty is imposed, of the person that is believed to have committed the violation, in the case of a person that is not a..."
           },
           {
             "ref": "2 / 107",
@@ -235,7 +236,7 @@
             "amounts": [
               "$5 million",
               "$3 million",
-              "$50,000,"
+              "$50,000"
             ],
             "text": "(2) Every person that commits an offence under subsection (1) is liable, (a) on conviction on indictment, (i) to a fine of not more than 1.5% of the person’s gross global revenue in the financial year before the one in which the fine is imposed or $5 million, whichever is grea..."
           },
@@ -246,7 +247,7 @@
               "$5,000",
               "$10,000"
             ],
-            "text": "1) Every individual who contravenes subsection 114 (4) is guilty of an offence and is liable on summary conviction, (a) for a first offence, to a fine of not more than $5,000; and (b) for a second or subsequent offence, to a fine of not more than $10,000."
+            "text": "(1) Every individual who contravenes subsection 114 (4) is guilty of an offence and is liable on summary conviction, (a) for a first offence, to a fine of not more than $5,000; and (b) for a second or subsequent offence, to a fine of not more than $10,000."
           }
         ],
         "provisionCount": 163
@@ -481,6 +482,7 @@
       ],
       "text": {
         "basis": "13541961,14015416",
+        "analysis": 2,
         "versions": [
           {
             "id": "13541961",
@@ -554,7 +556,7 @@
               "$250,000",
               "$500,000"
             ],
-            "text": "ny organization that, for commercial purposes, makes available pornographic material on the Internet to a young person is guilty of an offence punishable on summary conviction and is liable, (a) for a first offence, to a fine of not more than $250,000; and (b) for a second or ..."
+            "text": "Any organization that, for commercial purposes, makes available pornographic material on the Internet to a young person is guilty of an offence punishable on summary conviction and is liable, (a) for a first offence, to a fine of not more than $250,000; and (b) for a second or..."
           }
         ],
         "provisionCount": 13
@@ -629,6 +631,7 @@
       ],
       "text": {
         "basis": "13571478",
+        "analysis": 2,
         "versions": [
           {
             "id": "13571478",
@@ -717,6 +720,7 @@
       ],
       "text": {
         "basis": "14081108",
+        "analysis": 2,
         "versions": [
           {
             "id": "14081108",
@@ -789,6 +793,7 @@
       ],
       "text": {
         "basis": "13726742",
+        "analysis": 2,
         "versions": [
           {
             "id": "13726742",
@@ -1682,7 +1687,8 @@
                 "Alison Irons ( by videoconference )"
               ],
               "appearing": []
-            }
+            },
+            "amendments": []
           },
           {
             "date": "2026-03-23",
@@ -1698,7 +1704,8 @@
               "appearing": [
                 "Hon. Sean Fraser, P.C., M.P., Minister of Justice and Attorney General of Canada"
               ]
-            }
+            },
+            "amendments": []
           }
         ],
         "sittings": [
@@ -2650,6 +2657,7 @@
       ],
       "text": {
         "basis": "13822994,14114151,14178528,14204951",
+        "analysis": 2,
         "versions": [
           {
             "id": "13822994",
@@ -3154,7 +3162,80 @@
               ],
               "people": [],
               "appearing": []
-            }
+            },
+            "study": "13154115",
+            "amendments": [
+              {
+                "mover": "Patricia Lattanzio",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Andrew Lawton",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Roman Baber",
+                "party": "Conservative",
+                "result": "adopted"
+              },
+              {
+                "mover": "Larry Brock",
+                "party": "",
+                "result": "defeated"
+              },
+              {
+                "mover": "Andrew Lawton",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Andrew Lawton",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Larry Brock",
+                "party": "",
+                "result": "defeated"
+              },
+              {
+                "mover": "Amarjeet Gill",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Andrew Lawton",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Roman Baber",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Roman Baber",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Roman Baber",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Roman Baber",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Roman Baber",
+                "party": "Conservative",
+                "result": "defeated"
+              }
+            ]
           },
           {
             "date": "2026-02-25",
@@ -3168,7 +3249,8 @@
               ],
               "people": [],
               "appearing": []
-            }
+            },
+            "amendments": []
           },
           {
             "date": "2026-02-23",
@@ -3182,42 +3264,142 @@
               ],
               "people": [],
               "appearing": []
-            }
+            },
+            "amendments": []
           },
           {
             "date": "2025-12-09",
             "chamber": "House",
             "committee": "JUST",
             "number": "14",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-14/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-14/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Justice"
+              ],
+              "people": [],
+              "appearing": []
+            },
+            "study": "13154115",
+            "amendments": [
+              {
+                "mover": "Anthony Housefather",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Andrew Lawton",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Larry Brock",
+                "party": "",
+                "result": "defeated"
+              },
+              {
+                "mover": "Roman Baber",
+                "party": "Conservative",
+                "result": "adopted"
+              },
+              {
+                "mover": "Andrew Lawton",
+                "party": "Conservative",
+                "result": "adopted"
+              }
+            ]
           },
           {
             "date": "2025-11-27",
             "chamber": "House",
             "committee": "JUST",
             "number": "13",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-13/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-13/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Justice"
+              ],
+              "people": [],
+              "appearing": []
+            },
+            "study": "13154115",
+            "amendments": [
+              {
+                "mover": "Lori Idlout",
+                "party": "Liberal",
+                "result": "defeated"
+              }
+            ]
           },
           {
             "date": "2025-11-06",
             "chamber": "House",
             "committee": "JUST",
             "number": "12",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-12/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-12/notice",
+            "witnesses": {
+              "orgs": [
+                "African Nova Scotian Justice Institute",
+                "Canadian Constitution Foundation",
+                "Ligue des droits et libertés",
+                "The Canadian Bar Association",
+                "Canadian Association of Chiefs of Police",
+                "Hindu Canadian Foundation",
+                "The Democracy Fund"
+              ],
+              "people": [
+                "Brian Doody, Lawyer"
+              ],
+              "appearing": []
+            },
+            "study": "13154115",
+            "amendments": []
           },
           {
             "date": "2025-10-30",
             "chamber": "House",
             "committee": "JUST",
             "number": "11",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-11/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-11/notice",
+            "witnesses": {
+              "orgs": [
+                "Christian Legal Fellowship",
+                "Edmonton Police Service",
+                "International Civil Liberties Monitoring Group",
+                "Association for Reformed Political Action Canada",
+                "Barreau du Québec",
+                "Canadian Hindus for Harmony",
+                "Centre for Israel and Jewish Affairs"
+              ],
+              "people": [],
+              "appearing": []
+            },
+            "study": "13154115",
+            "amendments": []
           },
           {
             "date": "2025-10-23",
             "chamber": "House",
             "committee": "JUST",
             "number": "9",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-9/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-9/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Civil Liberties Association",
+                "National Council of Canadian Muslims",
+                "Canadian Teachers Federation",
+                "Network of Engaged Canadian Academics",
+                "Raoul Wallenberg Centre for Human Rights"
+              ],
+              "people": [
+                "Ryan Alford, Professor ( by videoconference )",
+                "Bruce Pardy, Professor of Law, Queen's University ( by videoconference )",
+                "Mark Sandler, Chair, Alliance of Canadians Combatting Antisemitism"
+              ],
+              "appearing": []
+            },
+            "study": "13154115",
+            "amendments": []
           },
           {
             "date": "2025-10-09",
@@ -3447,6 +3629,7 @@
       ],
       "text": {
         "basis": "13596722,13970506,13991052,14207886",
+        "analysis": 2,
         "versions": [
           {
             "id": "13596722",
@@ -3542,7 +3725,548 @@
         ],
         "penalties": [],
         "provisionCount": 12
-      }
+      },
+      "studies": [
+        {
+          "chamber": "House",
+          "committee": "JUST",
+          "id": "13154115",
+          "url": "https://www.ourcommons.ca/Committees/en/JUST/StudyActivity?studyActivityId=13154115",
+          "briefs": [
+            {
+              "name": "Fleming, Debbie",
+              "individual": true,
+              "date": "2026-03-19",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13969767/br-external/FlemingDebbie-e.pdf"
+            },
+            {
+              "name": "1, Anonymous Author - Auteur anonyme",
+              "individual": true,
+              "date": "2026-03-12",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13964377/br-external/AnonymousAuthor-e.pdf"
+            },
+            {
+              "name": "Hildebrandt, Andrew",
+              "individual": true,
+              "date": "2026-03-02",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13943587/br-external/HildebrandtAndrew-e.pdf"
+            },
+            {
+              "name": "Canadian Muslim Forum",
+              "individual": false,
+              "date": "2026-02-20",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13922576/br-external/CanadianMuslimForum-e.pdf"
+            },
+            {
+              "name": "Canadian Association for Free Expression Inc.",
+              "individual": false,
+              "date": "2026-02-11",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13903178/br-external/CanadianAssociationForFreeExpressionInc-e.pdf"
+            },
+            {
+              "name": "Unidos Por Canada",
+              "individual": false,
+              "date": "2026-02-09",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13866636/br-external/UnidosPorCanada-e.pdf"
+            },
+            {
+              "name": "Fuerza Latina",
+              "individual": false,
+              "date": "2026-02-04",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13858707/br-external/FuerzaLatina-e.pdf"
+            },
+            {
+              "name": "Nowakowska, B.",
+              "individual": true,
+              "date": "2026-02-02",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13866627/br-external/NowakowskaB-e.pdf"
+            },
+            {
+              "name": "Black Manitobans Chamber of Commerce",
+              "individual": false,
+              "date": "2026-02-02",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13866608/br-external/BlackManitobansChamberOfCommerce-e.pdf"
+            },
+            {
+              "name": "Canadian Women Against Antisemitism",
+              "individual": false,
+              "date": "2026-01-29",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13741532/br-external/CanadianWomenAgainstAntisemitism-e.pdf"
+            },
+            {
+              "name": "Canadian Organization for Hindu Heritage Education",
+              "individual": false,
+              "date": "2026-01-09",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13854634/br-external/CanadianOrganizationForHinduHeritageEducation-e.pdf"
+            },
+            {
+              "name": "Noël, Louis-Philippe",
+              "individual": true,
+              "date": "2026-01-09",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13854633/br-external/NoelLouisPhilippe-e.pdf"
+            },
+            {
+              "name": "de Miranda, Armando L. I.",
+              "individual": true,
+              "date": "2026-01-09",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13854632/br-external/deMirandaArmandoLI-e.pdf"
+            },
+            {
+              "name": "Friends of Simon Wiesenthal Center for Holocaust Studies",
+              "individual": false,
+              "date": "2026-01-09",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13854631/br-external/FriendsOfSimonWiesenthalcenter-e.pdf"
+            },
+            {
+              "name": "Sandler, Mark",
+              "individual": true,
+              "date": "2025-12-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13670357/br-external/SandlerMark-067-251014-013-Combined-e.pdf"
+            },
+            {
+              "name": "Ignatowicz, Matthew",
+              "individual": true,
+              "date": "2025-12-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13842316/br-external/IgnatowiczMatthew-e.pdf"
+            },
+            {
+              "name": "Coalition of Hindus of North America",
+              "individual": false,
+              "date": "2025-12-12",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13803072/br-external/CoalitionOfHindusOfNorthAmerica-e.pdf"
+            },
+            {
+              "name": "Canadian Hindu Alliance",
+              "individual": false,
+              "date": "2025-12-12",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13803030/br-external/CanadianHinduAlliance-e.pdf"
+            },
+            {
+              "name": "Al-Khatib, Zachary",
+              "individual": true,
+              "date": "2025-12-11",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13816722/br-external/AlKhatibZachary-e.pdf"
+            },
+            {
+              "name": "Wong, Rita",
+              "individual": true,
+              "date": "2025-12-08",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13787639/br-external/WongRita-e.pdf"
+            },
+            {
+              "name": "B'nai Brith Canada",
+              "individual": false,
+              "date": "2025-12-05",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13785209/br-external/BNaiBrithCanada-e.pdf"
+            },
+            {
+              "name": "Evangelical Fellowship of Canada",
+              "individual": false,
+              "date": "2025-12-05",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779916/br-external/EvangelicalFellowshipOfCanada-e.pdf"
+            },
+            {
+              "name": "Canadian Centre for Christian Charities",
+              "individual": false,
+              "date": "2025-12-04",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779785/br-external/CanadianCentreForChristianCharities-e.pdf"
+            },
+            {
+              "name": "Canadian Association of Chiefs of Police",
+              "individual": false,
+              "date": "2025-11-27",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13754584/br-external/CanadianAssociationOfChiefsOfPolice-e.pdf"
+            },
+            {
+              "name": "Hindu Federation",
+              "individual": false,
+              "date": "2025-11-27",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779249/br-external/HinduFederation-e.pdf"
+            },
+            {
+              "name": "Justice Centre for Constitutional Freedoms",
+              "individual": false,
+              "date": "2025-11-27",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779267/br-external/JusticeCentre-e.pdf"
+            },
+            {
+              "name": "Secure Canada",
+              "individual": false,
+              "date": "2025-11-27",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779281/br-external/SecureCanada-e.pdf"
+            },
+            {
+              "name": "Hindu Canadian Foundation",
+              "individual": false,
+              "date": "2025-11-27",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779319/br-external/HinduCanadianFoundation-e.pdf"
+            },
+            {
+              "name": "Kwilmu’kw Maw-klusuaqn Negotiation Office",
+              "individual": false,
+              "date": "2025-11-27",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779460/br-external/KwilmukwMawklusuaqn-e.pdf"
+            },
+            {
+              "name": "International Civil Liberties Monitoring Group",
+              "individual": false,
+              "date": "2025-11-27",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779479/br-external/InternationalCivilLibertiesMonitoringGroup-Combined-e.pdf"
+            },
+            {
+              "name": "Coalition for Charter Rights and Freedoms",
+              "individual": false,
+              "date": "2025-11-27",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779546/br-external/CoalitionForCharterRightsAndFreedoms-e.pdf"
+            },
+            {
+              "name": "Ligue des droits et libertés",
+              "individual": false,
+              "date": "2025-11-20",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13761256/br-external/LigueDesDroitsEtLibertes-067-251105-029-e.pdf"
+            },
+            {
+              "name": "Canadian Race Relations Foundation",
+              "individual": false,
+              "date": "2025-11-20",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13751366/br-external/CanadianRaceRelationsFoundation-e.pdf"
+            },
+            {
+              "name": "British Columbia Humanist Association",
+              "individual": false,
+              "date": "2025-11-20",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13758075/br-external/BritishColumbiaHumanistAssociation-e.pdf"
+            },
+            {
+              "name": "The Canadian Bar Association",
+              "individual": false,
+              "date": "2025-11-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13727203/br-external/CanadianBarAssociation-067-251103-039-e.pdf"
+            },
+            {
+              "name": "Barreau du Québec",
+              "individual": false,
+              "date": "2025-11-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13741743/br-external/BarreauDuQuebec-067-251029-018-e.pdf"
+            },
+            {
+              "name": "Canadian Constitution Foundation",
+              "individual": false,
+              "date": "2025-11-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13747401/br-external/CanadianConstitutionFoundation-e.pdf"
+            },
+            {
+              "name": "The Global Imams Council",
+              "individual": false,
+              "date": "2025-11-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13741739/br-external/TheGlobalImamsCouncil-e.pdf"
+            },
+            {
+              "name": "Rassemblement pour la laïcité",
+              "individual": false,
+              "date": "2025-11-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13746585/br-external/RassemblementPourLaLaicite-067251103038-e.pdf"
+            },
+            {
+              "name": "Centre for Israel and Jewish Affairs",
+              "individual": false,
+              "date": "2025-11-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13741741/br-external/CentreForIsraelAndJewishAffairs-e.pdf"
+            },
+            {
+              "name": "The Democracy Fund",
+              "individual": false,
+              "date": "2025-11-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13741740/br-external/TheDemocracyFund-e.pdf"
+            },
+            {
+              "name": "LGB Alliance Canada",
+              "individual": false,
+              "date": "2025-11-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13741759/br-external/LGBAllianceCanada-e.pdf"
+            },
+            {
+              "name": "Free Speech Union of Canada",
+              "individual": false,
+              "date": "2025-11-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13741548/br-external/FreeSpeechUnionOfCanada-e.pdf"
+            },
+            {
+              "name": "Christian Legal Fellowship",
+              "individual": false,
+              "date": "2025-11-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13741738/br-external/ChristianLegalFellowship-e.pdf"
+            },
+            {
+              "name": "Anishinabek Nation",
+              "individual": false,
+              "date": "2025-11-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13741547/br-external/AnishinabekNation-e.pdf"
+            },
+            {
+              "name": "Girard, Marie-Claude",
+              "individual": true,
+              "date": "2025-11-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13741530/br-external/GirardMarieClaude-067-251103-003-e.pdf"
+            },
+            {
+              "name": "Egale Canada",
+              "individual": false,
+              "date": "2025-11-10",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13737235/br-external/EgaleCanada-e.pdf"
+            },
+            {
+              "name": "Association for Reformed Political Action Canada",
+              "individual": false,
+              "date": "2025-11-10",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13737220/br-external/AssociationForReformedPoliticalAction-e.pdf"
+            },
+            {
+              "name": "Allied Voices for Israel",
+              "individual": false,
+              "date": "2025-11-10",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13737241/br-external/AlliedVoicesForIsrael-e.pdf"
+            },
+            {
+              "name": "Office of the Federal Ombudsperson for Victims of Crime",
+              "individual": false,
+              "date": "2025-11-10",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13736824/br-external/OfficeOfTheFederalOmbudspersonForVictimsOfCrime-e.pdf"
+            },
+            {
+              "name": "Canadian Hindus for Harmony",
+              "individual": false,
+              "date": "2025-11-04",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13722716/br-external/CanadianHindusForHarmony-e.pdf"
+            },
+            {
+              "name": "Canadian Jewish Law Association",
+              "individual": false,
+              "date": "2025-11-03",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13717661/br-external/CanadianJewishLawAssociation-e.pdf"
+            },
+            {
+              "name": "Canadian Civil Liberties Association",
+              "individual": false,
+              "date": "2025-10-28",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13696025/br-external/CanadianCivilLibertiesAssociation-e.pdf"
+            },
+            {
+              "name": "Canadian Antisemitism Education Foundation",
+              "individual": false,
+              "date": "2025-10-28",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13696292/br-external/CanadianAntisemitismEducationFoundation-e.pdf"
+            },
+            {
+              "name": "Doody, Brian",
+              "individual": true,
+              "date": "2025-10-14",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13650561/br-external/DoodyBrian-e.pdf"
+            },
+            {
+              "name": "Miller, Christian Jesus Jonathan Jacob",
+              "individual": true,
+              "date": "2025-10-14",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13650568/br-external/MillerChristian-e.pdf"
+            },
+            {
+              "name": "Yu, Andrew",
+              "individual": true,
+              "date": "2025-10-14",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13650569/br-external/YuAndrew-e.pdf"
+            },
+            {
+              "name": "Canadian Muslim Lawyers Association",
+              "individual": false,
+              "date": "2025-10-14",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13650555/br-external/CanadianMuslimLawyersAssociation-e.pdf"
+            }
+          ],
+          "witnesses": [
+            {
+              "name": "Department of Justice",
+              "people": [
+                "Joanna Wells",
+                "Kristen Ali",
+                "Marianne Breese",
+                "Chantele Ramcharan",
+                "Owen Ripley",
+                "Shalene Curtis-Micallef"
+              ],
+              "meetings": [
+                "20",
+                "19",
+                "18",
+                "14",
+                "13",
+                "7"
+              ]
+            },
+            {
+              "name": "The Canadian Bar Association",
+              "people": [
+                "Kyla Lee"
+              ],
+              "meetings": [
+                "12"
+              ]
+            },
+            {
+              "name": "Ligue des droits et libertés",
+              "people": [
+                "Lucia Flores Echaiz",
+                "Lynda Khelil"
+              ],
+              "meetings": [
+                "12"
+              ]
+            },
+            {
+              "name": "Canadian Constitution Foundation",
+              "people": [
+                "Christine Van Geyn"
+              ],
+              "meetings": [
+                "12"
+              ]
+            },
+            {
+              "name": "African Nova Scotian Justice Institute",
+              "people": [
+                "DeRico Symonds"
+              ],
+              "meetings": [
+                "12"
+              ]
+            },
+            {
+              "name": "Barreau du Québec",
+              "people": [
+                "Eva Sikora",
+                "Marcel-Olivier Nadeau",
+                "Nicholas St-Jacques"
+              ],
+              "meetings": [
+                "11"
+              ]
+            },
+            {
+              "name": "Centre for Israel and Jewish Affairs",
+              "people": [
+                "Noah Shack"
+              ],
+              "meetings": [
+                "11"
+              ]
+            },
+            {
+              "name": "International Civil Liberties Monitoring Group",
+              "people": [
+                "Timothy McSorley"
+              ],
+              "meetings": [
+                "11"
+              ]
+            },
+            {
+              "name": "Association for Reformed Political Action Canada",
+              "people": [
+                "John Sikkema"
+              ],
+              "meetings": [
+                "11"
+              ]
+            },
+            {
+              "name": "Christian Legal Fellowship",
+              "people": [
+                "Derek Ross"
+              ],
+              "meetings": [
+                "11"
+              ]
+            },
+            {
+              "name": "Edmonton Police Service",
+              "people": [
+                "Nicole Chapdelaine"
+              ],
+              "meetings": [
+                "11"
+              ]
+            },
+            {
+              "name": "Canadian Hindus for Harmony",
+              "people": [
+                "Vijaykumar Jain"
+              ],
+              "meetings": [
+                "11"
+              ]
+            },
+            {
+              "name": "As an individual",
+              "people": [
+                "Bruce Pardy",
+                "Mark Sandler",
+                "Ryan Alford",
+                "Hon. Sean Fraser"
+              ],
+              "meetings": [
+                "9",
+                "7"
+              ]
+            },
+            {
+              "name": "Canadian Civil Liberties Association",
+              "people": [
+                "Anaïs Bussières McNicoll"
+              ],
+              "meetings": [
+                "9"
+              ]
+            },
+            {
+              "name": "National Council of Canadian Muslims",
+              "people": [
+                "Nusaiba Al Azem"
+              ],
+              "meetings": [
+                "9"
+              ]
+            },
+            {
+              "name": "Raoul Wallenberg Centre for Human Rights",
+              "people": [
+                "Brandon Silver"
+              ],
+              "meetings": [
+                "9"
+              ]
+            },
+            {
+              "name": "Network of Engaged Canadian Academics",
+              "people": [
+                "Cary Kogan",
+                "Deidre Butler"
+              ],
+              "meetings": [
+                "9"
+              ]
+            },
+            {
+              "name": "Canadian Teachers Federation",
+              "people": [
+                "Cassandra Hallett"
+              ],
+              "meetings": [
+                "9"
+              ]
+            }
+          ],
+          "checked": "2026-10-27"
+        }
+      ]
     },
     {
       "number": "C-36",
@@ -3635,6 +4359,7 @@
       ],
       "text": {
         "basis": "14188050",
+        "analysis": 2,
         "versions": [
           {
             "id": "14188050",
@@ -3663,7 +4388,7 @@
             "amounts": [
               "$10,000,000"
             ],
-            "text": "he maximum penalty for all of the contraventions found to have been committed by an organization following the completion of proceedings in relation to any one investigation is the greater of $10,000,000 and 3% of the organization’s gross global revenue in its financial year b..."
+            "text": "The maximum penalty for all of the contraventions found to have been committed by an organization following the completion of proceedings in relation to any one investigation is the greater of $10,000,000 and 3% of the organization’s gross global revenue in its financial year ..."
           },
           {
             "ref": "1 / 145",
@@ -3672,7 +4397,7 @@
               "$25,000,000",
               "$20,000,000"
             ],
-            "text": "very organization that knowingly contravenes section 58, subsection 60 (1), section 69 or 75 or subsection 144 (1) or an order made under subsection 110 (1), that obstructs the Commissioner or the Commissioner’s delegate in the investigation of a complaint or in carrying out a..."
+            "text": "Every organization that knowingly contravenes section 58, subsection 60 (1), section 69 or 75 or subsection 144 (1) or an order made under subsection 110 (1), that obstructs the Commissioner or the Commissioner’s delegate in the investigation of a complaint or in carrying out ..."
           }
         ],
         "provisionCount": 200
@@ -3856,6 +4581,7 @@
       ],
       "text": {
         "basis": "13881241,14118482",
+        "analysis": 2,
         "versions": [
           {
             "id": "13881241",
@@ -3981,7 +4707,100 @@
               ],
               "people": [],
               "appearing": []
-            }
+            },
+            "study": "13156377",
+            "amendments": [
+              {
+                "mover": "Dane Lloyd",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Dane Lloyd",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Dane Lloyd",
+                "party": "Conservative",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jacques Ramsay",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Dane Lloyd",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jacques Ramsay",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jacques Ramsay",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Dane Lloyd",
+                "party": "Conservative",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jacques Ramsay",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jenny Kwan",
+                "party": "NDP",
+                "result": "defeated"
+              },
+              {
+                "mover": "Dane Lloyd",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Dane Lloyd",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jacques Ramsay",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Dane Lloyd",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jacques Ramsay",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Claude DeBellefeuille",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jacques Ramsay",
+                "party": "Liberal",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jacques Ramsay",
+                "party": "Liberal",
+                "result": "adopted"
+              }
+            ]
           },
           {
             "date": "2026-02-24",
@@ -3997,7 +4816,39 @@
               ],
               "people": [],
               "appearing": []
-            }
+            },
+            "amendments": [
+              {
+                "mover": "Claude DeBellefeuille",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Claude DeBellefeuille",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Elizabeth May",
+                "party": "Green Party",
+                "result": "defeated"
+              },
+              {
+                "mover": "Dane Lloyd",
+                "party": "Conservative",
+                "result": "defeated"
+              }
+            ]
           },
           {
             "date": "2026-02-10",
@@ -4013,56 +4864,340 @@
               ],
               "people": [],
               "appearing": []
-            }
+            },
+            "amendments": [
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jenny Kwan",
+                "party": "NDP",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jenny Kwan",
+                "party": "NDP",
+                "result": "defeated"
+              },
+              {
+                "mover": "Claude DeBellefeuille",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Elizabeth May",
+                "party": "Green Party",
+                "result": "defeated"
+              },
+              {
+                "mover": "Claude DeBellefeuille",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jenny Kwan",
+                "party": "NDP",
+                "result": "adopted"
+              },
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jenny Kwan",
+                "party": "NDP",
+                "result": "adopted"
+              },
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Elizabeth May",
+                "party": "Green Party",
+                "result": "defeated"
+              },
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jenny Kwan",
+                "party": "NDP",
+                "result": "defeated"
+              },
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jenny Kwan",
+                "party": "NDP",
+                "result": "defeated"
+              },
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Elizabeth May",
+                "party": "Green Party",
+                "result": "defeated"
+              }
+            ]
           },
           {
             "date": "2026-02-05",
             "chamber": "House",
             "committee": "SECU",
             "number": "22",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-22/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-22/notice",
+            "witnesses": {
+              "orgs": [
+                "Communications Security Establishment",
+                "Department of Industry",
+                "Department of Public Safety and Emergency Preparedness"
+              ],
+              "people": [],
+              "appearing": []
+            },
+            "study": "13156377",
+            "amendments": [
+              {
+                "mover": "Claude DeBellefeuille",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jenny Kwan",
+                "party": "NDP",
+                "result": "defeated"
+              },
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jacques Ramsay",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Claude DeBellefeuille",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jenny Kwan",
+                "party": "NDP",
+                "result": "defeated"
+              },
+              {
+                "mover": "Claude DeBellefeuille",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jenny Kwan",
+                "party": "NDP",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jacques Ramsay",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Elizabeth May",
+                "party": "Green Party",
+                "result": "defeated"
+              },
+              {
+                "mover": "Elizabeth May",
+                "party": "Green Party",
+                "result": "defeated"
+              },
+              {
+                "mover": "Elizabeth May",
+                "party": "Green Party",
+                "result": "defeated"
+              },
+              {
+                "mover": "Elizabeth May",
+                "party": "Green Party",
+                "result": "defeated"
+              },
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jacques Ramsay",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "adopted"
+              }
+            ]
           },
           {
             "date": "2026-02-03",
             "chamber": "House",
             "committee": "SECU",
             "number": "21",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-21/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-21/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Industry",
+                "Department of Public Safety and Emergency Preparedness"
+              ],
+              "people": [],
+              "appearing": []
+            },
+            "study": "13156377",
+            "amendments": [
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "adopted"
+              },
+              {
+                "mover": "Frank Caputo",
+                "party": "Conservative",
+                "result": "defeated"
+              }
+            ]
           },
           {
             "date": "2026-01-27",
             "chamber": "House",
             "committee": "SECU",
             "number": "20",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-20/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-20/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Industry"
+              ],
+              "people": [],
+              "appearing": [
+                "Hon. Mélanie Joly, P.C., M.P., Minister of Industry"
+              ]
+            },
+            "study": "13156377",
+            "amendments": []
           },
           {
             "date": "2025-12-04",
             "chamber": "House",
             "committee": "SECU",
             "number": "18",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-18/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-18/notice",
+            "witnesses": {
+              "orgs": [
+                "BlackBerry",
+                "OpenMedia",
+                "Bruce Power",
+                "Electricity Canada"
+              ],
+              "people": [
+                "Kate Robertson, Senior Research Associate, Citizen Lab, University of Toronto ( by videoconference )"
+              ],
+              "appearing": []
+            },
+            "study": "13156377",
+            "amendments": []
           },
           {
             "date": "2025-11-06",
             "chamber": "House",
             "committee": "SECU",
             "number": "12",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-12/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-12/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Industry",
+                "Department of Public Safety and Emergency Preparedness"
+              ],
+              "people": [],
+              "appearing": [
+                "Hon. Gary Anandasangaree, P.C., M.P., Minister of Public Safety"
+              ]
+            },
+            "study": "13156377",
+            "amendments": []
           },
           {
             "date": "2025-10-30",
             "chamber": "House",
             "committee": "SECU",
             "number": "10",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-10/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-10/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Cyber Threat Exchange",
+                "ISC2, Inc.",
+                "Office of the Intelligence Commissioner",
+                "Offices of the Information and Privacy Commissioners of Canada",
+                "Canadian Constitution Foundation",
+                "Centre for International Governance Innovation",
+                "Crypto Québec",
+                "Privacy and Access Council of Canada"
+              ],
+              "people": [],
+              "appearing": []
+            },
+            "study": "13156377",
+            "amendments": []
           },
           {
             "date": "2025-10-28",
             "chamber": "House",
             "committee": "SECU",
             "number": "9",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-9/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/SECU/meeting-9/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Industry",
+                "Department of Public Safety and Emergency Preparedness",
+                "Communications Security Establishment"
+              ],
+              "people": [],
+              "appearing": []
+            },
+            "study": "13156377",
+            "amendments": []
           }
         ],
         "sittings": [
@@ -4220,6 +5355,7 @@
       ],
       "text": {
         "basis": "13569583,13961698,13995712,14196001",
+        "analysis": 2,
         "versions": [
           {
             "id": "13569583",
@@ -4441,20 +5577,352 @@
               "$10,000,000",
               "$15,000,000"
             ],
-            "text": "very contravention of a provision of an order made under section 15.1 or 15.2 or a regulation made under paragraph 15.8 (1)(a) constitutes a violation and the person who commits the violation is liable to an administrative monetary penalty of an amount (a) in the case of an in..."
+            "text": "Every contravention of a provision of an order made under section 15.1 or 15.2 or a regulation made under paragraph 15.8 (1)(a) constitutes a violation and the person who commits the violation is liable to an administrative monetary penalty of an amount (a) in the case of an i..."
           },
           {
             "ref": "11 / 91",
             "note": "Penalty",
             "amounts": [
-              "$500,000,",
-              "$15,000,000,"
+              "$500,000",
+              "$15,000,000"
             ],
-            "text": "he amount that may be fixed under any regulations made under paragraph 135 (1)(h) as the penalty for a violation must not be more than (a) $500,000, in the case of an individual; and (b) $15,000,000, in any other case."
+            "text": "The amount that may be fixed under any regulations made under paragraph 135 (1)(h) as the penalty for a violation must not be more than (a) $500,000, in the case of an individual; and (b) $15,000,000, in any other case."
           }
         ],
         "provisionCount": 197
-      }
+      },
+      "studies": [
+        {
+          "chamber": "House",
+          "committee": "SECU",
+          "id": "13156377",
+          "url": "https://www.ourcommons.ca/Committees/en/SECU/StudyActivity?studyActivityId=13156377",
+          "briefs": [
+            {
+              "name": "Kyndryl Canada",
+              "individual": false,
+              "date": "2026-03-02",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13925185/br-external/KyndrylCanada-e.pdf"
+            },
+            {
+              "name": "National Security and Intelligence Review Agency Secretariat",
+              "individual": false,
+              "date": "2026-02-23",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13927665/br-external/NationalSecurityAndIntelligenceReviewAgency-e.pdf"
+            },
+            {
+              "name": "AI Governance and Safety Canada",
+              "individual": false,
+              "date": "2026-01-29",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13856172/br-external/AIGovernanceAndSafetyCanada-e.pdf"
+            },
+            {
+              "name": "Canadian Civil Liberties Association",
+              "individual": false,
+              "date": "2026-01-09",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13838306/br-external/CanadianCivilLibertiesAssociation-e.pdf"
+            },
+            {
+              "name": "Raiche, Daniel",
+              "individual": true,
+              "date": "2026-01-09",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13838305/br-external/RaicheDaniel-e.pdf"
+            },
+            {
+              "name": "Centre for International Governance Innovation",
+              "individual": false,
+              "date": "2025-12-12",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13836475/br-external/CentreForInternationalGovernanceInnovation-e.pdf"
+            },
+            {
+              "name": "Digital ID and Authentication Council of Canada",
+              "individual": false,
+              "date": "2025-12-09",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13823698/br-external/DigitalIDAndAuthenticationCouncilOfCanada-e.pdf"
+            },
+            {
+              "name": "Canadian Bankers Association",
+              "individual": false,
+              "date": "2025-12-08",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13812529/br-external/CanadianBankersAssociation-e.pdf"
+            },
+            {
+              "name": "Electricity Canada",
+              "individual": false,
+              "date": "2025-12-04",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13806902/br-external/ElectricityCanada-e.pdf"
+            },
+            {
+              "name": "Electronic Transactions Association",
+              "individual": false,
+              "date": "2025-12-03",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13778796/br-external/ElectronicTransactionsAssociation-e.pdf"
+            },
+            {
+              "name": "ISC2, Inc.",
+              "individual": false,
+              "date": "2025-11-27",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13767186/br-external/ISC2Inc-e.pdf"
+            },
+            {
+              "name": "Canadian Telecommunications Association",
+              "individual": false,
+              "date": "2025-11-27",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13768863/br-external/CanadianTelecommunicationsAssociation-e.pdf"
+            },
+            {
+              "name": "Technation Canada",
+              "individual": false,
+              "date": "2025-11-24",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13740412/br-external/TechnationCanada-e.pdf"
+            },
+            {
+              "name": "Citizen Lab",
+              "individual": false,
+              "date": "2025-11-24",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13741249/br-external/CitizenLab-e.pdf"
+            },
+            {
+              "name": "Canadian Telecommunications Workers Alliance",
+              "individual": false,
+              "date": "2025-11-24",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13736990/br-external/CanadianTelecommunicationsWorkersAlliance-e.pdf"
+            },
+            {
+              "name": "Canadian Gas Association",
+              "individual": false,
+              "date": "2025-11-24",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13742651/br-external/CanadianGasAssociation-e.pdf"
+            },
+            {
+              "name": "Institute of Internal Auditors",
+              "individual": false,
+              "date": "2025-11-06",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13686935/br-external/InstituteOfInternalAuditorsCanada-e.pdf"
+            },
+            {
+              "name": "International Secure Information Governance and Management Association",
+              "individual": false,
+              "date": "2025-11-06",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13716280/br-external/InternationalSecureInformationGovernanceAndManagementAssociation-e.pdf"
+            },
+            {
+              "name": "Canadian Constitution Foundation",
+              "individual": false,
+              "date": "2025-11-06",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13695848/br-external/CanadianConstitutionFoundation-e.pdf"
+            },
+            {
+              "name": "Insurance Bureau of Canada",
+              "individual": false,
+              "date": "2025-11-06",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13716279/br-external/InsuranceBureauOfCanada-e.pdf"
+            },
+            {
+              "name": "Canadian Internet Registration Authority",
+              "individual": false,
+              "date": "2025-11-06",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13712352/br-external/CanadianInternetRegistrationAuthority-e.pdf"
+            },
+            {
+              "name": "Liu, Echo",
+              "individual": true,
+              "date": "2025-10-23",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13685316/br-external/LiuEcho-e.pdf"
+            },
+            {
+              "name": "Engineers for the Profession",
+              "individual": false,
+              "date": "2025-10-14",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13649992/br-external/EngineersForTheProfession-e.pdf"
+            },
+            {
+              "name": "Miller, Christian Jesus Jonathan Jacob",
+              "individual": true,
+              "date": "2025-10-10",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13649350/br-external/MillerChristianJesusJonathanJacob-e.pdf"
+            }
+          ],
+          "witnesses": [
+            {
+              "name": "Department of Industry",
+              "people": [
+                "Andre Arbour",
+                "David Gibson",
+                "Wen Kwan",
+                "Kasi McMicking"
+              ],
+              "meetings": [
+                "26",
+                "25",
+                "23",
+                "22",
+                "21",
+                "20",
+                "12",
+                "9"
+              ]
+            },
+            {
+              "name": "Communications Security Establishment",
+              "people": [
+                "Richard Larose",
+                "Stephen Bolton",
+                "Daniel Couillard",
+                "Bridget Walshe"
+              ],
+              "meetings": [
+                "26",
+                "25",
+                "23",
+                "22",
+                "9"
+              ]
+            },
+            {
+              "name": "Department of Public Safety and Emergency Preparedness",
+              "people": [
+                "Colin MacSween",
+                "Kelly-Anne Gibson",
+                "Richard Bilodeau"
+              ],
+              "meetings": [
+                "26",
+                "25",
+                "23",
+                "22",
+                "21",
+                "12",
+                "9"
+              ]
+            },
+            {
+              "name": "As an individual",
+              "people": [
+                "Hon. Mélanie Joly",
+                "Kate Robertson",
+                "Hon. Gary Anandasangaree"
+              ],
+              "meetings": [
+                "20",
+                "18",
+                "12"
+              ]
+            },
+            {
+              "name": "Electricity Canada",
+              "people": [
+                "Francis Bradley"
+              ],
+              "meetings": [
+                "18"
+              ]
+            },
+            {
+              "name": "Bruce Power",
+              "people": [
+                "Todd Warnell"
+              ],
+              "meetings": [
+                "18"
+              ]
+            },
+            {
+              "name": "BlackBerry",
+              "people": [
+                "John de Boer"
+              ],
+              "meetings": [
+                "18"
+              ]
+            },
+            {
+              "name": "OpenMedia",
+              "people": [
+                "Matthew Hatfield"
+              ],
+              "meetings": [
+                "18"
+              ]
+            },
+            {
+              "name": "Canadian Constitution Foundation",
+              "people": [
+                "Josh Dehaas"
+              ],
+              "meetings": [
+                "10"
+              ]
+            },
+            {
+              "name": "Centre for International Governance Innovation",
+              "people": [
+                "Aaron Shull"
+              ],
+              "meetings": [
+                "10"
+              ]
+            },
+            {
+              "name": "Privacy and Access Council of Canada",
+              "people": [
+                "Sharon Polsky"
+              ],
+              "meetings": [
+                "10"
+              ]
+            },
+            {
+              "name": "Offices of the Information and Privacy Commissioners of Canada",
+              "people": [
+                "Marc Chénier",
+                "Philippe Dufresne"
+              ],
+              "meetings": [
+                "10"
+              ]
+            },
+            {
+              "name": "Canadian Cyber Threat Exchange",
+              "people": [
+                "Jennifer Quaid"
+              ],
+              "meetings": [
+                "10"
+              ]
+            },
+            {
+              "name": "Office of the Intelligence Commissioner",
+              "people": [
+                "Justin Dubois",
+                "Hon. Simon Noël"
+              ],
+              "meetings": [
+                "10"
+              ]
+            },
+            {
+              "name": "ISC2, Inc.",
+              "people": [
+                "Philip Stupak"
+              ],
+              "meetings": [
+                "10"
+              ]
+            },
+            {
+              "name": "Crypto Québec",
+              "people": [
+                "Luc Lefebvre"
+              ],
+              "meetings": [
+                "10"
+              ]
+            }
+          ],
+          "checked": "2026-10-27"
+        }
+      ]
     },
     {
       "number": "C-22",
@@ -6171,6 +7639,7 @@
       ],
       "text": {
         "basis": "13966446,14201018,14202841",
+        "analysis": 2,
         "versions": [
           {
             "id": "13966446",
@@ -6361,7 +7830,7 @@
             "amounts": [
               "$5,000"
             ],
-            "text": " person who contravenes a preservation demand made under section 487.012 or a confirmation of service demand made under section 487.0121 without lawful excuse is guilty of an offence punishable on summary conviction and is liable to a fine of not more than $5,000."
+            "text": "A person who contravenes a preservation demand made under section 487.012 or a confirmation of service demand made under section 487.0121 without lawful excuse is guilty of an offence punishable on summary conviction and is liable to a fine of not more than $5,000."
           },
           {
             "ref": "41 / 29",
@@ -6390,7 +7859,7 @@
               "$100,000",
               "$250,000"
             ],
-            "text": " person who commits an offence under section 44 or 45 is liable on summary conviction (a) in the case of an individual, to a fine of not more than $25,000 for a first offence and of not more than $50,000 for each subsequent offence; and (b) in the case of any other person, to ..."
+            "text": "A person who commits an offence under section 44 or 45 is liable on summary conviction (a) in the case of an individual, to a fine of not more than $25,000 for a first offence and of not more than $50,000 for each subsequent offence; and (b) in the case of any other person, to..."
           }
         ],
         "provisionCount": 101
@@ -6556,6 +8025,7 @@
       ],
       "text": {
         "basis": "13545752",
+        "analysis": 2,
         "versions": [
           {
             "id": "13545752",
@@ -6639,7 +8109,7 @@
               "$ 10,000,000",
               "$ 20,000,000"
             ],
-            "text": "aragraphs 75(1)(a) and (b) of the Act are replaced by the following: (a) on summary conviction, to a fine of not more than $ 10,000,000 or to imprisonment for a term of not more than two years less a day, or to both; or (b) on conviction on indictment, to a fine of not more th..."
+            "text": "Paragraphs 75(1)(a) and (b) of the Act are replaced by the following: (a) on summary conviction, to a fine of not more than $ 10,000,000 or to imprisonment for a term of not more than two years less a day, or to both; or (b) on conviction on indictment, to a fine of not more t..."
           },
           {
             "ref": "113 / 77",
@@ -6647,7 +8117,7 @@
             "amounts": [
               "$ 10,000,000"
             ],
-            "text": "1) Every person or entity that contravenes subsection 9(1) or (3) is guilty of an offence and liable on summary conviction to a fine of not more than $ 10,000,000."
+            "text": "(1) Every person or entity that contravenes subsection 9(1) or (3) is guilty of an offence and liable on summary conviction to a fine of not more than $ 10,000,000."
           },
           {
             "ref": "113 / 77.1",
@@ -6665,7 +8135,7 @@
               "$1,000,000",
               "$2,500,000"
             ],
-            "text": "1) The portion of subsection 77.2(2) of the English version of the Act before paragraph (a) is replaced by the following: (2) Every person or entity that commits an offence under subsection (1) is liable (2) Paragraphs 77.2(2)(a) and (b) of the Act are replaced by the followin..."
+            "text": "(1) The portion of subsection 77.2(2) of the English version of the Act before paragraph (a) is replaced by the following: (2) Every person or entity that commits an offence under subsection (1) is liable (2) Paragraphs 77.2(2)(a) and (b) of the Act are replaced by the followi..."
           },
           {
             "ref": "115",
@@ -6674,7 +8144,7 @@
               "$1,000,000",
               "$2,500,000"
             ],
-            "text": "aragraphs 77.3(3)(a) and (b) of the Act are replaced by the following: (a) on summary conviction, to a fine of not more than $1,000,000 or imprisonment for a term of not more than two years less a day, or to both; or (b) on conviction on indictment, to a fine of not more than ..."
+            "text": "Paragraphs 77.3(3)(a) and (b) of the Act are replaced by the following: (a) on summary conviction, to a fine of not more than $1,000,000 or imprisonment for a term of not more than two years less a day, or to both; or (b) on conviction on indictment, to a fine of not more than..."
           },
           {
             "ref": "116",
@@ -6683,7 +8153,7 @@
               "$ 2,500,000",
               "$ 5,000,000"
             ],
-            "text": "aragraphs 77.4(a) and (b) of the Act are replaced by the following: (a) on summary conviction, to a fine of not more than $ 2,500,000 or to imprisonment for a term of not more than two years less a day, or to both; or (b) on conviction on indictment, to a fine of not more than..."
+            "text": "Paragraphs 77.4(a) and (b) of the Act are replaced by the following: (a) on summary conviction, to a fine of not more than $ 2,500,000 or to imprisonment for a term of not more than two years less a day, or to both; or (b) on conviction on indictment, to a fine of not more tha..."
           },
           {
             "ref": "121",
@@ -6700,7 +8170,7 @@
             "amounts": [
               "$ 400,000"
             ],
-            "text": "ubsection 4(2) of the Regulations is replaced by the following: (2) A series of minor violations identified on a notice of violation shall be considered to be a serious violation for the purpose of section 73.21 of the Act if the total of the penalties for the violations set o..."
+            "text": "Subsection 4(2) of the Regulations is replaced by the following: (2) A series of minor violations identified on a notice of violation shall be considered to be a serious violation for the purpose of section 73.21 of the Act if the total of the penalties for the violations set ..."
           },
           {
             "ref": "124 / 5",
@@ -6711,7 +8181,7 @@
               "$ 4,000,000",
               "$ 20,000,000"
             ],
-            "text": "ubject to subsections 73.1(2) and (3) of the Act, the range of penalties in respect of a violation is (a) $1 to $ 40,000 in the case of a minor violation; (b) $1 to $ 4,000,000 in the case of a serious violation; and (c) $1 to $ 20,000,000 in the case of a very serious violation."
+            "text": "Subject to subsections 73.1(2) and (3) of the Act, the range of penalties in respect of a violation is (a) $1 to $ 40,000 in the case of a minor violation; (b) $1 to $ 4,000,000 in the case of a serious violation; and (c) $1 to $ 20,000,000 in the case of a very serious violat..."
           },
           {
             "ref": "131 / 77",
@@ -6719,7 +8189,7 @@
             "amounts": [
               "$10,000,000"
             ],
-            "text": "1) Every person or entity that contravenes subsection 9(1) or (3) is guilty of an offence and liable on summary conviction to a fine of not more than $10,000,000."
+            "text": "(1) Every person or entity that contravenes subsection 9(1) or (3) is guilty of an offence and liable on summary conviction to a fine of not more than $10,000,000."
           },
           {
             "ref": "131 / 77.1",
@@ -6736,7 +8206,7 @@
             "amounts": [
               "$10,000"
             ],
-            "text": "1) Every person or entity that is engaged in a business, a profession or the solicitation of charitable financial donations from the public commits an offence if the person or entity accepts a cash payment, donation or deposit of $10,000 or more in a single transaction or in a..."
+            "text": "(1) Every person or entity that is engaged in a business, a profession or the solicitation of charitable financial donations from the public commits an offence if the person or entity accepts a cash payment, donation or deposit of $10,000 or more in a single transaction or in ..."
           },
           {
             "ref": "152 / 17",
@@ -6744,7 +8214,7 @@
             "amounts": [
               "$10,000"
             ],
-            "text": "1) Every person who knowingly contravenes any of subsections 16(1) to (5) is guilty of an offence and liable on summary conviction to a fine of not more than $10,000 or to imprisonment for a term of not more than six months, or to both."
+            "text": "(1) Every person who knowingly contravenes any of subsections 16(1) to (5) is guilty of an offence and liable on summary conviction to a fine of not more than $10,000 or to imprisonment for a term of not more than six months, or to both."
           },
           {
             "ref": "165 / 487.0197",
@@ -6752,7 +8222,7 @@
             "amounts": [
               "$5,000"
             ],
-            "text": " person who contravenes a preservation demand made under section 487.012 or an information demand made under section 487.0121 without lawful excuse is guilty of an offence punishable on summary conviction and is liable to a fine of not more than $5,000."
+            "text": "A person who contravenes a preservation demand made under section 487.012 or an information demand made under section 487.0121 without lawful excuse is guilty of an offence punishable on summary conviction and is liable to a fine of not more than $5,000."
           },
           {
             "ref": "194 / 28",
@@ -6781,7 +8251,7 @@
               "$100,000",
               "$250,000"
             ],
-            "text": " person who commits an offence under section 43 or 44 is liable on summary conviction (a) in the case of an individual, to a fine of not more than $25,000 for a first offence and of not more than $50,000 for each subsequent offence; and (b) in the case of any other person, to ..."
+            "text": "A person who commits an offence under section 43 or 44 is liable on summary conviction (a) in the case of an individual, to a fine of not more than $25,000 for a first offence and of not more than $50,000 for each subsequent offence; and (b) in the case of any other person, to..."
           }
         ],
         "provisionCount": 284
@@ -6846,6 +8316,7 @@
       ],
       "text": {
         "basis": "14201298",
+        "analysis": 2,
         "versions": [
           {
             "id": "14201298",
@@ -7132,6 +8603,7 @@
       ],
       "text": {
         "basis": "14049195",
+        "analysis": 2,
         "versions": [
           {
             "id": "14049195",
@@ -7404,7 +8876,160 @@
               ],
               "people": [],
               "appearing": []
-            }
+            },
+            "study": "13308479",
+            "amendments": [
+              {
+                "mover": "Peter Fragiskatos",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Peter Fragiskatos",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Peter Fragiskatos",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Elizabeth May",
+                "party": "Green Party",
+                "result": "defeated"
+              },
+              {
+                "mover": "Elizabeth May",
+                "party": "Green Party",
+                "result": "defeated"
+              },
+              {
+                "mover": "Sandra Cobena",
+                "party": "Conservative",
+                "result": "adopted"
+              },
+              {
+                "mover": "Sandra Cobena",
+                "party": "Conservative",
+                "result": "adopted"
+              },
+              {
+                "mover": "Sandra Cobena",
+                "party": "Conservative",
+                "result": "adopted"
+              },
+              {
+                "mover": "Sandra Cobena",
+                "party": "Conservative",
+                "result": "adopted"
+              },
+              {
+                "mover": "Sandra Cobena",
+                "party": "Conservative",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Don Davies",
+                "party": "NDP",
+                "result": "defeated"
+              },
+              {
+                "mover": "Don Davies",
+                "party": "NDP",
+                "result": "defeated"
+              },
+              {
+                "mover": "Don Davies",
+                "party": "NDP",
+                "result": "defeated"
+              },
+              {
+                "mover": "Don Davies",
+                "party": "NDP",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Don Davies",
+                "party": "NDP",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Elizabeth May",
+                "party": "Green Party",
+                "result": "defeated"
+              }
+            ]
           },
           {
             "date": "2026-02-12",
@@ -7424,7 +9049,8 @@
               ],
               "people": [],
               "appearing": []
-            }
+            },
+            "amendments": []
           },
           {
             "date": "2026-02-10",
@@ -7438,28 +9064,75 @@
             "chamber": "House",
             "committee": "FINA",
             "number": "24",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-24/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-24/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Canadian Heritage",
+                "Canadian Radio-television and Telecommunications Commission"
+              ],
+              "people": [],
+              "appearing": [
+                "Hon. Marc Miller, P.C., M.P., Minister of Canadian Identity and Culture"
+              ]
+            },
+            "study": "13308479",
+            "amendments": []
           },
           {
             "date": "2026-02-09",
             "chamber": "House",
             "committee": "FINA",
             "number": "25",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-25/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-25/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Justice",
+                "Department of the Environment"
+              ],
+              "people": [],
+              "appearing": [
+                "Hon. Sean Fraser, P.C., M.P., Minister of Justice and Attorney General of Canada and Minister responsible for the Atlantic Canada Opportunities Agency"
+              ]
+            },
+            "study": "13308479",
+            "amendments": []
           },
           {
             "date": "2026-02-05",
             "chamber": "House",
             "committee": "FINA",
             "number": "22",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-22/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-22/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Veterans Affairs",
+                "Office of the Veterans Ombudsman"
+              ],
+              "people": [],
+              "appearing": [
+                "Hon. Jill McKnight, P.C., M.P., Minister of Veterans Affairs"
+              ]
+            },
+            "study": "13308479",
+            "amendments": []
           },
           {
             "date": "2026-02-05",
             "chamber": "House",
             "committee": "FINA",
             "number": "23",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-23/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-23/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Finance"
+              ],
+              "people": [],
+              "appearing": [
+                "Hon. François-Philippe Champagne, P.C., M.P., Minister of Finance and National Revenue"
+              ]
+            },
+            "study": "13308479",
+            "amendments": []
           },
           {
             "date": "2026-02-04",
@@ -7480,14 +9153,35 @@
             "chamber": "House",
             "committee": "FINA",
             "number": "20",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-20/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-20/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Transport",
+                "VIA HFR – VIA TGF Inc."
+              ],
+              "people": [],
+              "appearing": [
+                "Hon. Steven MacKinnon, P.C., M.P., Minister of Transport"
+              ]
+            },
+            "study": "13308479",
+            "amendments": []
           },
           {
             "date": "2026-01-26",
             "chamber": "House",
             "committee": "FINA",
             "number": "19",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-19/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-19/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Finance"
+              ],
+              "people": [],
+              "appearing": []
+            },
+            "study": "13308479",
+            "amendments": []
           },
           {
             "date": "2025-12-10",
@@ -7814,6 +9508,8 @@
         }
       ],
       "text": {
+        "basis": "13752361,13929822,13942785,13996732",
+        "analysis": 2,
         "versions": [
           {
             "id": "13752361",
@@ -7839,8 +9535,885 @@
             "xml": "https://www.parl.ca/Content/Bills/451/Government/C-15/C-15_4/C-15_E.xml",
             "pdf": "https://www.parl.ca/Content/Bills/451/Government/C-15/C-15_4/C-15_4.PDF"
           }
-        ]
-      }
+        ],
+        "changes": [
+          {
+            "from": "First Reading",
+            "to": "As amended by committee",
+            "provisions": [
+              {
+                "kind": "amended",
+                "ref": "45 / 122.93",
+                "note": "Definitions"
+              },
+              {
+                "kind": "amended",
+                "ref": "47",
+                "note": ""
+              },
+              {
+                "kind": "amended",
+                "ref": "71",
+                "note": ""
+              },
+              {
+                "kind": "amended",
+                "ref": "196 / 16.1",
+                "note": "Postage"
+              },
+              {
+                "kind": "removed",
+                "ref": "208 / 11",
+                "note": "Definition of entity"
+              },
+              {
+                "kind": "amended",
+                "ref": "208 / 12",
+                "note": "Order"
+              },
+              {
+                "kind": "added",
+                "ref": "208 / 11",
+                "note": "Definitions"
+              },
+              {
+                "kind": "added",
+                "ref": "208 / 12.1",
+                "note": "Order – entities operating in same sector"
+              },
+              {
+                "kind": "amended",
+                "ref": "208 / 14",
+                "note": "Accessibility"
+              },
+              {
+                "kind": "added",
+                "ref": "208 / 14.1",
+                "note": "Canada Gazette"
+              },
+              {
+                "kind": "added",
+                "ref": "208 / 14.2",
+                "note": "Report – minister"
+              },
+              {
+                "kind": "amended",
+                "ref": "224 / 85",
+                "note": "Express consent required"
+              },
+              {
+                "kind": "renumbered",
+                "ref": "224 / 87",
+                "note": "Renewal of consent"
+              },
+              {
+                "kind": "renumbered",
+                "ref": "331 / 627.22",
+                "note": "First amount available"
+              },
+              {
+                "kind": "removed",
+                "ref": "381 / 32.3",
+                "note": "Disclosure of information"
+              },
+              {
+                "kind": "added",
+                "ref": "381 / 32.3",
+                "note": ""
+              },
+              {
+                "kind": "amended",
+                "ref": "389 / 10.5",
+                "note": "Regulations"
+              },
+              {
+                "kind": "amended",
+                "ref": "422 / 35.1",
+                "note": "Minister’s power – individual"
+              }
+            ]
+          },
+          {
+            "from": "As amended by committee",
+            "to": "As passed by the House of Commons",
+            "provisions": [
+              {
+                "kind": "removed",
+                "ref": "381 / 32.3",
+                "note": ""
+              }
+            ]
+          }
+        ],
+        "inForce": [
+          {
+            "ref": "176",
+            "note": "September 1, 2022",
+            "text": "(1) Parts 1 and 3 to 5 of the Select Luxury Items Tax Regulations, as made by section 175, are deemed to have come into force on September 1, 2022. (2) Part 2 of the Select Luxury Items Tax Regulations, as made by section 175, is deemed to have come into force on August 5, 2023. (3) The Select Lu..."
+          },
+          {
+            "ref": "186 / 35",
+            "note": "Coming into force – law under subsection 33(1)",
+            "text": "(1) A law enacted under subsection 33(1) may come into force only on or after the later of the day on which a copy of the law is received by the Minister and the day on which an administration agreement in respect of that law comes into effect. (2) A law enacted under subsection 33(1) is deemed t..."
+          },
+          {
+            "ref": "194",
+            "note": "Order in council",
+            "text": "Section 192 comes into force on a day to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "199",
+            "note": "Order in council",
+            "text": "This Division comes into force on a day to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "216",
+            "note": "Order in council",
+            "text": "This Division comes into force on a day to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "222",
+            "note": "January 15, 2026 or royal assent",
+            "text": "(1) Sections 217 to 219 and 221 come into force on the later of the day on which this Act receives royal assent and January 15, 2026. (2) Section 220 comes into force on the 121st day after the day on which section 217 comes into force."
+          },
+          {
+            "ref": "224 / 181",
+            "note": "Order in council",
+            "text": "The provisions of this Act, other than sections 1 to 9, 13, 14, 74 and 113, subsections 114 (1), (2), (4) and (5), paragraph 115 (a) and sections 117 to 119, 123 to 132, 136 to 139, 143, 147 to 149, 169, 170 and 172 to 179, come into force on a day or days to be fixed by order of the Governor in ..."
+          },
+          {
+            "ref": "286",
+            "note": "Order in council",
+            "text": "The provisions of this Division come into force on a day or days to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "332",
+            "note": "Order in council",
+            "text": "This Division comes into force on a day to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "336",
+            "note": "Order in council",
+            "text": "This Division comes into force on a day to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "352",
+            "note": "Order in council",
+            "text": "The provisions of this Division, other than section 337, subsection 339 (1) and sections 340, 343, 344, 348, 349 and 351, come into force on a day or days to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "358",
+            "note": "Profits realized before coming into force",
+            "text": "A regulation or order may be made under Part 2 of the Special Economic Measures Act with respect to any profits referred to in that Part that are realized before the day on which this section comes into force only if the profits are realized from property that is owned – or held or controlled, di..."
+          },
+          {
+            "ref": "375",
+            "note": "January 2, 2026 or royal assent",
+            "text": "(1) Sections 363 to 370 come into force on the later of January 2, 2026 and the day on which this Act receives royal assent. (2) Section 374 is deemed to have come into force on July 15, 1998."
+          },
+          {
+            "ref": "379",
+            "note": "April 1, 2006",
+            "text": "(1) Subsections 376 (1) and 377 (1) and (3) are deemed to have come into force on April 1, 2006. (2) Subsection 376 (2) is deemed to have come into force on October 3, 2011. (3) Subsection 376 (3) is deemed to have come into force on April 1, 2015. (4) Subsections 376 (4) and 377 (2) and (4) are ..."
+          },
+          {
+            "ref": "388",
+            "note": "Order in council",
+            "text": "This Division comes into force on a day to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "398",
+            "note": "Order in council",
+            "text": "This Division comes into force on a day to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "456",
+            "note": "Order in council",
+            "text": "(1) Subsection 402 (3), section 413, subsections 415 (3), (8) and (9), sections 421 and 422, subsections 442 (4), (6) to (9) and (14) and subsection 450 (2) come into force on a day or days to be fixed by order of the Governor in Council. (2) Subsection 409 (4), sections 414 and 431 and subsectio..."
+          },
+          {
+            "ref": "459",
+            "note": "Order in council",
+            "text": "This Division comes into force on a day to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "462",
+            "note": "Order in council",
+            "text": "This Division comes into force on a day to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "570",
+            "note": "Order in council",
+            "text": "Sections 561 and 565 to 569 come into force on a day or days to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "587",
+            "note": "October 1, 2025",
+            "text": "Section 584 is deemed to have come into force on October 1, 2025 immediately after the coming into force of section 8 of the Regulations Amending Certain Regulations Made Under the Proceeds of Crime (Money Laundering) and Terrorist Financing Act, made on December 16, 2024 and registered as SOR/20..."
+          },
+          {
+            "ref": "600 / 97",
+            "note": "Order in council",
+            "text": "The provisions of this Act come into force on a day or days to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "606",
+            "note": "Order in council",
+            "text": "Sections 601 to 605 come into force on a day or days to be fixed by order of the Governor in Council."
+          }
+        ],
+        "penalties": [
+          {
+            "ref": "37 / 110.62",
+            "note": "Deduction for qualifying cooperative conversion – conditions",
+            "amounts": [
+              "$10,000,000"
+            ],
+            "text": "(1) Subsection (2) applies to an individual (other than a trust) if, at the time of a disposition (referred to in this section as the “disposition time”) of shares of the capital stock (referred to in this section as the “subject shares”) of a corporation (referred to in this ..."
+          },
+          {
+            "ref": "47",
+            "note": "",
+            "amounts": [
+              "$6 million",
+              "$60 million",
+              "$15 million"
+            ],
+            "text": "(entité mère ultime) (11) The portion of subsection 127(10.1) of the Act before paragraph (a) is replaced by the following: (10.1) For the purposes of paragraph (e) of the definition investment tax credit in subsection (9), if a corporation was throughout a taxation year a Can..."
+          },
+          {
+            "ref": "62",
+            "note": "",
+            "amounts": [
+              "$5,000,000"
+            ],
+            "text": "(8.3) Subsection (8.2) does not apply to a corporation if, at the particular time referred to in that subsection, (a) the corporation was incorporated not more than two years before the particular time; and (b) the aggregate fair market value of the shares of the capital stock..."
+          },
+          {
+            "ref": "71",
+            "note": "",
+            "amounts": [
+              "$50,000",
+              "$250,000"
+            ],
+            "text": "(1) Paragraphs 150(1.2)(a) to (c) of the Act are replaced by the following: (a) had been in existence for less than three months; (b) holds assets with a total fair market value that does not exceed $50,000 throughout the year; (b.1) meets the following conditions: (i) each tr..."
+          },
+          {
+            "ref": "224 / 155",
+            "note": "Regulations",
+            "amounts": [
+              "$1,000,000",
+              "$10,000,000"
+            ],
+            "text": "(2) The maximum penalty for a violation is $1,000,000 if the violation is committed by an individual and $10,000,000 if the violation is committed by a participating entity or accredited third-party service provider."
+          },
+          {
+            "ref": "224 / 174",
+            "note": "Offence",
+            "amounts": [
+              "$1,000,000",
+              "$5,000,000",
+              "$100,000",
+              "$500,000"
+            ],
+            "text": "(3) Every individual or entity that commits an offence under subsection (1) or (2) is liable (a) on conviction on indictment, (i) in the case of an individual, to a fine of not more than $1,000,000 or to imprisonment for a term of not more than five years, or to both, or (ii) ..."
+          },
+          {
+            "ref": "431 / 52.1",
+            "note": "Administrative monetary penalties",
+            "amounts": [
+              "$50,000",
+              "$250,000"
+            ],
+            "text": "(1) Every person who contravenes a provision designated under paragraph (12)(a) commits a violation and is liable to an administrative monetary penalty of not more than $50,000 in the case of an individual and $250,000 in the case of any other person."
+          },
+          {
+            "ref": "431 / 52.2",
+            "note": "Payment",
+            "amounts": [
+              "$5,000"
+            ],
+            "text": "(2) Instead of paying the amount of the penalty set out in the notice, the person may, in the time and manner specified in the notice, (a) if the amount of the penalty set out in the notice is $5,000 or more, request to enter into a compliance agreement with the Minister that ..."
+          },
+          {
+            "ref": "432 / 53",
+            "note": "General",
+            "amounts": [
+              "$250,000",
+              "$1,000,000",
+              "$500,000"
+            ],
+            "text": "Subject to sections 54 to 58, every person who contravenes this Act or the regulations is guilty of an offence and liable, (a) in the case of a contravention with respect to a human pathogen that falls into Risk Group 2, on summary conviction, to a fine of not more than $250,0..."
+          },
+          {
+            "ref": "434 / 57",
+            "note": "Contravention of section 8 – knowingly",
+            "amounts": [
+              "$5,000,000"
+            ],
+            "text": "(1) Every person who knowingly contravenes section 8 is guilty of an offence and liable on conviction by indictment to a fine of not more than $5,000,000 or to imprisonment for a term of not more than 14 years, or to both."
+          },
+          {
+            "ref": "478",
+            "note": "",
+            "amounts": [
+              "$150,000",
+              "$1,500,000"
+            ],
+            "text": "(3) Subsections 7.3(3.1) to (5.1) of the Act are replaced by the following: (4) An individual who is convicted of an offence under this Part punishable on summary conviction is liable to a fine not exceeding $150,000 and, in the case of an offence referred to in subsection (1)..."
+          }
+        ],
+        "provisionCount": 1032
+      },
+      "studies": [
+        {
+          "chamber": "House",
+          "committee": "FINA",
+          "id": "13308479",
+          "url": "https://www.ourcommons.ca/Committees/en/FINA/StudyActivity?studyActivityId=13308479",
+          "briefs": [
+            {
+              "name": "ALTO HSR Citizen Research",
+              "individual": false,
+              "date": "2026-03-05",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13932764/br-external/AltoHsrCitizenResearch-e.pdf"
+            },
+            {
+              "name": "Canadian Refugee Health Network",
+              "individual": false,
+              "date": "2026-03-05",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13932353/br-external/CanadianRefugeeHealthNetwork-e.pdf"
+            },
+            {
+              "name": "Barrhead Accessibility Coalition",
+              "individual": false,
+              "date": "2026-03-05",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13921348/br-external/BarrheadAccessibilityCoalition-e.pdf"
+            },
+            {
+              "name": "Shakepay Inc.",
+              "individual": false,
+              "date": "2026-03-02",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13932406/br-external/Shakepay-e.pdf"
+            },
+            {
+              "name": "C.D. Howe Institute",
+              "individual": false,
+              "date": "2026-03-02",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13932677/br-external/CDHoweInstitute-e.pdf"
+            },
+            {
+              "name": "Canadian Bankers Association",
+              "individual": false,
+              "date": "2026-02-26",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13941740/br-external/CanadianBankersAssociation-e.pdf"
+            },
+            {
+              "name": "Canadian Urban Transit Association",
+              "individual": false,
+              "date": "2026-02-23",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13875273/br-external/CanadianUrbanTransitAssociation-e.pdf"
+            },
+            {
+              "name": "Melville, Janet",
+              "individual": true,
+              "date": "2026-02-23",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13925708/br-external/MelvilleJanet-e.pdf"
+            },
+            {
+              "name": "Toronto Transit Commission",
+              "individual": false,
+              "date": "2026-02-23",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13910808/br-external/TorontoTransitCommission-e.pdf"
+            },
+            {
+              "name": "Electronic Transactions Association",
+              "individual": false,
+              "date": "2026-02-23",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13925166/br-external/ElectronicTransactionsAssociation-e.pdf"
+            },
+            {
+              "name": "Canadian Urban Transit Research and Innovation Consortium",
+              "individual": false,
+              "date": "2026-02-23",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13910805/br-external/CanadianUrbanTransitResearchAndInnovationConsortium-e.pdf"
+            },
+            {
+              "name": "Canadian Dental Association",
+              "individual": false,
+              "date": "2026-02-23",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13925198/br-external/CanadianDentalAssociation-e.pdf"
+            },
+            {
+              "name": "Climate Action Newmarket-Aurora",
+              "individual": false,
+              "date": "2026-02-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13921351/br-external/ClimateActionNewmarket-Aurora-e.pdf"
+            },
+            {
+              "name": "Ecojustice",
+              "individual": false,
+              "date": "2026-02-17",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13900409/br-external/Ecojustice-e.pdf"
+            },
+            {
+              "name": "Mandeville, William",
+              "individual": true,
+              "date": "2026-02-17",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13910574/br-external/MandevilleWilliam-067-260213-003-e.pdf"
+            },
+            {
+              "name": "Inclusion Canada",
+              "individual": false,
+              "date": "2026-02-10",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13886412/br-external/InclusionCanada-e.pdf"
+            },
+            {
+              "name": "Chemistry Industry Association of Canada",
+              "individual": false,
+              "date": "2026-02-10",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13889207/br-external/ChemistryIndustryAssociationOfCanada-e.pdf"
+            },
+            {
+              "name": "Seniors for Climate Action Now!",
+              "individual": false,
+              "date": "2026-02-05",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13869669/br-external/SeniorsForClimateActionNow-e.pdf"
+            },
+            {
+              "name": "Frontier Duty Free Association",
+              "individual": false,
+              "date": "2026-02-05",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13881706/br-external/FrontierDutyFreeAssociation-e.pdf"
+            },
+            {
+              "name": "B'nai Brith Canada",
+              "individual": false,
+              "date": "2026-02-04",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13869539/br-external/BnaiBrithCanada-e.pdf"
+            },
+            {
+              "name": "Canadian Web3 Council",
+              "individual": false,
+              "date": "2026-02-04",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13869535/br-external/CanadianWeb3Council-e.pdf"
+            },
+            {
+              "name": "WaterPower Canada",
+              "individual": false,
+              "date": "2026-02-03",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13869169/br-external/WaterpowerCanada-e.pdf"
+            },
+            {
+              "name": "Québec Environmental Law Centre",
+              "individual": false,
+              "date": "2026-02-03",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13869168/br-external/QuebecEnrironmentalLawCentre-067-260129-007-e.pdf"
+            },
+            {
+              "name": "Option consommateurs",
+              "individual": false,
+              "date": "2026-02-03",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13875626/br-external/OptionConsommateurs-067-260202-026 -e.pdf"
+            },
+            {
+              "name": "Democracy Watch",
+              "individual": false,
+              "date": "2026-01-30",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13869167/br-external/DemocracyWatch-e.pdf"
+            },
+            {
+              "name": "Breakfast Club of Canada",
+              "individual": false,
+              "date": "2026-01-29",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13869162/br-external/BreakfastClubOfCanada-067-260126-034-e.pdf"
+            },
+            {
+              "name": "National Police Federation",
+              "individual": false,
+              "date": "2026-01-14",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13854758/br-external/NationalPoliceFederation-e.pdf"
+            },
+            {
+              "name": "Canadian Civil Liberties Association",
+              "individual": false,
+              "date": "2026-01-05",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13838502/br-external/CanadianCivilLibertiesAssociation-e.pdf"
+            }
+          ],
+          "witnesses": [
+            {
+              "name": "Department of Agriculture and Agri-Food",
+              "people": [
+                "Shannon Nix",
+                "Steven Jurgutis"
+              ],
+              "meetings": [
+                "27"
+              ]
+            },
+            {
+              "name": "Department of Canadian Heritage",
+              "people": [
+                "Charlene Budnisky",
+                "Pietro Cimino",
+                "Blair McMurren",
+                "Francis Bilodeau",
+                "Joëlle Montminy",
+                "Véronique Côté"
+              ],
+              "meetings": [
+                "27",
+                "24"
+              ]
+            },
+            {
+              "name": "Department of Finance",
+              "people": [
+                "Barbara Russell",
+                "Benjamin Rankin",
+                "Brandon La Carte",
+                "Brent Almond",
+                "David Smith",
+                "David Turner",
+                "Gervais Coulombe",
+                "Gloria Wong",
+                "Ingrid De Freitas",
+                "Jeffrey Baylis",
+                "Jeremy Weil",
+                "Judith Hamel",
+                "Justin Brown",
+                "Khusro Saeedi",
+                "Kïrsten Fraser",
+                "Lauchlin MacEachern",
+                "Lindsay Gwyer",
+                "Marie-Pier Martin",
+                "Mark Maxson",
+                "Mark Radley",
+                "Mark Walsh",
+                "Michael Mosier",
+                "Oliver Rogerson",
+                "Pierre Leblanc",
+                "Riley McDonald",
+                "Robert Demeter",
+                "Roch Vézina",
+                "Shane Baddeley",
+                "Stefania Bartucci",
+                "Tyler Minty",
+                "Nick Leswick",
+                "Alexey Belozorovich",
+                "Erin Hunt",
+                "Matthew Emde",
+                "Maximilian Baylor",
+                "William Kendall"
+              ],
+              "meetings": [
+                "27",
+                "23",
+                "19"
+              ]
+            },
+            {
+              "name": "Department of Justice",
+              "people": [
+                "Anna Dekker",
+                "Jenna MacDonald",
+                "Marie-Josée Poirier",
+                "Sacha Baharmand",
+                "Sarah Geh",
+                "Toby Hoffmann"
+              ],
+              "meetings": [
+                "27",
+                "25"
+              ]
+            },
+            {
+              "name": "Department of the Environment",
+              "people": [
+                "Stephanie Lane"
+              ],
+              "meetings": [
+                "27",
+                "25"
+              ]
+            },
+            {
+              "name": "Department of Fisheries and Oceans",
+              "people": [
+                "Bonny Wong-Fortin",
+                "Kara Vlasman"
+              ],
+              "meetings": [
+                "27"
+              ]
+            },
+            {
+              "name": "Department of Industry",
+              "people": [
+                "Jill Paterson",
+                "Martin Simard",
+                "Samir Chhabra"
+              ],
+              "meetings": [
+                "27"
+              ]
+            },
+            {
+              "name": "Department of Natural Resources",
+              "people": [
+                "Michael Rau",
+                "Véronique Houle"
+              ],
+              "meetings": [
+                "27"
+              ]
+            },
+            {
+              "name": "Department of Public Works and Government Services",
+              "people": [
+                "Chantal Clow",
+                "Eugene Gourevitch"
+              ],
+              "meetings": [
+                "27"
+              ]
+            },
+            {
+              "name": "Royal Canadian Mounted Police",
+              "people": [
+                "Jeff Hutcheson",
+                "Joanne Rigon"
+              ],
+              "meetings": [
+                "27"
+              ]
+            },
+            {
+              "name": "Department of Transport",
+              "people": [
+                "Felix Meunier",
+                "Josée Thibodeau",
+                "Melanie Vanstone",
+                "Vincent Robitaille",
+                "Arun Thangaraj"
+              ],
+              "meetings": [
+                "27",
+                "20"
+              ]
+            },
+            {
+              "name": "Treasury Board Secretariat",
+              "people": [
+                "Brennen Young",
+                "Janelle Power",
+                "Laura MacLean",
+                "Nadine Labrie"
+              ],
+              "meetings": [
+                "27"
+              ]
+            },
+            {
+              "name": "Department of Veterans Affairs",
+              "people": [
+                "Julie Drury",
+                "Nathan Svenson",
+                "Christine McDowell",
+                "Jonathan Adams",
+                "Steven Harris"
+              ],
+              "meetings": [
+                "27",
+                "22"
+              ]
+            },
+            {
+              "name": "Public Health Agency of Canada",
+              "people": [
+                "Stephen Bent"
+              ],
+              "meetings": [
+                "27"
+              ]
+            },
+            {
+              "name": "Department of Foreign Affairs, Trade and Development",
+              "people": [
+                "Adrian Johnston",
+                "Robert Brookfield"
+              ],
+              "meetings": [
+                "27"
+              ]
+            },
+            {
+              "name": "Department of Employment and Social Development",
+              "people": [
+                "Antoine Thibodeau",
+                "Erin Gillespie",
+                "Erin Hetherington",
+                "Erinna Hou",
+                "Misha Celentano"
+              ],
+              "meetings": [
+                "27"
+              ]
+            },
+            {
+              "name": "Department of Crown-Indigenous Relations and Northern Affairs",
+              "people": [
+                "Benoît Chartrand",
+                "Julia Redmond"
+              ],
+              "meetings": [
+                "27"
+              ]
+            },
+            {
+              "name": "Department of Housing, Infrastructure and Communities",
+              "people": [
+                "Jean-Sébastien Langelier",
+                "Kathryn McCauley",
+                "Lindsay Boldt"
+              ],
+              "meetings": [
+                "27"
+              ]
+            },
+            {
+              "name": "Major Projects Office",
+              "people": [
+                "Sarah Jackson"
+              ],
+              "meetings": [
+                "27"
+              ]
+            },
+            {
+              "name": "Manitoba Métis Federation",
+              "people": [
+                "David Chartrand",
+                "Sarah Perrin"
+              ],
+              "meetings": [
+                "26"
+              ]
+            },
+            {
+              "name": "Assembly of First Nations",
+              "people": [
+                "Bram Lerat",
+                "Cindy Woodhouse Nepinak",
+                "Josh Gladstone"
+              ],
+              "meetings": [
+                "26"
+              ]
+            },
+            {
+              "name": "Fédération des chambres de commerce du Québec",
+              "people": [
+                "Hubert Rioux",
+                "Mathieu Lavigne"
+              ],
+              "meetings": [
+                "26"
+              ]
+            },
+            {
+              "name": "Canada Infrastructure Bank",
+              "people": [
+                "Ehren Cory",
+                "Frédéric Duguay"
+              ],
+              "meetings": [
+                "26"
+              ]
+            },
+            {
+              "name": "Fintechs Canada",
+              "people": [
+                "Adriana Vega"
+              ],
+              "meetings": [
+                "26"
+              ]
+            },
+            {
+              "name": "Wealthsimple Investment Inc.",
+              "people": [
+                "Jessica Oliver"
+              ],
+              "meetings": [
+                "26"
+              ]
+            },
+            {
+              "name": "Chartered Professional Accountants of Ontario",
+              "people": [
+                "Carol Wilding"
+              ],
+              "meetings": [
+                "26"
+              ]
+            },
+            {
+              "name": "As an individual",
+              "people": [
+                "Hon. Sean Fraser",
+                "Hon. Marc Miller",
+                "Hon. François-Philippe Champagne",
+                "Hon. Jill McKnight",
+                "Hon. Steven MacKinnon"
+              ],
+              "meetings": [
+                "25",
+                "24",
+                "23",
+                "22",
+                "20"
+              ]
+            },
+            {
+              "name": "Canadian Radio-television and Telecommunications Commission",
+              "people": [
+                "Rachelle Frenette",
+                "Scott Hutton",
+                "Scott Shortliffe",
+                "Vicky Eatrides"
+              ],
+              "meetings": [
+                "24"
+              ]
+            },
+            {
+              "name": "Office of the Veterans Ombudsman",
+              "people": [
+                "Duane Schippers",
+                "Nishika Jardine"
+              ],
+              "meetings": [
+                "22"
+              ]
+            },
+            {
+              "name": "VIA HFR – VIA TGF Inc.",
+              "people": [
+                "Félix Turgeon",
+                "Marc-Olivier Ranger",
+                "Martin Imbleau",
+                "Robert Godbout"
+              ],
+              "meetings": [
+                "20"
+              ]
+            }
+          ],
+          "checked": "2026-10-27"
+        }
+      ]
     },
     {
       "number": "C-31",
@@ -8569,7 +11142,114 @@
         }
       ],
       "text": {
-        "versions": []
+        "basis": "14082288",
+        "analysis": 2,
+        "versions": [
+          {
+            "id": "14082288",
+            "type": "First Reading",
+            "xml": "https://www.parl.ca/Content/Bills/451/Government/C-31/C-31_1/C-31_E.xml",
+            "pdf": "https://www.parl.ca/Content/Bills/451/Government/C-31/C-31_1/C-31_1.PDF"
+          }
+        ],
+        "changes": [],
+        "inForce": [
+          {
+            "ref": "246",
+            "note": "Order in council",
+            "text": "This Division comes into force on a day to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "252",
+            "note": "Order in council",
+            "text": "(1) Sections 247 and 251 come into force on a day to be fixed by order of the Governor in Council. (2) Sections 248 to 250 come into force on a day or days to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "274",
+            "note": "Order in council",
+            "text": "This Division comes into force on a day to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "338",
+            "note": "Order in council",
+            "text": "The provisions of this Division come into force on a day or days to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "364",
+            "note": "Order in council",
+            "text": "(1) Sections 339 and 340, subsections 341 (1) and (3), sections 342 to 344 and 346 to 349, subsections 350 (4), 351 (6) and 352 (2) and section 353 come into force on a day to be fixed by order of the Governor in Council. (2) Subsections 350 (1) to (3), 351 (1) and (3) to (5) and 352 (1) and (3) ..."
+          }
+        ],
+        "penalties": [
+          {
+            "ref": "31",
+            "note": "",
+            "amounts": [
+              "$3,000"
+            ],
+            "text": "(34) Paragraph 127.48(10)(a) of the Act is amended by striking out “or” at the end of subparagraph (ii) and by adding the following after that subparagraph: (ii.1) that is a qualified expenditure (as defined in subsection 127(9)) in respect of which an investment tax credit wa..."
+          },
+          {
+            "ref": "62",
+            "note": "",
+            "amounts": [
+              "$500"
+            ],
+            "text": "Subsection 188.1(6) of the Act is replaced by the following: (6) Every registered charity, registered foreign charity, registered Canadian amateur athletic association and registered journalism organization that fails to file a return for a taxation year as and when required b..."
+          },
+          {
+            "ref": "83 / 231.9",
+            "note": "Notice of non-compliance",
+            "amounts": [
+              "$50",
+              "$25,000"
+            ],
+            "text": "(13) A person sent or served a notice of non-compliance under subsection (1) is liable to a penalty of $50 for each day the notice of non-compliance is outstanding, to a maximum of $25,000."
+          },
+          {
+            "ref": "99 / 303",
+            "note": "Production of TIN",
+            "amounts": [
+              "$500"
+            ],
+            "text": "(3) Every reportable person and every crypto-asset user that has a controlling person that is a reportable person who fails to provide on request their TIN (or that of a controlling person that is a reportable person) to a reporting crypto-asset service provider that is requir..."
+          },
+          {
+            "ref": "121 / 5001",
+            "note": "",
+            "amounts": [
+              "$25 million",
+              "$10 million"
+            ],
+            "text": "C160; (c) a bond, debenture, note or similar obligation issued by, or a deposit with, a credit union; (d) a bond, debenture, note or similar obligation issued by a cooperative corporation (as defined in 136(2) of the Act) if (i) throughout the taxation year of the corporation ..."
+          },
+          {
+            "ref": "270",
+            "note": "",
+            "amounts": [
+              "$1,000,000",
+              "$100,000"
+            ],
+            "text": "(3) Section 202 of the Act is amended by adding the following after subsection (2): (2.01) Every person that, not being a licensed trustee, does any act as, or represents itself to be, a licensed trustee is guilty of an offence punishable on summary conviction and is liable (a..."
+          },
+          {
+            "ref": "325 / 33.1",
+            "note": "Regulations – administrative monetary penalties",
+            "amounts": [
+              "$2,000,000"
+            ],
+            "text": "(3) The maximum penalty in respect of a violation is $2,000,000."
+          },
+          {
+            "ref": "327",
+            "note": "",
+            "amounts": [
+              "$25,000"
+            ],
+            "text": "Subsection 45(2) of the Act is replaced by the following: (2) Every person who contravenes any other provision of this Act, with the exception of section 27, or any provision of the regulations is guilty of an offence punishable on summary conviction and liable to a fine of no..."
+          }
+        ],
+        "provisionCount": 441
       }
     },
     {
@@ -8759,7 +11439,26 @@
         }
       ],
       "text": {
-        "versions": []
+        "basis": "13541981,13678650",
+        "analysis": 2,
+        "versions": [
+          {
+            "id": "13541981",
+            "type": "First Reading",
+            "xml": "https://www.parl.ca/Content/Bills/451/Private/S-211/S-211_1/S-211_E.xml",
+            "pdf": "https://www.parl.ca/Content/Bills/451/Private/S-211/S-211_1/S-211_1.PDF"
+          },
+          {
+            "id": "13678650",
+            "type": "As passed by the Senate",
+            "xml": "https://www.parl.ca/Content/Bills/451/Private/S-211/S-211_3/S-211_E.xml",
+            "pdf": "https://www.parl.ca/Content/Bills/451/Private/S-211/S-211_3/S-211_3.PDF"
+          }
+        ],
+        "changes": [],
+        "inForce": [],
+        "penalties": [],
+        "provisionCount": 6
       }
     },
     {
@@ -9432,7 +12131,174 @@
         }
       ],
       "text": {
-        "versions": []
+        "basis": "13992865,14147708,14181453,14204974",
+        "analysis": 2,
+        "versions": [
+          {
+            "id": "13992865",
+            "type": "First Reading",
+            "xml": "https://www.parl.ca/Content/Bills/451/Government/C-25/C-25_1/C-25_E.xml",
+            "pdf": "https://www.parl.ca/Content/Bills/451/Government/C-25/C-25_1/C-25_1.PDF"
+          },
+          {
+            "id": "14147708",
+            "type": "As amended by committee",
+            "xml": "https://www.parl.ca/Content/Bills/451/Government/C-25/C-25_2/C-25_E.xml",
+            "pdf": "https://www.parl.ca/Content/Bills/451/Government/C-25/C-25_2/C-25_2.PDF"
+          },
+          {
+            "id": "14181453",
+            "type": "As passed by the House of Commons",
+            "xml": "https://www.parl.ca/Content/Bills/451/Government/C-25/C-25_3/C-25_E.xml",
+            "pdf": "https://www.parl.ca/Content/Bills/451/Government/C-25/C-25_3/C-25_3.PDF"
+          },
+          {
+            "id": "14204974",
+            "type": "Royal Assent",
+            "xml": "https://www.parl.ca/Content/Bills/451/Government/C-25/C-25_4/C-25_E.xml",
+            "pdf": "https://www.parl.ca/Content/Bills/451/Government/C-25/C-25_4/C-25_4.PDF"
+          }
+        ],
+        "changes": [
+          {
+            "from": "First Reading",
+            "to": "As amended by committee",
+            "provisions": [
+              {
+                "kind": "added",
+                "ref": "5.1",
+                "note": ""
+              },
+              {
+                "kind": "renumbered",
+                "ref": "43",
+                "note": ""
+              },
+              {
+                "kind": "amended",
+                "ref": "48 / 480.1",
+                "note": "Impersonation"
+              },
+              {
+                "kind": "amended",
+                "ref": "60",
+                "note": ""
+              },
+              {
+                "kind": "amended",
+                "ref": "63",
+                "note": ""
+              },
+              {
+                "kind": "added",
+                "ref": "83.1 / 541",
+                "note": "Inspection of instructions and other reports"
+              },
+              {
+                "kind": "renumbered",
+                "ref": "87",
+                "note": "Election called within six months"
+              },
+              {
+                "kind": "removed",
+                "ref": "88 / 8",
+                "note": "Name changed to “ Hastings–Lennox and Addington”"
+              },
+              {
+                "kind": "added",
+                "ref": "88 / 8",
+                "note": ""
+              },
+              {
+                "kind": "removed",
+                "ref": "88 / 10",
+                "note": "Name changed to “ Sarnia–Lambton ”"
+              },
+              {
+                "kind": "added",
+                "ref": "88 / 10",
+                "note": ""
+              },
+              {
+                "kind": "amended",
+                "ref": "88 / 17",
+                "note": "Name changed to “ Longueuil–Charles-LeMoyne–Greenfield Park ”"
+              },
+              {
+                "kind": "amended",
+                "ref": "88 / 19",
+                "note": "Name changed to “ Richmond–Arthabaska–des-Sources ”"
+              },
+              {
+                "kind": "amended",
+                "ref": "89",
+                "note": "90th day after royal assent"
+              },
+              {
+                "kind": "added",
+                "ref": "88.1",
+                "note": ""
+              },
+              {
+                "kind": "added",
+                "ref": "88.2",
+                "note": ""
+              }
+            ]
+          },
+          {
+            "from": "As amended by committee",
+            "to": "As passed by the House of Commons",
+            "provisions": [
+              {
+                "kind": "removed",
+                "ref": "88 / 8",
+                "note": ""
+              },
+              {
+                "kind": "removed",
+                "ref": "88 / 10",
+                "note": ""
+              }
+            ]
+          }
+        ],
+        "inForce": [
+          {
+            "ref": "89",
+            "note": "90th day after royal assent",
+            "text": "Sections 88 to 88.2 come into force on the 90th day after the day on which this Act receives royal assent."
+          }
+        ],
+        "penalties": [
+          {
+            "ref": "62 / 500",
+            "note": "Punishment – strict liability offences",
+            "amounts": [
+              "$2,000"
+            ],
+            "text": "(1) Every person who is guilty of an offence under any of subsections 484(1), 489(1), 491(1), 492(1), 495(1), 495.1(1), 495.2(1), 495.21(0.1) and (1), 495.22(1), 495.3(1), 496(1), 496.1(1), 497(1), 497.1(1), 497.2(1), 497.3(1), 497.4(1), 497.5(1), 498(1) and 499(1) is liable o..."
+          },
+          {
+            "ref": "67 / 508.5",
+            "note": "Maximum amount of penalty",
+            "amounts": [
+              "$25,000",
+              "$100,000"
+            ],
+            "text": "(1) Subject to subsections (2) to (6), the maximum administrative monetary penalty for a violation is $25,000, in the case of an individual, and $100,000, in the case of a corporation or an entity."
+          },
+          {
+            "ref": "80",
+            "note": "",
+            "amounts": [
+              "$8,500",
+              "$30,000"
+            ],
+            "text": "Paragraphs 521.14(a) and (b) of the Act are replaced by the following: (a) request a review by the Commissioner with respect to the alleged violation or the penalty, or both, if the amount of the penalty is (i) $8,500 or less, in the case of an individual, or (ii) $30,000 or l..."
+          }
+        ],
+        "provisionCount": 120
       }
     },
     {
@@ -9513,14 +12379,97 @@
             "chamber": "House",
             "committee": "FINA",
             "number": "9",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-9/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-9/notice",
+            "witnesses": {
+              "orgs": [
+                "Canada Revenue Agency",
+                "Department of Finance",
+                "Privy Council Office"
+              ],
+              "people": [],
+              "appearing": []
+            },
+            "study": "13098152",
+            "amendments": [
+              {
+                "mover": "Don Davies",
+                "party": "NDP",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "adopted"
+              }
+            ]
           },
           {
             "date": "2025-10-22",
             "chamber": "House",
             "committee": "FINA",
             "number": "8",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-8/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-8/notice",
+            "witnesses": {
+              "orgs": [
+                "Canada Revenue Agency",
+                "Department of Finance",
+                "Privy Council Office"
+              ],
+              "people": [],
+              "appearing": []
+            },
+            "study": "13098152",
+            "amendments": []
           },
           {
             "date": "2025-10-20",
@@ -9713,8 +12662,394 @@
         }
       ],
       "text": {
-        "versions": []
-      }
+        "basis": "13548072,13703014,13833697,13969008",
+        "analysis": 2,
+        "versions": [
+          {
+            "id": "13548072",
+            "type": "First Reading",
+            "xml": "https://www.parl.ca/Content/Bills/451/Government/C-4/C-4_1/C-4_E.xml",
+            "pdf": "https://www.parl.ca/Content/Bills/451/Government/C-4/C-4_1/C-4_1.PDF"
+          },
+          {
+            "id": "13703014",
+            "type": "As amended by committee",
+            "xml": "https://www.parl.ca/Content/Bills/451/Government/C-4/C-4_2/C-4_E.xml",
+            "pdf": "https://www.parl.ca/Content/Bills/451/Government/C-4/C-4_2/C-4_2.PDF"
+          },
+          {
+            "id": "13833697",
+            "type": "As passed by the House of Commons",
+            "xml": "https://www.parl.ca/Content/Bills/451/Government/C-4/C-4_3/C-4_E.xml",
+            "pdf": "https://www.parl.ca/Content/Bills/451/Government/C-4/C-4_3/C-4_3.PDF"
+          },
+          {
+            "id": "13969008",
+            "type": "Royal Assent",
+            "xml": "https://www.parl.ca/Content/Bills/451/Government/C-4/C-4_4/C-4_E.xml",
+            "pdf": "https://www.parl.ca/Content/Bills/451/Government/C-4/C-4_4/C-4_4.PDF"
+          }
+        ],
+        "changes": [
+          {
+            "from": "First Reading",
+            "to": "As amended by committee",
+            "provisions": [
+              {
+                "kind": "amended",
+                "ref": "3",
+                "note": ""
+              },
+              {
+                "kind": "amended",
+                "ref": "4",
+                "note": ""
+              },
+              {
+                "kind": "amended",
+                "ref": "5",
+                "note": ""
+              },
+              {
+                "kind": "amended",
+                "ref": "6",
+                "note": ""
+              },
+              {
+                "kind": "amended",
+                "ref": "7",
+                "note": ""
+              },
+              {
+                "kind": "amended",
+                "ref": "8",
+                "note": ""
+              },
+              {
+                "kind": "amended",
+                "ref": "9",
+                "note": ""
+              },
+              {
+                "kind": "amended",
+                "ref": "10 / 263.3",
+                "note": "Making an application"
+              },
+              {
+                "kind": "amended",
+                "ref": "10 / 263.4",
+                "note": "Definition of agreement of sale"
+              },
+              {
+                "kind": "amended",
+                "ref": "11",
+                "note": ""
+              },
+              {
+                "kind": "added",
+                "ref": "2.1",
+                "note": "Report"
+              }
+            ]
+          }
+        ],
+        "inForce": [
+          {
+            "ref": "39",
+            "note": "",
+            "text": "Sections 14, 15, 17, 25, 26, 28, 30, 32 and 34 are deemed to have come into force on April 1, 2025."
+          },
+          {
+            "ref": "40",
+            "note": "",
+            "text": "Sections 16, 18 and 24 come into force or are deemed to have come into force on October 1, 2025."
+          },
+          {
+            "ref": "41",
+            "note": "",
+            "text": "Sections 19, 23, 27, 29, 31, 33 and 35 to 37 come into force or are deemed to have come into force on November 1, 2025."
+          },
+          {
+            "ref": "42",
+            "note": "",
+            "text": "Sections 20 to 22 and 38 come into force on April 1, 2035."
+          },
+          {
+            "ref": "49",
+            "note": "May 31, 2000",
+            "text": "The headings before section 446.1 and sections 446.1 to 446.4 of the Canada Elections Act, as enacted by section 47, are deemed to have come into force on May 31, 2000."
+          }
+        ],
+        "penalties": [
+          {
+            "ref": "4",
+            "note": "",
+            "amounts": [
+              "$450,000",
+              "$1,500,000",
+              "$1,000,000",
+              "$50,000",
+              "$500,000"
+            ],
+            "text": "(1) Subsections 254(2.01) to (2.1) of the Act are replaced by the following: (2.1) If (a) a particular individual is entitled to claim a rebate under subsection (2) in respect of a residential complex that is a single unit residential complex or a residential condominium unit ..."
+          },
+          {
+            "ref": "5",
+            "note": "",
+            "amounts": [
+              "$472,500",
+              "$1,575,000",
+              "$1,050,000",
+              "$50,000",
+              "$525,000"
+            ],
+            "text": "(1) Subsections 254.1(2.01) to (2.1) of the Act are replaced by the following: (2.1) If (a) a particular individual is entitled to claim a rebate under subsection (2) in respect of a residential complex or would be so entitled if the references in paragraphs (2)(c) and (i) to ..."
+          },
+          {
+            "ref": "6",
+            "note": "",
+            "amounts": [
+              "$472,500",
+              "$1,575,000",
+              "$1,050,000",
+              "$50,000",
+              "$525,000"
+            ],
+            "text": "(1) Subsections 255(2.01) to (2.1) of the Act are replaced by the following: (2.1) If (a) a particular individual is entitled to claim a rebate under subsection (2) in respect of a share of the capital stock of a cooperative housing corporation that entitles the particular ind..."
+          }
+        ],
+        "provisionCount": 57
+      },
+      "studies": [
+        {
+          "chamber": "House",
+          "committee": "FINA",
+          "id": "13098152",
+          "url": "https://www.ourcommons.ca/Committees/en/FINA/StudyActivity?studyActivityId=13098152",
+          "briefs": [
+            {
+              "name": "Canadian Housing and Renewal Association",
+              "individual": false,
+              "date": "2025-10-30",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13706090/br-external/CanadianHousingAndRenewalAssociation-e.pdf"
+            },
+            {
+              "name": "BC Freedom of Information and Privacy Association",
+              "individual": false,
+              "date": "2025-10-29",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13702510/br-external/BCFreedomOfInformationAndPrivacyAssociation-e.pdf"
+            },
+            {
+              "name": "Canadian Civil Liberties Association",
+              "individual": false,
+              "date": "2025-10-27",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13692277/br-external/CanadianCivilLibertiesAssociation-e.pdf"
+            },
+            {
+              "name": "OpenMedia",
+              "individual": false,
+              "date": "2025-10-24",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13688575/br-external/OpenMedia-e.pdf"
+            },
+            {
+              "name": "Office of the Commissioner of Canada Elections",
+              "individual": false,
+              "date": "2025-10-22",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13679929/br-external/OfficeOfTheCommissionerOfCanadaElections-067-251021-009-e.pdf"
+            },
+            {
+              "name": "Centre for Digital Rights",
+              "individual": false,
+              "date": "2025-10-20",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13674757/br-external/CentreForDigitalRights-e.pdf"
+            },
+            {
+              "name": "Association des professionnels de la construction et de l'habitation du Québec",
+              "individual": false,
+              "date": "2025-10-07",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13634104/br-external/AssDesProfessionnelsDeLaConstructionEtDeLHabitationDuQuebec-067-251002-025-e.pdf"
+            },
+            {
+              "name": "Union des consommateurs",
+              "individual": false,
+              "date": "2025-09-19",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13595515/br-external/UnionDesConsommateurs-067-250916-018-e.pdf"
+            },
+            {
+              "name": "Devimco Immobilier",
+              "individual": false,
+              "date": "2025-09-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13592318/br-external/DevimcoImmobilier-067-250911-010-e.pdf"
+            },
+            {
+              "name": "Bannerman, Sara",
+              "individual": true,
+              "date": "2025-09-18",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13586936/br-external/BannermanSara-e.pdf"
+            },
+            {
+              "name": "Li, Xingchen",
+              "individual": true,
+              "date": "2025-07-03",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13578014/br-external/LiXingchen-e.pdf"
+            },
+            {
+              "name": "Offices of the Information and Privacy Commissioners of Canada",
+              "individual": false,
+              "date": "2025-06-20",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13568738/br-external/OfficesOfTheInformationAndPrivacyCommissionersOfCanada-e.pdf"
+            }
+          ],
+          "witnesses": [
+            {
+              "name": "Department of Finance",
+              "people": [
+                "Amanda Riddell",
+                "Gervais Coulombe",
+                "Nina Gormanns",
+                "Pierre Leblanc",
+                "Lindsay Gwyer",
+                "Stefania Bartucci",
+                "Chris Forbes"
+              ],
+              "meetings": [
+                "9",
+                "8",
+                "5",
+                "4"
+              ]
+            },
+            {
+              "name": "Privy Council Office",
+              "people": [
+                "Rachel Pereira",
+                "Cathy Hawara"
+              ],
+              "meetings": [
+                "9",
+                "8",
+                "4"
+              ]
+            },
+            {
+              "name": "Canada Revenue Agency",
+              "people": [
+                "Hélène Lacasse",
+                "Isabelle Brault",
+                "Luisa Rizzo"
+              ],
+              "meetings": [
+                "9",
+                "8",
+                "4"
+              ]
+            },
+            {
+              "name": "As an individual",
+              "people": [
+                "Hon. Gregor Robertson",
+                "Hon. Julie Dabrusin",
+                "Carolyn Whitzman",
+                "Ian Lee",
+                "Jennifer Keesmaat",
+                "Hon. François-Philippe Champagne",
+                "Kim G. C. Moody"
+              ],
+              "meetings": [
+                "7",
+                "6",
+                "5",
+                "4"
+              ]
+            },
+            {
+              "name": "Department of the Environment",
+              "people": [
+                "Alison McDermott",
+                "Judy Meltzer",
+                "Stephanie Lane"
+              ],
+              "meetings": [
+                "7",
+                "4"
+              ]
+            },
+            {
+              "name": "Department of Housing, Infrastructure and Communities",
+              "people": [
+                "Paul Halucha"
+              ],
+              "meetings": [
+                "7"
+              ]
+            },
+            {
+              "name": "Habitat for Humanity Canada",
+              "people": [
+                "Alana Lavoie"
+              ],
+              "meetings": [
+                "6"
+              ]
+            },
+            {
+              "name": "March of Dimes Canada",
+              "people": [
+                "Amanda MacKenzie"
+              ],
+              "meetings": [
+                "6"
+              ]
+            },
+            {
+              "name": "Inclusion Canada",
+              "people": [
+                "Krista Carr"
+              ],
+              "meetings": [
+                "6"
+              ]
+            },
+            {
+              "name": "Residential Construction Council of Ontario",
+              "people": [
+                "Richard Lyall"
+              ],
+              "meetings": [
+                "5"
+              ]
+            },
+            {
+              "name": "Assembly Corporation",
+              "people": [
+                "Geoff Cape"
+              ],
+              "meetings": [
+                "5"
+              ]
+            },
+            {
+              "name": "Association des professionnels de la construction et de l'habitation du Québec",
+              "people": [
+                "Isabelle Demers"
+              ],
+              "meetings": [
+                "4"
+              ]
+            },
+            {
+              "name": "Missing Middle Initiative",
+              "people": [
+                "Mike Moffatt"
+              ],
+              "meetings": [
+                "4"
+              ]
+            }
+          ],
+          "checked": "2026-10-27"
+        }
+      ]
     },
     {
       "number": "C-268",
@@ -9902,7 +13237,20 @@
         }
       ],
       "text": {
-        "versions": []
+        "basis": "13966427",
+        "analysis": 2,
+        "versions": [
+          {
+            "id": "13966427",
+            "type": "First Reading",
+            "xml": "https://www.parl.ca/Content/Bills/451/Private/C-268/C-268_1/C-268_E.xml",
+            "pdf": "https://www.parl.ca/Content/Bills/451/Private/C-268/C-268_1/C-268_1.PDF"
+          }
+        ],
+        "changes": [],
+        "inForce": [],
+        "penalties": [],
+        "provisionCount": 4
       }
     },
     {
@@ -10070,7 +13418,230 @@
         }
       ],
       "text": {
-        "versions": []
+        "basis": "14250056",
+        "analysis": 2,
+        "versions": [
+          {
+            "id": "14250056",
+            "type": "First Reading",
+            "xml": "https://www.parl.ca/Content/Bills/451/Government/S-7/S-7_1/S-7_E.xml",
+            "pdf": "https://www.parl.ca/Content/Bills/451/Government/S-7/S-7_1/S-7_1.PDF"
+          }
+        ],
+        "changes": [],
+        "inForce": [
+          {
+            "ref": "17",
+            "note": "Order in council",
+            "text": "This Division comes into force on a day to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "36",
+            "note": "Order in council",
+            "text": "This Division comes into force on a day to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "47",
+            "note": "Order in council",
+            "text": "The provisions of this Division come into force on a day or days to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "53",
+            "note": "Order in council",
+            "text": "This Division comes into force on a day to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "105",
+            "note": "Order in council",
+            "text": "Sections 54 to 100 come into force on a day to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "120",
+            "note": "Order in council",
+            "text": "Subsections 112 (1) and (3), section 115, subsections 116 (1) to (4) and (10), 117 (1) to (4) and 119 (2) come into force on a day to be fixed by order of the Governor in Council."
+          },
+          {
+            "ref": "224",
+            "note": "One year after royal assent",
+            "text": "This Division comes into force on the first anniversary of the day on which this Act receives royal assent."
+          },
+          {
+            "ref": "248",
+            "note": "Order in council",
+            "text": "Sections 225 to 228, 230, 231, 235, 236 and 238 to 247 come into force on a day or days to be fixed by order of the Governor in Council."
+          }
+        ],
+        "penalties": [
+          {
+            "ref": "35 / 32",
+            "note": "Purpose of penalty",
+            "amounts": [
+              "$25,000",
+              "$250,000"
+            ],
+            "text": "(2) The maximum penalty for a violation is $25,000, in the case of an individual, and $250,000, in any other case."
+          },
+          {
+            "ref": "108",
+            "note": "",
+            "amounts": [
+              "$250,000"
+            ],
+            "text": "(4) The amount that may be determined under any regulations made under paragraph (1)(b) as the penalty for each violation must not exceed the lesser of (a) $250,000, and (b) the maximum fine that would be payable if the violation were proceeded with by way of summary conviction."
+          },
+          {
+            "ref": "150",
+            "note": "",
+            "amounts": [
+              "$1,000,000",
+              "$2,000,000",
+              "$500,000"
+            ],
+            "text": "(4) Every person who contravenes a regulation made under subsection (1) or (2) is guilty of an offence and liable (a) on conviction on indictment (i) in the case of an individual, to a fine of not more than $1,000,000 or to imprisonment for a term of not more than five years, ..."
+          },
+          {
+            "ref": "152 / 6.2",
+            "note": "Offence relating to interim orders – person",
+            "amounts": [
+              "$1,000,000",
+              "$2,000,000",
+              "$500,000"
+            ],
+            "text": "(1) Every person who contravenes subsection 6.1(5) is guilty of an offence and liable (a) on conviction on indictment (i) in the case of an individual, to a fine of not more than $1,000,000 or to imprisonment for a term of not more than five years, or to both, or (ii) in the c..."
+          },
+          {
+            "ref": "153",
+            "note": "",
+            "amounts": [
+              "$ 1,000,000",
+              "$ 2,000,000",
+              "$ 500,000"
+            ],
+            "text": "(1) Subparagraphs 9(a)(i) and (ii) of the Act are replaced by the following: (i) in the case of an individual, to a fine of not more than $ 1,000,000 or to imprisonment for a term of not more than five years, or to both, or (ii) in the case of a corporation, to a fine of not m..."
+          },
+          {
+            "ref": "154",
+            "note": "",
+            "amounts": [
+              "$ 1,000,000",
+              "$ 2,000,000",
+              "$ 500,000"
+            ],
+            "text": "(1) Subparagraphs 11(a)(i) and (ii) of the Act are replaced by the following: (i) in the case of an individual, to a fine of not more than $ 1,000,000 or to imprisonment for a term of not more than five years, or to both, or (ii) in the case of a corporation, to a fine of not ..."
+          },
+          {
+            "ref": "156",
+            "note": "",
+            "amounts": [
+              "$ 500,000",
+              "$ 1,000,000"
+            ],
+            "text": "Paragraphs 13(2)(a) and (b) of the Act are replaced by the following: (a) in the case of an individual, to a fine of not more than $ 500,000 or to imprisonment for a term of not more than two years less a day, or to both; or (b) in the case of a corporation, to a fine of not m..."
+          },
+          {
+            "ref": "159 / 17",
+            "note": "Offence relating to directions – operator",
+            "amounts": [
+              "$ 1,000,000",
+              "$ 2,000,000",
+              "$ 500,000",
+              "$1,000,000"
+            ],
+            "text": "(1) An operator of a vessel that contravenes subsection 16(3) is guilty of an offence and liable (a) on conviction on indictment (i) in the case of an individual, to a fine of not more than $ 1,000,000 or to imprisonment for a term of not more than five years, or to both, or (..."
+          },
+          {
+            "ref": "159 / 17.2",
+            "note": "Offence relating to subsection 17.1(1) directions",
+            "amounts": [
+              "$500,000",
+              "$1,000,000"
+            ],
+            "text": "(1) A port authority or a person in charge of a port or a marine facility that contravenes subsection 17.1(2) is guilty of an offence and liable on summary conviction (a) in the case of an individual, to a fine of not more than $500,000 or to imprisonment for a term of not mor..."
+          },
+          {
+            "ref": "159 / 17.5",
+            "note": "Offence relating to emergency directions – person",
+            "amounts": [
+              "$1,000,000",
+              "$2,000,000",
+              "$500,000"
+            ],
+            "text": "(1) Any person that contravenes subsection 17.4(5) is guilty of an offence and liable (a) on conviction on indictment (i) in the case of an individual, to a fine of not more than $1,000,000 or to imprisonment for a term of not more than five years, or to both, or (ii) in the c..."
+          },
+          {
+            "ref": "162",
+            "note": "",
+            "amounts": [
+              "$ 500,000",
+              "$ 1,000,000"
+            ],
+            "text": "(1) Subsection 20(4) of the Act is replaced by the following: (4) Every person who knowingly makes any false or misleading statement to a screening officer, or knowingly provides false or misleading information to a screening officer, is guilty of an offence punishable on summ..."
+          },
+          {
+            "ref": "163",
+            "note": "",
+            "amounts": [
+              "$ 100,000",
+              "$ 1,000,000"
+            ],
+            "text": "Paragraphs 21(3)(a) and (b) of the Act are replaced by the following: (a) in the case of an individual, to a fine of not more than $ 100,000; or (b) in the case of a corporation, to a fine of not more than $ 1,000,000."
+          },
+          {
+            "ref": "165",
+            "note": "",
+            "amounts": [
+              "$ 1,000,000",
+              "$ 2,000,000",
+              "$ 500,000"
+            ],
+            "text": "(1) Subparagraphs 25(4)(a)(i) and (ii) of the Act are replaced by the following: (i) in the case of an individual, to a fine of not more than $ 1,000,000 or to imprisonment for a term of not more than five years, or to both, or (ii) in the case of a corporation, to a fine of n..."
+          },
+          {
+            "ref": "182",
+            "note": "",
+            "amounts": [
+              "$ 250,000"
+            ],
+            "text": "Paragraph 51(c) of the Act is replaced by the following: (c) designating violations that may be proceeded with by issuing notices of violation and fixing a penalty or a range of penalties in respect of each such violation, up to a maximum of $ 250,000 but in any event not grea..."
+          },
+          {
+            "ref": "184",
+            "note": "Deemed violation – interim order",
+            "amounts": [
+              "$260",
+              "$250,000"
+            ],
+            "text": "(2) The range of penalties in respect of a violation referred to in subsection (1) is $260 to $250,000."
+          },
+          {
+            "ref": "185",
+            "note": "Deemed violation – subsection 16(3)",
+            "amounts": [
+              "$260",
+              "$250,000"
+            ],
+            "text": "(2) The range of penalties in respect of a violation referred to in subsection (1) is $260 to $250,000."
+          },
+          {
+            "ref": "186",
+            "note": "Deemed violation – subsection 17.1(2)",
+            "amounts": [
+              "$1,300",
+              "$250,000"
+            ],
+            "text": "(2) The range of penalties in respect of a violation referred to in subsection (1) is $1,300 to $250,000."
+          },
+          {
+            "ref": "187",
+            "note": "Deemed violation – emergency direction",
+            "amounts": [
+              "$1,300",
+              "$250,000"
+            ],
+            "text": "(2) The range of penalties in respect of a violation referred to in subsection (1) is $1,300 to $250,000."
+          }
+        ],
+        "provisionCount": 375
       }
     }
   ],
