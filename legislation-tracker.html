@@ -6,7 +6,7 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Digital Policy Bill Tracker</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Federal bills on online safety, privacy, cyber security, AI and digital finance, with their stage in Parliament. Updated daily from openparliament.ca and LEGISinfo.">
+<meta name="description" content="Federal bills on online safety, privacy, cyber security, AI and digital finance, with their stage in Parliament. Updated daily from LEGISinfo, the Parliament of Canada's official record.">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <style>
 /* Layout: a single reading column; summary strip, filters, then bills grouped by policy area, each row carrying its own stage track. */
@@ -194,7 +194,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
   <header>
     <div class="eyebrow">RiverRidge Policy &amp; Risk Intelligence · 45th Parliament, 1st session</div>
     <div class="titlerow"><h1>Digital policy bills before Parliament</h1><span class="beta">Beta</span></div>
-    <p class="lede">Federal bills on online safety, privacy, cyber security, AI and digital finance, and where each one stands. Bill status refreshes every morning from openparliament.ca; committees and bill-text links come from LEGISinfo, the Parliament of Canada's official record.</p>
+    <p class="lede">Federal bills on online safety, privacy, cyber security, AI and digital finance, and where each one stands. Status, dates and committees refresh every morning from LEGISinfo, the Parliament of Canada's official record.</p>
     <p class="betanote">This tracker is in beta. Check any status that matters to you against LEGISinfo, and send corrections or bills you want added to <span class="addr">contact@riverridgeintelligence.ca</span>.</p>
     <div class="checked" id="checked">Loading status…</div>
   </header>
@@ -243,7 +243,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
 
   <footer>
     <p class="contact">Need to know what a bill means for your organization, or when it is likely to move? Contact RiverRidge at <span class="addr">contact@riverridgeintelligence.ca</span>.</p>
-    <p>Sources: bill status from <a href="https://openparliament.ca/" rel="noopener">openparliament.ca</a>, retrieved automatically each day; committees and bill-text links from <a href="https://www.parl.ca/legisinfo/en/overview" rel="noopener">LEGISinfo</a>, Parliament of Canada, which is the official record. Official summaries are the summary printed in each bill, as published by Parliament and retrieved via openparliament.ca. Royal assent does not mean a law is in force; many provisions take effect later by order or regulation. Bill descriptions are RiverRidge summaries.</p>
+    <p>Sources: bill status, dates, committees and bill-text links from <a href="https://www.parl.ca/legisinfo/en/overview" rel="noopener">LEGISinfo</a>, Parliament of Canada, the official record, retrieved automatically each day. When LEGISinfo cannot be reached, status is checked against <a href="https://openparliament.ca/" rel="noopener">openparliament.ca</a> instead. Official summaries are the summary printed in each bill, as published by Parliament and retrieved via openparliament.ca. Royal assent does not mean a law is in force; many provisions take effect later by order or regulation. Bill descriptions are RiverRidge summaries.</p>
   </footer>
 </div>
 
@@ -396,7 +396,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
         <span class="pill ${pillClass(b)}">${esc(statusText(b))}</span>
         ${trackHtml(b)}
         ${ev ? `<div class="latest">Last activity: <b>${esc(ev.type)}</b>${ev.chamber ? " (" + esc(ev.chamber) + ")" : ""}, ${esc(fmtDate(ev.date))}${ago !== null && ago > 0 ? `<br>${ago} days ago` : ""}</div>` : ""}
-        ${b.stale ? `<div class="stale">openparliament.ca did not respond at the last check; showing the previous status.</div>` : ""}
+        ${b.stale ? `<div class="stale">Neither LEGISinfo nor openparliament.ca responded at the last check; showing the previous status.</div>` : ""}
       </div>
     </article>`;
   }

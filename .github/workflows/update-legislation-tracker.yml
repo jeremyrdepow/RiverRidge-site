@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Fetch bill status from openparliament.ca
+      - name: Fetch bill status from LEGISinfo (openparliament.ca as backup)
         run: node scripts/update-bills.mjs
 
       - name: Commit updated data

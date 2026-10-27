@@ -1,17 +1,16 @@
-// Refreshes the volatile fields in data/bills.json (status, stage, date, law)
-// from the openparliament.ca API, which is built for programmatic access and
-// is reachable from GitHub. LEGISinfo blocks GitHub's servers by IP, so it
-// cannot be fetched here.
+// Refreshes data/bills.json once a day. Sources, in order of preference:
 //
-// Design: data/bills.json is the baseline. It holds the rich detail seeded
-// from LEGISinfo (titles, sponsors, committees, bill-text links). This script
-// only OVERLAYS the fast-changing fields from openparliament onto that
-// baseline. If a bill cannot be fetched, its baseline record is kept as-is and
-// flagged stale. The run never fails just because a fetch did, so the live
-// page never breaks.
+// 1. LEGISinfo (Parliament of Canada), the official record: status, stage
+//    progress, latest event and its date, committees, royal assent.
+// 2. openparliament.ca, when LEGISinfo does not answer. parl.ca blocks
+//    GitHub's servers on some days (HTTP 403). openparliament carries status
+//    only, so a bill's last LEGISinfo record is kept unless openparliament
+//    shows the bill has moved since.
+// 3. The previous record, flagged stale, when neither answers.
 //
-// Committees are not carried by openparliament. They stay in data/bills.json
-// and are maintained by hand from LEGISinfo when they change.
+// The official summary printed in each bill comes from the bill's
+// openparliament page either way. The run never fails because a fetch did,
+// so the live page never breaks.
 //
 // Run by .github/workflows/update-legislation-tracker.yml once a day.
 // Node 20+ (built-in fetch). No dependencies.
@@ -31,19 +30,134 @@ const HEADERS = {
   Accept: "application/json",
 };
 
-async function fetchBill(number) {
-  const url = `https://api.openparliament.ca/bills/${SESSION}/${number.toUpperCase()}/?format=json`;
+// GET JSON with up to three attempts. A 403 is a block, not a hiccup, so it
+// is not retried.
+async function getJson(url) {
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
       const res = await fetch(url, { headers: HEADERS });
-      if (res.status === 429) throw new Error("HTTP 429 (rate limited)");
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (!res.ok) {
+        const err = new Error(`HTTP ${res.status}`);
+        err.status = res.status;
+        throw err;
+      }
       return await res.json();
     } catch (err) {
-      if (attempt === 3) throw err;
+      if (attempt === 3 || err.status === 403) throw err;
       await sleep(3000 * attempt);
     }
   }
+}
+
+async function fetchLegisinfo(number) {
+  const data = await getJson(`https://www.parl.ca/legisinfo/en/bill/${SESSION}/${number.toLowerCase()}/json`);
+  const bill = Array.isArray(data) ? data[0] : data;
+  if (!bill || !bill.NumberCode) throw new Error("unexpected payload");
+  return bill;
+}
+
+const fetchOpenparliament = (number) =>
+  getJson(`https://api.openparliament.ca/bills/${SESSION}/${number.toUpperCase()}/?format=json`);
+
+function committeeUrl(acronym, chamber) {
+  if (!acronym) return null;
+  return chamber === "Senate"
+    ? `https://sencanada.ca/en/committees/${acronym}/${SESSION}`
+    : `https://www.ourcommons.ca/Committees/en/${acronym}?parl=45&session=1`;
+}
+
+function committeesFrom(bill) {
+  const list = [];
+  const seen = new Set();
+  const add = (c, chamber, role) => {
+    if (!c || !c.CommitteeNameEn) return;
+    const key = `${chamber}|${c.CommitteeAcronym || c.CommitteeNameEn}|${role}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+    list.push({
+      name: c.CommitteeNameEn,
+      acronym: c.CommitteeAcronym || "",
+      chamber,
+      role,
+      url: committeeUrl(c.CommitteeAcronym, chamber),
+      current: false,
+    });
+  };
+  const stages = bill.BillStages || {};
+  for (const [arr, chamber] of [
+    [stages.HouseBillStages, "House of Commons"],
+    [stages.SenateBillStages, "Senate"],
+  ]) {
+    for (const st of arr || []) {
+      add(st.Committee, chamber, "study");
+      for (const m of st.CommitteeMeetings || []) add(m, chamber, "study");
+    }
+  }
+  const pre = bill.SenatePreStudyCommitteeDetails;
+  for (const c of Array.isArray(pre) ? pre : pre ? [pre] : []) add(c, "Senate", "pre-study");
+
+  // Flag the committee(s) holding the bill right now.
+  const status = bill.StatusNameEn || "";
+  if (/committee/i.test(status)) {
+    const chamber = /Senate/.test(status) ? "Senate" : "House of Commons";
+    const inChamber = list.filter((c) => c.chamber === chamber && c.role === "study");
+    if (inChamber.length) inChamber[inChamber.length - 1].current = true;
+  }
+  if (bill.IsInSenatePreStudy) list.filter((c) => c.role === "pre-study").forEach((c) => (c.current = true));
+  return list;
+}
+
+function textUrl(bill) {
+  const code = bill.NumberCode.toUpperCase();
+  let version = "first-reading";
+  if (bill.ReceivedRoyalAssent) version = "royal-assent";
+  else if (bill.PassedFirstChamberThirdReading) version = "third-reading";
+  return `https://www.parl.ca/DocumentViewer/en/${SESSION}/bill/${code}/${version}`;
+}
+
+// A full record from LEGISinfo. Fields LEGISinfo does not carry (official
+// summary, RiverRidge fields) come through from the previous record.
+function fromLegisinfo(bill, base) {
+  const statute =
+    bill.StatuteYear && bill.StatuteChapter ? `S.C. ${bill.StatuteYear}, c. ${bill.StatuteChapter}` : null;
+  return {
+    ...base,
+    number: bill.NumberCode,
+    shortTitle: bill.ShortTitleEn || "",
+    longTitle: bill.LongTitleEn || "",
+    type: bill.BillDocumentTypeNameEn || "",
+    isGovernmentBill: !!bill.IsGovernmentBill,
+    originatingChamber: bill.OriginatingChamberNameEn || base.originatingChamber || "",
+    sponsor: [bill.SponsorPersonShortHonorificEn, (bill.SponsorPersonName || "").trim()]
+      .filter(Boolean)
+      .join(" ")
+      .trim(),
+    sponsorTitle: bill.SponsorAffiliationTitleEn || bill.SponsorConstituencyNameEn || "",
+    status: bill.StatusNameEn || base.status || "",
+    statusSource: "legisinfo",
+    latestEvent: bill.LatestBillEventTypeNameEn
+      ? {
+          type: bill.LatestBillEventTypeNameEn,
+          date: (bill.LatestBillEventDateTime || "").slice(0, 10),
+          chamber: bill.LatestBillEventChamberNameEn || "",
+        }
+      : base.latestEvent || null,
+    progress: [
+      !!bill.PassedFirstChamberFirstReading,
+      !!bill.PassedFirstChamberSecondReading,
+      !!bill.PassedFirstChamberThirdReading,
+      !!bill.PassedSecondChamberFirstReading,
+      !!bill.PassedSecondChamberSecondReading,
+      !!bill.PassedSecondChamberThirdReading,
+      !!bill.ReceivedRoyalAssent,
+    ],
+    royalAssent: bill.ReceivedRoyalAssentDateTime ? bill.ReceivedRoyalAssentDateTime.slice(0, 10) : null,
+    statute,
+    committees: committeesFrom(bill),
+    legisinfoUrl: `https://www.parl.ca/legisinfo/en/bill/${SESSION}/${bill.NumberCode.toLowerCase()}`,
+    textUrl: textUrl(bill),
+    stale: false,
+  };
 }
 
 // The official summary printed in the bill, as shown on the bill's
@@ -117,10 +231,11 @@ function chamberFromStatus(s) {
   return "";
 }
 
-// Furthest of the 7 stages reached, derived from the status text plus the
-// bill's originating chamber. Approximate but only ever used to advance the
-// bar: the result is max()'d against the baseline so parsing noise can never
-// move a bill backwards.
+// Furthest of the 7 stages passed, derived from openparliament's status text
+// ("Third reading (House)" means at third reading, so two readings passed, as
+// LEGISinfo counts them) plus the bill's originating chamber. Approximate but
+// only ever used to advance the bar: the result is max()'d against the
+// previous record so parsing noise can never move a bill backwards.
 // Count of true entries at the front of a progress array.
 const countProgress = (p) => (Array.isArray(p) ? p.filter(Boolean).length : 0);
 const toProgress = (n) => Array.from({ length: 7 }, (_, i) => i < n);
@@ -131,7 +246,7 @@ function derivedStages(s, originating) {
   const second = cur && originating && cur !== originating;
   // Stage within the current chamber.
   let within = 0;
-  if (/third reading/i.test(s)) within = 3;
+  if (/third reading/i.test(s)) within = 2;
   else if (/report stage/i.test(s)) within = 2;
   else if (/committee/i.test(s)) within = 2;
   else if (/second reading/i.test(s)) within = 1;
@@ -143,16 +258,20 @@ function derivedStages(s, originating) {
 // Today's date in Ottawa, YYYY-MM-DD.
 const today = () => new Date().toLocaleDateString("en-CA", { timeZone: "America/Toronto" });
 
-function overlay(base, op) {
+function fromOpenparliament(base, op) {
   const s = statusText(op);
   if (!s) return null;
   const law = isLaw(op, s);
   const chamber = chamberFromStatus(s);
-  const reached = Math.max(countProgress(base.progress), law ? 7 : derivedStages(s, base.originatingChamber));
+  const had = countProgress(base.progress);
+  const derived = law ? 7 : derivedStages(s, base.originatingChamber);
+  // The last LEGISinfo record is richer (exact dates, committees). Keep it
+  // unless openparliament shows the bill has moved on since.
+  if (base.statusSource === "legisinfo" && derived <= had) return { ...base, stale: false };
+  const reached = Math.max(had, derived);
   // openparliament gives no event date, so a new status is dated the day this
-  // script first sees it. An unchanged status keeps the baseline event, which
-  // also preserves the more detailed LEGISinfo event seeded in the baseline.
-  const changed = base.statusSource === "openparliament" && base.status !== s;
+  // script first sees it. An unchanged status keeps the previous event.
+  const changed = derived > had || (base.statusSource === "openparliament" && base.status !== s);
   const date = dateFromStatus(s) || today();
 
   const next = {
@@ -185,9 +304,9 @@ function changesFor(prev, next) {
   const isNowLaw = countProgress(next.progress) >= 7;
   if (isNowLaw && !wasLaw) return [entry("law", "Became law (royal assent)")];
   if (countProgress(next.progress) > countProgress(prev.progress)) return [entry("stage", `Advanced to: ${next.status}`)];
-  // Wording changes count only when both readings came from openparliament,
-  // so the one-time switch from LEGISinfo wording does not flag every bill.
-  if (prev.statusSource === "openparliament" && next.statusSource === "openparliament" && prev.status !== next.status) {
+  // Wording changes count only when both readings came from the same source,
+  // so switching between LEGISinfo and openparliament wording is not a change.
+  if (prev.statusSource && prev.statusSource === next.statusSource && prev.status !== next.status) {
     return [entry("status", `Status now: ${next.status}`)];
   }
   return [];
@@ -204,9 +323,10 @@ try {
 const baseByNumber = new Map(previous.bills.map((b) => [b.number, b]));
 
 const bills = [];
-let updated = 0;
-let stale = 0;
+const count = { legisinfo: 0, openparliament: 0, stale: 0 };
 const changes = [];
+// After three 403s in a row parl.ca is blocking this run; stop asking it.
+let legisinfoBlocks = 0;
 for (const cfg of config.bills) {
   const base = baseByNumber.get(cfg.number) || {
     number: cfg.number,
@@ -216,25 +336,43 @@ for (const cfg of config.bills) {
     legisinfoUrl: `https://www.parl.ca/legisinfo/en/bill/${SESSION}/${cfg.number.toLowerCase()}`,
     textUrl: `https://www.parl.ca/DocumentViewer/en/${SESSION}/bill/${cfg.number}/first-reading`,
   };
-  let rec;
-  try {
-    const op = await fetchBill(cfg.number);
-    rec = overlay(base, op);
-    if (rec) {
-      console.log(`ok   ${cfg.number}: ${rec.status}`);
-      updated++;
-    } else {
-      rec = { ...base, stale: true };
-      stale++;
-      console.error(`nostatus ${cfg.number}: no status field in response (kept baseline). Keys: ${Object.keys(op || {}).join(", ")}`);
+  let rec = null;
+  if (legisinfoBlocks < 3) {
+    try {
+      rec = fromLegisinfo(await fetchLegisinfo(cfg.number), base);
+      legisinfoBlocks = 0;
+      count.legisinfo++;
+      console.log(`ok   ${cfg.number} (LEGISinfo): ${rec.status}`);
+    } catch (err) {
+      if (err.status === 403 && ++legisinfoBlocks === 3) {
+        console.error("LEGISinfo returned 403 three times in a row; using openparliament.ca for the remaining bills.");
+      }
+      console.error(`legisinfo ${cfg.number}: ${err.message}`);
     }
-  } catch (err) {
-    rec = { ...base, stale: true };
-    stale++;
-    console.error(`stale ${cfg.number}: ${err.message} (kept baseline)`);
+    await sleep(1200);
   }
+  if (!rec) {
+    try {
+      const op = await fetchOpenparliament(cfg.number);
+      rec = fromOpenparliament(base, op);
+      if (rec) {
+        count.openparliament++;
+        console.log(`ok   ${cfg.number} (openparliament): ${rec.status}`);
+      } else {
+        console.error(`nostatus ${cfg.number}: no status field in response. Keys: ${Object.keys(op || {}).join(", ")}`);
+      }
+    } catch (err) {
+      console.error(`openparliament ${cfg.number}: ${err.message}`);
+    }
+    await sleep(1200);
+  }
+  if (!rec) {
+    rec = { ...base, stale: true };
+    count.stale++;
+    console.error(`stale ${cfg.number}: no source answered (kept previous record)`);
+  }
+
   // Official summary: refreshed when the page can be read, otherwise kept.
-  await sleep(1200);
   try {
     const sum = await fetchSummary(cfg.number);
     if (sum) {
@@ -255,7 +393,7 @@ for (const cfg of config.bills) {
   else delete rec.outlook;
   changes.push(...changesFor(baseByNumber.get(cfg.number), rec));
   bills.push(rec);
-  await sleep(1200); // be gentle on openparliament
+  await sleep(1200); // be gentle on both sites
 }
 
 // Rolling changelog: newest first, 60 days, at most 200 entries.
@@ -266,7 +404,7 @@ const changelog = [...changes, ...(previous.changelog || [])]
 
 const out = {
   checkedAt: new Date().toISOString(),
-  source: "openparliament.ca (bill status) and LEGISinfo, Parliament of Canada (committees and links)",
+  source: "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   session: SESSION,
   themes: config.themes,
   bills,
@@ -274,4 +412,7 @@ const out = {
 };
 await writeFile(OUT_PATH, JSON.stringify(out, null, 2) + "\n");
 for (const c of changes) console.log(`change ${c.number}: ${c.text}`);
-console.log(`Wrote ${bills.length} bills: ${updated} refreshed, ${stale} kept from baseline, ${changes.length} changes logged.`);
+console.log(
+  `Wrote ${bills.length} bills: ${count.legisinfo} from LEGISinfo, ${count.openparliament} from openparliament.ca, ` +
+    `${count.stale} kept stale, ${changes.length} changes logged.`
+);
