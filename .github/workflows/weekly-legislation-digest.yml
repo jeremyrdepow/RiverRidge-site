@@ -28,4 +28,6 @@ jobs:
       - name: Open the draft as an issue
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh issue create --title "Weekly digest draft: $(head -1 digest.md | sed 's/^# //')" --body-file digest.md
+        run: |
+          title="Weekly digest draft: $(head -1 digest.md | sed 's/^# //')"
+          gh issue create --title "$title" --body-file digest.md
