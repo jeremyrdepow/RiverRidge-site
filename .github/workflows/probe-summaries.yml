@@ -1,0 +1,29 @@
+name: Probe bill summaries (temporary)
+on:
+  push:
+    branches: [probe-summaries]
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Fetch sources
+        run: |
+          UA="RiverRidge-legislation-tracker/1.0 (+https://riverridgeintelligence.ca)"
+          mkdir -p probe/out
+          for n in $(node -e 'console.log(require("./data/bills.config.json").bills.map(b=>b.number).join(" "))'); do
+            curl -sS -A "$UA" -o "probe/out/op-api-$n.json" -w "$n api %{http_code}\n" "https://api.openparliament.ca/bills/45-1/$n/?format=json" >> probe/out/codes.txt || true
+            curl -sS -A "$UA" -o "probe/out/op-page-$n.html" -w "$n page %{http_code}\n" "https://openparliament.ca/bills/45-1/$n/" >> probe/out/codes.txt || true
+            sleep 1.5
+          done
+          lc=c-34
+          curl -sS -A "$UA" -o probe/out/legisinfo-c34.json -w "legisinfo json %{http_code}\n" "https://www.parl.ca/legisinfo/en/bill/45-1/$lc/json" >> probe/out/codes.txt || true
+          curl -sS -A "$UA" -o probe/out/lop-search.html -w "lop %{http_code}\n" "https://lop.parl.ca/sites/PublicWebsite/default/en_CA/ResearchPublications/LegislativeSummaries" >> probe/out/codes.txt || true
+      - name: Commit results
+        run: |
+          git config user.name "riverridge-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add probe/out
+          git commit -m "Probe results" && git push
