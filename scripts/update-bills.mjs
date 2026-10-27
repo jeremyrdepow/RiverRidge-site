@@ -299,7 +299,10 @@ function fromOpenparliament(base, op) {
 // What moved since the previous run, as changelog entries.
 function changesFor(prev, next) {
   if (!prev) return [];
-  const entry = (kind, text) => ({ date: today(), number: next.number, kind, text });
+  // LEGISinfo dates the event itself; openparliament only lets us date the
+  // day the change was first seen.
+  const date = (next.statusSource === "legisinfo" && next.latestEvent?.date) || today();
+  const entry = (kind, text) => ({ date, number: next.number, kind, text });
   const wasLaw = countProgress(prev.progress) >= 7;
   const isNowLaw = countProgress(next.progress) >= 7;
   if (isNowLaw && !wasLaw) return [entry("law", "Became law (royal assent)")];
@@ -400,6 +403,7 @@ for (const cfg of config.bills) {
 const cutoff = new Date(Date.now() - 60 * 86400000).toISOString().slice(0, 10);
 const changelog = [...changes, ...(previous.changelog || [])]
   .filter((c) => c.date >= cutoff)
+  .sort((a, b) => b.date.localeCompare(a.date))
   .slice(0, 200);
 
 const out = {
