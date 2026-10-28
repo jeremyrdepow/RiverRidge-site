@@ -536,6 +536,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     // One short quote, from the organization most firmly against, to show the flavour.
     const show = agreed.find((p) => p.stance === "opposes" && p.quote) || agreed.find((p) => p.quote);
     return `<h4>Where organizations stand<span class="aiflag">AI-read</span></h4>
+      ${b.omnibus ? `<p class="note" style="margin:0 0 .3rem">This is a large bill covering many subjects. Most briefs address parts other than the digital ones.</p>` : ""}
       <div class="stances">${rows || `<p class="note" style="margin:0">No agreed positions yet.</p>`}</div>
       ${show ? `<p class="quoteline">“${esc(show.quote.replace(/^[“"']+|[”"']+$/g, ""))}” <span style="font-style:normal">${esc(show.name)}</span></p>` : ""}
       ${review.length ? `<p class="note">${plural(review.length, "brief", "briefs")} held back for review, because the two models read ${review.length === 1 ? "it" : "them"} differently or the quote could not be matched to the text: ${review.map((p) => esc(p.name)).join("; ")}.</p>` : ""}

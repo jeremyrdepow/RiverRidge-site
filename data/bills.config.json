@@ -21,18 +21,18 @@
 
     { "number": "C-8", "theme": "cyber", "summary": "Telecom security powers and the Critical Cyber Systems Protection Act for federally regulated critical infrastructure." },
     { "number": "C-22", "theme": "cyber", "summary": "Lawful Access Act, 2026: new police and CSIS access powers and duties on electronic service providers." },
-    { "number": "C-2", "theme": "cyber", "summary": "Strong Borders Act: border, policing and information-sharing measures." },
+    { "number": "C-2", "theme": "cyber", "omnibus": true, "summary": "Strong Borders Act: border, policing and information-sharing measures." },
 
     { "number": "C-288", "theme": "fraud-finance", "summary": "Protection Against Online Fraud Act: duties on platforms to remove fraudulent content (Conservative private member's bill)." },
     { "number": "C-29", "theme": "fraud-finance", "summary": "Creates a federal Financial Crimes Agency." },
-    { "number": "C-15", "theme": "fraud-finance", "summary": "Budget implementation: Stablecoin Act, Consumer-Driven Banking Act, bank fraud duties and repeal of the digital services tax." },
-    { "number": "C-31", "theme": "fraud-finance", "summary": "Budget implementation: includes crypto-asset reporting rules from 2027." },
+    { "number": "C-15", "theme": "fraud-finance", "omnibus": true, "summary": "Budget implementation: Stablecoin Act, Consumer-Driven Banking Act, bank fraud duties and repeal of the digital services tax." },
+    { "number": "C-31", "theme": "fraud-finance", "omnibus": true, "summary": "Budget implementation: includes crypto-asset reporting rules from 2027." },
     { "number": "S-211", "theme": "fraud-finance", "summary": "National framework on sports betting advertising." },
 
     { "number": "C-25", "theme": "elections", "summary": "Strong and Free Elections Act: election deepfakes, ban on crypto and anonymous donations, party privacy policies." },
     { "number": "C-4", "theme": "elections", "summary": "Affordability bill whose Part 4 sets the privacy regime for federal political parties." },
 
     { "number": "C-268", "theme": "connectivity", "summary": "Requires verified mobile coverage data and an updated national spectrum framework that prioritizes rural areas." },
-    { "number": "S-7", "theme": "connectivity", "summary": "Red tape bill amending 31 statutes, including digital publication of regulations and spectrum access." }
+    { "number": "S-7", "theme": "connectivity", "omnibus": true, "summary": "Red tape bill amending 31 statutes, including digital publication of regulations and spectrum access." }
   ]
 }
