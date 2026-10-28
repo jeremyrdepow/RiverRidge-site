@@ -5,484 +5,597 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Digital Policy Bill Tracker</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Federal bills on online safety, privacy, cyber security, AI and digital finance, with their stage in Parliament. Updated daily from LEGISinfo, the Parliament of Canada's official record.">
+<meta name="description" content="Federal bills on online safety, privacy, cyber security, AI and digital finance, and where each one stands in Parliament. Updated daily from LEGISinfo, the Parliament of Canada's official record.">
 <link rel="stylesheet" href="assets/fonts/fonts.css">
 <style>
-/* Layout: a single reading column; summary strip, filters, then bills grouped by policy area, each row carrying its own stage track. */
+/* Layout: top bar, intro, one filter row scoping everything below, a seven-day
+   figures row, the river (stage by policy area) beside a this-week feed, then
+   the bill table. A detail drawer opens per bill.
+   Chamber colours are the validated trio from the data-visualisation palette:
+   they stay distinguishable under red-green colour blindness, which the earlier
+   green-and-red pair did not. */
 :root {
   --bg: #f6f7f5;
   --surface: #ffffff;
   --ink: #1b2a2e;
   --muted: #5c6b6e;
+  --faint: #8a9794;
   --line: #dde3e0;
-  --accent: #1e6a64;        /* river teal: links, focus */
-  --house: #2f6b46;         /* Commons green */
-  --senate: #9e3434;        /* Senate red */
-  --law: #8a6a1f;           /* royal assent gold */
-  --idle: #c9d1ce;
   --chip: #eef2f0;
+  --accent: #1e6a64;
+  --accent-wash: #e3efed;
+  --house: #1baf7a;   /* validated trio (dataviz palette slots 3, 2, 1): passes all-pairs CVD in light and dark */
+  --senate: #eb6834;
+  --law: #2a78d6;
+  --idle: #d3dad7;
+  --bar: #a7b3b0;
+  --shadow: 0 1px 2px rgba(27, 42, 46, 0.06), 0 8px 24px rgba(27, 42, 46, 0.06);
   --font-display: "Spectral", Georgia, "Times New Roman", serif;
   --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-  --step--1: 0.8125rem;
-  --step-0: 0.9375rem;
-  --step-1: 1.125rem;
-  --step-2: 1.5rem;
-  --step-3: 2.125rem;
+  --s-1: 0.8125rem;
+  --s0: 0.9375rem;
+  --s1: 1.125rem;
+  --s2: 1.5rem;
+  --s3: 2.25rem;
+  color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #121a1c; --surface: #182225; --ink: #e4ebe8; --muted: #9aaaa7; --line: #2b383b;
-    --accent: #6cc3b9; --house: #6fb88a; --senate: #e07a7a; --law: #d6b25e; --idle: #3a4a4d; --chip: #1f2b2e;
+    --bg: #11181a; --surface: #182225; --ink: #e4ebe8; --muted: #9aaaa7; --faint: #6f807d; --line: #2b383b; --chip: #1f2b2e;
+    --accent: #6cc3b9; --accent-wash: #1d3331; --house: #199e70; --senate: #d95926; --law: #3987e5; --idle: #33433f; --bar: #5f7270;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #121a1c; --surface: #182225; --ink: #e4ebe8; --muted: #9aaaa7; --line: #2b383b;
-  --accent: #6cc3b9; --house: #6fb88a; --senate: #e07a7a; --law: #d6b25e; --idle: #3a4a4d; --chip: #1f2b2e;
+  --bg: #11181a; --surface: #182225; --ink: #e4ebe8; --muted: #9aaaa7; --faint: #6f807d; --line: #2b383b; --chip: #1f2b2e;
+  --accent: #6cc3b9; --accent-wash: #1d3331; --house: #199e70; --senate: #d95926; --law: #3987e5; --idle: #33433f; --bar: #5f7270;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
   color-scheme: dark;
 }
-
-body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: var(--step-0);
-  line-height: 1.55;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-.wrap { max-width: 60rem; margin: 0 auto; padding-block: 2.5rem 4rem; display: grid; gap: 2rem; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: var(--s0); line-height: 1.5; }
 a { color: var(--accent); text-underline-offset: 2px; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.mono { font-family: var(--font-data); }
 
-header { display: grid; gap: 0.75rem; }
-.eyebrow { font-family: var(--font-data); font-size: var(--step--1); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
-h1 { font-family: var(--font-display); font-weight: 600; font-size: var(--step-3); line-height: 1.15; margin: 0; text-wrap: balance; }
-.lede { margin: 0; max-width: 62ch; color: var(--muted); }
-.checked { font-family: var(--font-data); font-size: var(--step--1); color: var(--muted); }
-.titlerow { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; }
-.beta { font-family: var(--font-data); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--law); border: 1px solid var(--law); border-radius: 4px; padding: 0.1rem 0.45rem; }
-.betanote { margin: 0; max-width: 62ch; font-size: var(--step--1); color: var(--ink); background: var(--chip); border-left: 3px solid var(--law); padding: 0.5rem 0.75rem; }
 
-.summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
-.summary button { all: unset; cursor: pointer; padding: 0.9rem 1rem; display: grid; gap: 0.15rem; border-left: 1px solid var(--line); }
-.summary button:first-child { border-left: 0; }
-.summary button[aria-pressed="true"] { background: var(--chip); box-shadow: inset 0 -3px 0 var(--accent); }
-.summary .n { font-family: var(--font-display); font-size: var(--step-2); font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.1; }
-.summary .l { font-size: var(--step--1); color: var(--muted); }
-@media (max-width: 560px) {
-  .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .summary button:nth-child(3) { border-left: 0; }
-  .summary button:nth-child(n+3) { border-top: 1px solid var(--line); }
-}
+.top { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.top .in { max-width: 76rem; margin: 0 auto; padding: 0.6rem max(16px, env(safe-area-inset-left)); display: flex; align-items: center; gap: 0.75rem 1.25rem; flex-wrap: wrap; }
+.brand { font-family: var(--font-data); font-weight: 500; letter-spacing: 0.14em; font-size: 0.8rem; text-decoration: none; color: var(--ink); }
+.brand span { color: var(--accent); }
+.top .what { color: var(--muted); font-size: var(--s-1); }
+.beta { font-family: var(--font-data); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid var(--muted); color: var(--muted); border-radius: 4px; padding: 0.05rem 0.4rem; }
+.top .right { margin-left: auto; display: flex; align-items: center; gap: 1rem; font-size: var(--s-1); color: var(--muted); }
 
-.filters { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
-.filters .label { font-size: var(--step--1); color: var(--muted); margin-right: 0.25rem; }
-.chipbtn { font: inherit; font-size: var(--step--1); border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 0.3rem 0.75rem; cursor: pointer; }
-.chipbtn[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.wrap { max-width: 76rem; margin: 0 auto; padding: 1.75rem max(16px, env(safe-area-inset-left)) 4rem; display: grid; gap: 1.25rem; }
+.intro { display: grid; gap: 0.5rem; max-width: 52rem; }
+.intro h1 { font-family: var(--font-display); font-weight: 600; font-size: var(--s3); line-height: 1.1; margin: 0; text-wrap: balance; }
+.intro p { margin: 0; color: var(--muted); max-width: 64ch; }
 
-.key { display: flex; flex-wrap: wrap; gap: 1rem; font-size: var(--step--1); color: var(--muted); }
-.key span { display: inline-flex; align-items: center; gap: 0.4rem; }
-.key i { width: 0.7rem; height: 0.7rem; border-radius: 50%; display: inline-block; }
+.filters { display: flex; flex-wrap: wrap; gap: 0.6rem 0.9rem; align-items: center; padding: 0.75rem; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.seg button { border: 0; background: none; padding: 0.4rem 0.7rem; font-size: var(--s-1); cursor: pointer; color: var(--muted); }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.field { display: inline-flex; align-items: center; gap: 0.4rem; font-size: var(--s-1); color: var(--muted); }
+select, input[type="search"] { font: inherit; font-size: var(--s-1); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 0.4rem 0.6rem; }
+input[type="search"] { min-width: 14rem; flex: 1 1 14rem; max-width: 22rem; }
+.draft { font-family: var(--font-data); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--senate); }
+.filters .count { margin-left: auto; font-size: var(--s-1); color: var(--muted); }
 
-section.theme { display: grid; gap: 0.25rem; }
-section.theme h2 { font-family: var(--font-display); font-weight: 600; font-size: var(--step-1); margin: 0 0 0.25rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--ink); }
-.bill { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 15rem); gap: 0.5rem 1.5rem; padding: 1rem 0; border-bottom: 1px solid var(--line); }
-.bill > div { min-width: 0; }
-@media (max-width: 680px) { .bill { grid-template-columns: minmax(0, 1fr); } }
-.bill h3 { margin: 0; font-size: var(--step-1); font-weight: 600; line-height: 1.3; }
-.num { font-family: var(--font-data); font-weight: 500; margin-right: 0.5rem; }
-.meta { font-size: var(--step--1); color: var(--muted); margin: 0.15rem 0 0.4rem; }
-.links { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; font-size: var(--step--1); }
-.cmtes { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.1rem 0 0.5rem; }
-.cmte { font-size: var(--step--1); background: var(--chip); border: 1px solid var(--line); border-radius: 4px; padding: 0.1rem 0.5rem; text-decoration: none; color: var(--ink); }
-.cmte b { font-family: var(--font-data); font-weight: 500; }
-.cmte.now { border-color: currentColor; }
-.cmte.now.house { color: var(--house); }
-.cmte.now.senate { color: var(--senate); }
-.cmte .tag { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; margin-left: 0.3rem; }
+.kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.75rem; }
+.kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 0.9rem 1rem 0.8rem; display: grid; gap: 0.15rem; align-content: start; }
+.kpi .label { font-size: var(--s-1); color: var(--muted); }
+.kpi .value { font-size: 2rem; font-weight: 600; line-height: 1.1; letter-spacing: -0.01em; }
+.kpi .delta { font-size: var(--s-1); color: var(--muted); }
+.spark { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2px; align-items: end; height: 28px; margin-top: 0.35rem; }
+.spark i { display: block; background: var(--bar); border-radius: 2px 2px 0 0; min-height: 1px; cursor: default; }
+.spark i.now { background: var(--accent); }
+.spark i:hover, .spark i:focus-visible { filter: brightness(0.85); }
+.tabletoggle { justify-self: start; font-size: var(--s-1); background: none; border: 0; padding: 0; color: var(--accent); text-decoration: underline; cursor: pointer; }
+table.data { border-collapse: collapse; font-size: var(--s-1); margin-top: 0.5rem; }
+table.data th, table.data td { border-bottom: 1px solid var(--line); padding: 0.25rem 0.75rem 0.25rem 0; text-align: left; font-variant-numeric: tabular-nums; }
 
-.status { display: grid; gap: 0.4rem; align-content: start; }
-.pill { justify-self: start; font-size: var(--step--1); font-weight: 500; padding: 0.15rem 0.55rem; border-radius: 4px; border: 1px solid currentColor; }
-.pill.house { color: var(--house); }
-.pill.senate { color: var(--senate); }
-.pill.law { color: var(--law); }
-.pill.waiting { color: var(--muted); }
-.track { display: grid; grid-template-columns: repeat(3, 1fr) 0.4rem repeat(3, 1fr) 0.4rem 1fr; gap: 3px; align-items: end; }
-.track .seg { height: 6px; border-radius: 2px; background: var(--idle); }
-.track .seg.on.house { background: var(--house); }
-.track .seg.on.senate { background: var(--senate); }
-.track .seg.on.law { background: var(--law); }
-.track .gap { height: 6px; }
-.tracklabels { display: grid; grid-template-columns: 3fr 0.4rem 3fr 0.4rem 1fr; gap: 3px; font-family: var(--font-data); font-size: 0.68rem; color: var(--muted); letter-spacing: 0.03em; }
-.tracklabels span:nth-child(5) { text-align: right; }
-.latest { font-size: var(--step--1); color: var(--muted); font-variant-numeric: tabular-nums; }
-.latest b { color: var(--ink); font-weight: 500; }
-.stale { font-size: var(--step--1); color: var(--senate); }
-.bill { scroll-margin-top: 1rem; }
-.bill:target { background: var(--chip); box-shadow: -0.75rem 0 0 var(--chip), 0.75rem 0 0 var(--chip); }
-.record { margin: 0.1rem 0 0.6rem; max-width: 66ch; font-size: var(--step--1); }
-.record .tally { color: var(--muted); }
-.record .tally b { color: var(--ink); font-weight: 600; }
-.record summary { cursor: pointer; color: var(--accent); margin-top: 0.2rem; }
-.record h4 { margin: 0.6rem 0 0.2rem; font-size: var(--step--1); font-weight: 600; }
-.record ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.25rem; }
-.record .when { font-family: var(--font-data); color: var(--muted); font-variant-numeric: tabular-nums; }
-.record .who { color: var(--muted); }
-.record .note { margin: 0.4rem 0 0; color: var(--muted); }
-.record details + details { margin-top: 0.1rem; }
-.stances { display: grid; gap: 0.35rem; margin: 0.3rem 0 0.6rem; }
-.stancerow { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 0.5rem; align-items: baseline; font-size: var(--step--1); }
+.grid2 { display: grid; grid-template-columns: minmax(0, 1fr) 21rem; gap: 1.25rem; align-items: start; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1.1rem 1.2rem; box-shadow: var(--shadow); }
+.card > h2 { font-family: var(--font-display); font-weight: 600; font-size: var(--s1); margin: 0; }
+.card > .sub { margin: 0.2rem 0 0.9rem; font-size: var(--s-1); color: var(--muted); }
+
+/* River: one row per policy area; each row holds its own eight-column stage grid, so it reflows on phones. */
+.river { --band: color-mix(in srgb, var(--chip) 60%, var(--surface)); }
+.rrow { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); }
+.rrow + .rrow { border-top: 1px solid var(--line); }
+.rhead { border-bottom: 1px solid var(--line); }
+.rrow .lanecol { font-size: var(--s-1); padding: 0.5rem 0.6rem 0.5rem 0; line-height: 1.25; display: flex; align-items: center; }
+.stages { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); }
+.gh { font-family: var(--font-data); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); text-align: center; padding-bottom: 0.25rem; border-bottom: 1px solid var(--line); }
+.sh { font-size: 0.75rem; color: var(--muted); text-align: center; padding: 0.35rem 0.15rem 0.45rem; line-height: 1.2; }
+.sh .short { display: none; }
+.cell { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 0.4rem 0.1rem; min-height: 3rem; }
+.cell::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--line); z-index: 0; }
+.cell.c0::before { left: 50%; }
+.cell.c7::before { right: 50%; }
+.band { background: var(--band); }
+.band .bdot::before { box-shadow: 0 0 0 2px var(--band); }
+.band .bdot.quiet::before { background: var(--band); box-shadow: inset 0 0 0 2px var(--c), 0 0 0 2px var(--band); }
+.bdot { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 0.3rem; white-space: nowrap; border: 0; background: none; padding: 3px 4px; min-height: 24px; border-radius: 6px; cursor: pointer; font-family: var(--font-data); font-size: 0.72rem; color: var(--ink); }
+.bdot::before { content: ""; width: 11px; height: 11px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 2px var(--surface); flex: none; }
+.bdot.quiet::before { background: var(--surface); box-shadow: inset 0 0 0 2px var(--c), 0 0 0 2px var(--surface); }
+.bdot:hover, .bdot.on { background: var(--accent-wash); }
+.bdot.dim { opacity: 0.25; }
+.house { --c: var(--house); } .senate { --c: var(--senate); } .law { --c: var(--law); }
+.legend { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; font-size: var(--s-1); color: var(--muted); margin-top: 0.9rem; align-items: center; }
+.legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.legend i { width: 11px; height: 11px; border-radius: 50%; background: var(--c); display: inline-block; }
+.legend i.hollow { background: transparent; box-shadow: inset 0 0 0 2px var(--muted); }
+
+/* This week feed */
+.feed { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
+.feed li { display: grid; grid-template-columns: 3.4rem minmax(0, 1fr); gap: 0.5rem; font-size: var(--s-1); }
+.feed .d { font-family: var(--font-data); color: var(--muted); font-size: 0.75rem; padding-top: 0.1rem; }
+.feed .t b { font-weight: 600; }
+.feed .t .k { color: var(--muted); }
+.feed button.bill { border: 0; background: none; padding: 0; font: inherit; font-family: var(--font-data); font-weight: 500; color: var(--accent); cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+.week h3 { font-size: var(--s-1); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 500; margin: 1.2rem 0 0.5rem; font-family: var(--font-data); }
+.empty { color: var(--muted); font-size: var(--s-1); margin: 0; }
+
+/* Bill table */
+.thead, .row { display: grid; grid-template-columns: minmax(0, 2.6fr) minmax(0, 1.4fr) 8.5rem minmax(0, 1.2fr); gap: 1rem; align-items: center; }
+.thead { font-family: var(--font-data); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding: 0 0.5rem 0.4rem; border-bottom: 1px solid var(--line); }
+.row { padding: 0.8rem 0.5rem; border-bottom: 1px solid var(--line); cursor: pointer; border-radius: 8px; }
+.row:hover { background: var(--accent-wash); }
+.row .name { display: grid; gap: 0.15rem; min-width: 0; }
+.row .name button { all: unset; cursor: pointer; font-weight: 600; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.row .name button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.row .num { font-family: var(--font-data); font-weight: 500; margin-right: 0.45rem; }
+.row .lead { color: var(--muted); font-size: var(--s-1); }
+.tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.15rem; }
+.tag { font-size: 0.7rem; background: var(--chip); border-radius: 999px; padding: 0.05rem 0.5rem; color: var(--muted); }
+.stage { display: grid; gap: 0.3rem; font-size: var(--s-1); }
+.status { display: inline-flex; align-items: baseline; gap: 0.4rem; line-height: 1.3; }
+.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--c); flex: none; transform: translateY(-1px); }
+.status.waiting::before { background: transparent; box-shadow: inset 0 0 0 2px var(--muted); }
+.track { display: grid; grid-template-columns: repeat(3, 1fr) 4px repeat(3, 1fr) 4px 1fr; gap: 2px; max-width: 13rem; }
+.track i { height: 5px; border-radius: 2px; background: var(--idle); }
+.track i.on.house { background: var(--house); } .track i.on.senate { background: var(--senate); } .track i.on.law { background: var(--law); }
+.track b { display: block; }
+.momentum { display: grid; gap: 0.2rem; }
+.momentum .spark { height: 22px; margin: 0; }
+.momentum small { font-size: 0.7rem; color: var(--muted); }
+.last { font-size: var(--s-1); display: grid; gap: 0.1rem; }
+.last .when { font-family: var(--font-data); font-size: 0.75rem; color: var(--muted); }
+.last .next { color: var(--accent); }
+.flag { font-family: var(--font-data); font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; border: 1px dashed var(--muted); color: var(--muted); border-radius: 4px; padding: 0 0.3rem; margin-left: 0.35rem; vertical-align: 0.15em; }
+.tablebar { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
+.tablebar .sub { margin: 0; font-size: var(--s-1); color: var(--muted); }
+.tablebar .field { margin-left: auto; }
+
+footer { font-size: var(--s-1); color: var(--muted); display: grid; gap: 0.6rem; border-top: 1px solid var(--line); padding-top: 1.2rem; max-width: 70rem; }
+footer p { margin: 0; max-width: 78ch; }
+
+/* Drawer */
+.scrim { position: fixed; inset: 0; background: rgba(10, 18, 20, 0.35); z-index: 40; }
+.drawer { position: fixed; z-index: 50; top: 0; right: 0; bottom: 0; width: min(36rem, 100vw); background: var(--surface); border-left: 1px solid var(--line); box-shadow: -12px 0 40px rgba(0,0,0,0.15); overflow-y: auto; overscroll-behavior: contain; }
+.drawer .head { position: sticky; top: 0; background: var(--surface); border-bottom: 1px solid var(--line); padding: 1rem 1.25rem 0.9rem; display: grid; gap: 0.45rem; z-index: 2; }
+.drawer .close { position: absolute; top: 0.7rem; right: 0.8rem; border: 1px solid var(--line); background: var(--surface); border-radius: 8px; width: 2.2rem; height: 2.2rem; cursor: pointer; font-size: 1.1rem; line-height: 1; }
+.drawer h2 { font-family: var(--font-display); font-weight: 600; font-size: var(--s2); line-height: 1.15; margin: 0; padding-right: 2.5rem; }
+.drawer h2 .num { font-family: var(--font-data); font-weight: 500; font-size: 0.75em; margin-right: 0.5rem; color: var(--muted); }
+.drawer .long { color: var(--muted); font-size: var(--s-1); margin: 0; }
+.drawer .actions { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; font-size: var(--s-1); }
+.drawer .actions button { border: 0; background: none; padding: 0; color: var(--accent); text-decoration: underline; cursor: pointer; font-size: var(--s-1); }
+.drawer .body { padding: 1rem 1.25rem 2rem; display: grid; gap: 1.4rem; }
+.drawer h3 { font-family: var(--font-data); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin: 0 0 0.5rem; }
+.drawer .leadbig { font-size: var(--s1); font-weight: 500; margin: 0; line-height: 1.4; }
+.outlook { border-left: 3px solid var(--accent); background: var(--accent-wash); padding: 0.6rem 0.8rem; border-radius: 0 8px 8px 0; font-size: var(--s-1); }
+.outlook.pending { border-left-color: var(--line); background: var(--chip); color: var(--muted); }
+.facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.3rem 1rem; font-size: var(--s-1); margin: 0; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; }
+.tl { list-style: none; margin: 0; padding: 0; position: relative; }
+.tl .month { font-family: var(--font-data); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0.9rem 0 0.3rem; }
+.tl .month:first-child { margin-top: 0; }
+.tl .ev { display: grid; grid-template-columns: 3.2rem 14px minmax(0, 1fr); gap: 0.55rem; padding: 0.3rem 0; font-size: var(--s-1); position: relative; }
+.tl .ev .d { font-family: var(--font-data); font-size: 0.72rem; color: var(--muted); padding-top: 0.15rem; }
+.tl .ev .m { width: 10px; height: 10px; border-radius: 50%; margin-top: 0.35rem; background: var(--c); box-shadow: 0 0 0 2px var(--surface); }
+.tl .ev .m.meeting { border-radius: 2px; }
+.tl .ev .m.mention { background: var(--surface); box-shadow: inset 0 0 0 2px var(--c); }
+.tl .ev .m.decision { transform: rotate(45deg); border-radius: 1px; }
+.tl .ev .w { color: var(--muted); font-size: 0.78rem; margin-top: 0.1rem; }
+.tl-key { display: flex; flex-wrap: wrap; gap: 0.3rem 0.9rem; font-size: 0.75rem; color: var(--muted); margin-bottom: 0.6rem; }
+.tl-key span { display: inline-flex; gap: 0.35rem; align-items: center; }
+.tl-key i { width: 9px; height: 9px; background: var(--muted); display: inline-block; border-radius: 50%; }
+.tl-key i.sq { border-radius: 2px; } .tl-key i.dia { transform: rotate(45deg); border-radius: 1px; } .tl-key i.ring { background: transparent; box-shadow: inset 0 0 0 2px var(--muted); }
+.more { border: 0; background: none; padding: 0; color: var(--accent); text-decoration: underline; cursor: pointer; font-size: var(--s-1); margin-top: 0.4rem; }
+.drawer h4 { margin: 0.9rem 0 0.3rem; font-size: var(--s-1); font-weight: 600; }
+.drawer h4:first-child { margin-top: 0; }
+.drawer .body ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.25rem; font-size: var(--s-1); }
+.note { margin: 0.35rem 0 0; font-size: var(--s-1); color: var(--muted); }
+.who { color: var(--muted); }
+.stances { display: grid; gap: 0.35rem; margin: 0.3rem 0 0.5rem; }
+.stancerow { display: grid; grid-template-columns: 10.5rem minmax(0, 1fr); gap: 0.5rem; align-items: baseline; font-size: var(--s-1); }
 .stancelabel { display: inline-flex; align-items: baseline; gap: 0.35rem; color: var(--muted); }
 .stancelabel::before { content: ""; width: 9px; height: 9px; border-radius: 2px; background: var(--c); flex: none; transform: translateY(1px); }
 .stancerow.opposes { --c: var(--senate); }
 .stancerow.amend { --c: var(--law); }
 .stancerow.supports { --c: var(--house); }
 .stancerow.none { --c: var(--idle); }
-.orglist a, .orglist span { color: inherit; }
-.quoteline { color: var(--muted); font-style: italic; margin: 0.1rem 0 0; }
-.aiflag { font-family: var(--font-data); font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 0.3rem; margin-left: 0.35rem; vertical-align: 0.1em; }
-table.amend { border-collapse: collapse; font-size: var(--step--1); margin-top: 0.2rem; }
+.quoteline { color: var(--muted); font-style: italic; margin: 0.2rem 0 0; font-size: var(--s-1); }
+.aiflag { font-family: var(--font-data); font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 0.3rem; margin-left: 0.4rem; vertical-align: 0.1em; font-weight: 400; }
+table.amend { border-collapse: collapse; font-size: var(--s-1); margin-top: 0.2rem; }
 table.amend th, table.amend td { text-align: left; padding: 0.15rem 1.2rem 0.15rem 0; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
-table.amend th { font-weight: 600; }
-.onnotice { font-size: var(--step--1); color: var(--muted); border-top: 1px dashed var(--line); padding-top: 0.6rem; }
-.onnotice h3 { margin: 0 0 0.25rem; font-size: var(--step--1); font-weight: 600; color: var(--ink); }
-.onnotice ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.25rem; color: var(--ink); }
-.checked a { color: var(--accent); }
-.copylink { font: inherit; font-size: var(--step--1); color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
-.changes { border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 6px; background: var(--surface); padding: 0.75rem 1rem; }
-.changes h2 { font-family: var(--font-display); font-weight: 600; font-size: var(--step-0); margin: 0 0 0.4rem; }
-.changes ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.25rem; font-size: var(--step--1); }
-.changes .when { font-family: var(--font-data); color: var(--muted); font-variant-numeric: tabular-nums; }
-.changes p { margin: 0; font-size: var(--step--1); color: var(--muted); }
+@media (max-width: 560px) { .stancerow { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; } }
+.offsum p { margin: 0 0 0.35rem; font-size: var(--s-1); }
+.offsum p.sub { padding-left: 1.2rem; }
+.offsum.clamp { max-height: 7.5em; overflow: hidden; position: relative; }
+.offsum.clamp::after { content: ""; position: absolute; inset: auto 0 0 0; height: 2.5em; background: linear-gradient(transparent, var(--surface)); }
+.cmtes { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.cmte { font-size: 0.78rem; background: var(--chip); border-radius: 6px; padding: 0.15rem 0.5rem; }
+.cmte b { font-family: var(--font-data); font-weight: 500; }
+.cmte.now { box-shadow: inset 0 0 0 1.5px var(--c); }
 
-.empty { color: var(--muted); padding: 1rem 0; }
+.tip { position: fixed; z-index: 60; pointer-events: none; background: var(--ink); color: var(--bg); border-radius: 8px; padding: 0.5rem 0.65rem; font-size: 0.78rem; max-width: 18rem; box-shadow: var(--shadow); line-height: 1.35; }
+.tip strong { display: block; font-size: 0.85rem; }
+.tip span { display: block; opacity: 0.8; }
 
-/* Pipeline: every bill as a chip in the stage it has reached. */
-.pipeline { border: 1px solid var(--line); border-radius: 6px; background: var(--surface); padding: 1rem; display: grid; gap: 0.75rem; }
-.pipeline h2 { font-family: var(--font-display); font-weight: 600; font-size: var(--step-1); margin: 0; }
-.pipeline .sub { margin: 0; font-size: var(--step--1); color: var(--muted); }
-.pcols { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; }
-.pcol { display: grid; align-content: start; gap: 0.5rem; padding: 0 0.6rem; border-left: 1px dashed var(--line); min-width: 0; }
-.pcol:first-child { border-left: 0; padding-left: 0; }
-.pcol h3 { margin: 0; font-size: var(--step--1); font-weight: 600; line-height: 1.3; }
-.pcol h3 small { display: block; font-weight: 400; color: var(--muted); font-family: var(--font-data); font-size: 0.72rem; }
-.pchips { display: flex; flex-wrap: wrap; gap: 0.3rem; }
-.pchip { font-family: var(--font-data); font-size: 0.78rem; font-weight: 500; text-decoration: none; padding: 0.15rem 0.45rem; border-radius: 4px; border: 1px solid currentColor; background: var(--surface); }
-.pchip.house { color: var(--house); }
-.pchip.senate { color: var(--senate); }
-.pchip.law { color: var(--law); }
-.pchip.waiting { color: var(--muted); }
-.pchip.stalled { border-style: dashed; }
-.pchip:hover { background: var(--chip); }
-.pempty { font-size: var(--step--1); color: var(--muted); }
-.pkey { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; font-size: var(--step--1); color: var(--muted); }
-@media (max-width: 680px) {
-  .pcols { grid-template-columns: minmax(0, 1fr); gap: 0.6rem; }
-  .pcol { border-left: 0; padding: 0.6rem 0 0; border-top: 1px dashed var(--line); grid-template-columns: 8.5rem minmax(0, 1fr); align-items: start; }
-  .pcol:first-child { border-top: 0; padding-top: 0; }
+@media (max-width: 1080px) {
+  .grid2 { grid-template-columns: minmax(0, 1fr); }
+  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-
-.search { font: inherit; font-size: var(--step--1); border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 0.35rem 0.85rem; width: min(100%, 18rem); }
-.search:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-
-.flag { display: inline-block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border: 1px dashed var(--muted); border-radius: 4px; padding: 0 0.35rem; margin-left: 0.35rem; vertical-align: 0.1em; }
-.lead { margin: 0.35rem 0 0.5rem; max-width: 62ch; font-size: var(--step-0); font-weight: 500; }
-.offsum { margin: 0 0 0.6rem; max-width: 66ch; font-size: var(--step--1); }
-.offsum .lbl { font-family: var(--font-data); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.15rem; }
-.offsum .body { position: relative; max-height: 6.4em; overflow: hidden; }
-.offsum .body::after { content: ""; position: absolute; inset: auto 0 0 0; height: 1.8em; background: linear-gradient(to bottom, transparent, var(--bg)); }
-.offsum.open .body, .offsum.short .body { max-height: none; }
-.offsum.open .body::after, .offsum.short .body::after { display: none; }
-.offsum .body p { margin: 0 0 0.3rem; }
-.offsum .body p.sub { padding-left: 1.25rem; }
-.offsum .more { font: inherit; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; margin-top: 0.15rem; }
-.offsum .src { color: var(--muted); }
-.outlook { margin: 0 0 0.5rem; max-width: 62ch; font-size: var(--step--1); border-left: 3px solid var(--accent); padding: 0.35rem 0.65rem; background: var(--chip); }
-.outlook b { font-weight: 600; }
-
-details.explain { font-size: var(--step--1); color: var(--muted); }
-details.explain summary { cursor: pointer; color: var(--accent); }
-details.explain dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 0.3rem 1rem; margin: 0.6rem 0 0; max-width: 70ch; }
-details.explain dt { font-weight: 600; color: var(--ink); }
-details.explain dd { margin: 0; }
-@media (max-width: 560px) { details.explain dl { grid-template-columns: minmax(0, 1fr); } details.explain dd { margin-bottom: 0.4rem; } }
-footer { display: grid; gap: 0.75rem; border-top: 1px solid var(--line); padding-top: 1.25rem; font-size: var(--step--1); color: var(--muted); }
-footer p { margin: 0; max-width: 70ch; }
-footer .contact { color: var(--ink); font-size: var(--step-0); }
-.addr { font-family: var(--font-data); user-select: all; }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media (max-width: 760px) {
+  .intro h1 { font-size: 1.75rem; }
+  .thead { display: none; }
+  .row { grid-template-columns: minmax(0, 1fr) 7rem; grid-template-areas: "name name" "stage momentum" "last last"; gap: 0.6rem 1rem; }
+  .row .name { grid-area: name; } .row .stage { grid-area: stage; } .row .momentum { grid-area: momentum; } .row .last { grid-area: last; }
+  .rrow { grid-template-columns: minmax(0, 1fr); }
+  .rhead .lanecol { display: none; }
+  .rrow .lanecol { padding: 0.55rem 0 0; font-weight: 500; }
+  .gh.side { visibility: hidden; }
+  .sh { font-size: 0.68rem; padding: 0.3rem 0 0.35rem; }
+  .sh .full { display: none; } .sh .short { display: inline; }
+  .cell { min-height: 2.6rem; padding: 0.3rem 0; }
+  .bdot { flex-direction: column; gap: 1px; font-size: 0.6rem; padding: 2px 0; }
+  .top .what { display: none; }
+  input[type="search"] { min-width: 0; max-width: none; }
+  .filters .count { margin-left: 0; }
+  .kpi .value { font-size: 1.6rem; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+@media print { .top, .filters, .tip { display: none; } .card { box-shadow: none; } }
 </style>
 </head>
 <body>
+<div class="top"><div class="in">
+  <a class="brand" href="#">RIVER<span>RIDGE</span></a>
+  <span class="what">Digital policy bill tracker</span>
+  <span class="beta">Beta</span>
+  <div class="right"><span id="refreshed"></span><a href="data/bills.csv">Download CSV</a></div>
+</div></div>
 
-<div class="wrap">
-  <header>
-    <div class="eyebrow">RiverRidge Policy &amp; Risk Intelligence · 45th Parliament, 1st session</div>
-    <div class="titlerow"><h1>Digital policy bills before Parliament</h1><span class="beta">Beta</span></div>
-    <p class="lede">Federal bills on online safety, privacy, cyber security, AI and digital finance, and where each one stands. Status, dates and committees refresh every morning from LEGISinfo, the Parliament of Canada's official record.</p>
-    <p class="betanote">This tracker is in beta. Check any status that matters to you against LEGISinfo, and send corrections or bills you want added to <span class="addr">contact@riverridgeintelligence.ca</span>.</p>
-    <div class="checked" id="checked">Loading status…</div>
-  </header>
-
-  <section class="changes" id="changes" aria-label="What changed in the past 7 days" hidden></section>
-
-  <section class="pipeline" aria-labelledby="pipeline-h">
-    <h2 id="pipeline-h">Where every bill stands</h2>
-    <p class="sub">Each chip is a bill, placed at the stage it has reached. Select one to jump to it.</p>
-    <div class="pcols" id="pipeline"></div>
-    <div class="onnotice" id="onnotice"></div>
-    <div class="pkey" aria-hidden="true">
-      <span style="color:var(--house)">Green: House of Commons</span>
-      <span style="color:var(--senate)">Red: Senate</span>
-      <span style="color:var(--law)">Gold: law</span>
-      <span>Dashed: no recorded activity in 6+ months</span>
-    </div>
+<main class="wrap">
+  <section class="intro">
+    <h1>Digital policy bills before Parliament</h1>
+    <p>Online safety, privacy, AI, cyber security and digital finance: where each federal bill stands, what moved this week and who it affects. Refreshed every morning from LEGISinfo and the House and Senate records.</p>
   </section>
 
-  <div class="summary" id="summary" role="group" aria-label="Filter by stage"></div>
-
-  <div class="filters" id="filters" role="group" aria-label="Filter by policy area"></div>
-
-  <input class="search" id="search" type="search" placeholder="Search bills, e.g. privacy or C-36" aria-label="Search bills">
-
-  <div class="key" aria-hidden="true">
-    <span><i style="background:var(--house)"></i>House of Commons stage</span>
-    <span><i style="background:var(--senate)"></i>Senate stage</span>
-    <span><i style="background:var(--law)"></i>Royal assent</span>
-    <span>1R 2R 3R = first, second, third reading</span>
+  <div class="filters" role="group" aria-label="Filters for everything below">
+    <div class="seg" id="stagefilter" role="group" aria-label="Where the bill is"></div>
+    <label class="field">Policy area <select id="theme"></select></label>
+    <label class="field" id="sectorfield" hidden>Who it affects <select id="sector"></select></label>
+    <input type="search" id="q" placeholder="Search bills, sponsors, witnesses" aria-label="Search bills">
+    <span class="count" id="count" aria-live="polite"></span>
   </div>
 
-  <details class="explain">
-    <summary>How a bill becomes law</summary>
-    <dl>
-      <dt>First reading</dt><dd>The bill is tabled and published. No debate.</dd>
-      <dt>Second reading</dt><dd>Debate on the bill's main idea, then a vote to send it to committee.</dd>
-      <dt>Committee</dt><dd>MPs or senators hear witnesses and go through the bill clause by clause. Most amendments happen here.</dd>
-      <dt>Report stage</dt><dd>The whole chamber considers the committee's changes and can amend further.</dd>
-      <dt>Third reading</dt><dd>Final debate and vote in that chamber. The bill then goes to the other chamber, which repeats these steps.</dd>
-      <dt>Royal assent</dt><dd>Once both chambers pass the same text, the Governor General's assent makes it law. Some or all of it may come into force later, by order or on a set date.</dd>
-      <dt>Awaiting a debate slot</dt><dd>Private members' bills are debated only once their sponsor's name is drawn for the Order of Precedence. Many never reach debate.</dd>
-    </dl>
-  </details>
+  <section class="kpis" id="kpis" aria-label="The past seven days"></section>
+  <div id="kpitable" hidden></div>
 
-  <main id="list" aria-live="polite"></main>
+  <div class="grid2">
+    <section class="card" aria-labelledby="river-h">
+      <h2 id="river-h">Where every bill stands</h2>
+      <p class="sub">Each dot is a bill, placed at its current stage, in its policy area. Colour shows the chamber it is in now.</p>
+      <div class="river" id="river"></div>
+      <div class="legend" aria-hidden="true">
+        <span><i class="house" style="background:var(--house)"></i>House of Commons</span>
+        <span><i style="background:var(--senate)"></i>Senate</span>
+        <span><i style="background:var(--law)"></i>Law (royal assent)</span>
+        <span><i class="hollow"></i>No activity in 90+ days</span>
+      </div>
+    </section>
+    <aside class="card week" aria-labelledby="week-h">
+      <h2 id="week-h">This week</h2>
+      <p class="sub" id="weekrange"></p>
+      <ul class="feed" id="feed"></ul>
+      <h3>Coming up</h3>
+      <ul class="feed" id="coming"></ul>
+    </aside>
+  </div>
+
+  <section class="card" aria-labelledby="table-h">
+    <div class="tablebar">
+      <h2 id="table-h" style="font-family:var(--font-display);font-weight:600;font-size:var(--s1);margin:0">All tracked bills</h2>
+      <p class="sub">Select a bill for its full record. Activity counts committee meetings, chamber events and sitting days on which the bill was named in debate.</p>
+      <label class="field">Sort <select id="sort">
+        <option value="recent">Most recent activity</option>
+        <option value="stage">Furthest along</option>
+        <option value="number">Bill number</option>
+      </select></label>
+    </div>
+    <div class="thead" aria-hidden="true"><span>Bill</span><span>Stage</span><span>Activity, 12 weeks</span><span>Latest and next</span></div>
+    <div id="rows" role="list"></div>
+  </section>
 
   <footer>
-    <p class="contact">Need to know what a bill means for your organization, or when it is likely to move? Contact RiverRidge at <span class="addr">contact@riverridgeintelligence.ca</span>.</p>
-    <p>Sources: bill status, dates, committees and bill-text links from <a href="https://www.parl.ca/legisinfo/en/overview" rel="noopener">LEGISinfo</a>, Parliament of Canada, the official record, retrieved automatically each day. When LEGISinfo cannot be reached, status is checked against <a href="https://openparliament.ca/" rel="noopener">openparliament.ca</a> instead. Official summaries are the summary printed in each bill, as published by Parliament and retrieved via openparliament.ca. Where organizations stand is read from their own briefs by two AI models and shown only where both agree; it is not a statement by those organizations. Royal assent does not mean a law is in force; many provisions take effect later by order or regulation. Bill descriptions are RiverRidge summaries.</p>
+    <p>Sources: LEGISinfo, Parliament of Canada (status, stages, committee meetings, chamber events, decisions); House of Commons committee notices (witnesses); House Hansard and Senate Debates (speeches naming a bill, found by matching the bill number); the House Notice Paper (bills on notice); openparliament.ca (official summaries, and status when LEGISinfo is unavailable). Royal assent does not mean a law is in force.</p>
+    <p>RiverRidge Policy &amp; Risk Intelligence · contact@riverridgeintelligence.ca</p>
   </footer>
-</div>
+</main>
+
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="d-title" hidden></aside>
 
 <script>
 (() => {
-  const DATA_URL = "data/bills.json";
-  const $ = (id) => document.getElementById(id);
+  const $ = (s) => document.querySelector(s);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const fmtDate = (d) => d ? new Date(d.length === 10 ? d + "T12:00:00" : d).toLocaleDateString("en-CA", { month: "short", day: "numeric", year: "numeric" }) : "";
-  const daysAgo = (d) => {
-    if (!d) return null;
-    const ms = Date.now() - new Date(d + "T12:00:00").getTime();
-    return Math.max(0, Math.round(ms / 86400000));
-  };
+  const DAY = 86400000;
+  const plural = (n, one, many) => `${n.toLocaleString("en-CA")} ${n === 1 ? one : many}`;
 
-  const STAGES = [
-    { id: "all", label: "All bills" },
-    { id: "house", label: "In the House of Commons" },
-    { id: "senate", label: "In the Senate" },
-    { id: "law", label: "Became law" },
-  ];
-  const stageOf = (b) => {
-    if (b.progress && b.progress[6]) return "law";
-    if (/Senate/.test(b.status)) return "senate";
-    return "house";
-  };
-  const pillClass = (b) => {
-    const s = stageOf(b);
-    if (s === "law") return "law";
-    if (isWaiting(b)) return "waiting";
-    return s;
-  };
-  const statusText = (b) => {
-    if (stageOf(b) === "law") return "Law" + (b.royalAssent ? ": royal assent " + fmtDate(b.royalAssent) : "");
-    if (/Outside the Order of Precedence/i.test(b.status)) return "Awaiting a debate slot (private member's bill)";
-    return b.status;
-  };
+// Everything below runs once the data has loaded.
+function start(DATA) {
+  // "This week" is measured from the last refresh, so the page reads the same
+  // whatever day it is opened on.
+  const NOW = new Date(DATA.checkedAt).toLocaleDateString("en-CA", { timeZone: "America/Toronto" });
+  const t0 = new Date(NOW + "T12:00:00Z").getTime();
+  const daysBefore = (iso) => Math.round((t0 - new Date(iso + "T12:00:00Z").getTime()) / DAY);
+  const weekOf = (iso) => { const d = daysBefore(iso); return d < 0 ? -1 : Math.floor(d / 7); };
+  const fmt = (iso, o = { month: "short", day: "numeric", year: "numeric" }) => iso ? new Date(iso + "T12:00:00Z").toLocaleDateString("en-CA", { ...o, timeZone: "UTC" }) : "";
+  const bills = DATA.bills;
+  const byNum = new Map(bills.map((b) => [b.number, b]));
+  const themes = new Map(DATA.themes.map((t) => [t.id, t.label]));
+  const sectors = new Map((DATA.sectors || []).map((s) => [s.id, s.label]));
 
-  const STALL_DAYS = 180;
-  const isWaiting = (b) => /Outside the Order of Precedence/i.test(b.status);
-  const isStalled = (b) => {
-    if (stageOf(b) === "law") return false;
-    const n = daysAgo(b.latestEvent?.date);
-    return n !== null && n >= STALL_DAYS;
-  };
-  const anchor = (b) => b.number.toLowerCase();
-
-  // Pipeline columns, in order. Each bill lands in exactly one.
-  const COLUMNS = [
-    { id: "waiting", label: "Awaiting a debate slot", note: "Private members' bills" },
-    { id: "early", label: "First chamber", note: "First and second reading" },
-    { id: "committee", label: "First chamber", note: "Committee to third reading" },
-    { id: "second", label: "Second chamber", note: "Passed one chamber" },
-    { id: "law", label: "Law", note: "Royal assent" },
-  ];
-  const columnOf = (b) => {
-    if (stageOf(b) === "law") return "law";
-    if (isWaiting(b)) return "waiting";
-    const p = (b.progress || []).filter(Boolean).length;
-    const origin = /Senate/.test(b.originatingChamber) ? "senate" : "house";
-    if (stageOf(b) !== origin) return "second";
-    return p >= 2 ? "committee" : "early";
-  };
-  const matchesSearch = (b, q) => {
-    if (!q) return true;
-    const hay = [b.number, b.number.replace("-", ""), b.shortTitle, b.longTitle, b.summary, b.sponsor, b.status, ...(b.officialSummary || []),
-      ...(b.studies || []).flatMap((x) => [...x.witnesses.map((w) => w.name), ...x.briefs.map((r) => r.name)]),
-      ...(b.positions || []).map((p) => `${p.name} ${p.stance || ""}`),
-      ...(b.text?.changes || []).flatMap((c) => c.provisions.map((p) => p.note))].join(" ").toLowerCase();
-    return q.toLowerCase().split(/\s+/).every((w) => hay.includes(w));
-  };
-
-  let state = { stage: "all", theme: "all" };
-  let query = "";
-  try {
-    const saved = JSON.parse(localStorage.getItem("rr-tracker-filters") || "null");
-    if (saved) state = { ...state, ...saved };
-  } catch {}
-  const save = () => { try { localStorage.setItem("rr-tracker-filters", JSON.stringify(state)); } catch {} };
-
-  function trackHtml(b) {
-    const first = /Senate/.test(b.originatingChamber) ? "senate" : "house";
-    const second = first === "house" ? "senate" : "house";
-    const p = b.progress || [];
-    const seg = (on, cls) => `<div class="seg ${on ? "on " + cls : ""}"></div>`;
-    return `<div class="track" role="img" aria-label="Stages passed: ${p.filter(Boolean).length} of 7">
-      ${seg(p[0], first)}${seg(p[1], first)}${seg(p[2], first)}<div class="gap"></div>
-      ${seg(p[3], second)}${seg(p[4], second)}${seg(p[5], second)}<div class="gap"></div>
-      ${seg(p[6], "law")}
-    </div>
-    <div class="tracklabels" aria-hidden="true">
-      <span>${first === "house" ? "House" : "Senate"} 1R 2R 3R</span><span></span>
-      <span>${second === "house" ? "House" : "Senate"} 1R 2R 3R</span><span></span><span>RA</span>
-    </div>`;
+  // ---------- Derived facts ----------
+  const isLaw = (b) => !!(b.progress || [])[6];
+  const isWaiting = (b) => /Outside the Order of Precedence/i.test(b.status || "");
+  const chamberNow = (b) => (isLaw(b) ? "law" : /Senate/.test(b.status || "") ? "senate" : "house");
+  const origin = (b) => (/Senate/.test(b.originatingChamber || "") ? "senate" : "house");
+  const STAGES = ["Awaiting debate", "2nd reading", "Committee", "3rd reading", "2nd reading", "Committee", "3rd reading", "Royal assent"];
+  function stageCol(b) {
+    if (isLaw(b)) return 7;
+    if (isWaiting(b)) return 0;
+    const s = b.status || "";
+    const step = /third reading/i.test(s) ? 3 : /committee|report stage/i.test(s) ? 2 : 1;
+    return (chamberNow(b) !== origin(b) ? 3 : 0) + step;
   }
-
-  function committeesHtml(b) {
-    if (!b.committees || !b.committees.length) return "";
-    const items = b.committees.map((c) => {
-      const cls = c.chamber === "Senate" ? "senate" : "house";
-      const tag = c.current ? (c.role === "pre-study" ? "pre-study now" : "studying now") : (c.role === "pre-study" ? "pre-study" : "");
-      const inner = `<b>${esc(c.acronym)}</b> ${esc(c.name)}${tag ? `<span class="tag">${tag}</span>` : ""}`;
-      return c.url
-        ? `<a class="cmte ${c.current ? "now " + cls : ""}" href="${esc(c.url)}" rel="noopener">${inner}</a>`
-        : `<span class="cmte ${c.current ? "now " + cls : ""}">${inner}</span>`;
-    }).join("");
-    return `<div class="cmtes">${items}</div>`;
-  }
-
-  const words = (lines) => lines.join(" ").split(/\s+/).length;
-  const opened = new Set();
-  function officialHtml(b) {
-    const lines = b.officialSummary || [];
-    if (!lines.length) return "";
-    const n = words(lines);
-    const short = n <= 110;
-    // A search that only matches inside the summary opens it, so the hit is visible.
-    const q = query.toLowerCase().split(/\s+/).filter(Boolean);
-    const hit = q.length && q.every((w) => lines.join(" ").toLowerCase().includes(w));
-    const open = !short && (opened.has(b.number) || hit);
-    const body = lines.map((l) => `<p${/^\([a-zA-Z0-9.]+\)/.test(l) ? ' class="sub"' : ""}>${esc(l)}</p>`).join("");
-    const lop = b.lopSummaryUrl ? ` · <a href="${esc(b.lopSummaryUrl)}" rel="noopener">Library of Parliament legislative summary</a>` : "";
-    return `<div class="offsum${short ? " short" : ""}${open ? " open" : ""}">
-      <div class="lbl">Official summary</div>
-      <div class="body">${body}</div>
-      ${short ? "" : `<button type="button" class="more" data-more="${esc(b.number)}" aria-expanded="${open}">${open ? "Show less" : `Show full summary (${n.toLocaleString("en-CA")} words)`}</button>`}
-      <div class="src">From the bill as published${lop}</div>
-    </div>`;
-  }
-
-  const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
-  const shortRole = (t) => t.split(", ").pop(); // "Hon. X, P.C., M.P., Minister of Justice" to "Minister of Justice"
-  const todayIso = () => new Date().toLocaleDateString("en-CA", { timeZone: "America/Toronto" });
-  const SHOW = 6;
-
-  // The bill's parliamentary record: committee meetings and witnesses, days
-  // something happened in the chamber, recorded decisions, and speeches that
-  // named the bill. A one-line tally shows; the detail opens on request.
-  function recordHtml(b) {
+  const statusLabel = (b) => isLaw(b) ? `Law, royal assent ${fmt(b.royalAssent)}` : isWaiting(b) ? "Awaiting a debate slot" : b.status;
+  function events(b) {
     const a = b.activity || {};
-    const meetings = a.meetings || [];
-    const sittings = a.sittings || [];
-    const decisions = a.decisions || [];
-    const mentions = b.mentions || [];
-    const textBlock = textHtml(b);
-    const evidenceBlock = evidenceHtml(b);
-    if (!meetings.length && !sittings.length && !decisions.length && !mentions.length && !textBlock && !evidenceBlock) return "";
-    const today = todayIso();
-    const held = meetings.filter((m) => m.date <= today);
-    const next = meetings.filter((m) => m.date > today).sort((x, y) => x.date.localeCompare(y.date))[0];
-    const days = new Set(sittings.map((x) => x.chamber + x.sitting)).size;
-    const speeches30 = mentions.filter((m) => daysAgo(m.date) <= 30).reduce((n, m) => n + m.speeches, 0);
-    const tally = [
-      held.length ? `<b>${plural(held.length, "committee meeting", "committee meetings")}</b>, latest ${esc(fmtDate(held[0].date))} (${esc(held[0].committee)})` : "",
-      next ? `next meeting <b>${esc(fmtDate(next.date))}</b> (${esc(next.committee)})` : "",
-      days ? `<b>${plural(days, "sitting day", "sitting days")}</b> in the chamber` : "",
-      speeches30 ? `named in <b>${plural(speeches30, "speech", "speeches")}</b> in the last 30 days` : "",
-      committeeChanges(b) ? `<b>${plural(committeeChanges(b), "provision", "provisions")}</b> changed in committee` : "",
-      briefCount(b) ? `<b>${plural(briefCount(b), "brief", "briefs")}</b> to committee` : "",
-      opposedCount(b) ? `<b>${opposedCount(b)}</b> of them opposed` : "",
-    ].filter(Boolean).join(" · ");
+    const ev = [];
+    for (const m of a.meetings || []) ev.push({ kind: "meeting", date: m.date, chamber: m.chamber, m });
+    for (const x of a.sittings || []) ev.push({ kind: "sitting", date: x.date, chamber: x.chamber, x });
+    for (const d of a.decisions || []) ev.push({ kind: "decision", date: d.date, chamber: d.chamber, d });
+    for (const m of b.mentions || []) ev.push({ kind: "mention", date: m.date, chamber: m.chamber, m });
+    return ev.sort((p, q) => q.date.localeCompare(p.date));
+  }
+  const EV = new Map(bills.map((b) => [b.number, events(b)]));
+  const past = (b) => EV.get(b.number).filter((e) => e.date <= NOW);
+  const lastDate = (b) => [past(b)[0]?.date, b.latestEvent?.date].filter(Boolean).sort().pop() || "";
+  const quiet = (b) => !isLaw(b) && (!lastDate(b) || daysBefore(lastDate(b)) > 90);
+  const stalled = (b) => !isLaw(b) && lastDate(b) && daysBefore(lastDate(b)) >= 180;
+  // Activity per week: meetings, chamber events, and sitting days with mentions.
+  const weekly = (b) => {
+    const w = Array(12).fill(0);
+    for (const e of past(b)) { const i = weekOf(e.date); if (i >= 0 && i < 12 && e.kind !== "decision") w[i]++; }
+    return w.reverse();
+  };
+  const MAXW = Math.max(1, ...bills.map((b) => Math.max(...weekly(b))));
+  // Most recent formal step: a committee meeting, a chamber event, or LEGISinfo's latest event.
+  function latestStep(b) {
+    const ev = b.latestEvent ? [{ date: b.latestEvent.date, text: `${b.latestEvent.type}${b.latestEvent.chamber ? `, ${b.latestEvent.chamber}` : ""}` }] : [];
+    for (const e of past(b)) {
+      if (e.kind === "meeting") ev.push({ date: e.date, text: `${e.m.committee} meeting ${e.m.number} (${e.chamber} committee)` });
+      else if (e.kind === "sitting") ev.push({ date: e.date, text: `${e.x.event}, ${e.chamber === "House" ? "House of Commons" : "Senate"}` });
+    }
+    return ev.sort((p, q) => q.date.localeCompare(p.date))[0];
+  }
+  const nextMeeting = (b) => EV.get(b.number).filter((e) => e.kind === "meeting" && e.date > NOW).sort((p, q) => p.date.localeCompare(q.date))[0];
+  const searchText = new Map(bills.map((b) => [b.number, [
+    b.number, b.number.replace("-", ""), b.shortTitle, b.longTitle, b.summary, b.sponsor, b.status,
+    ...(b.sectors || []).map((s) => sectors.get(s)), ...(b.officialSummary || []),
+    ...((b.activity?.meetings || []).flatMap((m) => [...(m.witnesses?.orgs || []), ...(m.witnesses?.people || [])])),
+    ...((b.mentions || []).flatMap((m) => m.speakers)),
+  ].join(" ").toLowerCase()]));
 
-    const more = (list, what) => list.length > SHOW ? `<li><a href="${esc(b.legisinfoUrl)}" rel="noopener">${plural(list.length - SHOW, `earlier ${what}`, `earlier ${what}s`)} on LEGISinfo</a></li>` : "";
-    const witnessText = (w) => {
-      if (!w) return "";
-      const parts = [];
-      if (w.appearing.length) parts.push(`Appearing: ${w.appearing.map(shortRole).join("; ")}`);
-      if (w.orgs.length) parts.push(`Witnesses: ${w.orgs.slice(0, 4).join("; ")}${w.orgs.length > 4 ? `; and ${w.orgs.length - 4} more` : ""}`);
-      if (w.people.length) parts.push(plural(w.people.length, "individual", "individuals"));
-      return parts.length ? `<br><span class="who">${esc(parts.join(" · "))}</span>` : "";
-    };
-    const sections = [];
-    if (meetings.length) {
-      sections.push(`<h4>Committee meetings</h4><ul>${meetings.slice(0, SHOW).map((m) =>
-        `<li><span class="when">${esc(fmtDate(m.date))}</span> · <a href="${esc(m.url)}" rel="noopener">${esc(m.committee)} meeting ${esc(m.number)}</a>${m.date > today ? " (scheduled)" : ""}${m.chamber === "Senate" ? " (Senate)" : ""}${witnessText(m.witnesses)}</li>`
-      ).join("")}${more(meetings, "meeting")}</ul>`);
-    }
-    if (sittings.length) {
-      sections.push(`<h4>In the chamber</h4><ul>${sittings.slice(0, SHOW).map((x) =>
-        `<li><span class="when">${esc(fmtDate(x.date))}</span> · ${esc(x.chamber)} · <a href="${esc(x.url)}" rel="noopener">${esc(x.event)}</a></li>`
-      ).join("")}${more(sittings, "sitting event")}</ul>`);
-    }
-    if (decisions.length) {
-      sections.push(`<h4>Recorded decisions</h4><ul>${decisions.slice(0, SHOW).map((d) => {
-        const how = d.yeas != null && d.nays != null ? ` (${d.yeas} to ${d.nays})` : d.method ? ` (${d.method.toLowerCase()})` : "";
-        return `<li><span class="when">${esc(fmtDate(d.date))}</span> · ${esc(d.chamber)} · ${esc(d.motion)}: ${esc(d.result.toLowerCase())}${esc(how)}</li>`;
-      }).join("")}</ul>`);
-    }
-    if (mentions.length) {
-      sections.push(`<h4>Speeches naming the bill (last 90 days)</h4><ul>${mentions.slice(0, SHOW).map((m) =>
-        `<li><span class="when">${esc(fmtDate(m.date))}</span> · ${esc(m.chamber)} · <a href="${esc(m.url)}" rel="noopener">${plural(m.speeches, "speech", "speeches")}</a>` +
-        `<br><span class="who">${esc(m.speakers.slice(0, 3).join(", "))}${m.speakers.length > 3 ? ` and ${m.speakers.length - 3} more` : ""}${m.contexts.length ? ` · ${esc(m.contexts.slice(0, 2).join("; "))}` : ""}</span></li>`
-      ).join("")}</ul><p class="note">Speeches are found by matching the bill number in Hansard, so a passing mention counts.</p>`);
-    }
-    return `<div class="record"><div class="tally">${tally}</div>${sections.length ? `<details><summary>Parliamentary record</summary>${sections.join("")}</details>` : ""}${textBlock}${evidenceBlock}</div>`;
+  // ---------- State and filters ----------
+  const state = { where: "all", theme: "all", sector: "all", q: "", sort: "recent" };
+  const WHERE = [["all", "All"], ["house", "House"], ["senate", "Senate"], ["law", "Law"]];
+  $("#stagefilter").innerHTML = WHERE.map(([id, l]) => `<button type="button" data-where="${id}" aria-pressed="${id === "all"}">${l}</button>`).join("");
+  $("#theme").innerHTML = `<option value="all">All areas</option>` + DATA.themes.map((t) => `<option value="${esc(t.id)}">${esc(t.label)}</option>`).join("");
+  if ((DATA.sectors || []).length) {
+    $("#sectorfield").hidden = false;
+    $("#sector").innerHTML = `<option value="all">Everyone</option>` + DATA.sectors.map((s) => `<option value="${esc(s.id)}">${esc(s.label)}</option>`).join("");
+  }
+  const inScope = (b) =>
+    (state.where === "all" || chamberNow(b) === state.where) &&
+    (state.theme === "all" || b.theme === state.theme) &&
+    (state.sector === "all" || (b.sectors || []).includes(state.sector)) &&
+    (!state.q || state.q.split(/\s+/).every((w) => searchText.get(b.number).includes(w)));
+
+  // ---------- Tooltip (values lead, labels follow; built with textContent) ----------
+  const tip = $("#tip");
+  const TIPS = new Map();
+  let tipId = 0;
+  const tipAttr = (lines) => { const id = "t" + ++tipId; TIPS.set(id, lines); return `data-tip="${id}"`; };
+  function showTip(el) {
+    const lines = TIPS.get(el.dataset.tip); if (!lines) return;
+    tip.replaceChildren(...lines.map((l, i) => { const n = document.createElement(i === 0 ? "strong" : "span"); n.textContent = l; return n; }));
+    tip.hidden = false;
+    const r = el.getBoundingClientRect(); const tw = tip.offsetWidth; const th = tip.offsetHeight;
+    let x = r.left + r.width / 2 - tw / 2; x = Math.max(8, Math.min(x, innerWidth - tw - 8));
+    let y = r.top - th - 8; if (y < 8) y = r.bottom + 8;
+    tip.style.left = x + "px"; tip.style.top = y + "px";
+  }
+  const hideTip = () => { tip.hidden = true; };
+  document.addEventListener("pointerover", (e) => { const el = e.target.closest("[data-tip]"); el ? showTip(el) : hideTip(); });
+  document.addEventListener("focusin", (e) => { const el = e.target.closest("[data-tip]"); el ? showTip(el) : hideTip(); });
+  document.addEventListener("scroll", hideTip, { passive: true });
+
+  // ---------- KPIs ----------
+  function kpis(list) {
+    const series = (pick) => { const w = Array(12).fill(0); for (const b of list) for (const e of past(b)) { const i = weekOf(e.date); if (i >= 0 && i < 12) w[i] += pick(e); } return w.reverse(); };
+    const defs = [
+      { label: "Committee meetings", s: series((e) => (e.kind === "meeting" ? 1 : 0)), unit: ["meeting", "meetings"] },
+      { label: "Chamber events", s: series((e) => (e.kind === "sitting" ? 1 : 0)), unit: ["event", "events"] },
+      { label: "Speeches naming a bill", s: series((e) => (e.kind === "mention" ? e.m.speeches : 0)), unit: ["speech", "speeches"] },
+    ];
+    const weekLabel = (i) => { const end = new Date(t0 - (11 - i) * 7 * DAY); const start = new Date(end - 6 * DAY); const o = { month: "short", day: "numeric", timeZone: "UTC" }; return `${start.toLocaleDateString("en-CA", o)} to ${end.toLocaleDateString("en-CA", o)}`; };
+    const tiles = defs.map((d) => {
+      const now = d.s[11], before = d.s[10];
+      const bars = d.s.map((v, i) => `<i class="${i === 11 ? "now" : ""}" style="height:${Math.max(4, (v / Math.max(1, ...d.s)) * 100)}%" ${tipAttr([plural(v, ...d.unit), weekLabel(i)])}></i>`).join("");
+      return `<div class="kpi"><span class="label">${d.label}, last 7 days</span><span class="value">${now.toLocaleString("en-CA")}</span>
+        <span class="delta">${before === now ? "Same as" : now > before ? `Up from ${before}` : `Down from ${before}`} the week before</span>
+        <div class="spark" aria-hidden="true">${bars}</div></div>`;
+    });
+    const notice = DATA.upcoming || [];
+    tiles.push(`<div class="kpi"><span class="label">Digital bills on notice</span><span class="value">${notice.length}</span>
+      <span class="delta">${notice.length ? "Due to be introduced in the House" : "None on the House Notice Paper today"}</span>
+      <button class="tabletoggle" type="button" id="kpitbtn" aria-expanded="false">Weekly numbers as a table</button></div>`);
+    $("#kpis").innerHTML = tiles.join("");
+    $("#kpitable").innerHTML = `<table class="data"><caption class="sr">Weekly activity for the bills in view</caption><thead><tr><th>Week</th>${defs.map((d) => `<th>${d.label}</th>`).join("")}</tr></thead><tbody>${
+      Array.from({ length: 12 }, (_, k) => 11 - k).map((i) => `<tr><td>${weekLabel(i)}</td>${defs.map((d) => `<td>${d.s[i]}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
   }
 
-  // ---- Bill text: changes between versions, coming into force, penalties ----
+  // ---------- River ----------
+  const SHORT = ["Wait", "2R", "Cttee", "3R", "2R", "Cttee", "3R", "RA"];
+  function river(list) {
+    const show = new Set(list.map((b) => b.number));
+    const head = `<div class="rrow rhead"><div class="lanecol"></div><div class="stages">
+        <div class="gh side" style="grid-column:1">Waiting</div>
+        <div class="gh" style="grid-column:2 / span 3">First chamber</div>
+        <div class="gh" style="grid-column:5 / span 3">Second chamber</div>
+        <div class="gh side" style="grid-column:8">Law</div>
+        ${STAGES.map((st, i) => `<div class="sh" style="grid-column:${i + 1};grid-row:2"><span class="full">${st}</span><span class="short" aria-hidden="true">${SHORT[i]}</span></div>`).join("")}
+      </div></div>`;
+    const lanes = DATA.themes.map((t) => {
+      const inLane = bills.filter((b) => b.theme === t.id);
+      const cells = STAGES.map((_, c) => {
+        const here = inLane.filter((b) => stageCol(b) === c).sort((p, q) => p.number.localeCompare(q.number, "en", { numeric: true }));
+        const dots = here.map((b) => {
+          const tipLines = [`${b.number} ${b.shortTitle || ""}`.trim(), statusLabel(b), lastDate(b) ? `Last activity ${fmt(lastDate(b))}` : "", quiet(b) ? "No activity in 90+ days" : ""].filter(Boolean);
+          return `<button type="button" class="bdot ${chamberNow(b)}${quiet(b) ? " quiet" : ""}${show.has(b.number) ? "" : " dim"}" data-open="${esc(b.number)}" ${tipAttr(tipLines)} aria-label="${esc(tipLines.join(". "))}">${esc(b.number)}</button>`;
+        }).join("");
+        return `<div class="cell c${c}${c >= 4 && c <= 6 ? " band" : ""}">${dots}</div>`;
+      }).join("");
+      return `<div class="rrow"><div class="lanecol">${esc(t.label)}</div><div class="stages">${cells}</div></div>`;
+    });
+    $("#river").innerHTML = head + lanes.join("");
+  }
+
+  // ---------- This week and coming up ----------
+  function feed(list) {
+    const items = [];
+    const nums = new Set(list.map((b) => b.number));
+    for (const c of DATA.changelog || []) if (nums.has(c.number) && daysBefore(c.date) >= 0 && daysBefore(c.date) < 7) items.push({ date: c.date, b: byNum.get(c.number), html: `<b>${esc(c.text.replace(/^Advanced to: /, "Moved: "))}</b>` });
+    for (const b of list) {
+      const wk = past(b).filter((e) => daysBefore(e.date) < 7);
+      for (const e of wk.filter((e) => e.kind === "meeting")) items.push({ date: e.date, b, html: `${esc(e.m.committee)} meeting ${esc(e.m.number)} <span class="k">(${esc(e.chamber)} committee)</span>${e.m.witnesses?.orgs?.length ? `<br><span class="k">Heard: ${esc(e.m.witnesses.orgs.slice(0, 3).join("; "))}</span>` : ""}` });
+      for (const e of wk.filter((e) => e.kind === "sitting")) items.push({ date: e.date, b, html: `${esc(e.x.event)} <span class="k">(${esc(e.chamber)})</span>` });
+      const sp = wk.filter((e) => e.kind === "mention");
+      if (sp.length) items.push({ date: sp[0].date, b, html: `Named in ${plural(sp.reduce((n, e) => n + e.m.speeches, 0), "speech", "speeches")} <span class="k">(${esc([...new Set(sp.map((e) => e.chamber))].join(", "))})</span>` });
+    }
+    items.sort((p, q) => q.date.localeCompare(p.date));
+    const li = (it) => `<li><span class="d">${esc(fmt(it.date, { month: "short", day: "numeric" }))}</span><span class="t"><button type="button" class="bill" data-open="${esc(it.b.number)}">${esc(it.b.number)}</button> ${it.html}</span></li>`;
+    $("#feed").innerHTML = items.length ? items.slice(0, 9).map(li).join("") + (items.length > 9 ? `<li><span></span><span class="t k">and ${items.length - 9} more in the table below</span></li>` : "") : `<li><span></span><p class="empty">Nothing moved for the bills in view.</p></li>`;
+    const start = new Date(t0 - 6 * DAY).toLocaleDateString("en-CA", { month: "short", day: "numeric", timeZone: "UTC" });
+    $("#weekrange").textContent = `${start} to ${fmt(NOW)}`;
+    const soon = [];
+    for (const b of list) for (const e of EV.get(b.number)) if (e.kind === "meeting" && e.date > NOW && daysBefore(e.date) >= -21) soon.push({ date: e.date, b, html: `${esc(e.m.committee)} meeting ${esc(e.m.number)} <span class="k">(${esc(e.chamber)})</span>` });
+    soon.sort((p, q) => p.date.localeCompare(q.date));
+    const notice = (DATA.upcoming || []).map((u) => `<li><span class="d">${esc(fmt(u.date, { month: "short", day: "numeric" }))}</span><span class="t">On notice: ${esc(u.title)} <span class="k">(${esc(u.kind)}, ${esc(u.sponsor)})</span></span></li>`);
+    $("#coming").innerHTML = soon.map(li).join("") + notice.join("") || `<li><span></span><p class="empty">No meetings scheduled and no digital bills on notice.</p></li>`;
+  }
+
+  // ---------- Table ----------
+  const trackHtml = (b) => {
+    const f = origin(b), s = f === "house" ? "senate" : "house", p = b.progress || [];
+    const seg = (on, c) => `<i class="${on ? "on " + c : ""}"></i>`;
+    return `<div class="track" role="img" aria-label="Stages passed: ${p.filter(Boolean).length} of 7">${seg(p[0], f)}${seg(p[1], f)}${seg(p[2], f)}<b></b>${seg(p[3], s)}${seg(p[4], s)}${seg(p[5], s)}<b></b>${seg(p[6], "law")}</div>`;
+  };
+  function table(list) {
+    const sorted = [...list].sort((p, q) =>
+      state.sort === "number" ? p.number.localeCompare(q.number, "en", { numeric: true }) :
+      state.sort === "stage" ? (stageCol(q) - stageCol(p)) || lastDate(q).localeCompare(lastDate(p)) :
+      lastDate(q).localeCompare(lastDate(p)));
+    $("#rows").innerHTML = sorted.map((b) => {
+      const w = weekly(b), total = w.reduce((n, v) => n + v, 0);
+      const nm = nextMeeting(b);
+      const bars = w.map((v, i) => `<i class="${i === 11 ? "now" : ""}" style="height:${v ? Math.max(12, (v / MAXW) * 100) : 4}%;${v ? "" : "opacity:.45"}" ${tipAttr([plural(v, "activity", "activities"), `${12 - i === 1 ? "This week" : `${12 - i} weeks ago`}`])}></i>`).join("");
+      const ev = latestStep(b);
+      return `<div class="row" role="listitem" data-open="${esc(b.number)}">
+        <div class="name"><button type="button" data-open="${esc(b.number)}"><span class="num">${esc(b.number)}</span>${esc(b.shortTitle || b.longTitle)}</button>
+          <span class="lead">${esc(b.summary)}</span>
+          <span class="tags">${stalled(b) ? `<span class="flag" style="margin:0">Stalled</span>` : ""}${(b.sectors || []).map((s) => `<span class="tag">${esc(sectors.get(s) || s)}</span>`).join("")}</span></div>
+        <div class="stage"><span class="status ${isWaiting(b) ? "waiting" : chamberNow(b)}">${esc(statusLabel(b))}</span>${trackHtml(b)}</div>
+        <div class="momentum"><div class="spark" aria-hidden="true">${bars}</div><small>${plural(total, "activity", "activities")} in 12 weeks${briefCount(b) ? `<br>${plural(briefCount(b), "brief", "briefs")}${opposedCount(b) ? `, ${opposedCount(b)} opposed` : ""}` : ""}${committeeChanges(b) ? `<br>${plural(committeeChanges(b), "provision", "provisions")} changed in committee` : ""}</small></div>
+        <div class="last">${ev ? `<span class="when">${esc(fmt(ev.date))}</span><span>${esc(ev.text)}</span>` : ""}${nm ? `<span class="next">Next: ${esc(nm.m.committee)} meeting, ${esc(fmt(nm.date, { month: "short", day: "numeric" }))}</span>` : ""}</div>
+      </div>`;
+    }).join("") || `<p class="empty" style="padding:1rem .5rem">No bills match these filters.</p>`;
+  }
+
+  // ---------- Drawer ----------
+  const drawer = $("#drawer"), scrim = $("#scrim");
+  let lastFocus = null, openNum = null;
+  const shortRole = (t) => t.split(", ").pop();
+  function timelineHtml(b, limit) {
+    const ev = EV.get(b.number).filter((e) => e.date <= NOW);
+    const le = b.latestEvent;
+    if (le && le.date && !ev.some((e) => e.kind === "sitting" && e.date === le.date && e.x.event === le.type)) {
+      ev.push({ kind: "sitting", date: le.date, chamber: /Senate/.test(le.chamber) ? "Senate" : "House", x: { event: le.type, url: b.legisinfoUrl } });
+      ev.sort((p, q) => q.date.localeCompare(p.date) || (p.kind === "sitting" ? -1 : 1));
+    }
+    const shown = ev.slice(0, limit);
+    let month = "";
+    const out = [];
+    for (const e of shown) {
+      const m = fmt(e.date, { month: "long", year: "numeric" });
+      if (m !== month) { out.push(`<li class="month">${esc(m)}</li>`); month = m; }
+      const c = e.chamber === "Senate" ? "senate" : "house";
+      let text = "", sub = "";
+      if (e.kind === "meeting") {
+        text = `<a href="${esc(e.m.url)}" rel="noopener">${esc(e.m.committee)} meeting ${esc(e.m.number)}</a> <span style="color:var(--muted)">(${esc(e.chamber)} committee)</span>`;
+        const w = e.m.witnesses;
+        if (w) sub = [w.appearing.length ? `Appearing: ${w.appearing.map(shortRole).join("; ")}` : "", w.orgs.length ? `Witnesses: ${w.orgs.join("; ")}` : "", w.people.length ? plural(w.people.length, "individual witness", "individual witnesses") : ""].filter(Boolean).join(" · ");
+      } else if (e.kind === "sitting") {
+        text = `<a href="${esc(e.x.url)}" rel="noopener">${esc(e.x.event)}</a> <span style="color:var(--muted)">(${esc(e.chamber)})</span>`;
+      } else if (e.kind === "decision") {
+        const how = e.d.yeas != null && e.d.nays != null ? ` (${e.d.yeas} to ${e.d.nays})` : e.d.method ? ` (${e.d.method.toLowerCase()})` : "";
+        text = `${esc(e.d.motion)}: ${esc(e.d.result.toLowerCase())}${esc(how)} <span style="color:var(--muted)">(${esc(e.chamber)})</span>`;
+      } else {
+        text = `Named in <a href="${esc(e.m.url)}" rel="noopener">${plural(e.m.speeches, "speech", "speeches")}</a> <span style="color:var(--muted)">(${esc(e.chamber)})</span>`;
+        sub = [e.m.speakers.slice(0, 4).join(", ") + (e.m.speakers.length > 4 ? ` and ${e.m.speakers.length - 4} more` : ""), e.m.contexts.slice(0, 1).join("")].filter(Boolean).join(" · ");
+      }
+      out.push(`<li class="ev ${c}"><span class="d">${esc(fmt(e.date, { month: "short", day: "numeric" }))}</span><span class="m ${e.kind}"></span><span>${text}${sub ? `<div class="w">${esc(sub)}</div>` : ""}</span></li>`);
+    }
+    return { html: out.join(""), total: ev.length };
+  }
+  // ---- Bill text: what changed between versions, when it starts, penalties ----
   const CHANGE_LABELS = {
     "As amended by committee": "Changed in committee",
     "As passed by the House of Commons": "Changed at report stage or third reading in the House",
     "As passed by the Senate": "Changed in the Senate",
     "Royal Assent": "Changed before royal assent",
   };
-  // "41 / 9" to "clause 41, section 9"; "34" to "clause 34".
+  // "41 / 9" to "Clause 41, section 9"; "34" to "Clause 34".
   const refText = (ref) => { const [c, ...rest] = ref.split(" / "); return `Clause ${c}${rest.length ? `, section ${rest.join(".")}` : ""}`; };
-  const realChanges = (c) => c.provisions.filter((p) => p.kind !== "renumbered");
+  const realChanges = (c) => c.provisions.filter((x) => x.kind !== "renumbered");
   const committeeChanges = (b) => (b.text?.changes || []).filter((c) => /committee/i.test(c.to)).reduce((n, c) => n + realChanges(c).length, 0);
   const briefCount = (b) => (b.studies || []).reduce((n, x) => n + x.briefs.length, 0);
-  const opposedCount = (b) => (b.positions || []).filter((p) => p.status === "agreed" && p.stance === "opposes").length;
+  const opposedCount = (b) => (b.positions || []).filter((x) => x.status === "agreed" && x.stance === "opposes").length;
   const plusDays = (iso, days) => { const d = new Date(iso + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + days); return d.toISOString().slice(0, 10); };
 
   function textHtml(b) {
@@ -497,22 +610,22 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
       const pdf = pdfOf(c.to);
       parts.push(`<h4>${esc(CHANGE_LABELS[c.to] || `Changed from ${c.from} to ${c.to}`)}</h4>
         <p class="note" style="margin:0 0 .3rem">${plural(real.length, "provision", "provisions")} amended, added or removed${renum ? `, plus ${renum} renumbered` : ""}. Compared with the previous version (${esc(c.from)}).${pdf ? ` <a href="${esc(pdf)}" rel="noopener">Read this version (PDF)</a>` : ""}</p>
-        <ul>${real.slice(0, 10).map((p) => `<li>${esc(refText(p.ref))}${p.note ? `: ${esc(p.note)}` : ""} <span class="who">(${esc(p.kind)}${p.was && p.kind !== "amended" ? `, was ${esc(refText(p.was).toLowerCase())}` : ""})</span></li>`).join("")}${real.length > 10 ? `<li class="who">and ${real.length - 10} more</li>` : ""}</ul>`);
+        <ul>${real.slice(0, 10).map((x) => `<li>${esc(refText(x.ref))}${x.note ? `: ${esc(x.note)}` : ""} <span class="who">(${esc(x.kind)}${x.was && x.kind !== "amended" ? `, was ${esc(refText(x.was).toLowerCase())}` : ""})</span></li>`).join("")}${real.length > 10 ? `<li class="who">and ${real.length - 10} more</li>` : ""}</ul>`);
     }
     if (t.inForce?.length) {
       parts.push(`<h4>Coming into force</h4><ul>${t.inForce.slice(0, 8).map((f) => {
         const days = (f.text.match(/on the (\d+)(?:st|nd|rd|th) day after the day on which this Act receives royal assent/) || [])[1];
-        const when = days && b.royalAssent ? ` That is ${fmtDate(plusDays(b.royalAssent, Number(days)))}.` : "";
+        const when = days && b.royalAssent ? ` That is ${fmt(plusDays(b.royalAssent, Number(days)))}.` : "";
         return `<li>${esc(refText(f.ref))}: ${esc(f.text)}${esc(when)}</li>`;
       }).join("")}${t.inForce.length > 8 ? `<li class="who">and ${t.inForce.length - 8} more</li>` : ""}</ul>
       ${t.inForce.some((f) => /order (?:of|in) (?:the )?(?:Governor in )?Council/i.test(f.text)) ? `<p class="note">Parts set by order in council are not in force until the government makes that order. The tracker does not yet check whether it has.</p>` : ""}`);
     }
     if (t.penalties?.length) {
-      parts.push(`<h4>Penalty amounts in the bill</h4><ul>${t.penalties.slice(0, 6).map((p) =>
-        `<li>${esc(refText(p.ref))}${p.note ? ` (${esc(p.note)})` : ""}: ${esc(p.text)}</li>`).join("")}${t.penalties.length > 6 ? `<li class="who">and ${t.penalties.length - 6} more provisions naming amounts</li>` : ""}</ul>`);
+      parts.push(`<h4>Penalty amounts in the bill</h4><ul>${t.penalties.slice(0, 6).map((x) =>
+        `<li>${esc(refText(x.ref))}${x.note ? ` (${esc(x.note)})` : ""}: ${esc(x.text)}</li>`).join("")}${t.penalties.length > 6 ? `<li class="who">and ${t.penalties.length - 6} more provisions naming amounts</li>` : ""}</ul>`);
     }
     if (!parts.length) return "";
-    return `<details><summary>Bill text: changes, coming into force, penalties</summary>${parts.join("")}<p class="note">Read automatically from each version of the bill published by Parliament.</p></details>`;
+    return `<section><h3>Bill text</h3>${parts.join("")}<p class="note">Read automatically from each version of the bill published by Parliament.</p></section>`;
   }
 
   // ---- Where organizations stand, read from their briefs by two models ----
@@ -524,23 +637,22 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
   ];
   function positionsHtml(b) {
     const all = b.positions || [];
-    const agreed = all.filter((p) => p.status === "agreed");
-    const review = all.filter((p) => p.status === "split" || p.status === "quote-unverified");
+    const agreed = all.filter((x) => x.status === "agreed");
+    const review = all.filter((x) => x.status === "split" || x.status === "quote-unverified");
     if (!agreed.length && !review.length) return "";
     const rows = STANCE_ORDER.map(([key, label, cls]) => {
-      const here = agreed.filter((p) => p.stance === key);
+      const here = agreed.filter((x) => x.stance === key);
       if (!here.length) return "";
-      const names = here.map((p) => `<a href="${esc(p.url)}" rel="noopener">${esc(p.name)}</a>`).join("; ");
+      const names = here.map((x) => `<a href="${esc(x.url)}" rel="noopener">${esc(x.name)}</a>`).join("; ");
       return `<div class="stancerow ${cls}"><span class="stancelabel">${label} (${here.length})</span><span class="orglist">${names}</span></div>`;
     }).join("");
-    // One short quote, from the organization most firmly against, to show the flavour.
-    const show = agreed.find((p) => p.stance === "opposes" && p.quote) || agreed.find((p) => p.quote);
-    return `<h4>Where organizations stand<span class="aiflag">AI-read</span></h4>
-      ${b.omnibus ? `<p class="note" style="margin:0 0 .3rem">This is a large bill covering many subjects. Most briefs address parts other than the digital ones.</p>` : ""}
+    const show = agreed.find((x) => x.stance === "opposes" && x.quote) || agreed.find((x) => x.quote);
+    return `<section><h3>Where organizations stand<span class="aiflag">AI-read</span></h3>
+      ${b.omnibus ? `<p class="note" style="margin:0 0 .4rem">This is a large bill covering many subjects. Most briefs address parts other than the digital ones.</p>` : ""}
       <div class="stances">${rows || `<p class="note" style="margin:0">No agreed positions yet.</p>`}</div>
-      ${show ? `<p class="quoteline">“${esc(show.quote.replace(/^[“"']+|[”"']+$/g, ""))}” <span style="font-style:normal">${esc(show.name)}</span></p>` : ""}
-      ${review.length ? `<p class="note">${plural(review.length, "brief", "briefs")} held back for review, because the two models read ${review.length === 1 ? "it" : "them"} differently or the quote could not be matched to the text: ${review.map((p) => esc(p.name)).join("; ")}.</p>` : ""}
-      <p class="note">Each brief was read by two AI models working separately. A position is shown only where both agreed and both quoted the brief word for word. Organization names link to the brief itself. Check anything that matters before relying on it.</p>`;
+      ${show ? `<p class="quoteline">\u201c${esc(show.quote.replace(/^[\u201c"']+|[\u201d"']+$/g, ""))}\u201d <span style="font-style:normal">${esc(show.name)}</span></p>` : ""}
+      ${review.length ? `<p class="note">${plural(review.length, "brief", "briefs")} held back for review, because the two models read ${review.length === 1 ? "it" : "them"} differently or the quote could not be matched to the text: ${review.map((x) => esc(x.name)).join("; ")}.</p>` : ""}
+      <p class="note">Each brief was read by two AI models working separately. A position is shown only where both agreed and both quoted the brief word for word. Organization names link to the brief itself. Check anything that matters before relying on it.</p></section>`;
   }
 
   // ---- Committee evidence: who was heard, who sent briefs, how amendments fared ----
@@ -549,8 +661,6 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     const amends = (b.activity?.meetings || []).flatMap((m) => m.amendments || []);
     if (!studies.length && !amends.length) return "";
     const parts = [];
-    const stances = positionsHtml(b);
-    if (stances) parts.push(stances);
     for (const st of studies) {
       const orgs = st.witnesses.filter((w) => w.name !== "As an individual").sort((x, y) => y.meetings.length - x.meetings.length || x.name.localeCompare(y.name));
       const indiv = (st.witnesses.find((w) => w.name === "As an individual") || { people: [] }).people.length;
@@ -558,184 +668,120 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
       const peopleBriefs = st.briefs.length - orgBriefs.length;
       parts.push(`<h4>${esc(st.committee)} (House committee)</h4>
         <p class="note" style="margin:0 0 .3rem">${plural(orgs.length, "organization", "organizations")} and ${plural(indiv, "individual", "individuals")} heard; ${plural(st.briefs.length, "brief", "briefs")} submitted. <a href="${esc(st.url)}" rel="noopener">Committee's page for this study</a></p>
-        ${orgs.length ? `<p style="margin:.2rem 0"><b>Heard from:</b> ${orgs.slice(0, 14).map((o) => esc(o.name)).join("; ")}${orgs.length > 14 ? `; and ${orgs.length - 14} more` : ""}</p>` : ""}
-        ${orgBriefs.length ? `<p style="margin:.4rem 0 .2rem"><b>Briefs from organizations:</b></p><ul>${orgBriefs.slice(0, 10).map((x) => `<li>${x.url ? `<a href="${esc(x.url)}" rel="noopener">${esc(x.name)}</a>` : esc(x.name)}${x.date ? ` <span class="who">${esc(fmtDate(x.date))}</span>` : ""}</li>`).join("")}${orgBriefs.length > 10 || peopleBriefs ? `<li class="who">${[orgBriefs.length > 10 ? `${orgBriefs.length - 10} more from organizations` : "", peopleBriefs ? `${peopleBriefs} from individuals` : ""].filter(Boolean).join(" and ")} on the committee's page</li>` : ""}</ul>` : ""}`);
+        ${orgs.length ? `<p style="margin:.2rem 0;font-size:var(--s-1)"><b>Heard from:</b> ${orgs.slice(0, 14).map((o) => esc(o.name)).join("; ")}${orgs.length > 14 ? `; and ${orgs.length - 14} more` : ""}</p>` : ""}
+        ${orgBriefs.length ? `<p style="margin:.4rem 0 .2rem;font-size:var(--s-1)"><b>Briefs from organizations:</b></p><ul>${orgBriefs.slice(0, 10).map((x) => `<li>${x.url ? `<a href="${esc(x.url)}" rel="noopener">${esc(x.name)}</a>` : esc(x.name)}${x.date ? ` <span class="who">${esc(fmt(x.date))}</span>` : ""}</li>`).join("")}${orgBriefs.length > 10 || peopleBriefs ? `<li class="who">${[orgBriefs.length > 10 ? `${orgBriefs.length - 10} more from organizations` : "", peopleBriefs ? `${peopleBriefs} from individuals` : ""].filter(Boolean).join(" and ")} on the committee's page</li>` : ""}</ul>` : ""}`);
     }
     if (amends.length) {
       const by = new Map();
       for (const a of amends) { const k = a.party || "Not matched to a party"; const r = by.get(k) || { decided: 0, adopted: 0 }; r.decided++; if (a.result === "adopted") r.adopted++; by.set(k, r); }
-      const rows = [...by.entries()].sort((x, y) => y[1].decided - x[1].decided);
       parts.push(`<h4>Amendments decided at committee</h4>
-        <table class="amend"><thead><tr><th>Moved by</th><th>Decided</th><th>Adopted</th></tr></thead><tbody>${rows.map(([p, r]) => `<tr><td>${esc(p)}</td><td>${r.decided}</td><td>${r.adopted}</td></tr>`).join("")}</tbody></table>
+        <table class="amend"><thead><tr><th>Moved by</th><th>Decided</th><th>Adopted</th></tr></thead><tbody>${[...by.entries()].sort((x, y) => y[1].decided - x[1].decided).map(([q, r]) => `<tr><td>${esc(q)}</td><td>${r.decided}</td><td>${r.adopted}</td></tr>`).join("")}</tbody></table>
         <p class="note">From the minutes of the House committee meetings on this bill read so far.</p>`);
     }
-    return `<details><summary>Committee evidence: witnesses, briefs, amendments</summary>${parts.join("")}</details>`;
+    return `<section><h3>Committee evidence</h3>${parts.join("")}</section>`;
   }
 
-  function onNoticeHtml(data) {
-    const list = data.upcoming || [];
-    $("onnotice").innerHTML = list.length
-      ? `<h3>On notice in the House, not yet introduced</h3><ul>${list.map((u) =>
-          `<li><span class="when">${esc(fmtDate(u.date))}</span> · ${esc(u.kind)} · ${esc(u.sponsor)}: ${esc(u.title)}</li>`).join("")}</ul>`
-      : `No digital-policy bills on the House Notice Paper today. Bills must appear there before they are introduced.`;
-  }
-
-  function billHtml(b) {
-    const title = b.shortTitle || b.longTitle || b.number;
-    const sponsor = [b.sponsor, (b.sponsorTitle || "").replace(/\u2014/g, "\u2013")].filter(Boolean).join(", ");
-    const type = b.type ? b.type.replace("House Government Bill", "Government bill").replace("Senate Government Bill", "Government bill (Senate)").replace("Senate Public Bill", "Senate public bill").replace("Private Member’s Bill", "Private member's bill") : "";
-    const ev = b.latestEvent;
-    const ago = ev && stageOf(b) !== "law" ? daysAgo(ev.date) : null;
-    return `<article class="bill" id="${esc(anchor(b))}">
-      <div>
-        <h3><span class="num">${esc(b.number)}</span>${esc(title)}${isStalled(b) ? `<span class="flag" title="No recorded activity in 6 months or more">Stalled</span>` : ""}</h3>
-        ${b.summary ? `<p class="lead">${esc(b.summary)}</p>` : ""}
-        ${b.outlook && b.outlook.text ? `<p class="outlook"><b>RiverRidge outlook${b.outlook.date ? " (" + esc(fmtDate(b.outlook.date)) + ")" : ""}:</b> ${esc(b.outlook.text)}</p>` : ""}
-        ${officialHtml(b)}
-        <div class="meta">${esc(type)}${sponsor ? " · " + esc(sponsor) : ""}</div>
-        ${committeesHtml(b)}
-        ${recordHtml(b)}
-        <div class="links">
-          <a href="${esc(b.legisinfoUrl)}" rel="noopener">Status on LEGISinfo</a>
-          <a href="${esc(b.textUrl)}" rel="noopener">Bill text</a>
-          <button type="button" class="copylink" data-copy="${esc(b.number.toLowerCase())}">Copy link</button>
-          <button type="button" class="copylink" data-embed="${esc(b.number.toLowerCase())}">Embed</button>
-          ${b.statute ? `<span>${esc(b.statute)}</span>` : ""}
-        </div>
-      </div>
-      <div class="status">
-        <span class="pill ${pillClass(b)}">${esc(statusText(b))}</span>
+  function openBill(num, push = true) {
+    const b = byNum.get(num); if (!b) return;
+    lastFocus = document.activeElement; openNum = num;
+    const p = b.progress || [];
+    const tl = timelineHtml(b, 14);
+    const offs = b.officialSummary || [];
+    const committees = (b.committees || []).map((c) => `<span class="cmte ${c.current ? "now " + (c.chamber === "Senate" ? "senate" : "house") : ""}"><b>${esc(c.acronym)}</b> ${esc(c.name)}${c.current ? " · now" : ""}${c.role === "pre-study" ? " · pre-study" : ""}</span>`).join("");
+    drawer.innerHTML = `
+      <div class="head">
+        <button class="close" type="button" aria-label="Close">×</button>
+        <h2 id="d-title"><span class="num">${esc(b.number)}</span>${esc(b.shortTitle || b.longTitle)}</h2>
+        ${b.shortTitle ? `<p class="long">${esc(b.longTitle)}</p>` : ""}
+        <span class="status ${isWaiting(b) ? "waiting" : chamberNow(b)}">${esc(statusLabel(b))}</span>
         ${trackHtml(b)}
-        ${ev ? `<div class="latest">Last activity: <b>${esc(ev.type)}</b>${ev.chamber ? " (" + esc(ev.chamber) + ")" : ""}, ${esc(fmtDate(ev.date))}${ago !== null && ago > 0 ? `<br>${ago} days ago` : ""}</div>` : ""}
-        ${b.stale ? `<div class="stale">Neither LEGISinfo nor openparliament.ca responded at the last check; showing the previous status.</div>` : ""}
+        <div class="actions"><button type="button" data-copylink>Copy link</button><button type="button" data-embedcode>Embed</button><a href="${esc(b.legisinfoUrl)}" rel="noopener">LEGISinfo</a><a href="${esc(b.textUrl)}" rel="noopener">Bill text</a>${b.lopSummaryUrl ? `<a href="${esc(b.lopSummaryUrl)}" rel="noopener">Library of Parliament summary</a>` : ""}</div>
       </div>
-    </article>`;
+      <div class="body">
+        <section><h3>In brief</h3><p class="leadbig">${esc(b.summary)}</p>
+          ${(b.sectors || []).length ? `<div class="tags" style="margin-top:.5rem">${b.sectors.map((s) => `<span class="tag">${esc(sectors.get(s) || s)}</span>`).join("")}<span class="draft" style="align-self:center">Draft tags</span></div>` : ""}
+          ${b.outlook?.text ? `<p class="outlook" style="margin-top:.75rem"><b>RiverRidge outlook:</b> ${esc(b.outlook.text)}</p>` : `<p class="outlook pending" style="margin-top:.75rem">RiverRidge outlook: not yet published for this bill.</p>`}
+        </section>
+        <section><h3>At a glance</h3><dl class="facts">
+          <dt>Sponsor</dt><dd>${esc([b.sponsor, b.sponsorTitle].filter(Boolean).join(", "))}</dd>
+          <dt>Type</dt><dd>${esc(b.type)}</dd>
+          <dt>Policy area</dt><dd>${esc(themes.get(b.theme) || b.theme)}</dd>
+          ${b.statute ? `<dt>Statute</dt><dd>${esc(b.statute)}</dd>` : ""}
+          <dt>On the record</dt><dd>${plural((b.activity?.meetings || []).filter((m) => m.date <= NOW).length, "committee meeting", "committee meetings")}, ${plural(new Set((b.activity?.sittings || []).map((x) => x.chamber + x.sitting)).size, "sitting day", "sitting days")} in the chamber</dd>
+        </dl>${committees ? `<div class="cmtes" style="margin-top:.6rem">${committees}</div>` : ""}</section>
+        <section><h3>Timeline</h3>
+          <div class="tl-key" aria-hidden="true"><span><i></i>Chamber event</span><span><i class="sq"></i>Committee meeting</span><span><i class="dia"></i>Decision</span><span><i class="ring"></i>Named in debate</span></div>
+          <ul class="tl" id="d-tl">${tl.html || `<li class="empty">No recorded activity yet.</li>`}</ul>
+          ${tl.total > 14 ? `<button class="more" type="button" data-alltl>Show all ${tl.total} events</button>` : ""}
+        </section>
+        ${positionsHtml(b)}
+        ${evidenceHtml(b)}
+        ${textHtml(b)}
+        ${offs.length ? `<section><h3>Official summary</h3><div class="offsum${offs.join(" ").split(/\s+/).length > 110 ? " clamp" : ""}" id="d-sum">${offs.map((l) => `<p${/^\([a-zA-Z0-9.]+\)/.test(l) ? ' class="sub"' : ""}>${esc(l)}</p>`).join("")}</div>
+          ${offs.join(" ").split(/\s+/).length > 110 ? `<button class="more" type="button" data-allsum>Read the full summary (${offs.join(" ").split(/\s+/).length.toLocaleString("en-CA")} words)</button>` : ""}</section>` : ""}
+      </div>`;
+    drawer.hidden = false; scrim.hidden = false; document.body.style.overflow = "hidden";
+    drawer.querySelector(".close").focus();
+    document.querySelectorAll(".bdot.on").forEach((d) => d.classList.remove("on"));
+    document.querySelectorAll(`.bdot[data-open="${CSS.escape(num)}"]`).forEach((d) => d.classList.add("on"));
+    if (push) history.replaceState(null, "", "#" + num.toLowerCase());
   }
-
-  function changesHtml(data) {
-    const box = $("changes");
-    const titles = new Map((data.bills || []).map((b) => [b.number, b.shortTitle || b.longTitle || ""]));
-    const recent = (data.changelog || []).filter((c) => { const n = daysAgo(c.date); return n !== null && n <= 7; });
-    box.hidden = false;
-    box.innerHTML = `<h2>What changed in the past 7 days</h2>` + (recent.length
-      ? `<ul>${recent.map((c) => `<li><span class="when">${esc(fmtDate(c.date))}</span> · <a href="#${esc(c.number.toLowerCase())}">${esc(c.number)}</a> ${esc(titles.get(c.number) || "")}: ${esc(c.text)}</li>`).join("")}</ul>`
-      : `<p>No tracked bill changed stage or status in the past 7 days.</p>`);
+  function closeBill() {
+    drawer.hidden = true; scrim.hidden = true; document.body.style.overflow = ""; openNum = null;
+    document.querySelectorAll(".bdot.on").forEach((d) => d.classList.remove("on"));
+    history.replaceState(null, "", location.pathname + location.search);
+    if (lastFocus) lastFocus.focus();
   }
-
-  function pipelineHtml(bills) {
-    $("pipeline").innerHTML = COLUMNS.map((c) => {
-      const rows = bills.filter((b) => columnOf(b) === c.id).sort((a, b) => a.number.localeCompare(b.number, "en", { numeric: true }));
-      const chips = rows.map((b) => {
-        const title = b.shortTitle || b.longTitle || "";
-        const tip = `${b.number} ${title}: ${statusText(b)}${isStalled(b) ? " (stalled)" : ""}`;
-        return `<a class="pchip ${pillClass(b)}${isStalled(b) ? " stalled" : ""}" href="#${esc(anchor(b))}" title="${esc(tip)}" aria-label="${esc(tip)}">${esc(b.number)}</a>`;
-      }).join("");
-      return `<div class="pcol"><h3>${esc(c.label)} <small>${esc(c.note)} · ${rows.length}</small></h3><div class="pchips">${chips || `<span class="pempty">None</span>`}</div></div>`;
-    }).join("");
-  }
-
-  function render(data) {
-    const bills = data.bills || [];
-    const themes = data.themes || [];
-    const counts = { all: bills.length, house: 0, senate: 0, law: 0 };
-    bills.forEach((b) => counts[stageOf(b)]++);
-
-    $("summary").innerHTML = STAGES.map((s) =>
-      `<button type="button" id="stage-${s.id}" data-stage="${s.id}" aria-pressed="${state.stage === s.id}"><span class="n">${counts[s.id]}</span><span class="l">${s.label}</span></button>`
-    ).join("");
-    $("filters").innerHTML = `<span class="label">Policy area</span>` +
-      [{ id: "all", label: "All" }, ...themes].map((t) =>
-        `<button type="button" class="chipbtn" id="theme-${t.id}" data-theme-id="${t.id}" aria-pressed="${state.theme === t.id}">${esc(t.label)}</button>`
-      ).join("");
-
-    const order = { house: 0, senate: 0, law: 1 };
-    const inScope = bills.filter((b) => (state.theme === "all" || b.theme === state.theme) && matchesSearch(b, query));
-    pipelineHtml(inScope);
-    const filtered = inScope.filter((b) => state.stage === "all" || stageOf(b) === state.stage);
-    const sections = themes.map((t) => {
-      const rows = filtered.filter((b) => b.theme === t.id).sort((a, b) =>
-        (order[stageOf(a)] - order[stageOf(b)]) ||
-        ((b.latestEvent?.date || "").localeCompare(a.latestEvent?.date || "")));
-      return rows.length ? `<section class="theme"><h2>${esc(t.label)}</h2>${rows.map(billHtml).join("")}</section>` : "";
-    }).join("");
-    $("list").innerHTML = sections || `<p class="empty">No bills match these filters.</p>`;
-
-    changesHtml(data);
-    onNoticeHtml(data);
-    const checked = new Date(data.checkedAt);
-    $("checked").innerHTML = `Status last refreshed ${esc(checked.toLocaleDateString("en-CA", { month: "long", day: "numeric", year: "numeric" }))}. ${bills.length} bills tracked. <a href="data/bills.csv" download>Download the data (CSV)</a>`;
-  }
-
-  let DATA = null;
-
-  // A link like #c-34 should land on that bill even if filters would hide it.
-  function goToHash() {
-    const id = decodeURIComponent(location.hash.slice(1));
-    if (!DATA || !id || !DATA.bills.some((b) => anchor(b) === id)) return;
-    if (!document.getElementById(id)) {
-      state = { stage: "all", theme: "all" };
-      query = "";
-      $("search").value = "";
-      render(DATA);
+  drawer.addEventListener("click", (e) => {
+    if (e.target.closest(".close")) return closeBill();
+    if (e.target.closest("[data-alltl]")) { const b = byNum.get(openNum); $("#d-tl").innerHTML = timelineHtml(b, 1e9).html; e.target.remove(); return; }
+    if (e.target.closest("[data-allsum]")) { $("#d-sum").classList.remove("clamp"); e.target.remove(); return; }
+    const c = e.target.closest("[data-copylink]");
+    if (c) { navigator.clipboard?.writeText(location.href).then(() => { c.textContent = "Link copied"; setTimeout(() => (c.textContent = "Copy link"), 2000); }); return; }
+    const em = e.target.closest("[data-embedcode]");
+    if (em) { const code = `<iframe src="https://riverridgeintelligence.ca/legislation-widget.html?bill=${openNum.toLowerCase()}" title="${openNum} status" width="100%" height="230" style="border:0;max-width:520px" loading="lazy"></iframe>`; navigator.clipboard?.writeText(code).then(() => { em.textContent = "Embed code copied"; setTimeout(() => (em.textContent = "Embed"), 2000); }); }
+  });
+  scrim.addEventListener("click", closeBill);
+  document.addEventListener("keydown", (e) => {
+    if (drawer.hidden) return;
+    if (e.key === "Escape") closeBill();
+    if (e.key === "Tab") { // keep focus inside the open drawer
+      const f = [...drawer.querySelectorAll("a, button")]; if (!f.length) return;
+      if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+      else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
     }
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ block: "start" });
-  }
-  window.addEventListener("hashchange", goToHash);
-  $("search").addEventListener("input", (e) => {
-    query = e.target.value.trim();
-    if (DATA) render(DATA);
   });
 
+  // ---------- Render and wire up ----------
+  function render() {
+    const list = bills.filter(inScope);
+    $("#count").textContent = list.length === bills.length ? `${bills.length} bills` : `${list.length} of ${bills.length} bills`;
+    kpis(list); river(list); feed(list); table(list);
+  }
   document.addEventListener("click", (e) => {
-    const m = e.target.closest("[data-more]");
-    if (m) {
-      const box = m.closest(".offsum");
-      const open = !box.classList.contains("open");
-      box.classList.toggle("open", open);
-      open ? opened.add(m.dataset.more) : opened.delete(m.dataset.more);
-      m.setAttribute("aria-expanded", open);
-      const n = words(DATA.bills.find((b) => b.number === m.dataset.more).officialSummary);
-      m.textContent = open ? "Show less" : `Show full summary (${n.toLocaleString("en-CA")} words)`;
-      return;
-    }
-    const em = e.target.closest("[data-embed]");
-    if (em) {
-      const src = new URL(`legislation-widget.html?bill=${em.dataset.embed}`, location.href).href;
-      const code = `<iframe src="${src}" title="${em.dataset.embed.toUpperCase()} status, RiverRidge bill tracker" width="100%" height="230" style="border:0;max-width:520px" loading="lazy"></iframe>`;
-      const done = () => { em.textContent = "Embed code copied"; setTimeout(() => { em.textContent = "Embed"; }, 2000); };
-      if (navigator.clipboard) navigator.clipboard.writeText(code).then(done, () => window.prompt("Copy this embed code:", code));
-      else window.prompt("Copy this embed code:", code);
-      return;
-    }
-    const c = e.target.closest("[data-copy]");
-    if (c) {
-      const url = location.origin + location.pathname + "#" + c.dataset.copy;
-      const done = () => { c.textContent = "Link copied"; setTimeout(() => { c.textContent = "Copy link"; }, 2000); };
-      if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, () => { location.hash = c.dataset.copy; });
-      else location.hash = c.dataset.copy;
-      return;
-    }
-    const s = e.target.closest("[data-stage]");
-    const t = e.target.closest("[data-theme-id]");
-    if (!DATA || (!s && !t)) return;
-    if (s) state.stage = s.dataset.stage;
-    if (t) state.theme = t.dataset.themeId;
-    save();
-    render(DATA);
+    const w = e.target.closest("[data-where]");
+    if (w) { state.where = w.dataset.where; document.querySelectorAll("[data-where]").forEach((x) => x.setAttribute("aria-pressed", x === w)); return render(); }
+    if (e.target.closest("#kpitbtn")) { const t = $("#kpitable"); t.hidden = !t.hidden; $("#kpitbtn").setAttribute("aria-expanded", !t.hidden); $("#kpitbtn").textContent = t.hidden ? "Weekly numbers as a table" : "Hide the table"; return; }
+    const o = e.target.closest("[data-open]");
+    if (o && !e.target.closest("#drawer")) openBill(o.dataset.open);
   });
+  $("#theme").addEventListener("change", (e) => { state.theme = e.target.value; render(); });
+  $("#sector").addEventListener("change", (e) => { state.sector = e.target.value; render(); });
+  $("#sort").addEventListener("change", (e) => { state.sort = e.target.value; render(); });
+  $("#q").addEventListener("input", (e) => { state.q = e.target.value.trim().toLowerCase(); render(); });
+  $("#refreshed").textContent = `Refreshed ${fmt(NOW)}`;
+  render();
+  const h = location.hash.slice(1).toUpperCase();
+  if (byNum.has(h)) openBill(h, false);
+}
 
-  fetch(DATA_URL, { cache: "no-cache" })
-    .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then((d) => {
-      DATA = d;
-      render(d);
-      goToHash();
-    })
-    .catch(() => {
-      $("checked").textContent = "";
-      $("list").innerHTML = `<p class="empty">The bill list could not load. Try refreshing, or see current status on <a href="https://www.parl.ca/legisinfo/en/bills?parlsession=45-1">LEGISinfo</a>.</p>`;
-    });
+fetch("data/bills.json", { cache: "no-cache" })
+  .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(start)
+  .catch(() => {
+    document.getElementById("rows").innerHTML =
+      `<p class="empty" style="padding:1rem .5rem">The bill list could not load. Try refreshing, or see current status on <a href="https://www.parl.ca/legisinfo/en/bills?parlsession=45-1" rel="noopener">LEGISinfo</a>.</p>`;
+  });
 })();
 </script>
 </body>
