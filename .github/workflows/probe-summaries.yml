@@ -12,6 +12,8 @@ jobs:
       - name: AI model trial on the C-22 briefs
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          TRIAL_MODELS: mistral,cohere
+          TRIAL_BRIEFS: "2"
         run: |
           which pdftotext >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils)
           python3 probe/aitrial/trial.py

@@ -98,7 +98,7 @@ def ask(model, text):
         "model": model,
         "messages": [{"role": "user", "content": PROMPT + text[:MAX_CHARS]}],
         "temperature": 0,
-        "max_tokens": 600,
+        "max_tokens": 1200,
     }).encode()
     headers = {
         "Authorization": f"Bearer {KEY}",
@@ -120,19 +120,55 @@ def ask(model, text):
                 raise
             time.sleep(5 * 3 ** attempt)  # 5s, 15s, 45s
     r = json.loads(raw)
-    content = r["choices"][0]["message"]["content"] or ""
-    m = re.search(r"\{[\s\S]*\}", content)
-    answer = json.loads(m.group(0)) if m else None
-    return answer, r.get("usage", {}), time.time() - t0
+    msg = (r.get("choices") or [{}])[0].get("message") or {}
+    # Some models put the answer in "reasoning" and leave "content" empty.
+    content = msg.get("content") or msg.get("reasoning") or ""
+    return extract(content), r.get("usage", {}), time.time() - t0, content
+
+
+# Pull the JSON object out of a reply. Models wrap it in prose or code fences,
+# and some emit several objects, so take the first complete, balanced one.
+def extract(content):
+    text = re.sub(r"^\s*```(?:json)?|```\s*$", "", content.strip(), flags=re.M)
+    for start in (i for i, ch in enumerate(text) if ch == "{"):
+        depth, instr, esc = 0, False, False
+        for i in range(start, len(text)):
+            ch = text[i]
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                instr = not instr
+            elif not instr and ch == "{":
+                depth += 1
+            elif not instr and ch == "}":
+                depth -= 1
+                if depth == 0:
+                    try:
+                        got = json.loads(text[start:i + 1])
+                    except Exception:
+                        break
+                    if isinstance(got, dict) and "stance" in got:
+                        return got
+                    break
+    return None
 
 
 def main():
     os.makedirs(OUT, exist_ok=True)
+    global MODELS
+    only = os.environ.get("TRIAL_MODELS", "").strip()
+    if only:
+        MODELS = [m for m in MODELS if any(w.lower() in m[1].lower() for w in only.split(","))]
+    limit = int(os.environ.get("TRIAL_BRIEFS", "0") or 0)
     if not KEY:
         open(f"{OUT}/status.txt", "w").write("Waiting for the OPENROUTER_API_KEY repository secret. Nothing was sent to any AI service.\n")
         print("no key; stopping")
         return
     docs = briefs()
+    if limit:
+        docs = docs[:limit]
     results, spent = [], 0.0
     stopped = False
     for provider, model, pin, pout in MODELS:
@@ -143,11 +179,14 @@ def main():
                 results.append(rec)
                 continue
             try:
-                answer, usage, secs = ask(model, d["text"])
+                answer, usage, secs, content = ask(model, d["text"])
                 cost = usage.get("prompt_tokens", 0) / 1e6 * pin + usage.get("completion_tokens", 0) / 1e6 * pout
                 spent += cost
                 rec.update({"answer": answer, "seconds": round(secs, 1), "cost": round(cost, 5),
                             "quote_check": quote_check((answer or {}).get("quote", ""), d["text"]) if answer else "no answer"})
+                if not answer:
+                    rec["raw_reply"] = content[:600]
+                    rec["finish_reason"] = usage.get("finish_reason", "")
             except OutOfCredit as e:
                 rec["error"] = str(e)
                 results.append(rec)
