@@ -98,7 +98,9 @@ def ask(model, text):
         "model": model,
         "messages": [{"role": "user", "content": PROMPT + text[:MAX_CHARS]}],
         "temperature": 0,
-        "max_tokens": 1200,
+        # Reasoning models think out loud before answering, so leave room for
+        # the preamble plus the JSON. Only tokens actually generated are billed.
+        "max_tokens": 3000,
     }).encode()
     headers = {
         "Authorization": f"Bearer {KEY}",
