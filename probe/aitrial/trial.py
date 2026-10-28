@@ -8,7 +8,7 @@
 # set the repository secret OPENROUTER_API_KEY. Results go to probe/aitrial/.
 # Python 3 standard library only.
 
-import difflib, html, json, os, re, subprocess, sys, time, urllib.request
+import difflib, html, json, os, re, subprocess, sys, time, urllib.error, urllib.request
 from collections import Counter
 
 OUT = "probe/aitrial"
@@ -89,6 +89,10 @@ def quote_check(quote, text):
     return "close" if difflib.SequenceMatcher(None, window, q).ratio() >= 0.9 else "not found"
 
 
+class OutOfCredit(Exception):
+    """OpenRouter answered 402: the account has no credit left."""
+
+
 def ask(model, text):
     body = json.dumps({
         "model": model,
@@ -96,13 +100,25 @@ def ask(model, text):
         "temperature": 0,
         "max_tokens": 600,
     }).encode()
-    t0 = time.time()
-    raw = get("https://openrouter.ai/api/v1/chat/completions", data=body, timeout=240, headers={
+    headers = {
         "Authorization": f"Bearer {KEY}",
         "Content-Type": "application/json",
         "HTTP-Referer": "https://riverridgeintelligence.ca",
         "X-Title": "RiverRidge bill tracker model trial",
-    })
+    }
+    t0 = time.time()
+    # 429 means too many requests in a short time: wait and try again. 402
+    # means the credit has run out, which no amount of waiting fixes.
+    for attempt in range(4):
+        try:
+            raw = get("https://openrouter.ai/api/v1/chat/completions", data=body, timeout=240, headers=headers)
+            break
+        except urllib.error.HTTPError as e:
+            if e.code == 402:
+                raise OutOfCredit("OpenRouter says the account is out of credit")
+            if e.code != 429 or attempt == 3:
+                raise
+            time.sleep(5 * 3 ** attempt)  # 5s, 15s, 45s
     r = json.loads(raw)
     content = r["choices"][0]["message"]["content"] or ""
     m = re.search(r"\{[\s\S]*\}", content)
@@ -118,6 +134,7 @@ def main():
         return
     docs = briefs()
     results, spent = [], 0.0
+    stopped = False
     for provider, model, pin, pout in MODELS:
         for d in docs:
             rec = {"provider": provider, "model": model, "organization": d["name"], "url": d["url"]}
@@ -131,10 +148,18 @@ def main():
                 spent += cost
                 rec.update({"answer": answer, "seconds": round(secs, 1), "cost": round(cost, 5),
                             "quote_check": quote_check((answer or {}).get("quote", ""), d["text"]) if answer else "no answer"})
+            except OutOfCredit as e:
+                rec["error"] = str(e)
+                results.append(rec)
+                print(f"STOPPING: {e}. {len(docs) * len(MODELS) - len(results)} requests not made.")
+                stopped = True
+                break
             except Exception as e:
                 rec["error"] = str(e)[:200]
             results.append(rec)
-            time.sleep(0.5)
+            time.sleep(1.0)
+        if stopped:
+            break
     json.dump(results, open(f"{OUT}/results.json", "w"), indent=1, ensure_ascii=False)
 
     # Stance each model gave per organization, and the majority among them.
@@ -144,8 +169,11 @@ def main():
         grid.setdefault(r["organization"], {})[r["provider"]] = s if s in STANCES else ("(other)" if s else "(none)")
     majority = {org: Counter(v for v in row.values() if v in STANCES).most_common(1)[0][0] if any(v in STANCES for v in row.values()) else "" for org, row in grid.items()}
 
+    errors = Counter(r["error"].split(":")[0] for r in results if r.get("error"))
     lines = ["# Model trial: stances in the organization briefs on C-22", "",
              f"{len(docs)} briefs, {len(MODELS)} models, total cost US${spent:.2f}. Unverified AI output, for comparing models only.", "",
+             ("**Run stopped early: the OpenRouter account ran out of credit.**" if stopped else ""),
+             (f"Failed requests: {dict(errors)}" if errors else ""), "",
              "| Model | Answers | Quote found exactly | Quote close | Quote not found | Agrees with majority | Cost (US$) | Seconds per brief |",
              "|---|---|---|---|---|---|---|---|"]
     for provider, model, _, _ in MODELS:
