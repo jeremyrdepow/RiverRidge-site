@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-28T16:40:18.525Z",
+  "checkedAt": "2026-10-28T18:25:58.762Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -3065,7 +3065,47 @@
         ],
         "penalties": [],
         "provisionCount": 325
-      }
+      },
+      "positions": [
+        {
+          "name": "Office of the Federal Ombudsperson for Victims of Crime",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14223110/br-external/OfficeOfTheFederalOmbudsmanForVictimsOfCrime-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "The recommendations in this submission set out targeted amendments and review mechanisms that would materially strengthen the Bill’s capacity to protect and empower victims, while preserving its core objectives and structure.",
+          "asks": [
+            "Address enforceability of the Canadian Victims Bill of Rights",
+            "Authorize direct complaints to the Federal Ombudsperson",
+            "Eliminate preliminary inquiries for complainants under 18"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Address enforceability of the Canadian Victims Bill of Rights",
+                "Authorize direct complaints to the Federal Ombudsperson",
+                "Eliminate preliminary inquiries for complainants under 18"
+              ],
+              "quote": "The OFOVC supports the objectives of Bill C‑16 and considers it one of the most significant advancements in victims’ rights since the CVBR came into force in 2015.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Address enforceability of the Canadian Victims Bill of Rights and authorize direct complaints to the Ombudsperson",
+                "Recognize and protect victim information in the Corrections and Conditional Release Act, including during transfers and ",
+                "Strengthen Criminal Code protections regarding coercive control, femicide, bail notifications, child witnesses, court de"
+              ],
+              "quote": "The recommendations in this submission set out targeted amendments and review mechanisms that would materially strengthen the Bill’s capacity to protect and empower victims, while preserving its core objectives and structure.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-09-17",
+          "checkedAt": "2026-10-28"
+        }
+      ]
     },
     {
       "number": "C-9",
@@ -7887,7 +7927,216 @@
           }
         ],
         "provisionCount": 101
-      }
+      },
+      "positions": [
+        {
+          "name": "Canadian Life and Health Insurance Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14210568/br-external/CanadianLifeAndHealthInsuranceAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "We recommend that the Bill be amended to clearly limit the scope of obligations, ensuring they do not require changes that weaken product security or functionality.",
+          "asks": [
+            "Narrow definitions to target intended sectors",
+            "Protect encryption, no weakening or backdoors",
+            "Replace broad metadata retention with targeted preservation orders"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Narrow definitions to target intended sectors",
+                "Protect encryption, no weakening or backdoors",
+                "Replace broad metadata retention with targeted preservation orders"
+              ],
+              "quote": "We recommend that the Bill be amended to clearly limit the scope of obligations, ensuring they do not require changes that weaken product security or functionality.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend definitions to narrow the scope to communication service providers",
+                "Strengthen the definition of systemic vulnerability to explicitly protect encryption",
+                "Remove broad metadata retention mandates in favour of targeted preservation orders"
+              ],
+              "quote": "We believe that amending the definition to narrow the scope will help ensure that the legislation remains focused on its intended objectives.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-07-22",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Edmonton Police Commission",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14220817/br-external/EdmontonPoliceCommission-e.pdf",
+          "status": "agreed",
+          "stance": "supports",
+          "quote": "For these reasons, I respectfully urge the Committee and Parliament to support and advance Bill C-22 without delay.",
+          "asks": [
+            "Advance Bill C-22",
+            "Support Bill C-22 without delay",
+            "Support and advance Bill C-22 without delay"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports",
+              "asks": [
+                "Advance Bill C-22",
+                "Support Bill C-22 without delay"
+              ],
+              "quote": "For these reasons, I respectfully urge the Committee and Parliament to support and advance Bill C-22 without delay.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports",
+              "asks": [
+                "Support and advance Bill C-22 without delay"
+              ],
+              "quote": "For these reasons, I respectfully urge the Committee and Parliament to support and advance Bill C-22 without delay.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-07-22",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Samuelson-Glushko Canadian Internet Policy and Public Interest Clinic",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148910/br-external/SamuelsonGlushkoCanadianInternetPolicyAndPublicInterestClinic-e.pdf",
+          "status": "incomplete",
+          "readings": [
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Raise thresholds to 'reasonable grounds to believe' and narrow definitions for demands, orders, and warrants",
+                "Require comprehensive record-keeping, annual public aggregate reporting, and independent judicial oversight",
+                "Halt or majorly revise Part 2 (SAAIA) to protect encryption, prevent metadata retention, and limit ministerial orders"
+              ],
+              "quote": "It requires major structural revision, independent oversight safeguards, and a demonstrated evidentiary basis.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-15",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Chayn",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14185668/br-external/Chayn-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Amended definitions of “electronic protection” and “systemic vulnerability” to remove uncertainty and provide clarity around protections for encryption and related zero-knowledge security architectures (Section 2).",
+          "asks": [
+            "Amend definitions of electronic protection and systemic vulnerability",
+            "Prohibit mandating spyware and bulk metadata retention",
+            "Introduce judicial approval and oversight for secrecy obligations"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend definitions of electronic protection and systemic vulnerability",
+                "Prohibit mandating spyware and bulk metadata retention",
+                "Introduce judicial approval and oversight for secrecy obligations"
+              ],
+              "quote": "Amended definitions of “electronic protection” and “systemic vulnerability” to remove uncertainty and provide clarity around protections for encryption and related zero-knowledge security architectures (Section 2).",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend definitions of electronic protection and systemic vulnerability to protect encryption",
+                "Clarify regulations so providers cannot be mandated to install spyware or retain bulk metadata",
+                "Introduce judicial approval for secrecy obligations and remove warrantless search authorities"
+              ],
+              "quote": "Thank you for your consideration of these proposed amendments, as you deliberate how best to move forward on this legislation.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-15",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Technation Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14147724/br-external/TechnicationCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "TECHNATION is supportive of the end objective of Bill C-22 and we are encouraged by the improvements from its previous iteration, most notably within Part 1 of the current bill.",
+          "asks": [
+            "Strengthen systemic vulnerability definition",
+            "Limit technical assistance orders to core providers",
+            "Require ministerial due diligence to avoid vulnerabilities"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Strengthen systemic vulnerability definition",
+                "Limit technical assistance orders to core providers",
+                "Require ministerial due diligence to avoid vulnerabilities"
+              ],
+              "quote": "TECHNATION is supportive of the end objective of Bill C-22 and we are encouraged by the improvements from its previous iteration, most notably within Part 1 of the current bill.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Strengthen the definition of systemic vulnerability and clarify that forced decryption cannot be required",
+                "Remove broad metadata retention authority or replace it with a narrowly tailored framework",
+                "Limit technical assistance demands to core providers and narrow the non-disclosure obligations"
+              ],
+              "quote": "TECHNATION is supportive of the end objective of Bill C-22 and we are encouraged by the improvements from its previous iteration, most notably within Part 1 of the current bill.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-12",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "International Civil Liberties Monitoring Group",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121999/br-external/InternationalCivilLibertiesMonitoringGroup-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "Based on these concerns, our coalition is calling on Members of Parliament to reject Bill C-22 and to vote against it.",
+          "asks": [
+            "reject Bill C-22",
+            "withdraw Part 2",
+            "amend Part 1"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "reject Bill C-22",
+                "withdraw Part 2",
+                "amend Part 1"
+              ],
+              "quote": "Based on these concerns, our coalition is calling on Members of Parliament to reject Bill C-22 and to vote against it.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Reject and vote against Bill C-22",
+                "Withdraw Part 2 of Bill C-22",
+                "Make significant amendments to Part 1 if the bill proceeds"
+              ],
+              "quote": "Based on these concerns, our coalition is calling on Members of Parliament to reject Bill C-22 and to vote against it.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-12",
+          "checkedAt": "2026-10-28"
+        }
+      ]
     },
     {
       "number": "C-2",
@@ -8646,7 +8895,130 @@
         ],
         "penalties": [],
         "provisionCount": 52
-      }
+      },
+      "positions": [
+        {
+          "name": "Imperial Tobacco Canada Limited",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14260480/br-external/ImperialTobaccoCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Therefore, we support Bill C-29, but caution that its success will depend on whether the Financial Crimes Agency is designed to own the complete financial file rather than become another participant with only a partial view.",
+          "asks": [
+            "Prioritize illicit tobacco and nicotine trafficking as a strategic priority",
+            "Provide the Agency access to customs, excise, ownership and financial intelligence data",
+            "Require cross‑agency coordination with provinces, Indigenous partners and international counterparts"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Prioritize illicit tobacco and nicotine trafficking as a strategic priority",
+                "Provide the Agency access to customs, excise, ownership and financial intelligence data",
+                "Require cross‑agency coordination with provinces, Indigenous partners and international counterparts"
+              ],
+              "quote": "Therefore, we support Bill C-29, but caution that its success will depend on whether the Financial Crimes Agency is designed to own the complete financial file rather than become another participant with only a partial view.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Prioritize trade-based and excise-related financial crime, including illicit tobacco and nicotine trafficking, for the A",
+                "Provide the Agency access to customs, excise-licensing, ownership, and financial intelligence data",
+                "Launch a parliamentary study on illicit tobacco and nicotine products and organized crime involvement"
+              ],
+              "quote": "Therefore, we support Bill C-29, but caution that its success will depend on whether the Financial Crimes Agency is designed to own the complete financial file rather than become another participant with only a partial view.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-20",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Civilian Review and Complaints Commission for the Royal Canadian Mounted Police",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14265696/br-external/CivilianReviewAndComplaintsCommission-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "However, it is concerned that the amendments to the PCRC Act that are set out in Bill C-29 do not adequately frame this assignment of oversight.",
+          "asks": [
+            "Create a comprehensive oversight scheme for the FCA under the PCRC Act",
+            "Extend complaint jurisdiction to include FCA investigations officers",
+            "Include FCA in serious incident provisions and amend subsections 11(2) and 13(2)"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Create a comprehensive oversight scheme for the FCA under the PCRC Act",
+                "Extend complaint jurisdiction to include FCA investigations officers",
+                "Include FCA in serious incident provisions and amend subsections 11(2) and 13(2)"
+              ],
+              "quote": "The CRCC (and its soon-to-be-established entity, the PCRC) welcomes this assignment of oversight of the FCA.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Outline a comprehensive oversight scheme for the Financial Crimes Agency under the PCRC Act",
+                "Extend public complaint jurisdiction to include the Financial Crimes Agency's investigations officers",
+                "Provide a serious incident regime applicable to the Financial Crimes Agency"
+              ],
+              "quote": "However, it is concerned that the amendments to the PCRC Act that are set out in Bill C-29 do not adequately frame this assignment of oversight.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-20",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Barreau du Québec",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14239077/br-external/BarreauDuQu&#233;bec-067-260928-014-e.pdf",
+          "status": "unreadable",
+          "date": "2026-10-06",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Federation of Law Societies of Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14236394/br-external/FederationOfLawSocietiesOfCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "While affirming the Federation’s commitment to addressing money laundering and terrorist financing risks, we offer the following comments on Bill C-29 to highlight opportunities for collaboration and ensure adherence to constitutional principles.",
+          "asks": [
+            "Include a solicitor‑client privilege carveout",
+            "Provide explicit search and seizure safeguards and judicial review",
+            "Make law societies formal consultees for regulations"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Include a solicitor‑client privilege carveout",
+                "Provide explicit search and seizure safeguards and judicial review",
+                "Make law societies formal consultees for regulations"
+              ],
+              "quote": "The Federation submits that a carveout for information subject to solicitor-client privilege should be included within the Bill.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Include a carveout for information subject to solicitor-client privilege",
+                "Provide an independent review step for searches risking privileged communications",
+                "Conduct public and formal consultations when developing regulations under section 25"
+              ],
+              "quote": "While affirming the Federation’s commitment to addressing money laundering and terrorist financing risks, we offer the following comments on Bill C-29 to highlight opportunities for collaboration and ensure adherence to constitutional principles.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-09-25",
+          "checkedAt": "2026-10-28"
+        }
+      ]
     },
     {
       "number": "C-15",
@@ -11314,7 +11686,528 @@
           }
         ],
         "provisionCount": 441
-      }
+      },
+      "positions": [
+        {
+          "name": "Anonymous Author",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR14268901/br-external/AnonymousAuthor-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Second, that the Committee recommend extending the first-use deadline for such facilities, so that housing plants commissioned as the programme scales receive the same treatment as the first.",
+          "asks": [
+            "Confirm prefabricated housing qualifies for immediate expensing",
+            "Extend first-use deadline for housing plants",
+            "Give catalogue homes priority in CMHC guarantees"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Confirm prefabricated housing qualifies for immediate expensing",
+                "Extend first-use deadline for housing plants",
+                "Give catalogue homes priority in CMHC guarantees"
+              ],
+              "quote": "Second, that the Committee recommend extending the first-use deadline for such facilities, so that housing plants commissioned as the programme scales receive the same treatment as the first.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Establish the Canada Builds Institute and National Civil Service housing stream",
+                "Qualify housing component plants and training space for immediate expensing and extend the first-use deadline",
+                "Prioritize catalogue homes within expanded CMHC guarantee and insurance limits"
+              ],
+              "quote": "Under Bill C-31, confirm that housing component plants, including their on-line training space, qualify for immediate expensing, and extend their first-use deadline.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-20",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Tax-Filer Empowerment Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR14265548/br-external/Tax-FilerEmpowermentCanada-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "TFEC fully supports the Taxpayers’ Ombudsperson’s recommendation that Parliament not adopt deemed filing.",
+          "asks": [
+            "Do not adopt deemed filing provisions",
+            "Apply safeguards to protect taxpayers if adopted",
+            "Create a joint tax-filing strategy with CRA, industry, and community partners"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Do not adopt deemed filing provisions",
+                "Apply safeguards to protect taxpayers if adopted",
+                "Create a joint tax-filing strategy with CRA, industry, and community partners"
+              ],
+              "quote": "TFEC fully supports the Taxpayers’ Ombudsperson’s recommendation that Parliament not adopt deemed filing.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Do not adopt deemed filing provisions in Clause 51",
+                "Add three safeguards (taxpayer confirmation, parliamentary eligibility control, sunset/review clause) if deemed filing p",
+                "Develop a joint Canadian Tax-Filing Services Strategy and establish a national tax fraud task force"
+              ],
+              "quote": "TFEC fully supports the Taxpayers’ Ombudsperson’s recommendation that Parliament not adopt deemed filing.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-19",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Air Passenger Rights",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR14265544/br-external/AirPassengerRights-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "In our view, the Government of Canada’s proposal to remedy the systemic issues and backlog arising from the existing APPR is illusory, ineffective, unprecedented in the Western world, and unfair to passengers.",
+          "asks": [
+            "Enact Canada’s air passenger protection regime as primary legislation by Parliament",
+            "Amend clause 359 to make ADR decisions non-binding unless accepted by the passenger",
+            "Enact Canada's air passenger protection regime as primary legislation"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Enact Canada’s air passenger protection regime as primary legislation by Parliament",
+                "Amend clause 359 to make ADR decisions non-binding unless accepted by the passenger"
+              ],
+              "quote": "In our view, the Government of Canada’s proposal to remedy the systemic issues and backlog arising from the existing APPR is illusory, ineffective, unprecedented in the Western world, and unfair to passengers.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Enact Canada's air passenger protection regime as primary legislation",
+                "Amend proposed s. 85.24 so complainants can accept or reject ADR decisions",
+                "Harmonize Canada's Air Passenger Protection Regulations with the European Union's regime"
+              ],
+              "quote": "In our view, the Government of Canada’s proposal to remedy the systemic issues and backlog arising from the existing APPR is illusory, ineffective, unprecedented in the Western world, and unfair to passengers.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-19",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "FP Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR14263887/br-external/FpCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Recommendation: That the Government of Canada amend Bill C-31 to include a phased federal Financial Planning Grant to improve access to qualified financial planning professionals for low-and middle-income Canadians.",
+          "asks": [
+            "Add a phased federal Financial Planning Grant",
+            "Provide up to $3,000 per eligible Canadian",
+            "Distribute grant in three phases tied to plan completion"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Add a phased federal Financial Planning Grant",
+                "Provide up to $3,000 per eligible Canadian",
+                "Distribute grant in three phases tied to plan completion"
+              ],
+              "quote": "Recommendation: That the Government of Canada amend Bill C-31 to include a phased federal Financial Planning Grant to improve access to qualified financial planning professionals for low-and middle-income Canadians.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend Bill C-31 to include a phased federal Financial Planning Grant for low- and middle-income Canadians",
+                "Set a lifetime grant limit of $3,000 per eligible Canadian distributed across three back-loaded phases",
+                "Deliver the grant directly into a designated account using existing income tax filing and government payment infrastruct"
+              ],
+              "quote": "Recommendation: That the Government of Canada amend Bill C-31 to include a phased federal Financial Planning Grant to improve access to qualified financial planning professionals for low-and middle-income Canadians.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-15",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Barreau du Québec",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR14259526/br-external/BarreauDuQuebec-067-261001-010-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "However, this increased access to the informal procedure must be accompanied by sufficient safeguards to ensure that procedural simplification does not compromise the fairness of court proceedings and the institutional capacity of the Tax Court of Canada.",
+          "asks": [
+            "Establish regular threshold review mechanism",
+            "Ensure Tax Court has adequate resources",
+            "Add pre-hearing document disclosure requirement"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Establish regular threshold review mechanism",
+                "Ensure Tax Court has adequate resources",
+                "Add pre-hearing document disclosure requirement"
+              ],
+              "quote": "However, this increased access to the informal procedure must be accompanied by sufficient safeguards to ensure that procedural simplification does not compromise the fairness of court proceedings and the institutional capacity of the Tax Court of Canada.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Establish a minimum pre-hearing document disclosure obligation and an independent mediation mechanism for the informal p",
+                "Provide more flexible transitional rules allowing ongoing appeals to transfer to the informal procedure",
+                "Ensure adequate resources for the Tax Court of Canada and establish a regular threshold review mechanism"
+              ],
+              "quote": "In closing, the Barreau du Québec reiterates its support for the objective of the Bill, which is to improve access to tax justice by increasing the thresholds applicable to the informal procedure before the Tax Court of Canada.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-09",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "ADO Prév-IT",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR14259513/br-external/AdoPrev-It-067-261001-046-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "We recommend rejecting the amendments to the Pest Control Products Act contained in the Spring Economic Update 2026 Implementation Act (C-30) and the Budget 2025 Implementation Act, No. 2 (C-31).",
+          "asks": [
+            "Maintain mandatory pesticide re-evaluations every 15 years",
+            "Remove Cabinet’s power to override Health Canada recommendations",
+            "Apply the precautionary principle to pesticide regulation"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Maintain mandatory pesticide re-evaluations every 15 years",
+                "Remove Cabinet’s power to override Health Canada recommendations",
+                "Apply the precautionary principle to pesticide regulation"
+              ],
+              "quote": "We recommend rejecting the amendments to the Pest Control Products Act contained in the Spring Economic Update 2026 Implementation Act (C-30) and the Budget 2025 Implementation Act, No. 2 (C-31).",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Reject amendments to the Pest Control Products Act in Bills C-30 and C-31",
+                "Maintain mandatory pesticide re-evaluations every 15 years",
+                "Apply the precautionary principle and invest in organic farming and cancer prevention research"
+              ],
+              "quote": "We recommend rejecting the amendments to the Pest Control Products Act contained in the Spring Economic Update 2026 Implementation Act (C-30) and the Budget 2025 Implementation Act, No. 2 (C-31).",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-09",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Safe Food Matters",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR14239098/br-external/SafeFoodMatters-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "Without a codified check there is no institutional guarantee that the science and approach stays up to date.",
+          "asks": [
+            "Retain re‑evaluation requirement in law",
+            "Revise assessment to include new evidence and forward‑looking review",
+            "Implement transparent, forward‑looking oversight with public participation"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Retain re‑evaluation requirement in law",
+                "Revise assessment to include new evidence and forward‑looking review",
+                "Implement transparent, forward‑looking oversight with public participation"
+              ],
+              "quote": "Without a codified check there is no institutional guarantee that the science and approach stays up to date.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Maintain codified pesticide re-evaluation checks instead of removing protection",
+                "Utilize AI tools for literature searches, translation, and workflow",
+                "Apply proportional effort concepts to focus re-evaluations on complex aspects"
+              ],
+              "quote": "The solution is to improve process, not remove protection.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-05",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Office of the Taxpayers' Ombudsperson",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR14239801/br-external/OfficeOfTheTaxpayersOmbudsperson-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "Principal recommendation: The Taxpayers’ Ombudsperson recommends that the Standing Committee on Finance consider not adding proposed subsections 150(1.5), Automated filing – conditions, and 150(1.6), Automated filing – deemed filing, and make any necessary consequential amendments to the Income Tax Act.",
+          "asks": [
+            "Remove subsections 150(1.5) and 150(1.6) and make consequential amendments",
+            "Prioritize the pre-filled return service launching in March 2027",
+            "Require taxpayer confirmation of information before deemed filing"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Remove subsections 150(1.5) and 150(1.6) and make consequential amendments",
+                "Prioritize the pre-filled return service launching in March 2027",
+                "Require taxpayer confirmation of information before deemed filing"
+              ],
+              "quote": "The Taxpayers’ Ombudsperson recommends that the Standing Committee on Finance consider not adding proposed subsections 150(1.5), Automated filing – conditions, and 150(1.6), Automated filing – deemed filing, and make any necessary consequential amendments to the Income Tax Act.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Do not add proposed subsections 150(1.5) and 150(1.6) (eliminate deemed filing)",
+                "Alternatively, issue notices before the filing deadline and amend timing requirements",
+                "Alternatively, remove the three-year filing gap condition and require taxpayer confirmation of information"
+              ],
+              "quote": "Principal recommendation: The Taxpayers’ Ombudsperson recommends that the Standing Committee on Finance consider not adding proposed subsections 150(1.5), Automated filing – conditions, and 150(1.6), Automated filing – deemed filing, and make any necessary consequential amendments to the Income Tax Act.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-01",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Group of Concerned Scientists",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR14229018/br-external/GroupOfConcernedScientists-2026-09-21-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "We urge the government to remove the PCPA amendments from Bill C-31, repeal the PCPA amendments adopted in Bill C-30 earlier this year, and focus efforts on improving implementation of the PCPA.",
+          "asks": [
+            "Remove PCPA amendments from Bill C-31",
+            "Repeal PCPA amendments adopted in Bill C-30",
+            "Strengthen science-based pesticide regulation"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Remove PCPA amendments from Bill C-31",
+                "Repeal PCPA amendments adopted in Bill C-30",
+                "Strengthen science-based pesticide regulation"
+              ],
+              "quote": "We urge the government to remove the PCPA amendments from Bill C-31, repeal the PCPA amendments adopted in Bill C-30 earlier this year, and focus efforts on improving implementation of the PCPA.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Remove the Pest Control Products Act (PCPA) amendments from Bill C-31",
+                "Repeal the PCPA amendments adopted in Bill C-30 earlier this year",
+                "Focus efforts on improving implementation of the PCPA"
+              ],
+              "quote": "We urge the government to remove the PCPA amendments from Bill C-31, repeal the PCPA amendments adopted in Bill C-30 earlier this year, and focus efforts on improving implementation of the PCPA.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-09-22",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Association pour la santé publique du Québec",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR14223356/br-external/AssociationPourLaSantePubliqueDuQuebec-067-260603-027-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "While recognizing the importance of addressing food security issues and the economic realities facing certain agricultural sectors, the proposed amendments, if adopted, would represent a significant setback in the protection of public health and in maintaining the primacy of human health protection objectives that underpin the Pest Control Products Act.",
+          "asks": [
+            "Remove economic and food security criteria from the PCPA",
+            "Maintain mandatory periodic re‑evaluations of pesticides",
+            "Fully publish assessment reports and underlying analyses"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Remove economic and food security criteria from the PCPA",
+                "Maintain mandatory periodic re‑evaluations of pesticides",
+                "Fully publish assessment reports and underlying analyses"
+              ],
+              "quote": "Weakening the regulatory framework at a time when the international community is moving to strengthen its regulatory frameworks constitutes a glaring contradiction and undermines Canada’s international credibility.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Conduct a comprehensive review of the PCPA before making substantial changes",
+                "Maintain mandatory periodic and ad hoc reviews of pesticides",
+                "Remove or strictly limit the power to terminate an ongoing re-evaluation"
+              ],
+              "quote": "While recognizing the importance of addressing food security issues and the economic realities facing certain agricultural sectors, the proposed amendments, if adopted, would represent a significant setback in the protection of public health and in maintaining the primacy of human health protection objectives that underpin the Pest Control Products Act.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-09-18",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Prevent Cancer Now",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR14223355/br-external/PreventCancerNow-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Delete Division 13 of Bill C-31",
+                "Do not rename PMRA to Canadian Pesticides Directorate",
+                "Strengthen support for least-toxic pest solutions"
+              ],
+              "quote": "Recommendation 2: That the Government of Canada amend Bill C-31 to delete Division 13 of Part 4, amending the Pest Control Products Act.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Amend Bill C-31 to delete Division 13 of Part 4",
+                "Do not rename the Pest Management Regulatory Agency (PMRA) to the Canadian Pesticides Directorate (CPD)",
+                "Reverse phasing out of agricultural research and strengthen support for least-toxic pest solutions"
+              ],
+              "quote": "Recommendation 2: That the Government of Canada amend Bill C-31 to delete Division 13 of Part 4, amending the Pest Control Products Act.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-09-18",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Tax Executives Institute, Inc.",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR14222943/br-external/TaxExecutivesInstituteInc-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "We urge you to consider pausing the enactment of the Sanction Regimes and consider these other, better, alternatives.",
+          "asks": [
+            "Pause the Sanction Regimes",
+            "Pause the Information Exchange Regime",
+            "Adopt alternatives: expedite court disputes, targeted sanctions, foreign oversight"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Pause the Sanction Regimes",
+                "Pause the Information Exchange Regime",
+                "Adopt alternatives: expedite court disputes, targeted sanctions, foreign oversight"
+              ],
+              "quote": "The proposed Sanction Regimes fail to do so.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Pause the enactment of the Sanction Regimes and consider alternative approaches",
+                "Pause the Information Exchange Regime and advance it as a separate legislative proposal",
+                "Add judicial oversight, taxpayer notification, and foreign law protection requirements to any Information Exchange Regim"
+              ],
+              "quote": "We urge you to consider pausing the enactment of the Sanction Regimes and consider these other, better, alternatives.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-09-16",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Option consommateurs",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR14209446/br-external/OptionConsommateurs-067-260612-039-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "In the view of Option consommateurs, this reform was ill-timed, given that the amendments to the APPR, which could have prevented these complaints in the first place, were never implemented.",
+          "asks": [
+            "Implement the 2023 APPR amendments",
+            "Regulate external complaints bodies via public consultations",
+            "Prohibit cost recovery from passengers and guarantee representation"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Implement the 2023 APPR amendments",
+                "Regulate external complaints bodies via public consultations",
+                "Prohibit cost recovery from passengers and guarantee representation"
+              ],
+              "quote": "Option consommateurs therefore urges the government to honour its 2023 commitment to simplify and strengthen the APPR.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Implement the 2023 amendments to the Air Passenger Protection Regulations",
+                "Hold public consultations and establish safeguards for the governance, transparency, and independence of external compla",
+                "Ensure complaint-handling remains accessible by prohibiting costs on passengers, allowing representation, and revising s"
+              ],
+              "quote": "In the view of Option consommateurs, this reform was ill-timed, given that the amendments to the APPR, which could have prevented these complaints in the first place, were never implemented.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-25",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Canadian Consumer Specialty Products Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR14210593/br-external/CanadianConsumerSpecialtyProductsAssociation-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Clarify assessment criteria and timelines",
+                "Align cost recovery with efficiencies",
+                "Maintain transparency and continuous oversight"
+              ],
+              "quote": "CCSPA supports maintaining strong health and environmental protections under the PCPA while improving the efficiency, predictability, and proportionality of post-market oversight activities.",
+              "quoteOk": "close"
+            },
+            {
+              "model": "Google",
+              "stance": "supports",
+              "asks": [
+                "Additional engagement with PRD regarding how the revised framework will operate in practice",
+                "Clarify criteria, timelines, and decision-making considerations used to trigger a re-evaluation",
+                "Align future cost recovery approaches and fees with efficiencies created through Bill C-31"
+              ],
+              "quote": "Implementation of Bill C-31 should ensure that regulatory resources are directed toward high-risk priorities and emerging issues, rather than broad administrative reassessment where there is limited evidence of changed risk.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-25",
+          "checkedAt": "2026-10-28"
+        }
+      ]
     },
     {
       "number": "S-211",
