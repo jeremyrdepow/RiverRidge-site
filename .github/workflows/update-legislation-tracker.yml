@@ -41,4 +41,13 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add data/bills.json data/bills.csv
           git commit -m "Legislation tracker: daily status refresh"
-          git push
+          # Someone editing a file on GitHub while this runs would otherwise
+          # have the push rejected and the day's work thrown away. Rebase on
+          # whatever landed meanwhile and try again.
+          for attempt in 1 2 3; do
+            git push && exit 0
+            echo "Push rejected; rebasing on main and retrying ($attempt of 3)."
+            git pull --rebase origin main || exit 1
+            sleep 5
+          done
+          echo "Could not push after three attempts."; exit 1
