@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27T21:56:52.616Z",
+  "checkedAt": "2026-10-28T16:40:18.525Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -98,6 +98,19 @@
         "decisions": []
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "156",
+          "date": "2026-10-27",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-156/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Kevin Lamoureux (Lib.)"
+          ],
+          "contexts": [
+            "Government Orders: Business of the House"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "153",
@@ -3406,7 +3419,18 @@
             "chamber": "House",
             "committee": "JUST",
             "number": "7",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-7/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/JUST/meeting-7/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Justice"
+              ],
+              "people": [],
+              "appearing": [
+                "Hon. Sean Fraser, P.C., M.P., Minister of Justice and Attorney General of Canada"
+              ]
+            },
+            "study": "13154115",
+            "amendments": []
           }
         ],
         "sittings": [
@@ -8598,7 +8622,7 @@
               ]
             }
           ],
-          "checked": "2026-10-27"
+          "checked": "2026-10-28"
         }
       ],
       "text": {
@@ -9404,6 +9428,19 @@
         ]
       },
       "mentions": [
+        {
+          "chamber": "Senate",
+          "sitting": "96",
+          "date": "2026-10-27",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/096db_2026-10-27-e",
+          "speeches": 1,
+          "speakers": [
+            "Senator Pupatello"
+          ],
+          "contexts": [
+            "Study on Practice of Including Non-financial Matters in Bills Implementing Provisions of Budgets and Economic Statements"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "154",
@@ -10735,6 +10772,33 @@
       "mentions": [
         {
           "chamber": "House",
+          "sitting": "156",
+          "date": "2026-10-27",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-156/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Jean-Denis Garon (BQ)"
+          ],
+          "contexts": [
+            "Government Orders: Business of Supply"
+          ]
+        },
+        {
+          "chamber": "Senate",
+          "sitting": "96",
+          "date": "2026-10-27",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/096db_2026-10-27-e",
+          "speeches": 2,
+          "speakers": [
+            "Hon. Sandra Pupatello",
+            "Senator Pupatello"
+          ],
+          "contexts": [
+            "Study on Practice of Including Non-financial Matters in Bills Implementing Provisions of Budgets and Economic Statements"
+          ]
+        },
+        {
+          "chamber": "House",
           "sitting": "155",
           "date": "2026-10-26",
           "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-155/hansard",
@@ -11138,7 +11202,7 @@
               ]
             }
           ],
-          "checked": "2026-10-27"
+          "checked": "2026-10-28"
         }
       ],
       "text": {
@@ -12476,28 +12540,87 @@
             "chamber": "House",
             "committee": "FINA",
             "number": "7",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-7/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-7/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Housing, Infrastructure and Communities",
+                "Department of the Environment"
+              ],
+              "people": [],
+              "appearing": [
+                "Hon. Gregor Robertson, P.C., M.P., Minister of Housing and Infrastructure",
+                "Hon. Julie Dabrusin, P.C., M.P., Minister of Environment and Climate Change"
+              ]
+            },
+            "study": "13098152",
+            "amendments": []
           },
           {
             "date": "2025-10-08",
             "chamber": "House",
             "committee": "FINA",
             "number": "6",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-6/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-6/notice",
+            "witnesses": {
+              "orgs": [
+                "Habitat for Humanity Canada",
+                "Inclusion Canada",
+                "March of Dimes Canada"
+              ],
+              "people": [
+                "Peter Norman, Vice-President and Economist Strategist, Altus Group Limited ( by videoconference )",
+                "Ian Lee, Associate Professor, Sprott School of Business, Carleton University",
+                "Carolyn Whitzman, Senior Housing Researcher, University of Toronto School of Cities"
+              ],
+              "appearing": []
+            },
+            "study": "13098152",
+            "amendments": []
           },
           {
             "date": "2025-10-06",
             "chamber": "House",
             "committee": "FINA",
             "number": "5",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-5/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-5/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Finance",
+                "Assembly Corp.",
+                "Residential Construction Council of Ontario"
+              ],
+              "people": [
+                "Jennifer Keesmaat, President and Chief Executive Officer, Collecdev Markee ( by videoconference )"
+              ],
+              "appearing": [
+                "Hon. François-Philippe Champagne, P.C., M.P., Minister of Finance and National Revenue"
+              ]
+            },
+            "study": "13098152",
+            "amendments": []
           },
           {
             "date": "2025-10-01",
             "chamber": "House",
             "committee": "FINA",
             "number": "4",
-            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-4/notice"
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-4/notice",
+            "witnesses": {
+              "orgs": [
+                "Canada Revenue Agency",
+                "Department of the Environment",
+                "Department of Finance",
+                "Privy Council Office",
+                "Association des professionnels de la construction et de l'habitation du Québec",
+                "Missing Middle Initiative"
+              ],
+              "people": [
+                "Kim G. C. Moody, Fellow Chartered Professional Accountant (FCPA) ( by videoconference )"
+              ],
+              "appearing": []
+            },
+            "study": "13098152",
+            "amendments": []
           }
         ],
         "sittings": [
@@ -13233,7 +13356,7 @@
               ]
             }
           ],
-          "checked": "2026-10-27"
+          "checked": "2026-10-28"
         }
       ],
       "text": {
@@ -13380,6 +13503,22 @@
         "decisions": []
       },
       "mentions": [
+        {
+          "chamber": "Senate",
+          "sitting": "96",
+          "date": "2026-10-27",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/096db_2026-10-27-e",
+          "speeches": 5,
+          "speakers": [
+            "Senator Batters",
+            "Senator Audette",
+            "Senator Clement",
+            "Hon. Yonah Martin (Deputy Leader of the Opposition)"
+          ],
+          "contexts": [
+            "Cutting Red Tape for All Canadians Bill"
+          ]
+        },
         {
           "chamber": "Senate",
           "sitting": "95",
@@ -13655,7 +13794,7 @@
   ],
   "upcoming": [],
   "scan": {
-    "houseSitting": 155,
-    "senateSitting": 95
+    "houseSitting": 156,
+    "senateSitting": 96
   }
 }
