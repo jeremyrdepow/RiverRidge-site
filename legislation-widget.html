@@ -15,9 +15,11 @@
   --muted: #5c6b6e;
   --line: #dde3e0;
   --accent: #1e6a64;
-  --house: #2f6b46;
-  --senate: #9e3434;
-  --law: #8a6a1f;
+  /* Validated trio: these stay distinguishable under red-green colour
+     blindness, which the earlier green and red pair did not. */
+  --house: #1baf7a;
+  --senate: #eb6834;
+  --law: #2a78d6;
   --idle: #c9d1ce;
   --font-display: "Spectral", Georgia, "Times New Roman", serif;
   --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -26,13 +28,13 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #182225; --ink: #e4ebe8; --muted: #9aaaa7; --line: #2b383b;
-    --accent: #6cc3b9; --house: #6fb88a; --senate: #e07a7a; --law: #d6b25e; --idle: #3a4a4d;
+    --accent: #6cc3b9; --house: #199e70; --senate: #d95926; --law: #3987e5; --idle: #33433f;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #182225; --ink: #e4ebe8; --muted: #9aaaa7; --line: #2b383b;
-  --accent: #6cc3b9; --house: #6fb88a; --senate: #e07a7a; --law: #d6b25e; --idle: #3a4a4d;
+  --accent: #6cc3b9; --house: #199e70; --senate: #d95926; --law: #3987e5; --idle: #33433f;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
