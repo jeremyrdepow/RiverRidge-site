@@ -23,7 +23,13 @@ jobs:
         with:
           node-version: "22"
 
+      # pdftotext reads the committee briefs so the models can be given their text.
+      - name: Install pdftotext
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+
       - name: Fetch bill status from LEGISinfo (openparliament.ca as backup)
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: node scripts/update-bills.mjs
 
       - name: Commit updated data

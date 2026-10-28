@@ -14,7 +14,9 @@
 // studies, amendments from committee minutes, speeches naming each bill from
 // House and Senate debates, and digital bills on the House Notice Paper.
 // scripts/billtext.mjs reads each published version of a bill: what changed,
-// when it comes into force and the penalties it names. The run never fails
+// when it comes into force and the penalties it names. scripts/positions.mjs
+// reads each organization's brief with two AI models and records where it
+// stands, publishing only what both models agree on. The run never fails
 // because a fetch did, so the live page never breaks. It also writes
 // data/bills.csv, a spreadsheet copy of the tracker.
 //
@@ -23,6 +25,7 @@
 
 import { readFile, writeFile } from "node:fs/promises";
 import { analyse, versionFiles } from "./billtext.mjs";
+import { OutOfCredit, positionFor } from "./positions.mjs";
 import {
   MEMBERS_XML_URL,
   amendmentsFrom,
@@ -416,6 +419,9 @@ function amendmentCount(b, result) {
   return read.reduce((n, m) => n + m.amendments.filter((a) => !result || a.result === result).length, 0);
 }
 
+// Agreed positions of a given stance; blank when nothing has been read.
+const positionCount = (b, stance) => (b.positions || []).filter((p) => p.status === "agreed" && p.stance === stance).length || "";
+
 // A flat copy for spreadsheets, one row per bill. The byte-order mark makes
 // Excel read the accents correctly.
 function toCsv(bills, themes) {
@@ -432,6 +438,7 @@ function toCsv(bills, themes) {
       "Committee meetings", "Last committee meeting", "Speeches naming the bill (last 30 days)",
       "Provisions changed in committee", "Coming into force", "Briefs to House committee",
       "Organizations heard at House committee", "Committee amendments adopted", "Committee amendments decided",
+      "Briefs opposing", "Briefs supporting with amendments", "Briefs supporting", "Briefs needing review",
       "RiverRidge summary", "LEGISinfo", "Bill text",
     ],
     ...bills.map((b) => [
@@ -445,6 +452,8 @@ function toCsv(bills, themes) {
       (b.studies || []).reduce((n, x) => n + x.briefs.length, 0) || "",
       (b.studies || []).reduce((n, x) => n + x.witnesses.filter((w) => w.name !== "As an individual").length, 0) || "",
       amendmentCount(b, "adopted") ?? "", amendmentCount(b) ?? "",
+      positionCount(b, "opposes"), positionCount(b, "supports with amendments"), positionCount(b, "supports"),
+      (b.positions || []).filter((p) => p.status !== "agreed").length || "",
       b.summary, b.legisinfoUrl, b.textUrl,
     ]),
   ];
@@ -610,6 +619,59 @@ for (const b of bills) {
   if (studies.length) b.studies = studies;
 }
 
+// Where each organization stands, read from its brief by two models that
+// must agree (scripts/positions.mjs). Each brief is read once and the result
+// kept, so cost falls to almost nothing once the backlog clears. Without the
+// OPENROUTER_API_KEY secret the step is skipped and the tracker builds as
+// before. Budgets below are per run.
+const POSITION_BRIEFS = 25;
+const POSITION_SPEND = 2.0; // US dollars
+const openrouterKey = (process.env.OPENROUTER_API_KEY || "").trim();
+let positionsRead = 0;
+let positionSpend = 0;
+if (!openrouterKey) {
+  console.log("No OPENROUTER_API_KEY; skipping the stakeholder positions step.");
+} else {
+  const queue = [];
+  for (const b of bills) {
+    const done = new Map((b.positions || []).map((p) => [p.url, p]));
+    const wanted = (b.studies || []).flatMap((st) => st.briefs.filter((r) => !r.individual && r.url));
+    // Keep what was read before, drop anything whose brief has gone.
+    b.positions = wanted.map((r) => done.get(r.url)).filter(Boolean);
+    for (const r of wanted) {
+      // Retry a brief that could not be read before, in case it was a blip,
+      // but never redo one that produced a result.
+      const prev = done.get(r.url);
+      if (!prev || prev.status === "incomplete") queue.push({ b, brief: r });
+    }
+  }
+  // Newest briefs first: they are the ones readers are asking about.
+  queue.sort((x, y) => (y.brief.date || "").localeCompare(x.brief.date || ""));
+  for (const { b, brief } of queue.slice(0, POSITION_BRIEFS)) {
+    if (positionSpend >= POSITION_SPEND) {
+      console.log(`Position budget of US$${POSITION_SPEND} reached; the rest follow tomorrow.`);
+      break;
+    }
+    try {
+      const { cost, ...position } = await positionFor({ number: b.number, name: brief.name, url: brief.url }, openrouterKey);
+      positionSpend += cost || 0;
+      b.positions = [...b.positions.filter((p) => p.url !== brief.url), { ...position, date: brief.date, checkedAt: today() }];
+      positionsRead++;
+      console.log(`position ${b.number} ${brief.name}: ${position.status}${position.stance ? ` (${position.stance})` : ""}`);
+    } catch (err) {
+      if (err instanceof OutOfCredit) {
+        console.error(`${err.message}; skipping the rest of the positions step.`);
+        break;
+      }
+      console.error(`position ${b.number} ${brief.name}: ${err.message}`);
+    }
+  }
+  for (const b of bills) {
+    b.positions = (b.positions || []).sort((x, y) => (y.date || "").localeCompare(x.date || ""));
+    if (!b.positions.length) delete b.positions;
+  }
+}
+
 // Bill text: what each published version changed from the one before, when
 // the bill comes into force and the penalties it names. A version's page is
 // read once for its XML address; the analysis reruns only when a new version
@@ -739,5 +801,6 @@ console.log(
   `Wrote ${bills.length} bills: ${count.legisinfo} from LEGISinfo, ${count.openparliament} from openparliament.ca, ` +
     `${count.stale} kept stale, ${changes.length} changes logged. ${meetingsRead} committee meetings read, ` +
     `${studiesRead} committee studies refreshed, ${textsAnalysed} bill texts analysed, ` +
+    `${positionsRead} briefs read for positions (US$${positionSpend.toFixed(2)}), ` +
     `${found.length} new mentions, ${upcoming.length} digital bills on notice.`
 );

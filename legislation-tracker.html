@@ -133,6 +133,17 @@ section.theme h2 { font-family: var(--font-display); font-weight: 600; font-size
 .record .who { color: var(--muted); }
 .record .note { margin: 0.4rem 0 0; color: var(--muted); }
 .record details + details { margin-top: 0.1rem; }
+.stances { display: grid; gap: 0.35rem; margin: 0.3rem 0 0.6rem; }
+.stancerow { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 0.5rem; align-items: baseline; font-size: var(--step--1); }
+.stancelabel { display: inline-flex; align-items: baseline; gap: 0.35rem; color: var(--muted); }
+.stancelabel::before { content: ""; width: 9px; height: 9px; border-radius: 2px; background: var(--c); flex: none; transform: translateY(1px); }
+.stancerow.opposes { --c: var(--senate); }
+.stancerow.amend { --c: var(--law); }
+.stancerow.supports { --c: var(--house); }
+.stancerow.none { --c: var(--idle); }
+.orglist a, .orglist span { color: inherit; }
+.quoteline { color: var(--muted); font-style: italic; margin: 0.1rem 0 0; }
+.aiflag { font-family: var(--font-data); font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 0.3rem; margin-left: 0.35rem; vertical-align: 0.1em; }
 table.amend { border-collapse: collapse; font-size: var(--step--1); margin-top: 0.2rem; }
 table.amend th, table.amend td { text-align: left; padding: 0.15rem 1.2rem 0.15rem 0; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
 table.amend th { font-weight: 600; }
@@ -261,7 +272,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
 
   <footer>
     <p class="contact">Need to know what a bill means for your organization, or when it is likely to move? Contact RiverRidge at <span class="addr">contact@riverridgeintelligence.ca</span>.</p>
-    <p>Sources: bill status, dates, committees and bill-text links from <a href="https://www.parl.ca/legisinfo/en/overview" rel="noopener">LEGISinfo</a>, Parliament of Canada, the official record, retrieved automatically each day. When LEGISinfo cannot be reached, status is checked against <a href="https://openparliament.ca/" rel="noopener">openparliament.ca</a> instead. Official summaries are the summary printed in each bill, as published by Parliament and retrieved via openparliament.ca. Royal assent does not mean a law is in force; many provisions take effect later by order or regulation. Bill descriptions are RiverRidge summaries.</p>
+    <p>Sources: bill status, dates, committees and bill-text links from <a href="https://www.parl.ca/legisinfo/en/overview" rel="noopener">LEGISinfo</a>, Parliament of Canada, the official record, retrieved automatically each day. When LEGISinfo cannot be reached, status is checked against <a href="https://openparliament.ca/" rel="noopener">openparliament.ca</a> instead. Official summaries are the summary printed in each bill, as published by Parliament and retrieved via openparliament.ca. Where organizations stand is read from their own briefs by two AI models and shown only where both agree; it is not a statement by those organizations. Royal assent does not mean a law is in force; many provisions take effect later by order or regulation. Bill descriptions are RiverRidge summaries.</p>
   </footer>
 </div>
 
@@ -329,6 +340,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     if (!q) return true;
     const hay = [b.number, b.number.replace("-", ""), b.shortTitle, b.longTitle, b.summary, b.sponsor, b.status, ...(b.officialSummary || []),
       ...(b.studies || []).flatMap((x) => [...x.witnesses.map((w) => w.name), ...x.briefs.map((r) => r.name)]),
+      ...(b.positions || []).map((p) => `${p.name} ${p.stance || ""}`),
       ...(b.text?.changes || []).flatMap((c) => c.provisions.map((p) => p.note))].join(" ").toLowerCase();
     return q.toLowerCase().split(/\s+/).every((w) => hay.includes(w));
   };
@@ -420,6 +432,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
       speeches30 ? `named in <b>${plural(speeches30, "speech", "speeches")}</b> in the last 30 days` : "",
       committeeChanges(b) ? `<b>${plural(committeeChanges(b), "provision", "provisions")}</b> changed in committee` : "",
       briefCount(b) ? `<b>${plural(briefCount(b), "brief", "briefs")}</b> to committee` : "",
+      opposedCount(b) ? `<b>${opposedCount(b)}</b> of them opposed` : "",
     ].filter(Boolean).join(" · ");
 
     const more = (list, what) => list.length > SHOW ? `<li><a href="${esc(b.legisinfoUrl)}" rel="noopener">${plural(list.length - SHOW, `earlier ${what}`, `earlier ${what}s`)} on LEGISinfo</a></li>` : "";
@@ -469,6 +482,7 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
   const realChanges = (c) => c.provisions.filter((p) => p.kind !== "renumbered");
   const committeeChanges = (b) => (b.text?.changes || []).filter((c) => /committee/i.test(c.to)).reduce((n, c) => n + realChanges(c).length, 0);
   const briefCount = (b) => (b.studies || []).reduce((n, x) => n + x.briefs.length, 0);
+  const opposedCount = (b) => (b.positions || []).filter((p) => p.status === "agreed" && p.stance === "opposes").length;
   const plusDays = (iso, days) => { const d = new Date(iso + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + days); return d.toISOString().slice(0, 10); };
 
   function textHtml(b) {
@@ -501,12 +515,41 @@ footer .contact { color: var(--ink); font-size: var(--step-0); }
     return `<details><summary>Bill text: changes, coming into force, penalties</summary>${parts.join("")}<p class="note">Read automatically from each version of the bill published by Parliament.</p></details>`;
   }
 
+  // ---- Where organizations stand, read from their briefs by two models ----
+  const STANCE_ORDER = [
+    ["opposes", "Opposes", "opposes"],
+    ["supports with amendments", "Supports with amendments", "amend"],
+    ["supports", "Supports", "supports"],
+    ["no clear position", "No clear position", "none"],
+  ];
+  function positionsHtml(b) {
+    const all = b.positions || [];
+    const agreed = all.filter((p) => p.status === "agreed");
+    const review = all.filter((p) => p.status === "split" || p.status === "quote-unverified");
+    if (!agreed.length && !review.length) return "";
+    const rows = STANCE_ORDER.map(([key, label, cls]) => {
+      const here = agreed.filter((p) => p.stance === key);
+      if (!here.length) return "";
+      const names = here.map((p) => `<a href="${esc(p.url)}" rel="noopener">${esc(p.name)}</a>`).join("; ");
+      return `<div class="stancerow ${cls}"><span class="stancelabel">${label} (${here.length})</span><span class="orglist">${names}</span></div>`;
+    }).join("");
+    // One short quote, from the organization most firmly against, to show the flavour.
+    const show = agreed.find((p) => p.stance === "opposes" && p.quote) || agreed.find((p) => p.quote);
+    return `<h4>Where organizations stand<span class="aiflag">AI-read</span></h4>
+      <div class="stances">${rows || `<p class="note" style="margin:0">No agreed positions yet.</p>`}</div>
+      ${show ? `<p class="quoteline">“${esc(show.quote.replace(/^[“"']+|[”"']+$/g, ""))}” <span style="font-style:normal">${esc(show.name)}</span></p>` : ""}
+      ${review.length ? `<p class="note">${plural(review.length, "brief", "briefs")} held back for review, because the two models read ${review.length === 1 ? "it" : "them"} differently or the quote could not be matched to the text: ${review.map((p) => esc(p.name)).join("; ")}.</p>` : ""}
+      <p class="note">Each brief was read by two AI models working separately. A position is shown only where both agreed and both quoted the brief word for word. Organization names link to the brief itself. Check anything that matters before relying on it.</p>`;
+  }
+
   // ---- Committee evidence: who was heard, who sent briefs, how amendments fared ----
   function evidenceHtml(b) {
     const studies = b.studies || [];
     const amends = (b.activity?.meetings || []).flatMap((m) => m.amendments || []);
     if (!studies.length && !amends.length) return "";
     const parts = [];
+    const stances = positionsHtml(b);
+    if (stances) parts.push(stances);
     for (const st of studies) {
       const orgs = st.witnesses.filter((w) => w.name !== "As an individual").sort((x, y) => y.meetings.length - x.meetings.length || x.name.localeCompare(y.name));
       const indiv = (st.witnesses.find((w) => w.name === "As an individual") || { people: [] }).people.length;
