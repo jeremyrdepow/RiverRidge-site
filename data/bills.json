@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-28T18:25:58.762Z",
+  "checkedAt": "2026-10-28T18:53:42.011Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -8003,26 +8003,6 @@
           "checkedAt": "2026-10-28"
         },
         {
-          "name": "Samuelson-Glushko Canadian Internet Policy and Public Interest Clinic",
-          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148910/br-external/SamuelsonGlushkoCanadianInternetPolicyAndPublicInterestClinic-e.pdf",
-          "status": "incomplete",
-          "readings": [
-            {
-              "model": "Google",
-              "stance": "supports with amendments",
-              "asks": [
-                "Raise thresholds to 'reasonable grounds to believe' and narrow definitions for demands, orders, and warrants",
-                "Require comprehensive record-keeping, annual public aggregate reporting, and independent judicial oversight",
-                "Halt or majorly revise Part 2 (SAAIA) to protect encryption, prevent metadata retention, and limit ministerial orders"
-              ],
-              "quote": "It requires major structural revision, independent oversight safeguards, and a demonstrated evidentiary basis.",
-              "quoteOk": "exact"
-            }
-          ],
-          "date": "2026-06-15",
-          "checkedAt": "2026-10-28"
-        },
-        {
           "name": "Chayn",
           "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14185668/br-external/Chayn-e.pdf",
           "status": "agreed",
@@ -8054,6 +8034,44 @@
                 "Introduce judicial approval for secrecy obligations and remove warrantless search authorities"
               ],
               "quote": "Thank you for your consideration of these proposed amendments, as you deliberate how best to move forward on this legislation.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-15",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Samuelson-Glushko Canadian Internet Policy and Public Interest Clinic",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148910/br-external/SamuelsonGlushkoCanadianInternetPolicyAndPublicInterestClinic-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Raise the threshold from “reasonable grounds to suspect” to “reasonable grounds to believe” for a warrantless demand to confirm service (s. 487.0121(1)).",
+          "asks": [
+            "Raise thresholds to \"reasonable grounds to believe\" for warrantless demands and production orders",
+            "Require record-keeping, transparency, and public reporting for all access requests",
+            "Limit ministerial orders and core provider obligations, adding judicial oversight and necessity standards"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Raise thresholds to \"reasonable grounds to believe\" for warrantless demands and production orders",
+                "Require record-keeping, transparency, and public reporting for all access requests",
+                "Limit ministerial orders and core provider obligations, adding judicial oversight and necessity standards"
+              ],
+              "quote": "Raise the threshold from “reasonable grounds to suspect” to “reasonable grounds to believe” for a warrantless demand to confirm service (s. 487.0121(1)).",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Raise legal thresholds to 'reasonable grounds to believe' and require judicial authorization for orders and demands",
+                "Require comprehensive record-keeping and annual public aggregate reporting on law enforcement requests and orders",
+                "Halt Part 2 (SAAIA) as tabled or apply major structural revisions, oversight safeguards, and prohibitions on weakening e"
+              ],
+              "quote": "It requires major structural revision, independent oversight safeguards, and a demonstrated evidentiary basis.",
               "quoteOk": "exact"
             }
           ],
@@ -8134,6 +8152,806 @@
             }
           ],
           "date": "2026-06-12",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Canadian Association of Journalists",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148860/br-external/CanadianAssociationOfJournalists-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "The CAJ strongly opposes Bill C-22 in its current form due to unacceptable risks.",
+          "asks": [
+            "recommend amendments to protect press freedom and privacy rights",
+            "ensure judicial oversight for state access to data",
+            "preserve end-to-end encryption protections"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "recommend amendments to protect press freedom and privacy rights",
+                "ensure judicial oversight for state access to data",
+                "preserve end-to-end encryption protections"
+              ],
+              "quote": "The CAJ strongly opposes Bill C-22 in its current form due to unacceptable risks.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Recommend amendments to protect privacy and press freedom rights",
+                "Require judicial oversight and limit access to what is necessary and proportionate",
+                "Ensure explicit protection of end-to-end encryption"
+              ],
+              "quote": "The CAJ strongly opposes Bill C-22 in its current form due to unacceptable risks.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-12",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "British Columbia Civil Liberties Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14147711/br-external/BritishColumbiaCivilLibertiesAssociation-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Remove (c) from subscriber information definition",
+                "Exclude medical and solicitor-privileged information",
+                "Remove Part 2 (SAAIA) entirely"
+              ],
+              "quote": "Bill C-22 (the ”Bill”) is an overbroad and disproportionate attempt to open the digital communications of people in Canada to law enforcement and national security bodies of the state.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Narrow the definition of subscriber information and exclude medical and solicitor-privileged information",
+                "Raise standard to 'reasonable grounds to believe' in sections 5, 6, and 7",
+                "Remove Part 2 from the Bill in its entirety"
+              ],
+              "quote": "If enacted in its current form, it will have a profound deleterious effect on the privacy rights and fundamental freedoms of people in Canada.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-12",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "BC Coalition of Experiential Communities",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148872/br-external/BCCoalitionOfExperientialCommunities-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Bill C-22 should therefore be assessed not only by the powers it grants, but by the safeguards it contains for those whom Parliament has already committed to protect.",
+          "asks": [
+            "Conduct and publish a GBA+ assessment of Bill C-22 impacts on lawful adult sex workers",
+            "Establish clear limits on collection, retention, use, disclosure, and destruction of sex worker data",
+            "Prohibit algorithmic profiling or risk scores based solely on lawful sex work conduct"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Conduct and publish a GBA+ assessment of Bill C-22 impacts on lawful adult sex workers",
+                "Establish clear limits on collection, retention, use, disclosure, and destruction of sex worker data",
+                "Prohibit algorithmic profiling or risk scores based solely on lawful sex work conduct"
+              ],
+              "quote": "The BC Coalition of Experiential Communities respectfully submits that they cannot.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Conduct and publish a GBA+ assessment examining the impact of Bill C-22 on lawful adult sex workers",
+                "Establish clear limits and safeguards on the collection, use, and cross-border sharing of information relating to lawful",
+                "Prohibit algorithmic profiling based on lawful adult sex work and require independent auditing of automated systems"
+              ],
+              "quote": "Bill C-22 should therefore be assessed not only by the powers it grants, but by the safeguards it contains for those whom Parliament has already committed to protect.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-12",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Canadian Muslim Public Affairs Council",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14133318/br-external/CanadianMuslimPublicAffairsCouncil-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "Based on these concerns, CMPAC calls on Members of Parliament to reject Bill C-22 and vote against its adoption.",
+          "asks": [
+            "Reject Bill C-22 in its current form",
+            "Withdraw Part 2 (SAAIA) pending consultation",
+            "Restore evidentiary threshold to reasonable grounds to believe"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Reject Bill C-22 in its current form",
+                "Withdraw Part 2 (SAAIA) pending consultation",
+                "Restore evidentiary threshold to reasonable grounds to believe"
+              ],
+              "quote": "Based on these concerns, CMPAC calls on Members of Parliament to reject Bill C-22 and vote against its adoption.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Reject Bill C-22 in its current form",
+                "Withdraw Part 2 (Supporting Authorized Access to Information Act) in its entirety",
+                "Restore evidentiary threshold for subscriber information to reasonable grounds to believe"
+              ],
+              "quote": "Based on these concerns, CMPAC calls on Members of Parliament to reject Bill C-22 and vote against its adoption.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-11",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Association for Competitive Technology",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14153345/br-external/AssociationForCompetitiveTechnology-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Given these ramifications, ACT respectfully urges policymakers to amend Bill C-22 to include clear, explicit protections for strong encryption.",
+          "asks": [
+            "Include explicit protections for strong end-to-end encryption",
+            "Prohibit regulations requiring backdoors or weakened encryption",
+            "Strengthen definition of systemic vulnerability to include encryption access"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Include explicit protections for strong end-to-end encryption",
+                "Prohibit regulations requiring backdoors or weakened encryption",
+                "Strengthen definition of systemic vulnerability to include encryption access"
+              ],
+              "quote": "ACT respectfully urges policymakers to amend Bill C-22 to include clear, explicit protections for strong encryption.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Explicitly prohibit requiring providers to weaken encryption or introduce backdoors",
+                "Strengthen the definition of systemic vulnerability and include transparency provisions for orders",
+                "Narrow the definition of subscriber information to a closed list of discrete identifiers"
+              ],
+              "quote": "Given these ramifications, ACT respectfully urges policymakers to amend Bill C-22 to include clear, explicit protections for strong encryption.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-11",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "National Security and Intelligence Review Agency",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14092168/br-external/NationalSecurityAndIntelligenceReviewAgency-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "To support NSIRA’s ability to conduct timely and effective independent review of these powers, we recommend targeted amendments to ensure it receives prompt and sufficient access to information, particularly in relation to Ministerial and compliance orders.",
+          "asks": [
+            "Minister to share approved ministerial orders and supporting documents with NSIRA within 30 days",
+            "Minister to notify NSIRA of compliance orders and review outcomes within 30 days",
+            "Amend section 9 of the SAAIA so the Minister provides NSIRA with copies of approved Ministerial orders and supporting in"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Minister to share approved ministerial orders and supporting documents with NSIRA within 30 days",
+                "Minister to notify NSIRA of compliance orders and review outcomes within 30 days"
+              ],
+              "quote": "The proposed amendments are practical, consistent with domestic legislation and international best practices, and will ensure NSIRA can fulfill its mandate.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend section 9 of the SAAIA so the Minister provides NSIRA with copies of approved Ministerial orders and supporting in",
+                "Amend section 27 of the SAAIA so the Minister notifies NSIRA of compliance orders, non-compliance provisions, compliance",
+                "Amend section 27 of the SAAIA to require the Minister to notify NSIRA of compliance order review decisions and reasons w"
+              ],
+              "quote": "To support NSIRA’s ability to conduct timely and effective independent review of these powers, we recommend targeted amendments to ensure it receives prompt and sufficient access to information, particularly in relation to Ministerial and compliance orders.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-11",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Offices of the Information and Privacy Commissioners of Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14119458/br-external/OfficesOfTheInformationAndPrivacyCommissionerOfCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "However, in my view, further changes would help achieve the appropriate balance between lawful-access needs and privacy rights.",
+          "asks": [
+            "Narrow subscriber information definition to specific identifiers",
+            "Require obligations under the Act to be necessary and proportionate",
+            "Allow ESPs to disclose privacy breach details to the OPC"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Narrow subscriber information definition to specific identifiers",
+                "Require obligations under the Act to be necessary and proportionate",
+                "Allow ESPs to disclose privacy breach details to the OPC"
+              ],
+              "quote": "However, in my view, further changes would help achieve the appropriate balance between lawful-access needs and privacy rights.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Narrow the definition and production rules for subscriber information",
+                "Exclude information with a reasonable expectation of privacy from publicly available information",
+                "Require SAAIA obligations to be necessary and proportionate and strengthen systemic vulnerability protections"
+              ],
+              "quote": "However, in my view, further changes would help achieve the appropriate balance between lawful-access needs and privacy rights.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-11",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Institute of Internal Auditors",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14151654/br-external/InstituteOfInternalAuditors-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "The IIA believes that the addition of a formal definition of internal audit is fundamental to eliminating ambiguity, promoting consistency, and enhancing confidence in the legislation’s implementation.",
+          "asks": [
+            "Define internal audit per IIA’s International Professional Practices Framework",
+            "Incorporate this definition into Bill C-22",
+            "Ensure alignment with Treasury Board Policy"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Define internal audit per IIA’s International Professional Practices Framework",
+                "Incorporate this definition into Bill C-22",
+                "Ensure alignment with Treasury Board Policy"
+              ],
+              "quote": "The IIA believes that the addition of a formal definition of internal audit is fundamental to eliminating ambiguity, promoting consistency, and enhancing confidence in the legislation’s implementation.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Explicitly define the term \"internal audit\" in the legislation",
+                "Specifically reference the International Professional Practices Framework (IPPF) in the definition of internal audit"
+              ],
+              "quote": "The IIA believes that the addition of a formal definition of internal audit is fundamental to eliminating ambiguity, promoting consistency, and enhancing confidence in the legislation’s implementation.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-09",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "The Canadian Bar Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14136914/br-external/CanadianBarAssociation-e.pdf",
+          "status": "incomplete",
+          "readings": [
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Separate Part 1 and Part 2 of the bill and avoid deferring core definitions and obligations to future regulations",
+                "Strengthen judicial oversight, procedural safeguards, and definitions to ensure Charter and privacy compliance",
+                "Remove Ministerial Orders from Part 2 and explicitly prohibit undermining encryption"
+              ],
+              "quote": "The recommendations suggested by the CBA Sections intend to be a good faith contribution to Parliament’s important deliberations in crafting laws that are effective, understandable and consistent with the Charter.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-09",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Salesforce",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134942/br-external/Salesforce-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Accordingly, we urge legislators to exclude enterprise software–including enterprise communications–and B2B software providers.",
+          "asks": [
+            "Exclude B2B/enterprise software providers from the bill",
+            "Require timely production instead of mandated technical modifications",
+            "Eliminate broad metadata retention for enterprise services"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Exclude B2B/enterprise software providers from the bill",
+                "Require timely production instead of mandated technical modifications",
+                "Eliminate broad metadata retention for enterprise services"
+              ],
+              "quote": "Accordingly, we urge legislators to exclude enterprise software–including enterprise communications–and B2B software providers.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Exclude enterprise software and B2B software providers from the bill's scope",
+                "Replace mandatory technical product alterations with a 'timely production' requirement",
+                "Eliminate broad metadata retention requirements for enterprise services and include an explicit exception for foreign la"
+              ],
+              "quote": "We respectfully submit the following concerns and recommendations for legislators to refine the bill.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-09",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Canadian Civil Liberties Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14157173/br-external/CanadianCivilLibertiesAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "We, the undersigned organizations and individuals, are writing to call for the full withdrawal of Bill C-22, An Act respecting lawful access.",
+          "asks": [
+            "Withdraw Bill C-22",
+            "Reconsider problematic elements",
+            "Conduct meaningful public consultations"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Withdraw Bill C-22",
+                "Reconsider problematic elements",
+                "Conduct meaningful public consultations"
+              ],
+              "quote": "We, the undersigned organizations and individuals, are writing to call for the full withdrawal of Bill C-22, An Act respecting lawful access.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Withdraw or reject Bill C-22 in full",
+                "Reconsider the problematic elements of the bill",
+                "Commit to meaningful, good-faith, and evidence-based public consultations"
+              ],
+              "quote": "We, the undersigned organizations and individuals, are writing to call for the full withdrawal of Bill C-22, An Act respecting lawful access.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-05",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Ontario Child Sexual Exploitation Investigators Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121930/br-external/OntarioChildSexualExploitationInvestigatorsAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Overall, OCSEIA is supportive of the proposed changes in Bill C-22 however, it is important that these updates are done properly and with input from those who will be the ones who will have to put the changes in this bill into practice.",
+          "asks": [
+            "Strengthen section 487.014 to require data access and production",
+            "Amend Customs Act for Charter-compliant digital device searches",
+            "Mandate 12‑month retention of subscriber records"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Strengthen section 487.014 to require data access and production",
+                "Amend Customs Act for Charter-compliant digital device searches",
+                "Mandate 12‑month retention of subscriber records"
+              ],
+              "quote": "Overall, OCSEIA is supportive of the proposed changes in Bill C-22",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Clarify in statute that entities with a physical presence in Canada must produce client data regardless of where it is s",
+                "Mandate telecommunications providers in Canada to store comprehensive subscriber records for a minimum of 12 months",
+                "Add a 7-day non-disclosure prohibition for exigent data requests and expand police search and property detention powers"
+              ],
+              "quote": "Overall, OCSEIA is supportive of the proposed changes in Bill C-22 however, it is important that these updates are done properly and with input from those who will be the ones who will have to put the changes in this bill into practice.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-05",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Apple Inc.",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14122002/br-external/AppleInc-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Strengthen statutory protections for encryption",
+                "Clarify and narrow definition of systemic vulnerability",
+                "Prohibit government-mandated installation of surveillance equipment"
+              ],
+              "quote": "In its current form, the Bill does not accomplish those objectives and should not be enacted.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Strengthen statutory protections for encryption and narrow the definition of 'systemic vulnerability'",
+                "Prohibit government-mandated installation or use of surveillance equipment",
+                "Establish a statutory right to meaningful and timely judicial review before compliance is required"
+              ],
+              "quote": "As explained below, we urge the Committee to amend the Bill to protect the data security and privacy of Canadians.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-05",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Canadian American Business Council",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134941/br-external/CanadianAmericanBusinessCouncil-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "We believe Bill C-22 raises fundamental privacy concerns, weakens encryption at a time when Canadians need it more than ever, and threatens our bilateral partnership on data security.",
+          "asks": [
+            "Collaborate with experts, private sector, and U.S. counterparts",
+            "Find common ground solutions that safeguard privacy and encourage strong cyber security",
+            "Collaborate with cyber and data privacy experts"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Collaborate with experts, private sector, and U.S. counterparts",
+                "Find common ground solutions that safeguard privacy and encourage strong cyber security"
+              ],
+              "quote": "We believe Bill C-22 raises fundamental privacy concerns, weakens encryption at a time when Canadians need it more than ever, and threatens our bilateral partnership on data security.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Collaborate with cyber and data privacy experts",
+                "Collaborate with the private sector and stakeholders",
+                "Collaborate with U.S. counterparts to find common ground solutions"
+              ],
+              "quote": "While strengthening Canada’s national security and cybersecurity framework is an important and legitimate objective, Bill C-22 does not appropriately fulfill this objective.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-05",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "OpenMedia",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14120373/br-external/OpenMedia-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "OpenMedia’s core position, shared by more than 25 leading rights and privacy organizations and experts, is that the bill should be withdrawn.",
+          "asks": [
+            "Withdraw Bill C-22 or remove Part 2 entirely",
+            "Define \"electronic service provider\" and \"core provider\" plainly in statute",
+            "Strike mandatory metadata retention and prohibit weakening encryption"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Withdraw Bill C-22 or remove Part 2 entirely",
+                "Define \"electronic service provider\" and \"core provider\" plainly in statute",
+                "Strike mandatory metadata retention and prohibit weakening encryption"
+              ],
+              "quote": "OpenMedia’s core position, shared by more than 25 leading rights and privacy organizations and experts, is that the bill should be withdrawn.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Withdraw Bill C-22 entirely",
+                "Remove Part 2 (the Supporting Authorized Access to Information Act) completely",
+                "Adopt major structural amendments to limit scope, remove mandatory metadata retention, and protect security and oversigh"
+              ],
+              "quote": "OpenMedia’s core position, shared by more than 25 leading rights and privacy organizations and experts, is that the bill should be withdrawn.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-04",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Ligue des droits et libertés",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121904/br-external/LigueDesDroitsEtLiberte-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "On the contrary, the abuses and excesses that accompany such provisions lead the Ligue des droits et libertés to call for the unequivocal rejection of this liberty-destroying bill.",
+          "asks": [
+            "withdraw Bill C-22",
+            "Unequivocal rejection and withdrawal of Bill C-22",
+            "Halt the expansion of cross-border data sharing without a framework protecting privacy and fundamental rights"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "withdraw Bill C-22"
+              ],
+              "quote": "The abuses and excesses that accompany such provisions lead the Ligue des droits et libertés to call for the unequivocal rejection of this liberty-destroying bill.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Unequivocal rejection and withdrawal of Bill C-22",
+                "Halt the expansion of cross-border data sharing without a framework protecting privacy and fundamental rights",
+                "Rule out the introduction of any system vulnerabilities or backdoors"
+              ],
+              "quote": "On the contrary, the abuses and excesses that accompany such provisions lead the Ligue des droits et libertés to call for the unequivocal rejection of this liberty-destroying bill.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-04",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Chamber of Progress",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134948/br-external/ChamberOfProgress-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "We offer four constructive recommendations to Part 2 of the bill, the Supporting Authorized Access to Information Act (“Part 2” hereafter), to better align the legislation's lawful access objectives with the need to protect the privacy and security of Canadians:",
+          "asks": [
+            "Prohibit mandates that weaken end-to-end encryption and broaden systemic vulnerability definition",
+            "Remove blanket metadata retention mandate, rely on preserve on demand framework",
+            "Require judicial approval for non-disclosure orders and permit transparency reporting"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Prohibit mandates that weaken end-to-end encryption and broaden systemic vulnerability definition",
+                "Remove blanket metadata retention mandate, rely on preserve on demand framework",
+                "Require judicial approval for non-disclosure orders and permit transparency reporting"
+              ],
+              "quote": "We offer four constructive recommendations to Part 2 of the bill, the Supporting Authorized Access to Information Act (“Part 2” hereafter), to better align the legislation's lawful access objectives with the need to protect the privacy and security of Canadians:",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Prohibit mandates weakening end-to-end encryption and broaden 'systemic vulnerability' definition",
+                "Remove the metadata retention mandate and rely on existing 'preserve on demand' framework",
+                "Require judicial approval for non-disclosure orders and surveillance capabilities, and limit 'core provider' scope"
+              ],
+              "quote": "We believe that these targeted recommendations will successfully balance the need to modernize Canada's cybercrime investigation tools with protecting Canadian consumers from unintended privacy risks and cybersecurity vulnerabilities.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-04",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Communications Security Establishment",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14116106/br-external/CommunicationsSecurityEstablishmentCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports",
+          "quote": "Bill C-22 marks an important step toward protecting Canadians from evolving threats to their safety and security by enabling lawful access to digital information held by ESPs for law enforcement agencies and CSIS, while preserving the integrity of strong encryption.",
+          "asks": [
+            "Preserve strong encryption integrity",
+            "Prohibit creation of systemic vulnerabilities",
+            "Ensure targeted, case-by-case lawful access with judicial oversight"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports",
+              "asks": [
+                "Preserve strong encryption integrity",
+                "Prohibit creation of systemic vulnerabilities",
+                "Ensure targeted, case-by-case lawful access with judicial oversight"
+              ],
+              "quote": "Bill C-22 marks an important step toward protecting Canadians from evolving threats to their safety and security by enabling lawful access to digital information held by ESPs for law enforcement agencies and CSIS, while preserving the integrity of strong encryption.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports",
+              "asks": [
+                "Preserve the integrity of strong encryption",
+                "Maintain sustained collaboration between government and industry",
+                "Ensure clear governance and transparent implementation"
+              ],
+              "quote": "In this context, CSE assesses that the lawful access provisions in Bill C‑22 can be implemented in a manner that maintains robust cyber security protections.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-26",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Google Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14110858/br-external/Google-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Within this context, Google has significant concerns with some elements of Part 2 of Bill C-22 as currently drafted.",
+          "asks": [
+            "Clarify that regulations cannot mandate product changes",
+            "Eliminate ministerial orders",
+            "Protect encryption in systemic vulnerability definition"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Clarify that regulations cannot mandate product changes",
+                "Eliminate ministerial orders",
+                "Protect encryption in systemic vulnerability definition"
+              ],
+              "quote": "Within this context, Google has significant concerns with some elements of Part 2 of Bill C-22 as currently drafted.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Prohibit regulations from dictating changes to products or services",
+                "Eliminate ministerial orders (remove sections 7-13 of Part 2)",
+                "Amend definition of systemic vulnerabilities to protect encryption and remove metadata preservation provisions"
+              ],
+              "quote": "Within this context, Google has significant concerns with some elements of Part 2 of Bill C-22 as currently drafted.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-25",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Barreau du Québec",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074861/br-external/BarreauduQuebec-067260513026-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "While we welcome the Bill’s objective, we believe that several provisions raise significant concerns regarding the protection of personal information and respect for the constitutional safeguards provided by the Canadian Charter of Rights and Freedoms.",
+          "asks": [
+            "Clarify “subscriber information” definition and narrow “person who provides services to the public”",
+            "Raise order threshold to “reasonable grounds to believe”",
+            "Remove voluntary disclosure without judicial oversight"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Clarify “subscriber information” definition and narrow “person who provides services to the public”",
+                "Raise order threshold to “reasonable grounds to believe”",
+                "Remove voluntary disclosure without judicial oversight"
+              ],
+              "quote": "While we welcome the Bill’s objective, we believe that several provisions raise significant concerns regarding the protection of personal information and respect for the constitutional safeguards provided by the Canadian Charter of Rights and Freedoms.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Clarify \"subscriber information\" and narrow \"person who provides services to the public\"",
+                "Raise threshold for production orders to \"reasonable grounds to believe\"",
+                "Remove voluntary disclosure mechanisms without judicial oversight"
+              ],
+              "quote": "While we welcome the Bill’s objective, we believe that several provisions raise significant concerns regarding the protection of personal information and respect for the constitutional safeguards provided by the Canadian Charter of Rights and Freedoms.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-25",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Justice Centre for Constitutional Freedoms",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14096311/br-external/JusticeCentreForConstitutionalFreedoms-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "We urge this Committee to recommend substantial amendments, without which Bill C-22 should be rejected.",
+          "asks": [
+            "Delete the subscriber information production order (s. 487.0142)",
+            "Remove compulsory metadata retention in SAAIA",
+            "Require judicial authorization for ministerial orders"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Delete the subscriber information production order (s. 487.0142)",
+                "Remove compulsory metadata retention in SAAIA",
+                "Require judicial authorization for ministerial orders"
+              ],
+              "quote": "We urge this Committee to recommend substantial amendments, without which Bill C-22 should be rejected.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Remove the new subscriber information production order in s. 487.0142",
+                "Remove the compulsory metadata retention power in s. 5(2)(d) of the SAAIA",
+                "Require judicial authorization by a Federal Court judge for orders under s. 7 of the SAAIA"
+              ],
+              "quote": "We urge this Committee to recommend substantial amendments, without which Bill C-22 should be rejected.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-21",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "National Police Federation",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14101085/br-external/NationalPoliceFederation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "The NPF strongly supports this legislation and urges all Members of Parliament to advance it through the legislative process without delay.",
+          "asks": [
+            "Mandate immediate data preservation during provider appeals",
+            "Clarify that imminent loss of digital evidence is an exigent circumstance",
+            "Mandate immediate data preservation by service providers during appeals"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Mandate immediate data preservation during provider appeals",
+                "Clarify that imminent loss of digital evidence is an exigent circumstance"
+              ],
+              "quote": "The NPF strongly supports this legislation and urges all Members of Parliament to advance it through the legislative process without delay.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Mandate immediate data preservation by service providers during appeals",
+                "Explicitly recognize imminent loss of digital evidence as an exigent circumstance",
+                "Provide dedicated federal implementation funding for training and develop joint operational guidelines"
+              ],
+              "quote": "The NPF strongly supports this legislation and urges all Members of Parliament to advance it through the legislative process without delay.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-21",
           "checkedAt": "2026-10-28"
         }
       ]
@@ -8528,7 +9346,8 @@
           }
         ],
         "provisionCount": 284
-      }
+      },
+      "omnibus": true
     },
     {
       "number": "C-288",
@@ -10822,7 +11641,8 @@
           ],
           "checked": "2026-10-27"
         }
-      ]
+      ],
+      "omnibus": true
     },
     {
       "number": "C-31",
@@ -12207,7 +13027,8 @@
           "date": "2026-06-25",
           "checkedAt": "2026-10-28"
         }
-      ]
+      ],
+      "omnibus": true
     },
     {
       "number": "S-211",
@@ -13256,7 +14077,67 @@
           }
         ],
         "provisionCount": 120
-      }
+      },
+      "positions": [
+        {
+          "name": "The Canadian Bar Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/PROC/Brief/BR14135379/br-external/CanadianBarAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "The CBA Section recommends that the Committee consider whether the Bill should be amended to classify political opinion data as sensitive personal information, with proportionate consent and processing requirements, consistent with international best practices.",
+          "asks": [
+            "Classify political opinion as sensitive personal information",
+            "Grant individuals access and correction rights",
+            "Establish OPC oversight of party privacy practices"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Classify political opinion as sensitive personal information",
+                "Grant individuals access and correction rights",
+                "Establish OPC oversight of party privacy practices"
+              ],
+              "quote": "The CBA Section recommends that the Committee consider whether the Bill should be amended to classify political opinion data as sensitive personal information, with proportionate consent and processing requirements, consistent with international best practices.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Classify political opinion as sensitive personal information",
+                "Grant individuals explicit rights of access to and correction of personal information",
+                "Establish independent oversight of political party privacy practices by the Office of the Privacy Commissioner"
+              ],
+              "quote": "We support Bill C-25’s (the Strong and Free Elections Act) objective of strengthening electoral integrity and welcome its privacy-related amendments as a step toward greater accountability for federal political parties.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-01",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Democracy Watch",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/PROC/Brief/BR14123973/br-external/DemocracyWatch-e.pdf",
+          "status": "incomplete",
+          "readings": [
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Prohibit all false claims and foreign influence activities during elections and contests",
+                "Increase transparency for fundraising events and tighten third-party spending limits and rules",
+                "Mandate Elections Canada to report on election costs, party operation costs, and electoral reform"
+              ],
+              "quote": "The changes need to be made to the CEA and related federal laws to fully and effectively prevent, prohibit and penalize disinformation, undemocratic third-party influence and foreign interference, including changes to make enforcement independent, effective, transparent, timely and accountable.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-27",
+          "checkedAt": "2026-10-28"
+        }
+      ]
     },
     {
       "number": "C-4",
@@ -14674,7 +15555,8 @@
           }
         ],
         "provisionCount": 375
-      }
+      },
+      "omnibus": true
     }
   ],
   "changelog": [
