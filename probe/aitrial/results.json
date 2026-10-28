@@ -1,0 +1,1371 @@
+[
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Canadian Life and Health Insurance Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14210568/br-external/CanadianLifeAndHealthInsuranceAssociation-e.pdf",
+  "answer": {
+   "organization": "Canadian Life and Health Insurance Association (CLHIA)",
+   "stance": "supports with amendments",
+   "main_asks": [
+    "Narrow scope to communications providers and exclude other sectors",
+    "Protect encryption and prohibit security-weakening requirements",
+    "Replace broad metadata retention with targeted, time-limited preservation orders"
+   ],
+   "quote": "We believe that amending the definition to narrow the scope will help ensure that the legislation remains focused on its intended objectives.",
+   "confidence": "high"
+  },
+  "seconds": 3.3,
+  "cost": 0.00515,
+  "quote_check": "exact"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Edmonton Police Commission",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14220817/br-external/EdmontonPoliceCommission-e.pdf",
+  "answer": {
+   "organization": "Edmonton Police Commission",
+   "stance": "supports",
+   "main_asks": [
+    "Support and advance Bill C-22 without delay"
+   ],
+   "quote": "For these reasons, I respectfully urge the Committee and Parliament to support and advance Bill C-22 without delay.",
+   "confidence": "high"
+  },
+  "seconds": 3.2,
+  "cost": 0.00259,
+  "quote_check": "exact"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148882/br-external/Jointly01-e.pdf",
+  "answer": {
+   "organization": "Citizen Lab and Canadian Civil Liberties Association (CCLA)",
+   "stance": "opposes",
+   "main_asks": [
+    "Withdraw Part 2 (SAAIA)",
+    "Remove publicly available information and voluntary disclosure provisions",
+    "Suspend Part 1 study pending treaty transparency and policy compliance"
+   ],
+   "quote": "While the submission provides amendments that might mitigate some of the destructive consequences of Bill C-22, our core recommendation is that the offending elements of the Bill be withdrawn.",
+   "confidence": "high"
+  },
+  "seconds": 2.2,
+  "cost": 0.01903,
+  "quote_check": "exact"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Samuelson-Glushko Canadian Internet Policy and Public Interest Clinic",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148910/br-external/SamuelsonGlushkoCanadianInternetPolicyAndPublicInterestClinic-e.pdf",
+  "answer": {
+   "organization": "Samuelson-Glushko Canadian Internet Policy and Public Interest Clinic (CIPPIC)",
+   "stance": "supports with amendments",
+   "main_asks": [
+    "Raise access thresholds and strengthen judicial oversight and transparency",
+    "Require major structural revision and an evidentiary basis before Part 2 proceeds",
+    "Remove metadata retention powers and strengthen cybersecurity safeguards"
+   ],
+   "quote": "It requires major structural revision, independent oversight safeguards, and a demonstrated evidentiary basis.",
+   "confidence": "high"
+  },
+  "seconds": 5.4,
+  "cost": 0.01316,
+  "quote_check": "exact"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Chayn",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14185668/br-external/Chayn-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Technation Canada",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14147724/br-external/TechnicationCanada-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "International Civil Liberties Monitoring Group",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121999/br-external/InternationalCivilLibertiesMonitoringGroup-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Canadian Association of Journalists",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148860/br-external/CanadianAssociationOfJournalists-e.pdf",
+  "answer": {
+   "organization": "Canadian Association of Journalists (CAJ)",
+   "stance": "opposes",
+   "main_asks": [
+    "Amend Bill C-22 to protect privacy and press freedom",
+    "Ensure judicial oversight and necessary, proportionate access",
+    "Explicitly protect end-to-end encryption"
+   ],
+   "quote": "The CAJ strongly opposes Bill C-22 in its current form due to unacceptable risks.",
+   "confidence": "high"
+  },
+  "seconds": 4.0,
+  "cost": 0.00379,
+  "quote_check": "exact"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "British Columbia Civil Liberties Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14147711/br-external/BritishColumbiaCivilLibertiesAssociation-e.pdf",
+  "answer": {
+   "organization": "British Columbia Civil Liberties Association (BCCLA)",
+   "stance": "opposes",
+   "main_asks": [
+    "Remove Part 2 in its entirety",
+    "Narrow subscriber information and exclude medical and solicitor-privileged information",
+    "Replace reasonable grounds to suspect with reasonable grounds to believe"
+   ],
+   "quote": "Bill C-22 (the ”Bill”) is an overbroad and disproportionate attempt to open the digital communications of people in Canada to law enforcement and national security bodies of the state.",
+   "confidence": "high"
+  },
+  "seconds": 5.5,
+  "cost": 0.01257,
+  "quote_check": "exact"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "BC Coalition of Experiential Communities",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148872/br-external/BCCoalitionOfExperientialCommunities-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Canadian Muslim Public Affairs Council",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14133318/br-external/CanadianMuslimPublicAffairsCouncil-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Association for Competitive Technology",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14153345/br-external/AssociationForCompetitiveTechnology-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "National Security and Intelligence Review Agency",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14092168/br-external/NationalSecurityAndIntelligenceReviewAgency-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Offices of the Information and Privacy Commissioners of Canada",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14119458/br-external/OfficesOfTheInformationAndPrivacyCommissionerOfCanada-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Institute of Internal Auditors",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14151654/br-external/InstituteOfInternalAuditors-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "The Canadian Bar Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14136914/br-external/CanadianBarAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Salesforce",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134942/br-external/Salesforce-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Canadian Civil Liberties Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14157173/br-external/CanadianCivilLibertiesAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Ontario Child Sexual Exploitation Investigators Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121930/br-external/OntarioChildSexualExploitationInvestigatorsAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Apple Inc.",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14122002/br-external/AppleInc-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Canadian American Business Council",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134941/br-external/CanadianAmericanBusinessCouncil-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "OpenMedia",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14120373/br-external/OpenMedia-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Ligue des droits et libertés",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121904/br-external/LigueDesDroitsEtLiberte-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Chamber of Progress",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134948/br-external/ChamberOfProgress-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Communications Security Establishment",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14116106/br-external/CommunicationsSecurityEstablishmentCanada-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Google Canada",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14110858/br-external/Google-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Barreau du Québec",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074861/br-external/BarreauduQuebec-067260513026-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Justice Centre for Constitutional Freedoms",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14096311/br-external/JusticeCentreForConstitutionalFreedoms-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "National Police Federation",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14101085/br-external/NationalPoliceFederation-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Information Technology Industry Council",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14088339/br-external/InformationTechnologyIndustryCouncil-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Canadian Chamber of Commerce",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14102637/br-external/CanadianChamberOfCommerce-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Business Software Alliance",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14105199/br-external/BusinessSoftwareAlliance-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Meta Platforms Inc.",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14099048/br-external/MetaPlatformsInc-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Internet Society",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14095567/br-external/InternetSociety-067260507035-b.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "OpenAI",
+  "model": "openai/gpt-6.1-sol",
+  "organization": "Canadian Telecommunications Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074834/br-external/CanadianTelecommunicationsAssociation-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Canadian Life and Health Insurance Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14210568/br-external/CanadianLifeAndHealthInsuranceAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Edmonton Police Commission",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14220817/br-external/EdmontonPoliceCommission-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148882/br-external/Jointly01-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Samuelson-Glushko Canadian Internet Policy and Public Interest Clinic",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148910/br-external/SamuelsonGlushkoCanadianInternetPolicyAndPublicInterestClinic-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Chayn",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14185668/br-external/Chayn-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Technation Canada",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14147724/br-external/TechnicationCanada-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "International Civil Liberties Monitoring Group",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121999/br-external/InternationalCivilLibertiesMonitoringGroup-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Canadian Association of Journalists",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148860/br-external/CanadianAssociationOfJournalists-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "British Columbia Civil Liberties Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14147711/br-external/BritishColumbiaCivilLibertiesAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "BC Coalition of Experiential Communities",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148872/br-external/BCCoalitionOfExperientialCommunities-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Canadian Muslim Public Affairs Council",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14133318/br-external/CanadianMuslimPublicAffairsCouncil-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Association for Competitive Technology",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14153345/br-external/AssociationForCompetitiveTechnology-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "National Security and Intelligence Review Agency",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14092168/br-external/NationalSecurityAndIntelligenceReviewAgency-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Offices of the Information and Privacy Commissioners of Canada",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14119458/br-external/OfficesOfTheInformationAndPrivacyCommissionerOfCanada-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Institute of Internal Auditors",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14151654/br-external/InstituteOfInternalAuditors-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "The Canadian Bar Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14136914/br-external/CanadianBarAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Salesforce",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134942/br-external/Salesforce-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Canadian Civil Liberties Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14157173/br-external/CanadianCivilLibertiesAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Ontario Child Sexual Exploitation Investigators Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121930/br-external/OntarioChildSexualExploitationInvestigatorsAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Apple Inc.",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14122002/br-external/AppleInc-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Canadian American Business Council",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134941/br-external/CanadianAmericanBusinessCouncil-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "OpenMedia",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14120373/br-external/OpenMedia-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Ligue des droits et libertés",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121904/br-external/LigueDesDroitsEtLiberte-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Chamber of Progress",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134948/br-external/ChamberOfProgress-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Communications Security Establishment",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14116106/br-external/CommunicationsSecurityEstablishmentCanada-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Google Canada",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14110858/br-external/Google-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Barreau du Québec",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074861/br-external/BarreauduQuebec-067260513026-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Justice Centre for Constitutional Freedoms",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14096311/br-external/JusticeCentreForConstitutionalFreedoms-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "National Police Federation",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14101085/br-external/NationalPoliceFederation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Information Technology Industry Council",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14088339/br-external/InformationTechnologyIndustryCouncil-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Canadian Chamber of Commerce",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14102637/br-external/CanadianChamberOfCommerce-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Business Software Alliance",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14105199/br-external/BusinessSoftwareAlliance-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Meta Platforms Inc.",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14099048/br-external/MetaPlatformsInc-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Internet Society",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14095567/br-external/InternetSociety-067260507035-b.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Google",
+  "model": "google/gemini-4-argon",
+  "organization": "Canadian Telecommunications Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074834/br-external/CanadianTelecommunicationsAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Canadian Life and Health Insurance Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14210568/br-external/CanadianLifeAndHealthInsuranceAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Edmonton Police Commission",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14220817/br-external/EdmontonPoliceCommission-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148882/br-external/Jointly01-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Samuelson-Glushko Canadian Internet Policy and Public Interest Clinic",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148910/br-external/SamuelsonGlushkoCanadianInternetPolicyAndPublicInterestClinic-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Chayn",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14185668/br-external/Chayn-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Technation Canada",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14147724/br-external/TechnicationCanada-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "International Civil Liberties Monitoring Group",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121999/br-external/InternationalCivilLibertiesMonitoringGroup-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Canadian Association of Journalists",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148860/br-external/CanadianAssociationOfJournalists-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "British Columbia Civil Liberties Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14147711/br-external/BritishColumbiaCivilLibertiesAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "BC Coalition of Experiential Communities",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148872/br-external/BCCoalitionOfExperientialCommunities-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Canadian Muslim Public Affairs Council",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14133318/br-external/CanadianMuslimPublicAffairsCouncil-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Association for Competitive Technology",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14153345/br-external/AssociationForCompetitiveTechnology-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "National Security and Intelligence Review Agency",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14092168/br-external/NationalSecurityAndIntelligenceReviewAgency-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Offices of the Information and Privacy Commissioners of Canada",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14119458/br-external/OfficesOfTheInformationAndPrivacyCommissionerOfCanada-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Institute of Internal Auditors",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14151654/br-external/InstituteOfInternalAuditors-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "The Canadian Bar Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14136914/br-external/CanadianBarAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Salesforce",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134942/br-external/Salesforce-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Canadian Civil Liberties Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14157173/br-external/CanadianCivilLibertiesAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Ontario Child Sexual Exploitation Investigators Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121930/br-external/OntarioChildSexualExploitationInvestigatorsAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Apple Inc.",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14122002/br-external/AppleInc-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Canadian American Business Council",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134941/br-external/CanadianAmericanBusinessCouncil-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "OpenMedia",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14120373/br-external/OpenMedia-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Ligue des droits et libertés",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121904/br-external/LigueDesDroitsEtLiberte-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Chamber of Progress",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134948/br-external/ChamberOfProgress-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Communications Security Establishment",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14116106/br-external/CommunicationsSecurityEstablishmentCanada-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Google Canada",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14110858/br-external/Google-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Barreau du Québec",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074861/br-external/BarreauduQuebec-067260513026-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Justice Centre for Constitutional Freedoms",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14096311/br-external/JusticeCentreForConstitutionalFreedoms-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "National Police Federation",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14101085/br-external/NationalPoliceFederation-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Information Technology Industry Council",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14088339/br-external/InformationTechnologyIndustryCouncil-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Canadian Chamber of Commerce",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14102637/br-external/CanadianChamberOfCommerce-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Business Software Alliance",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14105199/br-external/BusinessSoftwareAlliance-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Meta Platforms Inc.",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14099048/br-external/MetaPlatformsInc-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Internet Society",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14095567/br-external/InternetSociety-067260507035-b.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Mistral",
+  "model": "mistralai/mistral-large-4-0",
+  "organization": "Canadian Telecommunications Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074834/br-external/CanadianTelecommunicationsAssociation-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Canadian Life and Health Insurance Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14210568/br-external/CanadianLifeAndHealthInsuranceAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Edmonton Police Commission",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14220817/br-external/EdmontonPoliceCommission-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148882/br-external/Jointly01-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Samuelson-Glushko Canadian Internet Policy and Public Interest Clinic",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148910/br-external/SamuelsonGlushkoCanadianInternetPolicyAndPublicInterestClinic-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Chayn",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14185668/br-external/Chayn-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Technation Canada",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14147724/br-external/TechnicationCanada-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "International Civil Liberties Monitoring Group",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121999/br-external/InternationalCivilLibertiesMonitoringGroup-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Canadian Association of Journalists",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148860/br-external/CanadianAssociationOfJournalists-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "British Columbia Civil Liberties Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14147711/br-external/BritishColumbiaCivilLibertiesAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "BC Coalition of Experiential Communities",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148872/br-external/BCCoalitionOfExperientialCommunities-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Canadian Muslim Public Affairs Council",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14133318/br-external/CanadianMuslimPublicAffairsCouncil-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Association for Competitive Technology",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14153345/br-external/AssociationForCompetitiveTechnology-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "National Security and Intelligence Review Agency",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14092168/br-external/NationalSecurityAndIntelligenceReviewAgency-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Offices of the Information and Privacy Commissioners of Canada",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14119458/br-external/OfficesOfTheInformationAndPrivacyCommissionerOfCanada-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Institute of Internal Auditors",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14151654/br-external/InstituteOfInternalAuditors-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "The Canadian Bar Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14136914/br-external/CanadianBarAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Salesforce",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134942/br-external/Salesforce-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Canadian Civil Liberties Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14157173/br-external/CanadianCivilLibertiesAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Ontario Child Sexual Exploitation Investigators Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121930/br-external/OntarioChildSexualExploitationInvestigatorsAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Apple Inc.",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14122002/br-external/AppleInc-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Canadian American Business Council",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134941/br-external/CanadianAmericanBusinessCouncil-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "OpenMedia",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14120373/br-external/OpenMedia-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Ligue des droits et libertés",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121904/br-external/LigueDesDroitsEtLiberte-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Chamber of Progress",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134948/br-external/ChamberOfProgress-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Communications Security Establishment",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14116106/br-external/CommunicationsSecurityEstablishmentCanada-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Google Canada",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14110858/br-external/Google-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Barreau du Québec",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074861/br-external/BarreauduQuebec-067260513026-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Justice Centre for Constitutional Freedoms",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14096311/br-external/JusticeCentreForConstitutionalFreedoms-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "National Police Federation",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14101085/br-external/NationalPoliceFederation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Information Technology Industry Council",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14088339/br-external/InformationTechnologyIndustryCouncil-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Canadian Chamber of Commerce",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14102637/br-external/CanadianChamberOfCommerce-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Business Software Alliance",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14105199/br-external/BusinessSoftwareAlliance-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Meta Platforms Inc.",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14099048/br-external/MetaPlatformsInc-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Internet Society",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14095567/br-external/InternetSociety-067260507035-b.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Cohere",
+  "model": "cohere/command-a-plus",
+  "organization": "Canadian Telecommunications Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074834/br-external/CanadianTelecommunicationsAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Canadian Life and Health Insurance Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14210568/br-external/CanadianLifeAndHealthInsuranceAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Edmonton Police Commission",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14220817/br-external/EdmontonPoliceCommission-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148882/br-external/Jointly01-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Samuelson-Glushko Canadian Internet Policy and Public Interest Clinic",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148910/br-external/SamuelsonGlushkoCanadianInternetPolicyAndPublicInterestClinic-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Chayn",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14185668/br-external/Chayn-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Technation Canada",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14147724/br-external/TechnicationCanada-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "International Civil Liberties Monitoring Group",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121999/br-external/InternationalCivilLibertiesMonitoringGroup-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Canadian Association of Journalists",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148860/br-external/CanadianAssociationOfJournalists-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "British Columbia Civil Liberties Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14147711/br-external/BritishColumbiaCivilLibertiesAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "BC Coalition of Experiential Communities",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148872/br-external/BCCoalitionOfExperientialCommunities-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Canadian Muslim Public Affairs Council",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14133318/br-external/CanadianMuslimPublicAffairsCouncil-e.pdf",
+  "answer": {
+   "organization": "Canadian Muslim Public Affairs Council (CMPAC)",
+   "stance": "opposes",
+   "main_asks": [
+    "Reject Bill C-22 and vote against its adoption",
+    "Withdraw Part 2 (SAAIA) entirely, or at minimum restore the \"reasonable grounds to believe\" threshold",
+    "Require a Charter and Equality Impact Assessment, judicial authorization of secret orders, and stronger oversight if the bill proceeds"
+   ],
+   "quote": "Based on these concerns, CMPAC calls on Members of Parliament to reject Bill C-22 and vote against its adoption.",
+   "confidence": "high"
+  },
+  "seconds": 4.1,
+  "cost": 0.01294,
+  "quote_check": "exact"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Association for Competitive Technology",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14153345/br-external/AssociationForCompetitiveTechnology-e.pdf",
+  "answer": {
+   "organization": "Association for Competitive Technology (ACT | The App Association)",
+   "stance": "supports with amendments",
+   "main_asks": [
+    "Explicit statutory protection for strong end-to-end encryption",
+    "Define \"systemic vulnerability\" to include access to encrypted content, dropping the \"substantial risk\" test",
+    "Add transparency provision and narrow \"subscriber information\" definition"
+   ],
+   "quote": "ACT respectfully urges policymakers to amend Bill C-22 to include clear, explicit protections for strong encryption.",
+   "confidence": "medium"
+  },
+  "seconds": 1.7,
+  "cost": 0.00826,
+  "quote_check": "exact"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "National Security and Intelligence Review Agency",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14092168/br-external/NationalSecurityAndIntelligenceReviewAgency-e.pdf",
+  "answer": {
+   "organization": "National Security and Intelligence Review Agency (NSIRA)",
+   "stance": "supports with amendments",
+   "main_asks": [
+    "Give NSIRA Ministerial orders and supporting information within 30 days",
+    "Notify NSIRA of compliance orders and review decisions",
+    "Ensure timely NSIRA access to information"
+   ],
+   "quote": "To support NSIRA’s ability to conduct timely and effective independent review of these powers, we recommend targeted amendments to ensure it receives prompt and sufficient access to information",
+   "confidence": "high"
+  },
+  "seconds": 1.5,
+  "cost": 0.00841,
+  "quote_check": "exact"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Offices of the Information and Privacy Commissioners of Canada",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14119458/br-external/OfficesOfTheInformationAndPrivacyCommissionerOfCanada-e.pdf",
+  "answer": null,
+  "seconds": 7.0,
+  "cost": 0.0131,
+  "quote_check": "no answer"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Institute of Internal Auditors",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14151654/br-external/InstituteOfInternalAuditors-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "The Canadian Bar Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14136914/br-external/CanadianBarAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Salesforce",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134942/br-external/Salesforce-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Canadian Civil Liberties Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14157173/br-external/CanadianCivilLibertiesAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Ontario Child Sexual Exploitation Investigators Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121930/br-external/OntarioChildSexualExploitationInvestigatorsAssociation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Apple Inc.",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14122002/br-external/AppleInc-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Canadian American Business Council",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134941/br-external/CanadianAmericanBusinessCouncil-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "OpenMedia",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14120373/br-external/OpenMedia-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Ligue des droits et libertés",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14121904/br-external/LigueDesDroitsEtLiberte-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Chamber of Progress",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134948/br-external/ChamberOfProgress-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Communications Security Establishment",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14116106/br-external/CommunicationsSecurityEstablishmentCanada-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Google Canada",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14110858/br-external/Google-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Barreau du Québec",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074861/br-external/BarreauduQuebec-067260513026-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Justice Centre for Constitutional Freedoms",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14096311/br-external/JusticeCentreForConstitutionalFreedoms-e.pdf",
+  "answer": {
+   "organization": "Justice Centre for Constitutional Freedoms",
+   "stance": "opposes",
+   "main_asks": [
+    "Remove the s. 487.0142 subscriber information production order",
+    "Remove mandatory metadata retention in s. 5(2)(d) of SAAIA",
+    "Require Federal Court judicial authorization instead of ministerial orders under s. 7 of SAAIA"
+   ],
+   "quote": "We urge this Committee to recommend substantial amendments, without which Bill C-22 should be rejected.",
+   "confidence": "medium"
+  },
+  "seconds": 1.6,
+  "cost": 0.01145,
+  "quote_check": "exact"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "National Police Federation",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14101085/br-external/NationalPoliceFederation-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Information Technology Industry Council",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14088339/br-external/InformationTechnologyIndustryCouncil-e.pdf",
+  "answer": {
+   "organization": "Information Technology Industry Council (ITI)",
+   "stance": "opposes",
+   "main_asks": [
+    "Withdraw and substantially modify Bill C-22",
+    "Revise 'systemic vulnerability' to fully protect end-to-end encryption",
+    "Hold further public consultation and add strong independent oversight"
+   ],
+   "quote": "For the reasons set out above, ITI calls on Bill C-22 to be withdrawn and substantially modified.",
+   "confidence": "high"
+  },
+  "seconds": 4.0,
+  "cost": 0.00857,
+  "quote_check": "exact"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Canadian Chamber of Commerce",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14102637/br-external/CanadianChamberOfCommerce-e.pdf",
+  "error": "HTTP Error 402: Payment Required"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Business Software Alliance",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14105199/br-external/BusinessSoftwareAlliance-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Meta Platforms Inc.",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14099048/br-external/MetaPlatformsInc-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Internet Society",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14095567/br-external/InternetSociety-067260507035-b.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ {
+  "provider": "Anthropic (reference)",
+  "model": "anthropic/claude-sonnet-5.5",
+  "organization": "Canadian Telecommunications Association",
+  "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074834/br-external/CanadianTelecommunicationsAssociation-e.pdf",
+  "error": "HTTP Error 429: Too Many Requests"
+ }
+]
