@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-28T18:53:42.011Z",
+  "checkedAt": "2026-10-29T17:05:37.942Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -43,7 +43,7 @@
       "status": "At second reading in the House of Commons",
       "latestEvent": {
         "type": "Debate at second reading",
-        "date": "2026-10-21",
+        "date": "2026-10-28",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -81,6 +81,13 @@
         "meetings": [],
         "sittings": [
           {
+            "date": "2026-10-28",
+            "chamber": "House",
+            "sitting": "157",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-157/hansard"
+          },
+          {
             "date": "2026-10-21",
             "chamber": "House",
             "sitting": "152",
@@ -98,6 +105,54 @@
         "decisions": []
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "157",
+          "date": "2026-10-28",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-157/hansard",
+          "speeches": 52,
+          "speakers": [
+            "Hon. Kevin Lamoureux (Lib.)",
+            "Alexis Deschênes (BQ)",
+            "Hon. Kevin Lamoureux",
+            "Melissa Lantsman (CPC)",
+            "Helena Konanz (CPC)",
+            "Jeremy Patzer (CPC)",
+            "Louis Villeneuve (Lib.)",
+            "Jessica Fancy (Lib.)",
+            "Rosemarie Falk (CPC)",
+            "Hon. Karina Gould (Lib.)",
+            "Ben Carr (Lib.)",
+            "Ben Carr",
+            "Gabriel Hardy (CPC)",
+            "Connie Cody (CPC)",
+            "Connie Cody",
+            "Chi Nguyen (Lib.)",
+            "Pauline Rochefort (Lib.)",
+            "Hon. Michelle Rempel Garner (CPC)",
+            "Amarjeet Gill (CPC)",
+            "Danielle Martin (Lib.)",
+            "Elizabeth May (GP)",
+            "Leslie Church (Lib.)",
+            "Grant Jackson (CPC)",
+            "Michael Coteau (Lib.)",
+            "Shannon Miedema (Lib.)",
+            "Jake Sawatzky (Lib.)",
+            "Garnett Genuis (CPC)",
+            "Guillaume Deschênes-Thériault (Lib.)",
+            "Bienvenu-Olivier Ntumba",
+            "Natilien Joseph (Lib.)",
+            "William Stevenson (CPC)",
+            "Karim Bardeesy (Lib.)",
+            "Doly Begum (Lib.)",
+            "Ryan Turnbull (Lib.)",
+            "Guillaume Deschênes-Thériault"
+          ],
+          "contexts": [
+            "Government Orders: Safe Social Media Act",
+            "Private Members' Business: Protecting Young Persons from Exposure to Pornography Act"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "156",
@@ -277,10 +332,10 @@
       "originatingChamber": "Senate",
       "sponsor": "Hon. Julie Miville-Dechêne",
       "sponsorTitle": "Senator",
-      "status": "At second reading in the House of Commons",
+      "status": "At consideration in committee in the House of Commons",
       "latestEvent": {
-        "type": "Debate at second reading",
-        "date": "2026-09-24",
+        "type": "Second reading and referral to committee",
+        "date": "2026-10-28",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -288,13 +343,21 @@
         true,
         true,
         true,
-        false,
+        true,
         false,
         false
       ],
       "royalAssent": null,
       "statute": null,
       "committees": [
+        {
+          "name": "Standing Committee on Human Resources, Skills and Social Development and the Status of Persons with Disabilities",
+          "acronym": "HUMA",
+          "chamber": "House of Commons",
+          "role": "study",
+          "url": "https://www.ourcommons.ca/Committees/en/HUMA?parl=45&session=1",
+          "current": true
+        },
         {
           "name": "Standing Senate Committee on Legal and Constitutional Affairs",
           "acronym": "LCJC",
@@ -387,6 +450,13 @@
         ],
         "sittings": [
           {
+            "date": "2026-10-28",
+            "chamber": "House",
+            "sitting": "157",
+            "event": "Second reading and referral to committee",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-157/hansard"
+          },
+          {
             "date": "2026-09-24",
             "chamber": "House",
             "sitting": "143",
@@ -457,9 +527,40 @@
             "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/003db_2025-05-28-e"
           }
         ],
-        "decisions": []
+        "decisions": [
+          {
+            "date": "2026-10-28",
+            "chamber": "House",
+            "motion": "2nd reading and referral to committee - HUMA",
+            "result": "Agreed To",
+            "method": "On division",
+            "yeas": null,
+            "nays": null
+          }
+        ]
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "157",
+          "date": "2026-10-28",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-157/hansard",
+          "speeches": 8,
+          "speakers": [
+            "Alexis Deschênes (BQ)",
+            "Jeremy Patzer (CPC)",
+            "Louis Villeneuve (Lib.)",
+            "Eric Melillo (CPC)",
+            "Jessica Fancy (Lib.)",
+            "Rosemarie Falk (CPC)",
+            "Garnett Genuis (CPC)",
+            "Garnett Genuis"
+          ],
+          "contexts": [
+            "Private Members' Business: Protecting Young Persons from Exposure to Pornography Act",
+            "Government Orders: Safe Social Media Act"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "143",
@@ -635,7 +736,21 @@
         ],
         "decisions": []
       },
-      "mentions": [],
+      "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "157",
+          "date": "2026-10-28",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-157/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Michelle Rempel Garner (CPC)"
+          ],
+          "contexts": [
+            "Government Orders: Safe Social Media Act"
+          ]
+        }
+      ],
       "publications": [
         {
           "id": "13571478",
@@ -724,7 +839,21 @@
         ],
         "decisions": []
       },
-      "mentions": [],
+      "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "157",
+          "date": "2026-10-28",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-157/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Michael Coteau (Lib.)"
+          ],
+          "contexts": [
+            "Government Orders: Safe Social Media Act"
+          ]
+        }
+      ],
       "publications": [
         {
           "id": "14081108",
@@ -1864,6 +1993,22 @@
         ]
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "157",
+          "date": "2026-10-28",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-157/hansard",
+          "speeches": 5,
+          "speakers": [
+            "Hon. Karina Gould (Lib.)",
+            "Chi Nguyen (Lib.)",
+            "Michael Coteau (Lib.)",
+            "Guillaume Deschênes-Thériault (Lib.)"
+          ],
+          "contexts": [
+            "Government Orders: Safe Social Media Act"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "154",
@@ -3104,6 +3249,336 @@
           ],
           "date": "2026-09-17",
           "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Community Legal Assistance Society",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14038110/br-external/CommunutyLegalAssistanceSociety-e.pdf",
+          "status": "quote-unverified",
+          "stance": "supports with amendments",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Statutory right to counsel for complainants from the start of criminal proceedings",
+                "Funding for independent legal representation and advice for sexual offence complainants",
+                "Broaden definition of intimate image and deepfakes to include creation and “nearly nude” depictions"
+              ],
+              "quote": "We are supportive of the objectives intended to be achieved with the amendments proposed in Bill C-16, but urge consideration of our recommendations to improve access to justice for complainants.",
+              "quoteOk": "not found"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Provide a clear statutory right to counsel and funded legal advice for complainants of sexual offences",
+                "Strengthen complainant protections and modify procedural rules regarding records and evidence in sexual offence trials",
+                "Broaden the definitions of intimate images and deepfakes to include creation and nearly nude depictions"
+              ],
+              "quote": "We support the legislator’s objecves in Bill C-16 to address gender-based violence and take steps to ensure mely jusce.",
+              "quoteOk": "not found"
+            }
+          ],
+          "date": "2026-05-14",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Balance Psychological Services",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14059400/br-external/BalancePsychologicalServicesInc-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Accordingly, Bill C-16 should explicitly include this provision to strengthen safeguards for victims, empower regulatory bodies to dismiss or defer frivolous complaints, and uphold the integrity of oversight mechanisms both in Alberta and nationwide.",
+          "asks": [
+            "Implement screening mechanisms for complaints",
+            "Set reasonable time limits for investigations",
+            "Include provision to defer spousal complaints during court proceedings"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Implement screening mechanisms for complaints",
+                "Set reasonable time limits for investigations",
+                "Include provision to defer spousal complaints during court proceedings"
+              ],
+              "quote": "Accordingly, Bill C-16 should explicitly include this provision to strengthen safeguards for victims, empower regulatory bodies to dismiss or defer frivolous complaints, and uphold the integrity of oversight mechanisms both in Alberta and nationwide.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Explicitly include a provision in Bill C-16 authorizing regulatory bodies to dismiss or defer spousal complaints during ",
+                "Implement federal standards for screening professional complaints based on intent and credibility",
+                "Introduce federally recommended time limits for complaints, with exceptions for serious misconduct"
+              ],
+              "quote": "Accordingly, Bill C-16 should explicitly include this provision to strengthen safeguards for victims, empower regulatory bodies to dismiss or defer frivolous complaints, and uphold the integrity of oversight mechanisms both in Alberta and nationwide.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-14",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Métis National Council",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14048139/br-external/MetisNationalCouncil-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "To ensure Bill C-16 achieves its stated objectives while reflecting Métis rights, governance, and justice realities, the Métis National Council recommends the following targeted amendments to the legislation.",
+          "asks": [
+            "Recognize Métis governments as partners in restorative justice",
+            "Require Indigenous considerations in mandatory minimum safety valve",
+            "Ensure access to culturally appropriate victim supports"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Recognize Métis governments as partners in restorative justice",
+                "Require Indigenous considerations in mandatory minimum safety valve",
+                "Ensure access to culturally appropriate victim supports"
+              ],
+              "quote": "To ensure Bill C-16 achieves its stated objectives while reflecting Métis rights, governance, and justice realities, the Métis National Council recommends the following targeted amendments to the legislation.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Recognize Métis-led restorative justice and youth programs as core infrastructure",
+                "Require consideration of Indigenous circumstances and data tracking in sentencing",
+                "Ensure victims have access to culturally appropriate, community-based supports"
+              ],
+              "quote": "To ensure Bill C-16 achieves its stated objectives while reflecting Métis rights, governance, and justice realities, the Métis National Council recommends the following targeted amendments to the legislation:",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-14",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Aura Freedom International",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14091453/br-external/AuraFreedomInternational-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "In its current form, the bill contains significant gaps that must be addressed to ensure meaningful recognition and support for victims and survivors, mitigate structural barriers to access, and reduce the risk of harm to those it intends to protect.",
+          "asks": [
+            "Expand coercive control definition beyond intimate partners",
+            "Codify femicide as a distinct gendered offence",
+            "Mandate training and safeguards for survivors"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Expand coercive control definition beyond intimate partners",
+                "Codify femicide as a distinct gendered offence",
+                "Mandate training and safeguards for survivors"
+              ],
+              "quote": "Without these accompaniments, the bill risks falling short of its potential to contribute to meaningful, long-term change in addressing gender-based violence in Canada.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Expand coercive control definitions beyond intimate partners and embed safeguards to prevent criminalizing survivors",
+                "Substantively codify femicide in the Criminal Code with a comprehensive gendered lens",
+                "Mandate comprehensive training with accountability mechanisms for legal stakeholders and invest in upstream prevention"
+              ],
+              "quote": "In its current form, the bill contains significant gaps that must be addressed to ensure meaningful recognition and support for victims and survivors, mitigate structural barriers to access, and reduce the risk of harm to those it intends to protect.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-11",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Canadian Association of Chiefs of Police",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14091440/br-external/CanadianAssociationOfChiefsOfPolice-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Importantly, the CACP recommends that the legislation explicitly include former intimate partners, regardless of living arrangements, to reflect the reality that control and abuse frequently continue after separation, often amplified and facilitated by technology.",
+          "asks": [
+            "Include former intimate partners in coercive control provisions",
+            "Provide national training and guidance for implementation",
+            "Amend section 278 to protect therapeutic records"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Include former intimate partners in coercive control provisions",
+                "Provide national training and guidance for implementation",
+                "Amend section 278 to protect therapeutic records"
+              ],
+              "quote": "The CACP also supports proposed amendments to section 278 of the Criminal Code that would protect certain therapeutic and personal records from disclosure in criminal proceedings involving sexual offences and other crimes against the person.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Explicitly include former intimate partners in coercive control legislation, regardless of living arrangements",
+                "Accompany implementation with national guidance, training, and risk assessment tools",
+                "Amend section 278 of the Criminal Code to exclude specified therapeutic and counselling records from compelled disclosur"
+              ],
+              "quote": "Importantly, the CACP recommends that the legislation explicitly include former intimate partners, regardless of living arrangements, to reflect the reality that control and abuse frequently continue after separation, often amplified and facilitated by technology.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-11",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Canadian Centre for Child Protection",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14048140/br-external/CanadianCentreForChildProtection-e.pdf",
+          "status": "incomplete",
+          "readings": [
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Prohibit the creation of non-consensual sexual deepfakes and revisit the definition of intimate image",
+                "Expand section 161 prohibition orders and include CSAEM offences in dangerous offender provisions",
+                "Criminalize the possession, accessing, and making of bestiality depictions"
+              ],
+              "quote": "We urge the Committee to consider our proposals and strengthen the Bill.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-11",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Canadian Civil Liberties Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14006747/br-external/CanadianCivilLibertiesAssociation-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Request a constitutional reference before s.11(b) provisions take effect",
+                "Remove reinstated mandatory minimum sentences",
+                "Retain likely relevant threshold for therapeutic records"
+              ],
+              "quote": "Instead, it is an attempt to legislate away compliance with s. 11(b) of the Canadian Charter of Rights and Freedoms, in violation of longstanding Supreme Court precedent.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Request a Supreme Court constitutional reference on trial delay provisions before they take effect",
+                "Remove the reinstitution of unconstitutional mandatory minimum sentences and permit non-custodial 'safety valve' sentenc",
+                "Retain the 'likely relevant' threshold for therapeutic records production and disclosure"
+              ],
+              "quote": "Instead, it is an attempt to legislate away compliance with s. 11(b) of the Canadian Charter of Rights and Freedoms, in violation of longstanding Supreme Court precedent.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-27",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "National Police Federation",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14007305/br-external/NationalPoliceFederation-e.pdf",
+          "status": "quote-unverified",
+          "stance": "supports with amendments",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Create national enforcement guidelines for coercive control",
+                "Provide training and resources for digital investigations",
+                "Allow victim statements in unfit-to-stand-trial cases"
+              ],
+              "quote": "With targeted amendments, Bill C-16 can achieve its stated goals while supporting effective policing and public safety.",
+              "quoteOk": "close"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Coordinate technology-facilitated offences with modern lawful access authorities",
+                "Address court delays by focusing on structural system capacity",
+                "Provide dedicated federal funding, national training, and enforcement guidelines"
+              ],
+              "quote": "With targeted amendments, Bill C-16 can achieve its stated goals while supporting eﬀective policing and public safety.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-27",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "TimelyJustice",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14007302/br-external/TimelyJustice-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "withdraw clause 46",
+                "implement comprehensive legislative, fiscal and policy measures",
+                "improve data collection and availability across Canada"
+              ],
+              "quote": "I recommend that clause 46 be withdrawn and a more comprehensive program of legislative, fiscal and policy measures to achieve timeliness be undertaken.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Withdraw clause 46 concerning unreasonable delay",
+                "Undertake a more comprehensive program of legislative, fiscal and policy measures to achieve timeliness",
+                "Take federal leadership in making justice system data from across the country more readily available"
+              ],
+              "quote": "With respect to the problems of delay however I recommend that clause 46 be withdrawn and a more comprehensive program of legislative, fiscal and policy measures to achieve timeliness be undertaken.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-27",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Google Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14026536/br-external/GoogleCanada-e.pdf",
+          "status": "quote-unverified",
+          "stance": "supports with amendments",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend Section 9 to include section 3 reporting in deemed compliance",
+                "Recognize NCMEC reporting as compliance with sections 2 and 3",
+                "Prevent duplicate reporting requirements"
+              ],
+              "quote": "With the adoption of this amendment, Google would be proud to offer its support for the government's commitment to protecting victims through Bill C-16.",
+              "quoteOk": "close"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend Section 9 to extend the existing deemed compliance provision to include section 3 reporting"
+              ],
+              "quote": "With the adoption of this amendment, Google would be proud to offer its support for Bill C-16.",
+              "quoteOk": "close"
+            }
+          ],
+          "date": "2026-04-27",
+          "checkedAt": "2026-10-29"
         }
       ]
     },
@@ -4383,6 +4858,24 @@
         "decisions": []
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "157",
+          "date": "2026-10-28",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-157/hansard",
+          "speeches": 6,
+          "speakers": [
+            "Louis Villeneuve (Lib.)",
+            "Jessica Fancy (Lib.)",
+            "Gabriel Hardy (CPC)",
+            "Michael Coteau (Lib.)",
+            "Bienvenu-Olivier Ntumba"
+          ],
+          "contexts": [
+            "Private Members' Business: Protecting Young Persons from Exposure to Pornography Act",
+            "Government Orders: Safe Social Media Act"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "152",
@@ -6951,6 +7444,19 @@
       "mentions": [
         {
           "chamber": "House",
+          "sitting": "157",
+          "date": "2026-10-28",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-157/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Guillaume Deschênes-Thériault (Lib.)"
+          ],
+          "contexts": [
+            "Government Orders: Safe Social Media Act"
+          ]
+        },
+        {
+          "chamber": "House",
           "sitting": "154",
           "date": "2026-10-23",
           "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-154/hansard",
@@ -8003,44 +8509,6 @@
           "checkedAt": "2026-10-28"
         },
         {
-          "name": "Chayn",
-          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14185668/br-external/Chayn-e.pdf",
-          "status": "agreed",
-          "stance": "supports with amendments",
-          "quote": "Amended definitions of “electronic protection” and “systemic vulnerability” to remove uncertainty and provide clarity around protections for encryption and related zero-knowledge security architectures (Section 2).",
-          "asks": [
-            "Amend definitions of electronic protection and systemic vulnerability",
-            "Prohibit mandating spyware and bulk metadata retention",
-            "Introduce judicial approval and oversight for secrecy obligations"
-          ],
-          "readings": [
-            {
-              "model": "Cohere",
-              "stance": "supports with amendments",
-              "asks": [
-                "Amend definitions of electronic protection and systemic vulnerability",
-                "Prohibit mandating spyware and bulk metadata retention",
-                "Introduce judicial approval and oversight for secrecy obligations"
-              ],
-              "quote": "Amended definitions of “electronic protection” and “systemic vulnerability” to remove uncertainty and provide clarity around protections for encryption and related zero-knowledge security architectures (Section 2).",
-              "quoteOk": "exact"
-            },
-            {
-              "model": "Google",
-              "stance": "supports with amendments",
-              "asks": [
-                "Amend definitions of electronic protection and systemic vulnerability to protect encryption",
-                "Clarify regulations so providers cannot be mandated to install spyware or retain bulk metadata",
-                "Introduce judicial approval for secrecy obligations and remove warrantless search authorities"
-              ],
-              "quote": "Thank you for your consideration of these proposed amendments, as you deliberate how best to move forward on this legislation.",
-              "quoteOk": "exact"
-            }
-          ],
-          "date": "2026-06-15",
-          "checkedAt": "2026-10-28"
-        },
-        {
           "name": "Samuelson-Glushko Canadian Internet Policy and Public Interest Clinic",
           "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14148910/br-external/SamuelsonGlushkoCanadianInternetPolicyAndPublicInterestClinic-e.pdf",
           "status": "agreed",
@@ -8072,6 +8540,44 @@
                 "Halt Part 2 (SAAIA) as tabled or apply major structural revisions, oversight safeguards, and prohibitions on weakening e"
               ],
               "quote": "It requires major structural revision, independent oversight safeguards, and a demonstrated evidentiary basis.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-15",
+          "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Chayn",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14185668/br-external/Chayn-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Amended definitions of “electronic protection” and “systemic vulnerability” to remove uncertainty and provide clarity around protections for encryption and related zero-knowledge security architectures (Section 2).",
+          "asks": [
+            "Amend definitions of electronic protection and systemic vulnerability",
+            "Prohibit mandating spyware and bulk metadata retention",
+            "Introduce judicial approval and oversight for secrecy obligations"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend definitions of electronic protection and systemic vulnerability",
+                "Prohibit mandating spyware and bulk metadata retention",
+                "Introduce judicial approval and oversight for secrecy obligations"
+              ],
+              "quote": "Amended definitions of “electronic protection” and “systemic vulnerability” to remove uncertainty and provide clarity around protections for encryption and related zero-knowledge security architectures (Section 2).",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend definitions of electronic protection and systemic vulnerability to protect encryption",
+                "Clarify regulations so providers cannot be mandated to install spyware or retain bulk metadata",
+                "Introduce judicial approval for secrecy obligations and remove warrantless search authorities"
+              ],
+              "quote": "Thank you for your consideration of these proposed amendments, as you deliberate how best to move forward on this legislation.",
               "quoteOk": "exact"
             }
           ],
@@ -8451,26 +8957,6 @@
           "checkedAt": "2026-10-28"
         },
         {
-          "name": "The Canadian Bar Association",
-          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14136914/br-external/CanadianBarAssociation-e.pdf",
-          "status": "incomplete",
-          "readings": [
-            {
-              "model": "Google",
-              "stance": "supports with amendments",
-              "asks": [
-                "Separate Part 1 and Part 2 of the bill and avoid deferring core definitions and obligations to future regulations",
-                "Strengthen judicial oversight, procedural safeguards, and definitions to ensure Charter and privacy compliance",
-                "Remove Ministerial Orders from Part 2 and explicitly prohibit undermining encryption"
-              ],
-              "quote": "The recommendations suggested by the CBA Sections intend to be a good faith contribution to Parliament’s important deliberations in crafting laws that are effective, understandable and consistent with the Charter.",
-              "quoteOk": "exact"
-            }
-          ],
-          "date": "2026-06-09",
-          "checkedAt": "2026-10-28"
-        },
-        {
           "name": "Salesforce",
           "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14134942/br-external/Salesforce-e.pdf",
           "status": "agreed",
@@ -8507,6 +8993,26 @@
           ],
           "date": "2026-06-09",
           "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "The Canadian Bar Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14136914/br-external/CanadianBarAssociation-e.pdf",
+          "status": "incomplete",
+          "readings": [
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Separate Part 1 and Part 2 of the bill",
+                "Remove Ministerial Orders and narrow Electronic Service Provider definitions",
+                "Add judicial oversight, privacy safeguards, and encryption protections"
+              ],
+              "quote": "The recommendations suggested by the CBA Sections intend to be a good faith contribution to Parliament’s important deliberations in crafting laws that are effective, understandable and consistent with the Charter.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-09",
+          "checkedAt": "2026-10-29"
         },
         {
           "name": "Canadian Civil Liberties Association",
@@ -8953,6 +9459,216 @@
           ],
           "date": "2026-05-21",
           "checkedAt": "2026-10-28"
+        },
+        {
+          "name": "Information Technology Industry Council",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14088339/br-external/InformationTechnologyIndustryCouncil-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "For the reasons set out above, ITI calls on Bill C-22 to be withdrawn and substantially modified.",
+          "asks": [
+            "Withdraw Bill C-22",
+            "Conduct further public consultation",
+            "Protect end-to-end encryption"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Withdraw Bill C-22",
+                "Conduct further public consultation",
+                "Protect end-to-end encryption"
+              ],
+              "quote": "For the reasons set out above, ITI calls on Bill C-22 to be withdrawn and substantially modified.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Withdraw and substantially modify Bill C-22",
+                "Conduct further public consultation to safeguard end-to-end encryption and include strong independent oversight",
+                "Prioritize completion of a robust and privacy-protective U.S.-Canada CLOUD Act Agreement"
+              ],
+              "quote": "For the reasons set out above, ITI calls on Bill C-22 to be withdrawn and substantially modified.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-21",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Canadian Chamber of Commerce",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14102637/br-external/CanadianChamberOfCommerce-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "At a minimum, we believe targeted, meaningful amendments are required to ensure the legislation strikes an appropriate balance between the requests of law enforcement and the necessity of keeping Canadians’ data safe, secure and private.",
+          "asks": [
+            "Strengthen systemic vulnerability definition to protect encryption",
+            "Require warrants for all new powers under Part II",
+            "Remove broad mandatory metadata retention requirement"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Strengthen systemic vulnerability definition to protect encryption",
+                "Require warrants for all new powers under Part II",
+                "Remove broad mandatory metadata retention requirement"
+              ],
+              "quote": "We fundamentally oppose breaking encryption and other essential zero-knowledge security tools to provide the government and law enforcement with unfettered access to digital systems.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Strengthen the definition of systemic vulnerability to explicitly protect encryption",
+                "Require a warrant for the new expansive powers under Part II",
+                "Replace the metadata retention requirement with targeted preservation orders"
+              ],
+              "quote": "At a minimum, we believe targeted, meaningful amendments are required to ensure the legislation strikes an appropriate balance between the requests of law enforcement and the necessity of keeping Canadians’ data safe, secure and private.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-21",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Business Software Alliance",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14105199/br-external/BusinessSoftwareAlliance-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "We strongly encourage you to ensure Bill C-22 does not weaken the security or privacy of products and services offered in Canada by forcing companies to adopt or ignore systemic vulnerabilities.",
+          "asks": [
+            "Remove Part 2 from the bill",
+            "Require strong encryption and prohibit systemic vulnerabilities",
+            "Limit non-disclosure orders to judicial approval and allow challenges"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Remove Part 2 from the bill",
+                "Require strong encryption and prohibit systemic vulnerabilities",
+                "Limit non-disclosure orders to judicial approval and allow challenges"
+              ],
+              "quote": "We strongly encourage you to ensure Bill C-22 does not weaken the security or privacy of products and services offered in Canada by forcing companies to adopt or ignore systemic vulnerabilities.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Remove or revise Part 2 to protect strong encryption and prevent systemic vulnerabilities",
+                "Ensure high standards for law enforcement demands issued to technology companies",
+                "Impose clear limits on non-disclosure orders and allow comity challenges"
+              ],
+              "quote": "We remain concerned with Bill C-22, which continues to create expansive powers for law enforcement agencies to obtain information from technology companies.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-21",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Meta Platforms Inc.",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14099048/br-external/MetaPlatformsInc-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Separate Part 2 from the Lawful Access Act (LAA) so that it gets the time and considered attention it requires, and adopt Part 1, so long as two key concerns are addressed.",
+          "asks": [
+            "Separate Part 2 from the Act",
+            "Establish clear turnaround times for data requests",
+            "Protect encryption from backdoor demands"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Separate Part 2 from the Act",
+                "Establish clear turnaround times for data requests",
+                "Protect encryption from backdoor demands"
+              ],
+              "quote": "Separate Part 2 from the Lawful Access Act (LAA) so that it gets the time and considered attention it requires, and adopt Part 1, so long as two key concerns are addressed.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Separate Part 2 from the bill and adopt Part 1 with amendments",
+                "Establish clear turnaround times and a process to challenge demands",
+                "Protect encryption and narrow the scope of technical assistance demands"
+              ],
+              "quote": "Separate Part 2 from the Lawful Access Act (LAA) so that it gets the time and considered attention it requires, and adopt Part 1, so long as two key concerns are addressed:",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-13",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Internet Society",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14095567/br-external/InternetSociety-067260507035-b.pdf",
+          "status": "incomplete",
+          "readings": [
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Withdraw Bill C-22",
+                "Conduct a full study including consultations",
+                "Conduct an Internet Impact Assessment"
+              ],
+              "quote": "The undersigned civil society organizations, companies, and cybersecurity experts, including members of the Global Encryption Coalition, urge the federal government to withdraw Bill C-22, An Act respecting lawful access.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-13",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Canadian Telecommunications Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074834/br-external/CanadianTelecommunicationsAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "For the above reasons, allowing for response deadlines of as little as 24 hours creates a material risk of unmanageable demand and does not reflect the diversity of service provider capabilities.",
+          "asks": [
+            "Replace 24‑hour response deadline with three business days",
+            "Remove production order timeframe amendment (or set to 15 business days)",
+            "Establish mandatory compensation framework for service providers"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Replace 24‑hour response deadline with three business days",
+                "Remove production order timeframe amendment (or set to 15 business days)",
+                "Establish mandatory compensation framework for service providers"
+              ],
+              "quote": "For the above reasons, allowing for response deadlines of as little as 24 hours creates a material risk of unmanageable demand and does not reflect the diversity of service provider capabilities.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Extend minimum response times for confirmation of service demands to three business days and retain current production o",
+                "Limit regulatory obligations and metadata retention requirements for core providers, and establish a mandatory compensat",
+                "Extend safe harbour liability protection to include good-faith compliance with mandatory information demands and product"
+              ],
+              "quote": "With these improvements, the legislation can better achieve its intended objectives.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-13",
+          "checkedAt": "2026-10-29"
         }
       ]
     },
@@ -9690,7 +10406,7 @@
               ]
             }
           ],
-          "checked": "2026-10-28"
+          "checked": "2026-10-29"
         }
       ],
       "text": {
@@ -12394,7 +13110,7 @@
               ]
             }
           ],
-          "checked": "2026-10-28"
+          "checked": "2026-10-29"
         }
       ],
       "text": {
@@ -13707,7 +14423,21 @@
           }
         ]
       },
-      "mentions": [],
+      "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "157",
+          "date": "2026-10-28",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-157/hansard",
+          "speeches": 2,
+          "speakers": [
+            "Michael Coteau (Lib.)"
+          ],
+          "contexts": [
+            "Government Orders: Safe Social Media Act"
+          ]
+        }
+      ],
       "publications": [
         {
           "id": "13992865",
@@ -14126,16 +14856,261 @@
               "model": "Google",
               "stance": "supports with amendments",
               "asks": [
-                "Prohibit all false claims and foreign influence activities during elections and contests",
-                "Increase transparency for fundraising events and tighten third-party spending limits and rules",
-                "Mandate Elections Canada to report on election costs, party operation costs, and electoral reform"
+                "Prohibit all false claims during elections and remove proof of intent requirements",
+                "Delete sections 28-30 and require full public disclosure for fundraising events",
+                "Tighten third-party spending rules and close loopholes allowing foreign influence"
               ],
-              "quote": "The changes need to be made to the CEA and related federal laws to fully and effectively prevent, prohibit and penalize disinformation, undemocratic third-party influence and foreign interference, including changes to make enforcement independent, effective, transparent, timely and accountable.",
+              "quote": "All of these changes are needed to actually, finally, have coherent, ethical, democratic, fair and egalitarian political finance, electoral and policy-making systems.",
               "quoteOk": "exact"
             }
           ],
           "date": "2026-05-27",
-          "checkedAt": "2026-10-28"
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Saskatchewan Stands with Hong Kong",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/PROC/Brief/BR14078983/br-external/SaskatchewanStandsWithHongKong-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Bill C-25 is a necessary step but not yet a sufficient one as it merely targets foreign money sources that flowed into the federal elections and disinformation campaigns.",
+          "asks": [
+            "Oversight of nomination processes",
+            "Strengthen enforcement and training",
+            "Public education and community safeguards"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Oversight of nomination processes",
+                "Strengthen enforcement and training",
+                "Public education and community safeguards"
+              ],
+              "quote": "Bill C-25 is a necessary step but not yet a sufficient one as it merely targets foreign money sources that flowed into the federal elections and disinformation campaigns.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Introduce oversight of nomination processes in the Canada Elections Act",
+                "Strengthen enforcement mechanisms",
+                "Enhance public education, community protection, and combat foreign money sources"
+              ],
+              "quote": "Bill C-25 is a necessary step but not yet a sufficient one as it merely targets foreign money sources that flowed into the federal elections and disinformation campaigns.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-06",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "OpenMedia",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/PROC/Brief/BR14080505/br-external/OpenMedia-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Convert policy requirements into statutory obligations",
+                "Remove retroactive provincial pre-emption clause",
+                "Introduce dedicated privacy legislation with OPC oversight"
+              ],
+              "quote": "OpenMedia objects to the passage of Bill C-25 in its current form.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Convert policy-content requirements into direct statutory obligations in line with PIPEDA",
+                "Remove the provincial pre-emption clause (section 446.4(1)) and its retroactive application",
+                "Bring forward dedicated privacy legislation for federal political parties with Privacy Commissioner oversight"
+              ],
+              "quote": "OpenMedia objects to the passage of Bill C-25 in its current form.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-06",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Longest Ballot Committee",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/PROC/Brief/BR14080537/br-external/LongestBallotCommittee-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "The appropriate action to take when you are in a conflict of interest is to recuse yourself from all decisions in which you have an interest.",
+          "asks": [
+            "Recuse MPs from election legislation decisions",
+            "Delegate election legislation to an independent nonpartisan body",
+            "Members of PROC recuse themselves from decisions in which they have an interest"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Recuse MPs from election legislation decisions",
+                "Delegate election legislation to an independent nonpartisan body"
+              ],
+              "quote": "The appropriate action to take when you are in a conflict of interest is to recuse yourself from all decisions in which you have an interest.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Members of PROC recuse themselves from decisions in which they have an interest",
+                "Delegate responsibility for all election legislation to a permanent independent nonpartisan body"
+              ],
+              "quote": "Responsibility for all election legislation must be delegated to a permanent independent nonpartisan body.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-06",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Centre for Digital Rights",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/PROC/Brief/BR14079056/br-external/CentreForDigitalRights-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Replace section 36 to repeal Bill C-4 changes",
+                "Amend PIPEDA to apply to federal political parties"
+              ],
+              "quote": "Bill C-25 leaves intact the existing and deficient system of opaque rules, negligible oversight, and minimal constraint on how federal political parties harvest and use Canadians’ personal data.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Replace section 36 of Bill C-25 with a provision repealing the Canada Elections Act changes in Part 4 of Bill C-4",
+                "Amend the Personal Information Protection and Electronic Documents Act (PIPEDA) to expressly apply to federal political ",
+                "Adopt privacy provisions for federal political parties incorporating all ten PIPEDA fair information principles and addi"
+              ],
+              "quote": "Under the guise of reform, Bill C-25 erodes both privacy and democratic accountability.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-06",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Canadian Civil Liberties Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/PROC/Brief/BR14079054/br-external/CanadianCivilLibertiesAssociation-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Allow more time for study of the bill",
+                "Strengthen privacy safeguards for political parties",
+                "Narrow the scope of synthetic image and audio prohibitions"
+              ],
+              "quote": "Forcing through sweeping election reforms without careful study puts our electoral process at risk and is irresponsible.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Reconsider the decision to fast-track the bill and allow time for careful study",
+                "Adopt adequate privacy protections and independent scrutiny for political parties' personal data handling",
+                "Narrow the overly broad prohibitions on synthetic images, voice imitations, and audio recordings"
+              ],
+              "quote": "Only with careful legislative study can we ensure that Bill C-25 strikes the right balance–one that protects both the integrity of our elections and the fundamental rights and freedoms that underpin our democracy.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-06",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "BC Freedom of Information and Privacy Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/PROC/Brief/BR14080948/br-external/BCFreedomOfInformationAndPrivacyAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "FIPA therefore urges the Committee to amend Bill C-25 so that it creates real privacy rights for voters and real accountability for federal political parties.",
+          "asks": [
+            "convert political-party privacy-policy requirements into direct statutory obligations",
+            "restore enforceable access and correction rights for individuals",
+            "subject federal political parties to independent privacy oversight"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "convert political-party privacy-policy requirements into direct statutory obligations",
+                "restore enforceable access and correction rights for individuals",
+                "subject federal political parties to independent privacy oversight"
+              ],
+              "quote": "FIPA therefore urges the Committee to amend Bill C-25 so that it creates real privacy rights for voters and real accountability for federal political parties.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "convert political-party privacy-policy requirements into direct statutory obligations",
+                "restore enforceable access and correction rights for individuals",
+                "subject federal political parties to independent privacy oversight"
+              ],
+              "quote": "FIPA therefore urges the Committee to amend Bill C-25 so that it creates real privacy rights for voters and real accountability for federal political parties.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-06",
+          "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "AccessPrivacy",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/PROC/Brief/BR14080937/br-external/AccessPrivacy-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Bill C-25, as drafted, falls well short of addressing the critical gap in legislated privacy protection for Canadians’ personal information held by political parties.",
+          "asks": [
+            "Eliminate the current gap in statutory privacy protections for political parties",
+            "Amend Bill C-25 to align privacy obligations with PIPEDA standards",
+            "Allow the submitter to testify as a witness before the committee"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Eliminate the current gap in statutory privacy protections for political parties",
+                "Amend Bill C-25 to align privacy obligations with PIPEDA standards",
+                "Allow the submitter to testify as a witness before the committee"
+              ],
+              "quote": "Bill C-25, as drafted, falls well short of addressing the critical gap in legislated privacy protection for Canadians’ personal information held by political parties.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Opportunity to appear as a witness at the Standing Committee’s meeting",
+                "Thorough consideration and consultation on the framework for protecting personal information held by political parties",
+                "Eliminate the current gap in statutory privacy protections afforded to Canadians"
+              ],
+              "quote": "Bill C-25, as drafted, falls well short of addressing the critical gap in legislated privacy protection for Canadians’ personal information held by political parties.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-06",
+          "checkedAt": "2026-10-29"
         }
       ]
     },
@@ -15130,7 +16105,7 @@
               ]
             }
           ],
-          "checked": "2026-10-28"
+          "checked": "2026-10-29"
         }
       ],
       "text": {
@@ -15561,6 +16536,12 @@
   ],
   "changelog": [
     {
+      "date": "2026-10-28",
+      "number": "S-209",
+      "kind": "stage",
+      "text": "Advanced to: At consideration in committee in the House of Commons"
+    },
+    {
       "date": "2026-10-22",
       "number": "C-22",
       "kind": "stage",
@@ -15569,7 +16550,7 @@
   ],
   "upcoming": [],
   "scan": {
-    "houseSitting": 156,
-    "senateSitting": 96
+    "houseSitting": 157,
+    "senateSitting": 97
   }
 }
