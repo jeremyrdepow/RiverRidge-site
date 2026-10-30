@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-29T17:05:37.942Z",
+  "checkedAt": "2026-10-30T16:52:46.644Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -43,12 +43,12 @@
       "status": "At second reading in the House of Commons",
       "latestEvent": {
         "type": "Debate at second reading",
-        "date": "2026-10-28",
+        "date": "2026-10-29",
         "chamber": "House of Commons"
       },
       "progress": [
         true,
-        false,
+        true,
         false,
         false,
         false,
@@ -57,7 +57,16 @@
       ],
       "royalAssent": null,
       "statute": null,
-      "committees": [],
+      "committees": [
+        {
+          "name": "Standing Committee on Canadian Heritage",
+          "acronym": "CHPC",
+          "chamber": "House of Commons",
+          "role": "study",
+          "url": "https://www.ourcommons.ca/Committees/en/CHPC?parl=45&session=1",
+          "current": false
+        }
+      ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-34",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/C-34/first-reading",
       "stale": false,
@@ -81,6 +90,13 @@
         "meetings": [],
         "sittings": [
           {
+            "date": "2026-10-29",
+            "chamber": "House",
+            "sitting": "158",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-158/hansard"
+          },
+          {
             "date": "2026-10-28",
             "chamber": "House",
             "sitting": "157",
@@ -102,9 +118,75 @@
             "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-133/hansard"
           }
         ],
-        "decisions": []
+        "decisions": [
+          {
+            "date": "2026-10-29",
+            "chamber": "House",
+            "motion": "2nd reading and referral to committee - CHPC",
+            "result": "Agreed To",
+            "method": "On division",
+            "yeas": null,
+            "nays": null
+          }
+        ]
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "158",
+          "date": "2026-10-29",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-158/hansard",
+          "speeches": 53,
+          "speakers": [
+            "Yasir Naqvi (Lib.)",
+            "Rachael Thomas (CPC)",
+            "Jacques Ramsay (Lib.)",
+            "Gabriel Ste-Marie (BQ)",
+            "Marie-Hélène Gaudreau",
+            "Kelly DeRidder (CPC)",
+            "Hon. Kevin Lamoureux (Lib.)",
+            "Hon. Ruby Sahota (Lib.)",
+            "Hon. Ruby Sahota",
+            "Mario Simard (BQ)",
+            "Alexis Deschênes (BQ)",
+            "Linda Lapointe (Lib.)",
+            "Linda Lapointe",
+            "Vincent Ho (CPC)",
+            "Guillaume Deschênes-Thériault (Lib.)",
+            "Marianne Dandurand (Lib.)",
+            "Rhonda Kirkland (CPC)",
+            "Elizabeth May (GP)",
+            "Abdelhaq Sari (Lib.)",
+            "Amanpreet Gill (CPC)",
+            "Abdelhaq Sari",
+            "Peter Schiefke (Lib.)",
+            "Helena Konanz (CPC)",
+            "Frank Caputo (CPC)",
+            "Sima Acan (Lib.)",
+            "Marilyn Gladu (Lib.)",
+            "Amarjeet Gill (CPC)",
+            "Hon. Élisabeth Brière (Lib.)",
+            "Hon. Steven MacKinnon (Lib.)",
+            "Hon. Élisabeth Brière",
+            "Andréanne Larouche (BQ)",
+            "John Brassard (CPC)",
+            "John Brassard",
+            "Iqwinder Gaheer (Lib.)",
+            "Alex Ruff (CPC)",
+            "Jim Bélanger (CPC)",
+            "Jim Bélanger",
+            "Brendan Hanley (Lib.)",
+            "Jacob Mantle (CPC)",
+            "Mario Beaulieu (BQ)",
+            "Caroline Desrochers (Lib.)",
+            "Luc Berthold (CPC)",
+            "Luc Berthold"
+          ],
+          "contexts": [
+            "Government Orders: Safe Social Media Act",
+            "Oral Questions: Business of the House"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "157",
@@ -453,7 +535,7 @@
             "date": "2026-10-28",
             "chamber": "House",
             "sitting": "157",
-            "event": "Second reading and referral to committee",
+            "event": "Debate at second reading",
             "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-157/hansard"
           },
           {
@@ -540,6 +622,19 @@
         ]
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "158",
+          "date": "2026-10-29",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-158/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Jacques Ramsay (Lib.)"
+          ],
+          "contexts": [
+            "Government Orders: Safe Social Media Act"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "157",
@@ -737,6 +832,21 @@
         "decisions": []
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "158",
+          "date": "2026-10-29",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-158/hansard",
+          "speeches": 3,
+          "speakers": [
+            "Marilyn Gladu (Lib.)",
+            "John Brassard (CPC)",
+            "Alex Ruff (CPC)"
+          ],
+          "contexts": [
+            "Government Orders: Safe Social Media Act"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "157",
@@ -1993,6 +2103,21 @@
         ]
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "158",
+          "date": "2026-10-29",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-158/hansard",
+          "speeches": 2,
+          "speakers": [
+            "Guillaume Deschênes-Thériault (Lib.)",
+            "Hon. Ruby Sahota (Lib.)"
+          ],
+          "contexts": [
+            "Government Orders: Safe Social Media Act",
+            "Oral Questions: Justice"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "157",
@@ -3437,22 +3562,40 @@
         {
           "name": "Canadian Centre for Child Protection",
           "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14048140/br-external/CanadianCentreForChildProtection-e.pdf",
-          "status": "incomplete",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "C3P supports many of the provisions in Bill C-16, particularly those aimed at improving child protection.",
+          "asks": [
+            "Prohibit the creation of non-consensual sexual deepfakes (including via text prompts)",
+            "Expand bestiality offences to criminalize possession, access, and AI-generated depictions, and include cartoons and comp",
+            "Broaden section 161 prohibition orders to allow judges to ban offenders from additional locations and from working with "
+          ],
           "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Prohibit the creation of non-consensual sexual deepfakes (including via text prompts)",
+                "Expand bestiality offences to criminalize possession, access, and AI-generated depictions, and include cartoons and comp",
+                "Broaden section 161 prohibition orders to allow judges to ban offenders from additional locations and from working with "
+              ],
+              "quote": "C3P supports many of the provisions in Bill C-16, particularly those aimed at improving child protection.",
+              "quoteOk": "exact"
+            },
             {
               "model": "Google",
               "stance": "supports with amendments",
               "asks": [
-                "Prohibit the creation of non-consensual sexual deepfakes and revisit the definition of intimate image",
-                "Expand section 161 prohibition orders and include CSAEM offences in dangerous offender provisions",
-                "Criminalize the possession, accessing, and making of bestiality depictions"
+                "Prohibit the creation of sexual deepfakes and revisit the definition of intimate image",
+                "Broaden section 161 prohibition orders and dangerous offender provisions",
+                "Criminalize accessing, possessing, and making bestiality depictions"
               ],
               "quote": "We urge the Committee to consider our proposals and strengthen the Bill.",
               "quoteOk": "exact"
             }
           ],
           "date": "2026-05-11",
-          "checkedAt": "2026-10-29"
+          "checkedAt": "2026-10-30"
         },
         {
           "name": "Canadian Civil Liberties Association",
@@ -3579,6 +3722,704 @@
           ],
           "date": "2026-04-27",
           "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Coalition féministe contre la violence envers les femmes",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14025426/br-external/CoalitionFeministeContreLaViolenceEnversLesFemmes-067-260420-016-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Therefore, while Bill C-16 is a significant and necessary step forward, it must be strengthened to more accurately reflect women’s realities.",
+          "asks": [
+            "Create a specific femicide offence in the Criminal Code",
+            "Include both intimate and non‑intimate femicides with objective circumstances",
+            "Integrate continuum of violence and strengthen data collection and specialized units"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Create a specific femicide offence in the Criminal Code",
+                "Include both intimate and non‑intimate femicides with objective circumstances",
+                "Integrate continuum of violence and strengthen data collection and specialized units"
+              ],
+              "quote": "However, certain improvements seem essential for this advancement to have a real and lasting impact.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Define femicide using expanded objective circumstances, including both intimate and non-intimate femicides",
+                "Establish mechanisms to document and collect data on hidden femicides",
+                "Implement mandatory training for judicial system actors and integrate femicide into specialized investigative and prosec"
+              ],
+              "quote": "Therefore, while Bill C-16 is a significant and necessary step forward, it must be strengthened to more accurately reflect women’s realities.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-27",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Union of British Columbia Indian Chiefs",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14025423/br-external/UnionOfBritishColumbiaIndianChiefs-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "This submission includes recommended amendments that take into account the distinct realities and rights of Indigenous peoples, with a specific focus on Indigenous women, girls and gender-diverse peoples.",
+          "asks": [
+            "Remove suicide threat clause from coercive control offence",
+            "Recognize Indigenous femicide and add aggravating factor for violence against Indigenous women",
+            "Allow judges to bypass mandatory minimums and consider gender‑based violence impacts"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Remove suicide threat clause from coercive control offence",
+                "Recognize Indigenous femicide and add aggravating factor for violence against Indigenous women",
+                "Allow judges to bypass mandatory minimums and consider gender‑based violence impacts"
+              ],
+              "quote": "UBCIC welcomes many of the proposed amendments in Bill C-16 that serve to denounce gender-based violence and strengthen protections for victims and survivors.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend coercive control and femicide provisions to protect and explicitly recognize Indigenous women, girls, and gender-d",
+                "Enable full judicial discretion to impose sentences below mandatory minimums and consider impacts of gender-based violen",
+                "Explicitly recognize Indigenous diversion programs and accompany legal reforms with systemic policy actions and funding"
+              ],
+              "quote": "This submission includes recommended amendments that take into account the distinct realities and rights of Indigenous peoples, with a specific focus on Indigenous women, girls and gender-diverse peoples.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-27",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Child and Youth Advocacy Centres of Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14025395/br-external/ChildAndYouthAdvocacyCentresOfCanada-e.pdf",
+          "status": "unreadable",
+          "date": "2026-04-27",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Canadian Femicide Observatory for Justice and Accountability",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14017166/br-external/CanadianFemicideObservatoryForJusticeAndAccountability-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "My main argument, however, is that it will not reach its full impact without modifications, including identifying femicide as a stand-alone criminal code offence and laying out a clear plan to monitor its full implementation processes and outcomes at the provincial and territorial levels.",
+          "asks": [
+            "Create a stand-alone femicide offence in the Criminal Code",
+            "Include clear criteria and monitoring mechanisms for implementation",
+            "Add prevention provisions and intersectional considerations"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Create a stand-alone femicide offence in the Criminal Code",
+                "Include clear criteria and monitoring mechanisms for implementation",
+                "Add prevention provisions and intersectional considerations"
+              ],
+              "quote": "My main argument, however, is that it will not reach its full impact without modifications, including identifying femicide as a stand-alone criminal code offence.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Establish femicide as a stand-alone Criminal Code offence",
+                "Lay out a clear plan to monitor implementation processes and outcomes",
+                "Expand coercive control provisions beyond intimate partners and include contexts like separation and chronic abuse"
+              ],
+              "quote": "My main argument, however, is that it will not reach its full impact without modifications, including identifying femicide as a stand-alone criminal code offence and laying out a clear plan to monitor its full implementation processes and outcomes at the provincial and territorial levels.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-21",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Ontario Native Women's Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14025393/br-external/OntarioNativeWomensAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "ONWA welcomes proposed amendments aimed at making criminal justice processes safer and more supportive for Survivors, including measures that limit prejudicial questioning, and increase access to virtual testimony and restorative justice processes.",
+          "asks": [
+            "Invest in Indigenous women’s organizations for survivor support",
+            "Legislate trauma‑informed, anti‑racist rights in the Canadian Victims Bill of Rights",
+            "Guarantee automatic entitlement to testimonial aids and virtual participation"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Invest in Indigenous women’s organizations for survivor support",
+                "Legislate trauma‑informed, anti‑racist rights in the Canadian Victims Bill of Rights",
+                "Guarantee automatic entitlement to testimonial aids and virtual participation"
+              ],
+              "quote": "ONWA welcomes proposed amendments aimed at making criminal justice processes safer and more supportive for Survivors, including measures that limit prejudicial questioning, and increase access to virtual testimony and restorative justice processes.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Invest in Indigenous women's organizations for wrap-around supports and cultural competency training",
+                "Legislate a duty to refer to Indigenous prevention-focused service providers",
+                "Legislate automatic entitlement to testimonial aids and trauma-informed, anti-racist approaches"
+              ],
+              "quote": "ONWA offers this feedback to the legislation and calls for amendments to Bill C-16 to ensure it is more responsive to the needs of Indigenous women navigating criminal justice proceedings.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-20",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Elder Justice Coalition",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14021282/br-external/ElderJusticeCoalition-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "This is welcome reform, but it leaves many older adults without protection when the abuse is perpetrated by relatives, informal caregivers, or others in positions of trust and dependence.",
+          "asks": [
+            "Extend coercive control offence to relatives",
+            "Review after two years to include informal caregivers",
+            "Adopt amendments to protect older adults"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Extend coercive control offence to relatives",
+                "Review after two years to include informal caregivers",
+                "Adopt amendments to protect older adults"
+              ],
+              "quote": "We respectfully ask Parliament to adopt these changes to better protect older adults.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend the coercive control offence to include relatives",
+                "Review the law after two years of implementation",
+                "Consider expanding the offence to informal caregivers and relationships of trust and dependence"
+              ],
+              "quote": "This is welcome reform, but it leaves many older adults without protection when the abuse is perpetrated by relatives, informal caregivers, or others in positions of trust and dependence.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-20",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Find Ontario Missing Boys",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14007292/br-external/FindOntarioMissingBoys-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "FOMB respectfully submits the following recommendations as relevant to the broader issues engaged by Bill C-16, particularly youth recruitment into criminal activity, early intervention failures, and the need for more coordinated victim-centred responses.",
+          "asks": [
+            "Mandatory exploitation-risk screening at first contact",
+            "Victim-first classification for groomed youth",
+            "Multi-agency coordination mechanism for missing youth"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Mandatory exploitation-risk screening at first contact",
+                "Victim-first classification for groomed youth",
+                "Multi-agency coordination mechanism for missing youth"
+              ],
+              "quote": "FOMB respectfully submits the following recommendations as relevant to the broader issues engaged by Bill C-16, particularly youth recruitment into criminal activity, early intervention failures, and the need for more coordinated victim-centred responses.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Require mandatory exploitation-risk screening and victim-first classification protocols for high-risk missing youth",
+                "Develop a 'do not criminalize exploitation' framework across policing, prosecution, and youth justice systems",
+                "Establish a multi-agency coordination mechanism, automatic red-zone escalation triggers, and post-recovery victim servic"
+              ],
+              "quote": "The patterns outlined in this brief reflect the real-world conditions under which youth are recruited into criminal activity, and highlight critical gaps that Bill C-16 must address to be effective in practice.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-20",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Ontario Child Sexual Exploitation Investigators Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14006786/br-external/OntarioChildSexualExploitationInvestigatorsAssociation-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports",
+              "asks": [
+                "Mandate telecom providers to retain subscriber records for 12 months"
+              ],
+              "quote": "Overall OCSEIA is supportive of Bill C-16.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Mandate telecommunications providers to store subscriber records for at least 12 months",
+                "Recognize in law the unique time challenges of investigating technology-based offences",
+                "Make other remedies available for unreasonable trial delay besides a stay of proceedings"
+              ],
+              "quote": "OCSEIA is supportive of C-16 and believes it will make some important changes to help better protect victims.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-20",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Women's Shelters Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14006772/br-external/WomensSheltersCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "In naming femicide in the criminal code, a clear indication that it is gendered, affecting women (cis and trans) and primarily perpetrated by men must be included in any definitional statement.",
+          "asks": [
+            "Clear definition of femicide",
+            "Stronger national data collection on femicides",
+            "Increased funding for shelters and anti-violence services"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Clear definition of femicide",
+                "Stronger national data collection on femicides",
+                "Increased funding for shelters and anti-violence services"
+              ],
+              "quote": "We welcome legislation that names the crime of femicide and offers pathways for legal processes so that victims’ families can seek the recourse they want and the justice they deserve.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Include a clear, gendered definition of femicide with safeguards for survivors who kill abusive partners",
+                "Establish stronger mechanisms to collect and share disaggregated national data on femicide",
+                "Fully fund anti-violence services and shelter spaces, and implement risk and lethality assessments"
+              ],
+              "quote": "In naming femicide in the criminal code, a clear indication that it is gendered, affecting women (cis and trans) and primarily perpetrated by men must be included in any definitional statement.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-20",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Provincial Association of Transition Houses and Service of Saskatchewan",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14006789/br-external/ProvincialAssociationOfTransitionHousesAndServicesOfSaskatchewan-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "We are pleased to see the inclusion of a criminal offence of coercive or controlling conduct, as well as provisions regarding femicide, and other important amendments, included in Bill C-16.",
+          "asks": [
+            "Expand definition of coercive conduct to include distress and disruption",
+            "Add protective orders for survivors of coercive conduct",
+            "Require training guidelines for legal system professionals"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Expand definition of coercive conduct to include distress and disruption",
+                "Add protective orders for survivors of coercive conduct",
+                "Require training guidelines for legal system professionals"
+              ],
+              "quote": "We are pleased to see the inclusion of a criminal offence of coercive or controlling conduct, as well as provisions regarding femicide, and other important amendments, included in Bill C-16.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Expand coercive control conduct to include causing distress, disruption, or adverse effects on daily activities",
+                "Include protective orders for survivors of coercive or controlling conduct",
+                "Establish training guidelines and programs on coercive control for legal system professionals"
+              ],
+              "quote": "PATHS and our member agencies support legislating a Criminal Code offence of coercive or controlling conduct toward an intimate partner.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-16",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "National Council of Women of Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14005611/br-external/NationalCouncilOfWomenOfCanada-e.pdf",
+          "status": "quote-unverified",
+          "stance": "supports with amendments",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Victim-initiated applications without law enforcement prerequisite",
+                "Expedited tribunal/court process (5-10 days)",
+                "Explicit inclusion of AI-generated deepfakes"
+              ],
+              "quote": "With this amendment, Bill C-16 can become truly comprehensive protection for victims of technology-facilitated sexual violence - matching the urgency of harms with the urgency of remedies.",
+              "quoteOk": "close"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Create a rapid, victim-initiated federal removal regime for non-consensual intimate images and AI deepfakes",
+                "Establish an expedited tribunal/court process with platform compliance orders, fines, and preservation/de-indexing requi",
+                "Provide victim legal support funding for removal applications"
+              ],
+              "quote": "The NCWC respectfully urges the Committee to amend Bill C-16 to create a rapid federal removal regime modeled on leading provincial legislation, providing:",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-16",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Regroupement des maisons pour femmes victimes de violence conjugale",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14005608/br-external/RegroupementDesMaisonsPourFemmesVictimesDeViolenceConjugale-067-260407-012-e.pdf",
+          "status": "incomplete",
+          "readings": [
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend wording and burden of proof for coercive control, criminal harassment, and femicide offences",
+                "Exclude intimate partner offences from police alternative measures and require victim consent",
+                "Delay implementation of the coercive control offence by two years to ensure stakeholder training, monitoring, and review"
+              ],
+              "quote": "The Regroupement proposes a number of amendments to clarify these offences and make it easier to prove them.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-16",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Survivor Safety Matters",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14001212/br-external/SurvivorSafetyMatters-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Full prohibition of therapeutic records in criminal proceedings",
+                "Independent legal representation for survivors",
+                "Trauma-informed legal framework"
+              ],
+              "quote": "Bill C-16 continues to permit applications for therapeutic records and their potential use at trial.",
+              "quoteOk": "not found"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Prohibit the production, disclosure, or admissibility of therapeutic records in criminal proceedings involving violence",
+                "Provide guaranteed, funded independent legal representation for survivors in advance of reporting to police",
+                "Establish a trauma-informed legal framework and acknowledge the evidentiary flaws of therapeutic records"
+              ],
+              "quote": "While we appreciate eﬀorts made within Bill C-16 to strengthen protec ons for therapeu c records, we would encourage legislators to consider a full legisla ve prohibi on on the produc on, disclosure, or admissibility of therapeu c records in criminal proceedings involving sexual violence.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-16",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Ending Sexual Violence Association of Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14002225/br-external/EndingSexualViolenceAssociationOfCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "We welcome the government’s efforts to advance access to justice for survivors of sexual and gender-based violence through Bill C-16: Protecting Victims Act.",
+          "asks": [
+            "Make funding for Independent Legal Advice/Representation (ILA/ILR) programs permanent",
+            "Expand the deepfakes offence definition to capture all harmful non-consensual sexualized images",
+            "Ban the use of therapy records in sexual assault cases without victim’s express consent"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Make funding for Independent Legal Advice/Representation (ILA/ILR) programs permanent",
+                "Expand the deepfakes offence definition to capture all harmful non-consensual sexualized images",
+                "Ban the use of therapy records in sexual assault cases without victim’s express consent"
+              ],
+              "quote": "We support Bill C-16’s efforts to further restrict the use of therapy records in court, however, we urge the committee to go further.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Make funding for Independent Legal Advice and Representation (ILA/ILR) programs permanent",
+                "Invest in community-based sexual assault centres and survivor-serving organizations",
+                "Amend court processes (deepfakes, testimonial aids, therapy records, restorative justice) and track femicide data"
+              ],
+              "quote": "We welcome the government’s efforts to advance access to justice for survivors of sexual and gender-based violence through Bill C-16: Protecting Victims Act.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-16",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Daughter Project Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14003910/br-external/DaughterProjectCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "The four recommendations below reflect Daughter Project Canada's position that non-criminal reforms must accompany the criminal provisions of Bill C-16 if Parliament intends this legislation to meaningfully protect Canadian children and youth.",
+          "asks": [
+            "Amend definition of 'intimate image' to a harm‑reduction standard",
+            "Mandate national evidence‑based prevention programming for online exploitation",
+            "Require standardized national data collection and public reporting on child sexual exploitation"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend definition of 'intimate image' to a harm‑reduction standard",
+                "Mandate national evidence‑based prevention programming for online exploitation",
+                "Require standardized national data collection and public reporting on child sexual exploitation"
+              ],
+              "quote": "The four recommendations below reflect Daughter Project Canada's position that non-criminal reforms must accompany the criminal provisions of Bill C-16 if Parliament intends this legislation to meaningfully protect Canadian children and youth.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend the definition of 'intimate image' to reflect a harm-reduction standard",
+                "Broaden mandatory reporting and prevention requirements for internet service providers",
+                "Accompany criminal offences with mandatory national prevention programming and data collection"
+              ],
+              "quote": "Daughter Project Canada welcomes the government's intent in Bill C-16 to protect children and victims of gender-based violence.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-16",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Mothers Against Drunk Driving (MADD Canada)",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14006564/br-external/MothersAgainstDrunkDriving-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "MADD Canada supports the proposed amendments to the CVBR, including the amendments to the preamble (Section 135) that include a victim-centred and trauma-informed approach.",
+          "asks": [
+            "Require judges to delay decisions until victims are notified",
+            "Replace \"repairing the harm\" with \"addressing the harm done\" in restorative justice",
+            "Add trauma-informed principles to restorative justice programs"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Require judges to delay decisions until victims are notified",
+                "Replace \"repairing the harm\" with \"addressing the harm done\" in restorative justice",
+                "Add trauma-informed principles to restorative justice programs"
+              ],
+              "quote": "MADD Canada supports the proposed amendments to the CVBR, including the amendments to the preamble (Section 135) that include a victim-centred and trauma-informed approach.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Require judges to delay decisions on stay applications and trial adjournments until reasonable steps are taken to notify",
+                "Amend Restorative Justice provisions to replace 'repairing the harm' with 'addressing the harm done' and add victim-focu",
+                "Require judges to acknowledge victim impact statements at sentencing and verify victim notification before accepting gui"
+              ],
+              "quote": "We do believe Bill C-16 should be strengthened.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-16",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Barreau du Québec",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14007286/br-external/BarreauDuQu&#233;bec-067-260413-018-e.pdf",
+          "status": "unreadable",
+          "date": "2026-04-16",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Canadian Association of Retired Persons",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14007436/br-external/CanadianAssociationOfRetiredPersons-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "CARP urges the Committee to amend Bill C-16 to ensure that all individuals experiencing coercive and controlling behavior, regardless of relationships, are equally protected under the law.",
+          "asks": [
+            "Include relatives in the coercive control offence",
+            "Include informal caregivers",
+            "Maintain coverage of intimate partners"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Include relatives in the coercive control offence",
+                "Include informal caregivers",
+                "Maintain coverage of intimate partners"
+              ],
+              "quote": "CARP urges the Committee to amend Bill C-16 to ensure that all individuals experiencing coercive and controlling behavior, regardless of relationships, are equally protected under the law.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Expand coercive control offence to include current or former intimate partners",
+                "Expand coercive control offence to include relatives",
+                "Expand coercive control offence to include informal caregivers"
+              ],
+              "quote": "CARP urges the Committee to amend Bill C-16 to ensure that all individuals experiencing coercive and controlling behavior, regardless of relationships, are equally protected under the law.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-16",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Justice Facility Dogs Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14002877/br-external/JusticeFacilityDogsCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "As such, we strongly encourage that only accredited justice facility dogs be considered in the legislation which will, if passed, become entrenched practice.",
+          "asks": [
+            "Define 'Accredited Justice Facility Dog' in the Bill",
+            "Require the handler to be a criminal justice professional",
+            "Limit support animals to accredited justice facility dogs only"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Define 'Accredited Justice Facility Dog' in the Bill",
+                "Require the handler to be a criminal justice professional",
+                "Limit support animals to accredited justice facility dogs only"
+              ],
+              "quote": "As such, we strongly encourage that only accredited justice facility dogs be considered in the legislation which will, if passed, become entrenched practice.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Replace 'support animal' with 'Accredited Justice Facility Dog and handler' in Criminal Code s. 486.1(1)",
+                "Define 'Accredited Justice Facility Dog' as a graduate from an internationally recognized assistance dog organization",
+                "Require the dog handler to be a criminal justice system professional trained in trauma-informed practice"
+              ],
+              "quote": "As such, we strongly encourage that only accredited justice facility dogs be considered in the legislation which will, if passed, become entrenched practice.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-02",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Fédération des maisons d’hébergement pour femmes",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13964719/br-external/FederationDesMaisonsDhebergementPourFemmes-067-260303-003-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Bill C-16 is a step forward, but it must be part of a broader vision that recognizes the systemic nature of gender-based violence.",
+          "asks": [
+            "Add expanded femicide definition",
+            "Define coercive control",
+            "Fund implementation and data"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Add expanded femicide definition",
+                "Define coercive control",
+                "Fund implementation and data"
+              ],
+              "quote": "Bill C-16 is a step forward, but it must be part of a broader vision that recognizes the systemic nature of gender-based violence.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Incorporate clear legal definitions of femicide and coercive control into the Criminal Code",
+                "Include specific aggravating circumstances for crimes related to coercive control",
+                "Provide public funding for mandatory training, data collection, and strict enforcement of judicial conditions"
+              ],
+              "quote": "Bill C-16 is a step forward, but it must be part of a broader vision that recognizes the systemic nature of gender-based violence.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-01",
+          "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Plaidoyer Victimes",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14001875/br-external/PlaidoyerVictimes-067-260225-009-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Plaidoyer Victimes welcomes the amendments to the CVBR regarding participation, namely the clarification of the right to submit a victim impact statement both at the sentencing stage and in decisions relating to parole or correctional measures.",
+          "asks": [
+            "Define federal actors' responsibilities for victim information",
+            "Guarantee interpretation services at all proceedings stages",
+            "Make victims' rights legally enforceable with recourse"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Define federal actors' responsibilities for victim information",
+                "Guarantee interpretation services at all proceedings stages",
+                "Make victims' rights legally enforceable with recourse"
+              ],
+              "quote": "Plaidoyer Victimes welcomes the amendments to the CVBR regarding participation, namely the clarification of the right to submit a victim impact statement both at the sentencing stage and in decisions relating to parole or correctional measures.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Establish legally enforceable victims' rights and independent accountability mechanisms",
+                "Expand interpretation services and allow cumulative testimonial aids for victims",
+                "Prohibit access to victims' therapeutic records and broaden complex case definitions for court delays"
+              ],
+              "quote": "However, Plaidoyer Victimes has some reservations regarding some of the Bill’s limitations, which may jeopardize its effectiveness.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-01",
+          "checkedAt": "2026-10-30"
         }
       ]
     },
@@ -4077,6 +4918,19 @@
         ]
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "158",
+          "date": "2026-10-29",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-158/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Jacob Mantle (CPC)"
+          ],
+          "contexts": [
+            "Government Orders: Safe Social Media Act"
+          ]
+        },
         {
           "chamber": "Senate",
           "sitting": "95",
@@ -4860,6 +5714,19 @@
       "mentions": [
         {
           "chamber": "House",
+          "sitting": "158",
+          "date": "2026-10-29",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-158/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Marilyn Gladu (Lib.)"
+          ],
+          "contexts": [
+            "Government Orders: Safe Social Media Act"
+          ]
+        },
+        {
+          "chamber": "House",
           "sitting": "157",
           "date": "2026-10-28",
           "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-157/hansard",
@@ -5125,7 +5992,21 @@
         ],
         "decisions": []
       },
-      "mentions": [],
+      "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "158",
+          "date": "2026-10-29",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-158/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Steven MacKinnon (Lib.)"
+          ],
+          "contexts": [
+            "Oral Questions: Business of the House"
+          ]
+        }
+      ],
       "publications": [
         {
           "id": "13881241",
@@ -7444,6 +8325,22 @@
       "mentions": [
         {
           "chamber": "House",
+          "sitting": "158",
+          "date": "2026-10-29",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-158/hansard",
+          "speeches": 5,
+          "speakers": [
+            "Hon. Ruby Sahota",
+            "Linda Lapointe",
+            "Sima Acan (Lib.)",
+            "Frank Caputo"
+          ],
+          "contexts": [
+            "Government Orders: Safe Social Media Act"
+          ]
+        },
+        {
+          "chamber": "House",
           "sitting": "157",
           "date": "2026-10-28",
           "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-157/hansard",
@@ -9003,16 +9900,16 @@
               "model": "Google",
               "stance": "supports with amendments",
               "asks": [
-                "Separate Part 1 and Part 2 of the bill",
-                "Remove Ministerial Orders and narrow Electronic Service Provider definitions",
-                "Add judicial oversight, privacy safeguards, and encryption protections"
+                "Separate Part 1 and Part 2 of the Bill to allow proper attention from the public and Parliamentarians",
+                "Remove Ministerial Orders from Part 2 and increase judicial oversight and procedural safeguards throughout the Bill",
+                "Explicitly prohibit obligations that undermine encryption and narrow definitions of subscriber information and electroni"
               ],
               "quote": "The recommendations suggested by the CBA Sections intend to be a good faith contribution to Parliament’s important deliberations in crafting laws that are effective, understandable and consistent with the Charter.",
               "quoteOk": "exact"
             }
           ],
           "date": "2026-06-09",
-          "checkedAt": "2026-10-29"
+          "checkedAt": "2026-10-30"
         },
         {
           "name": "Canadian Civil Liberties Association",
@@ -9613,26 +10510,6 @@
           "checkedAt": "2026-10-29"
         },
         {
-          "name": "Internet Society",
-          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14095567/br-external/InternetSociety-067260507035-b.pdf",
-          "status": "incomplete",
-          "readings": [
-            {
-              "model": "Google",
-              "stance": "opposes",
-              "asks": [
-                "Withdraw Bill C-22",
-                "Conduct a full study including consultations",
-                "Conduct an Internet Impact Assessment"
-              ],
-              "quote": "The undersigned civil society organizations, companies, and cybersecurity experts, including members of the Global Encryption Coalition, urge the federal government to withdraw Bill C-22, An Act respecting lawful access.",
-              "quoteOk": "exact"
-            }
-          ],
-          "date": "2026-05-13",
-          "checkedAt": "2026-10-29"
-        },
-        {
           "name": "Canadian Telecommunications Association",
           "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074834/br-external/CanadianTelecommunicationsAssociation-e.pdf",
           "status": "agreed",
@@ -9669,6 +10546,44 @@
           ],
           "date": "2026-05-13",
           "checkedAt": "2026-10-29"
+        },
+        {
+          "name": "Internet Society",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14095567/br-external/InternetSociety-067260507035-b.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "The undersigned signatories ask that the federal government withdraw Bill C-22 to address the immediate threats in Part 2 and conduct a full study including consultations and an Internet Impact Assessment to mitigate risks in the Bill.",
+          "asks": [
+            "withdraw Bill C-22",
+            "conduct a full study",
+            "include consultations and an Internet Impact Assessment"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "withdraw Bill C-22",
+                "conduct a full study",
+                "include consultations and an Internet Impact Assessment"
+              ],
+              "quote": "The undersigned signatories ask that the federal government withdraw Bill C-22 to address the immediate threats in Part 2 and conduct a full study including consultations and an Internet Impact Assessment to mitigate risks in the Bill.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Withdraw Bill C-22",
+                "Conduct a full study including consultations",
+                "Conduct an Internet Impact Assessment"
+              ],
+              "quote": "The undersigned civil society organizations, companies, and cybersecurity experts, including members of the Global Encryption Coalition, urge the federal government to withdraw Bill C-22, An Act respecting lawful access.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-13",
+          "checkedAt": "2026-10-30"
         }
       ]
     },
@@ -10261,7 +11176,21 @@
           }
         ]
       },
-      "mentions": [],
+      "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "158",
+          "date": "2026-10-29",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-158/hansard",
+          "speeches": 2,
+          "speakers": [
+            "Ryan Turnbull (Lib.)"
+          ],
+          "contexts": [
+            "Oral Questions: Finance"
+          ]
+        }
+      ],
       "publications": [
         {
           "id": "14049195",
@@ -10406,7 +11335,7 @@
               ]
             }
           ],
-          "checked": "2026-10-29"
+          "checked": "2026-10-30"
         }
       ],
       "text": {
@@ -12505,6 +13434,24 @@
             "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
           },
           {
+            "date": "2026-10-26",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "56",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-56/notice",
+            "witnesses": {
+              "orgs": [
+                "Department of Transport"
+              ],
+              "people": [],
+              "appearing": [
+                "Hon. Steven MacKinnon, P.C., M.P., Minister of Transport"
+              ]
+            },
+            "study": "13594419",
+            "amendments": []
+          },
+          {
             "date": "2026-10-20",
             "chamber": "House",
             "committee": "FINA",
@@ -12680,6 +13627,21 @@
       "mentions": [
         {
           "chamber": "House",
+          "sitting": "158",
+          "date": "2026-10-29",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-158/hansard",
+          "speeches": 2,
+          "speakers": [
+            "Hon. Steven MacKinnon (Lib.)",
+            "Sébastien Lemire (BQ)"
+          ],
+          "contexts": [
+            "Oral Questions: Business of the House",
+            "Private Members' Business: National Strategy for Soil Health Act"
+          ]
+        },
+        {
+          "chamber": "House",
           "sitting": "156",
           "date": "2026-10-27",
           "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-156/hansard",
@@ -12789,6 +13751,10 @@
         {
           "id": "14082288",
           "type": "First Reading"
+        },
+        {
+          "id": "14300666",
+          "type": "As amended by committee"
         }
       ],
       "studies": [
@@ -12899,6 +13865,7 @@
             {
               "name": "As an individual",
               "people": [
+                "Hon. Steven MacKinnon",
                 "Hon. Patty Hajdu",
                 "Hon. Rebecca Chartrand",
                 "Hon. Stephen Fuhr",
@@ -12906,9 +13873,20 @@
                 "Hon. François-Philippe Champagne"
               ],
               "meetings": [
+                "56",
                 "54",
                 "53",
                 "51"
+              ]
+            },
+            {
+              "name": "Department of Transport",
+              "people": [
+                "Jennifer Little",
+                "Serge Bijimine"
+              ],
+              "meetings": [
+                "56"
               ]
             },
             {
@@ -13110,11 +14088,11 @@
               ]
             }
           ],
-          "checked": "2026-10-29"
+          "checked": "2026-10-30"
         }
       ],
       "text": {
-        "basis": "14082288",
+        "basis": "14082288,14300666",
         "analysis": 2,
         "versions": [
           {
@@ -13122,9 +14100,77 @@
             "type": "First Reading",
             "xml": "https://www.parl.ca/Content/Bills/451/Government/C-31/C-31_1/C-31_E.xml",
             "pdf": "https://www.parl.ca/Content/Bills/451/Government/C-31/C-31_1/C-31_1.PDF"
+          },
+          {
+            "id": "14300666",
+            "type": "As amended by committee",
+            "xml": "https://www.parl.ca/Content/Bills/451/Government/C-31/C-31_2/C-31_E.xml",
+            "pdf": "https://www.parl.ca/Content/Bills/451/Government/C-31/C-31_2/C-31_2.PDF"
           }
         ],
-        "changes": [],
+        "changes": [
+          {
+            "from": "First Reading",
+            "to": "As amended by committee",
+            "provisions": [
+              {
+                "kind": "amended",
+                "ref": "282",
+                "note": ""
+              },
+              {
+                "kind": "amended",
+                "ref": "284 / 17.2",
+                "note": "Duty to make public"
+              },
+              {
+                "kind": "amended",
+                "ref": "349 / 85.19",
+                "note": "Suspension of application"
+              },
+              {
+                "kind": "amended",
+                "ref": "351",
+                "note": ""
+              },
+              {
+                "kind": "added",
+                "ref": "353.1 / 180.62",
+                "note": "Entering into compliance agreements"
+              },
+              {
+                "kind": "added",
+                "ref": "353.2 / 180.63",
+                "note": "Refusal to enter compliance agreement"
+              },
+              {
+                "kind": "added",
+                "ref": "353.3",
+                "note": ""
+              },
+              {
+                "kind": "added",
+                "ref": "353.4",
+                "note": ""
+              },
+              {
+                "kind": "amended",
+                "ref": "355",
+                "note": "Suspension of application"
+              },
+              {
+                "kind": "amended",
+                "ref": "361",
+                "note": "Annual report"
+              },
+              {
+                "kind": "amended",
+                "ref": "364",
+                "note": "Order in council"
+              }
+            ]
+          }
+        ],
         "inForce": [
           {
             "ref": "246",
@@ -13149,7 +14195,7 @@
           {
             "ref": "364",
             "note": "Order in council",
-            "text": "(1) Sections 339 and 340, subsections 341 (1) and (3), sections 342 to 344 and 346 to 349, subsections 350 (4), 351 (6) and 352 (2) and section 353 come into force on a day to be fixed by order of the Governor in Council. (2) Subsections 350 (1) to (3), 351 (1) and (3) to (5) and 352 (1) and (3) ..."
+            "text": "(1) Sections 339 and 340, subsections 341 (1) and (3), sections 342 to 344 and 346 to 349, subsections 350 (4), 351 (6) and 352 (2) and sections 353, 353.1, 353.2, 353.3 and 353.4 come into force on a day to be fixed by order of the Governor in Council. (2) Subsections 350 (1) to (3), 351 (1) and..."
           }
         ],
         "penalties": [
@@ -13219,9 +14265,18 @@
               "$25,000"
             ],
             "text": "Subsection 45(2) of the Act is replaced by the following: (2) Every person who contravenes any other provision of this Act, with the exception of section 27, or any provision of the regulations is guilty of an offence punishable on summary conviction and liable to a fine of no..."
+          },
+          {
+            "ref": "351",
+            "note": "",
+            "amounts": [
+              "$25,000",
+              "$1,000,000"
+            ],
+            "text": "(1) Subparagraphs 177(1)(a)(i) and (ii) of the Act are replaced by the following: (i) any provision of this Act or of any regulation, order or direction made pursuant to this Act, other than a provision of a regulation made under subsection 86.11(1), (ii) the requirements of a..."
           }
         ],
-        "provisionCount": 441
+        "provisionCount": 445
       },
       "positions": [
         {
@@ -14857,15 +15912,15 @@
               "stance": "supports with amendments",
               "asks": [
                 "Prohibit all false claims during elections and remove proof of intent requirements",
-                "Delete sections 28-30 and require full public disclosure for fundraising events",
-                "Tighten third-party spending rules and close loopholes allowing foreign influence"
+                "Tighten rules on foreign influence, fundraising transparency, and third-party spending",
+                "Mandate Elections Canada to report on electoral reform and campaign/party operating costs"
               ],
               "quote": "All of these changes are needed to actually, finally, have coherent, ethical, democratic, fair and egalitarian political finance, electoral and policy-making systems.",
               "quoteOk": "exact"
             }
           ],
           "date": "2026-05-27",
-          "checkedAt": "2026-10-29"
+          "checkedAt": "2026-10-30"
         },
         {
           "name": "Saskatchewan Stands with Hong Kong",
@@ -16105,7 +17160,7 @@
               ]
             }
           ],
-          "checked": "2026-10-29"
+          "checked": "2026-10-30"
         }
       ],
       "text": {
@@ -16252,6 +17307,19 @@
         "decisions": []
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "158",
+          "date": "2026-10-29",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-158/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Kristina Tesser Derksen (Lib.)"
+          ],
+          "contexts": [
+            "Oral Questions: The Economy"
+          ]
+        },
         {
           "chamber": "Senate",
           "sitting": "96",
@@ -16536,6 +17604,12 @@
   ],
   "changelog": [
     {
+      "date": "2026-10-29",
+      "number": "C-34",
+      "kind": "stage",
+      "text": "Advanced to: At second reading in the House of Commons"
+    },
+    {
       "date": "2026-10-28",
       "number": "S-209",
       "kind": "stage",
@@ -16550,7 +17624,7 @@
   ],
   "upcoming": [],
   "scan": {
-    "houseSitting": 157,
-    "senateSitting": 97
+    "houseSitting": 158,
+    "senateSitting": 98
   }
 }
