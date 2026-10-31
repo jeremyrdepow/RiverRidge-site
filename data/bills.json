@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-30T16:52:46.644Z",
+  "checkedAt": "2026-10-31T15:53:37.110Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -40,9 +40,9 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. Marc Miller",
       "sponsorTitle": "Minister of Canadian Identity and Culture and Minister responsible for Official Languages",
-      "status": "At second reading in the House of Commons",
+      "status": "At consideration in committee in the House of Commons",
       "latestEvent": {
-        "type": "Debate at second reading",
+        "type": "Second reading and referral to committee",
         "date": "2026-10-29",
         "chamber": "House of Commons"
       },
@@ -64,7 +64,7 @@
           "chamber": "House of Commons",
           "role": "study",
           "url": "https://www.ourcommons.ca/Committees/en/CHPC?parl=45&session=1",
-          "current": false
+          "current": true
         }
       ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/c-34",
@@ -4097,26 +4097,6 @@
           "checkedAt": "2026-10-30"
         },
         {
-          "name": "Regroupement des maisons pour femmes victimes de violence conjugale",
-          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14005608/br-external/RegroupementDesMaisonsPourFemmesVictimesDeViolenceConjugale-067-260407-012-e.pdf",
-          "status": "incomplete",
-          "readings": [
-            {
-              "model": "Google",
-              "stance": "supports with amendments",
-              "asks": [
-                "Amend wording and burden of proof for coercive control, criminal harassment, and femicide offences",
-                "Exclude intimate partner offences from police alternative measures and require victim consent",
-                "Delay implementation of the coercive control offence by two years to ensure stakeholder training, monitoring, and review"
-              ],
-              "quote": "The Regroupement proposes a number of amendments to clarify these offences and make it easier to prove them.",
-              "quoteOk": "exact"
-            }
-          ],
-          "date": "2026-04-16",
-          "checkedAt": "2026-10-30"
-        },
-        {
           "name": "Survivor Safety Matters",
           "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14001212/br-external/SurvivorSafetyMatters-e.pdf",
           "status": "split",
@@ -4308,6 +4288,38 @@
           "checkedAt": "2026-10-30"
         },
         {
+          "name": "Regroupement des maisons pour femmes victimes de violence conjugale",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14005608/br-external/RegroupementDesMaisonsPourFemmesVictimesDeViolenceConjugale-067-260407-012-e.pdf",
+          "status": "quote-unverified",
+          "stance": "supports with amendments",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend clause 28 to adopt “coercion or control of an intimate partner” wording",
+                "Include protective orders for survivors of coercive control",
+                "Exclude intimate partner offences from alternative measures and require victim consent"
+              ],
+              "quote": "Le Regroupement est heureux de constater que le gouvernement s’attaque à la création d’une nouvelle infraction, le contrôle coercitif, et propose un certain nombre d’amendements pour clarifier ces infractions et en faciliter la preuve.",
+              "quoteOk": "not found"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend clauses on coercive control, criminal harassment, and femicide to clarify definitions and ease the burden of proof",
+                "Require victim consent for alternative measures and exclude intimate partner violence from police-initiated alternative ",
+                "Provide a two-year implementation delay, mandatory training for socio-judicial actors, monitoring mechanisms, and period"
+              ],
+              "quote": "The Regroupement proposes a number of amendments to clarify these offences and make it easier to prove them.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-16",
+          "checkedAt": "2026-10-31"
+        },
+        {
           "name": "Justice Facility Dogs Canada",
           "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14002877/br-external/JusticeFacilityDogsCanada-e.pdf",
           "status": "agreed",
@@ -4420,6 +4432,281 @@
           ],
           "date": "2026-04-01",
           "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "National Association of Women and the Law",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13975254/br-external/NationalAssociationOfWomenAndTheLaw-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "This brief by the National Association of Women and the Law (NAWL) proposes concrete amendments to Bill C-16 to strengthen protections for survivors of gender-based and intimate partner violence while ensuring that criminal law reforms do not produce unintended harms.",
+          "asks": [
+            "Strengthen criminal harassment to protect victims with subjective fear",
+            "Close firearms loopholes for domestic abusers and police officers",
+            "Extend victim protections to all intimate partner offences"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Strengthen criminal harassment to protect victims with subjective fear",
+                "Close firearms loopholes for domestic abusers and police officers",
+                "Extend victim protections to all intimate partner offences"
+              ],
+              "quote": "This brief by the National Association of Women and the Law (NAWL) proposes concrete amendments to Bill C-16 to strengthen protections for survivors of gender-based and intimate partner violence while ensuring that criminal law reforms do not produce unintended harms.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Prevent coercive control and femicide offences from backfiring against women survivors",
+                "Ensure domestic abusers lose access to firearms regardless of occupation",
+                "Criminalize the creation of non-consensual sexual deepfakes and broaden their definition"
+              ],
+              "quote": "This brief by the National Association of Women and the Law (NAWL) proposes concrete amendments to Bill C-16 to strengthen protections for survivors of gender-based and intimate partner violence while ensuring that criminal law reforms do not produce unintended harms.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-01",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Mennonite Central Committee Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13975214/br-external/MennoniteCentralCommittee-e.pdf",
+          "status": "agreed",
+          "stance": "supports",
+          "quote": "As an organization with a long commitment to restorative justice work, we affirm the changes proposed by Bill C-16 to the Canadian Victims Bill of Rights.",
+          "asks": [
+            "Support Bill C-16 amendments to the Canadian Victims Bill of Rights",
+            "Provide victims with quality restorative justice information (s. 7.2(1))",
+            "Improve victim referrals to restorative justice programs"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports",
+              "asks": [
+                "Support Bill C-16 amendments to the Canadian Victims Bill of Rights",
+                "Provide victims with quality restorative justice information (s. 7.2(1))",
+                "Improve victim referrals to restorative justice programs"
+              ],
+              "quote": "As an organization with a long commitment to restorative justice work, we affirm the changes proposed by Bill C-16 to the Canadian Victims Bill of Rights.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports",
+              "asks": [
+                "Pass the proposed changes to the Canadian Victims Bill of Rights",
+                "Adopt the additions of s. 7.2 (1) to the CVBR (Bill C-16, cl. 139)",
+                "Recognize that restorative justice encompasses a diverse range of voluntary, safe, and respectful processes"
+              ],
+              "quote": "It is for these reasons that we support the measures found in Bill C-16 relating to the Canadian Victims Bill of Rights and restorative justice.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-01",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Humane Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13975213/br-external/HumaneCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "We are hopeful that the inclusion of animals in these sections of this bill will better prioritize protections for child victims and intimate partners with pets.",
+          "asks": [
+            "Criminalize animal cruelty and torture content",
+            "Add animal sexual abuse images to bestiality offences",
+            "Include animal prohibition orders for related offences"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Criminalize animal cruelty and torture content",
+                "Add animal sexual abuse images to bestiality offences",
+                "Include animal prohibition orders for related offences"
+              ],
+              "quote": "We are hopeful that the inclusion of animals in these sections of this bill will better prioritize protections for child victims and intimate partners with pets.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Criminalize the creation, distribution and possession of animal cruelty and/or torture content",
+                "Add creation and possession of animal sexual abuse images to proposed representation of bestiality",
+                "Include animal prohibition orders for offences involving animal harm or threats"
+              ],
+              "quote": "We are hopeful that the inclusion of animals in these sections of this bill will better prioritize protections for child victims and intimate partners with pets.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-01",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "David Asper Centre for Constitution Rights",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13972508/br-external/DavidAsperCentreForConstitutionalRights-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Remove Clauses 63 and 87 and replace with Bill S-208 provisions",
+                "Remove Clause 46",
+                "Ensure adequate court funding"
+              ],
+              "quote": "We recommend removing Clauses 63 and 87 and replacing the clauses with the safety valve scheme currently before the Senate (Bill S-208).",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Remove Clauses 63 and 87 and replace them with clauses 1 and 2 from Bill S-208",
+                "Remove Clause 46 regarding trial delay reforms",
+                "Work with the provinces to ensure courts are adequately funded and put guardrails on the notwithstanding clause"
+              ],
+              "quote": "Specifically, we submit that (1) the bill’s approach to mandatory minimum penalties and (2) its proposed modifications to the remedy for unreasonable trial delay are bad policy and otherwise conflict with Supreme Court of Canada guidance.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-03-23",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Anonymous Author",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13936929/br-external/AnonymousAuthor-1-e.pdf",
+          "status": "agreed",
+          "stance": "supports",
+          "quote": "I submit this brief in support of Bill C-16, the Protecting Victims Act.",
+          "asks": [
+            "Support Bill C-16",
+            "Pass Bill C-16 without amendment"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports",
+              "asks": [
+                "Support Bill C-16"
+              ],
+              "quote": "I submit this brief in support of Bill C-16, the Protecting Victims Act.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports",
+              "asks": [
+                "Pass Bill C-16 without amendment"
+              ],
+              "quote": "I submit this brief in support of Bill C-16, the Protecting Victims Act.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-03-19",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "The Canadian Bar Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13949997/br-external/TheCanadianBarAssociation-e.pdf",
+          "status": "incomplete",
+          "readings": [
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Direct resources to systemic causes of judicial delay instead of creating alternative remedies for section 11(b) violati",
+                "Maintain full judicial discretion in sentencing rather than mandating minimum terms of imprisonment",
+                "Clarify and narrow the new coercive control offence and recognize femicide and coercive control as statutory aggravating"
+              ],
+              "quote": "The CBA welcomes this opportunity to engage constructively with Parliament to refine Bill C-16 so that it achieves its vital objectives of enhancing safety, justice, and the rule of law for all Canadians.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-03-05",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "National Institute on Ageing",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13948815/br-external/NationalInstituteOnAgeing-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "To ensure older adults are appropriately protected, the NIA proposes amending Bill C-16’s coercive control offence to include older adults, their relatives, and informal caregivers.",
+          "asks": [
+            "Add relatives to the protected person definition",
+            "Add informal caregivers to the protected person definition",
+            "Ensure equal protection for older adults experiencing coercive control"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Add relatives to the protected person definition",
+                "Add informal caregivers to the protected person definition",
+                "Ensure equal protection for older adults experiencing coercive control"
+              ],
+              "quote": "We urge the Committee to adopt the proposed amendments so that the offence comes into force with equal protection for older adults.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Expand the coercive control offence to cover relatives",
+                "Expand the coercive control offence to cover informal caregivers",
+                "Replace 'intimate partner' with 'protected person' in the coercive control provisions"
+              ],
+              "quote": "To ensure older adults are appropriately protected, the NIA proposes amending Bill C-16’s coercive control offence to include older adults, their relatives, and informal caregivers.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-03-05",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Sagesse Domestic Violence Prevention Society",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13943633/br-external/SagesseDomesticViolencePreventionSociety-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Sagesse strongly supports Bill C-16’s recognition of coercive or controlling conduct as a distinct harm within Canada’s criminal justice framework.",
+          "asks": [
+            "Expand relationship definition to include dependence and trust",
+            "Add pattern-and-impact elements with 'knew or ought to have known' mental element",
+            "Include illustrative factors and trans-context recognition"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Expand relationship definition to include dependence and trust",
+                "Add pattern-and-impact elements with 'knew or ought to have known' mental element",
+                "Include illustrative factors and trans-context recognition"
+              ],
+              "quote": "Sagesse strongly supports Bill C-16’s recognition of coercive or controlling conduct as a distinct harm within Canada’s criminal justice framework.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Include impact-based elements and illustrative factors reflecting relationships of dependence and trust",
+                "Explicitly recognize the trans-contextual reach of coercive control",
+                "Fund validated Survivor-Impact tools, justice and service provider training, and public education"
+              ],
+              "quote": "Sagesse strongly supports Bill C-16’s recognition of coercive or controlling conduct as a distinct harm within Canada’s criminal justice framework.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-03-02",
+          "checkedAt": "2026-10-31"
         }
       ]
     },
@@ -7360,6 +7647,28 @@
           ],
           "checked": "2026-10-27"
         }
+      ],
+      "positions": [
+        {
+          "name": "Kyndryl Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13925185/br-external/KyndrylCanada-e.pdf",
+          "status": "incomplete",
+          "readings": [
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Exclude suppliers and service providers from the scope of Bill C-8",
+                "Narrow personal liability for directors, officers, and employees to affirmative criminal conduct",
+                "Establish materiality thresholds and risk-based criteria for supply chain security and incident reporting"
+              ],
+              "quote": "Bill C-8 represents an important step in strengthening the security of critical cyber systems and recognizing the importance of supply chain risk management.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-03-02",
+          "checkedAt": "2026-10-31"
+        }
       ]
     },
     {
@@ -9900,16 +10209,16 @@
               "model": "Google",
               "stance": "supports with amendments",
               "asks": [
-                "Separate Part 1 and Part 2 of the Bill to allow proper attention from the public and Parliamentarians",
-                "Remove Ministerial Orders from Part 2 and increase judicial oversight and procedural safeguards throughout the Bill",
-                "Explicitly prohibit obligations that undermine encryption and narrow definitions of subscriber information and electroni"
+                "Separate Part 1 and Part 2 of the bill",
+                "Remove Ministerial Orders and increase judicial oversight and procedural safeguards",
+                "Narrow definitions and explicitly prohibit undermining encryption"
               ],
               "quote": "The recommendations suggested by the CBA Sections intend to be a good faith contribution to Parliament’s important deliberations in crafting laws that are effective, understandable and consistent with the Charter.",
               "quoteOk": "exact"
             }
           ],
           "date": "2026-06-09",
-          "checkedAt": "2026-10-30"
+          "checkedAt": "2026-10-31"
         },
         {
           "name": "Canadian Civil Liberties Association",
@@ -10510,44 +10819,6 @@
           "checkedAt": "2026-10-29"
         },
         {
-          "name": "Canadian Telecommunications Association",
-          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074834/br-external/CanadianTelecommunicationsAssociation-e.pdf",
-          "status": "agreed",
-          "stance": "supports with amendments",
-          "quote": "For the above reasons, allowing for response deadlines of as little as 24 hours creates a material risk of unmanageable demand and does not reflect the diversity of service provider capabilities.",
-          "asks": [
-            "Replace 24‑hour response deadline with three business days",
-            "Remove production order timeframe amendment (or set to 15 business days)",
-            "Establish mandatory compensation framework for service providers"
-          ],
-          "readings": [
-            {
-              "model": "Cohere",
-              "stance": "supports with amendments",
-              "asks": [
-                "Replace 24‑hour response deadline with three business days",
-                "Remove production order timeframe amendment (or set to 15 business days)",
-                "Establish mandatory compensation framework for service providers"
-              ],
-              "quote": "For the above reasons, allowing for response deadlines of as little as 24 hours creates a material risk of unmanageable demand and does not reflect the diversity of service provider capabilities.",
-              "quoteOk": "exact"
-            },
-            {
-              "model": "Google",
-              "stance": "supports with amendments",
-              "asks": [
-                "Extend minimum response times for confirmation of service demands to three business days and retain current production o",
-                "Limit regulatory obligations and metadata retention requirements for core providers, and establish a mandatory compensat",
-                "Extend safe harbour liability protection to include good-faith compliance with mandatory information demands and product"
-              ],
-              "quote": "With these improvements, the legislation can better achieve its intended objectives.",
-              "quoteOk": "exact"
-            }
-          ],
-          "date": "2026-05-13",
-          "checkedAt": "2026-10-29"
-        },
-        {
           "name": "Internet Society",
           "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14095567/br-external/InternetSociety-067260507035-b.pdf",
           "status": "agreed",
@@ -10584,6 +10855,44 @@
           ],
           "date": "2026-05-13",
           "checkedAt": "2026-10-30"
+        },
+        {
+          "name": "Canadian Telecommunications Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14074834/br-external/CanadianTelecommunicationsAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "For the above reasons, allowing for response deadlines of as little as 24 hours creates a material risk of unmanageable demand and does not reflect the diversity of service provider capabilities.",
+          "asks": [
+            "Replace 24‑hour response deadline with three business days",
+            "Remove production order timeframe amendment (or set to 15 business days)",
+            "Establish mandatory compensation framework for service providers"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Replace 24‑hour response deadline with three business days",
+                "Remove production order timeframe amendment (or set to 15 business days)",
+                "Establish mandatory compensation framework for service providers"
+              ],
+              "quote": "For the above reasons, allowing for response deadlines of as little as 24 hours creates a material risk of unmanageable demand and does not reflect the diversity of service provider capabilities.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Extend minimum response times for confirmation of service demands to three business days and retain current production o",
+                "Limit regulatory obligations and metadata retention requirements for core providers, and establish a mandatory compensat",
+                "Extend safe harbour liability protection to include good-faith compliance with mandatory information demands and product"
+              ],
+              "quote": "With these improvements, the legislation can better achieve its intended objectives.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-05-13",
+          "checkedAt": "2026-10-29"
         }
       ]
     },
@@ -11335,7 +11644,7 @@
               ]
             }
           ],
-          "checked": "2026-10-30"
+          "checked": "2026-10-31"
         }
       ],
       "text": {
@@ -13287,7 +13596,92 @@
           "checked": "2026-10-27"
         }
       ],
-      "omnibus": true
+      "omnibus": true,
+      "positions": [
+        {
+          "name": "ALTO HSR Citizen Research",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13932764/br-external/AltoHsrCitizenResearch-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "This submission opposes the inclusion of Division 1 of Part 5 of Bill C-15 – the High-Speed Rail Network Act – in its current form.",
+          "asks": [
+            "Require environmental assessment before expropriation powers take effect",
+            "Mandate whole-of-life route cost comparison between northern and southern corridors",
+            "Preserve independent regulatory oversight and community consultation rights"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Require environmental assessment before expropriation powers take effect",
+                "Mandate whole-of-life route cost comparison between northern and southern corridors",
+                "Preserve independent regulatory oversight and community consultation rights"
+              ],
+              "quote": "This submission opposes the inclusion of Division 1 of Part 5 of Bill C-15 – the High-Speed Rail Network Act – in its current form.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Establish preconditions before expropriation powers take effect",
+                "Require a genuine whole-of-life route cost comparison",
+                "Protect existing regulatory checks and require meaningful consultation"
+              ],
+              "quote": "This submission opposes the inclusion of Division 1 of Part 5 of Bill C-15 – the High-Speed Rail Network Act – in its current form.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-03-05",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Canadian Refugee Health Network",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13932353/br-external/CanadianRefugeeHealthNetwork-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "The federal government’s decision to introduce co-payments for medications and supplemental services under the Interim Federal Health Program (IFHP) is fiscally counterproductive and poor health policy.",
+          "asks": [
+            "Maintain full IFHP coverage without co-payments",
+            "Accelerate refugee claim processing",
+            "Invest in early comprehensive primary care"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Maintain full IFHP coverage without co-payments",
+                "Accelerate refugee claim processing",
+                "Invest in early comprehensive primary care"
+              ],
+              "quote": "The federal government’s decision to introduce co-payments for medications and supplemental services under the Interim Federal Health Program (IFHP) is fiscally counterproductive and poor health policy.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Maintain full IFHP coverage without co-payments",
+                "Accelerate refugee claim processing to reduce prolonged IFHP costs",
+                "Invest in early comprehensive primary care"
+              ],
+              "quote": "The federal government’s decision to introduce co-payments for medications and supplemental services under the Interim Federal Health Program (IFHP) is fiscally counterproductive and poor health policy.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-03-05",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Barrhead Accessibility Coalition",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13921348/br-external/BarrheadAccessibilityCoalition-e.pdf",
+          "status": "unreadable",
+          "date": "2026-03-05",
+          "checkedAt": "2026-10-31"
+        }
+      ]
     },
     {
       "number": "C-31",
@@ -13300,11 +13694,11 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Hon. François-Philippe Champagne",
       "sponsorTitle": "Minister of Finance and National Revenue",
-      "status": "At consideration in committee in the House of Commons",
+      "status": "At report stage in the House of Commons",
       "latestEvent": {
-        "type": "Pre-study of House bill",
-        "date": "2026-06-10",
-        "chamber": "Senate"
+        "type": "Committee report presented",
+        "date": "2026-10-30",
+        "chamber": "House of Commons"
       },
       "progress": [
         true,
@@ -13324,7 +13718,7 @@
           "chamber": "House of Commons",
           "role": "study",
           "url": "https://www.ourcommons.ca/Committees/en/FINA?parl=45&session=1",
-          "current": true
+          "current": false
         },
         {
           "name": "Standing Senate Committee on National Finance",
@@ -13561,6 +13955,13 @@
         ],
         "sittings": [
           {
+            "date": "2026-10-30",
+            "chamber": "House",
+            "sitting": "159",
+            "event": "Committee report presented with amendments",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-159/hansard"
+          },
+          {
             "date": "2026-06-10",
             "chamber": "Senate",
             "sitting": "81",
@@ -13625,6 +14026,19 @@
         ]
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "159",
+          "date": "2026-10-30",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-159/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Karina Gould (Lib.)"
+          ],
+          "contexts": [
+            "Routine Proceedings: Committees of the House"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "158",
@@ -14088,7 +14502,7 @@
               ]
             }
           ],
-          "checked": "2026-10-30"
+          "checked": "2026-10-31"
         }
       ],
       "text": {
@@ -14857,6 +15271,26 @@
       "activity": {
         "meetings": [
           {
+            "date": "2026-10-29",
+            "chamber": "House",
+            "committee": "CHPC",
+            "number": "50",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/CHPC/meeting-50/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Association of Broadcasters",
+                "Cardus"
+              ],
+              "people": [
+                "Hon. Marty Deacon, Senator, Ontario",
+                "Hon. Bardish Chagger, P.C., M.P., Waterloo"
+              ],
+              "appearing": []
+            },
+            "study": "13461005",
+            "amendments": []
+          },
+          {
             "date": "2025-10-07",
             "chamber": "Senate",
             "committee": "TRCM",
@@ -15008,7 +15442,457 @@
         "inForce": [],
         "penalties": [],
         "provisionCount": 6
-      }
+      },
+      "studies": [
+        {
+          "chamber": "House",
+          "committee": "CHPC",
+          "id": "13461005",
+          "url": "https://www.ourcommons.ca/Committees/en/CHPC/StudyActivity?studyActivityId=13461005",
+          "briefs": [
+            {
+              "name": "Graboski, Lucas",
+              "individual": true,
+              "date": "2026-10-30",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14302843/br-external/GraboskiLucas-e.pdf"
+            },
+            {
+              "name": "Reset Counselling",
+              "individual": false,
+              "date": "2026-10-27",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14286746/br-external/RESETCounselling-e.pdf"
+            },
+            {
+              "name": "Cardus",
+              "individual": false,
+              "date": "2026-10-27",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14286114/br-external/CARDUS-e.pdf"
+            },
+            {
+              "name": "Canadian Alliance for Regulated Gaming",
+              "individual": false,
+              "date": "2026-10-22",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14276531/br-external/CanadianAllianceForRegulatedGaming-e.pdf"
+            },
+            {
+              "name": "Canadian Association of Broadcasters",
+              "individual": false,
+              "date": "2026-10-22",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14276517/br-external/Canadian Association of Broadcasters-e.pdf"
+            },
+            {
+              "name": "Ad Standards",
+              "individual": false,
+              "date": "2026-10-22",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14276455/br-external/Ad Standards-e.pdf"
+            },
+            {
+              "name": "Service Alberta and Red Tape Reduction",
+              "individual": false,
+              "date": "2026-10-16",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14265475/br-external/ServiceAlbertaAndRedTapeReduction-e.pdf"
+            },
+            {
+              "name": "Ban Ads for Gambling",
+              "individual": false,
+              "date": "2026-10-16",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14265474/br-external/BanAdsForGambling-e.pdf"
+            },
+            {
+              "name": "Canadian Psychological Association",
+              "individual": false,
+              "date": "2026-10-16",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14265471/br-external/CanadianPsychologicalAssociation-e.pdf"
+            },
+            {
+              "name": "Mississaugas of Scugog Island First Nation",
+              "individual": false,
+              "date": "2026-08-13",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14221171/br-external/MississaugasOfScugogIslandFirstNation-e.pdf"
+            },
+            {
+              "name": "Canadian Gaming Association",
+              "individual": false,
+              "date": "2026-06-30",
+              "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14215782/br-external/CanadianGamingAssociation-e.pdf"
+            }
+          ],
+          "witnesses": [
+            {
+              "name": "As an individual",
+              "people": [
+                "Hon. Bardish Chagger",
+                "Hon. Marty Deacon"
+              ],
+              "meetings": [
+                "50"
+              ]
+            },
+            {
+              "name": "Canadian Association of Broadcasters",
+              "people": [
+                "Kevin Desjardins"
+              ],
+              "meetings": [
+                "50"
+              ]
+            },
+            {
+              "name": "Cardus",
+              "people": [
+                "Renze Nauta"
+              ],
+              "meetings": [
+                "50"
+              ]
+            }
+          ],
+          "checked": "2026-10-31"
+        }
+      ],
+      "positions": [
+        {
+          "name": "Reset Counselling",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14286746/br-external/RESETCounselling-e.pdf",
+          "status": "agreed",
+          "stance": "supports",
+          "quote": "I support Bill S-211 as an important first step toward a coordinated national response to gambling advertising and its potential harms.",
+          "asks": [
+            "Prioritize vulnerable populations in the national framework",
+            "Examine advertising across all media and promotional incentives",
+            "Strengthen protections for children and adolescents"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports",
+              "asks": [
+                "Prioritize vulnerable populations in the national framework",
+                "Examine advertising across all media and promotional incentives",
+                "Strengthen protections for children and adolescents"
+              ],
+              "quote": "I support Bill S-211 as an important first step toward a coordinated national response to gambling advertising and its potential harms.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports",
+              "asks": [
+                "Prioritize vulnerable populations and recognize harms beyond gambling participation in the framework",
+                "Address targeted marketing, promotional incentives, and advertising across all contemporary media",
+                "Include frontline clinicians and affected individuals in consultations, and examine all gambling products and simulated "
+              ],
+              "quote": "I support Bill S-211 as an important first step toward a coordinated national response to gambling advertising and its potential harms.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-27",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Cardus",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14286114/br-external/CARDUS-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "To strengthen the Bill S-211, Cardus recommends that the committee make the following amendments:",
+          "asks": [
+            "Ban all sports betting advertising, including during broadcasts and in-game bets",
+            "Require gambling corporations to fund research, prevention, and treatment proportionally to marketing spend",
+            "Improve prevention messaging with clear calls to action"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Ban all sports betting advertising, including during broadcasts and in-game bets",
+                "Require gambling corporations to fund research, prevention, and treatment proportionally to marketing spend",
+                "Improve prevention messaging with clear calls to action"
+              ],
+              "quote": "Cardus supports the creation of a national framework on sports betting advertising.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Ban sports betting advertising, or at minimum ban it during sports broadcasts and for in-game bets",
+                "Require measures for gambling corporations to financially contribute to problem gambling research, prevention, and treat",
+                "Identify measures to improve the efficacy of gambling prevention messaging"
+              ],
+              "quote": "To strengthen the Bill S-211, Cardus recommends that the committee make the following amendments:",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-27",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Canadian Alliance for Regulated Gaming",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14276531/br-external/CanadianAllianceForRegulatedGaming-e.pdf",
+          "status": "agreed",
+          "stance": "supports",
+          "quote": "The Canadian Alliance for Regulated Gaming supports Bill S-211 and believes it should proceed without delay.",
+          "asks": [
+            "Enact Bill S-211 without delay",
+            "Strengthen federal advertising and direct‑marketing standards",
+            "Coordinate enforcement against unauthorized operators"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports",
+              "asks": [
+                "Enact Bill S-211 without delay",
+                "Strengthen federal advertising and direct‑marketing standards",
+                "Coordinate enforcement against unauthorized operators"
+              ],
+              "quote": "The Canadian Alliance for Regulated Gaming supports Bill S-211 and believes it should proceed without delay.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports",
+              "asks": [
+                "Enact Bill S-211 without delay and without amendments",
+                "Establish a coordinated federal working group alongside provincial and territorial authorities",
+                "Use existing federal authorities to strengthen advertising protections and enforce against unauthorized operators"
+              ],
+              "quote": "The Canadian Alliance for Regulated Gaming supports Bill S-211 and believes it should proceed without delay.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-22",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Canadian Association of Broadcasters",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14276517/br-external/Canadian Association of Broadcasters-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "This combination of national advertising standards and provincial gaming regulation already achieves what Bill S-211 contemplates, without creating another layer of federal regulation.",
+          "asks": [
+            "Amend Section 3(2)(a) to require gap analysis before restrictions",
+            "Add Section 3(2)(d) to assess existing provincial and industry standards",
+            "Ensure measures are evidence-based, proportionate, and platform-specific"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Amend Section 3(2)(a) to require gap analysis before restrictions",
+                "Add Section 3(2)(d) to assess existing provincial and industry standards",
+                "Ensure measures are evidence-based, proportionate, and platform-specific"
+              ],
+              "quote": "However, Bill S-211 appears to proceed from the assumption that there is a significant gap in the regulation of sports betting advertising in Canada, which is simply not true.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Assess existing provincial regulations and industry codes before creating a new federal framework",
+                "Target any federal action at offshore or illegal operators on global digital and social media platforms",
+                "Amend Bill S-211 to remove presumptive language and require evidence-based gap analysis if the bill proceeds"
+              ],
+              "quote": "This combination of national advertising standards and provincial gaming regulation already achieves what Bill S-211 contemplates, without creating another layer of federal regulation.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-22",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Ad Standards",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14276455/br-external/Ad Standards-e.pdf",
+          "status": "agreed",
+          "stance": "no clear position",
+          "quote": "We hope that this information about the existing self-regulatory framework in this space is helpful to the Committee as it considers Bill S-211 and would be happy to elaborate further about our work.",
+          "asks": [
+            "Consider existing self-regulatory framework",
+            "Incorporate CGA Code insights",
+            "Opportunity to provide further input"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "no clear position",
+              "asks": [
+                "Consider existing self-regulatory framework",
+                "Incorporate CGA Code insights",
+                "Opportunity to provide further input"
+              ],
+              "quote": "We hope that this information about the existing self-regulatory framework in this space is helpful to the Committee as it considers Bill S-211 and would be happy to elaborate further about our work.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "no clear position",
+              "asks": [
+                "Consider factual context about advertising self-regulation and Ad Standards' work in gaming advertising"
+              ],
+              "quote": "This submission is intended to provide factual context about those functions and the practical experience they may offer to the study of Bill S-211.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-22",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Service Alberta and Red Tape Reduction",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14265475/br-external/ServiceAlbertaAndRedTapeReduction-e.pdf",
+          "status": "unreadable",
+          "date": "2026-10-16",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Ban Ads for Gambling",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14265474/br-external/BanAdsForGambling-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Such an intensifying crisis necessitates immediate action, which is why we recommend that Bill S-211 An Act respecting a national framework on sports betting advertising be passed, with amendments establishing an immediate ban on advertising, as soon as possible.",
+          "asks": [
+            "amend Bill S-211 to include online gambling and ban all advertising",
+            "pass Bill S-211 as amended",
+            "adopt comprehensive public health strategy for gambling"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "amend Bill S-211 to include online gambling and ban all advertising",
+                "pass Bill S-211 as amended",
+                "adopt comprehensive public health strategy for gambling"
+              ],
+              "quote": "We therefore urge the Committee to amend the bill to immediately and completely prohibit advertising for sports betting and other forms of gambling.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend Bill S-211 to include online casinos, video games, prediction markets and other online gambling",
+                "Immediately prohibit all forms of advertising for sports betting and other forms of gambling",
+                "Urge the government to adopt a public health strategy and ratify the Macolin Convention"
+              ],
+              "quote": "Such an intensifying crisis necessitates immediate action, which is why we recommend that Bill S-211 An Act respecting a national framework on sports betting advertising be passed, with amendments establishing an immediate ban on advertising, as soon as possible.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-16",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Canadian Psychological Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14265471/br-external/CanadianPsychologicalAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Our position is clear: protect Canadians now by prohibiting online-gambling marketing, extend protections across gambling products, and develop further safeguards with that prohibition in place.",
+          "asks": [
+            "Prohibit all online gambling advertising immediately",
+            "Extend framework to cover all online gambling products",
+            "Center regulations on public health and evidence"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Prohibit all online gambling advertising immediately",
+                "Extend framework to cover all online gambling products",
+                "Center regulations on public health and evidence"
+              ],
+              "quote": "Our position is clear: protect Canadians now by prohibiting online-gambling marketing, extend protections across gambling products, and develop further safeguards with that prohibition in place.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Establish an immediate prohibition on online gambling advertising, marketing, and promotion",
+                "Extend the protective framework beyond sports betting to all forms of online gambling",
+                "Develop additional evidence-informed protections with the advertising prohibition already in place"
+              ],
+              "quote": "The CPA welcomes the intent to regulate embodied in Bill S-211 but believes the current approach does not go far enough or act fast enough.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-10-16",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Mississaugas of Scugog Island First Nation",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14221171/br-external/MississaugasOfScugogIslandFirstNation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "MSIFN supports the objectives of Bill S-211, but recommends that the Committee strengthen the bill so the national framework applies to advertising for all forms of online betting and gambling, not only sports betting.",
+          "asks": [
+            "Apply framework to all online gambling advertising",
+            "Limit ad frequency and placement for children and youth",
+            "Ensure meaningful First Nations consultation"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Apply framework to all online gambling advertising",
+                "Limit ad frequency and placement for children and youth",
+                "Ensure meaningful First Nations consultation"
+              ],
+              "quote": "MSIFN supports the objectives of Bill S-211, but recommends that the Committee strengthen the bill so the national framework applies to advertising for all forms of online betting and gambling, not only sports betting.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Broaden the scope to apply to advertising for all online betting and gambling products",
+                "Restrict the volume, placement, and content of gambling advertising",
+                "Ensure meaningful consultation with First Nations governments and Indigenous-led organizations"
+              ],
+              "quote": "MSIFN supports the objectives of Bill S-211, but recommends that the Committee strengthen the bill so the national framework applies to advertising for all forms of online betting and gambling, not only sports betting.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-08-13",
+          "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Canadian Gaming Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/CHPC/Brief/BR14215782/br-external/CanadianGamingAssociation-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Protect provincial jurisdiction in any national framework",
+                "Require mandatory consultation with provincial/territorial governments",
+                "Include provincial input before implementing federal regulations"
+              ],
+              "quote": "Should the Committee decide to proceed with Bill S-211, we respectfully encourage you to consider supporting and advancing amendments that ensure provincial and territorial rights are upheld.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Respect provincial and territorial jurisdiction over gambling regulation without requiring federal legislation",
+                "Adopt amendments to consult provinces and protect their jurisdiction if Bill S-211 proceeds",
+                "Explore targeted federal measures against illicit operators and provide funding for health and research initiatives"
+              ],
+              "quote": "While we recognize the efforts behind the bill in generating a national conversation on responsible and effective advertising standards, we respectfully submit that Bill S-211 would encroach on an area of well-established provincial jurisdiction and does not reflect the appropriate approach to addressing this policy challenge.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-06-30",
+          "checkedAt": "2026-10-31"
+        }
+      ]
     },
     {
       "number": "C-25",
@@ -15912,15 +16796,15 @@
               "stance": "supports with amendments",
               "asks": [
                 "Prohibit all false claims during elections and remove proof of intent requirements",
-                "Tighten rules on foreign influence, fundraising transparency, and third-party spending",
-                "Mandate Elections Canada to report on electoral reform and campaign/party operating costs"
+                "Delete sections 28-30 and increase transparency for fundraising events",
+                "Tighten third-party spending rules and prohibit foreign influence loopholes"
               ],
-              "quote": "All of these changes are needed to actually, finally, have coherent, ethical, democratic, fair and egalitarian political finance, electoral and policy-making systems.",
+              "quote": "A. Amendments to Bill C-25 to help stop disinformation, undemocratic thirdparty influence and foreign interference, and close information gaps",
               "quoteOk": "exact"
             }
           ],
           "date": "2026-05-27",
-          "checkedAt": "2026-10-30"
+          "checkedAt": "2026-10-31"
         },
         {
           "name": "Saskatchewan Stands with Hong Kong",
@@ -17160,7 +18044,7 @@
               ]
             }
           ],
-          "checked": "2026-10-30"
+          "checked": "2026-10-31"
         }
       ],
       "text": {
@@ -17604,6 +18488,18 @@
   ],
   "changelog": [
     {
+      "date": "2026-10-30",
+      "number": "C-31",
+      "kind": "status",
+      "text": "Status now: At report stage in the House of Commons"
+    },
+    {
+      "date": "2026-10-29",
+      "number": "C-34",
+      "kind": "status",
+      "text": "Status now: At consideration in committee in the House of Commons"
+    },
+    {
       "date": "2026-10-29",
       "number": "C-34",
       "kind": "stage",
@@ -17624,7 +18520,7 @@
   ],
   "upcoming": [],
   "scan": {
-    "houseSitting": 158,
+    "houseSitting": 159,
     "senateSitting": 98
   }
 }
