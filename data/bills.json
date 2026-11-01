@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-31T15:53:37.110Z",
+  "checkedAt": "2026-11-01T17:01:04.108Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -4097,6 +4097,38 @@
           "checkedAt": "2026-10-30"
         },
         {
+          "name": "Regroupement des maisons pour femmes victimes de violence conjugale",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14005608/br-external/RegroupementDesMaisonsPourFemmesVictimesDeViolenceConjugale-067-260407-012-e.pdf",
+          "status": "quote-unverified",
+          "stance": "supports with amendments",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend clause 28 to adopt “coercion or control of an intimate partner” wording",
+                "Include protective orders for survivors of coercive control",
+                "Exclude intimate partner offences from alternative measures and require victim consent"
+              ],
+              "quote": "Le Regroupement est heureux de constater que le gouvernement s’attaque à la création d’une nouvelle infraction, le contrôle coercitif, et propose un certain nombre d’amendements pour clarifier ces infractions et en faciliter la preuve.",
+              "quoteOk": "not found"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend clauses on coercive control, criminal harassment, and femicide to clarify definitions and ease the burden of proof",
+                "Require victim consent for alternative measures and exclude intimate partner violence from police-initiated alternative ",
+                "Provide a two-year implementation delay, mandatory training for socio-judicial actors, monitoring mechanisms, and period"
+              ],
+              "quote": "The Regroupement proposes a number of amendments to clarify these offences and make it easier to prove them.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-04-16",
+          "checkedAt": "2026-10-31"
+        },
+        {
           "name": "Survivor Safety Matters",
           "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14001212/br-external/SurvivorSafetyMatters-e.pdf",
           "status": "split",
@@ -4286,38 +4318,6 @@
           ],
           "date": "2026-04-16",
           "checkedAt": "2026-10-30"
-        },
-        {
-          "name": "Regroupement des maisons pour femmes victimes de violence conjugale",
-          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR14005608/br-external/RegroupementDesMaisonsPourFemmesVictimesDeViolenceConjugale-067-260407-012-e.pdf",
-          "status": "quote-unverified",
-          "stance": "supports with amendments",
-          "readings": [
-            {
-              "model": "Cohere",
-              "stance": "supports with amendments",
-              "asks": [
-                "Amend clause 28 to adopt “coercion or control of an intimate partner” wording",
-                "Include protective orders for survivors of coercive control",
-                "Exclude intimate partner offences from alternative measures and require victim consent"
-              ],
-              "quote": "Le Regroupement est heureux de constater que le gouvernement s’attaque à la création d’une nouvelle infraction, le contrôle coercitif, et propose un certain nombre d’amendements pour clarifier ces infractions et en faciliter la preuve.",
-              "quoteOk": "not found"
-            },
-            {
-              "model": "Google",
-              "stance": "supports with amendments",
-              "asks": [
-                "Amend clauses on coercive control, criminal harassment, and femicide to clarify definitions and ease the burden of proof",
-                "Require victim consent for alternative measures and exclude intimate partner violence from police-initiated alternative ",
-                "Provide a two-year implementation delay, mandatory training for socio-judicial actors, monitoring mechanisms, and period"
-              ],
-              "quote": "The Regroupement proposes a number of amendments to clarify these offences and make it easier to prove them.",
-              "quoteOk": "exact"
-            }
-          ],
-          "date": "2026-04-16",
-          "checkedAt": "2026-10-31"
         },
         {
           "name": "Justice Facility Dogs Canada",
@@ -4613,26 +4613,6 @@
           "checkedAt": "2026-10-31"
         },
         {
-          "name": "The Canadian Bar Association",
-          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13949997/br-external/TheCanadianBarAssociation-e.pdf",
-          "status": "incomplete",
-          "readings": [
-            {
-              "model": "Google",
-              "stance": "supports with amendments",
-              "asks": [
-                "Direct resources to systemic causes of judicial delay instead of creating alternative remedies for section 11(b) violati",
-                "Maintain full judicial discretion in sentencing rather than mandating minimum terms of imprisonment",
-                "Clarify and narrow the new coercive control offence and recognize femicide and coercive control as statutory aggravating"
-              ],
-              "quote": "The CBA welcomes this opportunity to engage constructively with Parliament to refine Bill C-16 so that it achieves its vital objectives of enhancing safety, justice, and the rule of law for all Canadians.",
-              "quoteOk": "exact"
-            }
-          ],
-          "date": "2026-03-05",
-          "checkedAt": "2026-10-31"
-        },
-        {
           "name": "National Institute on Ageing",
           "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13948815/br-external/NationalInstituteOnAgeing-e.pdf",
           "status": "agreed",
@@ -4671,6 +4651,44 @@
           "checkedAt": "2026-10-31"
         },
         {
+          "name": "The Canadian Bar Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13949997/br-external/TheCanadianBarAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "The CBA welcomes this opportunity to engage constructively with Parliament to refine Bill C-16 so that it achieves its vital objectives of enhancing safety, justice, and the rule of law for all Canadians.",
+          "asks": [
+            "Address systemic causes of delays instead of new section 11(b) framework",
+            "Recognize femicide and coercive control as aggravating factors for homicide",
+            "Extend notice period to 60 days"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Address systemic causes of delays instead of new section 11(b) framework",
+                "Recognize femicide and coercive control as aggravating factors for homicide",
+                "Extend notice period to 60 days"
+              ],
+              "quote": "The CBA welcomes this opportunity to engage constructively with Parliament to refine Bill C-16 so that it achieves its vital objectives of enhancing safety, justice, and the rule of law for all Canadians.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Address systemic causes of judicial delay through targeted resources rather than altering stay remedies",
+                "Maintain judicial discretion in sentencing rather than mandating minimum terms of imprisonment",
+                "Clarify and narrow the definition of the coercive control offence and recognize femicide and coercive control as statuto"
+              ],
+              "quote": "The CBA welcomes this opportunity to engage constructively with Parliament to refine Bill C-16 so that it achieves its vital objectives of enhancing safety, justice, and the rule of law for all Canadians.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-03-05",
+          "checkedAt": "2026-11-01"
+        },
+        {
           "name": "Sagesse Domestic Violence Prevention Society",
           "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13943633/br-external/SagesseDomesticViolencePreventionSociety-e.pdf",
           "status": "agreed",
@@ -4707,6 +4725,228 @@
           ],
           "date": "2026-03-02",
           "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Bridge2Future",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13875573/br-external/Bridge2Future-e.pdf",
+          "status": "incomplete",
+          "readings": [
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Establish a federal expedited civil removal process for non-consensual intimate images and CSAM",
+                "Extend coercive control offences beyond intimate partners to include human trafficking relationships",
+                "Strengthen platform accountability through mandatory takedown timelines and severe penalties for non-compliance"
+              ],
+              "quote": "While we commend the government's significant reforms strengthening protections for victims of gender-based violence, three substantial deficiencies require parliamentary attention:",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-26",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "Lawyers Without Borders",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13939796/br-external/LawyersWithoutBorders-e.pdf",
+          "status": "quote-unverified",
+          "stance": "supports with amendments",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "reword the definition of femicide categories to include broader circumstances",
+                "adopt a holistic and intersectional implementation approach with prevention and support",
+                "establish specialized courts, fund support services, and provide training"
+              ],
+              "quote": "LWB Canada welcomes the fact that Bill C-16 incorporates the concept of femicide as first degree murder, as well as the advances it proposes in terms of coercive control and a victim-centred approach.",
+              "quoteOk": "close"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Reword and expand the definition of the categories of femicide in the bill",
+                "Take into account objective and factual circumstances based on gender discrimination when analyzing evidence",
+                "Adopt a holistic and intersectional approach to implementation with concrete mechanisms like specialized courts, shelter"
+              ],
+              "quote": "LWB Canada welcomes the fact that Bill C -16 incorporates the concept of femicide as first degree murder, as well as the advances it proposes in terms of coercive control and a victim -centred approach.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-26",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "BC Coalition of Experiential Communities",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13939774/br-external/BCCoalitionOfExperientialCommunities-e.pdf",
+          "status": "incomplete",
+          "readings": [
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Explicitly recognize sex workers as disproportionately affected by violent crime",
+                "Clarify trafficking definitions to not conflate consensual adult sex work with exploitation and include safeguards again",
+                "Incorporate a targeted GBA+ analysis and address systemic reporting barriers for sex workers"
+              ],
+              "quote": "However, Bill C-16 reflects a persistent structural omission: it does not explicitly recognize sex workers as a defined population of women who experience elevated victimization outside trafficking contexts.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-26",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "Animal Justice",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13937000/br-external/AnimalJustice-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "In summary, we recommend that Bill C-16 should be amended to add a new offence criminalizing the distribution and making available of visual representations of extreme animal torture, with delineated exclusions and a good‑faith reporting safe harbour.",
+          "asks": [
+            "add offence for animal crush videos",
+            "include lawful activity exclusions",
+            "provide good‑faith reporting safe harbour"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "add offence for animal crush videos",
+                "include lawful activity exclusions",
+                "provide good‑faith reporting safe harbour"
+              ],
+              "quote": "We respectfully urge this Committee to further strengthen this provision to prohibit the publication, distribution, and sale of animal “crush” and torture videos.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Prohibit the publication, distribution, and sale of visual representations of extreme animal torture (animal crush video",
+                "Include exclusions for lawful activities such as veterinary practice, agriculture, hunting, fishing, scientific research",
+                "Include a safe harbour for good-faith reporting to law enforcement or competent authorities"
+              ],
+              "quote": "In summary, we recommend that Bill C-16 should be amended to add a new offence criminalizing the distribution and making available of visual representations of extreme animal torture, with delineated exclusions and a good‑faith reporting safe harbour.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-26",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "Canadian Network for the Prevention of Elder Abuse",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13928893/br-external/CanadianNetworkForThePreventionOfElderAbuse-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Along with other members of the Elder Justice Coalition, we propose amending Bill C-16 so the coercive control offence applies beyond intimate partners and includes relatives.",
+          "asks": [
+            "Expand coercive control offence to include relatives",
+            "Include informal caregivers and trust relationships",
+            "Review after two years for further extension"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Expand coercive control offence to include relatives",
+                "Include informal caregivers and trust relationships",
+                "Review after two years for further extension"
+              ],
+              "quote": "Expanding legislative definitions to include these relationships is essential to provide comprehensive protection for this vulnerable and growing segment of our population.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend the coercive control offence to apply beyond intimate partners and include relatives",
+                "Review the law after two years to consider extending it to informal caregivers and relationships of trust and dependence"
+              ],
+              "quote": "Along with other members of the Elder Justice Coalition, we propose amending Bill C-16 so the coercive control offence applies beyond intimate partners and includes relatives.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-24",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "Dementia Justice Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13919025/br-external/DementiaJusticeCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "This submission urges parliamentarians to amend Bill C-16 so that the proposed coercive control offence extends beyond intimate partners and protects elder abuse victims.",
+          "asks": [
+            "Extend offence to relatives",
+            "Include informal caregivers and trust relationships",
+            "Review after two years for further expansion"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Extend offence to relatives",
+                "Include informal caregivers and trust relationships",
+                "Review after two years for further expansion"
+              ],
+              "quote": "This submission urges parliamentarians to amend Bill C-16 so that the proposed coercive control offence extends beyond intimate partners and protects elder abuse victims.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Extend the coercive control offence beyond intimate partners to include relatives",
+                "Review the legislation two years after implementation to consider extending it to informal caregivers and others in rela"
+              ],
+              "quote": "This submission urges parliamentarians to amend Bill C-16 so that the proposed coercive control offence extends beyond intimate partners and protects elder abuse victims.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-17",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "Criminal Lawyers' Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13919029/br-external/CriminalLawyersAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "The CLA welcomes many of the proposed amendments included in Bill C-16, particularly those ensuring that the criminal law evolves with emerging technologies, those that reduce inefficiencies, improve outcomes, and bring harmony to the Criminal Code as a whole.",
+          "asks": [
+            "Remove Stage One service requirement for complainants",
+            "Maintain current criminal harassment wording",
+            "Remove new manslaughter sentencing provisions"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Remove Stage One service requirement for complainants",
+                "Maintain current criminal harassment wording",
+                "Remove new manslaughter sentencing provisions"
+              ],
+              "quote": "The CLA welcomes many of the proposed amendments included in Bill C-16, particularly those ensuring that the criminal law evolves with emerging technologies, those that reduce inefficiencies, improve outcomes, and bring harmony to the Criminal Code as a whole.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Remove requirement for service of Stage One applications on complainants",
+                "Remove 'reasonable doubt' threshold for production of therapeutic records",
+                "Maintain current definitions and sentencing for criminal harassment and manslaughter"
+              ],
+              "quote": "The CLA welcomes many of the proposed amendments included in Bill C-16, particularly those ensuring that the criminal law evolves with emerging technologies, those that reduce inefficiencies, improve outcomes, and bring harmony to the Criminal Code as a whole.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-17",
+          "checkedAt": "2026-11-01"
         }
       ]
     },
@@ -5945,6 +6185,84 @@
             }
           ],
           "checked": "2026-10-27"
+        }
+      ],
+      "positions": [
+        {
+          "name": "Canadian Muslim Forum",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13922576/br-external/CanadianMuslimForum-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "This brief identifies key risks in the current draft of Bill C-9 and proposes targeted amendments to preserve the Bill’s protective purpose while reducing the likelihood of overreach, wrongful investigations, and disproportionate impacts on vulnerable communities.",
+          "asks": [
+            "Remove any provision seeking to repeal Section 319(3)(b) of the Criminal Code",
+            "Establish a mandatory judicial screening step before indictment for hate-motivated offences",
+            "Add an explicit lawful protest exception for peaceful assemblies that comply with permits and public order laws"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Remove any provision seeking to repeal Section 319(3)(b) of the Criminal Code",
+                "Establish a mandatory judicial screening step before indictment for hate-motivated offences",
+                "Add an explicit lawful protest exception for peaceful assemblies that comply with permits and public order laws"
+              ],
+              "quote": "This brief identifies key risks in the current draft of Bill C-9 and proposes targeted amendments to preserve the Bill’s protective purpose while reducing the likelihood of overreach, wrongful investigations, and disproportionate impacts on vulnerable communities.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Retain the religious good faith defense under Section 319(3)(b) of the Criminal Code",
+                "Narrow the scope of the hate symbols offence and require hatred to be a substantial motive with judicial screening for t",
+                "Consolidate the intimidation and obstruction offences, add an explicit exception for peaceful protests, and reduce the m"
+              ],
+              "quote": "This brief identifies key risks in the current draft of Bill C-9 and proposes targeted amendments to preserve the Bill’s protective purpose while reducing the likelihood of overreach, wrongful investigations, and disproportionate impacts on vulnerable communities.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-20",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "Canadian Association for Free Expression Inc.",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13903178/br-external/CanadianAssociationForFreeExpressionInc-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "CAFE is utterly opposed to Bill C-9 as an outrageous infringement on free speech.",
+          "asks": [
+            "defeat Bill C-9",
+            "keep provincial Attorney General consent requirement",
+            "reject symbol ban"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "defeat Bill C-9",
+                "keep provincial Attorney General consent requirement",
+                "reject symbol ban"
+              ],
+              "quote": "CAFE is utterly opposed to Bill C-9 as an outrageous infringement on free speech.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Urge the defeat of Bill C-9",
+                "Retain requirement for provincial Attorney General's consent for laying hate charges",
+                "Reject banning public display of certain symbols and creating a standalone hate crime offence"
+              ],
+              "quote": "CAFE is utterly opposed to Bill C-9 as an outrageous infringement on free speech.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-11",
+          "checkedAt": "2026-11-01"
         }
       ]
     },
@@ -7652,22 +7970,72 @@
         {
           "name": "Kyndryl Canada",
           "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13925185/br-external/KyndrylCanada-e.pdf",
-          "status": "incomplete",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Bill C-8 represents an important step in strengthening the security of critical cyber systems and recognizing the importance of supply chain risk management.",
+          "asks": [
+            "Limit scope to entities providing vital services only",
+            "Narrow personal liability and limit imprisonment provisions",
+            "Require risk‑based supply chain decisions and incident reporting thresholds"
+          ],
           "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Limit scope to entities providing vital services only",
+                "Narrow personal liability and limit imprisonment provisions",
+                "Require risk‑based supply chain decisions and incident reporting thresholds"
+              ],
+              "quote": "Bill C-8 represents an important step in strengthening the security of critical cyber systems and recognizing the importance of supply chain risk management.",
+              "quoteOk": "exact"
+            },
             {
               "model": "Google",
               "stance": "supports with amendments",
               "asks": [
-                "Exclude suppliers and service providers from the scope of Bill C-8",
-                "Narrow personal liability for directors, officers, and employees to affirmative criminal conduct",
-                "Establish materiality thresholds and risk-based criteria for supply chain security and incident reporting"
+                "Exclude suppliers and service providers from the Bill's direct scope and limit Governor in Council authority to expand i",
+                "Narrow personal liability for directors, officers, and employees to cases of affirmative criminal conduct",
+                "Introduce risk-based and materiality thresholds for supply chain risk mitigation and 72-hour incident reporting"
               ],
               "quote": "Bill C-8 represents an important step in strengthening the security of critical cyber systems and recognizing the importance of supply chain risk management.",
               "quoteOk": "exact"
             }
           ],
           "date": "2026-03-02",
-          "checkedAt": "2026-10-31"
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "National Security and Intelligence Review Agency Secretariat",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13927665/br-external/NationalSecurityAndIntelligenceReviewAgency-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports",
+              "asks": [
+                "Allocate adequate resources to NSIRA for expanded responsibilities",
+                "Ensure independent review of new cybersecurity powers to protect rights",
+                "Include NSIRA’s oversight in the bill’s implementation"
+              ],
+              "quote": "NSIRA welcomes the opportunity to contribute to Parliament’s consideration of legislation that engages Canada’s national security framework.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "no clear position",
+              "asks": [
+                "Ensure NSIRA receives adequate resources to meet increased review demands",
+                "Maintain careful safeguards and independent review to prevent abuse of ministerial discretion",
+                "Ensure new powers and information-sharing respect privacy and fundamental rights"
+              ],
+              "quote": "To maintain the independence of the review process, it is essential that NSIRA receives the resources needed to meet these increased demands.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-23",
+          "checkedAt": "2026-11-01"
         }
       ]
     },
@@ -10203,22 +10571,34 @@
         {
           "name": "The Canadian Bar Association",
           "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR14136914/br-external/CanadianBarAssociation-e.pdf",
-          "status": "incomplete",
+          "status": "split",
+          "stance": "",
           "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Increase confirmation of service demand timeframe to 48–72 hours",
+                "Limit subscriber information definition to identifying data only",
+                "Remove Ministerial Orders and require judicial oversight"
+              ],
+              "quote": "The CBA Sections oppose legislative practices that diminish debate and stakeholder engagement.",
+              "quoteOk": "exact"
+            },
             {
               "model": "Google",
               "stance": "supports with amendments",
               "asks": [
-                "Separate Part 1 and Part 2 of the bill",
-                "Remove Ministerial Orders and increase judicial oversight and procedural safeguards",
-                "Narrow definitions and explicitly prohibit undermining encryption"
+                "Separate Part 1 and Part 2 of the bill to allow proper debate",
+                "Strengthen judicial oversight, procedural safeguards, and privacy protections to ensure Charter compliance",
+                "Remove Ministerial Orders and explicitly prohibit obligations to undermine or circumvent encryption"
               ],
               "quote": "The recommendations suggested by the CBA Sections intend to be a good faith contribution to Parliament’s important deliberations in crafting laws that are effective, understandable and consistent with the Charter.",
               "quoteOk": "exact"
             }
           ],
           "date": "2026-06-09",
-          "checkedAt": "2026-10-31"
+          "checkedAt": "2026-11-01"
         },
         {
           "name": "Canadian Civil Liberties Association",
@@ -11644,7 +12024,7 @@
               ]
             }
           ],
-          "checked": "2026-10-31"
+          "checked": "2026-11-01"
         }
       ],
       "text": {
@@ -13680,6 +14060,398 @@
           "status": "unreadable",
           "date": "2026-03-05",
           "checkedAt": "2026-10-31"
+        },
+        {
+          "name": "Shakepay Inc.",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13932406/br-external/Shakepay-e.pdf",
+          "status": "quote-unverified",
+          "stance": "supports with amendments",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Define stablecoin in statute",
+                "Limit yield prohibition to issuer-paid only",
+                "Allow digital assets in registered accounts"
+              ],
+              "quote": "We respectfully recommend the House of Commons Standing Committee on Finance: 1. Refine stablecoin definition with explicit statutory language emphasizing payment and settlement function (Section A.1)",
+              "quoteOk": "close"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Refine the statutory definition of stablecoins and narrow the Section 32 yield prohibition",
+                "Encourage CAD-backed stablecoin issuance and address data sovereignty requirements",
+                "Amend Income Tax Regulations to include decentralized digital assets as qualified investments"
+              ],
+              "quote": "The current Stablecoin Act creates a best-in-class regulatory framework for issuance and oversight.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-03-02",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "C.D. Howe Institute",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13932677/br-external/CDHoweInstitute-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "However, we identify several areas where Bill C-15's provisions could be strengthened or where the subsequent regulatory implementation phase will need to address critical gaps.",
+          "asks": [
+            "Create a two‑track regulatory model for payment stablecoins and tokenized bank deposits",
+            "Develop a central bank digital currency to serve as a neutral settlement layer",
+            "Extend Bank of Canada liquidity facilities to regulated stablecoin issuers"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Create a two‑track regulatory model for payment stablecoins and tokenized bank deposits",
+                "Develop a central bank digital currency to serve as a neutral settlement layer",
+                "Extend Bank of Canada liquidity facilities to regulated stablecoin issuers"
+              ],
+              "quote": "However, we identify several areas where Bill C-15's provisions could be strengthened or where the subsequent regulatory implementation phase will need to address critical gaps.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Establish a dedicated resolution framework and amend bankruptcy legislation to protect stablecoin holders",
+                "Reconsider the prohibition on interest payments in Section 32 of the Stablecoin Act",
+                "Design a two-track regulatory framework, integrate with a CBDC, and extend Bank of Canada liquidity facilities"
+              ],
+              "quote": "However, we identify several areas where Bill C-15's provisions could be strengthened or where the subsequent regulatory implementation phase will need to address critical gaps.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-03-02",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "Canadian Bankers Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13941740/br-external/CanadianBankersAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "The Act should be amended, including through the removal of section 93, the introduction of a new section, and an adjustment to section 92, to confirm that responsibility for obtaining, maintaining, and renewing consumer consent rests exclusively with the data recipient, and that data providers are not required to initiate or prompt consent renewal.",
+          "asks": [
+            "Remove section 93 and replace with notice of invalid authorization",
+            "Assign consent management exclusively to data recipients",
+            "Require data recipients to provide necessary information to data providers for authentication"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Remove section 93 and replace with notice of invalid authorization",
+                "Assign consent management exclusively to data recipients",
+                "Require data recipients to provide necessary information to data providers for authentication"
+              ],
+              "quote": "Our recommendations set out below are intended to support the effective operation of the framework by leveraging industry expertise, minimizing regulatory duplication, enabling appropriate flexibility, and promoting consistent clear rules across participants and consistent consumer experiences and protections.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend sections 92 and 93 to allocate consent responsibility exclusively to data recipients",
+                "Ensure liability rules are anchored to an entity's control of data with a clear regulatory definition",
+                "Align the framework with existing regulatory regimes to avoid duplicative or conflicting obligations"
+              ],
+              "quote": "The Act should be amended, including through the removal of section 93, the introduction of a new section, and an adjustment to section 92, to confirm that responsibility for obtaining, maintaining, and renewing consumer consent rests exclusively with the data recipient, and that data providers are not required to initiate or prompt consent renewal.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-26",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "Canadian Urban Transit Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13875273/br-external/CanadianUrbanTransitAssociation-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports",
+              "asks": [
+                "Maintain the full $30 billion commitment for transit over 10 years",
+                "Earmark any transferred CPTF funds for transit projects or return them to CPTF via enhanced Baseline Funding",
+                "Confirm funds will be delivered through transit-appropriate criteria consistent with CPTF objectives and timelines"
+              ],
+              "quote": "CUTA recommends that the Government of Canada confirm the full $30 billion commitment for transit over ten years, as set out in the original CPTF program announced in 2024.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "no clear position",
+              "asks": [
+                "Confirm the full $30 billion commitment for transit over ten years",
+                "Explicitly earmark funding moved from CPTF into BCSF for transit projects, or return it to the CPTF",
+                "Confirm reallocated funds will be delivered through transit-appropriate program criteria"
+              ],
+              "quote": "CUTA recommends that the Government of Canada confirm the full $30 billion commitment for transit over ten years, as set out in the original CPTF program announced in 2024.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-23",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "Toronto Transit Commission",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13910808/br-external/TorontoTransitCommission-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "As Chair of the TTC, I am requesting the federal government maintain the full $30 billion in dedicated public transit funding under the Canada Public Transit Fund (CPTF).",
+          "asks": [
+            "Preserve the full $30 billion CPTF funding",
+            "Return the $5 billion to CPTF via enhanced Baseline Funding",
+            "Earmark BCSF funds for public transit projects on a per‑capita ridership basis"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Preserve the full $30 billion CPTF funding",
+                "Return the $5 billion to CPTF via enhanced Baseline Funding",
+                "Earmark BCSF funds for public transit projects on a per‑capita ridership basis"
+              ],
+              "quote": "As Chair of the TTC, I am requesting the federal government maintain the full $30 billion in dedicated public transit funding under the Canada Public Transit Fund (CPTF).",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Maintain the full $30 billion in dedicated public transit funding under the Canada Public Transit Fund",
+                "Return the $5 billion in reallocated funds to the CPTF through an enhanced Baseline Funding stream",
+                "Earmark any funds reallocated to the BCSF specifically for public transit projects allocated on a per capita ridership b"
+              ],
+              "quote": "As Chair of the TTC, I am requesting the federal government maintain the full $30 billion in dedicated public transit funding under the Canada Public Transit Fund (CPTF).",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-23",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "Electronic Transactions Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13925166/br-external/ElectronicTransactionsAssociation-e.pdf",
+          "status": "quote-unverified",
+          "stance": "supports",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports",
+              "asks": [
+                "Enact the Stablecoin Act as drafted",
+                "Implement a principles‑based consumer‑driven banking framework",
+                "Ensure regulatory harmonization and robust oversight"
+              ],
+              "quote": "ETA supports the objectives of Bill C-15 and views both the Stablecoin Act and the consumer-driven banking framework as foundational steps in modernizing Canada’s financial ecosystem.",
+              "quoteOk": "close"
+            },
+            {
+              "model": "Google",
+              "stance": "supports",
+              "asks": [
+                "Encourage, incentivize, and embrace CAD-denominated stablecoins",
+                "Adopt a flexible, principles-based approach to consumer-driven banking with adaptable accreditation pathways",
+                "Align compliance requirements with actual risk and harmonize regulations to avoid duplication"
+              ],
+              "quote": "ETA supports the objectives of Bill C-15 and views both the Stablecoin Act and the consumer-driven banking framework as foundational steps in modernizing Canada’s financial ecosystem.",
+              "quoteOk": "close"
+            }
+          ],
+          "date": "2026-02-23",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "Canadian Urban Transit Research and Innovation Consortium",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13910805/br-external/CanadianUrbanTransitResearchAndInnovationConsortium-e.pdf",
+          "status": "agreed",
+          "stance": "no clear position",
+          "quote": "The memorandum below is focused specifically on the optimal deployment of the current $25 billion/10-year CPTF funding envelope.",
+          "asks": [
+            "Shift ZEB baseline mandate by five years",
+            "Redirect uncommitted MRA funds to Baseline and Targeted streams",
+            "Establish national Canadian content rules"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "no clear position",
+              "asks": [
+                "Shift ZEB baseline mandate by five years",
+                "Redirect uncommitted MRA funds to Baseline and Targeted streams",
+                "Establish national Canadian content rules"
+              ],
+              "quote": "The memorandum below is focused specifically on the optimal deployment of the current $25 billion/10-year CPTF funding envelope.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "no clear position",
+              "asks": [
+                "Keep steady ZEB funding but delay the Baseline ZEB mandate by five years",
+                "Redirect uncommitted Metro Region Agreement funds to Baseline and Targeted funding streams",
+                "Recapitalize CUTRIC's ZEB Feasibility Studies contract and establish standardized Canadian content rules"
+              ],
+              "quote": "The memorandum below is focused specifically on the optimal deployment of the current $25 billion/10-year CPTF funding envelope.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-23",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "Canadian Dental Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13925198/br-external/CanadianDentalAssociation-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports",
+              "asks": [
+                "Pass the National School Food Program Act into legislation",
+                "Include mechanisms for full implementation, monitoring and reporting",
+                "Ensure the 2024 National School Food Policy is included in public communication"
+              ],
+              "quote": "CDA urges the federal government to pass the National School Food Program Act into legislation.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Pass the National School Food Program Act into legislation",
+                "Include mechanisms in the Act to implement, monitor, and report on the National School Food Policy",
+                "Ensure the 2024 National School Food Policy is included in all public communication"
+              ],
+              "quote": "CDA urges the federal government to pass the National School Food Program Act into legislation.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-23",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "Climate Action Newmarket-Aurora",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13921351/br-external/ClimateActionNewmarket-Aurora-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "In conclusion, while Bill C-15 may offer efficiency and responsiveness, these powers should be exercised within a framework that maintains public confidence, upholds rights, and prevents unintended precedent-setting consequences.",
+          "asks": [
+            "Clear, narrowly defined criteria for exemptions",
+            "Mandatory transparency and public reporting",
+            "Parliamentary and judicial accountability"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Clear, narrowly defined criteria for exemptions",
+                "Mandatory transparency and public reporting",
+                "Parliamentary and judicial accountability"
+              ],
+              "quote": "In conclusion, while Bill C-15 may offer efficiency and responsiveness, these powers should be exercised within a framework that maintains public confidence, upholds rights, and prevents unintended precedent-setting consequences.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Establish clear, narrowly defined criteria for ministerial exemptions",
+                "Include mandatory transparency, public reporting, and Indigenous consultation requirements",
+                "Ensure time-limited or project-specific application with parliamentary and judicial accountability"
+              ],
+              "quote": "In conclusion, while Bill C-15 may offer efficiency and responsiveness, these powers should be exercised within a framework that maintains public confidence, upholds rights, and prevents unintended precedent-setting consequences.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-18",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "Ecojustice",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13900409/br-external/Ecojustice-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "Ecojustice urges the Standing Committee to remove the proposed Red Tape Reduction Act amendments from Bill C-15 in their entirety.",
+          "asks": [
+            "Remove Red Tape Reduction Act amendments from Bill C-15",
+            "Preserve parliamentary oversight over exemptions",
+            "Prevent executive overreach in regulatory decisions"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Remove Red Tape Reduction Act amendments from Bill C-15",
+                "Preserve parliamentary oversight over exemptions",
+                "Prevent executive overreach in regulatory decisions"
+              ],
+              "quote": "Ecojustice urges the Standing Committee to remove the proposed Red Tape Reduction Act amendments from Bill C-15 in their entirety.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Remove the proposed amendments to the Red Tape Reduction Act (Part 5, Division 5) from Bill C-15"
+              ],
+              "quote": "Ecojustice urges the Standing Committee to remove the proposed Red Tape Reduction Act amendments from Bill C-15 in their entirety.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-17",
+          "checkedAt": "2026-11-01"
+        },
+        {
+          "name": "Inclusion Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13886412/br-external/InclusionCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Inclusion Canada submits that these concerns can be addressed through targeted amendments to proposed section 122.93 of the Income Tax Act, which Bill C-15 would enact.",
+          "asks": [
+            "Amend eligibility to include self-managed, family-managed, and self-employed support workers",
+            "Base eligibility on duties performed, not job title or employer type",
+            "Include Developmental Service Workers and similar frontline roles"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend eligibility to include self-managed, family-managed, and self-employed support workers",
+                "Base eligibility on duties performed, not job title or employer type",
+                "Include Developmental Service Workers and similar frontline roles"
+              ],
+              "quote": "Inclusion Canada submits that these concerns can be addressed through targeted amendments to proposed section 122.93 of the Income Tax Act, which Bill C-15 would enact.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Expand PSW Tax Credit eligibility to workers employed through self-managed, family-managed, or individualized support pr",
+                "Base eligibility on the nature of the duties performed rather than job title to include Developmental Service Workers",
+                "Clarify how self-employed support workers and eligibility criteria will be treated by Finance and the CRA"
+              ],
+              "quote": "Inclusion Canada submits that these concerns can be addressed through targeted amendments to proposed section 122.93 of the Income Tax Act, which Bill C-15 would enact.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-10",
+          "checkedAt": "2026-11-01"
         }
       ]
     },
@@ -14502,7 +15274,7 @@
               ]
             }
           ],
-          "checked": "2026-10-31"
+          "checked": "2026-11-01"
         }
       ],
       "text": {
@@ -15547,7 +16319,7 @@
               ]
             }
           ],
-          "checked": "2026-10-31"
+          "checked": "2026-11-01"
         }
       ],
       "positions": [
@@ -16789,22 +17561,40 @@
         {
           "name": "Democracy Watch",
           "url": "https://www.ourcommons.ca/Content/Committee/451/PROC/Brief/BR14123973/br-external/DemocracyWatch-e.pdf",
-          "status": "incomplete",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "A. Amendments to Bill C-25 to help stop disinformation, undemocratic thirdparty influence and foreign interference, and close information gaps",
+          "asks": [
+            "Prohibit all false claims during elections",
+            "Prohibit foreign influence activities that are currently legal",
+            "Extend third-party spending limits to nomination contests"
+          ],
           "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Prohibit all false claims during elections",
+                "Prohibit foreign influence activities that are currently legal",
+                "Extend third-party spending limits to nomination contests"
+              ],
+              "quote": "Prohibit anonymous social media accounts and Internet sites, and bots.",
+              "quoteOk": "exact"
+            },
             {
               "model": "Google",
               "stance": "supports with amendments",
               "asks": [
-                "Prohibit all false claims during elections and remove proof of intent requirements",
-                "Delete sections 28-30 and increase transparency for fundraising events",
-                "Tighten third-party spending rules and prohibit foreign influence loopholes"
+                "Prohibit all false claims and foreign influence activities during elections",
+                "Increase transparency for fundraising events and delete sections 28-30 of Bill C-25",
+                "Reform third-party spending limits and prohibit foreigners and minors from voting in party contests"
               ],
               "quote": "A. Amendments to Bill C-25 to help stop disinformation, undemocratic thirdparty influence and foreign interference, and close information gaps",
               "quoteOk": "exact"
             }
           ],
           "date": "2026-05-27",
-          "checkedAt": "2026-10-31"
+          "checkedAt": "2026-11-01"
         },
         {
           "name": "Saskatchewan Stands with Hong Kong",
@@ -18044,7 +18834,7 @@
               ]
             }
           ],
-          "checked": "2026-10-31"
+          "checked": "2026-11-01"
         }
       ],
       "text": {
