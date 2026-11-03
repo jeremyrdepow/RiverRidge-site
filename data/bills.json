@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-02T20:31:43.605Z",
+  "checkedAt": "2026-11-03T17:58:55.959Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -2103,6 +2103,19 @@
         ]
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "160",
+          "date": "2026-11-02",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-160/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Gary Anandasangaree (Lib.)"
+          ],
+          "contexts": [
+            "Oral Questions: Justice"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "158",
@@ -4727,76 +4740,6 @@
           "checkedAt": "2026-10-31"
         },
         {
-          "name": "Lawyers Without Borders",
-          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13939796/br-external/LawyersWithoutBorders-e.pdf",
-          "status": "quote-unverified",
-          "stance": "supports with amendments",
-          "readings": [
-            {
-              "model": "Cohere",
-              "stance": "supports with amendments",
-              "asks": [
-                "reword the definition of femicide categories to include broader circumstances",
-                "adopt a holistic and intersectional implementation approach with prevention and support",
-                "establish specialized courts, fund support services, and provide training"
-              ],
-              "quote": "LWB Canada welcomes the fact that Bill C-16 incorporates the concept of femicide as first degree murder, as well as the advances it proposes in terms of coercive control and a victim-centred approach.",
-              "quoteOk": "close"
-            },
-            {
-              "model": "Google",
-              "stance": "supports with amendments",
-              "asks": [
-                "Reword and expand the definition of the categories of femicide in the bill",
-                "Take into account objective and factual circumstances based on gender discrimination when analyzing evidence",
-                "Adopt a holistic and intersectional approach to implementation with concrete mechanisms like specialized courts, shelter"
-              ],
-              "quote": "LWB Canada welcomes the fact that Bill C -16 incorporates the concept of femicide as first degree murder, as well as the advances it proposes in terms of coercive control and a victim -centred approach.",
-              "quoteOk": "exact"
-            }
-          ],
-          "date": "2026-02-26",
-          "checkedAt": "2026-11-01"
-        },
-        {
-          "name": "Animal Justice",
-          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13937000/br-external/AnimalJustice-e.pdf",
-          "status": "agreed",
-          "stance": "supports with amendments",
-          "quote": "In summary, we recommend that Bill C-16 should be amended to add a new offence criminalizing the distribution and making available of visual representations of extreme animal torture, with delineated exclusions and a good‑faith reporting safe harbour.",
-          "asks": [
-            "add offence for animal crush videos",
-            "include lawful activity exclusions",
-            "provide good‑faith reporting safe harbour"
-          ],
-          "readings": [
-            {
-              "model": "Cohere",
-              "stance": "supports with amendments",
-              "asks": [
-                "add offence for animal crush videos",
-                "include lawful activity exclusions",
-                "provide good‑faith reporting safe harbour"
-              ],
-              "quote": "We respectfully urge this Committee to further strengthen this provision to prohibit the publication, distribution, and sale of animal “crush” and torture videos.",
-              "quoteOk": "exact"
-            },
-            {
-              "model": "Google",
-              "stance": "supports with amendments",
-              "asks": [
-                "Prohibit the publication, distribution, and sale of visual representations of extreme animal torture (animal crush video",
-                "Include exclusions for lawful activities such as veterinary practice, agriculture, hunting, fishing, scientific research",
-                "Include a safe harbour for good-faith reporting to law enforcement or competent authorities"
-              ],
-              "quote": "In summary, we recommend that Bill C-16 should be amended to add a new offence criminalizing the distribution and making available of visual representations of extreme animal torture, with delineated exclusions and a good‑faith reporting safe harbour.",
-              "quoteOk": "exact"
-            }
-          ],
-          "date": "2026-02-26",
-          "checkedAt": "2026-11-01"
-        },
-        {
           "name": "Bridge2Future",
           "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13875573/br-external/Bridge2Future-e.pdf",
           "status": "agreed",
@@ -4835,6 +4778,38 @@
           "checkedAt": "2026-11-02"
         },
         {
+          "name": "Lawyers Without Borders",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13939796/br-external/LawyersWithoutBorders-e.pdf",
+          "status": "quote-unverified",
+          "stance": "supports with amendments",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "reword the definition of femicide categories to include broader circumstances",
+                "adopt a holistic and intersectional implementation approach with prevention and support",
+                "establish specialized courts, fund support services, and provide training"
+              ],
+              "quote": "LWB Canada welcomes the fact that Bill C-16 incorporates the concept of femicide as first degree murder, as well as the advances it proposes in terms of coercive control and a victim-centred approach.",
+              "quoteOk": "close"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Reword and expand the definition of the categories of femicide in the bill",
+                "Take into account objective and factual circumstances based on gender discrimination when analyzing evidence",
+                "Adopt a holistic and intersectional approach to implementation with concrete mechanisms like specialized courts, shelter"
+              ],
+              "quote": "LWB Canada welcomes the fact that Bill C -16 incorporates the concept of femicide as first degree murder, as well as the advances it proposes in terms of coercive control and a victim -centred approach.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-26",
+          "checkedAt": "2026-11-01"
+        },
+        {
           "name": "BC Coalition of Experiential Communities",
           "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13939774/br-external/BCCoalitionOfExperientialCommunities-e.pdf",
           "status": "agreed",
@@ -4871,6 +4846,44 @@
           ],
           "date": "2026-02-26",
           "checkedAt": "2026-11-02"
+        },
+        {
+          "name": "Animal Justice",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13937000/br-external/AnimalJustice-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "In summary, we recommend that Bill C-16 should be amended to add a new offence criminalizing the distribution and making available of visual representations of extreme animal torture, with delineated exclusions and a good‑faith reporting safe harbour.",
+          "asks": [
+            "add offence for animal crush videos",
+            "include lawful activity exclusions",
+            "provide good‑faith reporting safe harbour"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "add offence for animal crush videos",
+                "include lawful activity exclusions",
+                "provide good‑faith reporting safe harbour"
+              ],
+              "quote": "We respectfully urge this Committee to further strengthen this provision to prohibit the publication, distribution, and sale of animal “crush” and torture videos.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Prohibit the publication, distribution, and sale of visual representations of extreme animal torture (animal crush video",
+                "Include exclusions for lawful activities such as veterinary practice, agriculture, hunting, fishing, scientific research",
+                "Include a safe harbour for good-faith reporting to law enforcement or competent authorities"
+              ],
+              "quote": "In summary, we recommend that Bill C-16 should be amended to add a new offence criminalizing the distribution and making available of visual representations of extreme animal torture, with delineated exclusions and a good‑faith reporting safe harbour.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2026-02-26",
+          "checkedAt": "2026-11-01"
         },
         {
           "name": "Canadian Network for the Prevention of Elder Abuse",
@@ -6379,22 +6392,40 @@
         {
           "name": "Fuerza Latina",
           "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13858707/br-external/FuerzaLatina-e.pdf",
-          "status": "incomplete",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Fuerza Latina Community Services supports the objective of addressing harm caused by hatred and discrimination.",
+          "asks": [
+            "Define “hate” statutorily",
+            "Maintain Attorney General consent safeguard",
+            "Ensure legal predictability for small organizations"
+          ],
           "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Define “hate” statutorily",
+                "Maintain Attorney General consent safeguard",
+                "Ensure legal predictability for small organizations"
+              ],
+              "quote": "Fuerza Latina Community Services supports the objective of addressing harm caused by hatred and discrimination.",
+              "quoteOk": "exact"
+            },
             {
               "model": "Google",
               "stance": "supports with amendments",
               "asks": [
-                "Include a clear statutory definition of hate",
+                "Include a clear statutory definition of 'hate'",
                 "Maintain procedural safeguards such as Attorney General consent",
                 "Maintain a clear, predictable legal framework for community organizations"
               ],
-              "quote": "In conclusion, Fuerza Latina Community Services respectfully encourages the Committee to carefully consider how Bill C-9 balances the important goal of preventing harm with the need to maintain a clear, predictable legal framework that enables community organizations to participate in public life without undue risk.",
+              "quote": "Fuerza Latina Community Services supports the objective of addressing harm caused by hatred and discrimination.",
               "quoteOk": "exact"
             }
           ],
           "date": "2026-02-04",
-          "checkedAt": "2026-11-02"
+          "checkedAt": "2026-11-03"
         },
         {
           "name": "Black Manitobans Chamber of Commerce",
@@ -6444,15 +6475,15 @@
               "stance": "supports with amendments",
               "asks": [
                 "Retain Attorney General consent exclusively for private prosecutions",
-                "Amend hate symbol provisions and add an offence for promoting terrorist activities",
-                "Align the definition of hatred with Keegstra and retain Section 430(4.1) on bias-motivated mischief"
+                "Amend hate definition to align with Keegstra and retain bias and prejudice mischief offence",
+                "Create stand-alone offence for promoting terrorism and clarify symbol display rules"
               ],
               "quote": "But to truly protect those targeted by intersectional hate, this Bill must be passed with the recommended amendments that solidify the definition of hatred and retain all existing tools to prosecute lower-threshold bias and prejudice.",
               "quoteOk": "exact"
             }
           ],
           "date": "2026-01-29",
-          "checkedAt": "2026-11-02"
+          "checkedAt": "2026-11-03"
         },
         {
           "name": "Canadian Organization for Hindu Heritage Education",
@@ -6566,6 +6597,441 @@
           ],
           "date": "2025-12-12",
           "checkedAt": "2026-11-02"
+        },
+        {
+          "name": "Canadian Hindu Alliance",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13803030/br-external/CanadianHinduAlliance-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "To support the goal of Bill C-9 while ensuring the protection of the Hindu Canadian community's religious freedom, safety, and cultural integrity",
+          "asks": [
+            "Exempt traditional Swastika from prohibition",
+            "Formally recognize and denounce Anti-Hinduism (Hinduphobia)",
+            "Protect religious places and enforce hate crime offences"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Exempt traditional Swastika from prohibition",
+                "Formally recognize and denounce Anti-Hinduism (Hinduphobia)",
+                "Protect religious places and enforce hate crime offences"
+              ],
+              "quote": "Strong support for the core objective of Bill C-9: combating hate and protecting vulnerable communities.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Explicitly distinguish the Swastika from the Nazi Hakenkreuz",
+                "Formally recognize Anti-Hinduism/Hinduphobia",
+                "Support new measures to protect temples and punish hate-motivated crimes"
+              ],
+              "quote": "To support the goal of Bill C-9 while ensuring the protection of the Hindu Canadian community's religious freedom, safety, and cultural integrity",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-12-12",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "B'nai Brith Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13785209/br-external/BNaiBrithCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "We urge the Committee to lend its approval to the Combatting Hate Act with the inclusion of the amendments contained in our proceeding recommendations.",
+          "asks": [
+            "retain Attorney General consent for private hate propaganda prosecutions",
+            "remove \"Nazi Swastika\" and add Sieg Heil salute to hate symbols provision",
+            "create new offence for public display of terror symbols in Section 83.18"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "retain Attorney General consent for private hate propaganda prosecutions",
+                "remove \"Nazi Swastika\" and add Sieg Heil salute to hate symbols provision",
+                "create new offence for public display of terror symbols in Section 83.18"
+              ],
+              "quote": "We urge the Committee to lend its approval to the Combatting Hate Act with the inclusion of the amendments contained in our proceeding recommendations.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Retain Attorney General consent requirement for private prosecutions of Hate Propaganda offences",
+                "Amend hate symbol provisions to remove 'Nazi Swastika', include the Sieg Heil salute, and move terror symbol prohibition",
+                "Align the definition of 'Hatred' with the Whatcott decision and repeal or amend religious exemptions in Subsections 319("
+              ],
+              "quote": "We urge the Committee to lend its approval to the Combatting Hate Act with the inclusion of the amendments contained in our proceeding recommendations.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-12-05",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Evangelical Fellowship of Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779916/br-external/EvangelicalFellowshipOfCanada-e.pdf",
+          "status": "quote-unverified",
+          "stance": "supports with amendments",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "amend definition of hatred to reflect Keegstra",
+                "limit new offence to Criminal Code offences",
+                "maintain Attorney General consent for private prosecutions"
+              ],
+              "quote": "We strongly support the intent of the bill to address anti-religious threats and violence, and the need for physical safety.",
+              "quoteOk": "close"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend the definition of hatred and add a reasonable person clarifying clause",
+                "Maintain Attorney General consent, religious property mischief provisions, and the good faith religious belief defence",
+                "Limit the new hate-motivated offence to Criminal Code offences and clarify the intimidation offence"
+              ],
+              "quote": "We do have quesAons, cauAons and recommendaAons for amendment of some of the bill’s provisions.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-12-05",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Canadian Centre for Christian Charities",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779785/br-external/CanadianCentreForChristianCharities-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Review existing Criminal Code offences",
+                "Remove or amend the definition of hatred",
+                "Preserve the good‑faith religious defence"
+              ],
+              "quote": "However, we are concerned with both the approach to and substance of Bill C-9 and its potential impact on free expression.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Review existing Criminal Code offences before proposing new ones",
+                "Remove or amend the statutory definition of hatred",
+                "Keep Attorney General consent requirement and preserve subsection 319(3) defences"
+              ],
+              "quote": "However, we are concerned with both the approach to and substance of Bill C-9 and its potential impact on free expression.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-12-04",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Canadian Association of Chiefs of Police",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13754584/br-external/CanadianAssociationOfChiefsOfPolice-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "While the CACP supports Bill C-9, I would like to briefly address the components of the Bill along with considerations for several amendments.",
+          "asks": [
+            "Remove Attorney General consent requirement for hate propaganda prosecutions",
+            "Define hatred consistent with the Keegstra standard",
+            "Narrow scope of access offences and clarify symbol wording"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Remove Attorney General consent requirement for hate propaganda prosecutions",
+                "Define hatred consistent with the Keegstra standard",
+                "Narrow scope of access offences and clarify symbol wording"
+              ],
+              "quote": "While the CACP supports Bill C-9, I would like to briefly address the components of the Bill along with considerations for several amendments.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Write the legislation regarding symbols with greater precision and clarity",
+                "Narrow and more clearly define the scope of protected locations",
+                "Make the codified definition of hatred consistent with the R v. Keegstra standard"
+              ],
+              "quote": "While the CACP supports Bill C-9, I would like to briefly address the components of the Bill along with considerations for several amendments.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-27",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Hindu Federation",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779249/br-external/HinduFederation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "The Hindu Federation fully supports the intent of the Bill; however, we respectfully request that certain clarifications be incorporated to ensure that the legislation does not inadvertently affect the religious freedom or cultural expression of Canada’s Hindu community.",
+          "asks": [
+            "Define prohibited symbol as Hakenkreuz, not Swastika",
+            "Include Anti-Hinduism as a listed hate-motivated offence",
+            "Explicitly distinguish between the Nazi Hakenkreuz and the sacred Swastika in the legislative language"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Define prohibited symbol as Hakenkreuz, not Swastika",
+                "Include Anti-Hinduism as a listed hate-motivated offence"
+              ],
+              "quote": "The Hindu Federation fully supports the intent of the Bill; however, we respectfully request that certain clarifications be incorporated to ensure that the legislation does not inadvertently affect the religious freedom or cultural expression of Canada’s Hindu community.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Explicitly distinguish between the Nazi Hakenkreuz and the sacred Swastika in the legislative language",
+                "Specify that the prohibited symbol is the Hakenkreuz, not the Swastika sacred to Hindus, Buddhists, and Jains",
+                "Include Anti-Hinduism as a listed hate-motivated offence under the Criminal Code"
+              ],
+              "quote": "The Hindu Federation fully supports the intent of the Bill; however, we respectfully request that certain clarifications be incorporated to ensure that the legislation does not inadvertently affect the religious freedom or cultural expression of Canada’s Hindu community.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-27",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Justice Centre for Constitutional Freedoms",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779267/br-external/JusticeCentre-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "The Justice Centre for Constitutional Freedoms (jccf.ca) is gravely concerned about Bill C-9, the Combatting Hate Act, as it undermines freedom of expression protected by the Canadian Charter of Rights and Freedoms, and for other reasons set out in this Submission.",
+          "asks": [
+            "Preserve section 319(3)(b) and 319(3.1)(b) defenses",
+            "Maintain Attorney General consent for hate propaganda prosecutions",
+            "Do not increase penalties for hate-motivated offences"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Preserve section 319(3)(b) and 319(3.1)(b) defenses",
+                "Maintain Attorney General consent for hate propaganda prosecutions",
+                "Do not increase penalties for hate-motivated offences"
+              ],
+              "quote": "Bill C-9 opens the door to having far more people file complaints about offensive speech that they feel is “hateful,” resulting in more instances of police laying criminal charges.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Do not repeal sections 319(3)(b) and 319(3.1)(b) (religious expression defences) from the Criminal Code"
+              ],
+              "quote": "The Justice Centre for Constitutional Freedoms (jccf.ca) is gravely concerned about Bill C-9, the Combatting Hate Act, as it undermines freedom of expression protected by the Canadian Charter of Rights and Freedoms, and for other reasons set out in this Submission.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-27",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Secure Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779281/br-external/SecureCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "However, we believe critical amendments – as outlined in this report – are needed to ensure Bill C-9 is e ective in protecting Canadians.",
+          "asks": [
+            "Retain AG consent with streamlined, transparent process and annual reporting",
+            "Narrow symbol offence to listed terrorist entities, clarify Nazi swastika distinction, and include robust exemptions",
+            "Limit hate-motivated crime to serious offences, adopt Keegstra definition, and mandate police and Crown training"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Retain AG consent with streamlined, transparent process and annual reporting",
+                "Narrow symbol offence to listed terrorist entities, clarify Nazi swastika distinction, and include robust exemptions",
+                "Limit hate-motivated crime to serious offences, adopt Keegstra definition, and mandate police and Crown training"
+              ],
+              "quote": "Secure Canada's conditional support for Bill C-9 is premised on the adoption of balanced reforms.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Retain Attorney General consent while streamlining the process",
+                "Limit the standalone hate crime offence to a narrower set of serious crimes",
+                "Retain existing hate mischief provisions rather than repealing them"
+              ],
+              "quote": "However, we believe critical amendments – as outlined in this report – are needed to ensure Bill C-9 is e ective in protecting Canadians.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-27",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Hindu Canadian Foundation",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779319/br-external/HinduCanadianFoundation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "We urge the committee and chair, Canada being a global leader and a nation that upholds values of inclusion and truth, to remove the word “Swastika” and any reference to it from Bill C-9.",
+          "asks": [
+            "Remove “Swastika” references and replace with “Hakenkreuz”",
+            "Educate communities on correct terminology",
+            "Add exemptions for sacred religious use of Swastika"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Remove “Swastika” references and replace with “Hakenkreuz”",
+                "Educate communities on correct terminology",
+                "Add exemptions for sacred religious use of Swastika"
+              ],
+              "quote": "We urge the committee and chair, Canada being a global leader and a nation that upholds values of inclusion and truth, to remove the word “Swastika” and any reference to it from Bill C-9.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Remove all references to \"Swastika\" and replace them with \"Hakenkreuz\" or \"Nazi Hakenkreuz\"",
+                "Include clear and explicit exemptions for the religious and cultural use of the Swastika",
+                "Educate communities, law enforcement, and media on correct terminology and mention Hinduphobia in committee communicatio"
+              ],
+              "quote": "Let us uphold the true spirit of Bill C-9 by removing the word “Swastika” and replacing it with the historically accurate term “Hakenkreuz.”",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-27",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Kwilmu’kw Maw-klusuaqn Negotiation Office",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779460/br-external/KwilmukwMawklusuaqn-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "We support the overall goal of Bill C-9 insofar as it seeks to combat hate crimes and the intimidation of those accessing places of religious worship.",
+          "asks": [
+            "Include Indigenous spiritual places in definition",
+            "Extend protection to outdoor worship and burial sites",
+            "Add exception for Indigenous cultural activities"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Include Indigenous spiritual places in definition",
+                "Extend protection to outdoor worship and burial sites",
+                "Add exception for Indigenous cultural activities"
+              ],
+              "quote": "We support the overall goal of Bill C-9 insofar as it seeks to combat hate crimes and the intimidation of those accessing places of religious worship.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Expand protected locations beyond buildings and structures to include outdoor places and places of education",
+                "Include spiritual worship alongside religious worship",
+                "Include burial sites alongside cemeteries"
+              ],
+              "quote": "We support the overall goal of Bill C-9 insofar as it seeks to combat hate crimes and the intimidation of those accessing places of religious worship.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-27",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "International Civil Liberties Monitoring Group",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779479/br-external/InternationalCivilLibertiesMonitoringGroup-Combined-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "Given all this, we are opposed to any new Criminal Code provisions that would rely on the Terrorist Entities Listing process, and reiterate our coalition’s longstanding call for the regime to instead be abolished.",
+          "asks": [
+            "withdraw Bill C-9",
+            "abolish the terrorist entities listing regime",
+            "retain Attorney General consent requirement for hate propaganda charges"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "withdraw Bill C-9",
+                "abolish the terrorist entities listing regime",
+                "retain Attorney General consent requirement for hate propaganda charges"
+              ],
+              "quote": "Given all this, we are opposed to any new Criminal Code provisions that would rely on the Terrorist Entities Listing process, and reiterate our coalition’s longstanding call for the regime to instead be abolished.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Withdraw Bill C-9",
+                "Abolish the Terrorist Entities Listing regime",
+                "Adopt approaches that protect vulnerable communities while ensuring the protection of Charter rights and civil liberties"
+              ],
+              "quote": "For this reason, and others included in our full brief, we do not believe that this bill can be fixed via amendment, but instead should be withdrawn.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-27",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Coalition for Charter Rights and Freedoms",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13779546/br-external/CoalitionForCharterRightsAndFreedoms-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "We, the undersigned coalition, are writing to strongly oppose Bill C-9, An Act to amend the Criminal Code (hate propaganda, hate crime and access to religious or cultural places).",
+          "asks": [
+            "Oppose Bill C-9"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Oppose Bill C-9"
+              ],
+              "quote": "We, the undersigned coalition, are writing to strongly oppose Bill C-9, An Act to amend the Criminal Code (hate propaganda, hate crime and access to religious or cultural places).",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Oppose Bill C-9"
+              ],
+              "quote": "We, the undersigned coalition, are writing to strongly oppose Bill C-9, An Act to amend the Criminal Code (hate propaganda, hate crime and access to religious or cultural places).",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-27",
+          "checkedAt": "2026-11-03"
         }
       ]
     },
@@ -8413,6 +8879,362 @@
           ],
           "date": "2026-01-09",
           "checkedAt": "2026-11-02"
+        },
+        {
+          "name": "Centre for International Governance Innovation",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13836475/br-external/CentreForInternationalGovernanceInnovation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "All of these improvements can be achieved without weakening the Bill’s central objective, which is a worthy one: safeguarding the digital infrastructure upon which Canadians’ security, prosperity, and sovereignty depend.",
+          "asks": [
+            "Make secrecy powers principled, proportionate, and reviewable",
+            "Add use‑immunity for compelled information",
+            "Introduce a Cybersecurity Investment Tax Credit"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Make secrecy powers principled, proportionate, and reviewable",
+                "Add use‑immunity for compelled information",
+                "Introduce a Cybersecurity Investment Tax Credit"
+              ],
+              "quote": "Bill C-8 is an overdue modernization of Canada’s cyber-security architecture.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Make secrecy powers principled and reviewable",
+                "Add use-immunity for compelled information",
+                "Introduce a Cybersecurity Investment Tax Credit"
+              ],
+              "quote": "All of these improvements can be achieved without weakening the Bill’s central objective, which is a worthy one: safeguarding the digital infrastructure upon which Canadians’ security, prosperity, and sovereignty depend.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-12-12",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Digital ID and Authentication Council of Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13823698/br-external/DigitalIDAndAuthenticationCouncilOfCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "While supportive of stronger cybersecurity, DIACC urges careful consideration of the following as Bill C-8 advances through committee and possible amendment:",
+          "asks": [
+            "Preserve encryption standards and privacy-enhancing technologies",
+            "Implement privacy impact assessments and consultation with oversight bodies",
+            "Align federal requirements with provincial frameworks and international standards"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Preserve encryption standards and privacy-enhancing technologies",
+                "Implement privacy impact assessments and consultation with oversight bodies",
+                "Align federal requirements with provincial frameworks and international standards"
+              ],
+              "quote": "While supportive of stronger cybersecurity, DIACC urges careful consideration of the following as Bill C-8 advances through committee and possible amendment:",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Preserve encryption standards and privacy-enhancing technologies",
+                "Implement privacy impact assessments and meaningful consultation with oversight bodies",
+                "Align federal requirements with provincial frameworks and international standards"
+              ],
+              "quote": "While supportive of stronger cybersecurity, DIACC urges careful consideration of the following as Bill C-8 advances through committee and possible amendment:",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-12-09",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Canadian Bankers Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13812529/br-external/CanadianBankersAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "We generally support the CCSPA as having consistent, well defined cyber security standards will provide for greater oversight and assurance that all critical infrastructure sectors in Canada are effective and adequately protected.",
+          "asks": [
+            "Include necessity and proportionality in cyber security directions",
+            "Provide immunity from civil and criminal proceedings for reporting compliance",
+            "Expand definition of confidential information to treat all operator information as confidential"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Include necessity and proportionality in cyber security directions",
+                "Provide immunity from civil and criminal proceedings for reporting compliance",
+                "Expand definition of confidential information to treat all operator information as confidential"
+              ],
+              "quote": "We generally support the CCSPA as having consistent, well defined cyber security standards will provide for greater oversight and assurance that all critical infrastructure sectors in Canada are effective and adequately protected.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Coordinate with sector-specific regulators to avoid duplicative or inconsistent reporting requirements",
+                "Provide immunity from civil and criminal proceedings for compliance and voluntary information sharing",
+                "Define cyber security incident and reporting timelines in regulations following public consultation"
+              ],
+              "quote": "Additionally, keeping in mind CCSPA’s objectives and to address our concerns, the CBA has identified areas for targeted amendments.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-12-08",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Electricity Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13806902/br-external/ElectricityCanada-e.pdf",
+          "status": "incomplete",
+          "readings": [
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Recognize compliance with equivalent regulatory frameworks and harmonize incident reporting requirements",
+                "Establish clear separation between the Cyber Centre and CSE obligations to prevent information sharing with regulators",
+                "Introduce clear protections and 'safe harbour' for cybersecurity disclosures"
+              ],
+              "quote": "Amend Bill C-8 to include provisions that prevent cybersecurity information shared with the government from being used for regulatory, enforcement, or legal actions.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-12-04",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Electronic Transactions Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13778796/br-external/ElectronicTransactionsAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "The Committee’s work to study, and ultimately amend the Bill, will be essential to ensure that Canada remains a world leader with a financial system that is secure, competitive and open to innovation.",
+          "asks": [
+            "Define objective designation criteria",
+            "Harmonize with existing financial regulatory frameworks",
+            "Adopt tiered, proportional compliance model"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Define objective designation criteria",
+                "Harmonize with existing financial regulatory frameworks",
+                "Adopt tiered, proportional compliance model"
+              ],
+              "quote": "The Committee’s work to study, and ultimately amend the Bill, will be essential to ensure that Canada remains a world leader with a financial system that is secure, competitive and open to innovation.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Define scope and designation criteria clearly",
+                "Harmonize with existing financial regulatory frameworks",
+                "Emphasize proportional, risk-based compliance"
+              ],
+              "quote": "The Committee’s work to study, and ultimately amend the Bill, will be essential to ensure that Canada remains a world leader with a financial system that is secure, competitive and open to innovation.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-12-03",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "ISC2, Inc.",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13767186/br-external/ISC2Inc-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "As conveyed in the opening remarks delivered by Phillip to the Committee, the cybersecurity profession strongly supports the passage of Bill C-8.",
+          "asks": [
+            "Add federally regulated water systems to Schedule 1",
+            "Incorporate Safe Harbour Legislation",
+            "Enhance cybersecurity protections for critical infrastructure"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Add federally regulated water systems to Schedule 1",
+                "Incorporate Safe Harbour Legislation",
+                "Enhance cybersecurity protections for critical infrastructure"
+              ],
+              "quote": "the cybersecurity profession strongly supports the passage of Bill C-8.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Pass Bill C-8",
+                "Add federally regulated water systems to Schedule 1",
+                "Incorporate Safe Harbour Legislation"
+              ],
+              "quote": "As conveyed in the opening remarks delivered by Phillip to the Committee, the cybersecurity profession strongly supports the passage of Bill C-8.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-27",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Canadian Telecommunications Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13768863/br-external/CanadianTelecommunicationsAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "To address this gap, we recommend that Bill C-8 be amended to include a safe-harbour limitation of liability clause that protects TSPs from liability when acting in good faith and in accordance with a valid government order.",
+          "asks": [
+            "Add discretionary compensation provisions for TSPs",
+            "Define \"backup system\" and limit to necessary, proportionate measures",
+            "Include safe‑harbour liability protection for TSPs"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Add discretionary compensation provisions for TSPs",
+                "Define \"backup system\" and limit to necessary, proportionate measures",
+                "Include safe‑harbour liability protection for TSPs"
+              ],
+              "quote": "To address this gap, we recommend that Bill C-8 be amended to include a safe-harbour limitation of liability clause that protects TSPs from liability when acting in good faith and in accordance with a valid government order.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Include provisions allowing discretionary compensation for compliance costs",
+                "Define 'backup system' by regulation or reference to industry standards",
+                "Include a safe-harbour limitation of liability clause for good faith compliance"
+              ],
+              "quote": "While the Association and its members welcome changes that were made to the former Bill C-26 and that have been carried forward into Bill C-8, we have some remaining concerns.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-27",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Technation Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13740412/br-external/TechnationCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "TECHNATION encourages the Committee to ensure that Bill C-8 achieves its security objectives while maintaining a globally interoperable approach that avoids inadvertent consequences on operators, innovation in the sector, and Canada’s cybersecurity talent supply.",
+          "asks": [
+            "Narrow the definition of cyber incident to align with global norms",
+            "Develop sector-specific guidance for supply chain risk mitigation",
+            "Cap penalties and limit personal liability except for willful misconduct"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Narrow the definition of cyber incident to align with global norms",
+                "Develop sector-specific guidance for supply chain risk mitigation",
+                "Cap penalties and limit personal liability except for willful misconduct"
+              ],
+              "quote": "TECHNATION encourages the Committee to ensure that Bill C-8 achieves its security objectives while maintaining a globally interoperable approach that avoids inadvertent consequences on operators, innovation in the sector, and Canada’s cybersecurity talent supply.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Narrow the definition of 'cyber incident'",
+                "Establish clear guidance for mitigating supply chain and third-party risks",
+                "Avoid excessive punitive penalties and personal liability"
+              ],
+              "quote": "Narrowing definitions, providing clear guidance, and adopting proportionate enforcement will foster a secure and competitive digital economy.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-24",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Citizen Lab",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13741249/br-external/CitizenLab-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "This brief sets out targeted recommendations to respond to constitutional deficits in Bill C-8 that were not addressed during the study and amendment of Bill C-26.",
+          "asks": [
+            "Require a judicial warrant for warrantless collection powers",
+            "Add encryption protection clause to prevent compromising network security",
+            "Limit non-disclosure orders with time constraints and defined justification"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Require a judicial warrant for warrantless collection powers",
+                "Add encryption protection clause to prevent compromising network security",
+                "Limit non-disclosure orders with time constraints and defined justification"
+              ],
+              "quote": "This brief sets out targeted recommendations to respond to constitutional deficits in Bill C-8 that were not addressed during the study and amendment of Bill C-26.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Require a Federal Court warrant for the government to obtain personal or de-identified information",
+                "Prohibit Ministerial orders that compromise encryption and the confidentiality, integrity, or availability of networks",
+                "Impose time limits and defined grounds for non-disclosure orders, and necessity/proportionality limits on data sharing"
+              ],
+              "quote": "This brief sets out targeted recommendations to respond to constitutional deficits in Bill C-8 that were not addressed during the study and amendment of Bill C-26.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-24",
+          "checkedAt": "2026-11-03"
+        },
+        {
+          "name": "Canadian Telecommunications Workers Alliance",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13736990/br-external/CanadianTelecommunicationsWorkersAlliance-e.pdf",
+          "status": "quote-unverified",
+          "stance": "supports with amendments",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Prohibit outsourcing/relocation of telecom work abroad",
+                "Add security objective to the Telecommunications Act",
+                "Include whistleblower protections in Bill C-8"
+              ],
+              "quote": "The Alliance also proposes minor amendments to the Telecommunications Act (Act) and the Direction to the CRTC so that the latter can put in place basic security requirements.",
+              "quoteOk": "close"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Prohibit outsourcing or relocating telecommunications work abroad by requiring all related human resources be maintained",
+                "Amend the Direction to the CRTC to prioritize the new national security objective",
+                "Add whistleblower protection measures to Bill C-8 for telecommunications employees"
+              ],
+              "quote": "Therefore, it is recommended that committee members adopt the proposed change to section 1 of the Part 1 of Bill C-8 and add to it an amendment to prohibit the relocation or outsourcing abroad of any work directly or indirectly related to telecommunications networks.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-24",
+          "checkedAt": "2026-11-03"
         }
       ]
     },
@@ -8487,6 +9309,13 @@
       "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-22&lang=en_CA&parlSession=451",
       "activity": {
         "meetings": [
+          {
+            "date": "2026-11-02",
+            "chamber": "Senate",
+            "committee": "SECD",
+            "number": "30",
+            "url": "https://sencanada.ca/en/committees/SECD/transcriptsminutes/45-1"
+          },
           {
             "date": "2026-06-17",
             "chamber": "House",
@@ -15160,18 +15989,18 @@
           "readings": [
             {
               "model": "Google",
-              "stance": "opposes",
+              "stance": "supports with amendments",
               "asks": [
                 "Split Bill C-15 into several separate bills",
-                "Remove sections 203 to 209 regarding Cabinet minister exemptions",
-                "Strengthen bank account fraud measures in sections 333 to 336"
+                "Remove sections 203 to 209 regarding ministerial exemptions",
+                "Strengthen sections 333 to 336 on bank account fraud"
               ],
               "quote": "Democracy Watch calls for the following changes to budget Bill C-15 to respect the rights of MPs and Parliament, and to remove sections that will allow Cabinet ministers to abuse their powers, and to protect bank customers effectively from account fraud:",
               "quoteOk": "exact"
             }
           ],
           "date": "2026-01-30",
-          "checkedAt": "2026-11-02"
+          "checkedAt": "2026-11-03"
         },
         {
           "name": "Breakfast Club of Canada",
@@ -15420,6 +16249,13 @@
       "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-31&lang=en_CA&parlSession=451",
       "activity": {
         "meetings": [
+          {
+            "date": "2026-11-03",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "63",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
           {
             "date": "2026-10-27",
             "chamber": "Senate",
@@ -20138,7 +20974,7 @@
   ],
   "upcoming": [],
   "scan": {
-    "houseSitting": 159,
+    "houseSitting": 160,
     "senateSitting": 98
   }
 }
