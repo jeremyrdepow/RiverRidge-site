@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-04T18:07:53.831Z",
+  "checkedAt": "2026-11-05T18:11:24.266Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -131,6 +131,19 @@
         ]
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "162",
+          "date": "2026-11-04",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-162/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Michael Coteau"
+          ],
+          "contexts": [
+            "Government Orders: Budget 2025 Implementation Act, No. 2"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "161",
@@ -6502,16 +6515,16 @@
               "model": "Google",
               "stance": "supports with amendments",
               "asks": [
-                "Retain Attorney General consent requirement exclusively for private prosecutions",
-                "Amend definition of hatred to align with the Supreme Court standard and retain section 430(4.1)",
-                "Amend symbol display offences and create a stand-alone offence for wilfully promoting terrorist activities"
+                "Retain Attorney General consent exclusively for private prosecutions",
+                "Amend hatred definition to align with Keegstra and retain Section 430(4.1) mischief offence",
+                "Add a stand-alone offence for wilfully promoting terrorist activities and amend symbol display provisions"
               ],
               "quote": "But to truly protect those targeted by intersectional hate, this Bill must be passed with the recommended amendments that solidify the definition of hatred and retain all existing tools to prosecute lower-threshold bias and prejudice.",
               "quoteOk": "exact"
             }
           ],
           "date": "2026-01-29",
-          "checkedAt": "2026-11-04"
+          "checkedAt": "2026-11-05"
         },
         {
           "name": "Canadian Organization for Hindu Heritage Education",
@@ -7604,26 +7617,6 @@
           "checkedAt": "2026-11-04"
         },
         {
-          "name": "Association for Reformed Political Action Canada",
-          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13737220/br-external/AssociationForReformedPoliticalAction-e.pdf",
-          "status": "incomplete",
-          "readings": [
-            {
-              "model": "Google",
-              "stance": "opposes",
-              "asks": [
-                "Remove or amend the definition of hatred and clarification provision",
-                "Maintain Attorney General approval requirement for hate propaganda proceedings",
-                "Remove the proposed general hate crime and new intimidation offence"
-              ],
-              "quote": "A more effective solution, in ARPA’s view, is to ensure existing criminal prohibitions are robustly enforced.",
-              "quoteOk": "exact"
-            }
-          ],
-          "date": "2025-11-10",
-          "checkedAt": "2026-11-04"
-        },
-        {
           "name": "Allied Voices for Israel",
           "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13737241/br-external/AlliedVoicesForIsrael-e.pdf",
           "status": "split",
@@ -7692,6 +7685,197 @@
           ],
           "date": "2025-11-10",
           "checkedAt": "2026-11-04"
+        },
+        {
+          "name": "Association for Reformed Political Action Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13737220/br-external/AssociationForReformedPoliticalAction-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend definition of hatred to match Supreme Court standard",
+                "Keep AG approval for hate propaganda charges",
+                "Remove proposed general hate crime offence"
+              ],
+              "quote": "Maintain the requirement for AG approval for instituting a proceeding under s. 319(2) or (2.1) or the proposed (2.2), if passed, given the existing interpretive challenges and pitfalls with s. 319(2) discussed above, which Bill C-9 may exacerbate.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Remove or amend the statutory definition of hatred and maintain Attorney General consent for hate propaganda charges",
+                "Remove the proposed general hate crime offence (s. 320.1001) and the proposed intimidation and obstruction offence (s. 4",
+                "Retain the good faith religious opinion defence in s. 319 and focus on enforcing existing laws"
+              ],
+              "quote": "A more effective solution, in ARPA’s view, is to ensure existing criminal prohibitions are robustly enforced.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-10",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "name": "Canadian Hindus for Harmony",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13722716/br-external/CanadianHindusForHarmony-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "We have sent a letter to the Justice Committee and all MPs, expressing our support for the bill C-9 and raising our concerns with specific wording.",
+          "asks": [
+            "Replace \"Nazi swastika\" with \"Nazi Hakenkreuz\" in the bill",
+            "Add explicit religious exceptions for swastika use",
+            "Include the term \"hinduphobia\" in official communications"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Replace \"Nazi swastika\" with \"Nazi Hakenkreuz\" in the bill",
+                "Add explicit religious exceptions for swastika use",
+                "Include the term \"hinduphobia\" in official communications"
+              ],
+              "quote": "We have sent a letter to the Justice Committee and all MPs, expressing our support for the bill C-9 and raising our concerns with specific wording.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Remove the word 'Swastika' from hate references in Bill C-9",
+                "Add explicit exceptions for the cultural and religious display of the Swastika",
+                "Include the word 'hinduphobia' in committee communications and educate on correct terminology"
+              ],
+              "quote": "We have sent a letter to the Justice Committee and all MPs, expressing our support for the bill C-9 and raising our concerns with specific wording.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-04",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "name": "Canadian Jewish Law Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13717661/br-external/CanadianJewishLawAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "This legislation with the suggested amendments of Mark Sandler and fully endorsed by myself and the CJLA, is a vital step in restoring our shared Canadian values of a social contract that prioritizes respect, civility and tolerance even when we disagree on serious and important issues.",
+          "asks": [
+            "Adopt Supreme Court definition of hatred",
+            "Retain s. 430(4.1) aggravated mischief",
+            "Create free-standing offence for terrorist symbols"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Adopt Supreme Court definition of hatred",
+                "Retain s. 430(4.1) aggravated mischief",
+                "Create free-standing offence for terrorist symbols"
+              ],
+              "quote": "I and the CJLA are in full support of Mark Sander’s submissions.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Adopt the precise Supreme Court of Canada language to define hatred",
+                "Retain rather than repeal subsection 430(4.1) of the Criminal Code regarding mischief",
+                "Create free-standing offences for displaying terrorist symbols and wilfully promoting terrorism"
+              ],
+              "quote": "This legislation with the suggested amendments of Mark Sandler and fully endorsed by myself and the CJLA, is a vital step in restoring our shared Canadian values of a social contract that prioritizes respect, civility and tolerance even when we disagree on serious and important issues.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-03",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "name": "Canadian Civil Liberties Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13696025/br-external/CanadianCivilLibertiesAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "Today, CCLA is urging the Members of the Standing Committee on Justice and Human Rights to vote against this deeply flawed Bill.",
+          "asks": [
+            "Keep Attorney General consent for hate propaganda charges",
+            "Remove the new intimidation and obstruction provisions",
+            "Reject the new hate crime offence and flawed definition of hatred"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Keep Attorney General consent for hate propaganda charges",
+                "Remove the new intimidation and obstruction provisions",
+                "Reject the new hate crime offence and flawed definition of hatred"
+              ],
+              "quote": "Today, CCLA is urging the Members of the Standing Committee on Justice and Human Rights to vote against this deeply flawed Bill.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Vote against Bill C-9",
+                "Retain the Attorney General consent requirement for hate propaganda charges",
+                "Remove proposed new offences for intimidation, obstruction, displaying symbols, and standalone hate crime"
+              ],
+              "quote": "Today, CCLA is urging the Members of the Standing Committee on Justice and Human Rights to vote against this deeply flawed Bill.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-10-28",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "name": "Canadian Antisemitism Education Foundation",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13696292/br-external/CanadianAntisemitismEducationFoundation-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "We urge its passage conditional on the essential amendments we have outlined above.",
+          "asks": [
+            "Amend Section 319(7) definition of hatred",
+            "Retain Attorney General consent for prosecutions",
+            "Retain Section 430(4.1) to preserve penalties"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend Section 319(7) definition of hatred",
+                "Retain Attorney General consent for prosecutions",
+                "Retain Section 430(4.1) to preserve penalties"
+              ],
+              "quote": "We urge its passage conditional on the essential amendments we have outlined above.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Augment the Section 319(7) definition of hatred",
+                "Retain Attorney General consent for certain prosecutions (or exempt only peace officers)",
+                "Retain Section 430(4.1) regarding mischief to religious property"
+              ],
+              "quote": "We urge its passage conditional on the essential amendments we have outlined above.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-10-28",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "name": "Canadian Muslim Lawyers Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13650555/br-external/CanadianMuslimLawyersAssociation-e.pdf",
+          "status": "unreadable",
+          "date": "2025-10-14",
+          "checkedAt": "2026-11-05"
         }
       ]
     },
@@ -9677,15 +9861,15 @@
               "stance": "supports with amendments",
               "asks": [
                 "Recognize compliance with equivalent regulatory frameworks and harmonize incident reporting requirements",
-                "Establish clear separation between the Cyber Centre and CSE obligations to prevent information sharing with regulators",
-                "Introduce clear protections and 'safe harbour' for cybersecurity disclosures"
+                "Establish clear separation between the Cyber Centre and CSE obligations to prevent disclosing shared information to regu",
+                "Introduce clear protections and safe harbour provisions for cybersecurity disclosures"
               ],
-              "quote": "To protect the Cyber Centre’s partnerships with operators, amendments to the bill should be made to prevent information shared with the Cyber Centre from being disclosed to other government departments and agencies, including the regulator.",
+              "quote": "Amend Bill C-8 to include provisions that prevent cybersecurity information shared with the government from being used for regulatory, enforcement, or legal actions.",
               "quoteOk": "exact"
             }
           ],
           "date": "2025-12-04",
-          "checkedAt": "2026-11-04"
+          "checkedAt": "2026-11-05"
         },
         {
           "name": "Electronic Transactions Association",
@@ -10059,6 +10243,119 @@
           ],
           "date": "2025-11-06",
           "checkedAt": "2026-11-04"
+        },
+        {
+          "name": "Insurance Bureau of Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13716279/br-external/InsuranceBureauOfCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "IBC is broadly supportive of the bill and believes it represents an important advancement for Canada’s cybersecurity regime, but we believe an important clarifying legislative amendment, or subsequent regulation, is needed to ensure critical national infrastructure operators can comply with and continue to receive commercial cyber insurance.",
+          "asks": [
+            "Add provision to section 25 allowing disclosure of material risk changes",
+            "Ensure operators can notify insurers of risk changes from directives",
+            "Adopt regulation to address disclosure if amendment not made"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Add provision to section 25 allowing disclosure of material risk changes",
+                "Ensure operators can notify insurers of risk changes from directives",
+                "Adopt regulation to address disclosure if amendment not made"
+              ],
+              "quote": "We propose the following amendment in section 25 of the CCPSA, (below in red) which would significantly contribute to mitigating potential adverse consequences for the cyber insurance market, critical infrastructure, and, ultimately, Canadian cybersecurity.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend section 25 of the CCSPA to allow designated operators to notify their insurance provider of a change in material r",
+                "Alternatively, enact a future regulation to address the issue of notifying insurers of a material change in risk"
+              ],
+              "quote": "IBC is broadly supportive of the bill and believes it represents an important advancement for Canada’s cybersecurity regime, but we believe an important clarifying legislative amendment, or subsequent regulation, is needed to ensure critical national infrastructure operators can comply with and continue to receive commercial cyber insurance.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-06",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "name": "Canadian Internet Registration Authority",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13712352/br-external/CanadianInternetRegistrationAuthority-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "CIRA offers two constructive recommendations to Part 2 of Bill C-8 (the Critical Cyber Systems Protection Act, the “CCSPA” hereafter) to better align its cybersecurity objectives with oversight and information-sharing considerations.",
+          "asks": [
+            "Review directions by Clerk of Privy Council and Deputy Minister of Justice",
+            "Strengthen information-use conditions for sharing",
+            "Remove exemption from Statutory Instruments Act section 3"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Review directions by Clerk of Privy Council and Deputy Minister of Justice",
+                "Strengthen information-use conditions for sharing",
+                "Remove exemption from Statutory Instruments Act section 3"
+              ],
+              "quote": "CIRA offers two constructive recommendations to Part 2 of Bill C-8 (the Critical Cyber Systems Protection Act, the “CCSPA” hereafter) to better align its cybersecurity objectives with oversight and information-sharing considerations.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Require proposed cyber security directions to be reviewed by the Clerk of the Privy Council in consultation with the Dep",
+                "Remove the exemption of cyber security directions from section 3 of the Statutory Instruments Act",
+                "Strengthen conditions and guardrails on the use of shared information under the CCSPA"
+              ],
+              "quote": "CIRA offers two constructive recommendations to Part 2 of Bill C-8 (the Critical Cyber Systems Protection Act, the “CCSPA” hereafter) to better align its cybersecurity objectives with oversight and information-sharing considerations.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-06",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "name": "Engineers for the Profession",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13649992/br-external/EngineersForTheProfession-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "We believe the bill will be significantly enhanced by giving the Minister the powers to make regulations over the qualifications of those who are permitted to practice cyber systems security.",
+          "asks": [
+            "Authorize Governor in Council to designate practitioner qualifications and security clearance",
+            "Enforce use of designated practitioners with signed approvals for public-impact work",
+            "Appear as witnesses before the committee"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Authorize Governor in Council to designate practitioner qualifications and security clearance",
+                "Enforce use of designated practitioners with signed approvals for public-impact work",
+                "Appear as witnesses before the committee"
+              ],
+              "quote": "We believe the bill will be significantly enhanced by giving the Minister the powers to make regulations over the qualifications of those who are permitted to practice cyber systems security.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Empower the Minister to regulate the qualifications of cyber systems security practitioners",
+                "Enforce the use of designated practitioners for works impacting the public interest",
+                "Require inspections to confirm work plans are signed and sealed by a Designated Practitioner"
+              ],
+              "quote": "We believe the bill will be significantly enhanced by giving the Minister the powers to make regulations over the qualifications of those who are permitted to practice cyber systems security.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-10-14",
+          "checkedAt": "2026-11-05"
         }
       ]
     },
@@ -16809,22 +17106,40 @@
         {
           "name": "Democracy Watch",
           "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13869167/br-external/DemocracyWatch-e.pdf",
-          "status": "incomplete",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Democracy Watch calls for the following changes to budget Bill C-15 to respect the rights of MPs and Parliament, and to remove sections that will allow Cabinet ministers to abuse their powers, and to protect bank customers effectively from account fraud:",
+          "asks": [
+            "Split Bill C-15 into separate bills",
+            "Remove sections 203-209",
+            "Strengthen bank fraud provisions (sections 333-336)"
+          ],
           "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Split Bill C-15 into separate bills",
+                "Remove sections 203-209",
+                "Strengthen bank fraud provisions (sections 333-336)"
+              ],
+              "quote": "The government is only promising measures that will possibly be enacted sometime in the future, which is just a rehash of the Liberal Party’s 2021 election promise to take action on the problem of bank account fraud.",
+              "quoteOk": "exact"
+            },
             {
               "model": "Google",
               "stance": "supports with amendments",
               "asks": [
                 "Split Bill C-15 into several separate bills",
-                "Remove sections 203 to 209 concerning Cabinet minister exemption powers",
-                "Strengthen sections 333 to 336 regarding bank account fraud"
+                "Remove sections 203 to 209 concerning Cabinet minister exemptions",
+                "Strengthen sections 333 to 336 addressing bank account fraud"
               ],
-              "quote": "Split Omnibus Bill, Remove Cabinet Power Abuse Sections, and Strengthen Bank Account Fraud Sections to Make Them Effective",
+              "quote": "Democracy Watch calls for the following changes to budget Bill C-15 to respect the rights of MPs and Parliament, and to remove sections that will allow Cabinet ministers to abuse their powers, and to protect bank customers effectively from account fraud:",
               "quoteOk": "exact"
             }
           ],
           "date": "2026-01-30",
-          "checkedAt": "2026-11-04"
+          "checkedAt": "2026-11-05"
         },
         {
           "name": "Breakfast Club of Canada",
@@ -16950,7 +17265,7 @@
       "status": "At report stage in the House of Commons",
       "latestEvent": {
         "type": "Debate at report stage",
-        "date": "2026-11-03",
+        "date": "2026-11-04",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -17073,6 +17388,13 @@
       "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-31&lang=en_CA&parlSession=451",
       "activity": {
         "meetings": [
+          {
+            "date": "2026-11-04",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "64",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
           {
             "date": "2026-11-03",
             "chamber": "Senate",
@@ -17215,6 +17537,13 @@
         ],
         "sittings": [
           {
+            "date": "2026-11-04",
+            "chamber": "House",
+            "sitting": "162",
+            "event": "Debate at report stage",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-162/hansard"
+          },
+          {
             "date": "2026-11-03",
             "chamber": "House",
             "sitting": "161",
@@ -17293,6 +17622,36 @@
         ]
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "162",
+          "date": "2026-11-04",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-162/hansard",
+          "speeches": 5,
+          "speakers": [
+            "Alexis Deschênes (BQ)",
+            "Hon. Kevin Lamoureux",
+            "Maxime Blanchette-Joncas (BQ)",
+            "Steeve Lavoie (Lib.)",
+            "Angelo Iacono (Lib.)"
+          ],
+          "contexts": [
+            "Government Orders: Budget 2025 Implementation Act, No. 2"
+          ]
+        },
+        {
+          "chamber": "Senate",
+          "sitting": "100",
+          "date": "2026-11-04",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/100db_2026-11-04-e",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Rosemary Moodie"
+          ],
+          "contexts": [
+            "Ministry of Employment and Social Development"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "161",
@@ -18540,10 +18899,10 @@
       "originatingChamber": "Senate",
       "sponsor": "Hon. Marty Deacon",
       "sponsorTitle": "Senator",
-      "status": "At consideration in committee in the House of Commons",
+      "status": "At report stage in the House of Commons",
       "latestEvent": {
-        "type": "Second reading and referral to committee",
-        "date": "2026-04-22",
+        "type": "Committee report presented",
+        "date": "2026-11-04",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -18564,7 +18923,7 @@
           "chamber": "House of Commons",
           "role": "study",
           "url": "https://www.ourcommons.ca/Committees/en/CHPC?parl=45&session=1",
-          "current": true
+          "current": false
         },
         {
           "name": "Standing Senate Committee on Transport and Communications",
@@ -18613,6 +18972,13 @@
           }
         ],
         "sittings": [
+          {
+            "date": "2026-11-04",
+            "chamber": "House",
+            "sitting": "162",
+            "event": "Committee report presented with amendments",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-162/hansard"
+          },
           {
             "date": "2026-04-22",
             "chamber": "House",
@@ -18697,6 +19063,19 @@
         ]
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "162",
+          "date": "2026-11-04",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-162/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Lisa Hepfner (Lib.)"
+          ],
+          "contexts": [
+            "Routine Proceedings: Committees of the House"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "147",
@@ -21192,6 +21571,367 @@
           ],
           "checked": "2026-10-27"
         }
+      ],
+      "positions": [
+        {
+          "name": "Canadian Housing and Renewal Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13706090/br-external/CanadianHousingAndRenewalAssociation-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports",
+              "asks": [
+                "Eliminate GST on affordable non‑profit homeownership homes",
+                "Apply relief retroactively to agreements signed as of May 2025",
+                "Enable reinvestment of savings into more affordable housing"
+              ],
+              "quote": "On behalf of the Canadian Housing and Renewal Association (CHRA), I am writing to express our support for the recommendations presented by Habitat for Humanity Canada to the Standing Committee on Finance regarding Bill C-4.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Adopt the recommendations presented by Habitat for Humanity Canada regarding Bill C-4",
+                "Eliminate the GST burden on affordable non-profit homeownership homes for first-time buyers",
+                "Apply the GST relief measure retroactively to agreements of purchase and sale signed as of May 2025"
+              ],
+              "quote": "On behalf of the Canadian Housing and Renewal Association (CHRA), I am writing to express our support for the recommendations presented by Habitat for Humanity Canada to the Standing Committee on Finance regarding Bill C-4.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-10-30",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "name": "BC Freedom of Information and Privacy Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13702510/br-external/BCFreedomOfInformationAndPrivacyAssociation-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "Withdraw Part 4 from Bill C-4 immediately to prevent the passage of these regressive provisions.",
+          "asks": [
+            "Withdraw Part 4",
+            "Conduct public review of party privacy obligations",
+            "Implement independent privacy oversight"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Withdraw Part 4",
+                "Conduct public review of party privacy obligations",
+                "Implement independent privacy oversight"
+              ],
+              "quote": "Bill C-4 would make the regime even more permissive for political parties.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Withdraw Part 4 from Bill C-4 immediately",
+                "Support a comprehensive, standalone review of privacy obligations for political parties",
+                "Ensure political parties are subject to modern, enforceable privacy standards overseen by an independent regulator"
+              ],
+              "quote": "Withdraw Part 4 from Bill C-4 immediately to prevent the passage of these regressive provisions.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-10-29",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "name": "Canadian Civil Liberties Association",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13692277/br-external/CanadianCivilLibertiesAssociation-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Delete Part 4 of Bill C-4",
+                "Create a dedicated privacy regime for political parties",
+                "Ensure transparent, inclusive legislative process"
+              ],
+              "quote": "Given the fundamentally flawed and irreparable nature of Part 4 of Bill C-4, the CCLA urges that this section be removed in its entirety.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Remove Part 4 from Bill C-4 in its entirety",
+                "Establish a dedicated, transparent legislative process on political parties' treatment of personal information",
+                "Apply PIPEDA and accepted privacy principles to federal political parties"
+              ],
+              "quote": "Given the fundamentally flawed and irreparable nature of Part 4 of Bill C-4, the CCLA urges that this section be removed in its entirety.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-10-27",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "name": "OpenMedia",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13688575/br-external/OpenMedia-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "➢ recommend in its final report to the House of Commons that Part 4 be dropped from Bill C-4.",
+          "asks": [
+            "conduct expert witness panels",
+            "recommend dropping Part 4",
+            "address privacy and Charter concerns"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "conduct expert witness panels",
+                "recommend dropping Part 4",
+                "address privacy and Charter concerns"
+              ],
+              "quote": "➢ recommend in its final report to the House of Commons that Part 4 be dropped from Bill C-4.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Drop Part 4 from Bill C-4",
+                "Conduct committee meetings with expert witness panels to discuss Part 4",
+                "Reintroduce the CPPA and extend it to include federal political parties"
+              ],
+              "quote": "recommend in its final report to the House of Commons that Part 4 be dropped from Bill C-4.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-10-24",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "name": "Office of the Commissioner of Canada Elections",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13679929/br-external/OfficeOfTheCommissionerOfCanadaElections-067-251021-009-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "Implementing these recommendations would enable me to respond more effectively to this new mandate and achieve the objective of the bill.",
+          "asks": [
+            "Introduce specific administrative investigation tools and powers",
+            "Require parties and affiliates to retain and provide documents",
+            "Clarify scope to include nomination/leadership candidates and volunteers"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Introduce specific administrative investigation tools and powers",
+                "Require parties and affiliates to retain and provide documents",
+                "Clarify scope to include nomination/leadership candidates and volunteers"
+              ],
+              "quote": "Implementing these recommendations would enable me to respond more effectively to this new mandate and achieve the objective of the bill.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Introduce specific tools and powers tailored to administrative investigations",
+                "Require political parties and affiliated entities to retain and provide relevant documents upon request",
+                "Set minimum, rigorous privacy requirements common to all parties and clarify the scope of the provisions"
+              ],
+              "quote": "Implementing these recommendations would enable me to respond more effectively to this new mandate and achieve the objective of the bill.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-10-22",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "name": "Centre for Digital Rights",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13674757/br-external/CentreForDigitalRights-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "For the reasons discussed below, CDR urges the federal government to delete Part 4 of Bill C-4 and to amend Canada’s private sector privacy law to expressly apply to federal political parties.",
+          "asks": [
+            "Delete Part 4 of Bill C-4",
+            "Amend PIPEDA to include federal political parties",
+            "Apply all ten PIPEDA fair information principles to parties"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Delete Part 4 of Bill C-4",
+                "Amend PIPEDA to include federal political parties",
+                "Apply all ten PIPEDA fair information principles to parties"
+              ],
+              "quote": "For the reasons discussed below, CDR urges the federal government to delete Part 4 of Bill C-4 and to amend Canada’s private sector privacy law to expressly apply to federal political parties.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Delete Part 4 of Bill C-4",
+                "Amend Canada's private sector privacy law (PIPEDA) to expressly apply to federal political parties",
+                "Incorporate all ten of PIPEDA's fair information principles and additional voter privacy protections for federal politic"
+              ],
+              "quote": "For the reasons discussed below, CDR urges the federal government to delete Part 4 of Bill C-4 and to amend Canada’s private sector privacy law to expressly apply to federal political parties.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-10-20",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "name": "Association des professionnels de la construction et de l'habitation du Québec",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13634104/br-external/AssDesProfessionnelsDeLaConstructionEtDeLHabitationDuQuebec-067-251002-025-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "This is why the APCHQ is asking parliamentarians to advance the effective date of the first-time home buyers’ GST rebate to the date of the official announcement, March 20, 2025.",
+          "asks": [
+            "Advance effective date of GST rebate to March 20, 2025",
+            "Include contracts signed between March 20 and May 27, 2025",
+            "Advance the effective date of the GST rebate for first-time new home buyers to March 20, 2025"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Advance effective date of GST rebate to March 20, 2025",
+                "Include contracts signed between March 20 and May 27, 2025"
+              ],
+              "quote": "This is why the APCHQ is asking parliamentarians to advance the effective date of the first-time home buyers’ GST rebate to the date of the official announcement, March 20, 2025.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Advance the effective date of the GST rebate for first-time new home buyers to March 20, 2025"
+              ],
+              "quote": "This is why the APCHQ is asking parliamentarians to advance the effective date of the first-time home buyers’ GST rebate to the date of the official announcement, March 20, 2025.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-10-07",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "name": "Union des consommateurs",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13595515/br-external/UnionDesConsommateurs-067-250916-018-e.pdf",
+          "status": "agreed",
+          "stance": "opposes",
+          "quote": "For these reasons, the Union des consommateurs recommends that the tax cuts proposed in Bill C-4 should not be passed.",
+          "asks": [
+            "Do not pass the tax cuts in Bill C-4",
+            "Reform tax system progressively by adding more brackets",
+            "Increase tax rates above the current top bracket"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "opposes",
+              "asks": [
+                "Do not pass the tax cuts in Bill C-4",
+                "Reform tax system progressively by adding more brackets",
+                "Increase tax rates above the current top bracket"
+              ],
+              "quote": "For these reasons, the Union des consommateurs recommends that the tax cuts proposed in Bill C-4 should not be passed.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Do not pass the tax cuts proposed in Bill C-4",
+                "Examine progressive ways to reform the tax system",
+                "Add more tax brackets with higher tax rates above the current top bracket"
+              ],
+              "quote": "For these reasons, the Union des consommateurs recommends that the tax cuts proposed in Bill C-4 should not be passed.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-09-19",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "name": "Devimco Immobilier",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13592318/br-external/DevimcoImmobilier-067-250911-010-e.pdf",
+          "status": "quote-unverified",
+          "stance": "supports",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports",
+              "asks": [
+                "loan-guarantee programs",
+                "tax relief for eligible households",
+                "additional incentives for housing affordability"
+              ],
+              "quote": "In this context, we believe that adopting strategic, targeted affordability measures, such as Bill C-4, is crucial to reviving the market and supporting access to home ownership.",
+              "quoteOk": "close"
+            },
+            {
+              "model": "Google",
+              "stance": "supports",
+              "asks": [
+                "Adopt Bill C-4",
+                "Consider additional incentives such as loan-guarantee programs",
+                "Consider tax relief for eligible households"
+              ],
+              "quote": "ln this context, we believe that adopting strategic, targeted affordability measures, such as Bill C4, is crucial to reviving the market and supporting access to home ownership.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-09-18",
+          "checkedAt": "2026-11-05"
+        },
+        {
+          "name": "Offices of the Information and Privacy Commissioners of Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/FINA/Brief/BR13568738/br-external/OfficesOfTheInformationAndPrivacyCommissionersOfCanada-e.pdf",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "I believe that Bill C-4 should be strengthened to better protect electors’ personal information.",
+          "asks": [
+            "Establish minimum privacy standards (purpose identification, consent, access, correction)",
+            "Require breach reporting to regulator and individuals within seven days",
+            "Enable formal collaboration between Privacy Commissioner, Commissioner of Canada Elections, and Elections Canada"
+          ],
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Establish minimum privacy standards (purpose identification, consent, access, correction)",
+                "Require breach reporting to regulator and individuals within seven days",
+                "Enable formal collaboration between Privacy Commissioner, Commissioner of Canada Elections, and Elections Canada"
+              ],
+              "quote": "I believe that Bill C-4 should be strengthened to better protect electors’ personal information.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "supports with amendments",
+              "asks": [
+                "Establish minimum privacy standards for political parties (consent, limiting collection/use/disclosure, access and corre",
+                "Require privacy breaches to be reported to affected individuals and an independent body within seven days",
+                "Allow formal collaboration between the Privacy Commissioner's Office, the Commissioner of Canada Elections, and Election"
+              ],
+              "quote": "I believe that Bill C-4 should be strengthened to better protect electors’ personal information.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-06-20",
+          "checkedAt": "2026-11-05"
+        }
       ]
     },
     {
@@ -21840,6 +22580,12 @@
   ],
   "changelog": [
     {
+      "date": "2026-11-04",
+      "number": "S-211",
+      "kind": "status",
+      "text": "Status now: At report stage in the House of Commons"
+    },
+    {
       "date": "2026-10-30",
       "number": "C-31",
       "kind": "status",
@@ -21872,7 +22618,7 @@
   ],
   "upcoming": [],
   "scan": {
-    "houseSitting": 161,
-    "senateSitting": 99
+    "houseSitting": 162,
+    "senateSitting": 100
   }
 }
