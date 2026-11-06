@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-05T18:11:24.266Z",
+  "checkedAt": "2026-11-06T17:31:28.576Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -6509,22 +6509,40 @@
         {
           "name": "Canadian Women Against Antisemitism",
           "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13741532/br-external/CanadianWomenAgainstAntisemitism-e.pdf",
-          "status": "incomplete",
+          "status": "agreed",
+          "stance": "supports with amendments",
+          "quote": "But to truly protect those targeted by intersectional hate, this Bill must be passed with the recommended amendments that solidify the definition of hatred and retain all existing tools to prosecute lower-threshold bias and prejudice.",
+          "asks": [
+            "Require Attorney General consent for private prosecutions only",
+            "Add stand-alone offence for wilful promotion of terrorist activities",
+            "Define hatred per Keegstra standard in subsection 319(7)"
+          ],
           "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Require Attorney General consent for private prosecutions only",
+                "Add stand-alone offence for wilful promotion of terrorist activities",
+                "Define hatred per Keegstra standard in subsection 319(7)"
+              ],
+              "quote": "We support these new provisions, not for their novelty–as they largely criminalize conduct already covered–but for their explicit focus on protecting vulnerable community spaces and creating enhanced deterrents.",
+              "quoteOk": "exact"
+            },
             {
               "model": "Google",
               "stance": "supports with amendments",
               "asks": [
-                "Retain Attorney General consent exclusively for private prosecutions",
-                "Amend hatred definition to align with Keegstra and retain Section 430(4.1) mischief offence",
-                "Add a stand-alone offence for wilfully promoting terrorist activities and amend symbol display provisions"
+                "Criminalize the wilful promotion of terrorist activities and amend symbol display provisions",
+                "Align the definition of hatred with Keegstra and retain existing bias and prejudice mischief offences",
+                "Retain the requirement for Attorney General consent exclusively for private prosecutions"
               ],
               "quote": "But to truly protect those targeted by intersectional hate, this Bill must be passed with the recommended amendments that solidify the definition of hatred and retain all existing tools to prosecute lower-threshold bias and prejudice.",
               "quoteOk": "exact"
             }
           ],
           "date": "2026-01-29",
-          "checkedAt": "2026-11-05"
+          "checkedAt": "2026-11-06"
         },
         {
           "name": "Canadian Organization for Hindu Heritage Education",
@@ -7617,6 +7635,38 @@
           "checkedAt": "2026-11-04"
         },
         {
+          "name": "Association for Reformed Political Action Canada",
+          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13737220/br-external/AssociationForReformedPoliticalAction-e.pdf",
+          "status": "split",
+          "stance": "",
+          "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Amend definition of hatred to match Supreme Court standard",
+                "Keep AG approval for hate propaganda charges",
+                "Remove proposed general hate crime offence"
+              ],
+              "quote": "Maintain the requirement for AG approval for instituting a proceeding under s. 319(2) or (2.1) or the proposed (2.2), if passed, given the existing interpretive challenges and pitfalls with s. 319(2) discussed above, which Bill C-9 may exacerbate.",
+              "quoteOk": "exact"
+            },
+            {
+              "model": "Google",
+              "stance": "opposes",
+              "asks": [
+                "Remove or amend the statutory definition of hatred and maintain Attorney General consent for hate propaganda charges",
+                "Remove the proposed general hate crime offence (s. 320.1001) and the proposed intimidation and obstruction offence (s. 4",
+                "Retain the good faith religious opinion defence in s. 319 and focus on enforcing existing laws"
+              ],
+              "quote": "A more effective solution, in ARPA’s view, is to ensure existing criminal prohibitions are robustly enforced.",
+              "quoteOk": "exact"
+            }
+          ],
+          "date": "2025-11-10",
+          "checkedAt": "2026-11-05"
+        },
+        {
           "name": "Allied Voices for Israel",
           "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13737241/br-external/AlliedVoicesForIsrael-e.pdf",
           "status": "split",
@@ -7685,38 +7735,6 @@
           ],
           "date": "2025-11-10",
           "checkedAt": "2026-11-04"
-        },
-        {
-          "name": "Association for Reformed Political Action Canada",
-          "url": "https://www.ourcommons.ca/Content/Committee/451/JUST/Brief/BR13737220/br-external/AssociationForReformedPoliticalAction-e.pdf",
-          "status": "split",
-          "stance": "",
-          "readings": [
-            {
-              "model": "Cohere",
-              "stance": "supports with amendments",
-              "asks": [
-                "Amend definition of hatred to match Supreme Court standard",
-                "Keep AG approval for hate propaganda charges",
-                "Remove proposed general hate crime offence"
-              ],
-              "quote": "Maintain the requirement for AG approval for instituting a proceeding under s. 319(2) or (2.1) or the proposed (2.2), if passed, given the existing interpretive challenges and pitfalls with s. 319(2) discussed above, which Bill C-9 may exacerbate.",
-              "quoteOk": "exact"
-            },
-            {
-              "model": "Google",
-              "stance": "opposes",
-              "asks": [
-                "Remove or amend the statutory definition of hatred and maintain Attorney General consent for hate propaganda charges",
-                "Remove the proposed general hate crime offence (s. 320.1001) and the proposed intimidation and obstruction offence (s. 4",
-                "Retain the good faith religious opinion defence in s. 319 and focus on enforcing existing laws"
-              ],
-              "quote": "A more effective solution, in ARPA’s view, is to ensure existing criminal prohibitions are robustly enforced.",
-              "quoteOk": "exact"
-            }
-          ],
-          "date": "2025-11-10",
-          "checkedAt": "2026-11-05"
         },
         {
           "name": "Canadian Hindus for Harmony",
@@ -7932,6 +7950,19 @@
       "mentions": [
         {
           "chamber": "House",
+          "sitting": "163",
+          "date": "2026-11-05",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-163/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Marjorie Michel (Lib.)"
+          ],
+          "contexts": [
+            "Government Orders: Connected Care for Canadians Act"
+          ]
+        },
+        {
+          "chamber": "House",
           "sitting": "161",
           "date": "2026-11-03",
           "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-161/hansard",
@@ -8071,8 +8102,8 @@
       "sponsorTitle": "Senator",
       "status": "At second reading in the House of Commons",
       "latestEvent": {
-        "type": "First reading",
-        "date": "2026-05-28",
+        "type": "Debate at second reading",
+        "date": "2026-11-05",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -8151,6 +8182,13 @@
         ],
         "sittings": [
           {
+            "date": "2026-11-05",
+            "chamber": "House",
+            "sitting": "163",
+            "event": "Debate at second reading",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-163/hansard"
+          },
+          {
             "date": "2026-05-28",
             "chamber": "House",
             "sitting": "124",
@@ -8224,6 +8262,43 @@
         "decisions": []
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "163",
+          "date": "2026-11-05",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-163/hansard",
+          "speeches": 37,
+          "speakers": [
+            "Hon. Marjorie Michel (Lib.)",
+            "Hon. Marjorie Michel",
+            "Matt Strauss (CPC)",
+            "Danielle Martin (Lib.)",
+            "Marie-Hélène Gaudreau (BQ)",
+            "Marie-Hélène Gaudreau",
+            "Mario Simard (BQ)",
+            "Guillaume Deschênes-Thériault (Lib.)",
+            "Maggie Chi (Lib.)",
+            "Eric St-Pierre (Lib.)",
+            "Abdelhaq Sari (Lib.)",
+            "Abdelhaq Sari",
+            "Tamara Kronis (CPC)",
+            "Jagsharan Singh Mahal (CPC)",
+            "Brendan Hanley (Lib.)",
+            "Brendan Hanley",
+            "Hon. Jean-Yves Duclos (Lib.)",
+            "Dan Albas",
+            "Hon. Kevin Lamoureux (Lib.)",
+            "Hon. Kevin Lamoureux",
+            "Hon. Steven MacKinnon (Lib.)",
+            "Kelly DeRidder (CPC)",
+            "Helena Konanz (CPC)",
+            "Helena Konanz"
+          ],
+          "contexts": [
+            "Government Orders: Connected Care for Canadians Act",
+            "Oral Questions: Business of the House"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "158",
@@ -9860,16 +9935,16 @@
               "model": "Google",
               "stance": "supports with amendments",
               "asks": [
-                "Recognize compliance with equivalent regulatory frameworks and harmonize incident reporting requirements",
-                "Establish clear separation between the Cyber Centre and CSE obligations to prevent disclosing shared information to regu",
-                "Introduce clear protections and safe harbour provisions for cybersecurity disclosures"
+                "Recognize Equivalent Regulatory Frameworks",
+                "Establish Clear Separation Between the Cyber Centre and CSE Obligations",
+                "Introduce Clear Protections and ‘Safe Harbour’ for Disclosures"
               ],
-              "quote": "Amend Bill C-8 to include provisions that prevent cybersecurity information shared with the government from being used for regulatory, enforcement, or legal actions.",
+              "quote": "To protect the Cyber Centre’s partnerships with operators, amendments to the bill should be made to prevent information shared with the Cyber Centre from being disclosed to other government departments and agencies, including the regulator.",
               "quoteOk": "exact"
             }
           ],
           "date": "2025-12-04",
-          "checkedAt": "2026-11-05"
+          "checkedAt": "2026-11-06"
         },
         {
           "name": "Electronic Transactions Association",
@@ -17403,6 +17478,174 @@
             "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
           },
           {
+            "date": "2026-10-29",
+            "chamber": "House",
+            "committee": "FINA",
+            "number": "57",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/FINA/meeting-57/notice",
+            "witnesses": {
+              "orgs": [
+                "Defence Investment Agency",
+                "Department of Crown-Indigenous Relations and Northern Affairs",
+                "Department of Employment and Social Development",
+                "Department of Finance",
+                "Department of Foreign Affairs, Trade and Development",
+                "Department of Health",
+                "Department of Industry",
+                "Department of Justice",
+                "Department of Public Works and Government Services",
+                "Department of Transport",
+                "International Development Research Centre",
+                "Treasury Board Secretariat"
+              ],
+              "people": [],
+              "appearing": []
+            },
+            "study": "13594419",
+            "amendments": [
+              {
+                "mover": "Tamara Jansen",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Eric Lefebvre",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Eric Lefebvre",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Elizabeth May",
+                "party": "Green Party",
+                "result": "defeated"
+              },
+              {
+                "mover": "Danielle Martin",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Danielle Martin",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Elizabeth May",
+                "party": "Green Party",
+                "result": "defeated"
+              },
+              {
+                "mover": "Danielle Martin",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Elizabeth May",
+                "party": "Green Party",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Ryan Turnbull",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Eric Lefebvre",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Jean-Denis Garon",
+                "party": "Bloc Québécois",
+                "result": "defeated"
+              },
+              {
+                "mover": "Ryan Turnbull",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Ryan Turnbull",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Ryan Turnbull",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Ryan Turnbull",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Ryan Turnbull",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Ryan Turnbull",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Ryan Turnbull",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Ryan Turnbull",
+                "party": "Liberal",
+                "result": "adopted"
+              }
+            ]
+          },
+          {
             "date": "2026-10-27",
             "chamber": "Senate",
             "committee": "NFFN",
@@ -22150,7 +22393,7 @@
       "status": "At second reading in the Senate",
       "latestEvent": {
         "type": "Debate at second reading",
-        "date": "2026-11-03",
+        "date": "2026-11-05",
         "chamber": "Senate"
       },
       "progress": [
@@ -22246,6 +22489,13 @@
         "meetings": [],
         "sittings": [
           {
+            "date": "2026-11-05",
+            "chamber": "Senate",
+            "sitting": "101",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/101db_2026-11-05-e"
+          },
+          {
             "date": "2026-11-03",
             "chamber": "Senate",
             "sitting": "99",
@@ -22270,6 +22520,21 @@
         "decisions": []
       },
       "mentions": [
+        {
+          "chamber": "Senate",
+          "sitting": "101",
+          "date": "2026-11-05",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/101db_2026-11-05-e",
+          "speeches": 2,
+          "speakers": [
+            "Senator Moreau",
+            "Hon. Danièle Henkel"
+          ],
+          "contexts": [
+            "Natural Resources",
+            "Cutting Red Tape for All Canadians Bill"
+          ]
+        },
         {
           "chamber": "Senate",
           "sitting": "99",
@@ -22618,7 +22883,7 @@
   ],
   "upcoming": [],
   "scan": {
-    "houseSitting": 162,
-    "senateSitting": 100
+    "houseSitting": 163,
+    "senateSitting": 101
   }
 }
