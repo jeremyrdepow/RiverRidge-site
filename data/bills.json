@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-06T17:31:28.576Z",
+  "checkedAt": "2026-11-07T16:27:45.912Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -9935,16 +9935,16 @@
               "model": "Google",
               "stance": "supports with amendments",
               "asks": [
-                "Recognize Equivalent Regulatory Frameworks",
-                "Establish Clear Separation Between the Cyber Centre and CSE Obligations",
-                "Introduce Clear Protections and ‘Safe Harbour’ for Disclosures"
+                "Recognize equivalent regulatory frameworks and harmonize incident reporting requirements",
+                "Establish clear separation between the Cyber Centre and CSE obligations to prevent information disclosure to regulators",
+                "Introduce clear protections and 'Safe Harbour' for cybersecurity disclosures"
               ],
               "quote": "To protect the Cyber Centre’s partnerships with operators, amendments to the bill should be made to prevent information shared with the Cyber Centre from being disclosed to other government departments and agencies, including the regulator.",
               "quoteOk": "exact"
             }
           ],
           "date": "2025-12-04",
-          "checkedAt": "2026-11-06"
+          "checkedAt": "2026-11-07"
         },
         {
           "name": "Electronic Transactions Association",
@@ -22188,10 +22188,10 @@
       "originatingChamber": "House of Commons",
       "sponsor": "Marianne Dandurand",
       "sponsorTitle": "Member of Parliament",
-      "status": "At report stage in the House of Commons",
+      "status": "At third reading in the House of Commons",
       "latestEvent": {
-        "type": "Committee report presented",
-        "date": "2026-10-07",
+        "type": "Concurrence at report stage",
+        "date": "2026-11-06",
         "chamber": "House of Commons"
       },
       "progress": [
@@ -22268,6 +22268,13 @@
         ],
         "sittings": [
           {
+            "date": "2026-11-06",
+            "chamber": "House",
+            "sitting": "164",
+            "event": "Debate at report stage",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-164/hansard"
+          },
+          {
             "date": "2026-10-07",
             "chamber": "House",
             "sitting": "147",
@@ -22309,6 +22316,24 @@
         ]
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "164",
+          "date": "2026-11-06",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-164/hansard",
+          "speeches": 6,
+          "speakers": [
+            "Marianne Dandurand",
+            "Greg McLean (CPC)",
+            "Yves Perron (BQ)",
+            "Guillaume Deschênes-Thériault (Lib.)",
+            "Garnett Genuis (CPC)",
+            "Ellis Ross (CPC)"
+          ],
+          "contexts": [
+            "Private Members' Business: Spectrum Policy Framework for Canada Act"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "147",
@@ -22845,6 +22870,12 @@
   ],
   "changelog": [
     {
+      "date": "2026-11-06",
+      "number": "C-268",
+      "kind": "status",
+      "text": "Status now: At third reading in the House of Commons"
+    },
+    {
       "date": "2026-11-04",
       "number": "S-211",
       "kind": "status",
@@ -22883,7 +22914,7 @@
   ],
   "upcoming": [],
   "scan": {
-    "houseSitting": 163,
+    "houseSitting": 164,
     "senateSitting": 101
   }
 }
