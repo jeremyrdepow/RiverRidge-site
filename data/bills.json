@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-07T16:27:45.912Z",
+  "checkedAt": "2026-11-08T16:41:34.499Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -9935,16 +9935,16 @@
               "model": "Google",
               "stance": "supports with amendments",
               "asks": [
-                "Recognize equivalent regulatory frameworks and harmonize incident reporting requirements",
-                "Establish clear separation between the Cyber Centre and CSE obligations to prevent information disclosure to regulators",
-                "Introduce clear protections and 'Safe Harbour' for cybersecurity disclosures"
+                "Recognize compliance with equivalent regulatory frameworks like NERC CIP and harmonize incident reporting requirements",
+                "Prevent information shared with the Cyber Centre from being disclosed to other government departments and regulators",
+                "Include safe harbour provisions preventing shared cybersecurity information from being used for regulatory, enforcement,"
               ],
-              "quote": "To protect the Cyber Centre’s partnerships with operators, amendments to the bill should be made to prevent information shared with the Cyber Centre from being disclosed to other government departments and agencies, including the regulator.",
+              "quote": "Amend Bill C-8 to include provisions that prevent cybersecurity information shared with the government from being used for regulatory, enforcement, or legal actions.",
               "quoteOk": "exact"
             }
           ],
           "date": "2025-12-04",
-          "checkedAt": "2026-11-07"
+          "checkedAt": "2026-11-08"
         },
         {
           "name": "Electronic Transactions Association",
