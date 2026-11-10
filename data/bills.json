@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-09T20:45:30.682Z",
+  "checkedAt": "2026-11-10T17:51:30.649Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -9929,22 +9929,34 @@
         {
           "name": "Electricity Canada",
           "url": "https://www.ourcommons.ca/Content/Committee/451/SECU/Brief/BR13806902/br-external/ElectricityCanada-e.pdf",
-          "status": "incomplete",
+          "status": "quote-unverified",
+          "stance": "supports with amendments",
           "readings": [
+            {
+              "model": "Cohere",
+              "stance": "supports with amendments",
+              "asks": [
+                "Recognize equivalent regulatory frameworks",
+                "Harmonize incident reporting requirements",
+                "Establish clear separation between the Cyber Centre and CSE obligations"
+              ],
+              "quote": "While Electricity Canada is supportive of the bill’s overall objectives, we also offer feedback that we believe will allow Bill C-8 to strengthen partnerships with federal agencies and bolster our sector’s security posture.",
+              "quoteOk": "close"
+            },
             {
               "model": "Google",
               "stance": "supports with amendments",
               "asks": [
                 "Recognize equivalent regulatory frameworks and harmonize incident reporting requirements",
-                "Prevent information shared with the Cyber Centre from being disclosed to other government departments and agencies",
-                "Introduce safe harbour provisions to prevent shared cybersecurity information from being used for regulatory, enforcemen"
+                "Prevent information shared with the Cyber Centre from being disclosed to other government agencies and regulators",
+                "Introduce safe harbour provisions protecting shared cybersecurity information from being used for regulatory, enforcemen"
               ],
-              "quote": "Amend Bill C-8 to include provisions that prevent cybersecurity information shared with the government from being used for regulatory, enforcement, or legal actions.",
+              "quote": "To protect the Cyber Centre’s partnerships with operators, amendments to the bill should be made to prevent information shared with the Cyber Centre from being disclosed to other government departments and agencies, including the regulator.",
               "quoteOk": "exact"
             }
           ],
           "date": "2025-12-04",
-          "checkedAt": "2026-11-09"
+          "checkedAt": "2026-11-10"
         },
         {
           "name": "Electronic Transactions Association",
