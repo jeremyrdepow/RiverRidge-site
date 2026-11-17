@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-16T20:30:09.065Z",
+  "checkedAt": "2026-11-17T19:12:37.436Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -8262,6 +8262,19 @@
         "decisions": []
       },
       "mentions": [
+        {
+          "chamber": "House",
+          "sitting": "165",
+          "date": "2026-11-16",
+          "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/house/sitting-165/hansard",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Helena Jaczek (Lib.)"
+          ],
+          "contexts": [
+            "Statements by Members: Canadian Federation of Medical Students"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "163",
@@ -17476,6 +17489,13 @@
       "activity": {
         "meetings": [
           {
+            "date": "2026-11-17",
+            "chamber": "Senate",
+            "committee": "NFFN",
+            "number": "65",
+            "url": "https://sencanada.ca/en/committees/NFFN/transcriptsminutes/45-1"
+          },
+          {
             "date": "2026-11-04",
             "chamber": "Senate",
             "committee": "NFFN",
@@ -22933,7 +22953,7 @@
   ],
   "upcoming": [],
   "scan": {
-    "houseSitting": 164,
+    "houseSitting": 165,
     "senateSitting": 101
   }
 }
