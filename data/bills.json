@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-17T19:12:37.436Z",
+  "checkedAt": "2026-11-18T18:52:12.913Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -1064,7 +1064,21 @@
         ],
         "decisions": []
       },
-      "mentions": [],
+      "mentions": [
+        {
+          "chamber": "Senate",
+          "sitting": "102",
+          "date": "2026-11-17",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/102db_2026-11-17-e",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Denise Batters"
+          ],
+          "contexts": [
+            "Constitution Act, 1982"
+          ]
+        }
+      ],
       "publications": [
         {
           "id": "13726742",
@@ -10531,6 +10545,13 @@
       "activity": {
         "meetings": [
           {
+            "date": "2026-11-16",
+            "chamber": "Senate",
+            "committee": "SECD",
+            "number": "31",
+            "url": "https://sencanada.ca/en/committees/SECD/transcriptsminutes/45-1"
+          },
+          {
             "date": "2026-11-02",
             "chamber": "Senate",
             "committee": "SECD",
@@ -11427,6 +11448,22 @@
         ]
       },
       "mentions": [
+        {
+          "chamber": "Senate",
+          "sitting": "102",
+          "date": "2026-11-17",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/102db_2026-11-17-e",
+          "speeches": 4,
+          "speakers": [
+            "Hon. Kim Pate",
+            "Hon. Pierre Moreau (Government Representative in the Senate)",
+            "Senator Pate",
+            "Senator Moreau"
+          ],
+          "contexts": [
+            "Women and Gender Equality"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "158",
@@ -13843,6 +13880,19 @@
       "mentions": [
         {
           "chamber": "Senate",
+          "sitting": "102",
+          "date": "2026-11-17",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/102db_2026-11-17-e",
+          "speeches": 1,
+          "speakers": [
+            "Senator Batters"
+          ],
+          "contexts": [
+            "Combatting Financial Crimes and Drug Trafficking Bill"
+          ]
+        },
+        {
+          "chamber": "Senate",
           "sitting": "95",
           "date": "2026-10-22",
           "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/095db_2026-10-22-e",
@@ -14293,6 +14343,19 @@
         ]
       },
       "mentions": [
+        {
+          "chamber": "Senate",
+          "sitting": "102",
+          "date": "2026-11-17",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/102db_2026-11-17-e",
+          "speeches": 1,
+          "speakers": [
+            "Senator Martin"
+          ],
+          "contexts": [
+            "Combatting Financial Crimes and Drug Trafficking Bill"
+          ]
+        },
         {
           "chamber": "House",
           "sitting": "158",
@@ -19219,6 +19282,55 @@
       "activity": {
         "meetings": [
           {
+            "date": "2026-11-03",
+            "chamber": "House",
+            "committee": "CHPC",
+            "number": "51",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/CHPC/meeting-51/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Radio-television and Telecommunications Commission",
+                "Department of Health",
+                "Department of Canadian Heritage"
+              ],
+              "people": [],
+              "appearing": []
+            },
+            "study": "13461005",
+            "amendments": [
+              {
+                "mover": "David Myles",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "David Myles",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Andrew Lawton",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "David Myles",
+                "party": "Liberal",
+                "result": "adopted"
+              },
+              {
+                "mover": "Ned Kuruc",
+                "party": "Conservative",
+                "result": "defeated"
+              },
+              {
+                "mover": "David Myles",
+                "party": "Liberal",
+                "result": "adopted"
+              }
+            ]
+          },
+          {
             "date": "2026-10-29",
             "chamber": "House",
             "committee": "CHPC",
@@ -22457,7 +22569,7 @@
       "status": "At second reading in the Senate",
       "latestEvent": {
         "type": "Debate at second reading",
-        "date": "2026-11-05",
+        "date": "2026-11-17",
         "chamber": "Senate"
       },
       "progress": [
@@ -22553,6 +22665,13 @@
         "meetings": [],
         "sittings": [
           {
+            "date": "2026-11-17",
+            "chamber": "Senate",
+            "sitting": "102",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/102db_2026-11-17-e"
+          },
+          {
             "date": "2026-11-05",
             "chamber": "Senate",
             "sitting": "101",
@@ -22584,6 +22703,21 @@
         "decisions": []
       },
       "mentions": [
+        {
+          "chamber": "Senate",
+          "sitting": "102",
+          "date": "2026-11-17",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/102db_2026-11-17-e",
+          "speeches": 2,
+          "speakers": [
+            "Hon. Patti LaBoucane-Benson (Legislative Deputy to the Government Representative in the Senate)",
+            "Hon. Robert Black"
+          ],
+          "contexts": [
+            "Justice",
+            "Cutting Red Tape for All Canadians Bill"
+          ]
+        },
         {
           "chamber": "Senate",
           "sitting": "101",
@@ -22953,7 +23087,7 @@
   ],
   "upcoming": [],
   "scan": {
-    "houseSitting": 165,
-    "senateSitting": 101
+    "houseSitting": 166,
+    "senateSitting": 102
   }
 }
