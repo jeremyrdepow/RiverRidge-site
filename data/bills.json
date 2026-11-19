@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-18T18:52:12.913Z",
+  "checkedAt": "2026-11-19T19:00:23.296Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -87,7 +87,30 @@
       ],
       "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-34&lang=en_CA&parlSession=451",
       "activity": {
-        "meetings": [],
+        "meetings": [
+          {
+            "date": "2026-11-17",
+            "chamber": "House",
+            "committee": "CHPC",
+            "number": "53",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/CHPC/meeting-53/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Constitution Foundation",
+                "Raise the Age Canada",
+                "Amanda Todd Legacy Society",
+                "Kids Help Phone",
+                "OpenMedia"
+              ],
+              "people": [
+                "Laurence Grondin-Robillard, Adjunct Professor, School of Media, Université du Québec à Montréal"
+              ],
+              "appearing": []
+            },
+            "study": "13668976",
+            "amendments": []
+          }
+        ],
         "sittings": [
           {
             "date": "2026-10-29",
@@ -10545,6 +10568,13 @@
       "activity": {
         "meetings": [
           {
+            "date": "2026-11-18",
+            "chamber": "Senate",
+            "committee": "SECD",
+            "number": "32",
+            "url": "https://sencanada.ca/en/committees/SECD/transcriptsminutes/45-1"
+          },
+          {
             "date": "2026-11-16",
             "chamber": "Senate",
             "committee": "SECD",
@@ -11448,6 +11478,19 @@
         ]
       },
       "mentions": [
+        {
+          "chamber": "Senate",
+          "sitting": "103",
+          "date": "2026-11-18",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/103db_2026-11-18-e",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Patti LaBoucane-Benson (Legislative Deputy to the Government Representative in the Senate)"
+          ],
+          "contexts": [
+            "National Security, Defence and Veterans Affairs"
+          ]
+        },
         {
           "chamber": "Senate",
           "sitting": "102",
@@ -22566,15 +22609,15 @@
       "originatingChamber": "Senate",
       "sponsor": "Hon. Pierre Moreau",
       "sponsorTitle": "Senator",
-      "status": "At second reading in the Senate",
+      "status": "At consideration in committee in the Senate",
       "latestEvent": {
-        "type": "Debate at second reading",
-        "date": "2026-11-17",
+        "type": "Referral to committee",
+        "date": "2026-11-18",
         "chamber": "Senate"
       },
       "progress": [
         true,
-        false,
+        true,
         false,
         false,
         false,
@@ -22583,7 +22626,16 @@
       ],
       "royalAssent": null,
       "statute": null,
-      "committees": [],
+      "committees": [
+        {
+          "name": "Standing Senate Committee on Banking, Commerce and the Economy",
+          "acronym": "BANC",
+          "chamber": "Senate",
+          "role": "study",
+          "url": "https://sencanada.ca/en/committees/BANC/45-1",
+          "current": true
+        }
+      ],
       "legisinfoUrl": "https://www.parl.ca/legisinfo/en/bill/45-1/s-7",
       "textUrl": "https://www.parl.ca/DocumentViewer/en/45-1/bill/S-7/first-reading",
       "stale": false,
@@ -22665,6 +22717,13 @@
         "meetings": [],
         "sittings": [
           {
+            "date": "2026-11-18",
+            "chamber": "Senate",
+            "sitting": "103",
+            "event": "Debate at second reading",
+            "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/103db_2026-11-18-e"
+          },
+          {
             "date": "2026-11-17",
             "chamber": "Senate",
             "sitting": "102",
@@ -22703,6 +22762,21 @@
         "decisions": []
       },
       "mentions": [
+        {
+          "chamber": "Senate",
+          "sitting": "103",
+          "date": "2026-11-18",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/103db_2026-11-18-e",
+          "speeches": 2,
+          "speakers": [
+            "Hon. Patti LaBoucane-Benson (Legislative Deputy to the Government Representative in the Senate)",
+            "Hon. Yonah Martin (Deputy Leader of the Opposition)"
+          ],
+          "contexts": [
+            "Business of the Senate",
+            "Cutting Red Tape for All Canadians Bill"
+          ]
+        },
         {
           "chamber": "Senate",
           "sitting": "102",
@@ -23043,6 +23117,12 @@
   ],
   "changelog": [
     {
+      "date": "2026-11-18",
+      "number": "S-7",
+      "kind": "stage",
+      "text": "Advanced to: At consideration in committee in the Senate"
+    },
+    {
       "date": "2026-11-06",
       "number": "C-268",
       "kind": "status",
@@ -23087,7 +23167,7 @@
   ],
   "upcoming": [],
   "scan": {
-    "houseSitting": 166,
-    "senateSitting": 102
+    "houseSitting": 167,
+    "senateSitting": 103
   }
 }
