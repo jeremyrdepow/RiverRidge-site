@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-19T19:00:23.296Z",
+  "checkedAt": "2026-11-20T18:40:08.960Z",
   "source": "LEGISinfo, Parliament of Canada (status, dates, committees), with openparliament.ca as backup and for official summaries",
   "session": "45-1",
   "themes": [
@@ -88,6 +88,28 @@
       "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=C-34&lang=en_CA&parlSession=451",
       "activity": {
         "meetings": [
+          {
+            "date": "2026-11-19",
+            "chamber": "House",
+            "committee": "CHPC",
+            "number": "54",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/CHPC/meeting-54/notice",
+            "witnesses": {
+              "orgs": [
+                "Canadian Centre for Child Protection",
+                "Free Speech Union of Canada",
+                "Hospital for Sick Children",
+                "L’arc-en-ciel, prévention des dépendances"
+              ],
+              "people": [
+                "Kyla Lee, Lawyer ( by videoconference )",
+                "Emily Levitt, Clinical Psychologist ( by videoconference )"
+              ],
+              "appearing": []
+            },
+            "study": "13668976",
+            "amendments": []
+          },
           {
             "date": "2026-11-17",
             "chamber": "House",
@@ -510,6 +532,28 @@
       "lopSummaryUrl": "https://loppublicservices.parl.ca/PublicWebsiteProxy/Publication/GoToLS?billNumber=S-209&lang=en_CA&parlSession=451",
       "activity": {
         "meetings": [
+          {
+            "date": "2026-11-19",
+            "chamber": "House",
+            "committee": "HUMA",
+            "number": "56",
+            "url": "https://www.ourcommons.ca/DocumentViewer/en/45-1/HUMA/meeting-56/notice",
+            "witnesses": {
+              "orgs": [
+                "Digital Governance Council",
+                "Centre Francophone de Ressources et d'Accompagnement de l'Addiction à la Pornographie",
+                "The Canadian Internet Society",
+                "The Dais at Toronto Metropolitan University"
+              ],
+              "people": [
+                "Emily Laidlaw, Canada Research Chair in Cybersecurity Law and Professor, Faculty of Law, University of Calgary ( by videoconference )",
+                "Janine Benedet, Professor of Law, Peter A. Allard School of Law, University of British Columbia ( by videoconference )"
+              ],
+              "appearing": []
+            },
+            "study": "13666586",
+            "amendments": []
+          },
           {
             "date": "2026-03-12",
             "chamber": "Senate",
@@ -22764,6 +22808,19 @@
       "mentions": [
         {
           "chamber": "Senate",
+          "sitting": "104",
+          "date": "2026-11-19",
+          "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/104db_2026-11-19-e",
+          "speeches": 1,
+          "speakers": [
+            "Hon. Toni Varone"
+          ],
+          "contexts": [
+            "Banking, Commerce and the Economy"
+          ]
+        },
+        {
+          "chamber": "Senate",
           "sitting": "103",
           "date": "2026-11-18",
           "url": "https://sencanada.ca/en/content/sen/chamber/451/debates/103db_2026-11-18-e",
@@ -23168,6 +23225,6 @@
   "upcoming": [],
   "scan": {
     "houseSitting": 167,
-    "senateSitting": 103
+    "senateSitting": 104
   }
 }
